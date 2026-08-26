@@ -551,6 +551,483 @@ a {
   right: auto;
   left: -10px;
 }
+.project-section .project-wrap .project-block.project-block--web {
+  display: block;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero {
+  position: relative;
+  width: 100%;
+  height: clamp(400px, 70vw, 800px);
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-img .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.1) 0%, rgba(10, 10, 10, 0.85) 100%);
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: calc(30px + 40 * (100vw - 320px) / 1600);
+  color: #ffffff;
+  z-index: 2;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content .project-label {
+  display: inline-block;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #0bbd29;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content .project-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.95;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content .project-desc {
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  font-family: "Montserrat Alternates", sans-serif;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content .btn-block .btn {
+  padding: calc(14px + 5 * (100vw - 320px) / 1600) calc(28px + 12 * (100vw - 320px) / 1600);
+  font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+  border: 2px solid #0bbd29;
+  background: rgba(11, 189, 41, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content .btn-block .btn:hover {
+  background: #0bbd29;
+  color: #0a0a0a;
+  box-shadow: 0 15px 40px rgba(11, 189, 41, 0.5);
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content .btn-block .view_btn {
+  padding: calc(14px + 5 * (100vw - 320px) / 1600) calc(28px + 12 * (100vw - 320px) / 1600);
+  font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 40px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content .btn-block .view_btn:hover {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+.project-section .project-wrap .project-block.project-block--web .project-meta .tags {
+  justify-content: center;
+}
+.project-section .project-wrap .project-block.project-block--web .project-meta .tags span {
+  font-size: clamp(0.8rem, 1.3vw, 1rem);
+  padding: 10px 20px;
+  border: 2px solid rgba(11, 189, 41, 0.4);
+  background: rgba(11, 189, 41, 0.08);
+}
+.project-section .project-wrap .project-block.project-block--web:hover .project-hero-img img {
+  transform: scale(1.05);
+}
+.project-section .project-wrap .project-block.project-block--vue {
+  display: block;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 0;
+  min-height: clamp(400px, 60vw, 700px);
+  position: relative;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-image {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  border-radius: 20px 0 0 20px;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-image .split-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #8b5cf6, #a78bfa);
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(10, 10, 10, 0.9));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  padding: calc(30px + 40 * (100vw - 320px) / 1600);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(20px + 20 * (100vw - 320px) / 1600);
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .project-number {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  -webkit-text-stroke: 3px rgba(139, 92, 246, 0.4);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-family: "Montserrat Alternates", sans-serif;
+  line-height: 1;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .project-label {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #a78bfa;
+  font-weight: 700;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .project-title {
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #e9d5ff;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .project-desc {
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  font-family: "Montserrat Alternates", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .tags span {
+  border: 2px solid rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.1);
+  padding: 8px 16px;
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  color: #ddd6fe;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .btn-block .btn {
+  padding: calc(14px + 5 * (100vw - 320px) / 1600) calc(28px + 12 * (100vw - 320px) / 1600);
+  font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+  border: 2px solid rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 40px;
+  color: #e9d5ff;
+  transition: all 0.4s ease;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .btn-block .btn:hover {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+  color: #ffffff;
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .btn-block .view_btn {
+  padding: calc(14px + 5 * (100vw - 320px) / 1600) calc(28px + 12 * (100vw - 320px) / 1600);
+  font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+  border: 2px solid rgba(139, 92, 246, 0.5);
+  border-radius: 40px;
+  color: #e9d5ff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .btn-block .view_btn:hover {
+  background: rgba(139, 92, 246, 0.2);
+}
+.project-section .project-wrap .project-block.project-block--vue:hover .project-split-image img {
+  transform: scale(1.05);
+}
+.project-section .project-wrap .project-block.project-block--php {
+  display: block;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack {
+  position: relative;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card {
+  background: linear-gradient(145deg, rgba(245, 158, 11, 0.12), rgba(10, 10, 10, 0.95));
+  border: 2px solid rgba(245, 158, 11, 0.4);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-image {
+  width: 100%;
+  height: clamp(280px, 45vw, 500px);
+  overflow: hidden;
+  position: relative;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent);
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-content {
+  padding: calc(25px + 30 * (100vw - 320px) / 1600);
+  margin-top: -80px;
+  position: relative;
+  z-index: 2;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-content .project-label {
+  display: inline-block;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-content .project-title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 0.95;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-content .project-desc {
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+  font-family: "Montserrat Alternates", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-content .tags span {
+  border: 2px solid rgba(245, 158, 11, 0.5);
+  background: rgba(245, 158, 11, 0.1);
+  padding: 8px 16px;
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-actions {
+  padding: 0 calc(25px + 30 * (100vw - 320px) / 1600) calc(25px + 30 * (100vw - 320px) / 1600);
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(12px + 8 * (100vw - 320px) / 1600);
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-actions .btn {
+  padding: calc(12px + 4 * (100vw - 320px) / 1600) calc(24px + 10 * (100vw - 320px) / 1600);
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  border: 2px solid rgba(245, 158, 11, 0.6);
+  background: rgba(245, 158, 11, 0.15);
+  border-radius: 35px;
+  color: #fbbf24;
+  transition: all 0.4s ease;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-actions .btn:hover {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #0a0a0a;
+  box-shadow: 0 12px 35px rgba(245, 158, 11, 0.5);
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-actions .view_btn {
+  padding: calc(12px + 4 * (100vw - 320px) / 1600) calc(24px + 10 * (100vw - 320px) / 1600);
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 35px;
+  color: #ffffff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-card .card-actions .view_btn:hover {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-tech-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(15px + 10 * (100vw - 320px) / 1600);
+  margin-top: calc(20px + 15 * (100vw - 320px) / 1600);
+  padding: calc(15px + 10 * (100vw - 320px) / 1600) 0;
+}
+.project-section .project-wrap .project-block.project-block--php .project-card-stack .project-tech-strip span {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.7rem, 1.1vw, 0.9rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 8px 16px;
+  border: 1px dashed rgba(245, 158, 11, 0.3);
+  border-radius: 20px;
+}
+.project-section .project-wrap .project-block.project-block--php:hover .project-card .card-image img {
+  transform: scale(1.06);
+}
+.project-section .project-wrap .project-block.project-block--laravel {
+  display: block;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(10, 10, 10, 0.95));
+  border: 2px solid rgba(239, 68, 68, 0.35);
+  border-radius: 24px;
+  overflow: hidden;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(20px + 25 * (100vw - 320px) / 1600) calc(25px + 30 * (100vw - 320px) / 1600);
+  border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-header .project-number {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  -webkit-text-stroke: 3px rgba(239, 68, 68, 0.5);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-family: "Montserrat Alternates", sans-serif;
+  line-height: 1;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-header .magazine-badge {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.15);
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  font-weight: 700;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(30px + 40 * (100vw - 320px) / 1600);
+  padding: calc(25px + 30 * (100vw - 320px) / 1600);
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-image {
+  height: clamp(250px, 40vw, 450px);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(239, 68, 68, 0.3);
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(15px + 15 * (100vw - 320px) / 1600);
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-content .project-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-content .project-desc {
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+  font-family: "Montserrat Alternates", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-content .tags span {
+  border: 2px solid rgba(239, 68, 68, 0.5);
+  background: rgba(239, 68, 68, 0.1);
+  padding: 8px 16px;
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-content .btn-block .btn {
+  padding: calc(12px + 4 * (100vw - 320px) / 1600) calc(24px + 10 * (100vw - 320px) / 1600);
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  border: 2px solid rgba(239, 68, 68, 0.6);
+  background: rgba(239, 68, 68, 0.15);
+  border-radius: 35px;
+  color: #fca5a5;
+  transition: all 0.4s ease;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-content .btn-block .btn:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 12px 35px rgba(239, 68, 68, 0.5);
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-content .btn-block .view_btn {
+  padding: calc(12px + 4 * (100vw - 320px) / 1600) calc(24px + 10 * (100vw - 320px) / 1600);
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 35px;
+  color: #ffffff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-content .btn-block .view_btn:hover {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(15px + 10 * (100vw - 320px) / 1600);
+  padding: calc(15px + 10 * (100vw - 320px) / 1600) calc(25px + 30 * (100vw - 320px) / 1600);
+  border-top: 1px solid rgba(239, 68, 68, 0.2);
+}
+.project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-footer span {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.7rem, 1.1vw, 0.9rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.project-section .project-wrap .project-block.project-block--laravel:hover .magazine-image img {
+  transform: scale(1.05);
+}
 .project-section .project-wrap .project-block .pop_up-block {
   position: fixed;
   width: 100%;
@@ -1450,6 +1927,71 @@ a {
     left: auto;
     font-size: clamp(4rem, 24vw, 9rem);
     opacity: 0.55;
+  }
+  .project-section .project-wrap .project-block.project-block--web .project-hero {
+    height: clamp(300px, 80vw, 500px);
+    border-radius: 16px;
+  }
+  .project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content .project-title {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+  }
+  .project-section .project-wrap .project-block.project-block--web .project-hero .project-hero-content .project-desc {
+    font-size: clamp(0.85rem, 3vw, 1.1rem);
+  }
+  .project-section .project-wrap .project-block.project-block--web .project-meta .tags span {
+    font-size: clamp(0.7rem, 2.5vw, 0.85rem);
+  }
+  .project-section .project-wrap .project-block.project-block--vue .project-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .project-section .project-wrap .project-block.project-block--vue .project-split .project-split-image {
+    height: clamp(250px, 70vw, 400px);
+    border-radius: 16px 16px 0 0;
+    min-height: auto;
+  }
+  .project-section .project-wrap .project-block.project-block--vue .project-split .project-split-image .split-accent {
+    width: 100%;
+    height: 4px;
+    top: auto;
+    bottom: 0;
+  }
+  .project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content {
+    border-radius: 0 0 16px 16px;
+    border-left: 1px solid rgba(139, 92, 246, 0.3);
+    border-top: none;
+  }
+  .project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .project-number {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+  .project-section .project-wrap .project-block.project-block--vue .project-split .project-split-content .project-title {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+  }
+  .project-section .project-wrap .project-block.project-block--php .project-card .card-image {
+    height: clamp(220px, 65vw, 350px);
+  }
+  .project-section .project-wrap .project-block.project-block--php .project-card .card-content {
+    margin-top: -40px;
+  }
+  .project-section .project-wrap .project-block.project-block--php .project-card .card-content .project-title {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+  }
+  .project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-header .project-number {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+  .project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body {
+    grid-template-columns: 1fr;
+  }
+  .project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-image {
+    height: clamp(200px, 60vw, 350px);
+  }
+  .project-section .project-wrap .project-block.project-block--laravel .project-magazine .magazine-body .magazine-content .project-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
   }
   .button-section {
     width: 90%;
