@@ -2325,6 +2325,161 @@ a {
 }
 
 
+.tech-showcase {
+    margin: 80px 3% 0 0;
+
+    .tech-showcase-head {
+        margin-bottom: calc(40px + 40*(100vw - 320px)/1600);
+
+        .tech-showcase-eyebrow {
+            display: inline-block;
+            font-family: $font-family_4;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: calc(12px + 3*(100vw - 320px)/1600);
+            color: #0bbd29;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .tech-showcase-title {
+            margin: 0;
+            font-size: clamp(2.6rem, 9vw, 7.5rem);
+            line-height: 0.92;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #0a0a0a;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px #0bbd29;
+            }
+        }
+    }
+
+    .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: calc(18px + 18*(100vw - 320px)/1600);
+    }
+
+    .tech-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: calc(16px + 8*(100vw - 320px)/1600);
+        padding: calc(26px + 16*(100vw - 320px)/1600);
+        border: 2px solid #0a0a0a;
+        border-radius: 24px;
+        background: #ffffff;
+        overflow: hidden;
+        transition: border-color 0.5s ease, transform 0.5s ease;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #0bbd29;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+            z-index: 0;
+        }
+
+        >* {
+            position: relative;
+            z-index: 1;
+        }
+
+        &:hover {
+            border-color: #0bbd29;
+            transform: translateY(-6px);
+
+            &::before {
+                transform: scaleY(1);
+            }
+
+            .tech-card-list li::before {
+                color: #0a0a0a;
+            }
+        }
+
+        .tech-card-head {
+            display: flex;
+            align-items: baseline;
+            gap: calc(10px + 6*(100vw - 320px)/1600);
+            padding-bottom: calc(14px + 4*(100vw - 320px)/1600);
+            border-bottom: 2px solid #0a0a0a;
+
+            .tech-card-no {
+                font-size: clamp(1rem, 2vw, 1.6rem);
+                font-weight: 900;
+                color: #0bbd29;
+                -webkit-text-stroke: 1px rgba(11, 189, 41, 0.4);
+            }
+
+            .tech-card-name {
+                margin: 0;
+                font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+                text-transform: uppercase;
+                font-weight: 900;
+                line-height: 1;
+                color: #0a0a0a;
+            }
+        }
+
+        .tech-card-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                font-family: $font-family_4;
+                font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+                font-weight: 500;
+                padding: calc(8px + 2*(100vw - 320px)/1600) 0;
+                border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                transition: transform 0.4s ease;
+
+                &::before {
+                    content: "\2726";
+                    color: #0bbd29;
+                    font-size: 0.8em;
+                    flex-shrink: 0;
+                    transition: color 0.4s ease;
+                }
+
+                &:hover {
+                    transform: translateX(8px);
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .tech-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .tech-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
 .activities-photo-wrapper {
     display: grid;
     grid-template-columns: 30% auto;
