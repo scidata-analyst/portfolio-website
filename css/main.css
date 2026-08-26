@@ -115,7 +115,7 @@ ul li {
 
 a {
     text-decoration: none;
-    color: #222
+    color: #0a0a0a
 }
 
 .ham-icon {
@@ -129,13 +129,13 @@ a {
     height: 60px;
     border-radius: 50%;
     padding: 15px;
-    background: #fff;
+    background: #ffffff;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 999;
     transition: .8s;
-    border: 1px solid #222
+    border: 1px solid #0a0a0a
 }
 
 @media screen and (max-width: 500px) {
@@ -149,7 +149,7 @@ a {
 .ham-icon .icon {
     width: 100%;
     height: 2px;
-    background: #222
+    background: #0a0a0a
 }
 
 .ham-icon:hover {
@@ -172,7 +172,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    background: #222;
+    background: #0a0a0a;
     padding: calc(30px + 50*(100vw - 320px)/1600) 0px;
     display: flex;
     flex-direction: column;
@@ -211,7 +211,7 @@ a {
     text-transform: uppercase;
     position: relative;
     z-index: 1;
-    color: #fff;
+    color: #ffffff;
     letter-spacing: calc(4px + 4*(100vw - 320px)/1600);
     transition: .5s;
     animation: circle_animation 8.5s infinite;
@@ -222,7 +222,7 @@ a {
 .nav-wrapper .nav-top .left-col .btn-block .btn::before {
     content: "";
     position: absolute;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     height: calc(180px + 70*(100vw - 320px)/1600);
     width: calc(180px + 70*(100vw - 320px)/1600);
     border-radius: 50%;
@@ -250,7 +250,7 @@ a {
 }
 
 .nav-wrapper .nav-top .right-col .nav-block .nav-link {
-    color: #fff;
+    color: #ffffff;
     text-align: right;
     display: flex;
     flex-direction: column
@@ -262,7 +262,7 @@ a {
     font-weight: 900;
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff
+    -webkit-text-stroke: 1px #ffffff
 }
 
 .nav-wrapper .nav-top .right-col .nav-block .nav-link .nav-small-text {
@@ -284,7 +284,7 @@ a {
 }
 
 .nav-wrapper .nav-bottom .icon-block a {
-    color: #fff;
+    color: #ffffff;
     font-size: 5vh;
     display: block
 }
@@ -294,13 +294,13 @@ a {
     top: calc(30px + 20*(100vw - 320px)/1600);
     left: calc(30px + 50*(100vw - 320px)/1600);
     z-index: 999;
-    background: #222
+    background: #0a0a0a
 }
 
 .fix-nav-logo a {
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #ffffff;
     font-size: calc(18px + 5*(100vw - 320px)/1600);
     font-weight: 700
 }
@@ -312,14 +312,14 @@ a {
 }
 
 .fix-nav-logo a h1 {
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     padding: calc(5px + 5*(100vw - 320px)/1600)
 }
 
 .header {
     width: 100%;
     min-height: 100vh;
-    background: #222;
+    background: #0a0a0a;
     padding: calc(30px + 50*(100vw - 320px)/1600);
     display: flex;
     flex-direction: column;
@@ -332,7 +332,7 @@ a {
 }
 
 .header .header-block .title {
-    color: #fff;
+    color: #ffffff;
     font-size: calc(45px + 115*(100vw - 320px)/1600);
     position: relative;
     text-transform: uppercase;
@@ -355,7 +355,7 @@ a {
     display: flex;
     align-items: center;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff
+    -webkit-text-stroke: 1px #ffffff
 }
 
 .header .text-block {
@@ -366,7 +366,7 @@ a {
 
 .header .text-block .text {
     font-size: calc(22px + 6*(100vw - 320px)/1600);
-    color: #fff;
+    color: #ffffff;
     font-family: "Montserrat Alternates", sans-serif
 }
 
@@ -382,10 +382,10 @@ a {
 
 .header .btn-block a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     padding: calc(10px + 10*(100vw - 320px)/1600) calc(30px + 50*(100vw - 320px)/1600);
     font-size: calc(18px + 10*(100vw - 320px)/1600);
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     display: block;
     width: -moz-fit-content;
     width: fit-content;
@@ -399,7 +399,7 @@ a {
     left: 0;
     width: 50px;
     height: 50px;
-    border: 2px solid #e20505;
+    border: 2px solid #0bbd29;
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
@@ -408,13 +408,13 @@ a {
 
 .project-section {
     padding: calc(30px + 50*(100vw - 320px)/1600);
-    background: #222
+    background: #0a0a0a
 }
 
 .project-section .title-block {
     width: 100%;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 80px
 }
 
@@ -423,7 +423,7 @@ a {
     font-weight: 900;
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff
+    -webkit-text-stroke: 1px #ffffff
 }
 
 .project-section .title-block .text {
@@ -450,7 +450,7 @@ a {
 
 .project-section .project-wrap .project-block .left-col .title {
     font-size: calc(35px + 60*(100vw - 320px)/1600);
-    color: #fff;
+    color: #ffffff;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -459,7 +459,7 @@ a {
     text-align: center;
     top: -7vh;
     z-index: 1;
-    text-shadow: #000 2px 2px 2px;
+    text-shadow: #0a0a0a 2px 2px 2px;
     text-transform: uppercase;
     font-weight: 900
 }
@@ -483,12 +483,12 @@ a {
 
 .project-section .project-wrap .project-block .right-col .text {
     font-size: 5vh;
-    color: #fff;
+    color: #ffffff;
     transform: rotate(90deg);
     position: absolute;
     left: -5vh;
     top: 12vh;
-    text-shadow: 2px 2px 2px #222;
+    text-shadow: 2px 2px 2px #0a0a0a;
     font-family: "Montserrat Alternates", sans-serif
 }
 
@@ -499,7 +499,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #222
+    background: #0a0a0a
 }
 
 .project-section .project-wrap .project-block .right-col .btn-block {
@@ -511,9 +511,9 @@ a {
 }
 
 .project-section .project-wrap .project-block .right-col .btn-block .btn {
-    color: #fff;
+    color: #ffffff;
     padding: calc(10px + 5*(100vw - 320px)/1600) calc(15px + 10*(100vw - 320px)/1600);
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     display: block;
     width: -moz-fit-content;
     width: fit-content;
@@ -553,12 +553,12 @@ a {
 }
 
 .project-section .project-wrap .project-block .pop_up-block .pop-text {
-    background: #222;
+    background: #0a0a0a;
     display: flex;
     flex-direction: column;
     gap: calc(30px + 50*(100vw - 320px)/1600);
     padding: calc(30px + 50*(100vw - 320px)/1600);
-    color: #fff;
+    color: #ffffff;
     justify-content: center
 }
 
@@ -589,12 +589,12 @@ a {
 }
 
 .project-section .project-wrap .project-block .pop_up-block .pop-text a {
-    color: #fff;
+    color: #ffffff;
     display: block;
     width: -moz-fit-content;
     width: fit-content;
     padding: 10px 20px;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     font-family: "Montserrat Alternates", sans-serif
 }
 
@@ -602,7 +602,7 @@ a {
     position: absolute;
     top: calc(30px + 20*(100vw - 320px)/1600);
     right: calc(30px + 20*(100vw - 320px)/1600);
-    color: #fff;
+    color: #ffffff;
     cursor: pointer
 }
 
@@ -612,7 +612,7 @@ a {
     align-items: center;
     justify-content: center;
     height: 80vh;
-    background: #222
+    background: #0a0a0a
 }
 
 .button-section .title-block {
@@ -623,9 +623,9 @@ a {
 .button-section .title-block .title {
     font-size: calc(30px + 95*(100vw - 320px)/1600);
     text-transform: uppercase;
-    color: #000;
+    color: #0a0a0a;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 2px #fff;
+    -webkit-text-stroke: 2px #ffffff;
     position: relative;
     font-weight: 900;
     text-align: center
@@ -641,7 +641,7 @@ a {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: #ffffff;
     display: block
 }
 
@@ -651,8 +651,8 @@ a {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #222;
-    color: #fff;
+    background: #0a0a0a;
+    color: #ffffff;
     z-index: 999;
     display: flex;
     align-items: center;
@@ -663,7 +663,7 @@ a {
 .loader .text {
     font-size: calc(35px + 95*(100vw - 320px)/1600);
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #ffffff;
     font-weight: 900;
     text-transform: uppercase;
     animation: slide_up 2s infinite alternate-reverse;
@@ -677,7 +677,7 @@ a {
     padding: calc(30px + 50*(100vw - 320px)/1600);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background: #222;
+    background: #0a0a0a;
     min-height: 100vh;
     align-items: center;
     padding-top: 120px
@@ -688,16 +688,16 @@ a {
     font-weight: 900;
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #ffffff;
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
     line-height: 1
 }
 
 .about-section .left-col .text {
     margin-top: calc(30px + 50*(100vw - 320px)/1600);
     font-size: calc(26px + 2*(100vw - 320px)/1600);
-    color: #fff;
+    color: #ffffff;
     line-height: 1.8;
     font-family: "Montserrat Alternates", sans-serif
 }
@@ -705,7 +705,7 @@ a {
 .choose-section {
     width: 100%;
     padding: calc(30px + 50*(100vw - 320px)/1600);
-    background: #222;
+    background: #0a0a0a;
     position: relative;
     z-index: 1
 }
@@ -720,15 +720,15 @@ a {
     font-weight: 900;
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #ffffff;
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
     text-align: center
 }
 
 .choose-section .title-block .title .stroke-text {
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff
+    -webkit-text-stroke: 1px #ffffff
 }
 
 .choose-section .choose-wrap {
@@ -741,13 +741,13 @@ a {
 
 .choose-section .choose-wrap .choose-block .title {
     font-size: calc(22px + 24*(100vw - 320px)/1600);
-    color: #fff;
+    color: #ffffff;
     font-weight: 900
 }
 
 .choose-section .choose-wrap .choose-block .text {
     margin-top: 40px;
-    color: #fff;
+    color: #ffffff;
     line-height: 2;
     font-family: "Montserrat Alternates", sans-serif
 }
@@ -757,17 +757,17 @@ a {
     top: 75vh;
     right: -29vh;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px gray;
+    -webkit-text-stroke: 1px #ffffff;
     font-size: 35vh;
     font-weight: bold;
     transform: rotate(90deg);
     line-height: 1;
-    color: gray
+    color: #0a0a0a
 }
 
 .say-section {
     width: 100%;
-    background: #222
+    background: #0a0a0a
 }
 
 .say-section .title-block {
@@ -781,18 +781,18 @@ a {
     font-weight: 900;
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff;
-    color: #fff;
+    -webkit-text-stroke: 1px #ffffff;
+    color: #ffffff;
     text-align: center
 }
 
 .say-section .title-block .title .stroke-text {
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff
+    -webkit-text-stroke: 1px #ffffff
 }
 
 .say-section .title-block .text {
-    color: #fff;
+    color: #ffffff;
     font-size: calc(22px + 6*(100vw - 320px)/1600);
     font-family: "Montserrat Alternates", sans-serif
 }
@@ -808,7 +808,7 @@ a {
     min-height: calc(200px + 350*(100vw - 320px)/1600);
     flex-grow: 1;
     text-align: center;
-    background: #fff;
+    background: #ffffff;
     font-size: calc(40px + 100*(100vw - 320px)/1600);
     font-weight: 900;
     display: flex;
@@ -820,25 +820,25 @@ a {
 }
 
 .say-section .say-wrapper .say-block:first-child {
-    border-right: 1px solid #222
+    border-right: 1px solid #0a0a0a
 }
 
 .say-section .say-wrapper .say-block:first-child:hover {
     flex-grow: 1.5;
-    background: gray;
-    color: #fff
+    background: #0a0a0a;
+    color: #ffffff
 }
 
 .say-section .say-wrapper .say-block:last-child:hover {
     flex-grow: 1.5;
-    background: gray;
-    color: #fff
+    background: #0a0a0a;
+    color: #ffffff
 }
 
 .service-section {
     width: 100%;
     padding: calc(30px + 50*(100vw - 320px)/1600);
-    background: #222
+    background: #0a0a0a
 }
 
 .service-section .title-block {
@@ -847,16 +847,16 @@ a {
 }
 
 .service-section .title-block .title {
-    color: #fff;
+    color: #ffffff;
     font-size: calc(35px + 105*(100vw - 320px)/1600);
     font-weight: 900;
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff
+    -webkit-text-stroke: 1px #ffffff
 }
 
 .service-section .title-block .text {
-    color: #fff;
+    color: #ffffff;
     font-size: calc(22px + 6*(100vw - 320px)/1600);
     font-family: "Montserrat Alternates", sans-serif
 }
@@ -865,7 +865,7 @@ a {
     width: 100%;
     min-height: 80vh;
     padding: calc(30px + 50*(100vw - 320px)/1600);
-    background: #222;
+    background: #0a0a0a;
     display: flex;
     align-items: center
 }
@@ -875,16 +875,16 @@ a {
     font-weight: 900;
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #ffffff;
     font-weight: 900;
-    color: #fff;
+    color: #ffffff;
     text-transform: uppercase
 }
 
 .contact-form {
     width: 100%;
     padding: calc(30px + 50*(100vw - 320px)/1600);
-    background: #222;
+    background: #0a0a0a;
     display: grid;
     grid-template-columns: 65% 1fr;
     position: relative;
@@ -893,7 +893,7 @@ a {
 }
 
 .contact-form .left-col {
-    color: #fff;
+    color: #ffffff;
     font-size: 4vh;
     font-weight: 300
 }
@@ -904,8 +904,8 @@ a {
 }
 
 .contact-form .left-col form .erorr {
-    background: red;
-    color: #fff;
+    background: #0bbd29;
+    color: #ffffff;
     font-size: 3vh;
     font-family: "Montserrat Alternates", sans-serif
 }
@@ -919,10 +919,10 @@ a {
 .contact-form .left-col form input {
     text-align: center;
     background: rgba(0, 0, 0, 0);
-    color: #fff;
+    color: #ffffff;
     outline: none;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff;
     font-size: 2vh;
     padding: 5px;
     transform: translateY(-10px);
@@ -931,12 +931,12 @@ a {
 }
 
 .contact-form .left-col form::-moz-placeholder {
-    color: #fff;
+    color: #ffffff;
     font-family: "Montserrat Alternates", sans-serif
 }
 
 .contact-form .left-col form::placeholder {
-    color: #fff;
+    color: #ffffff;
     font-family: "Montserrat Alternates", sans-serif
 }
 
@@ -944,22 +944,22 @@ a {
     display: block;
     width: 100%;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff;
     background: rgba(0, 0, 0, 0);
     font-size: 2vh;
     margin: 20px 0px;
     outline: none;
-    color: #fff;
+    color: #ffffff;
     font-weight: 300;
     font-family: "Montserrat Alternates", sans-serif
 }
 
 .contact-form .left-col form select {
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     background: rgba(0, 0, 0, 0);
     font-size: 2vh;
     padding: 5px 0px;
-    color: #fff;
+    color: #ffffff;
     transform: translateY(-10px);
     max-width: 250px;
     width: 100%;
@@ -968,7 +968,7 @@ a {
 }
 
 .contact-form .left-col form select option {
-    color: #222;
+    color: #0a0a0a;
     text-align: center;
     font-family: "Montserrat Alternates", sans-serif
 }
@@ -993,7 +993,7 @@ a {
     text-transform: uppercase;
     position: relative;
     z-index: 1;
-    color: #fff;
+    color: #ffffff;
     letter-spacing: 8px;
     transition: .5s;
     animation: circle_animation 8s infinite;
@@ -1005,7 +1005,7 @@ a {
 .contact-form .left-col form .btn-block .btn::before {
     content: "";
     position: absolute;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -1029,7 +1029,7 @@ a {
     top: 20vh;
     left: -35vh;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px gray;
+    -webkit-text-stroke: 1px #ffffff;
     font-size: 35vh;
     font-weight: bold;
     transform: rotate(90deg);
@@ -1089,7 +1089,7 @@ a {
     }
 
     .project-section .project-wrap .project-block .pop_up-block .close {
-        text-shadow: 2px 2px 2px #222
+        text-shadow: 2px 2px 2px #0a0a0a
     }
 
     .button-section {
@@ -1181,7 +1181,7 @@ a {
 
 .about {
     padding: calc(30px + 50*(100vw - 320px)/1600);
-    background: #758166
+    background: #0a0a0a
 }
 
 .about .grid {
@@ -1207,7 +1207,7 @@ a {
 }
 
 .about .grid .col .title span {
-    color: #fa80b4
+    color: #0bbd29
 }
 
 @media screen and (max-width: 1200px) {
@@ -1220,9 +1220,9 @@ a {
 .about .grid .col .text-block {
     font-size: calc(18px + 7*(100vw - 320px)/1600);
     line-height: 1.7;
-    background: #cfbeac;
+    background: #ffffff;
     padding: calc(30px + 20*(100vw - 320px)/1600);
-    color: #68615a;
+    color: #0a0a0a;
     transform: translateX(-100px);
     display: flex;
     flex-direction: column;
@@ -1247,7 +1247,7 @@ a {
 .about .grid .col .text-block .text span {
     width: 50px;
     height: 50px;
-    border: 1px solid #222;
+    border: 1px solid #0a0a0a;
     border-radius: 50%;
     margin-right: 20px;
     position: absolute;
@@ -1270,7 +1270,7 @@ a {
     position: absolute;
     top: -20px;
     left: -20px;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -1337,7 +1337,7 @@ a {
 .custom-service .grid .box {
     width: calc(300px + 300*(100vw - 320px)/1600);
     height: calc(300px + 300*(100vw - 320px)/1600);
-    border: 1px solid #797769;
+    border: 1px solid #0a0a0a;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1356,7 +1356,7 @@ a {
 
 .custom-service .grid .box .text {
     width: 60%;
-    color: #fff;
+    color: #ffffff;
     font-size: calc(18px + 5*(100vw - 320px)/1600);
     line-height: 1.7;
     text-transform: uppercase;
@@ -1379,7 +1379,7 @@ a {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #8a8989;
+    background: #0a0a0a;
     transform: rotate(30deg) scaleX(2);
     z-index: -18
 }
@@ -1393,12 +1393,12 @@ a {
 .custom-service .grid-4 {
     display: flex;
     flex-wrap: wrap;
-    border-left: 1px solid #797769;
-    border-bottom: 1px solid #797769
+    border-left: 1px solid #0a0a0a;
+    border-bottom: 1px solid #0a0a0a
 }
 
 .custom-service .grid-4 .col {
-    border: 1px solid #797769;
+    border: 1px solid #0a0a0a;
     border-bottom: none;
     border-left: none;
     padding: 30px;
@@ -1423,7 +1423,7 @@ a {
 
 .custom-service .grid-4 .col h1,
 .custom-service .grid-4 .col h2 {
-    color: #fff;
+    color: #ffffff;
     text-transform: uppercase
 }
 
@@ -1450,7 +1450,7 @@ a {
 
 .custom-service .grid-4 .col .text {
     font-size: 25px;
-    color: #878376;
+    color: #0a0a0a;
     line-height: 1.5;
     margin-top: 50px;
     font-family: "Montserrat Alternates", sans-serif
@@ -1458,10 +1458,10 @@ a {
 
 .custom-service .grid-4 .col .sub-text {
     font-size: calc(18px + 12*(100vw - 320px)/1600);
-    color: #878376;
+    color: #0a0a0a;
     text-align: center;
     line-height: 1.5;
-    border-top: 2px solid #797769;
+    border-top: 2px solid #0a0a0a;
     margin-top: 20px;
     padding-top: 20px;
     font-family: "Montserrat Alternates", sans-serif
@@ -1500,9 +1500,9 @@ a {
 .custom-service .grid-4 .col .btn-block {
     width: calc(100px + 150*(100vw - 320px)/1600);
     height: calc(100px + 150*(100vw - 320px)/1600);
-    background: linear-gradient(45deg, #00ffb6 0%, #000fa3 100%);
+    background: linear-gradient(45deg, #0bbd29 0%, #0a0a0a 100%);
     text-align: center;
-    border: 1px solid #797769;
+    border: 1px solid #0a0a0a;
     margin: auto;
     border-radius: 50%;
     display: flex;
@@ -1513,7 +1513,7 @@ a {
 .custom-service .grid-4 .col .btn-block .btn {
     font-size: calc(20px + 10*(100vw - 320px)/1600);
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 900
 }
@@ -1521,7 +1521,7 @@ a {
 .about-section-2 {
     width: 100%;
     padding: 20px;
-    background: #222
+    background: #0a0a0a
 }
 
 .about-section-2 .about-grid {
@@ -1544,7 +1544,7 @@ a {
 }
 
 .about-section-2 .about-grid .col {
-    border: 1px solid #d3d3d3;
+    border: 1px solid #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1553,12 +1553,12 @@ a {
 
 .about-section-2 .about-grid .col h1 {
     font-size: calc(30px + 50*(100vw - 320px)/1600);
-    color: #fff;
+    color: #ffffff;
     text-transform: uppercase;
     margin: 0px;
     padding: 30px;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #ffffff;
     text-align: center
 }
 
@@ -1632,7 +1632,7 @@ a {
 }
 
 .skill-section {
-    background: #222;
+    background: #0a0a0a;
     padding: calc(30px + 50*(100vw - 320px)/1600) 5%;
     padding-top: 0px
 }
@@ -1640,7 +1640,7 @@ a {
 .skill-section .title-block {
     width: 100%;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: calc(30px + 50*(100vw - 320px)/1600);
     overflow: hidden
 }
@@ -1650,7 +1650,7 @@ a {
     font-weight: 900;
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff
+    -webkit-text-stroke: 1px #ffffff
 }
 
 .skill-section .title-block .text {
@@ -1660,13 +1660,24 @@ a {
 
 .skill-block .skills .skill h1 {
     font-size: calc(40px + 40*(100vw - 320px)/1600);
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     text-transform: uppercase;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px #fff
+    -webkit-text-stroke: 1px #ffffff
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+
+
+
+
+
+
+
+
