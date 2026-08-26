@@ -2061,6 +2061,500 @@ a {
   }
 }
 
+.process-showcase {
+  margin: 80px 3% 0 0;
+}
+.process-showcase .process-showcase-head {
+  margin-bottom: calc(40px + 40 * (100vw - 320px) / 1600);
+}
+.process-showcase .process-showcase-head .process-showcase-eyebrow {
+  display: inline-block;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: calc(12px + 3 * (100vw - 320px) / 1600);
+  color: #0bbd29;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.process-showcase .process-showcase-head .process-showcase-title {
+  margin: 0;
+  font-size: clamp(2.6rem, 9vw, 7.5rem);
+  line-height: 0.92;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+.process-showcase .process-showcase-head .process-showcase-title em {
+  font-style: normal;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #0bbd29;
+}
+.process-showcase .process-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: calc(20px + 30 * (100vw - 320px) / 1600);
+}
+.process-showcase .process-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: calc(16px + 8 * (100vw - 320px) / 1600);
+  padding: calc(28px + 18 * (100vw - 320px) / 1600);
+  border: 2px solid #0a0a0a;
+  border-radius: 26px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.5s ease, transform 0.5s ease;
+}
+.process-showcase .process-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0bbd29;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+.process-showcase .process-stage > * {
+  position: relative;
+  z-index: 1;
+}
+.process-showcase .process-stage:hover {
+  border-color: #0bbd29;
+  transform: translateY(-6px);
+}
+.process-showcase .process-stage:hover::before {
+  transform: scaleY(1);
+}
+.process-showcase .process-stage:hover .process-stage-list li::before {
+  color: #0a0a0a;
+}
+.process-showcase .process-stage .process-stage-no {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #0a0a0a;
+}
+.process-showcase .process-stage .process-stage-name {
+  margin: 0 0 calc(10px + 6 * (100vw - 320px) / 1600);
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1;
+  color: #0a0a0a;
+}
+.process-showcase .process-stage .process-stage-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.process-showcase .process-stage .process-stage-list li {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+  font-weight: 500;
+  padding: calc(8px + 2 * (100vw - 320px) / 1600) 0;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.4s ease;
+}
+.process-showcase .process-stage .process-stage-list li::before {
+  content: "✦";
+  color: #0bbd29;
+  font-size: 0.8em;
+  flex-shrink: 0;
+  transition: color 0.4s ease;
+}
+.process-showcase .process-stage .process-stage-list li:hover {
+  transform: translateX(8px);
+}
+.process-showcase .process-stage .process-stage-list li:last-child {
+  border-bottom: none;
+}
+.process-showcase .process-arrow {
+  color: #0bbd29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.process-showcase .process-arrow svg {
+  width: clamp(36px, 6vw, 80px);
+  height: auto;
+  animation: processArrow 1.6s ease-in-out infinite;
+}
+@keyframes processArrow {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(12px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .process-showcase .process-flow {
+    grid-template-columns: 1fr;
+  }
+  .process-showcase .process-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+.approach-showcase {
+  margin: calc(60px + 40 * (100vw - 320px) / 1600) 3% 0 0;
+}
+.approach-showcase .approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(18px + 18 * (100vw - 320px) / 1600);
+}
+.approach-showcase .approach-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: calc(16px + 8 * (100vw - 320px) / 1600);
+  padding: calc(28px + 18 * (100vw - 320px) / 1600);
+  border: 2px solid #0a0a0a;
+  border-radius: 26px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.5s ease, transform 0.5s ease;
+}
+.approach-showcase .approach-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0bbd29;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+.approach-showcase .approach-card > * {
+  position: relative;
+  z-index: 1;
+}
+.approach-showcase .approach-card:hover {
+  border-color: #0bbd29;
+  transform: translateY(-6px);
+}
+.approach-showcase .approach-card:hover::before {
+  transform: scaleY(1);
+}
+.approach-showcase .approach-card:hover .approach-card-link {
+  color: #0a0a0a;
+}
+.approach-showcase .approach-card:hover .approach-card-link i {
+  color: #0a0a0a;
+}
+.approach-showcase .approach-card .approach-card-name {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1;
+  color: #0a0a0a;
+}
+.approach-showcase .approach-card .approach-card-body p {
+  margin: 0 0 14px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  line-height: 1.7;
+  color: #0a0a0a;
+}
+.approach-showcase .approach-card .approach-card-body .approach-card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.approach-showcase .approach-card .approach-card-body .approach-card-list li {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  padding: calc(7px + 2 * (100vw - 320px) / 1600) 0;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.approach-showcase .approach-card .approach-card-body .approach-card-list li::before {
+  content: "✦";
+  color: #0bbd29;
+  font-size: 0.8em;
+  flex-shrink: 0;
+}
+.approach-showcase .approach-card .approach-card-body .approach-card-list li:last-child {
+  border-bottom: none;
+}
+.approach-showcase .approach-card .approach-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  color: #0bbd29;
+  text-decoration: none;
+  transition: gap 0.4s ease, color 0.4s ease;
+}
+.approach-showcase .approach-card .approach-card-link i {
+  transition: color 0.4s ease;
+}
+.approach-showcase .approach-card .approach-card-link:hover {
+  gap: 18px;
+}
+.approach-showcase .approach-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(8px + 6 * (100vw - 320px) / 1600);
+  margin-top: calc(30px + 20 * (100vw - 320px) / 1600);
+  padding: calc(16px + 8 * (100vw - 320px) / 1600) calc(34px + 20 * (100vw - 320px) / 1600);
+  border: 2px solid #0a0a0a;
+  border-radius: 50px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: clamp(1rem, 2.4vw, 1.8rem);
+  color: #0a0a0a;
+  text-decoration: none;
+  background: #ffffff;
+  transition: all 0.4s ease;
+}
+.approach-showcase .approach-cta span {
+  transition: color 0.4s ease;
+}
+.approach-showcase .approach-cta:hover {
+  background: #0bbd29;
+  border-color: #0bbd29;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(11, 189, 41, 0.4);
+}
+@media screen and (max-width: 767px) {
+  .approach-showcase .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-timeline {
+  position: relative;
+  margin-top: calc(40px + 30 * (100vw - 320px) / 1600);
+  padding-left: calc(74px + 36 * (100vw - 320px) / 1600);
+}
+.process-timeline::before {
+  content: "";
+  position: absolute;
+  left: calc(37px + 18 * (100vw - 320px) / 1600);
+  top: 20px;
+  bottom: 20px;
+  width: 4px;
+  border-radius: 4px;
+  background: #0bbd29;
+}
+.process-timeline .process-step {
+  position: relative;
+  padding-bottom: calc(40px + 30 * (100vw - 320px) / 1600);
+}
+.process-timeline .process-step:last-child {
+  padding-bottom: 0;
+}
+.process-timeline .process-step .process-step-marker {
+  position: absolute;
+  left: calc(-74px - 36 * (100vw - 320px) / 1600);
+  top: 0;
+  width: calc(74px + 36 * (100vw - 320px) / 1600);
+  height: calc(74px + 36 * (100vw - 320px) / 1600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #0a0a0a;
+  border: 4px solid #0bbd29;
+  transition: background 0.4s ease, transform 0.4s ease;
+}
+.process-timeline .process-step .process-step-marker .process-step-no {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  transition: color 0.4s ease;
+}
+.process-timeline .process-step .process-step-content .process-step-name {
+  margin: 0 0 calc(14px + 8 * (100vw - 320px) / 1600);
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1;
+  color: #0a0a0a;
+}
+.process-timeline .process-step .process-step-content .process-step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 30px;
+}
+.process-timeline .process-step .process-step-content .process-step-list li {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+  font-weight: 500;
+  padding: calc(8px + 2 * (100vw - 320px) / 1600) 0;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.4s ease;
+}
+.process-timeline .process-step .process-step-content .process-step-list li::before {
+  content: "✦";
+  color: #0bbd29;
+  font-size: 0.8em;
+  flex-shrink: 0;
+}
+.process-timeline .process-step .process-step-content .process-step-list li:hover {
+  transform: translateX(8px);
+}
+.process-timeline .process-step:hover .process-step-marker {
+  background: #0bbd29;
+  transform: scale(1.08);
+}
+.process-timeline .process-step:hover .process-step-marker .process-step-no {
+  color: #0a0a0a;
+}
+@media screen and (max-width: 600px) {
+  .process-timeline .process-step-content .process-step-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.approach-rows {
+  margin-top: calc(40px + 30 * (100vw - 320px) / 1600);
+  display: flex;
+  flex-direction: column;
+}
+
+.approach-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.4fr) 1fr;
+  gap: calc(20px + 40 * (100vw - 320px) / 1600);
+  align-items: center;
+  padding: calc(30px + 20 * (100vw - 320px) / 1600) 0;
+  border-bottom: 2px solid #0a0a0a;
+}
+.approach-row:first-child {
+  border-top: 2px solid #0a0a0a;
+}
+.approach-row .approach-row-index {
+  font-size: clamp(3rem, 9vw, 8rem);
+  font-weight: 900;
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #0a0a0a;
+  transition: -webkit-text-stroke 0.4s ease;
+}
+.approach-row .approach-row-body .approach-row-name {
+  margin: 0 0 calc(14px + 8 * (100vw - 320px) / 1600);
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1;
+  color: #0a0a0a;
+}
+.approach-row .approach-row-body .approach-row-text p {
+  margin: 0 0 14px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  line-height: 1.7;
+  color: #0a0a0a;
+}
+.approach-row .approach-row-body .approach-row-text .approach-row-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.approach-row .approach-row-body .approach-row-text .approach-row-list li {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  padding: calc(7px + 2 * (100vw - 320px) / 1600) 0;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.approach-row .approach-row-body .approach-row-text .approach-row-list li::before {
+  content: "✦";
+  color: #0bbd29;
+  font-size: 0.8em;
+  flex-shrink: 0;
+}
+.approach-row .approach-row-body .approach-row-text .approach-row-list li:last-child {
+  border-bottom: none;
+}
+.approach-row .approach-row-body .approach-row-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  color: #0bbd29;
+  text-decoration: none;
+  transition: gap 0.4s ease;
+}
+.approach-row .approach-row-body .approach-row-link i {
+  transition: transform 0.4s ease;
+}
+.approach-row .approach-row-body .approach-row-link:hover {
+  gap: 18px;
+}
+.approach-row .approach-row-body .approach-row-link:hover i {
+  transform: translateX(4px);
+}
+.approach-row--reverse {
+  grid-template-columns: 1fr minmax(110px, 0.4fr);
+}
+.approach-row--reverse .approach-row-index {
+  order: 2;
+  text-align: right;
+}
+.approach-row--reverse .approach-row-body {
+  order: 1;
+}
+.approach-row:hover .approach-row-index {
+  -webkit-text-stroke: 2px #0bbd29;
+}
+@media screen and (max-width: 767px) {
+  .approach-row {
+    grid-template-columns: 1fr;
+    gap: calc(14px + 10 * (100vw - 320px) / 1600);
+  }
+  .approach-row--reverse {
+    grid-template-columns: 1fr;
+  }
+  .approach-row--reverse .approach-row-index {
+    order: 0;
+    text-align: left;
+  }
+}
+
 .activities-photo-wrapper {
   display: grid;
   grid-template-columns: 30% auto;
