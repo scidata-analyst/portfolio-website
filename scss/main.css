@@ -1787,6 +1787,147 @@ a {
   text-align: left;
 }
 
+.services-showcase {
+  margin: 80px 3% 0 0;
+}
+.services-showcase .services-showcase-head {
+  margin-bottom: calc(40px + 40 * (100vw - 320px) / 1600);
+}
+.services-showcase .services-showcase-head .services-showcase-eyebrow {
+  display: inline-block;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: calc(12px + 3 * (100vw - 320px) / 1600);
+  color: #0bbd29;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.services-showcase .services-showcase-head .services-showcase-title {
+  margin: 0;
+  font-size: clamp(2.6rem, 9vw, 7.5rem);
+  line-height: 0.92;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+.services-showcase .services-showcase-head .services-showcase-title em {
+  font-style: normal;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #0bbd29;
+}
+.services-showcase .services-rows {
+  display: flex;
+  flex-direction: column;
+  gap: calc(18px + 18 * (100vw - 320px) / 1600);
+}
+.services-showcase .service-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(120px, 0.45fr) 1fr;
+  gap: calc(20px + 40 * (100vw - 320px) / 1600);
+  align-items: center;
+  padding: calc(28px + 26 * (100vw - 320px) / 1600) calc(28px + 30 * (100vw - 320px) / 1600);
+  border: 2px solid #0a0a0a;
+  border-radius: 26px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.5s ease, transform 0.5s ease;
+}
+.services-showcase .service-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0bbd29;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+.services-showcase .service-row > * {
+  position: relative;
+  z-index: 1;
+}
+.services-showcase .service-row:hover {
+  border-color: #0bbd29;
+  transform: translateY(-6px);
+}
+.services-showcase .service-row:hover::before {
+  transform: scaleY(1);
+}
+.services-showcase .service-row:hover .service-row-list li::before {
+  color: #0a0a0a;
+}
+.services-showcase .service-row .service-row-index {
+  font-size: clamp(3.5rem, 11vw, 10rem);
+  font-weight: 900;
+  line-height: 0.78;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #0a0a0a;
+  transition: -webkit-text-stroke 0.5s ease;
+}
+.services-showcase .service-row .service-row-body .service-row-name {
+  margin: 0 0 calc(16px + 8 * (100vw - 320px) / 1600);
+  font-size: clamp(1.8rem, 5vw, 3.4rem);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1;
+  color: #0a0a0a;
+}
+.services-showcase .service-row .service-row-body .service-row-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: calc(10px + 4 * (100vw - 320px) / 1600) calc(20px + 20 * (100vw - 320px) / 1600);
+}
+.services-showcase .service-row .service-row-body .service-row-list li {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.3rem);
+  font-weight: 500;
+  padding: calc(8px + 2 * (100vw - 320px) / 1600) 0;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.4s ease;
+}
+.services-showcase .service-row .service-row-body .service-row-list li::before {
+  content: "✦";
+  color: #0bbd29;
+  font-size: 0.8em;
+  flex-shrink: 0;
+  transition: color 0.4s ease;
+}
+.services-showcase .service-row .service-row-body .service-row-list li:hover {
+  transform: translateX(8px);
+}
+@media screen and (max-width: 767px) {
+  .services-showcase .service-row .service-row-body .service-row-list {
+    grid-template-columns: 1fr;
+  }
+}
+.services-showcase .service-row--reverse {
+  grid-template-columns: 1fr minmax(120px, 0.45fr);
+}
+.services-showcase .service-row--reverse .service-row-index {
+  order: 2;
+  text-align: right;
+}
+@media screen and (max-width: 767px) {
+  .services-showcase .service-row,
+  .services-showcase .service-row--reverse {
+    grid-template-columns: 1fr;
+    gap: calc(14px + 10 * (100vw - 320px) / 1600);
+  }
+  .services-showcase .service-row--reverse .service-row-index {
+    order: 0;
+    text-align: left;
+  }
+}
+
 .activities-photo-wrapper {
   display: grid;
   grid-template-columns: 30% auto;
