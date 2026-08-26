@@ -547,6 +547,12 @@
     </script>
 
     <script>
+        document.querySelector('.footer-totop')?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <script>
         const custom = document.querySelector('.mouse-cursor');
 
         document.addEventListener('mousemove', (e) => {
@@ -782,28 +788,44 @@
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-top-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,32L80,37.3C160,43,320,53,480,58.7C640,64,800,64,960,58.7C1120,53,1280,43,1360,37.3L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="currentColor"></path>
-            </svg>
+        <div class="footer-blob"></div>
+
+        <div class="footer-cta">
+            <div class="footer-cta-inner">
+                <span class="footer-cta-eyebrow">Got a project in mind?</span>
+                <a href="contact.html" class="footer-cta-title">
+                    <span>Let's build</span>
+                    <span class="footer-cta-accent">something great</span>
+                </a>
+            </div>
+            <a href="contact.html" class="footer-cta-circle" aria-label="Start a project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+            </a>
         </div>
-        <div class="footer-glow"></div>
+
+        <div class="footer-wordmark" aria-hidden="true">
+            <span>SCIDATA ANALYST</span>
+        </div>
+
         <div class="footer-main">
             <div class="footer-col footer-brand">
                 <a href="/" class="footer-logo-link">
                     <img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo">
                 </a>
                 <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
-                <div class="footer-newsletter">
-                    <h4 class="footer-newsletter-title">Stay Updated</h4>
-                    <form class="footer-newsletter-form" onsubmit="event.preventDefault();">
+                <form class="footer-newsletter" onsubmit="event.preventDefault();">
+                    <label class="footer-newsletter-title">Stay in the loop</label>
+                    <div class="footer-newsletter-form">
                         <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
                         <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
+
             <div class="footer-col footer-links">
-                <h3 class="footer-heading">Company</h3>
+                <h3 class="footer-heading">Explore</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="work.html">Work</a></li>
@@ -811,17 +833,19 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+
             <div class="footer-col footer-services">
                 <h3 class="footer-heading">Services</h3>
                 <ul>
                     <li><a href="contact.html">Web Development</a></li>
                     <li><a href="contact.html">Software Development</a></li>
-                    <li><a href="contact.html">AI & Automation</a></li>
-                    <li><a href="contact.html">DevOps & Support</a></li>
+                    <li><a href="contact.html">AI &amp; Automation</a></li>
+                    <li><a href="contact.html">DevOps &amp; Support</a></li>
                 </ul>
             </div>
+
             <div class="footer-col footer-contact">
-                <h3 class="footer-heading">Contact</h3>
+                <h3 class="footer-heading">Connect</h3>
                 <ul class="footer-contact-list">
                     <li><a href="tel:+0000000000000"><i class="fa-solid fa-phone"></i> <span>(+00) 000 00 0000 00</span></a></li>
                     <li><a href="mailto:info@scidata-analyst.com"><i class="fa-solid fa-envelope"></i> <span>info@scidata-analyst.com</span></a></li>
@@ -836,11 +860,15 @@
                 </div>
             </div>
         </div>
+
         <div class="footer-divider"></div>
+
         <div class="footer-bottom">
             <div class="footer-bottom-inner">
                 <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
-                <p class="footer-tagline-bottom">Crafted with precision</p>
+                <button class="footer-totop" type="button" aria-label="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i> Back to top
+                </button>
             </div>
         </div>
     </footer>
