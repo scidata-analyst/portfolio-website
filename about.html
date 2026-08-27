@@ -24,457 +24,604 @@
 </head>
 
 <body class="about-page">
-    <nav class="top-nav">
-        <div class="top-logo-bar">
-            <div class="nav-link-wrapper">
-                <div class="nav-booking-buttons">
-                    <a class="m-hide" href="contact.html" target="_blank">Get a Quote</a>
-                    <a class="m-hide" href="#" data-toggle="modal" data-target="#exampleModalCenter">Current Offers</a>
-                </div>
-
-                <div class="nav-address">
-                    <a class="m-hide nav-hover" href="tel:+0000000000000"><span class="icon icon-call"></span>(+00) 000
-                        00
-                        0000 00</a>
-                    <a class="m-hide nav-hover" href="#" target="_blank"><span class="icon icon-pin"></span> 2001
-                        Victoria
-                        Court, NY </a>
-                </div>
-
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-text">ABOUT</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
             </div>
         </div>
-        <div class="menu-hamburger">
-            <div class="dots">
+    </div>
+    <!-- LOADER END -->
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" data-cursor></div>
+    <div class="cursor-follower" data-cursor-follower></div>
+    <!-- CUSTOM CURSOR END -->
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <a href="/"><img src="img/logo.png" alt="Scidata Analyst"></a>
+        </div>
+        <div class="nav-menu-trigger" data-menu-trigger>
+            <span class="menu-text">Menu</span>
+            <div class="menu-icon">
                 <span></span>
                 <span></span>
-                <span></span>
-            </div>
-            <div class="hamburger-text">
-                <span>m</span>
-                <span>e</span>
-                <span>n</span>
-                <span>u</span>
             </div>
         </div>
     </nav>
 
-    <nav class="side-nav">
-        <div class="contact-col">
-            <a href="./"><img src="img/logo.png" alt="Scidata Analyst Logo"></a>
-            <div class="side-nav-wrap">
-                <div class="social-links">
-                    <a class="m-hide" href="https://www.facebook.com/profile.php?id=100089262577787"
-                        target="_blank"><span class="icon icon-facebook"></span></a>
-                    <a class="m-hide" href="#" target="_blank"><span class="icon icon-instagram"></span></a>
-                    <a class="m-hide" href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank"><span
-                                class="icon icon-tripadvisor"></span></a>
-                    <a class="m-hide" href="https://twitter.com/KanchonSheel" target="_blank">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 461.001 461.001"
-                            style="enable-background:new 0 0 461.001 461.001;" xml:space="preserve">
-                            <g>
-                                <path style="fill:#0bbd29;"
-                                    d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728
-                                                c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137
-                                                C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607
-                                                c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z">
-                                </path>
-                            </g>
-                        </svg>
-                    </a>
-                    <a class="m-hide" href="https://wa.me/8801575033642" target="_blank"><span
-                                class="icon icon-whatsapp"></span></a>
-                    <a class="m-hide" href="https://join.skype.com/invite/YYXzSmJkfjpD"><span
-                                class="icon icon-viber"></span></a>
+    <div class="nav-overlay" data-nav-overlay>
+        <div class="nav-overlay-inner">
+            <div class="nav-overlay-links">
+                <a href="/" class="nav-link-magnetic" data-magnetic>Home</a>
+                <a href="work.html" class="nav-link-magnetic" data-magnetic>Work</a>
+                <a href="about.html" class="nav-link-magnetic" data-magnetic>About</a>
+                <a href="contact.html" class="nav-link-magnetic" data-magnetic>Contact</a>
+            </div>
+            <div class="nav-overlay-info">
+                <div class="nav-info-block">
+                    <span class="nav-info-label">Email</span>
+                    <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+                </div>
+                <div class="nav-info-block">
+                    <span class="nav-info-label">Phone</span>
+                    <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                </div>
+                <div class="nav-info-block">
+                    <span class="nav-info-label">Address</span>
+                    <span>2001 Victoria Court, NY</span>
                 </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- MOUSE CURSOR -->
-    <div class="mouse-cursor"></div>
-    <!-- MOUSE CURSOR END -->
-
-    <!-- HAM ICON -->
-    <div class="ham-icon">
-        <div class="icon"></div>
-        <div class="icon"></div>
-    </div>
-    <!-- HAM ICON END -->
-
-    <!-- NAV WRAPPER -->
-    <div class="nav-wrapper">
-        <div class="nav-top">
-            <div class="nav-logo">
-                <a href="/">
-                </a>
-            </div>
-            <div class="left-col">
-                <div class="btn-block">
-                    <a href="contact.html" class="btn">Start a Project</a>
-                </div>
-            </div>
-            <div class="right-col">
-                <div class="nav-block">
-                    <a href="work.html" class="nav-link">
-                        <span class="nav-text">Work</span>
-                        <span class="nav-small-text">A look at what we've built</span>
-                    </a>
-                </div>
-                <div class="nav-block">
-                    <a href="about.html" class="nav-link">
-                        <span class="nav-text">About</span>
-                        <span class="nav-small-text">The team behind Scidata Analyst</span>
-                    </a>
-                </div>
-                <div class="nav-block">
-                    <a href="innovation.html" class="nav-link">
-                        <span class="nav-text">Innovation</span>
-                        <span class="nav-small-text">Products &amp; solutions</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="nav-bottom">
-            <div class="icon-block">
-                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank">
-                    <i class="fa-brands fa-square-facebook"></i>
-                </a>
-            </div>
-            <div class="icon-block">
-                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </div>
-            <div class="icon-block">
-                <a href="https://twitter.com/KanchonSheel" target="_blank"><i
-                        class="fa-brands fa-square-twitter"></i></a>
-            </div>
-            <div class="icon-block">
-                <a href="https://join.skype.com/invite/YYXzSmJkfjpD" target="_blank"><i
-                        class="fa-brands fa-skype"></i></a>
-            </div>
-            <div class="icon-block">
-                <a href="https://wa.me/8801575033642" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <div class="nav-overlay-social">
+                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
+                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
+                <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
+                <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
             </div>
         </div>
     </div>
-    <!-- NAV WRAPPER END -->
+    <!-- NAVIGATION END -->
 
-    <!-- SECTION 1: BOLD NAME HERO -->
+    <!-- HERO SECTION -->
     <section class="about-hero">
+        <div class="hero-bg-text" aria-hidden="true">ABOUT</div>
         <div class="hero-field">
             <div class="hero-particle hero-particle--1"></div>
             <div class="hero-particle hero-particle--2"></div>
             <div class="hero-particle hero-particle--3"></div>
             <div class="hero-particle hero-particle--4"></div>
         </div>
-        <div class="hero-inner">
-            <div class="hero-name">SCIDATA ANALYST</div>
-            <div class="hero-sub">
-                <p class="hero-tagline">WE BUILD SOFTWARE THAT MOVES BUSINESSES FORWARD</p>
-                <div class="hero-underline"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow reveal-text">Who We Are</div>
+            <h1 class="hero-title">
+                <span class="hero-title-line reveal-text">We Are</span>
+                <span class="hero-title-line hero-title-line--accent reveal-text">Scidata</span>
+                <span class="hero-title-line reveal-text">Analyst</span>
+            </h1>
+            <div class="hero-meta">
+                <p class="hero-description reveal-text">
+                    A young, dedicated team building reliable digital products for growing businesses. We combine technical expertise with creative problem-solving to deliver solutions that actually move businesses forward.
+                </p>
+                <div class="hero-actions reveal-text">
+                    <a href="contact.html" class="btn-magnetic" data-magnetic>
+                        <span class="btn-text">Start a Project</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M13 6l6 6-6 6"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="work.html" class="btn-magnetic btn-magnetic--outline" data-magnetic>
+                        <span class="btn-text">View Work</span>
+                    </a>
+                </div>
             </div>
-            <div class="hero-cta">
-                <a href="contact.html" class="hero-btn">START A PROJECT</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line">
+                <div class="scroll-dot"></div>
             </div>
         </div>
     </section>
+    <!-- HERO SECTION END -->
 
-    <!-- SECTION 2: THE JOURNEY - FULL-WIDTH PHASE RIBBONS -->
-    <section class="about-story">
-        <div class="story-rail">
-            <div class="story-phase story-phase--1">
-                <div class="phase-number">01</div>
-                <div class="phase-card phase-card--left">
-                    <h3 class="phase-title">THE BEGINNING</h3>
-                    <p class="phase-text">A handful of developers and designers who wanted to build software that
-                        actually solves problems, not just fill out a checklist.</p>
-                    <span class="phase-year">2019</span>
-                </div>
-            </div>
-            <div class="story-phase story-phase--2">
-                <div class="phase-number">02</div>
-                <div class="phase-card phase-card--right">
-                    <h3 class="phase-title">FIRST PROJECTS</h3>
-                    <p class="phase-text">Early web builds and custom tools for local businesses, learning the craft
-                        one line at a time and shipping our first live products.</p>
-                    <span class="phase-year">2020 - 2021</span>
-                </div>
-            </div>
-            <div class="story-phase story-phase--3">
-                <div class="phase-number">03</div>
-                <div class="phase-card phase-card--left">
-                    <h3 class="phase-title">THE EXPANSION</h3>
-                    <p class="phase-text">Expanded into AI and DevOps, taking on larger projects across AdTech,
-                        Telco, Hotel, and Travel industries.</p>
-                    <span class="phase-year">2022 - 2023</span>
-                </div>
-            </div>
-            <div class="story-phase story-phase--4">
-                <div class="phase-number">04</div>
-                <div class="phase-card phase-card--right">
-                    <h3 class="phase-title">FULL-SERVICE PARTNER</h3>
-                    <p class="phase-text">Now a complete development partner, designing, building, and supporting
-                        software end-to-end with the same hands-on care as day one.</p>
-                    <span class="phase-year">2024 - NOW</span>
-                </div>
-            </div>
-            <div class="story-tagline">BUILT ON TRUST, DELIVERED WITH CARE</div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: WHO WE ARE - IDENTITY PILLARS -->
-    <section class="about-identity">
-        <div class="identity-rail">
-            <h2 class="identity-title">WHO WE ARE</h2>
-            <p class="identity-text">Real people with real expertise, working closely with each client from the
-                first conversation through to long-term support.</p>
-            <div class="identity-grid">
-                <div class="identity-pillar">
-                    <div class="pillar-glow"></div>
-                    <div class="pillar-icon">⚡</div>
-                    <h3 class="pillar-title">TECHNICAL EXCELLENCE</h3>
-                    <p class="pillar-text">Clean code, proper standards, software that lasts.</p>
-                </div>
-                <div class="identity-pillar">
-                    <div class="pillar-glow"></div>
-                    <div class="pillar-icon">🤝</div>
-                    <h3 class="pillar-title">CLIENT-FIRST</h3>
-                    <p class="pillar-text">We start by understanding what you actually need.</p>
-                </div>
-                <div class="identity-pillar">
-                    <div class="pillar-glow"></div>
-                    <div class="pillar-icon">🌱</div>
-                    <h3 class="pillar-title">GROWN TOGETHER</h3>
-                    <p class="pillar-text">We keep building long after launch, supporting and evolving.</p>
-                </div>
-                <div class="identity-pillar">
-                    <div class="pillar-glow"></div>
-                    <div class="pillar-icon">🌍</div>
-                    <h3 class="pillar-title">INDUSTRY DEPTH</h3>
-                    <p class="pillar-text">AdTech, Telco, Hotel, Travel - depth applied everywhere.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: WHAT WE DO - GIANT SKILL BARS -->
-    <section class="about-skills">
-        <div class="skills-field"></div>
-        <div class="skills-rail">
-            <h2 class="skills-title">WHAT WE BUILD</h2>
-            <div class="skill-bar">
-                <div class="skill-name">WEB</div>
-                <div class="skill-track">
-                    <div class="skill-fill skill-fill--1"></div>
-                </div>
-                <div class="skill-desc">RESPONSIVE HIGH-PERFORMANCE SITES</div>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-name">SOFTWARE</div>
-                <div class="skill-track">
-                    <div class="skill-fill skill-fill--2"></div>
-                </div>
-                <div class="skill-desc">CUSTOM APPLICATIONS END-TO-END</div>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-name">AI</div>
-                <div class="skill-track">
-                    <div class="skill-fill skill-fill--3"></div>
-                </div>
-                <div class="skill-desc">INTELLIGENT TOOLS THAT AUGMENT</div>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-name">DEVOPS</div>
-                <div class="skill-track">
-                    <div class="skill-fill skill-fill--4"></div>
-                </div>
-                <div class="skill-desc">RELIABLE INFRASTRUCTURE THAT SHIPS</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: BY THE NUMBERS - MASSIVE COUNTERS -->
-    <section class="about-counters">
-        <div class="counter-field">
-            <div class="counter-blob counter-blob--1"></div>
-            <div class="counter-blob counter-blob--2"></div>
-            <div class="counter-blob counter-blob--3"></div>
-        </div>
-        <div class="counters-rail">
-            <h2 class="counters-title">BY THE NUMBERS</h2>
-            <div class="counter-grid">
-                <div class="counter-item">
-                    <div class="counter-value">5+</div>
-                    <div class="counter-label">YEARS BUILDING</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-value">100+</div>
-                    <div class="counter-label">PROJECTS SHIPPED</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-value">20+</div>
-                    <div class="counter-label">CLIENTS SERVED</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-value">4</div>
-                    <div class="counter-label">INDUSTRIES</div>
-                </div>
-            </div>
-            <div class="counter-cta">
-                <a href="contact.html" class="counter-btn">WORK WITH US</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- BUTTON SECTION -->
-    <div class="button-section">
-        <a href="work.html" class="title-block">
-            <h2 class="title">
-                <span class="title-text">See Our Work</span>
-                <span class="overlay-text"></span>
+    <!-- MANIFESTO SECTION -->
+    <section class="manifesto">
+        <div class="manifesto-content">
+            <h2 class="manifesto-title reveal-text">
+                <span class="manifesto-word">WE</span>
+                <span class="manifesto-word">DON'T</span>
+                <span class="manifesto-word">JUST</span>
+                <span class="manifesto-word">BUILD</span>
+                <span class="manifesto-word manifesto-word--accent">SOFTWARE.</span>
             </h2>
-        </a>
-    </div>
-    <!-- BUTTON SECTION END -->
+            <h2 class="manifesto-title manifesto-title--2 reveal-text">
+                <span class="manifesto-word">WE</span>
+                <span class="manifesto-word">BUILD</span>
+                <span class="manifesto-word manifesto-word--accent">SOLUTIONS</span>
+                <span class="manifesto-word">THAT</span>
+                <span class="manifesto-word">MATTER.</span>
+            </h2>
+            <p class="manifesto-text reveal-text">
+                Every line of code we write serves a purpose. Every design decision is intentional. 
+                We believe technology should feel invisible—it should just work, beautifully.
+            </p>
+        </div>
+        <div class="manifesto-deco">
+            <div class="deco-circle deco-circle--large"></div>
+        </div>
+    </section>
+    <!-- MANIFESTO SECTION END -->
 
-    <!-- LOADER -->
-    <div class="loader">
-        <div class="text">Welcome to <br> Scidata Analyst</div>
-    </div>
+    <!-- STORY TIMELINE - HORIZONTAL SCROLL -->
+    <section class="story-horizontal">
+        <div class="story-sticky">
+            <div class="section-header">
+                <span class="section-eyebrow reveal-text">Our Journey</span>
+                <h2 class="section-title reveal-text">The <em>Story</em></h2>
+            </div>
+        </div>
+        <div class="story-track" data-horizontal-scroll>
+            <div class="story-panel">
+                <div class="story-card story-card--beginning">
+                    <div class="story-number">01</div>
+                    <h3 class="story-name reveal-text">THE BEGINNING</h3>
+                    <p class="story-text reveal-text">
+                        A handful of developers and designers who wanted to build software that actually solves problems, 
+                        not just fill out a checklist. Started in a small office with big dreams.
+                    </p>
+                    <div class="story-year">2019</div>
+                </div>
+            </div>
+            <div class="story-panel">
+                <div class="story-card story-card--growth">
+                    <div class="story-number">02</div>
+                    <h3 class="story-name reveal-text">FIRST PROJECTS</h3>
+                    <p class="story-text reveal-text">
+                        Early web builds and custom tools for local businesses, learning the craft one line at a time 
+                        and shipping our first live products. Built relationships that became partnerships.
+                    </p>
+                    <div class="story-year">2020 - 2021</div>
+                </div>
+            </div>
+            <div class="story-panel">
+                <div class="story-card story-card--expansion">
+                    <div class="story-number">03</div>
+                    <h3 class="story-name reveal-text">EXPANSION</h3>
+                    <p class="story-text reveal-text">
+                        Expanded into AI and DevOps, taking on larger projects across AdTech, Telco, Hotel, and Travel 
+                        industries. Built a team of specialists who share the same passion.
+                    </p>
+                    <div class="story-year">2022 - 2023</div>
+                </div>
+            </div>
+            <div class="story-panel">
+                <div class="story-card story-card--partner">
+                    <div class="story-number">04</div>
+                    <h3 class="story-name reveal-text">FULL PARTNER</h3>
+                    <p class="story-text reveal-text">
+                        Now a complete development partner, designing, building, and supporting software end-to-end 
+                        with the same hands-on care as day one. Trusted by clients worldwide.
+                    </p>
+                    <div class="story-year">2024 - NOW</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- STORY TIMELINE END -->
+
+    <!-- VALUES SECTION -->
+    <section class="values">
+        <div class="section-header">
+            <span class="section-eyebrow reveal-text">What Drives Us</span>
+            <h2 class="section-title reveal-text">Our <em>Values</em></h2>
+        </div>
+        <div class="values-grid">
+            <div class="value-card reveal-text" data-tilt>
+                <div class="value-number">01</div>
+                <h3 class="value-name">TECHNICAL EXCELLENCE</h3>
+                <p class="value-text">
+                    Clean code, proper standards, software that lasts. We treat every project as if it will be 
+                    maintained for decades—because it might be.
+                </p>
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="value-card reveal-text" data-tilt>
+                <div class="value-number">02</div>
+                <h3 class="value-name">CLIENT-FIRST</h3>
+                <p class="value-text">
+                    We start by understanding what you actually need, not what we think you should have. 
+                    Your goals become our roadmap.
+                </p>
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="value-card reveal-text" data-tilt>
+                <div class="value-number">03</div>
+                <h3 class="value-name">GROWN TOGETHER</h3>
+                <p class="value-text">
+                    We keep building long after launch, supporting and evolving with your business. 
+                    Long-term relationships are our success metric.
+                </p>
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="value-card reveal-text" data-tilt>
+                <div class="value-number">04</div>
+                <h3 class="value-name">INDUSTRY DEPTH</h3>
+                <p class="value-text">
+                    AdTech, Telco, Hotel, Travel—depth applied everywhere. We don't just write code; 
+                    we understand your business context.
+                </p>
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- VALUES SECTION END -->
+
+    <!-- CAPABILITIES SECTION -->
+    <section class="capabilities">
+        <div class="section-header">
+            <span class="section-eyebrow reveal-text">What We Deliver</span>
+            <h2 class="section-title reveal-text">Our <em>Capabilities</em></h2>
+        </div>
+        <div class="capabilities-list">
+            <div class="capability-item reveal-text">
+                <div class="capability-index">01</div>
+                <div class="capability-body">
+                    <h3 class="capability-name">WEB DEVELOPMENT</h3>
+                    <p class="capability-text">
+                        Responsive, high-performance websites from landing pages to full-scale platforms. 
+                        Every project starts with a clear plan and is reviewed at each stage.
+                    </p>
+                    <ul class="capability-list">
+                        <li>Custom Website Design & Development</li>
+                        <li>Responsive & Mobile-First Builds</li>
+                        <li>E-Commerce Development</li>
+                        <li>Performance & SEO Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="capability-item capability-item--reverse reveal-text">
+                <div class="capability-index">02</div>
+                <div class="capability-body">
+                    <h3 class="capability-name">SOFTWARE DEVELOPMENT</h3>
+                    <p class="capability-text">
+                        From custom internal tools to client-facing applications. We design and build software 
+                        that fits how your business actually operates.
+                    </p>
+                    <ul class="capability-list">
+                        <li>Custom Software Development</li>
+                        <li>API Design & Integration</li>
+                        <li>Cloud Deployment & Hosting</li>
+                        <li>DevOps & CI/CD Pipelines</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="capability-item reveal-text">
+                <div class="capability-index">03</div>
+                <div class="capability-body">
+                    <h3 class="capability-name">AI & AUTOMATION</h3>
+                    <p class="capability-text">
+                        Practical AI solutions that save time and reduce manual work. From LLM-powered chatbots 
+                        to workflow automation and data analysis tools.
+                    </p>
+                    <ul class="capability-list">
+                        <li>AI & LLM-Based Chatbots</li>
+                        <li>Natural Language Processing</li>
+                        <li>Data Analysis & Reporting</li>
+                        <li>Marketing Automation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="capability-item capability-item--reverse reveal-text">
+                <div class="capability-index">04</div>
+                <div class="capability-body">
+                    <h3 class="capability-name">DEVOPS & SUPPORT</h3>
+                    <p class="capability-text">
+                        Reliable infrastructure and deployment pipelines so your product runs smoothly as it grows. 
+                        Beyond launch, we offer ongoing support.
+                    </p>
+                    <ul class="capability-list">
+                        <li>Cloud Setup & Migration</li>
+                        <li>Automated Deployment Pipelines</li>
+                        <li>Monitoring & Maintenance</li>
+                        <li>Security & Compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CAPABILITIES SECTION END -->
+
+    <!-- PHILOSOPHY SECTION -->
+    <section class="philosophy">
+        <div class="philosophy-field">
+            <div class="philosophy-blob philosophy-blob--1"></div>
+            <div class="philosophy-blob philosophy-blob--2"></div>
+        </div>
+        <div class="philosophy-content">
+            <h2 class="philosophy-title reveal-text">
+                <span class="philosophy-line">DESIGN IS</span>
+                <span class="philosophy-line philosophy-line--italic">HOW IT</span>
+                <span class="philosophy-line">WORKS.</span>
+            </h2>
+            <p class="philosophy-text reveal-text">
+                We believe the best technology is invisible. It should feel like a natural extension of your business, 
+                not a burden. Every interface we design, every system we architect, every line of code we write— 
+                it all serves the same goal: making complex things feel simple.
+            </p>
+            <div class="philosophy-author reveal-text">
+                <span class="author-name">— Scidata Philosophy</span>
+            </div>
+        </div>
+    </section>
+    <!-- PHILOSOPHY SECTION END -->
+
+    <!-- STATS SECTION -->
+    <section class="about-stats">
+        <div class="stats-field">
+            <div class="stats-blob stats-blob--1"></div>
+            <div class="stats-blob stats-blob--2"></div>
+            <div class="stats-blob stats-blob--3"></div>
+        </div>
+        <div class="stats-rail">
+            <h2 class="stats-title reveal-text">BY THE NUMBERS</h2>
+            <div class="stats-grid">
+                <div class="stat-item reveal-text">
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">YEARS EXPERIENCE</div>
+                </div>
+                <div class="stat-item reveal-text">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">PROJECTS DELIVERED</div>
+                </div>
+                <div class="stat-item reveal-text">
+                    <div class="stat-number" data-count="30">0</div>
+                    <div class="stat-label">HAPPY CLIENTS</div>
+                </div>
+                <div class="stat-item reveal-text">
+                    <div class="stat-number" data-count="4">0</div>
+                    <div class="stat-label">INDUSTRIES</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- STATS SECTION END -->
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials">
+        <div class="section-header">
+            <span class="section-eyebrow reveal-text">Client Words</span>
+            <h2 class="section-title reveal-text">What They <em>Say</em></h2>
+        </div>
+        <div class="testimonials-track" data-horizontal-scroll>
+            <div class="testimonial-panel">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text reveal-text">
+                        Scidata Analyst transformed our legacy system into a modern, scalable platform. 
+                        Their team's technical depth and commitment to quality is unmatched.
+                    </p>
+                    <div class="testimonial-author reveal-text">
+                        <span class="author-name">Sarah Chen</span>
+                        <span class="author-role">CTO, AdTech Solutions</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-panel">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text reveal-text">
+                        Working with Scidata felt like having an extension of our own team. They understood 
+                        our Telco challenges and delivered solutions that actually work at scale.
+                    </p>
+                    <div class="testimonial-author reveal-text">
+                        <span class="author-name">Marcus Rodriguez</span>
+                        <span class="author-role">VP Engineering, TelcoGlobal</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-panel">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text reveal-text">
+                        The AI chatbot they built for our hotel chain reduced customer service tickets by 60%. 
+                        Real results, real impact. They're now our go-to technology partner.
+                    </p>
+                    <div class="testimonial-author reveal-text">
+                        <span class="author-name">Emily Watson</span>
+                        <span class="author-role">Director of Innovation, Luxury Hotels</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-panel">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text reveal-text">
+                        From concept to deployment, Scidata delivered beyond expectations. Their DevOps 
+                        expertise helped us achieve 99.9% uptime during our busiest season.
+                    </p>
+                    <div class="testimonial-author reveal-text">
+                        <span class="author-name">David Park</span>
+                        <span class="author-role">CEO, TravelTech Ventures</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TESTIMONIALS SECTION END -->
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-bg-text" aria-hidden="true">JOIN</div>
+        <div class="cta-content">
+            <h2 class="cta-title reveal-text">
+                Ready to build<br>
+                <span class="cta-title-accent">something great?</span>
+            </h2>
+            <p class="cta-description reveal-text">
+                Let's discuss your project and explore how we can help you achieve your goals.
+            </p>
+            <a href="contact.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
+                <span class="btn-text">Get in Touch</span>
+                <span class="btn-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="cta-deco">
+            <div class="deco-circle deco-circle--large"></div>
+        </div>
+    </section>
+    <!-- CTA SECTION END -->
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-blob"></div>
+
+        <div class="footer-cta">
+            <div class="footer-cta-inner">
+                <span class="footer-cta-eyebrow">Got a project in mind?</span>
+                <a href="contact.html" class="footer-cta-title">
+                    <span>Let's build</span>
+                    <span class="footer-cta-accent">something great</span>
+                </a>
+            </div>
+            <a href="contact.html" class="footer-cta-circle" aria-label="Start a project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="footer-marquee" aria-hidden="true">
+            <div class="footer-marquee-track">
+                <span>Web Development</span><span class="dot">✦</span>
+                <span>Software Development</span><span class="dot">✦</span>
+                <span>AI &amp; Automation</span><span class="dot">✦</span>
+                <span>DevOps &amp; Support</span><span class="dot">✦</span>
+                <span>UI/UX Design</span><span class="dot">✦</span>
+                <span>SEO &amp; Ads</span><span class="dot">✦</span>
+                <span>Cloud &amp; Hosting</span><span class="dot">✦</span>
+                <span>Web Development</span><span class="dot">✦</span>
+                <span>Software Development</span><span class="dot">✦</span>
+                <span>AI &amp; Automation</span><span class="dot">✦</span>
+                <span>DevOps &amp; Support</span><span class="dot">✦</span>
+                <span>UI/UX Design</span><span class="dot">✦</span>
+                <span>SEO &amp; Ads</span><span class="dot">✦</span>
+                <span>Cloud &amp; Hosting</span><span class="dot">✦</span>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-col footer-brand">
+                <div class="footer-brand-inner">
+                    <a href="/" class="footer-logo-link">
+                        <img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo">
+                    </a>
+                    <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
+                </div>
+                <form class="footer-newsletter" onsubmit="event.preventDefault();">
+                    <label class="footer-newsletter-title">Stay in the loop</label>
+                    <div class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h3 class="footer-heading">Explore</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-services">
+                <h3 class="footer-heading">Services</h3>
+                <ul>
+                    <li><a href="contact.html">Web Development</a></li>
+                    <li><a href="contact.html">Software Development</a></li>
+                    <li><a href="contact.html">AI &amp; Automation</a></li>
+                    <li><a href="contact.html">DevOps &amp; Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h3 class="footer-heading">Connect</h3>
+                <ul class="footer-contact-list">
+                    <li><a href="tel:+0000000000000"><i class="fa-solid fa-phone"></i> <span>(+00) 000 00 0000 00</span></a></li>
+                    <li><a href="mailto:info@scidata-analyst.com"><i class="fa-solid fa-envelope"></i> <span>info@scidata-analyst.com</span></a></li>
+                    <li class="footer-address"><i class="fa-solid fa-location-dot"></i> <span>2001 Victoria Court, NY</span></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://join.skype.com/invite/YYXzSmJkfjpD" target="_blank" aria-label="Skype"><i class="fa-brands fa-skype"></i></a>
+                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
+                <button class="footer-totop" type="button" aria-label="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i> Back to top
+                </button>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/about.js"></script>
 
-    <!-----------
-    LOADER SCRIPT
-    ------------>
     <script>
-        $(window).on('load', function () {
-            $(".loader").fadeOut(500);
+        document.querySelector('.footer-totop')?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 
-    <script>
-        const custom = document.querySelector('.mouse-cursor');
-
-        document.addEventListener('mousemove', (e) => {
-            gsap.to(custom, {
-                x: e.clientX,
-                y: e.clientY,
-                duration: 0.2,
-                ease: "power2.out"
-            });
-        });
-    </script>
-
-    <!-- GSAP NAV ANIMATION -->
-    <script>
-        var navGsap = gsap.timeline({
-            paused: true
-        });
-
-        navGsap.set(".nav-wrapper", {
-            width: 0,
-        })
-
-        navGsap.to(".nav-wrapper", {
-            "width": "100%",
-            "zIndex": "99",
-            duration: 0.5
-        })
-
-        navGsap.from(".nav-wrapper .nav-top .left-col .btn-block", {
-            duration: 0.5,
-            opacity: 0,
-        })
-
-        navGsap.from(".nav-wrapper .nav-top .right-col .nav-block .nav-link", {
-            duration: 0.5,
-            y: "100%",
-            stagger: 0.1,
-        })
-
-        navGsap.from(".nav-wrapper .nav-bottom .icon-block a", {
-            y: "100%",
-            duration: 0.5,
-            stagger: 0.2
-        })
-
-        navGsap.reverse();
-
-        $(document).ready(function () {
-            $(".ham-icon").click(function () {
-                navGsap.reversed(!navGsap.reversed());
-            });
-        });
-    </script>
-
-    <!-- GSAP ABOUT STORY MOTION -->
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from(".hero-name", { opacity: 0, y: 200, duration: 2.5, ease: "power4.out" });
-        gsap.from(".hero-tagline", { opacity: 0, y: 100, duration: 1.5, delay: 1 });
-        gsap.from(".hero-cta .hero-btn", { scale: 0.3, opacity: 0, duration: 1.5, delay: 1.3, ease: "elastic.out(1, 0.5)" });
-
-        gsap.utils.toArray('.story-phase').forEach((phase, index) => {
-            gsap.from(phase, { y: (index % 2 === 0 ? 200 : -200), opacity: 0, duration: 1.8,
-                scrollTrigger: { trigger: phase, start: "top 85%", end: "top 40%", scrub: 1 } });
-        });
-        gsap.from(".story-tagline", { y: 100, opacity: 0, duration: 1.5,
-            scrollTrigger: { trigger: ".story-tagline", start: "top 90%", end: "top 40%", scrub: 1 } });
-
-        gsap.from(".identity-title", { y: 120, opacity: 0, duration: 2, ease: "power4.out",
-            scrollTrigger: { trigger: ".identity-title", start: "top 85%", end: "top 50%", scrub: 1 } });
-        gsap.from(".identity-text", { y: 60, opacity: 0, duration: 1.2, delay: 0.3,
-            scrollTrigger: { trigger: ".identity-text", start: "top 85%", end: "top 50%", scrub: 1 } });
-        gsap.utils.toArray('.identity-pillar').forEach((pillar, i) => {
-            gsap.from(pillar, { y: 100, opacity: 0, duration: 1, delay: i * 0.2,
-                scrollTrigger: { trigger: pillar, start: "top 90%", end: "top 55%", scrub: 1 } });
-        });
-
-        gsap.from(".skills-title", { y: 120, opacity: 0, duration: 1.5, ease: "power4.out",
-            scrollTrigger: { trigger: ".skills-title", start: "top 85%", end: "top 50%", scrub: 1 } });
-        gsap.utils.toArray('.skill-bar').forEach((bar, i) => {
-            gsap.from(bar, { x: -300, opacity: 0, duration: 1.5, delay: i * 0.2,
-                scrollTrigger: { trigger: bar, start: "top 90%", end: "top 55%", scrub: 1 } });
-        });
-
-        gsap.from(".counters-title", { y: 120, opacity: 0, duration: 1.5, ease: "power4.out",
-            scrollTrigger: { trigger: ".counters-title", start: "top 85%", end: "top 50%", scrub: 1 } });
-        gsap.utils.toArray('.counter-item').forEach((counter, i) => {
-            gsap.from(counter, { scale: 0.2, opacity: 0, duration: 1.2, delay: i * 0.2,
-                scrollTrigger: { trigger: counter, start: "top 90%", end: "top 55%", scrub: 1 } });
-        });
-        gsap.from(".counter-cta .counter-btn", { y: 80, opacity: 0, duration: 1.2,
-            scrollTrigger: { trigger: ".counter-cta .counter-btn", start: "top 90%", end: "top 55%", scrub: 1 } });
-
-        gsap.from(".button-section .title-block .title .overlay-text", {
-            "width": "0%",
-            duration: .5,
-            scrollTrigger: {
-                trigger: ".button-section .title-block .title .overlay-text",
-                scrub: 1,
-                end: "top 80%"
-            }
-        });
-
-        gsap.from(".button-section .title-block .title .title-text", {
-            y: "100%",
-            duration: .5,
-            stagger: 0.2,
-            delay: 0.5,
-            scrollTrigger: {
-                trigger: ".button-section .title-block .title .title-text",
-                scrub: 1,
-                end: "top 80%"
-            }
-        });
-    </script>
 </body>
 
 </html>
