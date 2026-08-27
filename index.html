@@ -26,405 +26,289 @@
 </head>
 
 <body>
-    <nav class="top-nav">
-        <div class="top-logo-bar">
-            <div class="nav-link-wrapper">
-                <div class="nav-booking-buttons">
-                    <a class="m-hide" href="#" target="_blank">Get a Quote</a>
-                    <a class="m-hide" href="#" data-toggle="modal" data-target="#exampleModalCenter">Current Offers</a>
-                </div>
-
-                <div class="nav-address">
-                    <a class="m-hide nav-hover" href="tel:+0000000000000"><span class="icon icon-call"></span>(+00) 000
-                        00
-                        0000 00</a>
-                    <a class="m-hide nav-hover" href="#" target="_blank"><span class="icon icon-pin"></span> 2001
-                        Victoria
-                        Court, NY </a>
-                </div>
-
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-text">SCIDATA</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
             </div>
         </div>
-        <div class="menu-hamburger">
-            <div class="dots">
+    </div>
+    <!-- LOADER END -->
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" data-cursor></div>
+    <div class="cursor-follower" data-cursor-follower></div>
+    <!-- CUSTOM CURSOR END -->
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <a href="/"><img src="img/logo.png" alt="Scidata Analyst"></a>
+        </div>
+        <div class="nav-menu-trigger" data-menu-trigger>
+            <span class="menu-text">Menu</span>
+            <div class="menu-icon">
                 <span></span>
                 <span></span>
-                <span></span>
-            </div>
-            <div class="hamburger-text">
-                <span>m</span>
-                <span>e</span>
-                <span>n</span>
-                <span>u</span>
             </div>
         </div>
     </nav>
 
-    <nav class="side-nav">
-        <div class="contact-col">
-            <a href="./"><img src="img/logo.png" alt="Scidata Analyst Logo"></a>
-            <div class="side-nav-wrap">
-                <div class="social-links">
-                    <a class="m-hide" href="https://www.facebook.com/profile.php?id=100089262577787"
-                        target="_blank"><span class="icon icon-facebook"></span></a>
-                    <a class="m-hide" href="#" target="_blank"><span class="icon icon-instagram"></span></a>
-                    <a class="m-hide" href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank"><span
-                            class="icon icon-tripadvisor"></span></a>
-                    <a class="m-hide" href="https://twitter.com/KanchonSheel" target="_blank">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 461.001 461.001"
-                            style="enable-background:new 0 0 461.001 461.001;" xml:space="preserve">
-                            <g>
-                                <path style="fill:#0bbd29;"
-                                    d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728
-                                            c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137
-                                            C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607
-                                            c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z">
-                                </path>
-                            </g>
-                        </svg>
-                    </a>
-                    <a class="m-hide" href="https://wa.me/8801575033642" target="_blank"><span
-                            class="icon icon-whatsapp"></span></a>
-                    <a class="m-hide" href="https://join.skype.com/invite/YYXzSmJkfjpD"><span
-                            class="icon icon-viber"></span></a>
+    <div class="nav-overlay" data-nav-overlay>
+        <div class="nav-overlay-inner">
+            <div class="nav-overlay-links">
+                <a href="/" class="nav-link-magnetic" data-magnetic>Home</a>
+                <a href="work.html" class="nav-link-magnetic" data-magnetic>Work</a>
+                <a href="about.html" class="nav-link-magnetic" data-magnetic>About</a>
+                <a href="contact.html" class="nav-link-magnetic" data-magnetic>Contact</a>
+            </div>
+            <div class="nav-overlay-info">
+                <div class="nav-info-block">
+                    <span class="nav-info-label">Email</span>
+                    <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+                </div>
+                <div class="nav-info-block">
+                    <span class="nav-info-label">Phone</span>
+                    <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                </div>
+                <div class="nav-info-block">
+                    <span class="nav-info-label">Address</span>
+                    <span>2001 Victoria Court, NY</span>
                 </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- MOUSE CURSOR -->
-    <div class="mouse-cursor"></div>
-    <!-- MOUSE CURSOR END -->
-
-    <!-- HAM ICON -->
-    <div class="ham-icon">
-        <div class="icon"></div>
-        <div class="icon"></div>
-    </div>
-    <!-- HAM ICON END -->
-
-    <!-- NAV WRAPPER -->
-    <div class="nav-wrapper">
-        <div class="nav-top">
-            <div class="nav-logo">
-                <a href="/">
-                </a>
-            </div>
-            <div class="left-col">
-                <div class="btn-block">
-                    <a href="contact.html" class="btn">Start a Project</a>
-                </div>
-            </div>
-            <div class="right-col">
-                <div class="nav-block">
-                    <a href="work.html" class="nav-link">
-                        <span class="nav-text">Work</span>
-                        <span class="nav-small-text">A look at what we've built</span>
-                    </a>
-                </div>
-                <div class="nav-block">
-                    <a href="about.html" class="nav-link">
-                        <span class="nav-text">About</span>
-                        <span class="nav-small-text">The team behind Scidata Analyst</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="nav-bottom">
-            <div class="icon-block">
-                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank">
-                    <i class="fa-brands fa-square-facebook"></i>
-                </a>
-            </div>
-            <div class="icon-block">
-                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </div>
-            <div class="icon-block">
-                <a href="https://twitter.com/KanchonSheel" target="_blank"><i
-                        class="fa-brands fa-square-twitter"></i></a>
-            </div>
-            <div class="icon-block">
-                <a href="https://join.skype.com/invite/YYXzSmJkfjpD" target="_blank"><i
-                        class="fa-brands fa-skype"></i></a>
-            </div>
-            <div class="icon-block">
-                <a href="https://wa.me/8801575033642" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <div class="nav-overlay-social">
+                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
+                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
+                <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
+                <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
             </div>
         </div>
     </div>
-    <!-- NAV WRAPPER END -->
+    <!-- NAVIGATION END -->
 
-    <!-- HEADER SECTION -->
-    <div class="header">
-        <div class="header-block">
-            <h1 class="title title-one">
-                Looking for a
-                <div class="animation-block">
-                    <div class="animation-wrap">
-                        <div class="title-animation">UX/UI Designer</div>
-                        <div class="title-animation">Web Developer</div>
-                        <div class="title-animation">Content Writer</div>
-                        <div class="title-animation">SEO Developer</div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg-text" aria-hidden="true">DIGITAL</div>
+        <div class="hero-content">
+            <div class="hero-eyebrow reveal-text">We are Scidata Analyst</div>
+            <h1 class="hero-title">
+                <span class="hero-title-line reveal-text">We Build</span>
+                <span class="hero-title-line hero-title-line--accent reveal-text">Digital</span>
+                <span class="hero-title-line reveal-text">Experiences</span>
+            </h1>
+            <div class="hero-meta">
+                <p class="hero-description reveal-text">
+                    A young, dedicated team building reliable digital products for growing businesses across AdTech, Telco, Hotel, and Travel industries.
+                </p>
+                <div class="hero-actions reveal-text">
+                    <a href="contact.html" class="btn-magnetic" data-magnetic>
+                        <span class="btn-text">Start a Project</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M13 6l6 6-6 6"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="work.html" class="btn-magnetic btn-magnetic--outline" data-magnetic>
+                        <span class="btn-text">View Work</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+        <div class="hero-deco">
+            <div class="deco-circle deco-circle--1"></div>
+            <div class="deco-circle deco-circle--2"></div>
+            <div class="deco-circle deco-circle--3"></div>
+        </div>
+    </section>
+    <!-- HERO SECTION END -->
+
+    <!-- WHO WE ARE -->
+    <section class="who-we-are">
+        <div class="section-header">
+            <span class="section-eyebrow reveal-text">Who we are</span>
+            <h2 class="section-title reveal-text">
+                A young, dedicated team building reliable digital products
+            </h2>
+        </div>
+        <div class="who-content">
+            <div class="who-text-block reveal-text">
+                <p>Scidata Analyst is a startup software development company based out of 2001 Victoria Court, NY. We work with clients across AdTech, Telco, Hotel, and Travel industries, combining over 5 years of combined team experience to deliver websites, software, and AI-driven solutions built around each client's real business needs.</p>
+            </div>
+            <div class="who-stats">
+                <div class="stat-item reveal-text">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item reveal-text">
+                    <span class="stat-number" data-count="50">0</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item reveal-text">
+                    <span class="stat-number" data-count="30">0</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- WHO WE ARE END -->
+
+    <!-- SERVICES HORIZONTAL SCROLL -->
+    <section class="services-horizontal">
+        <div class="services-sticky">
+            <div class="section-header">
+                <span class="section-eyebrow reveal-text">What we do</span>
+                <h2 class="section-title reveal-text">Services <em>&amp;</em> Capabilities</h2>
+            </div>
+        </div>
+        <div class="services-track" data-horizontal-scroll>
+            <div class="services-panel">
+                <div class="service-card service-card--web">
+                    <div class="service-number">01</div>
+                    <h3 class="service-name reveal-text">Web Development</h3>
+                    <ul class="service-list reveal-text">
+                        <li>Custom Website Design & Development</li>
+                        <li>Responsive & Mobile-First Builds</li>
+                        <li>Landing Pages & Marketing Sites</li>
+                        <li>E-Commerce Development</li>
+                        <li>CMS & Content Platforms</li>
+                        <li>UI/UX Design</li>
+                        <li>Website Maintenance & Support</li>
+                        <li>Performance & SEO Optimization</li>
+                        <li>Website Revamp & Migration</li>
+                    </ul>
+                    <div class="service-image">
+                        <img src="assets/img/web_design.png" alt="Web Development" loading="lazy">
                     </div>
                 </div>
-            </h1>
-            <h1 class="title title-two">We help build and grow your business</h1>
-
-            <div class="text-block">
-                <div class="text">By crafting <span class="under-line">strong brand identities</span> and <span
-                        class="under-line">seamless digital experiences</span>.</div>
             </div>
-        </div>
-
-        <div class="btn-block">
-            <a href="contact.html" class="btn">Schedule a Meeting</a>
-        </div>
-
-        <div class="skill-block">
-            <div class="skills">
-                <div class="skill">
-                    <h1>AD Tech</h1>
-                </div>
-                <div class="skill">
-                    <h1>Telco Tech</h1>
-                </div>
-                <div class="skill">
-                    <h1>Hotel Tech</h1>
-                </div>
-                <div class="skill">
-                    <h1>Travel Tech</h1>
-                </div>
-                <div class="skill">
-                    <h1>5+ yr exp</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- HEADER SECTION END -->
-
-    <div class="welcome-akti-toroni">
-        <div class="welcome-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-            <div class="heading">
-                <p class="left">who</p>
-                <p class="right"><span class="first-letter">w</span><span class="last-letters">e are</span></p>
-            </div>
-        </div>
-
-        <div class="welcome-content-wrap">
-            <div class="welcome-title-box">
-                <h1 class="title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">A young,
-                    dedicated team building reliable digital products for growing businesses</h1>
-            </div>
-            <div class="welcome-content wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                <p>Scidata Analyst is a startup software development company based out of 2001
-                    Victoria Court, NY. We work with clients across AdTech, Telco, Hotel, and Travel industries,
-                    combining over 5 years of combined team experience to deliver websites, software, and AI-driven
-                    solutions built around each client's real business needs.</p>
-            </div>
-        </div>
-    </div>
-
-    <section class="services-showcase">
-        <div class="services-showcase-head">
-            <span class="services-showcase-eyebrow">What we do</span>
-            <h2 class="services-showcase-title">Services <em>&amp;</em> Capabilities</h2>
-        </div>
-
-        <div class="services-rows">
-            <article class="service-row">
-                <div class="service-row-index">01</div>
-                <div class="service-row-body">
-                    <h3 class="service-row-name">Web</h3>
-                    <ul class="service-row-list">
-                        <li>Custom Website Design &amp; Development</li>
-                        <li>Responsive &amp; Mobile-First Builds</li>
-                        <li>Landing Pages &amp; Marketing Sites</li>
-                        <li>E-Commerce Development</li>
-                        <li>CMS &amp; Content Platforms</li>
-                        <li>UI/UX Design</li>
-                        <li>Website Maintenance &amp; Support</li>
-                        <li>Performance &amp; SEO Optimization</li>
-                        <li>Website Revamp &amp; Migration</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="service-row service-row--reverse">
-                <div class="service-row-index">02</div>
-                <div class="service-row-body">
-                    <h3 class="service-row-name">Software</h3>
-                    <ul class="service-row-list">
+            <div class="services-panel">
+                <div class="service-card service-card--software">
+                    <div class="service-number">02</div>
+                    <h3 class="service-name reveal-text">Software Development</h3>
+                    <ul class="service-list reveal-text">
                         <li>Custom Software Development</li>
-                        <li>API Design &amp; Integration</li>
-                        <li>Cloud Deployment &amp; Hosting</li>
-                        <li>Database Design &amp; Management</li>
-                        <li>DevOps &amp; CI/CD Pipelines</li>
+                        <li>API Design & Integration</li>
+                        <li>Cloud Deployment & Hosting</li>
+                        <li>Database Design & Management</li>
+                        <li>DevOps & CI/CD Pipelines</li>
                         <li>System Automation</li>
                         <li>Third-Party Integrations</li>
-                        <li>Quality Assurance &amp; Testing</li>
+                        <li>Quality Assurance & Testing</li>
                         <li>Ongoing Technical Support</li>
                     </ul>
+                    <div class="service-image">
+                        <img src="assets/img/e-commerce.png" alt="Software Development" loading="lazy">
+                    </div>
                 </div>
-            </article>
-
-            <article class="service-row">
-                <div class="service-row-index">03</div>
-                <div class="service-row-body">
-                    <h3 class="service-row-name">AI &amp; Growth</h3>
-                    <ul class="service-row-list">
-                        <li>AI &amp; LLM-Based Chatbots</li>
+            </div>
+            <div class="services-panel">
+                <div class="service-card service-card--ai">
+                    <div class="service-number">03</div>
+                    <h3 class="service-name reveal-text">AI &amp; Growth</h3>
+                    <ul class="service-list reveal-text">
+                        <li>AI & LLM-Based Chatbots</li>
                         <li>Natural Language Processing (NLP)</li>
-                        <li>Data Analysis &amp; Reporting</li>
+                        <li>Data Analysis & Reporting</li>
                         <li>Ad Campaign Management</li>
                         <li>Marketing Automation</li>
-                        <li>Content Strategy &amp; Writing</li>
+                        <li>Content Strategy & Writing</li>
                         <li>Business Process Consulting</li>
                         <li>Dedicated Development Teams</li>
                     </ul>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- custom service -->
-    <div class="custom-service">
-        <div class="grid-4">
-            <div class="col">
-                <h1>Services</h1>
-                <div class="sub-text">Practical solutions that bring your brand, website, and product ideas to life.
-                </div>
-            </div>
-            <div class="col">
-                <h1>Web Design & Development</h1>
-            </div>
-            <div class="col">
-                <h1>Software Development</h1>
-            </div>
-            <div class="col">
-                <h1>DevOps</h1>
-            </div>
-            <div class="col double-column">
-                <div class="project-slider">
-                    <div>
-                        <div class="img">
-                            <img src="img/1.jpg" alt="Web design project preview">
-                        </div>
+                    <div class="service-image">
+                        <img src="assets/img/appointment.png" alt="AI & Growth" loading="lazy">
                     </div>
-                    <div>
-                        <div class="img">
-                            <img src="img/1.jpg" alt="Software development project preview">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img">
-                            <img src="img/1.jpg" alt="AI project preview">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <h1>LLM RAG Chatbot</h1>
-            </div>
-            <div class="col">
-                <h1>AI Training (NLP)</h1>
-            </div>
-            <div class="col">
-                <h1>Ad & Campaign Management</h1>
-            </div>
-            <div class="col">
-                <div class="btn-block">
-                    <a href="contact.html" class="btn">
-                        Contact Us
-                    </a>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- custom service end -->
+    </section>
+    <!-- SERVICES HORIZONTAL SCROLL END -->
 
-    <section class="tech-showcase">
-        <div class="tech-showcase-head">
-            <span class="tech-showcase-eyebrow">Our toolkit</span>
-            <h2 class="tech-showcase-title">Tech <em>&amp;</em> Stack</h2>
+    <!-- TECH STACK -->
+    <section class="tech-stack">
+        <div class="section-header">
+            <span class="section-eyebrow reveal-text">Our toolkit</span>
+            <h2 class="section-title reveal-text">Tech <em>&amp;</em> Stack</h2>
         </div>
-
         <div class="tech-grid">
-            <article class="tech-card">
-                <div class="tech-card-head">
-                    <span class="tech-card-no">01</span>
-                    <h3 class="tech-card-name">Front End</h3>
+            <div class="tech-card reveal-text" data-tilt>
+                <div class="tech-card-header">
+                    <span class="tech-number">01</span>
+                    <h3 class="tech-name">Front End</h3>
                 </div>
-                <ul class="tech-card-list">
-                    <li>HTML5 &amp; CSS3 / SCSS</li>
+                <ul class="tech-list">
+                    <li>HTML5 & CSS3 / SCSS</li>
                     <li>JavaScript (ES6+)</li>
                     <li>React JS</li>
                     <li>Vue JS</li>
                     <li>jQuery</li>
                     <li>GSAP Animations</li>
-                    <li>Responsive &amp; Cross-Browser UI</li>
+                    <li>Responsive & Cross-Browser UI</li>
                     <li>Figma to Code Conversion</li>
                 </ul>
-            </article>
-
-            <article class="tech-card">
-                <div class="tech-card-head">
-                    <span class="tech-card-no">02</span>
-                    <h3 class="tech-card-name">Back End</h3>
+            </div>
+            <div class="tech-card reveal-text" data-tilt>
+                <div class="tech-card-header">
+                    <span class="tech-number">02</span>
+                    <h3 class="tech-name">Back End</h3>
                 </div>
-                <ul class="tech-card-list">
+                <ul class="tech-list">
                     <li>Node JS</li>
-                    <li>PHP &amp; Laravel</li>
+                    <li>PHP & Laravel</li>
                     <li>Python</li>
                     <li>Java</li>
                     <li>C#</li>
                     <li>REST API Development</li>
-                    <li>MySQL &amp; PostgreSQL</li>
-                    <li>Redis &amp; Kafka</li>
+                    <li>MySQL & PostgreSQL</li>
+                    <li>Redis & Kafka</li>
                 </ul>
-            </article>
-
-            <article class="tech-card">
-                <div class="tech-card-head">
-                    <span class="tech-card-no">03</span>
-                    <h3 class="tech-card-name">DevOps</h3>
+            </div>
+            <div class="tech-card reveal-text" data-tilt>
+                <div class="tech-card-header">
+                    <span class="tech-number">03</span>
+                    <h3 class="tech-name">DevOps</h3>
                 </div>
-                <ul class="tech-card-list">
+                <ul class="tech-list">
                     <li>AWS Cloud Infrastructure</li>
                     <li>Docker Containerization</li>
                     <li>Ansible Automation</li>
                     <li>CI/CD Pipelines</li>
                     <li>Server Monitoring</li>
-                    <li>MQTT &amp; Messaging Systems</li>
+                    <li>MQTT & Messaging Systems</li>
                     <li>Version Control (Git)</li>
-                    <li>Deployment &amp; Scaling</li>
+                    <li>Deployment & Scaling</li>
                 </ul>
-            </article>
-
-            <article class="tech-card">
-                <div class="tech-card-head">
-                    <span class="tech-card-no">04</span>
-                    <h3 class="tech-card-name">QA / Testing</h3>
+            </div>
+            <div class="tech-card reveal-text" data-tilt>
+                <div class="tech-card-header">
+                    <span class="tech-number">04</span>
+                    <h3 class="tech-name">QA / Testing</h3>
                 </div>
-                <ul class="tech-card-list">
-                    <li>Manual &amp; Functional Testing</li>
+                <ul class="tech-list">
+                    <li>Manual & Functional Testing</li>
                     <li>Automated Test Suites</li>
                     <li>Cross-Device Testing</li>
                     <li>Performance Testing</li>
-                    <li>Bug Tracking &amp; Reporting</li>
+                    <li>Bug Tracking & Reporting</li>
                     <li>Regression Testing</li>
                     <li>User Acceptance Testing</li>
                 </ul>
-            </article>
-
-            <article class="tech-card">
-                <div class="tech-card-head">
-                    <span class="tech-card-no">05</span>
-                    <h3 class="tech-card-name">AI</h3>
+            </div>
+            <div class="tech-card reveal-text" data-tilt>
+                <div class="tech-card-header">
+                    <span class="tech-number">05</span>
+                    <h3 class="tech-name">AI</h3>
                 </div>
-                <ul class="tech-card-list">
+                <ul class="tech-list">
                     <li>LLM-Powered Chatbots</li>
                     <li>RAG (Retrieval-Augmented Generation)</li>
                     <li>Natural Language Processing</li>
@@ -433,421 +317,174 @@
                     <li>Data-Driven Insights</li>
                     <li>Workflow Automation</li>
                 </ul>
-            </article>
-
-            <article class="tech-card">
-                <div class="tech-card-head">
-                    <span class="tech-card-no">06</span>
-                    <h3 class="tech-card-name">SEO &amp; Ads</h3>
+            </div>
+            <div class="tech-card reveal-text" data-tilt>
+                <div class="tech-card-header">
+                    <span class="tech-number">06</span>
+                    <h3 class="tech-name">SEO &amp; Ads</h3>
                 </div>
-                <ul class="tech-card-list">
-                    <li>On-Page &amp; Technical SEO</li>
+                <ul class="tech-list">
+                    <li>On-Page & Technical SEO</li>
                     <li>Google Ads Management</li>
                     <li>Meta / Facebook Ads</li>
-                    <li>Keyword Research &amp; Strategy</li>
+                    <li>Keyword Research & Strategy</li>
                     <li>Content Optimization</li>
-                    <li>Analytics &amp; Reporting</li>
+                    <li>Analytics & Reporting</li>
                     <li>Conversion Rate Optimization</li>
                 </ul>
-            </article>
+            </div>
         </div>
     </section>
+    <!-- TECH STACK END -->
 
-    <section class="process-showcase">
-        <div class="process-showcase-head">
-            <span class="process-showcase-eyebrow">How we work</span>
-            <h2 class="process-showcase-title">Our <em>Process</em></h2>
+    <!-- PROCESS -->
+    <section class="process">
+        <div class="section-header">
+            <span class="section-eyebrow reveal-text">How we work</span>
+            <h2 class="section-title reveal-text">Our <em>Process</em></h2>
         </div>
-
         <div class="process-timeline">
-            <div class="process-step">
-                <div class="process-step-marker"><span class="process-step-no">01</span></div>
-                <div class="process-step-content">
-                    <h3 class="process-step-name">Discovery</h3>
-                    <ul class="process-step-list">
+            <div class="process-step reveal-text">
+                <div class="process-marker">
+                    <span class="process-number">01</span>
+                </div>
+                <div class="process-content">
+                    <h3 class="process-name">Discovery</h3>
+                    <ul class="process-list">
                         <li>Understanding your goals</li>
-                        <li>Market &amp; competitor research</li>
+                        <li>Market & competitor research</li>
                         <li>Defining project scope</li>
-                        <li>Timeline &amp; budget planning</li>
+                        <li>Timeline & budget planning</li>
                         <li>Requirement documentation</li>
                         <li>Stakeholder alignment</li>
                     </ul>
                 </div>
             </div>
-
-            <div class="process-step">
-                <div class="process-step-marker"><span class="process-step-no">02</span></div>
-                <div class="process-step-content">
-                    <h3 class="process-step-name">Delivery</h3>
-                    <ul class="process-step-list">
-                        <li>Design &amp; prototyping</li>
+            <div class="process-step reveal-text">
+                <div class="process-marker">
+                    <span class="process-number">02</span>
+                </div>
+                <div class="process-content">
+                    <h3 class="process-name">Delivery</h3>
+                    <ul class="process-list">
+                        <li>Design & prototyping</li>
                         <li>Agile development sprints</li>
                         <li>Regular progress updates</li>
-                        <li>Testing &amp; quality checks</li>
-                        <li>Launch &amp; deployment</li>
+                        <li>Testing & quality checks</li>
+                        <li>Launch & deployment</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+    <!-- PROCESS END -->
 
-    <section class="approach-showcase">
-        <div class="approach-rows">
-            <div class="approach-row">
-                <div class="approach-row-index">01</div>
-                <div class="approach-row-body">
-                    <h3 class="approach-row-name">Web Development</h3>
-                    <div class="approach-row-text">
-                        <p>We build responsive, high-performance websites tailored to different business needs, from
-                            simple landing pages to full-scale platforms. Every project starts with a clear plan and is
-                            reviewed with you at each stage.</p>
-                        <p>Our team follows modern development practices to make sure your website loads fast, looks
-                            great on every device, and is easy for you to manage going forward.</p>
+    <!-- APPROACH -->
+    <section class="approach">
+        <div class="section-header">
+            <span class="section-eyebrow reveal-text">What we offer</span>
+            <h2 class="section-title reveal-text">Our Approach</h2>
+        </div>
+        <div class="approach-list">
+            <div class="approach-item reveal-text">
+                <div class="approach-index">01</div>
+                <div class="approach-body">
+                    <h3 class="approach-name">Web Development</h3>
+                    <div class="approach-text">
+                        <p>We build responsive, high-performance websites tailored to different business needs, from simple landing pages to full-scale platforms. Every project starts with a clear plan and is reviewed with you at each stage.</p>
+                        <p>Our team follows modern development practices to make sure your website loads fast, looks great on every device, and is easy for you to manage going forward.</p>
                     </div>
-                    <a href="contact.html" class="approach-row-link">
+                    <a href="contact.html" class="approach-link" data-magnetic>
                         <span>Contact us</span>
                         <span>for more information!</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 6l6 6-6 6"/>
+                        </svg>
                     </a>
                 </div>
             </div>
-
-            <div class="approach-row approach-row--reverse">
-                <div class="approach-row-index">02</div>
-                <div class="approach-row-body">
-                    <h3 class="approach-row-name">Software Development</h3>
-                    <div class="approach-row-text">
-                        <p>From custom internal tools to client-facing applications, we design and build software that
-                            fits how your business actually operates. Our team works closely with you throughout, from
-                            the first architecture discussion to final delivery and support.</p>
+            <div class="approach-item approach-item--reverse reveal-text">
+                <div class="approach-index">02</div>
+                <div class="approach-body">
+                    <h3 class="approach-name">Software Development</h3>
+                    <div class="approach-text">
+                        <p>From custom internal tools to client-facing applications, we design and build software that fits how your business actually operates. Our team works closely with you throughout, from the first architecture discussion to final delivery and support.</p>
                     </div>
-                    <a href="contact.html" class="approach-row-link">
+                    <a href="contact.html" class="approach-link" data-magnetic>
                         <span>Contact us</span>
                         <span>for more information!</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 6l6 6-6 6"/>
+                        </svg>
                     </a>
                 </div>
             </div>
-
-            <div class="approach-row">
-                <div class="approach-row-index">03</div>
-                <div class="approach-row-body">
-                    <h3 class="approach-row-name">AI &amp; Automation</h3>
-                    <div class="approach-row-text">
-                        <p>We help businesses put AI to practical use, from LLM-powered chatbots to workflow automation
-                            and data analysis tools. Our approach focuses on solutions that save time, reduce manual
-                            work, and are genuinely useful for your day-to-day operations.</p>
+            <div class="approach-item reveal-text">
+                <div class="approach-index">03</div>
+                <div class="approach-body">
+                    <h3 class="approach-name">AI &amp; Automation</h3>
+                    <div class="approach-text">
+                        <p>We help businesses put AI to practical use, from LLM-powered chatbots to workflow automation and data analysis tools. Our approach focuses on solutions that save time, reduce manual work, and are genuinely useful for your day-to-day operations.</p>
                     </div>
-                    <a href="contact.html" class="approach-row-link">
+                    <a href="contact.html" class="approach-link" data-magnetic>
                         <span>Contact us</span>
                         <span>for more information!</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 6l6 6-6 6"/>
+                        </svg>
                     </a>
                 </div>
             </div>
-
-            <div class="approach-row approach-row--reverse">
-                <div class="approach-row-index">04</div>
-                <div class="approach-row-body">
-                    <h3 class="approach-row-name">DevOps &amp; Support</h3>
-                    <div class="approach-row-text">
-                        <p>We help set up reliable infrastructure and deployment pipelines so your product runs smoothly
-                            as it grows. Beyond launch, we offer ongoing support to keep everything running securely and
-                            efficiently.</p>
-                        <ul class="approach-row-list">
-                            <li>Cloud setup &amp; migration</li>
+            <div class="approach-item approach-item--reverse reveal-text">
+                <div class="approach-index">04</div>
+                <div class="approach-body">
+                    <h3 class="approach-name">DevOps &amp; Support</h3>
+                    <div class="approach-text">
+                        <p>We help set up reliable infrastructure and deployment pipelines so your product runs smoothly as it grows. Beyond launch, we offer ongoing support to keep everything running securely and efficiently.</p>
+                        <ul class="approach-list">
+                            <li>Cloud setup & migration</li>
                             <li>Automated deployment pipelines</li>
-                            <li>Monitoring &amp; maintenance</li>
+                            <li>Monitoring & maintenance</li>
                         </ul>
                     </div>
-                    <a href="contact.html" class="approach-row-link">
+                    <a href="contact.html" class="approach-link" data-magnetic>
                         <span>Contact us</span>
                         <span>for more information!</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 6l6 6-6 6"/>
+                        </svg>
                     </a>
                 </div>
             </div>
         </div>
-
-        <a href="services.html" class="approach-cta">
-            <span>check</span>
-            <span>our</span>
-            <span>services</span>
-        </a>
     </section>
+    <!-- APPROACH END -->
 
-    <!-- BUTTON SECTION -->
-    <div class="button-section">
-        <a href="about.html" class="title-block">
-            <h2 class="title">
-                <span class="title-text">Scidata Analyst</span>
-                <span class="title-text">WHO?</span>
-                <span class="overlay-text"></span>
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-bg-text" aria-hidden="true">START</div>
+        <div class="cta-content">
+            <h2 class="cta-title reveal-text">
+                Ready to build<br>
+                <span class="cta-title-accent">something great?</span>
             </h2>
-        </a>
-    </div>
-    <!-- BUTTON SECTION END -->
-
-    <!-- LOADER -->
-    <div class="loader">
-        <div class="text">Welcome to <br> Scidata Analyst</div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
-    <script src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-
-    <!-----------
-    LOADER SCRIPT
-    ------------>
-    <script>
-        $(window).on('load', function () {
-            $(".loader").fadeOut(500);
-        });
-    </script>
-
-    <script>
-        document.querySelector('.footer-totop')?.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-
-    <script>
-        const custom = document.querySelector('.mouse-cursor');
-
-        document.addEventListener('mousemove', (e) => {
-            gsap.to(custom, {
-                x: e.clientX,
-                y: e.clientY,
-                duration: 0.2,
-                ease: "power2.out"
-            });
-        });
-    </script>
-
-    <script>
-        $('.project-slider').slick({
-            arrows: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-        });
-    </script>
-
-    <script>
-        $('.skills').slick({
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 3,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            arrows: false,
-            variableWidth: true,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-            ]
-        });
-    </script>
-
-    <!-- header motion -->
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        var headerGsap = gsap.timeline();
-
-        /* header section motion */
-        headerGsap.set(".header-block .title-two", {
-            "display": "none",
-        })
-
-        headerGsap.from(".header-block .title-one", {
-            y: "100%",
-            duration: 1,
-        })
-
-        headerGsap.to(".header-block .title-one", {
-            delay: 3.5,
-            "height": "0px",
-            "overflow": "hidden",
-            duration: 1,
-        })
-
-        headerGsap.set(".header-block .title-two", {
-            "display": "block",
-        })
-
-        headerGsap.from(".header-block .title-two", {
-            y: "100%",
-        })
-
-
-        headerGsap.from(".header .header-block .text-block .text", {
-            y: "100%",
-        })
-
-        headerGsap.from(".header .btn-block .btn", {
-            y: "105%",
-        })
-    </script>
-
-    <!-- GSAP NAV ANIMATION -->
-    <script>
-        var navGsap = gsap.timeline({
-            paused: true
-        });
-
-        navGsap.set(".nav-wrapper", {
-            width: 0,
-        })
-
-        navGsap.to(".nav-wrapper", {
-            "width": "100%",
-            "zIndex": "99",
-            duration: 0.5
-        })
-
-        navGsap.from(".nav-wrapper .nav-top .left-col .btn-block", {
-            duration: 0.5,
-            opacity: 0,
-        })
-
-        navGsap.from(".nav-wrapper .nav-top .right-col .nav-block .nav-link", {
-            duration: 0.5,
-            y: "100%",
-            stagger: 0.1,
-        })
-
-        navGsap.from(".nav-wrapper .nav-bottom .icon-block a", {
-            y: "100%",
-            duration: 0.5,
-            stagger: 0.2
-        })
-
-        navGsap.reverse();
-
-        $(document).ready(function () {
-            $(".ham-icon").click(function () {
-                navGsap.reversed(!navGsap.reversed());
-            });
-        });
-    </script>
-
-    <!-- GSAP PROJECT ARRAY ANIMATION -->
-    <script>
-        const boxes = gsap.utils.toArray('.project-block .left-col .img');
-        boxes.forEach(box => {
-            gsap.from(box, {
-                x: -300,
-                opacity: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: box,
-                    scrub: 2,
-                    end: "top 70%"
-                }
-            })
-        });
-
-        const img_boxes = gsap.utils.toArray('.project-block .left-col .title');
-        img_boxes.forEach(box => {
-            gsap.from(box, {
-                y: 300,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: box,
-                    scrub: 2,
-                    end: "top 70%",
-                }
-            })
-        });
-
-        const txt_boxes = gsap.utils.toArray('.project-block .right-col .text .overlay');
-        txt_boxes.forEach(box => {
-            gsap.to(box, {
-                delay: 0.8,
-                "width": "0%",
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: box,
-                }
-            })
-        });
-
-        const num_boxes = gsap.utils.toArray('.project-block .number');
-        num_boxes.forEach(box => {
-            gsap.to(box, {
-                delay: 0.8,
-                y: -50,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: box,
-                    scrub: 2
-                }
-            })
-        });
-
-
-        const btn_boxes = gsap.utils.toArray('.project-block .right-col .btn-block');
-        btn_boxes.forEach(box => {
-            gsap.to(box, {
-                delay: 0.8,
-                y: -50,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: box,
-                    scrub: 2
-                }
-            })
-        });
-    </script>
-
-    <!-- GSAP ABOUT MOTION -->
-    <script>
-        var aboutGsap = gsap.timeline();
-
-        gsap.from(".button-section .title-block .title .overlay-text", {
-            "width": "0%",
-            duration: .5,
-            scrollTrigger: {
-                trigger: ".button-section .title-block .title .overlay-text",
-                scrub: 1,
-                end: "top 80%"
-            }
-        });
-
-        aboutGsap.from(".button-section .title-block .title .title-text", {
-            y: "100%",
-            duration: .5,
-            stagger: 0.2,
-            delay: 0.5,
-            scrollTrigger: {
-                trigger: ".button-section .title-block .title .title-text",
-                scrub: 1,
-                end: "top 80%"
-            }
-        });
-    </script>
+            <p class="cta-description reveal-text">
+                Let's discuss your project and explore how we can help you achieve your goals.
+            </p>
+            <a href="contact.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
+                <span class="btn-text">Get in Touch</span>
+                <span class="btn-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="cta-deco">
+            <div class="deco-circle deco-circle--large"></div>
+        </div>
+    </section>
+    <!-- CTA SECTION END -->
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -953,6 +590,19 @@
         </div>
     </footer>
     <!-- FOOTER END -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/home.js"></script>
+
+    <script>
+        document.querySelector('.footer-totop')?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 
 </body>
 

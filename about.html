@@ -23,12 +23,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
 </head>
 
-<body>
+<body class="about-page">
     <nav class="top-nav">
         <div class="top-logo-bar">
             <div class="nav-link-wrapper">
                 <div class="nav-booking-buttons">
-                    <a class="m-hide" href="#" target="_blank">Get a Quote</a>
+                    <a class="m-hide" href="contact.html" target="_blank">Get a Quote</a>
                     <a class="m-hide" href="#" data-toggle="modal" data-target="#exampleModalCenter">Current Offers</a>
                 </div>
 
@@ -67,7 +67,7 @@
                         target="_blank"><span class="icon icon-facebook"></span></a>
                     <a class="m-hide" href="#" target="_blank"><span class="icon icon-instagram"></span></a>
                     <a class="m-hide" href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank"><span
-                            class="icon icon-tripadvisor"></span></a>
+                                class="icon icon-tripadvisor"></span></a>
                     <a class="m-hide" href="https://twitter.com/KanchonSheel" target="_blank">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 461.001 461.001"
@@ -83,9 +83,9 @@
                         </svg>
                     </a>
                     <a class="m-hide" href="https://wa.me/8801575033642" target="_blank"><span
-                            class="icon icon-whatsapp"></span></a>
+                                class="icon icon-whatsapp"></span></a>
                     <a class="m-hide" href="https://join.skype.com/invite/YYXzSmJkfjpD"><span
-                            class="icon icon-viber"></span></a>
+                                class="icon icon-viber"></span></a>
                 </div>
             </div>
         </div>
@@ -127,6 +127,12 @@
                         <span class="nav-small-text">The team behind Scidata Analyst</span>
                     </a>
                 </div>
+                <div class="nav-block">
+                    <a href="innovation.html" class="nav-link">
+                        <span class="nav-text">Innovation</span>
+                        <span class="nav-small-text">Products &amp; solutions</span>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="nav-bottom">
@@ -155,112 +161,178 @@
     </div>
     <!-- NAV WRAPPER END -->
 
-    <div class="scroll-image-block custom-gsap-motion">
-        <div class="grid">
-            <div class="photo-wrap">
-                <div class="gsap-overlay-motion-left" style="left: auto; width: 0%;"></div>
-                <!-- Big screen photo -->
-                <picture id="scroll-img-iesrc" data-iesrc="assets/images/team-working.jpg"
-                    data-alt="Scidata Analyst team working">
-                    <source id="scroll-img-webp" srcset="assets/images/team-working.webp" type="image/webp">
-                    <source id="scroll-img-jpg" srcset="assets/images/team-working.jpg" type="image/jpeg">
-                    <img id="scroll-img" class="photo-motion" src="assets/images/team-working.jpg"
-                        alt="Scidata Analyst team working" style="transform: translate3d(-585.688px, -381.118px, 0px);">
-                </picture>
+    <!-- SECTION 1: BOLD NAME HERO -->
+    <section class="about-hero">
+        <div class="hero-field">
+            <div class="hero-particle hero-particle--1"></div>
+            <div class="hero-particle hero-particle--2"></div>
+            <div class="hero-particle hero-particle--3"></div>
+            <div class="hero-particle hero-particle--4"></div>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-name">SCIDATA ANALYST</div>
+            <div class="hero-sub">
+                <p class="hero-tagline">WE BUILD SOFTWARE THAT MOVES BUSINESSES FORWARD</p>
+                <div class="hero-underline"></div>
             </div>
-            <div class="title-wrap gsap-slide-up-delay" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                <div>
-                    <div class="title gsap-slide-up-delay" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                        <span>About Us</span>
-                    </div>
-                    <div class="text gsap-slide-up-delay" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                        <p>Scidata Analyst is a software development company built on one simple idea: technology
-                            should genuinely move a client's business forward, not just look good on paper. </p>
-                        <p>We design and build websites, custom software, and AI-powered tools, working closely
-                            with each client from the first conversation through to long-term support.</p>
-                        <p>Our team brings hands-on experience across AdTech, Telco, Hotel, and Travel industries,
-                            and we bring that same level of care to every project, big or small.</p>
-                        <p>Take a look at the work we've done, get a feel for how we operate, and reach out
-                            whenever you're ready to talk about your project.</p>
-                        <p>We'd love to work with you!</p>
+            <div class="hero-cta">
+                <a href="contact.html" class="hero-btn">START A PROJECT</a>
+            </div>
+        </div>
+    </section>
 
-                    </div>
+    <!-- SECTION 2: THE JOURNEY - FULL-WIDTH PHASE RIBBONS -->
+    <section class="about-story">
+        <div class="story-rail">
+            <div class="story-phase story-phase--1">
+                <div class="phase-number">01</div>
+                <div class="phase-card phase-card--left">
+                    <h3 class="phase-title">THE BEGINNING</h3>
+                    <p class="phase-text">A handful of developers and designers who wanted to build software that
+                        actually solves problems, not just fill out a checklist.</p>
+                    <span class="phase-year">2019</span>
+                </div>
+            </div>
+            <div class="story-phase story-phase--2">
+                <div class="phase-number">02</div>
+                <div class="phase-card phase-card--right">
+                    <h3 class="phase-title">FIRST PROJECTS</h3>
+                    <p class="phase-text">Early web builds and custom tools for local businesses, learning the craft
+                        one line at a time and shipping our first live products.</p>
+                    <span class="phase-year">2020 - 2021</span>
+                </div>
+            </div>
+            <div class="story-phase story-phase--3">
+                <div class="phase-number">03</div>
+                <div class="phase-card phase-card--left">
+                    <h3 class="phase-title">THE EXPANSION</h3>
+                    <p class="phase-text">Expanded into AI and DevOps, taking on larger projects across AdTech,
+                        Telco, Hotel, and Travel industries.</p>
+                    <span class="phase-year">2022 - 2023</span>
+                </div>
+            </div>
+            <div class="story-phase story-phase--4">
+                <div class="phase-number">04</div>
+                <div class="phase-card phase-card--right">
+                    <h3 class="phase-title">FULL-SERVICE PARTNER</h3>
+                    <p class="phase-text">Now a complete development partner, designing, building, and supporting
+                        software end-to-end with the same hands-on care as day one.</p>
+                    <span class="phase-year">2024 - NOW</span>
+                </div>
+            </div>
+            <div class="story-tagline">BUILT ON TRUST, DELIVERED WITH CARE</div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: WHO WE ARE - IDENTITY PILLARS -->
+    <section class="about-identity">
+        <div class="identity-rail">
+            <h2 class="identity-title">WHO WE ARE</h2>
+            <p class="identity-text">Real people with real expertise, working closely with each client from the
+                first conversation through to long-term support.</p>
+            <div class="identity-grid">
+                <div class="identity-pillar">
+                    <div class="pillar-glow"></div>
+                    <div class="pillar-icon">⚡</div>
+                    <h3 class="pillar-title">TECHNICAL EXCELLENCE</h3>
+                    <p class="pillar-text">Clean code, proper standards, software that lasts.</p>
+                </div>
+                <div class="identity-pillar">
+                    <div class="pillar-glow"></div>
+                    <div class="pillar-icon">🤝</div>
+                    <h3 class="pillar-title">CLIENT-FIRST</h3>
+                    <p class="pillar-text">We start by understanding what you actually need.</p>
+                </div>
+                <div class="identity-pillar">
+                    <div class="pillar-glow"></div>
+                    <div class="pillar-icon">🌱</div>
+                    <h3 class="pillar-title">GROWN TOGETHER</h3>
+                    <p class="pillar-text">We keep building long after launch, supporting and evolving.</p>
+                </div>
+                <div class="identity-pillar">
+                    <div class="pillar-glow"></div>
+                    <div class="pillar-icon">🌍</div>
+                    <h3 class="pillar-title">INDUSTRY DEPTH</h3>
+                    <p class="pillar-text">AdTech, Telco, Hotel, Travel - depth applied everywhere.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="welcome-title-block">
-        <div class="left-col">
-            <div class="bottle-img wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                <img src="assets/images/scidata-icon.png" alt="Scidata Analyst icon">
+    <!-- SECTION 4: WHAT WE DO - GIANT SKILL BARS -->
+    <section class="about-skills">
+        <div class="skills-field"></div>
+        <div class="skills-rail">
+            <h2 class="skills-title">WHAT WE BUILD</h2>
+            <div class="skill-bar">
+                <div class="skill-name">WEB</div>
+                <div class="skill-track">
+                    <div class="skill-fill skill-fill--1"></div>
+                </div>
+                <div class="skill-desc">RESPONSIVE HIGH-PERFORMANCE SITES</div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-name">SOFTWARE</div>
+                <div class="skill-track">
+                    <div class="skill-fill skill-fill--2"></div>
+                </div>
+                <div class="skill-desc">CUSTOM APPLICATIONS END-TO-END</div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-name">AI</div>
+                <div class="skill-track">
+                    <div class="skill-fill skill-fill--3"></div>
+                </div>
+                <div class="skill-desc">INTELLIGENT TOOLS THAT AUGMENT</div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-name">DEVOPS</div>
+                <div class="skill-track">
+                    <div class="skill-fill skill-fill--4"></div>
+                </div>
+                <div class="skill-desc">RELIABLE INFRASTRUCTURE THAT SHIPS</div>
             </div>
         </div>
-        <div class="right-col">
-            <h1 class="title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                BUILT ON TRUST, DELIVERED WITH CARE<span class="bold">!!</span>
-            </h1>
+    </section>
 
+    <!-- SECTION 5: BY THE NUMBERS - MASSIVE COUNTERS -->
+    <section class="about-counters">
+        <div class="counter-field">
+            <div class="counter-blob counter-blob--1"></div>
+            <div class="counter-blob counter-blob--2"></div>
+            <div class="counter-blob counter-blob--3"></div>
         </div>
-
-        <div class="fish" style="transform: translate3d(-0.417207px, 0px, 0px);">
-            <img src="assets/images/scidata-mark-white.png" alt="Scidata Analyst mark">
-        </div>
-    </div>
-
-    <div class="welcome-content-block">
-        <div class="left-col">
-            <img src="assets/images/welcome-left-bg.jpg" alt="">
-        </div>
-        <div class="center-col">
-            <div class="content wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                <p>Scidata Analyst started as a small team of developers and designers who wanted to build
-                    software that actually solves problems, not just fill out a checklist.</p>
-                <p>Since then, we've grown into a full-service development partner, taking on projects in web
-                    design, custom software, DevOps, and AI. </p>
-                <p>Every engagement starts the same way: understanding what the client actually needs, then
-                    building it right, testing it properly, and supporting it after launch.</p>
-                <p>We're proud of the relationships we've built along the way, and we're always looking to build
-                    more.</p>
-            </div>
-        </div>
-        <div class="right-col">
-            <div class="squid-fish wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                <img src="assets/images/team-icon.png" alt="Scidata Analyst team icon"
-                    style="transform: translate3d(0px, -85.2984px, 0px);">
-            </div>
-        </div>
-    </div>
-
-    <div class="more-food-block">
-        <div class="food-grid">
-            <div class="food-photo wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
-                <div class="food"></div>
-            </div>
-            <div class="food-title">
-                <div class="food-content-box wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                    <a href="work.html" class="room-title">check our work</a>
-                    <div class="line-border"></div>
+        <div class="counters-rail">
+            <h2 class="counters-title">BY THE NUMBERS</h2>
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <div class="counter-value">5+</div>
+                    <div class="counter-label">YEARS BUILDING</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-value">100+</div>
+                    <div class="counter-label">PROJECTS SHIPPED</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-value">20+</div>
+                    <div class="counter-label">CLIENTS SERVED</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-value">4</div>
+                    <div class="counter-label">INDUSTRIES</div>
                 </div>
             </div>
-            <div class="reserve-photo wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
-                <div class="reserve-menu"></div>
+            <div class="counter-cta">
+                <a href="contact.html" class="counter-btn">WORK WITH US</a>
             </div>
-            <div class="reserve-menu-title">
-                <div class="food-content-box wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                    <a href="contact.html" class="room-title left-title">start a project</a>
-                    <div class="line-border"></div>
-                </div>
-            </div>
-
         </div>
-    </div>
+    </section>
 
     <!-- BUTTON SECTION -->
     <div class="button-section">
         <a href="work.html" class="title-block">
             <h2 class="title">
-                <span class="title-text">Work</span>
+                <span class="title-text">See Our Work</span>
                 <span class="overlay-text"></span>
             </h2>
         </a>
@@ -296,73 +368,6 @@
                 duration: 0.2,
                 ease: "power2.out"
             });
-        });
-    </script>
-
-    <!-- about section header motion -->
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from(".about-section .left-col .title", {
-            x: "-100%",
-            duration: .8,
-            delay: 0.3
-        });
-
-
-        gsap.from(".about-section .left-col .text", {
-            y: "100%",
-            duration: .8,
-            delay: 0.3
-        });
-    </script>
-
-    <!-- choose section motion -->
-    <script>
-        gsap.from(".choose-section .title-block .title", {
-            y: "100%",
-            duration: 0.5,
-            scrollTrigger: {
-                trigger: ".choose-section .title-block",
-                scrub: 1,
-                end: "top 70%"
-            }
-        });
-
-        gsap.from(".choose-section .about-title", {
-            y: "100%",
-            duration: 0.5,
-            scrollTrigger: {
-                trigger: ".choose-section",
-                scrub: 1
-            }
-        });
-
-        const boxes = gsap.utils.toArray('.choose-section .choose-wrap .choose-block');
-        boxes.forEach(box => {
-            gsap.from(box, {
-                y: 100,
-                duration: 0.5,
-                opacity: 0,
-                scrollTrigger: {
-                    trigger: box,
-                    scrub: 1,
-                }
-            })
-        });
-    </script>
-
-    <!-- say section title motion -->
-    <script>
-        gsap.from(".say-section .title-block", {
-            y: "100%",
-            duration: 0.5,
-            opacity: 0,
-            scrollTrigger: {
-                trigger: ".say-section .title-block",
-                scrub: 2,
-                end: "top 80%"
-            }
         });
     </script>
 
@@ -408,9 +413,45 @@
         });
     </script>
 
-    <!-- GSAP ABOUT MOTION -->
+    <!-- GSAP ABOUT STORY MOTION -->
     <script>
-        var aboutGsap = gsap.timeline();
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".hero-name", { opacity: 0, y: 200, duration: 2.5, ease: "power4.out" });
+        gsap.from(".hero-tagline", { opacity: 0, y: 100, duration: 1.5, delay: 1 });
+        gsap.from(".hero-cta .hero-btn", { scale: 0.3, opacity: 0, duration: 1.5, delay: 1.3, ease: "elastic.out(1, 0.5)" });
+
+        gsap.utils.toArray('.story-phase').forEach((phase, index) => {
+            gsap.from(phase, { y: (index % 2 === 0 ? 200 : -200), opacity: 0, duration: 1.8,
+                scrollTrigger: { trigger: phase, start: "top 85%", end: "top 40%", scrub: 1 } });
+        });
+        gsap.from(".story-tagline", { y: 100, opacity: 0, duration: 1.5,
+            scrollTrigger: { trigger: ".story-tagline", start: "top 90%", end: "top 40%", scrub: 1 } });
+
+        gsap.from(".identity-title", { y: 120, opacity: 0, duration: 2, ease: "power4.out",
+            scrollTrigger: { trigger: ".identity-title", start: "top 85%", end: "top 50%", scrub: 1 } });
+        gsap.from(".identity-text", { y: 60, opacity: 0, duration: 1.2, delay: 0.3,
+            scrollTrigger: { trigger: ".identity-text", start: "top 85%", end: "top 50%", scrub: 1 } });
+        gsap.utils.toArray('.identity-pillar').forEach((pillar, i) => {
+            gsap.from(pillar, { y: 100, opacity: 0, duration: 1, delay: i * 0.2,
+                scrollTrigger: { trigger: pillar, start: "top 90%", end: "top 55%", scrub: 1 } });
+        });
+
+        gsap.from(".skills-title", { y: 120, opacity: 0, duration: 1.5, ease: "power4.out",
+            scrollTrigger: { trigger: ".skills-title", start: "top 85%", end: "top 50%", scrub: 1 } });
+        gsap.utils.toArray('.skill-bar').forEach((bar, i) => {
+            gsap.from(bar, { x: -300, opacity: 0, duration: 1.5, delay: i * 0.2,
+                scrollTrigger: { trigger: bar, start: "top 90%", end: "top 55%", scrub: 1 } });
+        });
+
+        gsap.from(".counters-title", { y: 120, opacity: 0, duration: 1.5, ease: "power4.out",
+            scrollTrigger: { trigger: ".counters-title", start: "top 85%", end: "top 50%", scrub: 1 } });
+        gsap.utils.toArray('.counter-item').forEach((counter, i) => {
+            gsap.from(counter, { scale: 0.2, opacity: 0, duration: 1.2, delay: i * 0.2,
+                scrollTrigger: { trigger: counter, start: "top 90%", end: "top 55%", scrub: 1 } });
+        });
+        gsap.from(".counter-cta .counter-btn", { y: 80, opacity: 0, duration: 1.2,
+            scrollTrigger: { trigger: ".counter-cta .counter-btn", start: "top 90%", end: "top 55%", scrub: 1 } });
 
         gsap.from(".button-section .title-block .title .overlay-text", {
             "width": "0%",
@@ -422,7 +463,7 @@
             }
         });
 
-        aboutGsap.from(".button-section .title-block .title .title-text", {
+        gsap.from(".button-section .title-block .title .title-text", {
             y: "100%",
             duration: .5,
             stagger: 0.2,
