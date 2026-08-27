@@ -6071,6 +6071,14 @@ a {
 /* ============================================
    HOME PAGE REDESIGN - BOLD PREMIUM DESIGN
    ============================================ */
+/* === HOME PAGE BODY OVERRIDES === */
+body.home-page,
+.home-page {
+  margin-left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 /* === LOADER === */
 .loader {
   position: fixed;
@@ -7059,8 +7067,7 @@ a {
 
 /* === REVEAL ANIMATIONS === */
 .reveal-text {
-  opacity: 0;
-  transform: translateY(60px);
+  /* elements visible by default; JS handles animation state */
 }
 
 /* === RESPONSIVE === */

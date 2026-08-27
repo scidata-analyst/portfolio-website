@@ -77,42 +77,85 @@ if (menuTrigger && navOverlay) {
 }
 
 // ============================================
-// SCROLL REVEAL ANIMATIONS
+// LOADER ANIMATION
 // ============================================
-const revealEls = document.querySelectorAll('.reveal-text');
+function runLoader() {
+    const loaderTl = gsap.timeline();
+    loaderTl
+        .from('.loader-text', { y: 50, opacity: 0, duration: 0.8, ease: 'power3.out' })
+        .from('.loader-bar', { scaleX: 0, duration: 1.2, ease: 'power2.inOut' }, '-=0.4')
+        .to('.loader-progress', { width: '100%', duration: 1.5, ease: 'power2.inOut' }, '-=1')
+        .to('.loader', { yPercent: -100, duration: 0.8, ease: 'power3.inOut', delay: 0.3, onComplete: () => {
+            gsap.set('.loader', { display: 'none' });
+            revealHero();
+        } });
+}
+
+if (document.readyState === 'complete') {
+    runLoader();
+} else {
+    window.addEventListener('load', runLoader);
+}
+
+// ============================================
+// INITIALIZATION
+// ============================================
+document.documentElement.classList.add('js-ready');
+
+// Fallback: reveal all hidden elements after 3s if animations hang or GSAP fails
+setTimeout(() => {
+    const revealEls = document.querySelectorAll('.reveal-text');
+    revealEls.forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+    });
+    const loader = document.querySelector('.loader');
+    if (loader) loader.style.display = 'none';
+}, 3000);
+
+// ============================================
+// HERO REVEAL (after loader)
+// ============================================
+function revealHero() {
+    const heroEls = document.querySelectorAll('.hero .reveal-text');
+    gsap.set(heroEls, { opacity: 0, y: 60 });
+    
+    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    heroTl
+        .fromTo('.hero .hero-eyebrow', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
+        .fromTo('.hero .hero-title-line', { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, stagger: 0.15 }, '-=0.5')
+        .fromTo('.hero .hero-description', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
+        .fromTo('.hero .hero-actions', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.5')
+        .fromTo('.hero .hero-scroll-indicator', { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.3')
+        .fromTo('.hero .deco-circle', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.2, stagger: 0.2, ease: 'elastic.out(1, 0.5)' }, '-=1');
+}
+
+// ============================================
+// SCROLL REVEAL ANIMATIONS (exclude hero)
+// ============================================
+const revealEls = document.querySelectorAll('.reveal-text:not(.hero .reveal-text)');
 revealEls.forEach(el => {
-    gsap.fromTo(el, 
-        { y: 60, opacity: 0 },
-        {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 85%',
-                toggleActions: 'play none none reverse'
-            }
+    gsap.from(el, {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
         }
-    );
+    });
 });
 
 // ============================================
-// HERO ANIMATION
+// PARALLAX BACKGROUND TEXT
 // ============================================
-const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-heroTl
-    .from('.hero-eyebrow', { y: 30, opacity: 0, duration: 0.8 })
-    .from('.hero-title-line', { y: 100, opacity: 0, duration: 1.2, stagger: 0.15 }, '-=0.5')
-    .from('.hero-description', { y: 30, opacity: 0, duration: 0.8 }, '-=0.6')
-    .from('.hero-actions', { y: 30, opacity: 0, duration: 0.8 }, '-=0.5')
-    .from('.hero-scroll-indicator', { opacity: 0, duration: 0.8 }, '-=0.3')
-    .from('.deco-circle', { scale: 0, opacity: 0, duration: 1.2, stagger: 0.2, ease: 'elastic.out(1, 0.5)' }, '-=1');
-
-// Parallax background text
 gsap.to('.hero-bg-text', {
     y: 200,
     ease: 'none',
+    immediateRender: false,
     scrollTrigger: {
         trigger: '.hero',
         start: 'top top',
@@ -120,6 +163,27 @@ gsap.to('.hero-bg-text', {
         scrub: 1
     }
 });
+
+// ============================================
+// SCROLL-BASED TYPOGRAPHY
+// ============================================
+const heroTitle = document.querySelector('.hero-title');
+if (heroTitle) {
+    gsap.fromTo(heroTitle.children, 
+        { y: 0 },
+        {
+            y: -100,
+            ease: 'none',
+            immediateRender: false,
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1
+            }
+        }
+    );
+}
 
 // ============================================
 // HORIZONTAL SCROLL - SERVICES
@@ -139,7 +203,6 @@ if (servicesTrack) {
         }
     });
 
-    // Image scale on hover
     const serviceCards = document.querySelectorAll('.service-card');
     serviceCards.forEach(card => {
         const img = card.querySelector('.service-image img');
@@ -164,6 +227,7 @@ processSteps.forEach((step, i) => {
         opacity: 0,
         duration: 1,
         ease: 'power3.out',
+        immediateRender: false,
         scrollTrigger: {
             trigger: step,
             start: 'top 80%',
@@ -181,6 +245,7 @@ scaleTargets.forEach(el => {
         gsap.fromTo(el, { scale: 1 }, {
             scale: 1.05,
             ease: 'none',
+            immediateRender: false,
             scrollTrigger: {
                 trigger: el,
                 start: 'top bottom',
@@ -202,6 +267,7 @@ counters.forEach(counter => {
         duration: 2,
         ease: 'power2.out',
         snap: { innerText: 1 },
+        immediateRender: false,
         scrollTrigger: {
             trigger: counter,
             start: 'top 85%',
@@ -275,38 +341,6 @@ tiltCards.forEach(card => {
 });
 
 // ============================================
-// LOADER ANIMATION
-// ============================================
-window.addEventListener('load', () => {
-    const loaderTl = gsap.timeline();
-    loaderTl
-        .from('.loader-text', { y: 50, opacity: 0, duration: 0.8, ease: 'power3.out' })
-        .from('.loader-bar', { scaleX: 0, duration: 1.2, ease: 'power2.inOut' }, '-=0.4')
-        .to('.loader-progress', { width: '100%', duration: 1.5, ease: 'power2.inOut' }, '-=1')
-        .to('.loader', { yPercent: -100, duration: 0.8, ease: 'power3.inOut', delay: 0.3 });
-});
-
-// ============================================
-// SCROLL-BASED TYPOGRAPHY
-// ============================================
-const heroTitle = document.querySelector('.hero-title');
-if (heroTitle) {
-    gsap.fromTo(heroTitle.children, 
-        { y: 0 },
-        {
-            y: -100,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.hero',
-                start: 'top top',
-                end: 'bottom top',
-                scrub: 1
-            }
-        }
-    );
-}
-
-// ============================================
 // SECTION HEADER ANIMATIONS
 // ============================================
 const sectionHeaders = document.querySelectorAll('.section-header');
@@ -320,6 +354,7 @@ sectionHeaders.forEach(header => {
             opacity: 0,
             duration: 0.8,
             ease: 'power3.out',
+            immediateRender: false,
             scrollTrigger: {
                 trigger: header,
                 start: 'top 80%',
@@ -334,6 +369,7 @@ sectionHeaders.forEach(header => {
             opacity: 0,
             duration: 1,
             ease: 'power3.out',
+            immediateRender: false,
             scrollTrigger: {
                 trigger: header,
                 start: 'top 80%',
