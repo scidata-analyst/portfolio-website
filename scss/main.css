@@ -21331,6 +21331,7 @@ body.contact-page {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 30px;
+  align-items: start;
 }
 .ct2-form-section .ct2-form-card {
   background: var(--gray);
@@ -21344,10 +21345,13 @@ body.contact-page {
   gap: 12px;
   padding: 16px 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  min-width: 0;
 }
 .ct2-form-section .ct2-form-card-header .ct2-form-dots {
   display: flex;
   gap: 6px;
+  flex-shrink: 0;
 }
 .ct2-form-section .ct2-form-card-header .ct2-form-dots span {
   width: 10px;
@@ -21369,12 +21373,17 @@ body.contact-page {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .ct2-form-section .ct2-form-card-header .ct2-form-status {
   margin-left: auto;
   font-size: 0.65rem;
   font-weight: 700;
   color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .ct2-form-section .ct2-form {
   padding: 32px;
@@ -21390,6 +21399,7 @@ body.contact-page {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 .ct2-form-section .ct2-form-group--full {
   margin-bottom: 20px;
@@ -21436,6 +21446,9 @@ body.contact-page {
 }
 .ct2-form-section .ct2-form-submit {
   margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 .ct2-form-section .ct2-channels {
   display: flex;
@@ -21545,6 +21558,12 @@ body.contact-page {
   }
   .ct2-channel {
     margin: 0;
+    min-width: 0;
+  }
+  .ct2-channel-info a,
+  .ct2-channel-info span {
+    font-size: 0.82rem;
+    word-break: break-all;
   }
 }
 @media (max-width: 768px) {
@@ -21613,20 +21632,31 @@ body.contact-page {
   .ct2-form-section .ct2-form-header .ct2-form-title {
     font-size: clamp(2.2rem, 7.5vw, 3.5rem);
   }
+  .ct2-form-section .ct2-form-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   .ct2-form-section .ct2-form {
     padding: 24px 20px;
   }
   .ct2-form-section .ct2-form-row {
     grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 14px;
+    margin-bottom: 14px;
   }
   .ct2-form-section .ct2-form-group--full {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+  }
+  .ct2-form-section .ct2-form-input,
+  .ct2-form-section .ct2-form-select,
+  .ct2-form-section .ct2-form-textarea {
+    font-size: 16px;
+    padding: 12px 14px;
   }
   .ct2-form-section .ct2-form-submit {
     width: 100%;
     justify-content: center;
+    padding: 14px 24px;
   }
   .ct2-channels {
     display: flex;
@@ -21701,24 +21731,51 @@ body.contact-page {
   .ct2-form-section .ct2-form-header .ct2-form-title {
     font-size: clamp(1.8rem, 8vw, 2.6rem);
   }
+  .ct2-form-section .ct2-form-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
   .ct2-form-section .ct2-form-card {
     border-radius: 18px;
   }
   .ct2-form-section .ct2-form-card-header {
-    padding: 12px 16px;
+    padding: 10px 14px;
+    gap: 8px;
+  }
+  .ct2-form-section .ct2-form-card-header .ct2-form-card-title {
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+  }
+  .ct2-form-section .ct2-form-card-header .ct2-form-dots span {
+    width: 8px;
+    height: 8px;
   }
   .ct2-form-section .ct2-form {
-    padding: 20px 14px;
+    padding: 18px 14px;
+  }
+  .ct2-form-section .ct2-form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .ct2-form-section .ct2-form-group--full {
+    margin-bottom: 12px;
   }
   .ct2-form-section .ct2-form-input,
   .ct2-form-section .ct2-form-select,
   .ct2-form-section .ct2-form-textarea {
-    padding: 10px 12px;
-    font-size: 0.82rem;
+    font-size: 16px;
+    padding: 11px 12px;
+  }
+  .ct2-form-section .ct2-form-label {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
   }
   .ct2-form-section .ct2-form-submit {
+    width: 100%;
+    justify-content: center;
     padding: 14px 20px;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
   }
   .ct2-channel {
     padding: 16px 14px;
@@ -21750,10 +21807,41 @@ body.contact-page {
   .ct2-form-section {
     padding: 40px 12px;
   }
+  .ct2-form-section .ct2-form-layout {
+    gap: 16px;
+  }
   .ct2-form-section .ct2-form {
-    padding: 16px 10px;
+    padding: 14px 10px;
+  }
+  .ct2-form-section .ct2-form-card-header {
+    padding: 10px 12px;
+  }
+  .ct2-form-section .ct2-form-card-header .ct2-form-card-title {
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+  }
+  .ct2-form-section .ct2-form-card-header .ct2-form-status {
+    font-size: 0.58rem;
+  }
+  .ct2-form-section .ct2-form-row {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .ct2-form-section .ct2-form-group--full {
+    margin-bottom: 10px;
+  }
+  .ct2-form-section .ct2-form-textarea {
+    min-height: 90px;
   }
   .ct2-channel {
     padding: 12px 10px;
+    gap: 10px;
+  }
+  .ct2-channel-socials {
+    gap: 6px;
+  }
+  .ct2-channel-socials a {
+    padding: 3px 6px;
+    font-size: 0.65rem;
   }
 }/*# sourceMappingURL=main.css.map */
