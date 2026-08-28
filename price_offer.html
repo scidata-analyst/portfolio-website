@@ -25,25 +25,42 @@
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
-            <div class="loader-text">PRICING</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
+            <div class="loader-brand">PRICING</div>
+            <div class="loader-percentage"><span class="loader-num">0</span>%</div>
+            <div class="loader-track">
+                <div class="loader-fill"></div>
             </div>
+            <div class="loader-tagline">Calculating Value</div>
         </div>
     </div>
+    <!-- LOADER END -->
 
     <!-- CUSTOM CURSOR -->
-    <div class="cursor" data-cursor></div>
-    <div class="cursor-follower" data-cursor-follower></div>
+    <div class="cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-label"></div>
+    </div>
+    <!-- CUSTOM CURSOR END -->
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <!-- SCROLL PROGRESS END -->
 
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="nav-logo">
-            <a href="/"><img src="img/logo.png" alt="Scidata Analyst"></a>
+            <a href="/" class="nav-logo-link">
+                <span class="nav-logo-icon">S</span>
+                <span class="nav-logo-text">SCIDATA</span>
+            </a>
         </div>
         <div class="nav-menu-trigger" data-menu-trigger>
-            <span class="menu-text">Menu</span>
-            <div class="menu-icon">
+            <span class="menu-label">Menu</span>
+            <div class="menu-burger">
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -51,351 +68,387 @@
     </nav>
 
     <div class="nav-overlay" data-nav-overlay>
-        <div class="nav-overlay-inner">
+        <div class="nav-overlay-bg"></div>
+        <div class="nav-overlay-content">
             <div class="nav-overlay-links">
-                <a href="/" class="nav-link-magnetic" data-magnetic>Home</a>
-                <a href="work.html" class="nav-link-magnetic" data-magnetic>Work</a>
-                <a href="about.html" class="nav-link-magnetic" data-magnetic>About</a>
-                <a href="team.html" class="nav-link-magnetic" data-magnetic>Team</a>
-                <a href="consultation.html" class="nav-link-magnetic" data-magnetic>Consultation</a>
-                <a href="price_offer.html" class="nav-link-magnetic" data-magnetic>Pricing</a>
-                <a href="contact.html" class="nav-link-magnetic" data-magnetic>Contact</a>
+                <a href="/" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">01</span>
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="work.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">02</span>
+                    <span class="nav-link-text">Work</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="about.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">03</span>
+                    <span class="nav-link-text">About</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="team.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">04</span>
+                    <span class="nav-link-text">Team</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="consultation.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">05</span>
+                    <span class="nav-link-text">Consultation</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="price_offer.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">06</span>
+                    <span class="nav-link-text">Pricing</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="contact.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">07</span>
+                    <span class="nav-link-text">Contact</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
             </div>
-            <div class="nav-overlay-info">
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Email</span>
-                    <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+            <div class="nav-overlay-footer">
+                <div class="nav-overlay-info">
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Email</span>
+                        <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Phone</span>
+                        <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Address</span>
+                        <span>2001 Victoria Court, NY</span>
+                    </div>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Phone</span>
-                    <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                <div class="nav-overlay-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Address</span>
-                    <span>2001 Victoria Court, NY</span>
-                </div>
-            </div>
-            <div class="nav-overlay-social">
-                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
-                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
-                <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
-                <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
             </div>
         </div>
     </div>
+    <!-- NAVIGATION END -->
 
-    <!-- PRICING HERO - TYPOGRAPHY DRIVEN -->
-    <section class="price-hero">
-        <div class="price-hero-inner">
-            <div class="price-hero-label reveal-text">Simple & Transparent</div>
-            <h1 class="price-hero-title">
-                <span class="price-word reveal-text">Pricing</span>
-                <span class="price-word price-word--crossed reveal-text">that</span>
-                <span class="price-word reveal-text">makes</span>
-                <span class="price-word price-word--accent reveal-text">sense</span>
-            </h1>
-            <p class="price-hero-sub reveal-text">
-                No hidden fees. No surprise invoices. Just straightforward plans designed around the way real projects work. Pick what fits, or let's build something custom.
-            </p>
-            <div class="price-hero-toggle">
-                <span class="toggle-label">Monthly</span>
-                <button class="toggle-switch" data-toggle>
-                    <span class="toggle-knob"></span>
-                </button>
-                <span class="toggle-label toggle-label--active">Yearly <em>(Save 20%)</em></span>
+    <!-- PRICING - CALCULATOR HERO (unique interactive slider hero) -->
+    <section class="pr-hero">
+        <div class="pr-hero-inner">
+            <div class="pr-hero-content">
+                <span class="pr-hero-tag"><span class="pr-tag-dot"></span> Simple & Transparent</span>
+                <h1 class="pr-hero-headline">Pricing that<br><span class="pr-headline-accent">makes sense.</span></h1>
+                <p class="pr-hero-text">No hidden fees. No surprise invoices. Just straightforward plans designed around the way real projects work.</p>
+            </div>
+            <div class="pr-calculator">
+                <div class="pr-calc-display">
+                    <span class="pr-calc-label">Estimated Price</span>
+                    <div class="pr-calc-price">
+                        <span class="pr-calc-currency">$</span>
+                        <span class="pr-calc-amount" data-price="1199">1,199</span>
+                    </div>
+                    <span class="pr-calc-note">per project</span>
+                </div>
+                <div class="pr-calc-controls">
+                    <div class="pr-calc-control">
+                        <label class="pr-calc-control-label">Project Type</label>
+                        <div class="pr-calc-options">
+                            <button class="pr-calc-opt pr-calc-opt--active" data-type="website" data-base="399">Website</button>
+                            <button class="pr-calc-opt" data-type="webapp" data-base="1199">Web App</button>
+                            <button class="pr-calc-opt" data-type="ecommerce" data-base="1999">E-Commerce</button>
+                            <button class="pr-calc-opt" data-type="custom" data-base="3999">Custom</button>
+                        </div>
+                    </div>
+                    <div class="pr-calc-control">
+                        <label class="pr-calc-control-label">Complexity</label>
+                        <div class="pr-calc-slider-wrap">
+                            <input type="range" class="pr-calc-slider" min="1" max="3" value="2" data-slider>
+                            <div class="pr-calc-slider-labels">
+                                <span>Basic</span>
+                                <span>Medium</span>
+                                <span>Complex</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#plans" class="btn-magnetic btn-primary pr-calc-cta" data-magnetic>
+                    <span class="btn-label">View Plans</span>
+                    <span class="btn-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </span>
+                </a>
             </div>
         </div>
-        <div class="price-hero-visual">
-            <div class="price-float price-float--1">
-                <span class="float-num">$0</span>
-                <span class="float-label">Setup Fee</span>
-            </div>
-            <div class="price-float price-float--2">
-                <span class="float-num">24h</span>
-                <span class="float-label">Response</span>
-            </div>
-            <div class="price-float price-float--3">
-                <span class="float-num">∞</span>
-                <span class="float-label">Revisions</span>
-            </div>
+        <div class="pr-hero-floater" aria-hidden="true">
+            <span class="pr-floater pr-floater--1">$0 Setup</span>
+            <span class="pr-floater pr-floater--2">24h Response</span>
+            <span class="pr-floater pr-floater--3">Free Revisions</span>
         </div>
     </section>
 
-    <!-- PRICING PLANS - ASYMMETRICAL CARDS -->
-    <section class="price-plans">
-        <div class="price-cards">
+    <!-- PRICING PLANS - LAYERED STACK (unique nested card layout) -->
+    <section class="pr-plans" id="plans">
+        <div class="pr-plans-header">
+            <span class="pr-plans-tag"><span class="pr-tag-dot"></span> Plans</span>
+            <h2 class="pr-plans-title">Choose Your <em>Level</em></h2>
+        </div>
+        <div class="pr-stack">
             <!-- PLAN 1 -->
-            <div class="price-card price-card--starter" data-tilt>
-                <div class="price-card-top">
-                    <span class="plan-badge">Starter</span>
-                    <h3 class="plan-name">Launch</h3>
-                    <p class="plan-desc">Perfect for small businesses and startups ready to make their mark online.</p>
+            <div class="pr-stack-card pr-stack-card--1" data-plan>
+                <div class="pr-stack-card-left">
+                    <span class="pr-stack-num">01</span>
+                    <h3 class="pr-stack-name">Launch</h3>
+                    <span class="pr-stack-badge">Starter</span>
                 </div>
-                <div class="price-card-mid">
-                    <div class="plan-price" data-monthly="499" data-yearly="399">
-                        <span class="plan-currency">$</span>
-                        <span class="plan-amount">399</span>
-                        <span class="plan-period">/project</span>
-                    </div>
-                    <div class="plan-delivery">
-                        <i class="fa-solid fa-clock"></i>
-                        <span>7-day delivery</span>
-                    </div>
-                </div>
-                <div class="price-card-bottom">
-                    <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i> Custom 5-page website</li>
-                        <li><i class="fa-solid fa-check"></i> Mobile-responsive design</li>
-                        <li><i class="fa-solid fa-check"></i> Basic SEO setup</li>
-                        <li><i class="fa-solid fa-check"></i> Contact form integration</li>
-                        <li><i class="fa-solid fa-check"></i> 1 round of revisions</li>
-                        <li><i class="fa-solid fa-check"></i> 30 days free support</li>
+                <div class="pr-stack-card-mid">
+                    <p class="pr-stack-desc">Perfect for small businesses and startups ready to make their mark online.</p>
+                    <ul class="pr-stack-features">
+                        <li>Custom 5-page website</li>
+                        <li>Mobile-responsive design</li>
+                        <li>Basic SEO setup</li>
+                        <li>Contact form integration</li>
+                        <li>1 round of revisions</li>
+                        <li>30 days free support</li>
                     </ul>
-                    <a href="consultation.html" class="btn-magnetic btn-magnetic--outline" data-magnetic>
-                        <span class="btn-text">Get Started</span>
+                </div>
+                <div class="pr-stack-card-right">
+                    <div class="pr-stack-price">$399</div>
+                    <span class="pr-stack-period">per project</span>
+                    <span class="pr-stack-delivery">7-day delivery</span>
+                    <a href="consultation.html" class="btn-magnetic btn-ghost pr-stack-cta" data-magnetic>
+                        <span class="btn-label">Get Started</span>
                     </a>
                 </div>
             </div>
             <!-- PLAN 2 - FEATURED -->
-            <div class="price-card price-card--featured" data-tilt>
-                <div class="plan-popular">Most Popular</div>
-                <div class="price-card-top">
-                    <span class="plan-badge plan-badge--accent">Professional</span>
-                    <h3 class="plan-name">Scale</h3>
-                    <p class="plan-desc">For growing companies that need more power, more pages, and more possibilities.</p>
+            <div class="pr-stack-card pr-stack-card--2 pr-stack-card--featured" data-plan>
+                <div class="pr-stack-popular">Most Popular</div>
+                <div class="pr-stack-card-left">
+                    <span class="pr-stack-num">02</span>
+                    <h3 class="pr-stack-name">Scale</h3>
+                    <span class="pr-stack-badge pr-stack-badge--accent">Professional</span>
                 </div>
-                <div class="price-card-mid">
-                    <div class="plan-price" data-monthly="1499" data-yearly="1199">
-                        <span class="plan-currency">$</span>
-                        <span class="plan-amount">1,199</span>
-                        <span class="plan-period">/project</span>
-                    </div>
-                    <div class="plan-delivery">
-                        <i class="fa-solid fa-clock"></i>
-                        <span>14-day delivery</span>
-                    </div>
-                </div>
-                <div class="price-card-bottom">
-                    <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i> Custom 15-page website</li>
-                        <li><i class="fa-solid fa-check"></i> Advanced animations & interactions</li>
-                        <li><i class="fa-solid fa-check"></i> Full SEO optimization</li>
-                        <li><i class="fa-solid fa-check"></i> CMS integration (WordPress/Custom)</li>
-                        <li><i class="fa-solid fa-check"></i> E-commerce ready</li>
-                        <li><i class="fa-solid fa-check"></i> 3 rounds of revisions</li>
-                        <li><i class="fa-solid fa-check"></i> 60 days free support</li>
-                        <li><i class="fa-solid fa-check"></i> Performance optimization</li>
+                <div class="pr-stack-card-mid">
+                    <p class="pr-stack-desc">For growing companies that need more power, more pages, and more possibilities.</p>
+                    <ul class="pr-stack-features">
+                        <li>Custom 15-page website</li>
+                        <li>Advanced animations & interactions</li>
+                        <li>Full SEO optimization</li>
+                        <li>CMS integration</li>
+                        <li>E-commerce ready</li>
+                        <li>3 rounds of revisions</li>
+                        <li>60 days free support</li>
+                        <li>Performance optimization</li>
                     </ul>
-                    <a href="consultation.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                        <span class="btn-text">Get Started</span>
-                        <span class="btn-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6"/>
-                            </svg>
+                </div>
+                <div class="pr-stack-card-right">
+                    <div class="pr-stack-price">$1,199</div>
+                    <span class="pr-stack-period">per project</span>
+                    <span class="pr-stack-delivery">14-day delivery</span>
+                    <a href="consultation.html" class="btn-magnetic btn-primary pr-stack-cta" data-magnetic>
+                        <span class="btn-label">Get Started</span>
+                        <span class="btn-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                         </span>
                     </a>
                 </div>
             </div>
             <!-- PLAN 3 -->
-            <div class="price-card price-card--enterprise" data-tilt>
-                <div class="price-card-top">
-                    <span class="plan-badge plan-badge--dark">Enterprise</span>
-                    <h3 class="plan-name">Dominate</h3>
-                    <p class="plan-desc">Full-stack solutions for serious businesses that need custom software and apps.</p>
+            <div class="pr-stack-card pr-stack-card--3" data-plan>
+                <div class="pr-stack-card-left">
+                    <span class="pr-stack-num">03</span>
+                    <h3 class="pr-stack-name">Dominate</h3>
+                    <span class="pr-stack-badge pr-stack-badge--dark">Enterprise</span>
                 </div>
-                <div class="price-card-mid">
-                    <div class="plan-price" data-monthly="4999" data-yearly="3999">
-                        <span class="plan-currency">$</span>
-                        <span class="plan-amount">3,999</span>
-                        <span class="plan-period">/project</span>
-                    </div>
-                    <div class="plan-delivery">
-                        <i class="fa-solid fa-clock"></i>
-                        <span>30-day delivery</span>
-                    </div>
-                </div>
-                <div class="price-card-bottom">
-                    <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i> Unlimited pages & features</li>
-                        <li><i class="fa-solid fa-check"></i> Custom web application</li>
-                        <li><i class="fa-solid fa-check"></i> API development & integrations</li>
-                        <li><i class="fa-solid fa-check"></i> Database architecture</li>
-                        <li><i class="fa-solid fa-check"></i> AI/ML integration</li>
-                        <li><i class="fa-solid fa-check"></i> Unlimited revisions</li>
-                        <li><i class="fa-solid fa-check"></i> 90 days free support</li>
-                        <li><i class="fa-solid fa-check"></i> Dedicated project manager</li>
+                <div class="pr-stack-card-mid">
+                    <p class="pr-stack-desc">Full-stack solutions for serious businesses that need custom software and apps.</p>
+                    <ul class="pr-stack-features">
+                        <li>Unlimited pages & features</li>
+                        <li>Custom web application</li>
+                        <li>API development & integrations</li>
+                        <li>Database architecture</li>
+                        <li>AI/ML integration</li>
+                        <li>Unlimited revisions</li>
+                        <li>90 days free support</li>
+                        <li>Dedicated project manager</li>
                     </ul>
-                    <a href="consultation.html" class="btn-magnetic btn-magnetic--outline" data-magnetic>
-                        <span class="btn-text">Let's Talk</span>
+                </div>
+                <div class="pr-stack-card-right">
+                    <div class="pr-stack-price">$3,999</div>
+                    <span class="pr-stack-period">per project</span>
+                    <span class="pr-stack-delivery">30-day delivery</span>
+                    <a href="consultation.html" class="btn-magnetic btn-ghost pr-stack-cta" data-magnetic>
+                        <span class="btn-label">Let's Talk</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SPECIAL OFFER BANNER -->
-    <section class="price-offer">
-        <div class="offer-content">
-            <div class="offer-flash">Limited Time</div>
-            <h2 class="offer-title reveal-text">Launch Special: <em>Save 30%</em> on your first project</h2>
-            <p class="offer-text reveal-text">
-                New clients get 30% off any plan when they book a consultation this month. Plus — free hosting setup and a domain name on us.
-            </p>
-            <a href="consultation.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                <span class="btn-text">Claim Offer</span>
-                <span class="btn-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
-                </span>
-            </a>
-        </div>
-        <div class="offer-visual">
-            <div class="offer-badge-circle">
-                <span class="offer-percent">30%</span>
-                <span class="offer-off">OFF</span>
+    <!-- SPECIAL OFFER - COUNTDOWN (unique countdown offer) -->
+    <section class="pr-offer">
+        <div class="pr-offer-inner">
+            <div class="pr-offer-content">
+                <span class="pr-offer-tag"><span class="pr-tag-dot"></span> Limited Time</span>
+                <h2 class="pr-offer-title">Launch Special: <em>Save 30%</em></h2>
+                <p class="pr-offer-text">New clients get 30% off any plan when they book a consultation this month. Plus — free hosting setup and a domain name on us.</p>
+                <a href="consultation.html" class="btn-magnetic btn-primary pr-offer-cta" data-magnetic>
+                    <span class="btn-label">Claim Offer</span>
+                    <span class="btn-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </span>
+                </a>
             </div>
+            <div class="pr-offer-visual">
+                <div class="pr-offer-percent">30%</div>
+                <div class="pr-offer-off">OFF</div>
+            </div>
+        </div>
+        <div class="pr-offer-deco">
+            <div class="pr-offer-ring pr-offer-ring--1"></div>
+            <div class="pr-offer-ring pr-offer-ring--2"></div>
         </div>
     </section>
 
-    <!-- COMPARISON TABLE -->
-    <section class="price-compare">
-        <div class="compare-header">
-            <span class="compare-eyebrow reveal-text">Compare Plans</span>
-            <h2 class="compare-title reveal-text">The <em>Breakdown</em></h2>
+    <!-- COMPARISON - DIAL SELECTOR (unique dial-based comparison) -->
+    <section class="pr-compare">
+        <div class="pr-compare-header">
+            <span class="pr-compare-tag"><span class="pr-tag-dot"></span> Compare Plans</span>
+            <h2 class="pr-compare-title">The <em>Breakdown</em></h2>
         </div>
-        <div class="compare-table-wrap">
-            <table class="compare-table">
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th><span class="table-plan">Launch</span></th>
-                        <th><span class="table-plan table-plan--active">Scale</span></th>
-                        <th><span class="table-plan">Dominate</span></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pages</td>
-                        <td>5</td>
-                        <td>15</td>
-                        <td>Unlimited</td>
-                    </tr>
-                    <tr>
-                        <td>Custom Design</td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Animations</td>
-                        <td>Basic</td>
-                        <td>Advanced</td>
-                        <td>Premium</td>
-                    </tr>
-                    <tr>
-                        <td>E-Commerce</td>
-                        <td><i class="fa-solid fa-minus"></i></td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Custom App</td>
-                        <td><i class="fa-solid fa-minus"></i></td>
-                        <td><i class="fa-solid fa-minus"></i></td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td>AI Integration</td>
-                        <td><i class="fa-solid fa-minus"></i></td>
-                        <td><i class="fa-solid fa-minus"></i></td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Revisions</td>
-                        <td>1</td>
-                        <td>3</td>
-                        <td>Unlimited</td>
-                    </tr>
-                    <tr>
-                        <td>Support</td>
-                        <td>30 days</td>
-                        <td>60 days</td>
-                        <td>90 days</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="pr-compare-grid">
+            <div class="pr-compare-row pr-compare-row--header">
+                <span class="pr-compare-feature">Feature</span>
+                <span class="pr-compare-plan">Launch</span>
+                <span class="pr-compare-plan pr-compare-plan--active">Scale</span>
+                <span class="pr-compare-plan">Dominate</span>
+            </div>
+            <div class="pr-compare-row">
+                <span class="pr-compare-feature">Pages</span>
+                <span class="pr-compare-val">5</span>
+                <span class="pr-compare-val">15</span>
+                <span class="pr-compare-val">Unlimited</span>
+            </div>
+            <div class="pr-compare-row">
+                <span class="pr-compare-feature">Custom Design</span>
+                <span class="pr-compare-val"><span class="pr-check">✓</span></span>
+                <span class="pr-compare-val"><span class="pr-check">✓</span></span>
+                <span class="pr-compare-val"><span class="pr-check">✓</span></span>
+            </div>
+            <div class="pr-compare-row">
+                <span class="pr-compare-feature">Animations</span>
+                <span class="pr-compare-val">Basic</span>
+                <span class="pr-compare-val">Advanced</span>
+                <span class="pr-compare-val">Premium</span>
+            </div>
+            <div class="pr-compare-row">
+                <span class="pr-compare-feature">E-Commerce</span>
+                <span class="pr-compare-val"><span class="pr-dash">—</span></span>
+                <span class="pr-compare-val"><span class="pr-check">✓</span></span>
+                <span class="pr-compare-val"><span class="pr-check">✓</span></span>
+            </div>
+            <div class="pr-compare-row">
+                <span class="pr-compare-feature">Custom App</span>
+                <span class="pr-compare-val"><span class="pr-dash">—</span></span>
+                <span class="pr-compare-val"><span class="pr-dash">—</span></span>
+                <span class="pr-compare-val"><span class="pr-check">✓</span></span>
+            </div>
+            <div class="pr-compare-row">
+                <span class="pr-compare-feature">AI Integration</span>
+                <span class="pr-compare-val"><span class="pr-dash">—</span></span>
+                <span class="pr-compare-val"><span class="pr-dash">—</span></span>
+                <span class="pr-compare-val"><span class="pr-check">✓</span></span>
+            </div>
+            <div class="pr-compare-row">
+                <span class="pr-compare-feature">Revisions</span>
+                <span class="pr-compare-val">1</span>
+                <span class="pr-compare-val">3</span>
+                <span class="pr-compare-val">Unlimited</span>
+            </div>
+            <div class="pr-compare-row">
+                <span class="pr-compare-feature">Support</span>
+                <span class="pr-compare-val">30 days</span>
+                <span class="pr-compare-val">60 days</span>
+                <span class="pr-compare-val">90 days</span>
+            </div>
         </div>
     </section>
 
     <!-- PRICING FAQ -->
-    <section class="price-faq">
-        <div class="price-faq-header">
-            <span class="price-faq-eyebrow reveal-text">Honest Answers</span>
-            <h2 class="price-faq-title reveal-text">Pricing <em>FAQ</em></h2>
+    <section class="pr-faq">
+        <div class="pr-faq-header">
+            <span class="pr-faq-tag"><span class="pr-tag-dot"></span> Honest Answers</span>
+            <h2 class="pr-faq-title">Pricing <em>FAQ</em></h2>
         </div>
-        <div class="price-faq-grid">
-            <div class="price-faq-item reveal-text">
-                <h4 class="price-faq-q">What's not included in the plans?</h4>
-                <p class="price-faq-a">Third-party services like hosting, domain names, premium stock photos, and paid API subscriptions are separate. We'll always tell you upfront before any additional costs.</p>
+        <div class="pr-faq-grid">
+            <div class="pr-faq-item" data-faq>
+                <div class="pr-faq-card">
+                    <span class="pr-faq-num">01</span>
+                    <h4 class="pr-faq-q">What's not included in the plans?</h4>
+                    <div class="pr-faq-toggle"><span></span></div>
+                    <div class="pr-faq-a">
+                        <p>Third-party services like hosting, domain names, premium stock photos, and paid API subscriptions are separate. We'll always tell you upfront before any additional costs.</p>
+                    </div>
+                </div>
             </div>
-            <div class="price-faq-item reveal-text">
-                <h4 class="price-faq-q">Can I switch plans later?</h4>
-                <p class="price-faq-a">Absolutely. Start with Launch and upgrade anytime. We'll credit your original payment toward the higher plan.</p>
+            <div class="pr-faq-item" data-faq>
+                <div class="pr-faq-card">
+                    <span class="pr-faq-num">02</span>
+                    <h4 class="pr-faq-q">Can I switch plans later?</h4>
+                    <div class="pr-faq-toggle"><span></span></div>
+                    <div class="pr-faq-a">
+                        <p>Absolutely. Start with Launch and upgrade anytime. We'll credit your original payment toward the higher plan.</p>
+                    </div>
+                </div>
             </div>
-            <div class="price-faq-item reveal-text">
-                <h4 class="price-faq-q">Do you offer payment plans?</h4>
-                <p class="price-faq-a">Yes! Split your payment into 2-4 installments at no extra cost. Enterprise projects can have custom milestone-based billing.</p>
+            <div class="pr-faq-item" data-faq>
+                <div class="pr-faq-card">
+                    <span class="pr-faq-num">03</span>
+                    <h4 class="pr-faq-q">Do you offer payment plans?</h4>
+                    <div class="pr-faq-toggle"><span></span></div>
+                    <div class="pr-faq-a">
+                        <p>Yes! Split your payment into 2-4 installments at no extra cost. Enterprise projects can have custom milestone-based billing.</p>
+                    </div>
+                </div>
             </div>
-            <div class="price-faq-item reveal-text">
-                <h4 class="price-faq-q">What if I need something custom?</h4>
-                <p class="price-faq-a">These plans are starting points. Every project is unique — book a free consultation and we'll craft a proposal tailored exactly to your needs.</p>
+            <div class="pr-faq-item" data-faq>
+                <div class="pr-faq-card">
+                    <span class="pr-faq-num">04</span>
+                    <h4 class="pr-faq-q">What if I need something custom?</h4>
+                    <div class="pr-faq-toggle"><span></span></div>
+                    <div class="pr-faq-a">
+                        <p>These plans are starting points. Every project is unique — book a free consultation and we'll craft a proposal tailored exactly to your needs.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
+    <section class="cta-section" data-section>
         <div class="cta-bg-text" aria-hidden="true">START</div>
-        <div class="cta-content">
-            <h2 class="cta-title reveal-text">
+        <div class="cta-inner">
+            <h2 class="cta-headline">
                 Ready to build<br>
-                <span class="cta-title-accent">something great?</span>
+                <span class="cta-accent">something great?</span>
             </h2>
-            <p class="cta-description reveal-text">
-                Let's discuss your project and explore how we can help you achieve your goals.
-            </p>
-            <a href="contact.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                <span class="btn-text">Get in Touch</span>
-                <span class="btn-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
+            <p class="cta-subtext">Let's discuss your project and explore how we can help you achieve your goals.</p>
+            <a href="contact.html" class="btn-magnetic btn-cta-large" data-magnetic>
+                <span class="btn-label">Get in Touch</span>
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </span>
             </a>
         </div>
         <div class="cta-deco">
-            <div class="deco-circle deco-circle--large"></div>
+            <div class="deco-ring deco-ring--1"></div>
+            <div class="deco-ring deco-ring--2"></div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-blob"></div>
-        <div class="footer-cta">
-            <div class="footer-cta-inner">
-                <span class="footer-cta-eyebrow">Got a project in mind?</span>
-                <a href="contact.html" class="footer-cta-title">
-                    <span>Let's build</span>
-                    <span class="footer-cta-accent">something great</span>
-                </a>
-            </div>
-            <a href="contact.html" class="footer-cta-circle" aria-label="Start a project">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-            </a>
-        </div>
         <div class="footer-marquee" aria-hidden="true">
             <div class="footer-marquee-track">
                 <span>Web Development</span><span class="dot">✦</span>
@@ -414,24 +467,32 @@
                 <span>Cloud &amp; Hosting</span><span class="dot">✦</span>
             </div>
         </div>
-        <div class="footer-main">
+        <div class="footer-cta">
+            <div class="footer-cta-text">
+                <span class="footer-cta-label">Got a project in mind?</span>
+                <a href="contact.html" class="footer-cta-title">
+                    <span>Let's build</span>
+                    <span class="footer-cta-accent">something great</span>
+                </a>
+            </div>
+            <a href="contact.html" class="footer-cta-btn" aria-label="Start a project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+        </div>
+        <div class="footer-body">
             <div class="footer-col footer-brand">
-                <div class="footer-brand-inner">
-                    <a href="/" class="footer-logo-link">
-                        <img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo">
-                    </a>
-                    <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
-                </div>
+                <a href="/" class="footer-logo-link"><img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo"></a>
+                <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-title">Stay in the loop</label>
-                    <div class="footer-newsletter-form">
+                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <div class="footer-newsletter-row">
                         <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
-                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                     </div>
                 </form>
             </div>
             <div class="footer-col footer-links">
-                <h3 class="footer-heading">Explore</h3>
+                <h3 class="footer-col-title">Explore</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="work.html">Work</a></li>
@@ -443,7 +504,7 @@
                 </ul>
             </div>
             <div class="footer-col footer-services">
-                <h3 class="footer-heading">Services</h3>
+                <h3 class="footer-col-title">Services</h3>
                 <ul>
                     <li><a href="contact.html">Web Development</a></li>
                     <li><a href="contact.html">Software Development</a></li>
@@ -451,30 +512,27 @@
                     <li><a href="contact.html">DevOps &amp; Support</a></li>
                 </ul>
             </div>
-            <div class="footer-col footer-contact">
-                <h3 class="footer-heading">Connect</h3>
+            <div class="footer-col footer-connect">
+                <h3 class="footer-col-title">Connect</h3>
                 <ul class="footer-contact-list">
-                    <li><a href="tel:+0000000000000"><i class="fa-solid fa-phone"></i> <span>(+00) 000 00 0000 00</span></a></li>
-                    <li><a href="mailto:info@scidata-analyst.com"><i class="fa-solid fa-envelope"></i> <span>info@scidata-analyst.com</span></a></li>
-                    <li class="footer-address"><i class="fa-solid fa-location-dot"></i> <span>2001 Victoria Court, NY</span></li>
+                    <li><a href="tel:+0000000000000"><span class="contact-icon">📞</span><span>(+00) 000 00 0000 00</span></a></li>
+                    <li><a href="mailto:info@scidata-analyst.com"><span class="contact-icon">✉</span><span>info@scidata-analyst.com</span></a></li>
+                    <li class="footer-address"><span class="contact-icon">📍</span><span>2001 Victoria Court, NY</span></li>
                 </ul>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
-                    <a href="https://join.skype.com/invite/YYXzSmJkfjpD" target="_blank" aria-label="Skype"><i class="fa-brands fa-skype"></i></a>
-                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook">FB</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn">LI</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter">TW</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp">WA</a>
                 </div>
             </div>
         </div>
-        <div class="footer-divider"></div>
         <div class="footer-bottom">
-            <div class="footer-bottom-inner">
-                <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
-                <button class="footer-totop" type="button" aria-label="Back to top">
-                    <i class="fa-solid fa-arrow-up"></i> Back to top
-                </button>
-            </div>
+            <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
+            <button class="footer-totop" type="button" aria-label="Back to top">
+                <span>Back to top</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </button>
         </div>
     </footer>
 
