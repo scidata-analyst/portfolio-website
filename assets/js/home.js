@@ -261,28 +261,47 @@ if (heroHeadline) {
 // ============================================
 // HORIZONTAL SCROLL - SERVICES
 // ============================================
-const servicesTrack = document.querySelector('[data-horizontal-scroll]');
-if (servicesTrack) {
-    const panels = gsap.utils.toArray('.service-panel');
-    const totalWidth = servicesTrack.scrollWidth - window.innerWidth;
+const servicesViewport = document.querySelector('[data-horizontal-scroll]');
+const servicesTrack = servicesViewport ? servicesViewport.querySelector('.services-track') : null;
 
-    gsap.to(servicesTrack, {
-        x: () => -(servicesTrack.scrollWidth - window.innerWidth + 60),
-        ease: 'none',
-        scrollTrigger: {
-            trigger: '.services-section',
-            pin: '.services-sticky-wrap',
-            scrub: 1,
-            end: () => '+=' + (servicesTrack.scrollWidth - window.innerWidth + 60),
-            invalidateOnRefresh: true,
-            onUpdate: (self) => {
-                const progressFill = document.querySelector('.progress-fill');
-                if (progressFill) {
-                    progressFill.style.width = (self.progress * 100) + '%';
+if (servicesViewport && servicesTrack) {
+    function initHorizontalScroll() {
+        ScrollTrigger.getAll().forEach(t => {
+            if (t.trigger === '.services-section') t.kill();
+        });
+
+        const trackWidth = servicesTrack.scrollWidth;
+        const viewportWidth = servicesViewport.clientWidth;
+        const scrollDistance = trackWidth - viewportWidth + 60;
+
+        if (scrollDistance <= 0) return;
+
+        gsap.to(servicesTrack, {
+            x: () => -scrollDistance,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.services-section',
+                pin: '.services-sticky-wrap',
+                scrub: 1,
+                end: () => '+=' + scrollDistance,
+                invalidateOnRefresh: true,
+                onUpdate: (self) => {
+                    const progressFill = document.querySelector('.progress-fill');
+                    if (progressFill) {
+                        progressFill.style.width = (self.progress * 100) + '%';
+                    }
                 }
             }
-        }
-    });
+        });
+    }
+
+    if (document.readyState === 'complete') {
+        setTimeout(initHorizontalScroll, 200);
+    } else {
+        window.addEventListener('load', () => {
+            setTimeout(initHorizontalScroll, 200);
+        });
+    }
 }
 
 // ============================================
