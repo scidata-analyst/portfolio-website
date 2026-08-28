@@ -1038,7 +1038,7 @@ a {
   z-index: 999;
   top: 0;
   left: 0;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 .project-section .project-wrap .project-block .pop_up-block .img-block img {
   width: 100%;
@@ -1162,7 +1162,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background: #0bbd29;
-  min-height: 100vh;
+  min-height: 80vh;
   align-items: center;
   padding-top: 120px;
 }
@@ -4314,7 +4314,7 @@ a {
 /* === SECTION 1: ABSURD MASSIVE TYPOGRAPHY === */
 .innovation-absurd-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4581,7 +4581,7 @@ a {
 /* === SECTION 3: RADIOACTIVE RADIATION FIELD === */
 .innovation-radiation-field {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4734,7 +4734,7 @@ a {
 /* === SECTION 4: EXTREME TYPE COLLAGE === */
 .innovation-type-collage {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4963,7 +4963,7 @@ a {
 
 /* === SECTION 6: MASSIVE OVERLAP MANIA === */
 .innovation-overlap-madness {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5073,7 +5073,7 @@ a {
 
 /* === SECTION 7: STORM OF BRIGHT LIGHTS === */
 .innovation-bright-storm {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5573,7 +5573,7 @@ body.home-page,
 /* === HERO SECTION === */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6530,7 +6530,7 @@ body.work-page,
 
 .work-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6838,7 +6838,7 @@ body.contact-page,
 
 .contact-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7081,7 +7081,7 @@ body.innovation-page,
 
 .innovation-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7798,7 +7798,7 @@ body.about-page,
 /* === ABOUT HERO === */
 .about-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8719,7 +8719,7 @@ body.about-page,
    TEAM PAGE
    ============================================================ */
 .team-hero {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 120px 60px 60px;
   display: flex;
   flex-direction: column;
@@ -9171,7 +9171,7 @@ body.about-page,
    CONSULTATION PAGE
    ============================================================ */
 .consult-hero {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 120px 60px 60px;
   display: flex;
   flex-direction: column;
@@ -9648,7 +9648,7 @@ body.about-page,
    PRICING PAGE
    ============================================================ */
 .price-hero {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 120px 60px 60px;
   display: flex;
   flex-direction: column;
@@ -12002,7 +12002,7 @@ body.about-page,
 .ab-intro {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: var(--wheat);
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -12889,7 +12889,7 @@ body.about-page,
 .wk-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: var(--dark);
   padding: 120px 60px 60px;
   overflow: hidden;
@@ -14208,7 +14208,7 @@ body.about-page,
 .cn-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: var(--dark);
   padding: 120px 60px 60px;
   overflow: hidden;
@@ -15225,7 +15225,7 @@ body.about-page,
 .tm-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: var(--dark);
   padding: 120px 60px 60px;
   overflow: hidden;
@@ -15779,7 +15779,7 @@ body.about-page,
 .pr-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: var(--dark);
   padding: 120px 60px 60px;
   overflow: hidden;
@@ -16517,7 +16517,7 @@ body.about-page,
 .ct-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: var(--dark);
   padding: 120px 60px 60px;
   overflow: hidden;
@@ -17000,7 +17000,7 @@ body.about-page,
 .wk2-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: var(--dark);
   padding: 120px 60px 60px;
   overflow: hidden;
@@ -17720,7 +17720,7 @@ body.about-page,
 .cn2-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: var(--dark);
   padding: 120px 60px 60px;
   overflow: hidden;
@@ -18711,7 +18711,7 @@ body.team-page {
 .tm2-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   min-height: 100svh;
   background: var(--dark);
   padding: 120px 60px 140px;
@@ -19546,8 +19546,7 @@ body.team-page {
 @media (max-width: 768px) {
   .tm2-hero {
     padding: 90px 24px 125px;
-    min-height: 100vh;
-    min-height: 100svh;
+    min-height: 80vh;
   }
   .tm2-hero .tm2-floating-elements {
     opacity: 0.15;
@@ -19955,7 +19954,7 @@ body.price-page {
 .pr2-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   min-height: 100svh;
   background: var(--dark);
   padding: 120px 60px 140px;
@@ -20735,7 +20734,6 @@ body.price-page {
   .pr2-hero {
     padding: 90px 24px 125px;
     min-height: 100vh;
-    min-height: 100svh;
   }
   .pr2-hero .pr2-floating-tags {
     opacity: 0.4;
@@ -21032,8 +21030,7 @@ body.contact-page {
 .ct2-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: auto;
   background: var(--dark);
   padding: 120px 60px 140px;
   overflow: hidden;
@@ -21569,8 +21566,7 @@ body.contact-page {
 @media (max-width: 768px) {
   .ct2-hero {
     padding: 90px 24px 125px;
-    min-height: 100vh;
-    min-height: 100svh;
+    min-height: auto;
   }
   .ct2-hero .ct2-signal-waves {
     opacity: 0.5;
