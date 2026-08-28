@@ -18,7 +18,7 @@ if (cursor && !('ontouchstart' in window)) {
     }
     animateCursor();
 
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .ct-channel');
+    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .ct2-channel, .ct2-form-card');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
@@ -132,12 +132,10 @@ setTimeout(() => {
 function revealHero() {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.fromTo('.ct-signal-core', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
-      .fromTo('.ct-signal-ring', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 1, stagger: 0.2 }, '-=0.4')
-      .fromTo('.ct-hero-tag', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.ct-hero-headline', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.5')
-      .fromTo('.ct-hero-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.ct-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.ct2-hero-eyebrow', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
+      .fromTo('.ct2-hero-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
+      .fromTo('.ct2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
+      .fromTo('.ct2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
 }
 
 // ============================================
@@ -155,7 +153,7 @@ window.addEventListener('scroll', () => {
 // ============================================
 // SCROLL REVEAL
 // ============================================
-const revealEls = document.querySelectorAll('.ct-burst-title, .ct-burst-text, .ct-form-tag, .ct-form-title, .ct-channel, .cta-headline, .cta-subtext');
+const revealEls = document.querySelectorAll('.ct2-manifesto-title, .ct2-manifesto-text, .ct2-form-tag, .ct2-form-title, .ct2-channel, .cta-headline, .cta-subtext');
 
 revealEls.forEach(el => {
     gsap.from(el, {
@@ -173,10 +171,10 @@ revealEls.forEach(el => {
 });
 
 // ============================================
-// BURST WORD HOVER
+// MANIFESTO WORD HOVER
 // ============================================
-const burstWords = document.querySelectorAll('.ct-burst-word');
-burstWords.forEach(word => {
+const manifestoWords = document.querySelectorAll('.ct2-manifesto-word');
+manifestoWords.forEach(word => {
     word.addEventListener('mouseenter', () => {
         gsap.to(word, { y: -8, rotation: -3, scale: 1.05, duration: 0.3, ease: 'power2.out' });
     });
@@ -188,13 +186,26 @@ burstWords.forEach(word => {
 // ============================================
 // FORM INPUT FOCUS
 // ============================================
-const formInputs = document.querySelectorAll('.ct-console-input, .ct-console-select, .ct-console-textarea');
+const formInputs = document.querySelectorAll('.ct2-form-input, .ct2-form-select, .ct2-form-textarea');
 formInputs.forEach(input => {
     input.addEventListener('focus', () => {
         gsap.to(input, { scale: 1.02, duration: 0.3, ease: 'power2.out' });
     });
     input.addEventListener('blur', () => {
         gsap.to(input, { scale: 1, duration: 0.3, ease: 'power2.out' });
+    });
+});
+
+// ============================================
+// CHANNEL HOVER
+// ============================================
+const channels = document.querySelectorAll('.ct2-channel');
+channels.forEach(channel => {
+    channel.addEventListener('mouseenter', () => {
+        gsap.to(channel, { x: 4, duration: 0.3, ease: 'power2.out' });
+    });
+    channel.addEventListener('mouseleave', () => {
+        gsap.to(channel, { x: 0, duration: 0.3, ease: 'power2.out' });
     });
 });
 

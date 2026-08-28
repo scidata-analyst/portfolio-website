@@ -18,7 +18,7 @@ if (cursor && !('ontouchstart' in window)) {
     }
     animateCursor();
 
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .tm-mosaic-tile, .tm-deck-card, .tm-polaroid');
+    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .tm2-member, .tm2-culture-card');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
@@ -132,11 +132,10 @@ setTimeout(() => {
 function revealHero() {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.fromTo('.tm-mosaic-tile', { y: 30, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.1, ease: 'back.out(1.7)' })
-      .fromTo('.tm-hero-tag', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
-      .fromTo('.tm-hero-headline', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.5')
-      .fromTo('.tm-hero-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.tm-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.tm2-hero-eyebrow', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
+      .fromTo('.tm2-hero-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
+      .fromTo('.tm2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
+      .fromTo('.tm2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
 }
 
 // ============================================
@@ -150,19 +149,19 @@ window.addEventListener('scroll', () => {
         scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
     }
 
-    // Scroll orb fill
-    const orbFill = document.querySelector('.tm-scroll-orb-fill');
-    if (orbFill) {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        orbFill.style.height = Math.min((scrollTop / docHeight) * 100, 100) + '%';
+    // Culture scroll progress
+    const cultureViewport = document.querySelector('.tm2-culture-viewport');
+    const cultureProgress = document.querySelector('.tm2-culture-progress-fill');
+    if (cultureViewport && cultureProgress) {
+        const maxScroll = cultureViewport.scrollWidth - cultureViewport.clientWidth;
+        cultureProgress.style.width = (maxScroll > 0 ? (cultureViewport.scrollLeft / maxScroll) * 100 : 0) + '%';
     }
 }, { passive: true });
 
 // ============================================
 // SCROLL REVEAL
 // ============================================
-const revealEls = document.querySelectorAll('.tm-members-tag, .tm-members-title, .tm-deck-card, .tm-culture-tag, .tm-culture-title, .tm-polaroid, .tm-stat-item, .tm-join-tag, .tm-join-title, .tm-join-text, .cta-headline, .cta-subtext');
+const revealEls = document.querySelectorAll('.tm2-members-tag, .tm2-members-title, .tm2-member, .tm2-culture-tag, .tm2-culture-title, .tm2-culture-card, .tm2-stat, .tm2-join-tag, .tm2-join-title, .tm2-join-text, .cta-headline, .cta-subtext');
 
 revealEls.forEach(el => {
     gsap.from(el, {
@@ -175,24 +174,6 @@ revealEls.forEach(el => {
             trigger: el,
             start: 'top 88%',
             toggleActions: 'play none none reverse'
-        }
-    });
-});
-
-// ============================================
-// MOSAC TILE PARALLAX
-// ============================================
-const mosaicTiles = document.querySelectorAll('.tm-mosaic-tile');
-mosaicTiles.forEach((tile, i) => {
-    gsap.fromTo(tile, { y: 0 }, {
-        y: -20,
-        ease: 'none',
-        immediateRender: false,
-        scrollTrigger: {
-            trigger: '.tm-hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1 + i * 0.2
         }
     });
 });
@@ -218,15 +199,15 @@ counters.forEach(counter => {
 });
 
 // ============================================
-// POLAROID TILT ON HOVER
+// MEMBER CARD HOVER
 // ============================================
-const polaroids = document.querySelectorAll('.tm-polaroid');
-polaroids.forEach(polaroid => {
-    polaroid.addEventListener('mouseenter', () => {
-        gsap.to(polaroid, { scale: 1.03, duration: 0.3, ease: 'power2.out' });
+const memberCards = document.querySelectorAll('.tm2-member');
+memberCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, { y: -8, duration: 0.4, ease: 'power2.out' });
     });
-    polaroid.addEventListener('mouseleave', () => {
-        gsap.to(polaroid, { scale: 1, duration: 0.3, ease: 'power2.out' });
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, { y: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
     });
 });
 

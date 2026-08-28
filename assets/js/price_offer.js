@@ -18,7 +18,7 @@ if (cursor && !('ontouchstart' in window)) {
     }
     animateCursor();
 
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .pr-stack-card, .pr-faq-card');
+    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .pr2-plan, .pr2-faq-item');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
@@ -132,11 +132,10 @@ setTimeout(() => {
 function revealHero() {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.fromTo('.pr-hero-tag', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      .fromTo('.pr-hero-headline', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.4')
-      .fromTo('.pr-hero-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.pr-calculator', { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 1, ease: 'back.out(1.7)' }, '-=0.6')
-      .fromTo('.pr-floater', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, stagger: 0.15, ease: 'back.out(1.7)' }, '-=0.5');
+    tl.fromTo('.pr2-hero-eyebrow', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
+      .fromTo('.pr2-hero-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
+      .fromTo('.pr2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
+      .fromTo('.pr2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
 }
 
 // ============================================
@@ -154,7 +153,7 @@ window.addEventListener('scroll', () => {
 // ============================================
 // SCROLL REVEAL
 // ============================================
-const revealEls = document.querySelectorAll('.pr-plans-tag, .pr-plans-title, .pr-stack-card, .pr-offer-title, .pr-offer-text, .pr-compare-tag, .pr-compare-title, .pr-compare-row, .pr-faq-tag, .pr-faq-title, .pr-faq-item, .cta-headline, .cta-subtext');
+const revealEls = document.querySelectorAll('.pr2-plans-tag, .pr2-plans-title, .pr2-plan, .pr2-offer-title, .pr2-offer-text, .pr2-compare-tag, .pr2-compare-title, .pr2-compare-row, .pr2-faq-tag, .pr2-faq-title, .pr2-faq-item, .cta-headline, .cta-subtext');
 
 revealEls.forEach(el => {
     gsap.from(el, {
@@ -172,57 +171,30 @@ revealEls.forEach(el => {
 });
 
 // ============================================
-// CALCULATOR INTERACTION
-// ============================================
-const calcOpts = document.querySelectorAll('.pr-calc-opt');
-const calcSlider = document.querySelector('.pr-calc-slider');
-const calcAmount = document.querySelector('.pr-calc-amount');
-
-let basePrice = 1199;
-let complexityMultiplier = 1;
-
-if (calcOpts.length > 0 && calcAmount) {
-    calcOpts.forEach(opt => {
-        opt.addEventListener('click', () => {
-            calcOpts.forEach(o => o.classList.remove('pr-calc-opt--active'));
-            opt.classList.add('pr-calc-opt--active');
-            basePrice = parseInt(opt.getAttribute('base'));
-            updatePrice();
-        });
-    });
-}
-
-if (calcSlider) {
-    calcSlider.addEventListener('input', () => {
-        const val = parseInt(calcSlider.value);
-        complexityMultiplier = val === 1 ? 0.75 : val === 2 ? 1 : 1.5;
-        updatePrice();
-    });
-}
-
-function updatePrice() {
-    if (!calcAmount) return;
-    const finalPrice = Math.round(basePrice * complexityMultiplier);
-    gsap.fromTo(calcAmount, 
-        { y: -10, opacity: 0.5 },
-        { y: 0, opacity: 1, duration: 0.3, ease: 'power2.out', onStart: () => {
-            calcAmount.textContent = finalPrice.toLocaleString();
-        }}
-    );
-}
-
-// ============================================
 // FAQ ACCORDION
 // ============================================
 const faqItems = document.querySelectorAll('[data-faq]');
 faqItems.forEach(item => {
-    const card = item.querySelector('.pr-faq-card');
+    const card = item.querySelector('.pr2-faq-top');
     card.addEventListener('click', () => {
-        const isOpen = item.classList.contains('pr-faq-item--open');
-        faqItems.forEach(i => i.classList.remove('pr-faq-item--open'));
+        const isOpen = item.classList.contains('pr2-faq-item--open');
+        faqItems.forEach(i => i.classList.remove('pr2-faq-item--open'));
         if (!isOpen) {
-            item.classList.add('pr-faq-item--open');
+            item.classList.add('pr2-faq-item--open');
         }
+    });
+});
+
+// ============================================
+// PLAN CARD HOVER
+// ============================================
+const planCards = document.querySelectorAll('.pr2-plan');
+planCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, { y: -8, duration: 0.4, ease: 'power2.out' });
+    });
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, { y: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
     });
 });
 
