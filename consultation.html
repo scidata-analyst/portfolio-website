@@ -25,25 +25,42 @@
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
-            <div class="loader-text">CONSULT</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
+            <div class="loader-brand">CONSULT</div>
+            <div class="loader-percentage"><span class="loader-num">0</span>%</div>
+            <div class="loader-track">
+                <div class="loader-fill"></div>
             </div>
+            <div class="loader-tagline">Preparing Your Session</div>
         </div>
     </div>
+    <!-- LOADER END -->
 
     <!-- CUSTOM CURSOR -->
-    <div class="cursor" data-cursor></div>
-    <div class="cursor-follower" data-cursor-follower></div>
+    <div class="cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-label"></div>
+    </div>
+    <!-- CUSTOM CURSOR END -->
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <!-- SCROLL PROGRESS END -->
 
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="nav-logo">
-            <a href="/"><img src="img/logo.png" alt="Scidata Analyst"></a>
+            <a href="/" class="nav-logo-link">
+                <span class="nav-logo-icon">S</span>
+                <span class="nav-logo-text">SCIDATA</span>
+            </a>
         </div>
         <div class="nav-menu-trigger" data-menu-trigger>
-            <span class="menu-text">Menu</span>
-            <div class="menu-icon">
+            <span class="menu-label">Menu</span>
+            <div class="menu-burger">
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -51,312 +68,419 @@
     </nav>
 
     <div class="nav-overlay" data-nav-overlay>
-        <div class="nav-overlay-inner">
+        <div class="nav-overlay-bg"></div>
+        <div class="nav-overlay-content">
             <div class="nav-overlay-links">
-                <a href="/" class="nav-link-magnetic" data-magnetic>Home</a>
-                <a href="work.html" class="nav-link-magnetic" data-magnetic>Work</a>
-                <a href="about.html" class="nav-link-magnetic" data-magnetic>About</a>
-                <a href="team.html" class="nav-link-magnetic" data-magnetic>Team</a>
-                <a href="consultation.html" class="nav-link-magnetic" data-magnetic>Consultation</a>
-                <a href="price_offer.html" class="nav-link-magnetic" data-magnetic>Pricing</a>
-                <a href="contact.html" class="nav-link-magnetic" data-magnetic>Contact</a>
+                <a href="/" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">01</span>
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="work.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">02</span>
+                    <span class="nav-link-text">Work</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="about.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">03</span>
+                    <span class="nav-link-text">About</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="team.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">04</span>
+                    <span class="nav-link-text">Team</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="consultation.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">05</span>
+                    <span class="nav-link-text">Consultation</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="price_offer.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">06</span>
+                    <span class="nav-link-text">Pricing</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="contact.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">07</span>
+                    <span class="nav-link-text">Contact</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
             </div>
-            <div class="nav-overlay-info">
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Email</span>
-                    <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+            <div class="nav-overlay-footer">
+                <div class="nav-overlay-info">
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Email</span>
+                        <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Phone</span>
+                        <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Address</span>
+                        <span>2001 Victoria Court, NY</span>
+                    </div>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Phone</span>
-                    <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                <div class="nav-overlay-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Address</span>
-                    <span>2001 Victoria Court, NY</span>
-                </div>
-            </div>
-            <div class="nav-overlay-social">
-                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
-                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
-                <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
-                <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
             </div>
         </div>
     </div>
+    <!-- NAVIGATION END -->
 
-    <!-- CONSULTATION HERO - IMMERSIVE FULLSCREEN -->
-    <section class="consult-hero">
-        <div class="consult-hero-bg">
-            <div class="consult-blob consult-blob--1"></div>
-            <div class="consult-blob consult-blob--2"></div>
-            <div class="consult-blob consult-blob--3"></div>
-        </div>
-        <div class="consult-hero-content">
-            <div class="consult-hero-label reveal-text">Free Strategy Session</div>
-            <h1 class="consult-hero-title">
-                <span class="consult-title-word reveal-text">Let's</span>
-                <span class="consult-title-word consult-title-word--outline reveal-text">talk</span>
-                <span class="consult-title-word reveal-text">about</span>
-                <span class="consult-title-word reveal-text">your</span>
-                <span class="consult-title-word consult-title-word--accent reveal-text">vision</span>
-            </h1>
-            <p class="consult-hero-sub reveal-text">
-                No pitches. No jargon. Just a real conversation about your goals, challenges, and how technology can solve them. 30 minutes that could change everything.
-            </p>
-            <div class="hero-cta-row reveal-text">
-                <a href="#book" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                    <span class="btn-text">Book Free Call</span>
-                    <span class="btn-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M13 6l6 6-6 6"/>
-                        </svg>
-                    </span>
-                </a>
-                <span class="hero-cta-note">No commitment required</span>
+    <!-- CONSULTATION - CHAT HERO (unique chat interface hero) -->
+    <section class="cn-hero">
+        <div class="cn-hero-inner">
+            <div class="cn-chat-window">
+                <div class="cn-chat-header">
+                    <div class="cn-chat-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="cn-chat-title">Free Strategy Session</span>
+                    <span class="cn-chat-status">● Online</span>
+                </div>
+                <div class="cn-chat-messages">
+                    <div class="cn-message cn-message--them">
+                        <div class="cn-message-avatar">SC</div>
+                        <div class="cn-message-bubble">
+                            <p>Hey! Want to talk about your next big idea? 🚀</p>
+                        </div>
+                    </div>
+                    <div class="cn-message cn-message--them">
+                        <div class="cn-message-avatar">SC</div>
+                        <div class="cn-message-bubble">
+                            <p>We offer a <strong>free 30-min strategy call</strong> — no pitches, no jargon. Just real talk about your goals.</p>
+                        </div>
+                    </div>
+                    <div class="cn-message cn-message--you">
+                        <div class="cn-message-bubble">
+                            <p>What do I need to prepare?</p>
+                        </div>
+                    </div>
+                    <div class="cn-message cn-message--them">
+                        <div class="cn-message-avatar">SC</div>
+                        <div class="cn-message-bubble">
+                            <p>Just bring your ideas! We'll handle the tech mapping, roadmap, and budget planning. ✨</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cn-chat-input">
+                    <span class="cn-chat-placeholder">Book your free call below...</span>
+                    <a href="#book" class="cn-chat-send" data-magnetic>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="cn-hero-side">
+                <span class="cn-hero-tag"><span class="cn-tag-dot"></span> Free Strategy Session</span>
+                <h1 class="cn-hero-headline">Let's talk<br>about your<br><span class="cn-headline-accent">vision.</span></h1>
+                <p class="cn-hero-text">No pitches. No jargon. Just a real conversation about your goals, challenges, and how technology can solve them.</p>
             </div>
         </div>
-        <div class="consult-hero-scroll">
-            <div class="scroll-bar"><div class="scroll-bar-fill"></div></div>
-            <span class="scroll-label">Scroll to book</span>
+        <div class="cn-hero-scroll" aria-hidden="true">
+            <div class="cn-scroll-track">
+                <div class="cn-scroll-fill"></div>
+            </div>
+            <span>Scroll to book</span>
         </div>
     </section>
 
-    <!-- WHAT TO EXPECT - BENTO BOXES -->
-    <section class="consult-expect">
-        <div class="expect-header">
-            <span class="expect-eyebrow reveal-text">What Happens</span>
-            <h2 class="expect-title reveal-text">In Your <em>Session</em></h2>
+    <!-- BENEFITS - JOURNEY PATH (unique winding path layout) -->
+    <section class="cn-benefits">
+        <div class="cn-benefits-header">
+            <span class="cn-benefits-tag"><span class="cn-tag-dot"></span> What Happens</span>
+            <h2 class="cn-benefits-title">In Your <em>Session</em></h2>
         </div>
-        <div class="expect-grid">
-            <div class="expect-card expect-card--1" data-tilt>
-                <div class="expect-card-bg"></div>
-                <div class="expect-card-content">
-                    <span class="expect-step">I.</span>
-                    <h3 class="expect-name">Deep Dive</h3>
-                    <p class="expect-text">We unpack your business goals, audience, and the problem you're trying to solve. Every detail matters.</p>
-                </div>
+        <div class="cn-journey">
+            <div class="cn-journey-path" aria-hidden="true">
+                <svg viewBox="0 0 400 800" preserveAspectRatio="none">
+                    <path d="M200,0 Q300,100 200,200 Q100,300 200,400 Q300,500 200,600 Q100,700 200,800" fill="none" stroke="rgba(11,189,41,0.15)" stroke-width="2" stroke-dasharray="8 8"/>
+                </svg>
             </div>
-            <div class="expect-card expect-card--2" data-tilt>
-                <div class="expect-card-bg"></div>
-                <div class="expect-card-content">
-                    <span class="expect-step">II.</span>
-                    <h3 class="expect-name">Tech Mapping</h3>
-                    <p class="expect-text">We identify the right tech stack, architecture, and approach tailored to your specific needs and budget.</p>
+            <div class="cn-journey-steps">
+                <div class="cn-journey-step cn-journey-step--1" data-step>
+                    <div class="cn-step-marker">
+                        <span class="cn-step-num">I</span>
+                    </div>
+                    <div class="cn-step-card">
+                        <h3 class="cn-step-name">Deep Dive</h3>
+                        <p class="cn-step-text">We unpack your business goals, audience, and the problem you're trying to solve. Every detail matters — the more we understand, the better we can help.</p>
+                        <div class="cn-step-meta">
+                            <span class="cn-step-time">~10 min</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="expect-card expect-card--3 expect-card--wide" data-tilt>
-                <div class="expect-card-bg"></div>
-                <div class="expect-card-content">
-                    <span class="expect-step">III.</span>
-                    <h3 class="expect-name">Roadmap</h3>
-                    <p class="expect-text">Walk away with a clear action plan: timelines, milestones, deliverables, and a realistic budget range. No surprises later.</p>
+                <div class="cn-journey-step cn-journey-step--2" data-step>
+                    <div class="cn-step-marker">
+                        <span class="cn-step-num">II</span>
+                    </div>
+                    <div class="cn-step-card">
+                        <h3 class="cn-step-name">Tech Mapping</h3>
+                        <p class="cn-step-text">We identify the right tech stack, architecture, and approach tailored to your specific needs, timeline, and budget constraints.</p>
+                        <div class="cn-step-meta">
+                            <span class="cn-step-time">~10 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cn-journey-step cn-journey-step--3" data-step>
+                    <div class="cn-step-marker">
+                        <span class="cn-step-num">III</span>
+                    </div>
+                    <div class="cn-step-card">
+                        <h3 class="cn-step-name">Roadmap</h3>
+                        <p class="cn-step-text">Walk away with a clear action plan: timelines, milestones, deliverables, and a realistic budget range. No surprises later.</p>
+                        <div class="cn-step-meta">
+                            <span class="cn-step-time">~10 min</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONSULTATION FORM - EDITORIAL LAYOUT -->
-    <section class="consult-form-section" id="book">
-        <div class="consult-form-grid">
-            <div class="consult-form-left">
-                <span class="form-eyebrow reveal-text">Book Now</span>
-                <h2 class="form-title reveal-text">Tell us <em>everything</em></h2>
-                <p class="form-intro reveal-text">
-                    Fill in the details and we'll get back to you within 24 hours to schedule your free consultation. The more you share, the better we can prepare.
-                </p>
-                <div class="form-features">
-                    <div class="form-feature reveal-text">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+    <!-- WHAT YOU GET - SERVICE BENEFITS (unique benefit pillars) -->
+    <section class="cn-service">
+        <div class="cn-service-header">
+            <span class="cn-service-tag"><span class="cn-tag-dot"></span> What You Get</span>
+            <h2 class="cn-service-title">Consultation Benefits</h2>
+        </div>
+        <div class="cn-service-grid">
+            <div class="cn-service-pillar" data-pillar>
+                <div class="cn-service-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                </div>
+                <h3 class="cn-service-pillar-name">Expert Guidance</h3>
+                <p class="cn-service-pillar-text">Speak directly with senior developers and strategists who have 5+ years of experience building products across AdTech, Telco, Hotel, and Travel industries.</p>
+            </div>
+            <div class="cn-service-pillar" data-pillar>
+                <div class="cn-service-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3 class="cn-service-pillar-name">Tech Stack Advice</h3>
+                <p class="cn-service-pillar-text">Get unbiased recommendations on the best technologies for your specific needs — not what's trendy, but what actually works for your use case and budget.</p>
+            </div>
+            <div class="cn-service-pillar" data-pillar>
+                <div class="cn-service-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+                </div>
+                <h3 class="cn-service-pillar-name">Budget Planning</h3>
+                <p class="cn-service-pillar-text">Walk away with a realistic cost breakdown and timeline estimate. No hidden fees, no surprises — just transparent pricing you can plan around.</p>
+            </div>
+            <div class="cn-service-pillar" data-pillar>
+                <div class="cn-service-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                </div>
+                <h3 class="cn-service-pillar-name">Actionable Roadmap</h3>
+                <p class="cn-service-pillar-text">Receive a clear, step-by-step plan with milestones, deliverables, and priorities. You'll know exactly what to do next — with or without us.</p>
+            </div>
+            <div class="cn-service-pillar" data-pillar>
+                <div class="cn-service-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                </div>
+                <h3 class="cn-service-pillar-name">Risk Assessment</h3>
+                <p class="cn-service-pillar-text">We identify potential pitfalls, technical debt risks, and scalability challenges before you invest a single dollar in development.</p>
+            </div>
+            <div class="cn-service-pillar" data-pillar>
+                <div class="cn-service-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3 class="cn-service-pillar-name">Team Insights</h3>
+                <p class="cn-service-pillar-text">Learn what team structure, skills, and partnerships you'll need to bring your product to life — whether in-house or outsourced.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM - CARD STACK (unique stacked card form) -->
+    <section class="cn-form-section" id="book">
+        <div class="cn-form-header">
+            <span class="cn-form-tag"><span class="cn-tag-dot"></span> Book Now</span>
+            <h2 class="cn-form-title">Tell us <em>everything</em></h2>
+            <p class="cn-form-intro">Fill in the details and we'll get back to you within 24 hours to schedule your free consultation.</p>
+        </div>
+        <div class="cn-form-cards">
+            <div class="cn-form-card cn-form-card--1" data-formcard>
+                <div class="cn-form-card-head">
+                    <span class="cn-form-card-num">01</span>
+                    <h3 class="cn-form-card-title">Who You Are</h3>
+                </div>
+                <div class="cn-form-card-body">
+                    <div class="cn-form-row">
+                        <div class="cn-form-group">
+                            <label class="cn-form-label">Your Name</label>
+                            <input type="text" class="cn-form-input" placeholder="John Doe" required>
                         </div>
-                        <div class="feature-text">
-                            <span class="feature-name">Free of Charge</span>
-                            <span class="feature-desc">No hidden fees, ever</span>
+                        <div class="cn-form-group">
+                            <label class="cn-form-label">Email</label>
+                            <input type="email" class="cn-form-input" placeholder="john@company.com" required>
                         </div>
                     </div>
-                    <div class="form-feature reveal-text">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    <div class="cn-form-row">
+                        <div class="cn-form-group">
+                            <label class="cn-form-label">Company</label>
+                            <input type="text" class="cn-form-input" placeholder="Acme Inc.">
                         </div>
-                        <div class="feature-text">
-                            <span class="feature-name">30 Min Session</span>
-                            <span class="feature-desc">Focused and productive</span>
-                        </div>
-                    </div>
-                    <div class="form-feature reveal-text">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-                        </div>
-                        <div class="feature-text">
-                            <span class="feature-name">Response in 24h</span>
-                            <span class="feature-desc">We respect your time</span>
+                        <div class="cn-form-group">
+                            <label class="cn-form-label">Phone</label>
+                            <input type="tel" class="cn-form-input" placeholder="+1 (555) 000-0000">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="consult-form-right">
-                <form class="consult-form" onsubmit="event.preventDefault();">
-                    <div class="form-row form-row--half">
-                        <div class="form-group">
-                            <label class="form-label">Your Name</label>
-                            <input type="text" class="form-input" placeholder="John Doe" required>
+            <div class="cn-form-card cn-form-card--2" data-formcard>
+                <div class="cn-form-card-head">
+                    <span class="cn-form-card-num">02</span>
+                    <h3 class="cn-form-card-title">Project Details</h3>
+                </div>
+                <div class="cn-form-card-body">
+                    <div class="cn-form-row">
+                        <div class="cn-form-group">
+                            <label class="cn-form-label">What do you need?</label>
+                            <select class="cn-form-select">
+                                <option value="" disabled selected>Select a service</option>
+                                <option>Website Design & Development</option>
+                                <option>Custom Software / Web App</option>
+                                <option>E-Commerce Platform</option>
+                                <option>AI / Automation Solution</option>
+                                <option>Mobile App</option>
+                                <option>Something Else</option>
+                            </select>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-input" placeholder="john@company.com" required>
+                        <div class="cn-form-group">
+                            <label class="cn-form-label">Project Budget</label>
+                            <select class="cn-form-select">
+                                <option value="" disabled selected>Approximate range</option>
+                                <option>$1,000 - $5,000</option>
+                                <option>$5,000 - $15,000</option>
+                                <option>$15,000 - $50,000</option>
+                                <option>$50,000+</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="form-row form-row--half">
-                        <div class="form-group">
-                            <label class="form-label">Company</label>
-                            <input type="text" class="form-input" placeholder="Acme Inc.">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Phone</label>
-                            <input type="tel" class="form-input" placeholder="+1 (555) 000-0000">
-                        </div>
+                    <div class="cn-form-group">
+                        <label class="cn-form-label">Project Details</label>
+                        <textarea class="cn-form-textarea" rows="4" placeholder="Tell us about your project, goals, timeline, and any inspirations..."></textarea>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">What do you need?</label>
-                            <div class="form-select-wrap">
-                                <select class="form-select">
-                                    <option value="" disabled selected>Select a service</option>
-                                    <option>Website Design & Development</option>
-                                    <option>Custom Software / Web App</option>
-                                    <option>E-Commerce Platform</option>
-                                    <option>AI / Automation Solution</option>
-                                    <option>Mobile App</option>
-                                    <option>Something Else</option>
-                                </select>
+                </div>
+            </div>
+            <div class="cn-form-card cn-form-card--3" data-formcard>
+                <div class="cn-form-card-head">
+                    <span class="cn-form-card-num">03</span>
+                    <h3 class="cn-form-card-title">Why Choose Us</h3>
+                </div>
+                <div class="cn-form-card-body">
+                    <div class="cn-form-benefits">
+                        <div class="cn-form-benefit">
+                            <span class="cn-form-benefit-icon">✓</span>
+                            <div class="cn-form-benefit-text">
+                                <span class="cn-form-benefit-name">Free of Charge</span>
+                                <span class="cn-form-benefit-desc">No hidden fees, ever</span>
+                            </div>
+                        </div>
+                        <div class="cn-form-benefit">
+                            <span class="cn-form-benefit-icon">✓</span>
+                            <div class="cn-form-benefit-text">
+                                <span class="cn-form-benefit-name">30 Min Session</span>
+                                <span class="cn-form-benefit-desc">Focused and productive</span>
+                            </div>
+                        </div>
+                        <div class="cn-form-benefit">
+                            <span class="cn-form-benefit-icon">✓</span>
+                            <div class="cn-form-benefit-text">
+                                <span class="cn-form-benefit-name">Response in 24h</span>
+                                <span class="cn-form-benefit-desc">We respect your time</span>
                             </div>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">Project Budget</label>
-                            <div class="form-select-wrap">
-                                <select class="form-select">
-                                    <option value="" disabled selected>Approximate range</option>
-                                    <option>$1,000 - $5,000</option>
-                                    <option>$5,000 - $15,000</option>
-                                    <option>$15,000 - $50,000</option>
-                                    <option>$50,000+</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">Project Details</label>
-                            <textarea class="form-textarea" rows="4" placeholder="Tell us about your project, goals, timeline, and any inspirations..."></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-magnetic btn-magnetic--large form-submit" data-magnetic>
-                        <span class="btn-text">Send & Book Call</span>
-                        <span class="btn-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6"/>
-                            </svg>
+                    <button type="submit" class="btn-magnetic btn-primary cn-form-submit" data-magnetic>
+                        <span class="btn-label">Send & Book Call</span>
+                        <span class="btn-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                         </span>
                     </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ - EXPANDING PANELS -->
-    <section class="consult-faq">
-        <div class="faq-header">
-            <span class="faq-eyebrow reveal-text">Questions</span>
-            <h2 class="faq-title reveal-text">Got <em>Doubts?</em></h2>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span class="faq-num">01</span>
-                    <h3 class="faq-q">Is the consultation really free?</h3>
-                    <div class="faq-toggle"><span></span><span></span></div>
-                </div>
-                <div class="faq-answer">
-                    <p>100% free. No credit card, no obligation. We genuinely enjoy talking about technology and helping people think through their projects — even if we're not the right fit.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span class="faq-num">02</span>
-                    <h3 class="faq-q">Who will I be speaking with?</h3>
-                    <div class="faq-toggle"><span></span><span></span></div>
-                </div>
-                <div class="faq-answer">
-                    <p>You'll speak directly with our senior team — either our founder or a lead strategist. No salespeople, no account managers. Just people who build things every day.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span class="faq-num">03</span>
-                    <h3 class="faq-q">What should I prepare?</h3>
-                    <div class="faq-toggle"><span></span><span></span></div>
-                </div>
-                <div class="faq-answer">
-                    <p>Just come with your ideas and questions. If you have any reference sites, sketches, or documents, bring those too — but they're not required. We'll guide the conversation.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span class="faq-num">04</span>
-                    <h3 class="faq-q">How is this different from just emailing you?</h3>
-                    <div class="faq-toggle"><span></span><span></span></div>
-                </div>
-                <div class="faq-answer">
-                    <p>A live conversation lets us ask the right questions, explore tangents, and get to the heart of your challenge in minutes — something that takes days over email. Plus, you'll see our faces and know who you're working with.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA SECTION -->
-    <section class="cta-section">
+    <!-- FAQ - MASONRY WALL (unique masonry layout) -->
+    <section class="cn-faq">
+        <div class="cn-faq-header">
+            <span class="cn-faq-tag"><span class="cn-tag-dot"></span> Questions</span>
+            <h2 class="cn-faq-title">Got <em>Doubts?</em></h2>
+        </div>
+        <div class="cn-faq-masonry">
+            <div class="cn-faq-item cn-faq-item--1" data-faq>
+                <div class="cn-faq-card">
+                    <span class="cn-faq-num">01</span>
+                    <h3 class="cn-faq-q">Is the consultation really free?</h3>
+                    <div class="cn-faq-toggle"><span></span></div>
+                    <div class="cn-faq-a">
+                        <p>100% free. No credit card, no obligation. We genuinely enjoy talking about technology and helping people think through their projects — even if we're not the right fit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cn-faq-item cn-faq-item--2" data-faq>
+                <div class="cn-faq-card">
+                    <span class="cn-faq-num">02</span>
+                    <h3 class="cn-faq-q">Who will I be speaking with?</h3>
+                    <div class="cn-faq-toggle"><span></span></div>
+                    <div class="cn-faq-a">
+                        <p>You'll speak directly with our senior team — either our founder or a lead strategist. No salespeople, no account managers. Just people who build things every day.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cn-faq-item cn-faq-item--3" data-faq>
+                <div class="cn-faq-card">
+                    <span class="cn-faq-num">03</span>
+                    <h3 class="cn-faq-q">What should I prepare?</h3>
+                    <div class="cn-faq-toggle"><span></span></div>
+                    <div class="cn-faq-a">
+                        <p>Just come with your ideas and questions. If you have any reference sites, sketches, or documents, bring those too — but they're not required. We'll guide the conversation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cn-faq-item cn-faq-item--4" data-faq>
+                <div class="cn-faq-card">
+                    <span class="cn-faq-num">04</span>
+                    <h3 class="cn-faq-q">How is this different from just emailing you?</h3>
+                    <div class="cn-faq-toggle"><span></span></div>
+                    <div class="cn-faq-a">
+                        <p>A live conversation lets us ask the right questions, explore tangents, and get to the heart of your challenge in minutes — something that takes days over email. Plus, you'll see our faces and know who you're working with.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" data-section>
         <div class="cta-bg-text" aria-hidden="true">TALK</div>
-        <div class="cta-content">
-            <h2 class="cta-title reveal-text">
+        <div class="cta-inner">
+            <h2 class="cta-headline">
                 Ready to build<br>
-                <span class="cta-title-accent">something great?</span>
+                <span class="cta-accent">something great?</span>
             </h2>
-            <p class="cta-description reveal-text">
-                Let's discuss your project and explore how we can help you achieve your goals.
-            </p>
-            <a href="contact.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                <span class="btn-text">Get in Touch</span>
-                <span class="btn-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
+            <p class="cta-subtext">Let's discuss your project and explore how we can help you achieve your goals.</p>
+            <a href="contact.html" class="btn-magnetic btn-cta-large" data-magnetic>
+                <span class="btn-label">Get in Touch</span>
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </span>
             </a>
         </div>
         <div class="cta-deco">
-            <div class="deco-circle deco-circle--large"></div>
+            <div class="deco-ring deco-ring--1"></div>
+            <div class="deco-ring deco-ring--2"></div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-blob"></div>
-        <div class="footer-cta">
-            <div class="footer-cta-inner">
-                <span class="footer-cta-eyebrow">Got a project in mind?</span>
-                <a href="contact.html" class="footer-cta-title">
-                    <span>Let's build</span>
-                    <span class="footer-cta-accent">something great</span>
-                </a>
-            </div>
-            <a href="contact.html" class="footer-cta-circle" aria-label="Start a project">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-            </a>
-        </div>
         <div class="footer-marquee" aria-hidden="true">
             <div class="footer-marquee-track">
                 <span>Web Development</span><span class="dot">✦</span>
@@ -375,24 +499,32 @@
                 <span>Cloud &amp; Hosting</span><span class="dot">✦</span>
             </div>
         </div>
-        <div class="footer-main">
+        <div class="footer-cta">
+            <div class="footer-cta-text">
+                <span class="footer-cta-label">Got a project in mind?</span>
+                <a href="contact.html" class="footer-cta-title">
+                    <span>Let's build</span>
+                    <span class="footer-cta-accent">something great</span>
+                </a>
+            </div>
+            <a href="contact.html" class="footer-cta-btn" aria-label="Start a project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+        </div>
+        <div class="footer-body">
             <div class="footer-col footer-brand">
-                <div class="footer-brand-inner">
-                    <a href="/" class="footer-logo-link">
-                        <img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo">
-                    </a>
-                    <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
-                </div>
+                <a href="/" class="footer-logo-link"><img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo"></a>
+                <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-title">Stay in the loop</label>
-                    <div class="footer-newsletter-form">
+                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <div class="footer-newsletter-row">
                         <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
-                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                     </div>
                 </form>
             </div>
             <div class="footer-col footer-links">
-                <h3 class="footer-heading">Explore</h3>
+                <h3 class="footer-col-title">Explore</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="work.html">Work</a></li>
@@ -404,7 +536,7 @@
                 </ul>
             </div>
             <div class="footer-col footer-services">
-                <h3 class="footer-heading">Services</h3>
+                <h3 class="footer-col-title">Services</h3>
                 <ul>
                     <li><a href="contact.html">Web Development</a></li>
                     <li><a href="contact.html">Software Development</a></li>
@@ -412,30 +544,27 @@
                     <li><a href="contact.html">DevOps &amp; Support</a></li>
                 </ul>
             </div>
-            <div class="footer-col footer-contact">
-                <h3 class="footer-heading">Connect</h3>
+            <div class="footer-col footer-connect">
+                <h3 class="footer-col-title">Connect</h3>
                 <ul class="footer-contact-list">
-                    <li><a href="tel:+0000000000000"><i class="fa-solid fa-phone"></i> <span>(+00) 000 00 0000 00</span></a></li>
-                    <li><a href="mailto:info@scidata-analyst.com"><i class="fa-solid fa-envelope"></i> <span>info@scidata-analyst.com</span></a></li>
-                    <li class="footer-address"><i class="fa-solid fa-location-dot"></i> <span>2001 Victoria Court, NY</span></li>
+                    <li><a href="tel:+0000000000000"><span class="contact-icon">📞</span><span>(+00) 000 00 0000 00</span></a></li>
+                    <li><a href="mailto:info@scidata-analyst.com"><span class="contact-icon">✉</span><span>info@scidata-analyst.com</span></a></li>
+                    <li class="footer-address"><span class="contact-icon">📍</span><span>2001 Victoria Court, NY</span></li>
                 </ul>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
-                    <a href="https://join.skype.com/invite/YYXzSmJkfjpD" target="_blank" aria-label="Skype"><i class="fa-brands fa-skype"></i></a>
-                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook">FB</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn">LI</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter">TW</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp">WA</a>
                 </div>
             </div>
         </div>
-        <div class="footer-divider"></div>
         <div class="footer-bottom">
-            <div class="footer-bottom-inner">
-                <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
-                <button class="footer-totop" type="button" aria-label="Back to top">
-                    <i class="fa-solid fa-arrow-up"></i> Back to top
-                </button>
-            </div>
+            <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
+            <button class="footer-totop" type="button" aria-label="Back to top">
+                <span>Back to top</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </button>
         </div>
     </footer>
 

@@ -16551,3 +16551,970 @@ body.about-page,
         padding: 24px 24px 32px;
     }
 }
+
+// =============================================================================
+// CONSULTATION PAGE - COMPLETELY UNIQUE (chat hero + journey path + card stack + masonry FAQ)
+// =============================================================================
+
+// ---------- CHAT HERO (conversation interface) ----------
+.cn-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--dark);
+    padding: 120px 60px 60px;
+    overflow: hidden;
+
+    .cn-hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+.cn-chat-window {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 420px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.cn-chat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cn-chat-dots {
+    display: flex;
+    gap: 6px;
+
+    span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+
+        &:nth-child(1) {
+            background: #ff5f57;
+        }
+
+        &:nth-child(2) {
+            background: #ffbd2e;
+        }
+
+        &:nth-child(3) {
+            background: #28c840;
+        }
+    }
+}
+
+.cn-chat-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    flex: 1;
+}
+
+.cn-chat-status {
+    font-size: 0.65rem;
+    color: var(--accent);
+}
+
+.cn-chat-messages {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 280px;
+}
+
+.cn-message {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+
+    &--them {
+        justify-content: flex-start;
+    }
+
+    &--you {
+        justify-content: flex-end;
+    }
+
+    .cn-message-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.6rem;
+        font-weight: 900;
+        color: var(--dark);
+        flex-shrink: 0;
+    }
+
+    .cn-message-bubble {
+        max-width: 80%;
+        padding: 12px 16px;
+        border-radius: 16px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &--them .cn-message-bubble {
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(255, 255, 255, 0.7);
+        border-bottom-left-radius: 4px;
+    }
+
+    &--you .cn-message-bubble {
+        background: var(--accent);
+        color: var(--dark);
+        border-bottom-right-radius: 4px;
+    }
+}
+
+.cn-chat-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cn-chat-placeholder {
+    flex: 1;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.cn-chat-send {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
+
+    svg {
+        width: 16px;
+        height: 16px;
+        color: var(--dark);
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(11, 189, 41, 0.4);
+    }
+}
+
+.cn-hero-side {
+    .cn-hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 24px;
+
+        .cn-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+    }
+
+    .cn-hero-headline {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        line-height: 1;
+        margin: 0 0 20px;
+        letter-spacing: -0.02em;
+
+        .cn-headline-accent {
+            color: var(--accent);
+        }
+    }
+
+    .cn-hero-text {
+        font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0;
+        max-width: 400px;
+    }
+}
+
+.cn-hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .cn-scroll-track {
+        width: 80px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .cn-scroll-fill {
+        height: 100%;
+        width: 0%;
+        background: var(--accent);
+        border-radius: 2px;
+    }
+
+    span {
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+// ---------- JOURNEY PATH (winding path benefits) ----------
+.cn-benefits {
+    padding: var(--section-padding) 60px;
+    background: var(--wheat);
+
+    .cn-benefits-header {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .cn-benefits-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 16px;
+
+        .cn-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+
+    .cn-benefits-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        margin: 0;
+
+        em {
+            -webkit-text-stroke: 2px var(--dark);
+            -webkit-text-fill-color: transparent;
+            font-style: normal;
+        }
+    }
+}
+
+.cn-journey {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cn-journey-path {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.cn-journey-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.cn-journey-step {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    align-items: center;
+    gap: 0;
+
+    &--1,
+    &--3 {
+        .cn-step-card {
+            grid-column: 3;
+        }
+
+        .cn-step-marker {
+            grid-column: 2;
+            grid-row: 1;
+        }
+    }
+
+    &--2 {
+        .cn-step-card {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .cn-step-marker {
+            grid-column: 2;
+            grid-row: 1;
+        }
+    }
+}
+
+.cn-step-marker {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--wheat);
+    position: relative;
+    z-index: 2;
+
+    .cn-step-num {
+        font-size: 1rem;
+        font-weight: 900;
+        color: var(--accent);
+    }
+}
+
+.cn-step-card {
+    background: var(--light);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    transition: all var(--transition-smooth);
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .cn-step-name {
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        margin: 0 0 12px;
+    }
+
+    .cn-step-text {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: rgba(10, 10, 10, 0.5);
+        margin: 0 0 16px;
+    }
+
+    .cn-step-meta {
+        display: flex;
+        gap: 12px;
+    }
+
+    .cn-step-time {
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent);
+        background: rgba(11, 189, 41, 0.08);
+        padding: 4px 12px;
+        border-radius: 12px;
+    }
+}
+
+// ---------- CARD STACK FORM (stacked card form) ----------
+.cn-form-section {
+    padding: var(--section-padding) 60px;
+    background: var(--dark);
+
+    .cn-form-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .cn-form-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 16px;
+
+        .cn-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+
+    .cn-form-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        margin: 0 0 16px;
+
+        em {
+            color: var(--accent);
+            font-style: normal;
+        }
+    }
+
+    .cn-form-intro {
+        font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0 auto;
+        max-width: 500px;
+    }
+}
+
+.cn-form-cards {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cn-form-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all var(--transition-smooth);
+
+    &:hover {
+        border-color: rgba(11, 189, 41, 0.2);
+    }
+}
+
+.cn-form-card-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cn-form-card-num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(11, 189, 41, 0.1);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cn-form-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--light);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.cn-form-card-body {
+    padding: 28px 32px 32px;
+}
+
+.cn-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cn-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cn-form-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.cn-form-input,
+.cn-form-select,
+.cn-form-textarea {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: var(--light);
+    font-size: 0.9rem;
+    outline: none;
+    transition: all var(--transition-fast);
+    width: 100%;
+    font-family: inherit;
+
+    &:focus {
+        border-color: var(--accent);
+        background: rgba(11, 189, 41, 0.05);
+    }
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.cn-form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.cn-form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.cn-form-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.cn-form-benefit {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cn-form-benefit-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(11, 189, 41, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.cn-form-benefit-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cn-form-benefit-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--light);
+}
+
+.cn-form-benefit-desc {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.cn-form-submit {
+    width: 100%;
+    justify-content: center;
+}
+
+// ---------- MASONRY FAQ (masonry wall layout) ----------
+.cn-faq {
+    padding: var(--section-padding) 60px;
+    background: var(--wheat);
+
+    .cn-faq-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .cn-faq-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 16px;
+
+        .cn-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+
+    .cn-faq-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        margin: 0;
+
+        em {
+            -webkit-text-stroke: 2px var(--dark);
+            -webkit-text-fill-color: transparent;
+            font-style: normal;
+        }
+    }
+}
+
+.cn-faq-masonry {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cn-faq-item {
+    &:nth-child(2) {
+        transform: translateY(40px);
+    }
+
+    &:nth-child(3) {
+        transform: translateY(-20px);
+    }
+}
+
+.cn-faq-card {
+    background: var(--light);
+    border-radius: 16px;
+    padding: 28px;
+    position: relative;
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    border: 1px solid rgba(10, 10, 10, 0.04);
+
+    &:hover {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        transform: translateY(-2px);
+    }
+}
+
+.cn-faq-num {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 900;
+    line-height: 1;
+    -webkit-text-stroke: 1.5px rgba(11, 189, 41, 0.2);
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.cn-faq-q {
+    font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0 0 16px;
+    line-height: 1.3;
+}
+
+.cn-faq-toggle {
+    width: 28px;
+    height: 28px;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 2px;
+        background: var(--dark);
+        transition: all var(--transition-fast);
+
+        &:nth-child(1) {
+            transform: translate(-50%, -50%);
+        }
+
+        &:nth-child(2) {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+}
+
+.cn-faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.77, 0, 0.175, 1), margin 0.5s ease;
+
+    p {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        color: rgba(10, 10, 10, 0.5);
+        margin: 16px 0 0;
+    }
+}
+
+.cn-faq-item.cn-faq-item--open {
+    .cn-faq-a {
+        max-height: 200px;
+    }
+
+    .cn-faq-toggle span:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+// ---------- CONSULTATION RESPONSIVE ----------
+@media (max-width: 1024px) {
+    .cn-hero {
+        .cn-hero-inner {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .cn-chat-window {
+            max-width: 100%;
+        }
+    }
+
+    .cn-journey-step {
+        grid-template-columns: 60px 1fr;
+        gap: 16px;
+
+        &--1,
+        &--3 {
+            .cn-step-card {
+                grid-column: 2;
+            }
+
+            .cn-step-marker {
+                grid-column: 1;
+            }
+        }
+
+        &--2 {
+            .cn-step-card {
+                grid-column: 2;
+            }
+
+            .cn-step-marker {
+                grid-column: 1;
+            }
+        }
+    }
+
+    .cn-journey-path {
+        display: none;
+    }
+
+    .cn-faq-masonry {
+        grid-template-columns: 1fr;
+    }
+
+    .cn-faq-item:nth-child(2),
+    .cn-faq-item:nth-child(3) {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .cn-hero {
+        padding: 100px 24px 60px;
+    }
+
+    .cn-benefits,
+    .cn-form-section,
+    .cn-faq {
+        padding: 80px 24px;
+    }
+
+    .cn-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .cn-form-card-head {
+        padding: 20px 24px;
+    }
+
+    .cn-form-card-body {
+        padding: 24px;
+    }
+}
+
+// ---------- SERVICE BENEFITS (consultation service pillars) ----------
+.cn-service {
+    padding: var(--section-padding) 60px;
+    background: var(--wheat);
+
+    .cn-service-header {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .cn-service-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 16px;
+
+        .cn-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+
+    .cn-service-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        margin: 0;
+    }
+}
+
+.cn-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cn-service-pillar {
+    background: var(--light);
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    transition: all var(--transition-smooth);
+    border: 1px solid rgba(10, 10, 10, 0.04);
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+        border-color: rgba(11, 189, 41, 0.15);
+
+        .cn-service-pillar-icon {
+            background: var(--accent);
+            color: var(--dark);
+        }
+    }
+}
+
+.cn-service-pillar-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(11, 189, 41, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all var(--transition-smooth);
+
+    svg {
+        width: 24px;
+        height: 24px;
+        color: var(--accent);
+        transition: color var(--transition-fast);
+    }
+}
+
+.cn-service-pillar-name {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin: 0 0 12px;
+}
+
+.cn-service-pillar-text {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: rgba(10, 10, 10, 0.5);
+    margin: 0;
+}
+
+// ---------- SERVICE RESPONSIVE ----------
+@media (max-width: 1024px) {
+    .cn-service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cn-service {
+        padding: 80px 24px;
+    }
+
+    .cn-service-grid {
+        grid-template-columns: 1fr;
+    }
+}
