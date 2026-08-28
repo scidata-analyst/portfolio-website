@@ -16535,7 +16535,7 @@ body.about-page,
 .in-hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     min-height: 700px;
     background: var(--dark);
     overflow: hidden;
@@ -22662,7 +22662,6 @@ body.team-page {
     position: relative;
     width: 100%;
     min-height: 80vh;
-    min-height: 100svh;
     background: var(--dark);
     padding: 90px 60px 140px;
     overflow: hidden;
@@ -24213,7 +24212,6 @@ body.price-page {
     position: relative;
     width: 100%;
     min-height: 80vh;
-    min-height: 100svh;
     background: var(--dark);
     padding: 90px 60px 140px;
     overflow: hidden;
@@ -25125,7 +25123,7 @@ body.price-page {
 @media (max-width: 768px) {
     .pr2-hero {
         padding: 90px 24px 125px;
-        min-height: 100vh;
+        min-height: 70vh;
 
         .pr2-floating-tags {
             opacity: 0.4;
