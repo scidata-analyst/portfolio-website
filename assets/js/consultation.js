@@ -163,7 +163,7 @@ window.addEventListener('scroll', () => {
 // ============================================
 // SCROLL REVEAL
 // ============================================
-const revealEls = document.querySelectorAll('.cn-benefits-tag, .cn-benefits-title, .cn-journey-step, .cn-service-tag, .cn-service-title, .cn-service-pillar, .cn-form-tag, .cn-form-title, .cn-form-intro, .cn-form-card, .cn-faq-tag, .cn-faq-title, .cn-faq-item, .cta-headline, .cta-subtext');
+const revealEls = document.querySelectorAll('.cn-services-tag, .cn-services-title, .cn-service-card, .cn-benefits-tag, .cn-benefits-title, .cn-journey-step, .cn-service-tag, .cn-service-title, .cn-service-pillar, .cn-form-tag, .cn-form-title, .cn-form-intro, .cn-form-card, .cn-faq-tag, .cn-faq-title, .cn-faq-item, .cta-headline, .cta-subtext');
 
 revealEls.forEach(el => {
     gsap.from(el, {

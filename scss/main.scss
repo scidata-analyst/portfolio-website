@@ -17518,3 +17518,172 @@ body.about-page,
         grid-template-columns: 1fr;
     }
 }
+
+// ---------- CONSULTATION SERVICES (service showcase) ----------
+.cn-services {
+    padding: var(--section-padding) 60px;
+    background: var(--dark);
+
+    .cn-services-header {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .cn-services-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 16px;
+
+        .cn-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+
+    .cn-services-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        margin: 0 0 16px;
+    }
+
+    .cn-services-intro {
+        font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0 auto;
+        max-width: 500px;
+    }
+}
+
+.cn-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cn-service-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 36px 28px;
+    transition: all var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(11, 189, 41, 0.2);
+        transform: translateY(-6px);
+
+        .cn-service-card-num {
+            -webkit-text-stroke-color: rgba(11, 189, 41, 0.4);
+        }
+
+        .cn-service-card-icon {
+            background: var(--accent);
+            color: var(--dark);
+        }
+    }
+}
+
+.cn-service-card-num {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1;
+    -webkit-text-stroke: 1.5px rgba(11, 189, 41, 0.15);
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    display: block;
+    transition: all var(--transition-smooth);
+}
+
+.cn-service-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(11, 189, 41, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all var(--transition-smooth);
+
+    svg {
+        width: 22px;
+        height: 22px;
+        color: var(--accent);
+        transition: color var(--transition-fast);
+    }
+}
+
+.cn-service-card-name {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--light);
+    margin: 0 0 12px;
+}
+
+.cn-service-card-desc {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 0 20px;
+}
+
+.cn-service-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.35);
+        padding-left: 16px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+}
+
+// ---------- CONSULTATION SERVICES RESPONSIVE ----------
+@media (max-width: 1024px) {
+    .cn-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cn-services {
+        padding: 80px 24px;
+    }
+
+    .cn-services-grid {
+        grid-template-columns: 1fr;
+    }
+}
