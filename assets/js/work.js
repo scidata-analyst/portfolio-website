@@ -18,7 +18,7 @@ if (cursor && !('ontouchstart' in window)) {
     }
     animateCursor();
 
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .wk2-project-card, .wk2-timeline-node, .wk2-service-card');
+    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .ps-card, .wk2-timeline-node, .wk2-service-card');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
@@ -172,25 +172,18 @@ window.addEventListener('scroll', () => {
         }
     }
 
-    // Projects progress
-    const projectsViewport = document.querySelector('.wk2-projects-viewport');
-    const progressFill = document.querySelector('.wk2-progress-fill');
-    if (projectsViewport && progressFill) {
-        const maxScroll = projectsViewport.scrollWidth - projectsViewport.clientWidth;
-        progressFill.style.width = (maxScroll > 0 ? (projectsViewport.scrollLeft / maxScroll) * 100 : 0) + '%';
-    }
 }, { passive: true });
 
 // ============================================
 // SCROLL REVEAL
 // ============================================
-const revealEls = document.querySelectorAll('.wk2-projects-tag, .wk2-projects-title, .wk2-project-card, .wk2-process-tag, .wk2-process-title, .wk2-timeline-node, .cta-headline, .cta-subtext');
+const revealEls = document.querySelectorAll('.ps-tag, .ps-title, .ps-subtitle, .ps-card, .wk2-process-tag, .wk2-process-title, .wk2-timeline-node, .cta-headline, .cta-subtext');
 
 revealEls.forEach(el => {
     gsap.from(el, {
-        y: 50,
+        y: 60,
         opacity: 0,
-        duration: 0.9,
+        duration: 1,
         ease: 'power3.out',
         immediateRender: false,
         scrollTrigger: {
@@ -202,24 +195,17 @@ revealEls.forEach(el => {
 });
 
 // ============================================
-// PROJECT CARD PARALLAX
+// PROJECT CARD MOUSE GLOW
 // ============================================
-const projectCards = document.querySelectorAll('.wk2-project-card');
+const projectCards = document.querySelectorAll('.ps-card');
 projectCards.forEach(card => {
-    const img = card.querySelector('img');
-    if (img) {
-        gsap.fromTo(img, { y: -20 }, {
-            y: 20,
-            ease: 'none',
-            immediateRender: false,
-            scrollTrigger: {
-                trigger: card,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 1
-            }
-        });
-    }
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty('--mouse-x', x + '%');
+        card.style.setProperty('--mouse-y', y + '%');
+    });
 });
 
 // ============================================
