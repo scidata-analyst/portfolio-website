@@ -23226,16 +23226,60 @@ body.team-page {
         }
     }
 
-    .tm2-culture-viewport {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+    .tm2-culture {
+        padding: 120px 0;
+        position: relative;
+        height: 300vh;
+        /* Allow enough height for horizontal scroll */
+    }
 
-        &::-webkit-scrollbar {
-            display: none;
+    .tm2-culture-header {
+        padding: 0 60px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .tm2-culture-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 20px;
+
+        .tm2-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
         }
+    }
+
+    .tm2-culture-title {
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        margin: 0;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+
+        em {
+            font-style: normal;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 2px var(--accent);
+        }
+    }
+
+    .tm2-culture-viewport {
+        overflow: hidden;
+        padding: 0;
     }
 
     .tm2-culture-track {

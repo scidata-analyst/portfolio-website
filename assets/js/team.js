@@ -149,7 +149,7 @@ window.addEventListener('scroll', () => {
         scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
     }
 
-    // Culture scroll progress
+    // Culture scroll progress (manual fallback)
     const cultureViewport = document.querySelector('.tm2-culture-viewport');
     const cultureProgress = document.querySelector('.tm2-culture-progress-fill');
     if (cultureViewport && cultureProgress) {
@@ -157,6 +157,52 @@ window.addEventListener('scroll', () => {
         cultureProgress.style.width = (maxScroll > 0 ? (cultureViewport.scrollLeft / maxScroll) * 100 : 0) + '%';
     }
 }, { passive: true });
+
+// ============================================
+// CULTURE HORIZONTAL SCROLL
+// ============================================
+const cultureSection = document.querySelector('.tm2-culture');
+const cultureTrack = document.querySelector('.tm2-culture-track');
+if (cultureSection && cultureTrack) {
+    function initCultureScroll() {
+        ScrollTrigger.getAll().forEach(t => {
+            if (t.trigger === '.tm2-culture') t.kill();
+        });
+
+        const trackWidth = cultureTrack.scrollWidth;
+        const viewportWidth = cultureSection.clientWidth;
+        const scrollDistance = trackWidth - viewportWidth + 60;
+
+        if (scrollDistance <= 0) return;
+
+        gsap.to(cultureTrack, {
+            x: () => -scrollDistance,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.tm2-culture',
+                start: 'top top',
+                end: () => '+=' + scrollDistance,
+                pin: true,
+                scrub: 1,
+                invalidateOnRefresh: true,
+                onUpdate: (self) => {
+                    const cultureProgress = document.querySelector('.tm2-culture-progress-fill');
+                    if (cultureProgress) {
+                        cultureProgress.style.width = (self.progress * 100) + '%';
+                    }
+                }
+            }
+        });
+    }
+
+    if (document.readyState === 'complete') {
+        setTimeout(initCultureScroll, 200);
+    } else {
+        window.addEventListener('load', () => {
+            setTimeout(initCultureScroll, 200);
+        });
+    }
+}
 
 // ============================================
 // SCROLL REVEAL
