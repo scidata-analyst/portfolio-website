@@ -10,14 +10,12 @@
         content="Learn more about Scidata Analyst, a growing software development company committed to long-term partnerships and reliable delivery for every client." />
     <link rel="alternate" href="https://scidata-analyst.com" hreflang="en" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://scidata-analyst.com" />
     <meta property="og:title" content="About Us - Scidata Analyst | Web, Software & AI Development Agency" />
     <meta property="og:description"
         content="Learn more about Scidata Analyst, a growing software development company committed to long-term partnerships and reliable delivery for every client." />
     <meta property="og:image" content="https://scidata-analyst.com/assets/img/nav-logo.png" />
-    <!-- ./Open Graph / Facebook -->
 
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -27,27 +25,42 @@
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
-            <div class="loader-text">ABOUT</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
+            <div class="loader-brand">ABOUT</div>
+            <div class="loader-percentage"><span class="loader-num">0</span>%</div>
+            <div class="loader-track">
+                <div class="loader-fill"></div>
             </div>
+            <div class="loader-tagline">Discovering Our Story</div>
         </div>
     </div>
     <!-- LOADER END -->
 
     <!-- CUSTOM CURSOR -->
-    <div class="cursor" data-cursor></div>
-    <div class="cursor-follower" data-cursor-follower></div>
+    <div class="cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-label"></div>
+    </div>
     <!-- CUSTOM CURSOR END -->
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <!-- SCROLL PROGRESS END -->
 
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="nav-logo">
-            <a href="/"><img src="img/logo.png" alt="Scidata Analyst"></a>
+            <a href="/" class="nav-logo-link">
+                <span class="nav-logo-icon">S</span>
+                <span class="nav-logo-text">SCIDATA</span>
+            </a>
         </div>
         <div class="nav-menu-trigger" data-menu-trigger>
-            <span class="menu-text">Menu</span>
-            <div class="menu-icon">
+            <span class="menu-label">Menu</span>
+            <div class="menu-burger">
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -55,477 +68,463 @@
     </nav>
 
     <div class="nav-overlay" data-nav-overlay>
-        <div class="nav-overlay-inner">
+        <div class="nav-overlay-bg"></div>
+        <div class="nav-overlay-content">
             <div class="nav-overlay-links">
-                <a href="/" class="nav-link-magnetic" data-magnetic>Home</a>
-                <a href="work.html" class="nav-link-magnetic" data-magnetic>Work</a>
-                <a href="about.html" class="nav-link-magnetic" data-magnetic>About</a>
-                <a href="team.html" class="nav-link-magnetic" data-magnetic>Team</a>
-                <a href="consultation.html" class="nav-link-magnetic" data-magnetic>Consultation</a>
-                <a href="price_offer.html" class="nav-link-magnetic" data-magnetic>Pricing</a>
-                <a href="contact.html" class="nav-link-magnetic" data-magnetic>Contact</a>
+                <a href="/" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">01</span>
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="work.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">02</span>
+                    <span class="nav-link-text">Work</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="about.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">03</span>
+                    <span class="nav-link-text">About</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="team.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">04</span>
+                    <span class="nav-link-text">Team</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="consultation.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">05</span>
+                    <span class="nav-link-text">Consultation</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="price_offer.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">06</span>
+                    <span class="nav-link-text">Pricing</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="contact.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">07</span>
+                    <span class="nav-link-text">Contact</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
             </div>
-            <div class="nav-overlay-info">
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Email</span>
-                    <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+            <div class="nav-overlay-footer">
+                <div class="nav-overlay-info">
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Email</span>
+                        <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Phone</span>
+                        <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Address</span>
+                        <span>2001 Victoria Court, NY</span>
+                    </div>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Phone</span>
-                    <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                <div class="nav-overlay-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Address</span>
-                    <span>2001 Victoria Court, NY</span>
-                </div>
-            </div>
-            <div class="nav-overlay-social">
-                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
-                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
-                <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
-                <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
             </div>
         </div>
     </div>
     <!-- NAVIGATION END -->
 
-    <!-- HERO SECTION -->
-    <section class="about-hero">
-        <div class="hero-bg-text" aria-hidden="true">ABOUT</div>
-        <div class="hero-field">
-            <div class="hero-particle hero-particle--1"></div>
-            <div class="hero-particle hero-particle--2"></div>
-            <div class="hero-particle hero-particle--3"></div>
-            <div class="hero-particle hero-particle--4"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-eyebrow reveal-text">Who We Are</div>
-            <h1 class="hero-title">
-                <span class="hero-title-line reveal-text">We Are</span>
-                <span class="hero-title-line hero-title-line--accent reveal-text">Scidata</span>
-                <span class="hero-title-line reveal-text">Analyst</span>
-            </h1>
-            <div class="hero-meta">
-                <p class="hero-description reveal-text">
-                    A young, dedicated team building reliable digital products for growing businesses. We combine technical expertise with creative problem-solving to deliver solutions that actually move businesses forward.
+    <!-- ABOUT - SPLIT INTRO (unique diagonal layout) -->
+    <section class="ab-intro">
+        <div class="ab-intro-diagonal" aria-hidden="true"></div>
+        <div class="ab-intro-left">
+            <div class="ab-intro-content">
+                <span class="ab-intro-tag">
+                    <span class="ab-tag-dot"></span> Who We Are
+                </span>
+                <h1 class="ab-intro-headline">
+                    We build<br>
+                    <span class="ab-headline-stroke">digital</span><br>
+                    <span class="ab-headline-accent">that lasts.</span>
+                </h1>
+                <p class="ab-intro-text">
+                    A young, dedicated team building reliable digital products for growing businesses across AdTech, Telco, Hotel, and Travel industries.
                 </p>
-                <div class="hero-actions reveal-text">
-                    <a href="contact.html" class="btn-magnetic" data-magnetic>
-                        <span class="btn-text">Start a Project</span>
-                        <span class="btn-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6"/>
-                            </svg>
-                        </span>
-                    </a>
-                    <a href="work.html" class="btn-magnetic btn-magnetic--outline" data-magnetic>
-                        <span class="btn-text">View Work</span>
-                    </a>
+            </div>
+        </div>
+        <div class="ab-intro-right">
+            <div class="ab-intro-visual">
+                <div class="ab-visual-frame">
+                    <div class="ab-visual-dot ab-visual-dot--1"></div>
+                    <div class="ab-visual-dot ab-visual-dot--2"></div>
+                    <div class="ab-visual-dot ab-visual-dot--3"></div>
+                    <div class="ab-visual-dot ab-visual-dot--4"></div>
+                    <span class="ab-visual-year">EST. 2019</span>
                 </div>
             </div>
         </div>
-        <div class="hero-scroll-indicator">
-            <span class="scroll-text">Scroll</span>
-            <div class="scroll-line">
-                <div class="scroll-dot"></div>
-            </div>
+        <div class="ab-intro-scroll" aria-hidden="true">
+            <span>SCROLL</span>
+            <div class="ab-scroll-line"></div>
         </div>
     </section>
-    <!-- HERO SECTION END -->
 
-    <!-- MANIFESTO SECTION -->
-    <section class="manifesto">
-        <div class="manifesto-content">
-            <h2 class="manifesto-title reveal-text">
-                <span class="manifesto-word">WE</span>
-                <span class="manifesto-word">DON'T</span>
-                <span class="manifesto-word">JUST</span>
-                <span class="manifesto-word">BUILD</span>
-                <span class="manifesto-word manifesto-word--accent">SOFTWARE.</span>
-            </h2>
-            <h2 class="manifesto-title manifesto-title--2 reveal-text">
-                <span class="manifesto-word">WE</span>
-                <span class="manifesto-word">BUILD</span>
-                <span class="manifesto-word manifesto-word--accent">SOLUTIONS</span>
-                <span class="manifesto-word">THAT</span>
-                <span class="manifesto-word">MATTER.</span>
-            </h2>
-            <p class="manifesto-text reveal-text">
-                Every line of code we write serves a purpose. Every design decision is intentional. 
-                We believe technology should feel invisible—it should just work, beautifully.
-            </p>
+    <!-- MANIFESTO - FULLSCREEN STACK (unique layered text) -->
+    <section class="ab-manifesto">
+        <div class="ab-manifesto-stack">
+            <div class="ab-manifesto-line ab-manifesto-line--1">
+                <span class="ab-manifesto-word">WE</span>
+                <span class="ab-manifesto-word">DON'T</span>
+                <span class="ab-manifesto-word">JUST</span>
+            </div>
+            <div class="ab-manifesto-line ab-manifesto-line--2">
+                <span class="ab-manifesto-word ab-manifesto-word--big">BUILD</span>
+                <span class="ab-manifesto-word ab-manifesto-word--accent">SOFTWARE.</span>
+            </div>
+            <div class="ab-manifesto-line ab-manifesto-line--3">
+                <span class="ab-manifesto-word">WE</span>
+                <span class="ab-manifesto-word">BUILD</span>
+                <span class="ab-manifesto-word ab-manifesto-word--big ab-manifesto-word--accent">SOLUTIONS</span>
+            </div>
+            <div class="ab-manifesto-line ab-manifesto-line--4">
+                <span class="ab-manifesto-word">THAT</span>
+                <span class="ab-manifesto-word ab-manifesto-word--big">MATTER.</span>
+            </div>
         </div>
-        <div class="manifesto-deco">
-            <div class="deco-circle deco-circle--large"></div>
+        <div class="ab-manifesto-sub">
+            <p>Every line of code we write serves a purpose. Every design decision is intentional. We believe technology should feel invisible—it should just work, beautifully.</p>
         </div>
     </section>
-    <!-- MANIFESTO SECTION END -->
 
-    <!-- STORY TIMELINE - HORIZONTAL SCROLL -->
-    <section class="story-horizontal">
-        <div class="story-sticky">
-            <div class="section-header">
-                <span class="section-eyebrow reveal-text">Our Journey</span>
-                <h2 class="section-title reveal-text">The <em>Story</em></h2>
-            </div>
+    <!-- STORY - VERTICAL TIMELINE (unique vertical layout) -->
+    <section class="ab-timeline">
+        <div class="ab-timeline-rail" aria-hidden="true">
+            <div class="ab-timeline-line"></div>
+            <div class="ab-timeline-progress"></div>
         </div>
-        <div class="story-track" data-horizontal-scroll>
-            <div class="story-panel">
-                <div class="story-card story-card--beginning">
-                    <div class="story-number">01</div>
-                    <h3 class="story-name reveal-text">THE BEGINNING</h3>
-                    <p class="story-text reveal-text">
-                        A handful of developers and designers who wanted to build software that actually solves problems, 
-                        not just fill out a checklist. Started in a small office with big dreams.
-                    </p>
-                    <div class="story-year">2019</div>
-                </div>
+        <div class="ab-timeline-inner">
+            <div class="ab-timeline-header">
+                <span class="ab-timeline-tag"><span class="ab-tag-dot"></span> Our Journey</span>
+                <h2 class="ab-timeline-title">The Story</h2>
             </div>
-            <div class="story-panel">
-                <div class="story-card story-card--growth">
-                    <div class="story-number">02</div>
-                    <h3 class="story-name reveal-text">FIRST PROJECTS</h3>
-                    <p class="story-text reveal-text">
-                        Early web builds and custom tools for local businesses, learning the craft one line at a time 
-                        and shipping our first live products. Built relationships that became partnerships.
-                    </p>
-                    <div class="story-year">2020 - 2021</div>
+            <div class="ab-timeline-items">
+                <div class="ab-timeline-item" data-timeline>
+                    <div class="ab-timeline-marker">
+                        <span class="ab-timeline-num">01</span>
+                    </div>
+                    <div class="ab-timeline-card">
+                        <span class="ab-timeline-year">2019</span>
+                        <h3 class="ab-timeline-card-title">THE BEGINNING</h3>
+                        <p class="ab-timeline-card-text">A handful of developers and designers who wanted to build software that actually solves problems, not just fill out a checklist. Started in a small office with big dreams.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="story-panel">
-                <div class="story-card story-card--expansion">
-                    <div class="story-number">03</div>
-                    <h3 class="story-name reveal-text">EXPANSION</h3>
-                    <p class="story-text reveal-text">
-                        Expanded into AI and DevOps, taking on larger projects across AdTech, Telco, Hotel, and Travel 
-                        industries. Built a team of specialists who share the same passion.
-                    </p>
-                    <div class="story-year">2022 - 2023</div>
+                <div class="ab-timeline-item" data-timeline>
+                    <div class="ab-timeline-marker">
+                        <span class="ab-timeline-num">02</span>
+                    </div>
+                    <div class="ab-timeline-card">
+                        <span class="ab-timeline-year">2020 — 2021</span>
+                        <h3 class="ab-timeline-card-title">FIRST PROJECTS</h3>
+                        <p class="ab-timeline-card-text">Early web builds and custom tools for local businesses, learning the craft one line at a time and shipping our first live products.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="story-panel">
-                <div class="story-card story-card--partner">
-                    <div class="story-number">04</div>
-                    <h3 class="story-name reveal-text">FULL PARTNER</h3>
-                    <p class="story-text reveal-text">
-                        Now a complete development partner, designing, building, and supporting software end-to-end 
-                        with the same hands-on care as day one. Trusted by clients worldwide.
-                    </p>
-                    <div class="story-year">2024 - NOW</div>
+                <div class="ab-timeline-item" data-timeline>
+                    <div class="ab-timeline-marker">
+                        <span class="ab-timeline-num">03</span>
+                    </div>
+                    <div class="ab-timeline-card">
+                        <span class="ab-timeline-year">2022 — 2023</span>
+                        <h3 class="ab-timeline-card-title">EXPANSION</h3>
+                        <p class="ab-timeline-card-text">Expanded into AI and DevOps, taking on larger projects across AdTech, Telco, Hotel, and Travel industries.</p>
+                    </div>
+                </div>
+                <div class="ab-timeline-item" data-timeline>
+                    <div class="ab-timeline-marker">
+                        <span class="ab-timeline-num">04</span>
+                    </div>
+                    <div class="ab-timeline-card">
+                        <span class="ab-timeline-year">2024 — NOW</span>
+                        <h3 class="ab-timeline-card-title">FULL PARTNER</h3>
+                        <p class="ab-timeline-card-text">Now a complete development partner, designing, building, and supporting software end-to-end with the same hands-on care as day one.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- STORY TIMELINE END -->
 
-    <!-- VALUES SECTION -->
-    <section class="values">
-        <div class="section-header">
-            <span class="section-eyebrow reveal-text">What Drives Us</span>
-            <h2 class="section-title reveal-text">Our <em>Values</em></h2>
+    <!-- VALUES - STAGGERED OVERLAP (unique card overlap) -->
+    <section class="ab-values">
+        <div class="ab-values-header">
+            <span class="ab-values-tag"><span class="ab-tag-dot"></span> What Drives Us</span>
+            <h2 class="ab-values-title">Our Values</h2>
         </div>
-        <div class="values-grid">
-            <div class="value-card reveal-text" data-tilt>
-                <div class="value-number">01</div>
-                <h3 class="value-name">TECHNICAL EXCELLENCE</h3>
-                <p class="value-text">
-                    Clean code, proper standards, software that lasts. We treat every project as if it will be 
-                    maintained for decades—because it might be.
-                </p>
-                <div class="value-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                    </svg>
-                </div>
+        <div class="ab-values-stack">
+            <div class="ab-value-card ab-value-card--1" data-tilt>
+                <div class="ab-value-num">01</div>
+                <h3 class="ab-value-title">TECHNICAL<br>EXCELLENCE</h3>
+                <p class="ab-value-text">Clean code, proper standards, software that lasts. We treat every project as if it will be maintained for decades.</p>
+                <div class="ab-value-icon">⚡</div>
             </div>
-            <div class="value-card reveal-text" data-tilt>
-                <div class="value-number">02</div>
-                <h3 class="value-name">CLIENT-FIRST</h3>
-                <p class="value-text">
-                    We start by understanding what you actually need, not what we think you should have. 
-                    Your goals become our roadmap.
-                </p>
-                <div class="value-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                    </svg>
-                </div>
+            <div class="ab-value-card ab-value-card--2" data-tilt>
+                <div class="ab-value-num">02</div>
+                <h3 class="ab-value-title">CLIENT<br>FIRST</h3>
+                <p class="ab-value-text">We start by understanding what you actually need, not what we think you should have. Your goals become our roadmap.</p>
+                <div class="ab-value-icon">◎</div>
             </div>
-            <div class="value-card reveal-text" data-tilt>
-                <div class="value-number">03</div>
-                <h3 class="value-name">GROWN TOGETHER</h3>
-                <p class="value-text">
-                    We keep building long after launch, supporting and evolving with your business. 
-                    Long-term relationships are our success metric.
-                </p>
-                <div class="value-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5"/>
-                        <path d="M2 12l10 5 10-5"/>
-                    </svg>
-                </div>
+            <div class="ab-value-card ab-value-card--3" data-tilt>
+                <div class="ab-value-num">03</div>
+                <h3 class="ab-value-title">GROWN<br>TOGETHER</h3>
+                <p class="ab-value-text">We keep building long after launch, supporting and evolving with your business. Long-term relationships are our success metric.</p>
+                <div class="ab-value-icon">⬡</div>
             </div>
-            <div class="value-card reveal-text" data-tilt>
-                <div class="value-number">04</div>
-                <h3 class="value-name">INDUSTRY DEPTH</h3>
-                <p class="value-text">
-                    AdTech, Telco, Hotel, Travel—depth applied everywhere. We don't just write code; 
-                    we understand your business context.
-                </p>
-                <div class="value-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="2" y1="12" x2="22" y2="12"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                </div>
+            <div class="ab-value-card ab-value-card--4" data-tilt>
+                <div class="ab-value-num">04</div>
+                <h3 class="ab-value-title">INDUSTRY<br>DEPTH</h3>
+                <p class="ab-value-text">AdTech, Telco, Hotel, Travel—depth applied everywhere. We don't just write code; we understand your business context.</p>
+                <div class="ab-value-icon">◈</div>
             </div>
         </div>
     </section>
-    <!-- VALUES SECTION END -->
 
-    <!-- CAPABILITIES SECTION -->
-    <section class="capabilities">
-        <div class="section-header">
-            <span class="section-eyebrow reveal-text">What We Deliver</span>
-            <h2 class="section-title reveal-text">Our <em>Capabilities</em></h2>
+    <!-- CAPABILITIES - FULL BLEED ACCORDION (unique expandable panels) -->
+    <section class="ab-capabilities">
+        <div class="ab-capabilities-header">
+            <span class="ab-capabilities-tag"><span class="ab-tag-dot"></span> What We Deliver</span>
+            <h2 class="ab-capabilities-title">Capabilities</h2>
         </div>
-        <div class="capabilities-list">
-            <div class="capability-item reveal-text">
-                <div class="capability-index">01</div>
-                <div class="capability-body">
-                    <h3 class="capability-name">WEB DEVELOPMENT</h3>
-                    <p class="capability-text">
-                        Responsive, high-performance websites from landing pages to full-scale platforms. 
-                        Every project starts with a clear plan and is reviewed at each stage.
-                    </p>
-                    <ul class="capability-list">
-                        <li>Custom Website Design & Development</li>
-                        <li>Responsive & Mobile-First Builds</li>
-                        <li>E-Commerce Development</li>
-                        <li>Performance & SEO Optimization</li>
+        <div class="ab-capabilities-panels">
+            <div class="ab-cap-panel" data-panel>
+                <div class="ab-cap-panel-head">
+                    <span class="ab-cap-panel-num">01</span>
+                    <h3 class="ab-cap-panel-title">WEB DEVELOPMENT</h3>
+                    <div class="ab-cap-panel-toggle">
+                        <span></span><span></span>
+                    </div>
+                </div>
+                <div class="ab-cap-panel-body">
+                    <p>Responsive, high-performance websites from landing pages to full-scale platforms. Every project starts with a clear plan and is reviewed at each stage.</p>
+                    <ul class="ab-cap-panel-tags">
+                        <li>Custom Design</li>
+                        <li>Responsive Builds</li>
+                        <li>E-Commerce</li>
+                        <li>Performance Optimization</li>
                     </ul>
                 </div>
             </div>
-            <div class="capability-item capability-item--reverse reveal-text">
-                <div class="capability-index">02</div>
-                <div class="capability-body">
-                    <h3 class="capability-name">SOFTWARE DEVELOPMENT</h3>
-                    <p class="capability-text">
-                        From custom internal tools to client-facing applications. We design and build software 
-                        that fits how your business actually operates.
-                    </p>
-                    <ul class="capability-list">
-                        <li>Custom Software Development</li>
-                        <li>API Design & Integration</li>
-                        <li>Cloud Deployment & Hosting</li>
-                        <li>DevOps & CI/CD Pipelines</li>
+            <div class="ab-cap-panel" data-panel>
+                <div class="ab-cap-panel-head">
+                    <span class="ab-cap-panel-num">02</span>
+                    <h3 class="ab-cap-panel-title">SOFTWARE DEVELOPMENT</h3>
+                    <div class="ab-cap-panel-toggle">
+                        <span></span><span></span>
+                    </div>
+                </div>
+                <div class="ab-cap-panel-body">
+                    <p>From custom internal tools to client-facing applications. We design and build software that fits how your business actually operates.</p>
+                    <ul class="ab-cap-panel-tags">
+                        <li>Custom Software</li>
+                        <li>API Design</li>
+                        <li>Cloud Deployment</li>
+                        <li>CI/CD Pipelines</li>
                     </ul>
                 </div>
             </div>
-            <div class="capability-item reveal-text">
-                <div class="capability-index">03</div>
-                <div class="capability-body">
-                    <h3 class="capability-name">AI & AUTOMATION</h3>
-                    <p class="capability-text">
-                        Practical AI solutions that save time and reduce manual work. From LLM-powered chatbots 
-                        to workflow automation and data analysis tools.
-                    </p>
-                    <ul class="capability-list">
-                        <li>AI & LLM-Based Chatbots</li>
-                        <li>Natural Language Processing</li>
-                        <li>Data Analysis & Reporting</li>
+            <div class="ab-cap-panel" data-panel>
+                <div class="ab-cap-panel-head">
+                    <span class="ab-cap-panel-num">03</span>
+                    <h3 class="ab-cap-panel-title">AI & AUTOMATION</h3>
+                    <div class="ab-cap-panel-toggle">
+                        <span></span><span></span>
+                    </div>
+                </div>
+                <div class="ab-cap-panel-body">
+                    <p>Practical AI solutions that save time and reduce manual work. From LLM-powered chatbots to workflow automation and data analysis tools.</p>
+                    <ul class="ab-cap-panel-tags">
+                        <li>AI Chatbots</li>
+                        <li>NLP</li>
+                        <li>Data Analysis</li>
                         <li>Marketing Automation</li>
                     </ul>
                 </div>
             </div>
-            <div class="capability-item capability-item--reverse reveal-text">
-                <div class="capability-index">04</div>
-                <div class="capability-body">
-                    <h3 class="capability-name">DEVOPS & SUPPORT</h3>
-                    <p class="capability-text">
-                        Reliable infrastructure and deployment pipelines so your product runs smoothly as it grows. 
-                        Beyond launch, we offer ongoing support.
-                    </p>
-                    <ul class="capability-list">
-                        <li>Cloud Setup & Migration</li>
-                        <li>Automated Deployment Pipelines</li>
-                        <li>Monitoring & Maintenance</li>
-                        <li>Security & Compliance</li>
+            <div class="ab-cap-panel" data-panel>
+                <div class="ab-cap-panel-head">
+                    <span class="ab-cap-panel-num">04</span>
+                    <h3 class="ab-cap-panel-title">DEVOPS & SUPPORT</h3>
+                    <div class="ab-cap-panel-toggle">
+                        <span></span><span></span>
+                    </div>
+                </div>
+                <div class="ab-cap-panel-body">
+                    <p>Reliable infrastructure and deployment pipelines so your product runs smoothly as it grows. Beyond launch, we offer ongoing support.</p>
+                    <ul class="ab-cap-panel-tags">
+                        <li>Cloud Setup</li>
+                        <li>Deployment Pipelines</li>
+                        <li>Monitoring</li>
+                        <li>Security</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <!-- CAPABILITIES SECTION END -->
 
-    <!-- PHILOSOPHY SECTION -->
-    <section class="philosophy">
-        <div class="philosophy-field">
-            <div class="philosophy-blob philosophy-blob--1"></div>
-            <div class="philosophy-blob philosophy-blob--2"></div>
+    <!-- PHILOSOPHY - EDITORIAL SPREAD (unique magazine layout) -->
+    <section class="ab-philosophy">
+        <div class="ab-philosophy-col ab-philosophy-col--left">
+            <div class="ab-philosophy-pullquote">
+                <span class="ab-philosophy-mark">"</span>
+                <p>The best technology is invisible. It should feel like a natural extension of your business, not a burden.</p>
+            </div>
         </div>
-        <div class="philosophy-content">
-            <h2 class="philosophy-title reveal-text">
-                <span class="philosophy-line">DESIGN IS</span>
-                <span class="philosophy-line philosophy-line--italic">HOW IT</span>
-                <span class="philosophy-line">WORKS.</span>
+        <div class="ab-philosophy-col ab-philosophy-col--right">
+            <h2 class="ab-philosophy-title">
+                DESIGN IS<br>
+                <span class="ab-philosophy-italic">how it</span><br>
+                WORKS.
             </h2>
-            <p class="philosophy-text reveal-text">
-                We believe the best technology is invisible. It should feel like a natural extension of your business, 
-                not a burden. Every interface we design, every system we architect, every line of code we write— 
-                it all serves the same goal: making complex things feel simple.
-            </p>
-            <div class="philosophy-author reveal-text">
-                <span class="author-name">— Scidata Philosophy</span>
-            </div>
+            <p class="ab-philosophy-text">Every interface we design, every system we architect, every line of code we write—it all serves the same goal: making complex things feel simple.</p>
+            <span class="ab-philosophy-sign">— Scidata Philosophy</span>
         </div>
     </section>
-    <!-- PHILOSOPHY SECTION END -->
 
-    <!-- STATS SECTION -->
-    <section class="about-stats">
-        <div class="stats-field">
-            <div class="stats-blob stats-blob--1"></div>
-            <div class="stats-blob stats-blob--2"></div>
-            <div class="stats-blob stats-blob--3"></div>
-        </div>
-        <div class="stats-rail">
-            <h2 class="stats-title reveal-text">BY THE NUMBERS</h2>
-            <div class="stats-grid">
-                <div class="stat-item reveal-text">
-                    <div class="stat-number" data-count="5">0</div>
-                    <div class="stat-label">YEARS EXPERIENCE</div>
-                </div>
-                <div class="stat-item reveal-text">
-                    <div class="stat-number" data-count="50">0</div>
-                    <div class="stat-label">PROJECTS DELIVERED</div>
-                </div>
-                <div class="stat-item reveal-text">
-                    <div class="stat-number" data-count="30">0</div>
-                    <div class="stat-label">HAPPY CLIENTS</div>
-                </div>
-                <div class="stat-item reveal-text">
-                    <div class="stat-number" data-count="4">0</div>
-                    <div class="stat-label">INDUSTRIES</div>
-                </div>
+    <!-- STATS - CIRCULAR COUNTERS (unique radial layout) -->
+    <section class="ab-stats">
+        <div class="ab-stats-inner">
+            <div class="ab-stats-header">
+                <span class="ab-stats-tag"><span class="ab-tag-dot"></span> By The Numbers</span>
             </div>
-        </div>
-    </section>
-    <!-- STATS SECTION END -->
-
-    <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials">
-        <div class="section-header">
-            <span class="section-eyebrow reveal-text">Client Words</span>
-            <h2 class="section-title reveal-text">What They <em>Say</em></h2>
-        </div>
-        <div class="testimonials-track" data-horizontal-scroll>
-            <div class="testimonial-panel">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text reveal-text">
-                        Scidata Analyst transformed our legacy system into a modern, scalable platform. 
-                        Their team's technical depth and commitment to quality is unmatched.
-                    </p>
-                    <div class="testimonial-author reveal-text">
-                        <span class="author-name">Sarah Chen</span>
-                        <span class="author-role">CTO, AdTech Solutions</span>
+            <div class="ab-stats-grid">
+                <div class="ab-stat-item">
+                    <div class="ab-stat-ring">
+                        <svg viewBox="0 0 100 100" class="ab-stat-ring-svg">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(10,10,10,0.1)" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#0a0a0a" stroke-width="3" stroke-dasharray="283" stroke-dashoffset="283" class="ab-stat-ring-fill" data-ring="5"/>
+                        </svg>
+                        <div class="ab-stat-ring-inner">
+                            <span class="ab-stat-num" data-count="5">0</span>
+                            <span class="ab-stat-plus">+</span>
+                        </div>
                     </div>
+                    <span class="ab-stat-label">YEARS</span>
                 </div>
-            </div>
-            <div class="testimonial-panel">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text reveal-text">
-                        Working with Scidata felt like having an extension of our own team. They understood 
-                        our Telco challenges and delivered solutions that actually work at scale.
-                    </p>
-                    <div class="testimonial-author reveal-text">
-                        <span class="author-name">Marcus Rodriguez</span>
-                        <span class="author-role">VP Engineering, TelcoGlobal</span>
+                <div class="ab-stat-item">
+                    <div class="ab-stat-ring">
+                        <svg viewBox="0 0 100 100" class="ab-stat-ring-svg">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(10,10,10,0.1)" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#0a0a0a" stroke-width="3" stroke-dasharray="283" stroke-dashoffset="283" class="ab-stat-ring-fill" data-ring="50"/>
+                        </svg>
+                        <div class="ab-stat-ring-inner">
+                            <span class="ab-stat-num" data-count="50">0</span>
+                            <span class="ab-stat-plus">+</span>
+                        </div>
                     </div>
+                    <span class="ab-stat-label">PROJECTS</span>
                 </div>
-            </div>
-            <div class="testimonial-panel">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text reveal-text">
-                        The AI chatbot they built for our hotel chain reduced customer service tickets by 60%. 
-                        Real results, real impact. They're now our go-to technology partner.
-                    </p>
-                    <div class="testimonial-author reveal-text">
-                        <span class="author-name">Emily Watson</span>
-                        <span class="author-role">Director of Innovation, Luxury Hotels</span>
+                <div class="ab-stat-item">
+                    <div class="ab-stat-ring">
+                        <svg viewBox="0 0 100 100" class="ab-stat-ring-svg">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(10,10,10,0.1)" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#0a0a0a" stroke-width="3" stroke-dasharray="283" stroke-dashoffset="283" class="ab-stat-ring-fill" data-ring="30"/>
+                        </svg>
+                        <div class="ab-stat-ring-inner">
+                            <span class="ab-stat-num" data-count="30">0</span>
+                            <span class="ab-stat-plus">+</span>
+                        </div>
                     </div>
+                    <span class="ab-stat-label">CLIENTS</span>
                 </div>
-            </div>
-            <div class="testimonial-panel">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text reveal-text">
-                        From concept to deployment, Scidata delivered beyond expectations. Their DevOps 
-                        expertise helped us achieve 99.9% uptime during our busiest season.
-                    </p>
-                    <div class="testimonial-author reveal-text">
-                        <span class="author-name">David Park</span>
-                        <span class="author-role">CEO, TravelTech Ventures</span>
+                <div class="ab-stat-item">
+                    <div class="ab-stat-ring">
+                        <svg viewBox="0 0 100 100" class="ab-stat-ring-svg">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(10,10,10,0.1)" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#0a0a0a" stroke-width="3" stroke-dasharray="283" stroke-dashoffset="283" class="ab-stat-ring-fill" data-ring="4"/>
+                        </svg>
+                        <div class="ab-stat-ring-inner">
+                            <span class="ab-stat-num" data-count="4">0</span>
+                            <span class="ab-stat-plus">+</span>
+                        </div>
                     </div>
+                    <span class="ab-stat-label">INDUSTRIES</span>
                 </div>
             </div>
         </div>
     </section>
-    <!-- TESTIMONIALS SECTION END -->
 
-    <!-- CTA SECTION -->
-    <section class="cta-section">
+    <!-- TESTIMONIALS - VERTICAL REVEAL (unique scroll-triggered quotes) -->
+    <section class="ab-testimonials">
+        <div class="ab-testimonials-inner">
+            <div class="ab-testimonials-header">
+                <span class="ab-testimonials-tag"><span class="ab-tag-dot"></span> Client Words</span>
+                <h2 class="ab-testimonials-title">What They Say</h2>
+            </div>
+            <div class="ab-testimonials-list">
+                <div class="ab-testimonial" data-testimonial>
+                    <div class="ab-testimonial-num">/01</div>
+                    <div class="ab-testimonial-content">
+                        <p class="ab-testimonial-quote">Scidata Analyst transformed our legacy system into a modern, scalable platform. Their team's technical depth and commitment to quality is unmatched.</p>
+                        <div class="ab-testimonial-author">
+                            <span class="ab-testimonial-name">Sarah Chen</span>
+                            <span class="ab-testimonial-role">CTO, AdTech Solutions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ab-testimonial" data-testimonial>
+                    <div class="ab-testimonial-num">/02</div>
+                    <div class="ab-testimonial-content">
+                        <p class="ab-testimonial-quote">Working with Scidata felt like having an extension of our own team. They understood our Telco challenges and delivered solutions that actually work at scale.</p>
+                        <div class="ab-testimonial-author">
+                            <span class="ab-testimonial-name">Marcus Rodriguez</span>
+                            <span class="ab-testimonial-role">VP Engineering, TelcoGlobal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ab-testimonial" data-testimonial>
+                    <div class="ab-testimonial-num">/03</div>
+                    <div class="ab-testimonial-content">
+                        <p class="ab-testimonial-quote">The AI chatbot they built for our hotel chain reduced customer service tickets by 60%. Real results, real impact. They're now our go-to technology partner.</p>
+                        <div class="ab-testimonial-author">
+                            <span class="ab-testimonial-name">Emily Watson</span>
+                            <span class="ab-testimonial-role">Director of Innovation, Luxury Hotels</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ab-testimonial" data-testimonial>
+                    <div class="ab-testimonial-num">/04</div>
+                    <div class="ab-testimonial-content">
+                        <p class="ab-testimonial-quote">From concept to deployment, Scidata delivered beyond expectations. Their DevOps expertise helped us achieve 99.9% uptime during our busiest season.</p>
+                        <div class="ab-testimonial-author">
+                            <span class="ab-testimonial-name">David Park</span>
+                            <span class="ab-testimonial-role">CEO, TravelTech Ventures</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" data-section>
         <div class="cta-bg-text" aria-hidden="true">JOIN</div>
-        <div class="cta-content">
-            <h2 class="cta-title reveal-text">
+        <div class="cta-inner">
+            <h2 class="cta-headline">
                 Ready to build<br>
-                <span class="cta-title-accent">something great?</span>
+                <span class="cta-accent">something great?</span>
             </h2>
-            <p class="cta-description reveal-text">
-                Let's discuss your project and explore how we can help you achieve your goals.
-            </p>
-            <a href="contact.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                <span class="btn-text">Get in Touch</span>
-                <span class="btn-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
+            <p class="cta-subtext">Let's discuss your project and explore how we can help you achieve your goals.</p>
+            <a href="contact.html" class="btn-magnetic btn-cta-large" data-magnetic>
+                <span class="btn-label">Get in Touch</span>
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </span>
             </a>
         </div>
         <div class="cta-deco">
-            <div class="deco-circle deco-circle--large"></div>
+            <div class="deco-ring deco-ring--1"></div>
+            <div class="deco-ring deco-ring--2"></div>
         </div>
     </section>
-    <!-- CTA SECTION END -->
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-blob"></div>
-
-        <div class="footer-cta">
-            <div class="footer-cta-inner">
-                <span class="footer-cta-eyebrow">Got a project in mind?</span>
-                <a href="contact.html" class="footer-cta-title">
-                    <span>Let's build</span>
-                    <span class="footer-cta-accent">something great</span>
-                </a>
-            </div>
-            <a href="contact.html" class="footer-cta-circle" aria-label="Start a project">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-            </a>
-        </div>
-
         <div class="footer-marquee" aria-hidden="true">
             <div class="footer-marquee-track">
                 <span>Web Development</span><span class="dot">✦</span>
@@ -544,26 +543,32 @@
                 <span>Cloud &amp; Hosting</span><span class="dot">✦</span>
             </div>
         </div>
-
-        <div class="footer-main">
+        <div class="footer-cta">
+            <div class="footer-cta-text">
+                <span class="footer-cta-label">Got a project in mind?</span>
+                <a href="contact.html" class="footer-cta-title">
+                    <span>Let's build</span>
+                    <span class="footer-cta-accent">something great</span>
+                </a>
+            </div>
+            <a href="contact.html" class="footer-cta-btn" aria-label="Start a project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+        </div>
+        <div class="footer-body">
             <div class="footer-col footer-brand">
-                <div class="footer-brand-inner">
-                    <a href="/" class="footer-logo-link">
-                        <img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo">
-                    </a>
-                    <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
-                </div>
+                <a href="/" class="footer-logo-link"><img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo"></a>
+                <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-title">Stay in the loop</label>
-                    <div class="footer-newsletter-form">
+                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <div class="footer-newsletter-row">
                         <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
-                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                     </div>
                 </form>
             </div>
-
             <div class="footer-col footer-links">
-                <h3 class="footer-heading">Explore</h3>
+                <h3 class="footer-col-title">Explore</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="work.html">Work</a></li>
@@ -574,9 +579,8 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
             <div class="footer-col footer-services">
-                <h3 class="footer-heading">Services</h3>
+                <h3 class="footer-col-title">Services</h3>
                 <ul>
                     <li><a href="contact.html">Web Development</a></li>
                     <li><a href="contact.html">Software Development</a></li>
@@ -584,36 +588,29 @@
                     <li><a href="contact.html">DevOps &amp; Support</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col footer-contact">
-                <h3 class="footer-heading">Connect</h3>
+            <div class="footer-col footer-connect">
+                <h3 class="footer-col-title">Connect</h3>
                 <ul class="footer-contact-list">
-                    <li><a href="tel:+0000000000000"><i class="fa-solid fa-phone"></i> <span>(+00) 000 00 0000 00</span></a></li>
-                    <li><a href="mailto:info@scidata-analyst.com"><i class="fa-solid fa-envelope"></i> <span>info@scidata-analyst.com</span></a></li>
-                    <li class="footer-address"><i class="fa-solid fa-location-dot"></i> <span>2001 Victoria Court, NY</span></li>
+                    <li><a href="tel:+0000000000000"><span class="contact-icon">📞</span><span>(+00) 000 00 0000 00</span></a></li>
+                    <li><a href="mailto:info@scidata-analyst.com"><span class="contact-icon">✉</span><span>info@scidata-analyst.com</span></a></li>
+                    <li class="footer-address"><span class="contact-icon">📍</span><span>2001 Victoria Court, NY</span></li>
                 </ul>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
-                    <a href="https://join.skype.com/invite/YYXzSmJkfjpD" target="_blank" aria-label="Skype"><i class="fa-brands fa-skype"></i></a>
-                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook">FB</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn">LI</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter">TW</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp">WA</a>
                 </div>
             </div>
         </div>
-
-        <div class="footer-divider"></div>
-
         <div class="footer-bottom">
-            <div class="footer-bottom-inner">
-                <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
-                <button class="footer-totop" type="button" aria-label="Back to top">
-                    <i class="fa-solid fa-arrow-up"></i> Back to top
-                </button>
-            </div>
+            <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
+            <button class="footer-totop" type="button" aria-label="Back to top">
+                <span>Back to top</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </button>
         </div>
     </footer>
-    <!-- FOOTER END -->
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -621,13 +618,10 @@
     <script src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/about.js"></script>
-
     <script>
         document.querySelector('.footer-totop')?.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
-
 </body>
-
 </html>
