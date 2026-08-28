@@ -325,6 +325,144 @@ counters.forEach(counter => {
 });
 
 // ============================================
+// WHO WE ARE - ANIMATIONS
+// ============================================
+const wwaSection = document.querySelector('.who-we-are');
+if (wwaSection) {
+    // Title reveal animation
+    const wwaTitle = wwaSection.querySelector('.wwa-title');
+    if (wwaTitle) {
+        const titleText = wwaTitle.textContent;
+        wwaTitle.innerHTML = '';
+        titleText.split('').forEach(char => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? ' ' : char;
+            span.style.display = 'inline-block';
+            span.style.opacity = '0';
+            span.style.transform = 'translateY(40px)';
+            wwaTitle.appendChild(span);
+        });
+
+        ScrollTrigger.create({
+            trigger: wwaSection,
+            start: 'top 70%',
+            onEnter: () => {
+                gsap.to(wwaTitle.children, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    stagger: 0.02,
+                    ease: 'power3.out'
+                });
+            }
+        });
+    }
+
+    // Cards stagger entrance
+    const wwaCards = wwaSection.querySelectorAll('.wwa-card');
+    gsap.set(wwaCards, { opacity: 0, y: 60 });
+    ScrollTrigger.create({
+        trigger: wwaSection,
+        start: 'top 60%',
+        onEnter: () => {
+            gsap.to(wwaCards, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: 'power3.out'
+            });
+        }
+    });
+
+    // Stats counter entrance
+    const wwaStats = wwaSection.querySelectorAll('.wwa-stat');
+    gsap.set(wwaStats, { opacity: 0, scale: 0.8 });
+    ScrollTrigger.create({
+        trigger: wwaSection,
+        start: 'top 50%',
+        onEnter: () => {
+            gsap.to(wwaStats, {
+                opacity: 1,
+                scale: 1,
+                duration: 0.6,
+                stagger: 0.1,
+                ease: 'back.out(1.7)'
+            });
+        }
+    });
+
+    // Visual rings entrance
+    const wwaVisual = wwaSection.querySelector('.wwa-visual');
+    if (wwaVisual) {
+        gsap.set(wwaVisual, { opacity: 0, scale: 0.5, rotation: -30 });
+        ScrollTrigger.create({
+            trigger: wwaSection,
+            start: 'top 55%',
+            onEnter: () => {
+                gsap.to(wwaVisual, {
+                    opacity: 1,
+                    scale: 1,
+                    rotation: 0,
+                    duration: 1,
+                    ease: 'elastic.out(1, 0.5)'
+                });
+            }
+        });
+    }
+
+    // Tag entrance
+    const wwaTag = wwaSection.querySelector('.wwa-tag');
+    if (wwaTag) {
+        gsap.set(wwaTag, { opacity: 0, x: -30 });
+        ScrollTrigger.create({
+            trigger: wwaSection,
+            start: 'top 75%',
+            onEnter: () => {
+                gsap.to(wwaTag, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+            }
+        });
+    }
+
+    // Bottom CTA entrance
+    const wwaBottom = wwaSection.querySelector('.wwa-bottom');
+    if (wwaBottom) {
+        gsap.set(wwaBottom, { opacity: 0, y: 30 });
+        ScrollTrigger.create({
+            trigger: wwaSection,
+            start: 'top 40%',
+            onEnter: () => {
+                gsap.to(wwaBottom, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    ease: 'power2.out'
+                });
+            }
+        });
+    }
+
+    // Parallax on background glow
+    const wwaGlows = wwaSection.querySelectorAll('.wwa-glow');
+    wwaGlows.forEach((glow, i) => {
+        gsap.to(glow, {
+            y: i === 0 ? 100 : -100,
+            scrollTrigger: {
+                trigger: wwaSection,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 1
+            }
+        });
+    });
+}
+
+// ============================================
 // TEXT DISTORTION ON HOVER
 // ============================================
 const distortTargets = document.querySelectorAll('.panel-title, .tech-block-title, .approach-name, .node-title');
