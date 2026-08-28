@@ -1426,7 +1426,7 @@ a {
 }
 .contact-form .left-col form .btn-block {
   display: flex;
-  padding: 120px 0px;
+  padding: 90px 0px;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: calc(160px + 20 * (100vw - 320px) / 1600);
@@ -5579,7 +5579,7 @@ body.home-page,
   justify-content: center;
   background: #0a0a0a;
   overflow: hidden;
-  padding: 120px 50px 80px;
+  padding: 90px 50px 80px;
 }
 .hero .hero-bg-text {
   position: absolute;
@@ -5907,7 +5907,7 @@ body.home-page,
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 120px 50px 60px;
+  padding: 90px 50px 60px;
   background: linear-gradient(180deg, #0a0a0a 0%, transparent 100%);
 }
 .services-horizontal .services-track {
@@ -6403,7 +6403,7 @@ body.home-page,
     gap: 20px;
   }
   .cta-section {
-    padding: 120px 30px;
+    padding: 90px 30px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -6536,7 +6536,7 @@ body.work-page,
   justify-content: center;
   background: #0a0a0a;
   overflow: hidden;
-  padding: 120px 50px 80px;
+  padding: 90px 50px 80px;
 }
 .work-hero .hero-bg-text {
   position: absolute;
@@ -6686,7 +6686,7 @@ body.work-page,
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 120px 50px 60px;
+  padding: 90px 50px 60px;
   background: linear-gradient(180deg, #0a0a0a 0%, transparent 100%);
 }
 .projects-horizontal .projects-track {
@@ -6844,7 +6844,7 @@ body.contact-page,
   justify-content: center;
   background: #0a0a0a;
   overflow: hidden;
-  padding: 120px 50px 80px;
+  padding: 90px 50px 80px;
 }
 .contact-hero .hero-bg-text {
   position: absolute;
@@ -7087,7 +7087,7 @@ body.innovation-page,
   justify-content: center;
   background: #0a0a0a;
   overflow: hidden;
-  padding: 120px 50px 80px;
+  padding: 90px 50px 80px;
 }
 .innovation-hero .hero-bg-text {
   position: absolute;
@@ -7245,7 +7245,7 @@ body.innovation-page,
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 120px 50px 60px;
+  padding: 90px 50px 60px;
   background: linear-gradient(180deg, #0a0a0a 0%, transparent 100%);
 }
 .solutions-horizontal .solutions-track {
@@ -7804,7 +7804,7 @@ body.about-page,
   justify-content: center;
   background: #0a0a0a;
   overflow: hidden;
-  padding: 120px 50px 80px;
+  padding: 90px 50px 80px;
 }
 .about-hero .hero-bg-text {
   position: absolute;
@@ -8045,7 +8045,7 @@ body.about-page,
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 120px 50px 60px;
+  padding: 90px 50px 60px;
   background: linear-gradient(180deg, #0a0a0a 0%, transparent 100%);
 }
 .story-horizontal .story-track {
@@ -8583,7 +8583,7 @@ body.about-page,
     padding: 100px 30px 60px;
   }
   .manifesto {
-    padding: 120px 30px;
+    padding: 90px 30px;
   }
   .story-horizontal .story-sticky {
     padding: 80px 30px 40px;
@@ -8609,7 +8609,7 @@ body.about-page,
     gap: 20px;
   }
   .philosophy {
-    padding: 120px 30px;
+    padding: 90px 30px;
   }
   .about-stats {
     padding: 100px 30px;
@@ -8621,7 +8621,7 @@ body.about-page,
     width: 85vw;
   }
   .cta-section {
-    padding: 120px 30px;
+    padding: 90px 30px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -8720,7 +8720,7 @@ body.about-page,
    ============================================================ */
 .team-hero {
   min-height: 80vh;
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9109,7 +9109,7 @@ body.about-page,
 }
 
 .team-join {
-  padding: 120px 60px;
+  padding: 90px 60px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -9172,7 +9172,7 @@ body.about-page,
    ============================================================ */
 .consult-hero {
   min-height: 80vh;
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9649,7 +9649,7 @@ body.about-page,
    ============================================================ */
 .price-hero {
   min-height: 80vh;
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10576,7 +10576,7 @@ body.about-page,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
 }
 .nav-overlay .nav-overlay-links {
   display: flex;
@@ -11148,7 +11148,7 @@ body.about-page,
 }
 .services-section .services-viewport {
   overflow: hidden;
-  padding: 120px 0 60px;
+  padding: 90px 0 60px;
 }
 .services-section .services-track {
   display: flex;
@@ -12023,7 +12023,7 @@ body.about-page,
 .ab-intro .ab-intro-left {
   display: flex;
   align-items: center;
-  padding: 120px 60px 80px;
+  padding: 90px 60px 80px;
   position: relative;
   z-index: 2;
 }
@@ -12819,7 +12819,7 @@ body.about-page,
   .ab-intro {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding: 120px 40px 60px;
+    padding: 90px 40px 60px;
   }
   .ab-intro .ab-intro-right {
     display: none;
@@ -12891,7 +12891,7 @@ body.about-page,
   width: 100%;
   min-height: 80vh;
   background: var(--dark);
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   overflow: hidden;
 }
 .wk-hero .wk-hero-bento {
@@ -14210,7 +14210,7 @@ body.about-page,
   width: 100%;
   min-height: 80vh;
   background: var(--dark);
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   overflow: hidden;
 }
 .cn-hero .cn-hero-inner {
@@ -15227,7 +15227,7 @@ body.about-page,
   width: 100%;
   min-height: 80vh;
   background: var(--dark);
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   overflow: hidden;
 }
 .tm-hero .tm-mosaic {
@@ -15781,7 +15781,7 @@ body.about-page,
   width: 100%;
   min-height: 80vh;
   background: var(--dark);
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   overflow: hidden;
 }
 .pr-hero .pr-hero-inner {
@@ -16519,7 +16519,7 @@ body.about-page,
   width: 100%;
   min-height: 80vh;
   background: var(--dark);
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -17002,7 +17002,7 @@ body.about-page,
   width: 100%;
   min-height: 80vh;
   background: var(--dark);
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -17722,7 +17722,7 @@ body.about-page,
   width: 100%;
   min-height: 80vh;
   background: var(--dark);
-  padding: 120px 60px 60px;
+  padding: 90px 60px 60px;
   overflow: hidden;
 }
 .cn2-hero .cn2-hero-noise {
@@ -18714,7 +18714,7 @@ body.team-page {
   min-height: 80vh;
   min-height: 100svh;
   background: var(--dark);
-  padding: 120px 60px 140px;
+  padding: 90px 60px 140px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -19957,7 +19957,7 @@ body.price-page {
   min-height: 80vh;
   min-height: 100svh;
   background: var(--dark);
-  padding: 120px 60px 140px;
+  padding: 90px 60px 140px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -21032,7 +21032,7 @@ body.contact-page {
   width: 100%;
   min-height: auto;
   background: var(--dark);
-  padding: 120px 60px 140px;
+  padding: 90px 60px 140px;
   overflow: hidden;
   display: flex;
   flex-direction: column;

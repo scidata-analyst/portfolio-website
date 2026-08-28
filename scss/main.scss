@@ -1649,7 +1649,7 @@ a {
 
             .btn-block {
                 display: flex;
-                padding: 120px 0px;
+                padding: 90px 0px;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 gap: calc(160px + 20*(100vw - 320px)/1600);
@@ -6484,7 +6484,7 @@ body.home-page,
     justify-content: center;
     background: $color-dark;
     overflow: hidden;
-    padding: 120px 50px 80px;
+    padding: 90px 50px 80px;
 
     .hero-bg-text {
         position: absolute;
@@ -6858,7 +6858,7 @@ body.home-page,
         position: sticky;
         top: 0;
         z-index: 10;
-        padding: 120px 50px 60px;
+        padding: 90px 50px 60px;
         background: linear-gradient(180deg, $color-dark 0%, transparent 100%);
     }
 
@@ -7441,7 +7441,7 @@ body.home-page,
     }
 
     .cta-section {
-        padding: 120px 30px;
+        padding: 90px 30px;
     }
 }
 
@@ -7621,7 +7621,7 @@ body.work-page,
     justify-content: center;
     background: $color-dark;
     overflow: hidden;
-    padding: 120px 50px 80px;
+    padding: 90px 50px 80px;
 
     .hero-bg-text {
         position: absolute;
@@ -7787,7 +7787,7 @@ body.work-page,
         position: sticky;
         top: 0;
         z-index: 10;
-        padding: 120px 50px 60px;
+        padding: 90px 50px 60px;
         background: linear-gradient(180deg, $color-dark 0%, transparent 100%);
     }
 
@@ -7967,7 +7967,7 @@ body.contact-page,
     justify-content: center;
     background: $color-dark;
     overflow: hidden;
-    padding: 120px 50px 80px;
+    padding: 90px 50px 80px;
 
     .hero-bg-text {
         position: absolute;
@@ -8228,7 +8228,7 @@ body.innovation-page,
     justify-content: center;
     background: $color-dark;
     overflow: hidden;
-    padding: 120px 50px 80px;
+    padding: 90px 50px 80px;
 
     .hero-bg-text {
         position: absolute;
@@ -8403,7 +8403,7 @@ body.innovation-page,
         position: sticky;
         top: 0;
         z-index: 10;
-        padding: 120px 50px 60px;
+        padding: 90px 50px 60px;
         background: linear-gradient(180deg, $color-dark 0%, transparent 100%);
     }
 
@@ -9067,7 +9067,7 @@ body.about-page,
     justify-content: center;
     background: $color-dark;
     overflow: hidden;
-    padding: 120px 50px 80px;
+    padding: 90px 50px 80px;
 
     .hero-bg-text {
         position: absolute;
@@ -9341,7 +9341,7 @@ body.about-page,
         position: sticky;
         top: 0;
         z-index: 10;
-        padding: 120px 50px 60px;
+        padding: 90px 50px 60px;
         background: linear-gradient(180deg, $color-dark 0%, transparent 100%);
     }
 
@@ -9957,7 +9957,7 @@ body.about-page,
     }
 
     .manifesto {
-        padding: 120px 30px;
+        padding: 90px 30px;
     }
 
     .story-horizontal {
@@ -9993,7 +9993,7 @@ body.about-page,
     }
 
     .philosophy {
-        padding: 120px 30px;
+        padding: 90px 30px;
     }
 
     .about-stats {
@@ -10013,7 +10013,7 @@ body.about-page,
     }
 
     .cta-section {
-        padding: 120px 30px;
+        padding: 90px 30px;
     }
 }
 
@@ -10155,7 +10155,7 @@ body.about-page,
    ============================================================ */
 .team-hero {
     min-height: 80vh;
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10604,7 +10604,7 @@ body.about-page,
 }
 
 .team-join {
-    padding: 120px 60px;
+    padding: 90px 60px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -10675,7 +10675,7 @@ body.about-page,
    ============================================================ */
 .consult-hero {
     min-height: 80vh;
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11205,7 +11205,7 @@ body.about-page,
    ============================================================ */
 .price-hero {
     min-height: 80vh;
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12284,7 +12284,7 @@ body.about-page,
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 120px 60px 60px;
+        padding: 90px 60px 60px;
     }
 
     .nav-overlay-links {
@@ -12959,7 +12959,7 @@ body.about-page,
 
     .services-viewport {
         overflow: hidden;
-        padding: 120px 0 60px;
+        padding: 90px 0 60px;
     }
 
     .services-track {
@@ -14013,7 +14013,7 @@ body.about-page,
     .ab-intro-left {
         display: flex;
         align-items: center;
-        padding: 120px 60px 80px;
+        padding: 90px 60px 80px;
         position: relative;
         z-index: 2;
     }
@@ -14946,7 +14946,7 @@ body.about-page,
     .ab-intro {
         grid-template-columns: 1fr;
         min-height: auto;
-        padding: 120px 40px 60px;
+        padding: 90px 40px 60px;
 
         .ab-intro-right {
             display: none;
@@ -15039,7 +15039,7 @@ body.about-page,
     width: 100%;
     min-height: 80vh;
     background: var(--dark);
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     overflow: hidden;
 
     .wk-hero-bento {
@@ -16562,7 +16562,7 @@ body.about-page,
     width: 100%;
     min-height: 80vh;
     background: var(--dark);
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     overflow: hidden;
 
     .cn-hero-inner {
@@ -17698,7 +17698,7 @@ body.about-page,
     width: 100%;
     min-height: 80vh;
     background: var(--dark);
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     overflow: hidden;
 
     .tm-mosaic {
@@ -18335,7 +18335,7 @@ body.about-page,
     width: 100%;
     min-height: 80vh;
     background: var(--dark);
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     overflow: hidden;
 
     .pr-hero-inner {
@@ -19158,7 +19158,7 @@ body.about-page,
     width: 100%;
     min-height: 80vh;
     background: var(--dark);
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -19694,7 +19694,7 @@ body.about-page,
     width: 100%;
     min-height: 80vh;
     background: var(--dark);
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -20546,7 +20546,7 @@ body.about-page,
     width: 100%;
     min-height: 80vh;
     background: var(--dark);
-    padding: 120px 60px 60px;
+    padding: 90px 60px 60px;
     overflow: hidden;
 
     .cn2-hero-noise {
@@ -21720,7 +21720,7 @@ body.team-page {
     min-height: 80vh;
     min-height: 100svh;
     background: var(--dark);
-    padding: 120px 60px 140px;
+    padding: 90px 60px 140px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -23226,7 +23226,7 @@ body.price-page {
     min-height: 80vh;
     min-height: 100svh;
     background: var(--dark);
-    padding: 120px 60px 140px;
+    padding: 90px 60px 140px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -24534,7 +24534,7 @@ body.contact-page {
     width: 100%;
     min-height: auto;
     background: var(--dark);
-    padding: 120px 60px 140px;
+    padding: 90px 60px 140px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
