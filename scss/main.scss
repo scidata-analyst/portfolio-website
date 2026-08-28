@@ -17687,3 +17687,640 @@ body.about-page,
         grid-template-columns: 1fr;
     }
 }
+
+// =============================================================================
+// TEAM PAGE - COMPLETELY UNIQUE (mosaic hero + deck stack + polaroid wall)
+// =============================================================================
+
+// ---------- MOSAIC HERO (overlapping portrait tiles) ----------
+.tm-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--dark);
+    padding: 120px 60px 60px;
+    overflow: hidden;
+
+    .tm-mosaic {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, minmax(180px, 1fr));
+        gap: 16px;
+        max-width: 600px;
+        margin: 0 auto 60px;
+    }
+
+    .tm-mosaic-tile {
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+        transition: all var(--transition-smooth);
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+            border-color: rgba(11, 189, 41, 0.3);
+            z-index: 2;
+
+            .tm-mosaic-num {
+                opacity: 1;
+            }
+
+            .tm-mosaic-label {
+                color: var(--accent);
+            }
+        }
+
+        &--1 {
+            background: rgba(11, 189, 41, 0.08);
+        }
+
+        &--2 {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        &--3 {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        &--4 {
+            background: rgba(11, 189, 41, 0.05);
+        }
+
+        &--5 {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        &--6 {
+            background: rgba(11, 189, 41, 0.06);
+        }
+    }
+
+    .tm-mosaic-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .tm-mosaic-num {
+        font-size: 0.65rem;
+        font-weight: 700;
+        color: var(--accent);
+        opacity: 0.5;
+        transition: opacity var(--transition-fast);
+    }
+
+    .tm-mosaic-label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.5);
+        transition: color var(--transition-fast);
+    }
+
+    .tm-hero-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .tm-hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 24px;
+
+        .tm-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+    }
+
+    .tm-hero-headline {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        line-height: 1;
+        margin: 0 0 20px;
+        letter-spacing: -0.02em;
+
+        .tm-headline-accent {
+            color: var(--accent);
+        }
+    }
+
+    .tm-hero-text {
+        font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0;
+    }
+
+    .tm-hero-scroll {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .tm-scroll-orb {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .tm-scroll-orb-fill {
+            width: 100%;
+            height: 0%;
+            background: var(--accent);
+            border-radius: 50%;
+            transition: height 0.3s ease;
+        }
+
+        span {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+// ---------- DECK STACK (flip-card team members) ----------
+.tm-members {
+    padding: var(--section-padding) 60px;
+    background: var(--wheat);
+
+    .tm-members-header {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .tm-members-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 16px;
+
+        .tm-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+
+    .tm-members-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        margin: 0;
+
+        em {
+            -webkit-text-stroke: 2px var(--dark);
+            -webkit-text-fill-color: transparent;
+            font-style: normal;
+        }
+    }
+}
+
+.tm-deck {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tm-deck-card {
+    perspective: 1000px;
+    height: 380px;
+    cursor: pointer;
+
+    &:hover .tm-deck-card-front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .tm-deck-card-back {
+        transform: rotateY(0deg);
+    }
+}
+
+.tm-deck-card-front,
+.tm-deck-card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tm-deck-card-front {
+    background: var(--light);
+    border: 1px solid rgba(10, 10, 10, 0.04);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.tm-deck-card-back {
+    background: var(--dark);
+    transform: rotateY(180deg);
+}
+
+.tm-deck-num {
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1;
+    -webkit-text-stroke: 1.5px rgba(11, 189, 41, 0.2);
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.tm-deck-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background: rgba(11, 189, 41, 0.1);
+    border: 2px solid rgba(11, 189, 41, 0.2);
+}
+
+.tm-deck-name {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin: 0 0 8px;
+}
+
+.tm-deck-role {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(10, 10, 10, 0.4);
+}
+
+.tm-deck-bio {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 24px;
+}
+
+.tm-deck-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+
+    span {
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent);
+        background: rgba(11, 189, 41, 0.1);
+        padding: 6px 12px;
+        border-radius: 12px;
+    }
+}
+
+// ---------- POLAROID WALL (scattered polaroid culture) ----------
+.tm-culture {
+    padding: var(--section-padding) 60px;
+    background: var(--dark);
+
+    .tm-culture-header {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .tm-culture-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 16px;
+
+        .tm-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+
+    .tm-culture-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        margin: 0;
+
+        em {
+            color: var(--accent);
+            font-style: normal;
+        }
+    }
+}
+
+.tm-polaroid-wall {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tm-polaroid {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 32px 28px;
+    transition: all var(--transition-smooth);
+
+    &:hover {
+        transform: translateY(-6px) rotate(0deg) !important;
+        border-color: rgba(11, 189, 41, 0.2);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    &--1 {
+        transform: rotate(-2deg);
+    }
+
+    &--2 {
+        transform: rotate(1deg);
+    }
+
+    &--3 {
+        transform: rotate(-1deg);
+    }
+
+    &--4 {
+        transform: rotate(2deg);
+    }
+
+    &--5 {
+        transform: rotate(-1.5deg);
+    }
+
+    .tm-polaroid-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(11, 189, 41, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+        }
+    }
+
+    .tm-polaroid-name {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        margin: 0 0 12px;
+    }
+
+    .tm-polaroid-text {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0;
+    }
+}
+
+// ---------- STATS (ticking counters) ----------
+.tm-stats {
+    padding: var(--section-padding) 60px;
+    background: var(--accent);
+
+    .tm-stats-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .tm-stat-item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .tm-stat-number {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        line-height: 1;
+        color: var(--dark);
+    }
+
+    .tm-stat-suffix {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 900;
+        color: var(--dark);
+        opacity: 0.5;
+    }
+
+    .tm-stat-label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: rgba(10, 10, 10, 0.5);
+        margin-top: 8px;
+    }
+
+    .tm-stat-divider {
+        width: 1px;
+        height: 60px;
+        background: rgba(10, 10, 10, 0.1);
+    }
+}
+
+// ---------- JOIN TEAM ----------
+.tm-join {
+    padding: var(--section-padding) 60px;
+    background: var(--wheat);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    .tm-join-inner {
+        position: relative;
+        z-index: 2;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .tm-join-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 20px;
+
+        .tm-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+
+    .tm-join-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        line-height: 1.1;
+        margin: 0 0 20px;
+
+        em {
+            -webkit-text-stroke: 2px var(--dark);
+            -webkit-text-fill-color: transparent;
+            font-style: normal;
+        }
+    }
+
+    .tm-join-text {
+        font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+        line-height: 1.7;
+        color: rgba(10, 10, 10, 0.5);
+        margin: 0 0 32px;
+    }
+
+    .tm-join-deco {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+
+        .tm-join-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+
+            &--1 {
+                width: 300px;
+                height: 300px;
+                background: rgba(11, 189, 41, 0.06);
+                top: -80px;
+                right: -80px;
+            }
+
+            &--2 {
+                width: 200px;
+                height: 200px;
+                background: rgba(11, 189, 41, 0.04);
+                bottom: -60px;
+                left: -60px;
+            }
+        }
+    }
+}
+
+// ---------- TEAM RESPONSIVE ----------
+@media (max-width: 1024px) {
+    .tm-deck {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tm-polaroid-wall {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tm-stats .tm-stats-inner {
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .tm-stat-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .tm-hero {
+        padding: 100px 24px 60px;
+    }
+
+    .tm-hero .tm-mosaic {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .tm-members,
+    .tm-culture,
+    .tm-stats,
+    .tm-join {
+        padding: 80px 24px;
+    }
+
+    .tm-deck {
+        grid-template-columns: 1fr;
+    }
+
+    .tm-polaroid-wall {
+        grid-template-columns: 1fr;
+    }
+
+    .tm-polaroid--1,
+    .tm-polaroid--2,
+    .tm-polaroid--3,
+    .tm-polaroid--4,
+    .tm-polaroid--5 {
+        transform: rotate(0deg);
+    }
+}

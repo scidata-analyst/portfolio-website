@@ -25,25 +25,42 @@
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
-            <div class="loader-text">TEAM</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
+            <div class="loader-brand">TEAM</div>
+            <div class="loader-percentage"><span class="loader-num">0</span>%</div>
+            <div class="loader-track">
+                <div class="loader-fill"></div>
             </div>
+            <div class="loader-tagline">Meeting the Team</div>
         </div>
     </div>
+    <!-- LOADER END -->
 
     <!-- CUSTOM CURSOR -->
-    <div class="cursor" data-cursor></div>
-    <div class="cursor-follower" data-cursor-follower></div>
+    <div class="cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-label"></div>
+    </div>
+    <!-- CUSTOM CURSOR END -->
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <!-- SCROLL PROGRESS END -->
 
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="nav-logo">
-            <a href="/"><img src="img/logo.png" alt="Scidata Analyst"></a>
+            <a href="/" class="nav-logo-link">
+                <span class="nav-logo-icon">S</span>
+                <span class="nav-logo-text">SCIDATA</span>
+            </a>
         </div>
         <div class="nav-menu-trigger" data-menu-trigger>
-            <span class="menu-text">Menu</span>
-            <div class="menu-icon">
+            <span class="menu-label">Menu</span>
+            <div class="menu-burger">
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -51,171 +68,211 @@
     </nav>
 
     <div class="nav-overlay" data-nav-overlay>
-        <div class="nav-overlay-inner">
+        <div class="nav-overlay-bg"></div>
+        <div class="nav-overlay-content">
             <div class="nav-overlay-links">
-                <a href="/" class="nav-link-magnetic" data-magnetic>Home</a>
-                <a href="work.html" class="nav-link-magnetic" data-magnetic>Work</a>
-                <a href="about.html" class="nav-link-magnetic" data-magnetic>About</a>
-                <a href="team.html" class="nav-link-magnetic" data-magnetic>Team</a>
-                <a href="consultation.html" class="nav-link-magnetic" data-magnetic>Consultation</a>
-                <a href="price_offer.html" class="nav-link-magnetic" data-magnetic>Pricing</a>
-                <a href="contact.html" class="nav-link-magnetic" data-magnetic>Contact</a>
+                <a href="/" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">01</span>
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="work.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">02</span>
+                    <span class="nav-link-text">Work</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="about.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">03</span>
+                    <span class="nav-link-text">About</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="team.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">04</span>
+                    <span class="nav-link-text">Team</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="consultation.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">05</span>
+                    <span class="nav-link-text">Consultation</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="price_offer.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">06</span>
+                    <span class="nav-link-text">Pricing</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="contact.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">07</span>
+                    <span class="nav-link-text">Contact</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
             </div>
-            <div class="nav-overlay-info">
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Email</span>
-                    <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+            <div class="nav-overlay-footer">
+                <div class="nav-overlay-info">
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Email</span>
+                        <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Phone</span>
+                        <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Address</span>
+                        <span>2001 Victoria Court, NY</span>
+                    </div>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Phone</span>
-                    <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                <div class="nav-overlay-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Address</span>
-                    <span>2001 Victoria Court, NY</span>
-                </div>
-            </div>
-            <div class="nav-overlay-social">
-                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
-                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
-                <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
-                <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
             </div>
         </div>
     </div>
+    <!-- NAVIGATION END -->
 
-    <!-- TEAM HERO - EDITORIAL OVERLAPPING STYLE -->
-    <section class="team-hero">
-        <div class="team-hero-grid">
-            <div class="team-hero-left">
-                <div class="team-hero-eyebrow reveal-text">The People</div>
-                <h1 class="team-hero-title">
-                    <span class="team-title-line reveal-text">We're</span>
-                    <span class="team-title-line team-title-stroke reveal-text">not</span>
-                    <span class="team-title-line reveal-text">ordinary</span>
-                </h1>
-                <p class="team-hero-sub reveal-text">
-                    A crew of designers, developers, and dreamers who believe code can change the world. We don't follow trends — we set them.
-                </p>
-            </div>
-            <div class="team-hero-right">
-                <div class="team-hero-portrait">
-                    <div class="portrait-frame">
-                        <div class="portrait-img portrait-img--1"></div>
-                        <div class="portrait-img portrait-img--2"></div>
-                        <div class="portrait-img portrait-img--3"></div>
-                    </div>
-                    <div class="portrait-accent"></div>
+    <!-- TEAM - MOSAIC HERO (unique overlapping portrait tiles) -->
+    <section class="tm-hero">
+        <div class="tm-mosaic">
+            <div class="tm-mosaic-tile tm-mosaic-tile--1" data-tile>
+                <div class="tm-mosaic-inner">
+                    <span class="tm-mosaic-num">01</span>
+                    <span class="tm-mosaic-label">Founder</span>
                 </div>
-                <div class="team-hero-stat">
-                    <span class="stat-big" data-count="12">0</span>
-                    <span class="stat-label">Minds collaborating</span>
+            </div>
+            <div class="tm-mosaic-tile tm-mosaic-tile--2" data-tile>
+                <div class="tm-mosaic-inner">
+                    <span class="tm-mosaic-num">02</span>
+                    <span class="tm-mosaic-label">Design</span>
+                </div>
+            </div>
+            <div class="tm-mosaic-tile tm-mosaic-tile--3" data-tile>
+                <div class="tm-mosaic-inner">
+                    <span class="tm-mosaic-num">03</span>
+                    <span class="tm-mosaic-label">Backend</span>
+                </div>
+            </div>
+            <div class="tm-mosaic-tile tm-mosaic-tile--4" data-tile>
+                <div class="tm-mosaic-inner">
+                    <span class="tm-mosaic-num">04</span>
+                    <span class="tm-mosaic-label">AI/ML</span>
+                </div>
+            </div>
+            <div class="tm-mosaic-tile tm-mosaic-tile--5" data-tile>
+                <div class="tm-mosaic-inner">
+                    <span class="tm-mosaic-num">05</span>
+                    <span class="tm-mosaic-label">DevOps</span>
+                </div>
+            </div>
+            <div class="tm-mosaic-tile tm-mosaic-tile--6" data-tile>
+                <div class="tm-mosaic-inner">
+                    <span class="tm-mosaic-num">06</span>
+                    <span class="tm-mosaic-label">Strategy</span>
                 </div>
             </div>
         </div>
-        <div class="team-hero-marquee" aria-hidden="true">
-            <div class="team-marquee-track">
-                <span>Design</span><span class="dash">—</span>
-                <span>Code</span><span class="dash">—</span>
-                <span>Strategy</span><span class="dash">—</span>
-                <span>Innovation</span><span class="dash">—</span>
-                <span>Excellence</span><span class="dash">—</span>
-                <span>Design</span><span class="dash">—</span>
-                <span>Code</span><span class="dash">—</span>
-                <span>Strategy</span><span class="dash">—</span>
-                <span>Innovation</span><span class="dash">—</span>
-                <span>Excellence</span><span class="dash">—</span>
+        <div class="tm-hero-content">
+            <span class="tm-hero-tag"><span class="tm-tag-dot"></span> The People</span>
+            <h1 class="tm-hero-headline">We're not<br><span class="tm-headline-accent">ordinary.</span></h1>
+            <p class="tm-hero-text">A crew of designers, developers, and dreamers who believe code can change the world. We don't follow trends — we set them.</p>
+        </div>
+        <div class="tm-hero-scroll" aria-hidden="true">
+            <div class="tm-scroll-orb">
+                <div class="tm-scroll-orb-fill"></div>
             </div>
+            <span>MEET US</span>
         </div>
     </section>
 
-    <!-- TEAM ROSTER - ASYMMETRICAL BENTO GRID -->
-    <section class="team-roster">
-        <div class="roster-header">
-            <span class="roster-eyebrow reveal-text">Meet Everyone</span>
-            <h2 class="roster-title reveal-text">The <em>Lineup</em></h2>
+    <!-- TEAM MEMBERS - DECK STACK (unique flip-card deck) -->
+    <section class="tm-members">
+        <div class="tm-members-header">
+            <span class="tm-members-tag"><span class="tm-tag-dot"></span> Meet Everyone</span>
+            <h2 class="tm-members-title">The <em>Lineup</em></h2>
         </div>
-        <div class="roster-grid">
-            <div class="roster-card roster-card--lg" data-tilt>
-                <div class="roster-card-inner">
-                    <div class="roster-number">01</div>
-                    <div class="roster-avatar roster-avatar--founder"></div>
-                    <div class="roster-info">
-                        <h3 class="roster-name">Kanchon Sheel</h3>
-                        <span class="roster-role">Founder & Lead Developer</span>
-                        <p class="roster-bio">Visionary coder who turns impossible ideas into shipped products. Believes every pixel has a purpose.</p>
-                    </div>
-                    <div class="roster-skills">
+        <div class="tm-deck">
+            <div class="tm-deck-card tm-deck-card--1" data-deck>
+                <div class="tm-deck-card-front">
+                    <div class="tm-deck-num">01</div>
+                    <div class="tm-deck-avatar tm-deck-avatar--founder"></div>
+                    <h3 class="tm-deck-name">Kanchon Sheel</h3>
+                    <span class="tm-deck-role">Founder & Lead Developer</span>
+                </div>
+                <div class="tm-deck-card-back">
+                    <p class="tm-deck-bio">Visionary coder who turns impossible ideas into shipped products. Believes every pixel has a purpose.</p>
+                    <div class="tm-deck-skills">
                         <span>Laravel</span><span>React</span><span>Strategy</span>
                     </div>
                 </div>
             </div>
-            <div class="roster-card roster-card--sm" data-tilt>
-                <div class="roster-card-inner">
-                    <div class="roster-number">02</div>
-                    <div class="roster-avatar roster-avatar--design"></div>
-                    <div class="roster-info">
-                        <h3 class="roster-name">Sarah Chen</h3>
-                        <span class="roster-role">Creative Director</span>
-                        <p class="roster-bio">Designs experiences that make people feel something.</p>
-                    </div>
-                    <div class="roster-skills">
+            <div class="tm-deck-card tm-deck-card--2" data-deck>
+                <div class="tm-deck-card-front">
+                    <div class="tm-deck-num">02</div>
+                    <div class="tm-deck-avatar tm-deck-avatar--design"></div>
+                    <h3 class="tm-deck-name">Sarah Chen</h3>
+                    <span class="tm-deck-role">Creative Director</span>
+                </div>
+                <div class="tm-deck-card-back">
+                    <p class="tm-deck-bio">Designs experiences that make people feel something. Obsessed with typography and micro-interactions.</p>
+                    <div class="tm-deck-skills">
                         <span>UI/UX</span><span>Figma</span>
                     </div>
                 </div>
             </div>
-            <div class="roster-card roster-card--sm" data-tilt>
-                <div class="roster-card-inner">
-                    <div class="roster-number">03</div>
-                    <div class="roster-avatar roster-avatar--backend"></div>
-                    <div class="roster-info">
-                        <h3 class="roster-name">Marcus Johnson</h3>
-                        <span class="roster-role">Backend Engineer</span>
-                        <p class="roster-bio">Builds systems that scale to millions without breaking a sweat.</p>
-                    </div>
-                    <div class="roster-skills">
+            <div class="tm-deck-card tm-deck-card--3" data-deck>
+                <div class="tm-deck-card-front">
+                    <div class="tm-deck-num">03</div>
+                    <div class="tm-deck-avatar tm-deck-avatar--backend"></div>
+                    <h3 class="tm-deck-name">Marcus Johnson</h3>
+                    <span class="tm-deck-role">Backend Engineer</span>
+                </div>
+                <div class="tm-deck-card-back">
+                    <p class="tm-deck-bio">Builds systems that scale to millions without breaking a sweat. Database whisperer.</p>
+                    <div class="tm-deck-skills">
                         <span>Node.js</span><span>Python</span>
                     </div>
                 </div>
             </div>
-            <div class="roster-card roster-card--md" data-tilt>
-                <div class="roster-card-inner">
-                    <div class="roster-number">04</div>
-                    <div class="roster-avatar roster-avatar--ai"></div>
-                    <div class="roster-info">
-                        <h3 class="roster-name">Dr. Aisha Patel</h3>
-                        <span class="roster-role">AI/ML Engineer</span>
-                        <p class="roster-bio">Teaches machines to think. Published researcher with a passion for practical AI that solves real problems.</p>
-                    </div>
-                    <div class="roster-skills">
+            <div class="tm-deck-card tm-deck-card--4" data-deck>
+                <div class="tm-deck-card-front">
+                    <div class="tm-deck-num">04</div>
+                    <div class="tm-deck-avatar tm-deck-avatar--ai"></div>
+                    <h3 class="tm-deck-name">Dr. Aisha Patel</h3>
+                    <span class="tm-deck-role">AI/ML Engineer</span>
+                </div>
+                <div class="tm-deck-card-back">
+                    <p class="tm-deck-bio">Teaches machines to think. Published researcher with a passion for practical AI that solves real problems.</p>
+                    <div class="tm-deck-skills">
                         <span>TensorFlow</span><span>LLMs</span><span>Data</span>
                     </div>
                 </div>
             </div>
-            <div class="roster-card roster-card--md" data-tilt>
-                <div class="roster-card-inner">
-                    <div class="roster-number">05</div>
-                    <div class="roster-avatar roster-avatar--devops"></div>
-                    <div class="roster-info">
-                        <h3 class="roster-name">Leo Torres</h3>
-                        <span class="roster-role">DevOps Lead</span>
-                        <p class="roster-bio">Keeps the infrastructure humming. Automation enthusiast who dreams in YAML.</p>
-                    </div>
-                    <div class="roster-skills">
+            <div class="tm-deck-card tm-deck-card--5" data-deck>
+                <div class="tm-deck-card-front">
+                    <div class="tm-deck-num">05</div>
+                    <div class="tm-deck-avatar tm-deck-avatar--devops"></div>
+                    <h3 class="tm-deck-name">Leo Torres</h3>
+                    <span class="tm-deck-role">DevOps Lead</span>
+                </div>
+                <div class="tm-deck-card-back">
+                    <p class="tm-deck-bio">Keeps the infrastructure humming. Automation enthusiast who dreams in YAML.</p>
+                    <div class="tm-deck-skills">
                         <span>AWS</span><span>Docker</span><span>CI/CD</span>
                     </div>
                 </div>
             </div>
-            <div class="roster-card roster-card--sm" data-tilt>
-                <div class="roster-card-inner">
-                    <div class="roster-number">06</div>
-                    <div class="roster-avatar roster-avatar--strategy"></div>
-                    <div class="roster-info">
-                        <h3 class="roster-name">Nina Kowalski</h3>
-                        <span class="roster-role">Strategy Lead</span>
-                        <p class="roster-bio">Translates business goals into digital roadmaps.</p>
-                    </div>
-                    <div class="roster-skills">
+            <div class="tm-deck-card tm-deck-card--6" data-deck>
+                <div class="tm-deck-card-front">
+                    <div class="tm-deck-num">06</div>
+                    <div class="tm-deck-avatar tm-deck-avatar--strategy"></div>
+                    <h3 class="tm-deck-name">Nina Kowalski</h3>
+                    <span class="tm-deck-role">Strategy Lead</span>
+                </div>
+                <div class="tm-deck-card-back">
+                    <p class="tm-deck-bio">Translates business goals into digital roadmaps. Growth hacker with a love for data-driven decisions.</p>
+                    <div class="tm-deck-skills">
                         <span>Growth</span><span>SEO</span>
                     </div>
                 </div>
@@ -223,170 +280,132 @@
         </div>
     </section>
 
-    <!-- TEAM CULTURE - HORIZONTAL SCROLL STORYTELLING -->
-    <section class="team-culture">
-        <div class="culture-sticky">
-            <div class="culture-header">
-                <span class="culture-eyebrow reveal-text">How We Work</span>
-                <h2 class="culture-title reveal-text">Our <em>Culture</em></h2>
-            </div>
+    <!-- CULTURE - POLAROID WALL (unique scattered polaroid layout) -->
+    <section class="tm-culture">
+        <div class="tm-culture-header">
+            <span class="tm-culture-tag"><span class="tm-tag-dot"></span> How We Work</span>
+            <h2 class="tm-culture-title">Our <em>Culture</em></h2>
         </div>
-        <div class="culture-track" data-horizontal-scroll>
-            <div class="culture-panel">
-                <div class="culture-card">
-                    <div class="culture-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="32" cy="32" r="28"/>
-                            <path d="M32 18v14l10 10"/>
-                        </svg>
+        <div class="tm-polaroid-wall">
+            <div class="tm-polaroid tm-polaroid--1" data-polaroid>
+                <div class="tm-polaroid-inner">
+                    <div class="tm-polaroid-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                     </div>
-                    <h3 class="culture-name">No 9-to-5</h3>
-                    <p class="culture-text">We work when we're most creative. Early bird or night owl — what matters is the output, not the clock.</p>
+                    <h3 class="tm-polaroid-name">No 9-to-5</h3>
+                    <p class="tm-polaroid-text">We work when we're most creative. Early bird or night owl — what matters is the output.</p>
                 </div>
             </div>
-            <div class="culture-panel">
-                <div class="culture-card">
-                    <div class="culture-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 52V28l20-16 20 16v24H12z"/>
-                            <path d="M26 52V38h12v14"/>
-                        </svg>
+            <div class="tm-polaroid tm-polaroid--2" data-polaroid>
+                <div class="tm-polaroid-inner">
+                    <div class="tm-polaroid-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     </div>
-                    <h3 class="culture-name">Remote First</h3>
-                    <p class="culture-text">Our team spans time zones. We've mastered async communication and deep work from anywhere on the planet.</p>
+                    <h3 class="tm-polaroid-name">Remote First</h3>
+                    <p class="tm-polaroid-text">Our team spans time zones. We've mastered async communication and deep work.</p>
                 </div>
             </div>
-            <div class="culture-panel">
-                <div class="culture-card">
-                    <div class="culture-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M8 48l12-24 12 16 12-32 12 24"/>
-                        </svg>
+            <div class="tm-polaroid tm-polaroid--3" data-polaroid>
+                <div class="tm-polaroid-inner">
+                    <div class="tm-polaroid-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
                     </div>
-                    <h3 class="culture-name">Learn & Share</h3>
-                    <p class="culture-text">Every Friday is exploration day. We experiment, teach each other, and push the boundaries of what we know.</p>
+                    <h3 class="tm-polaroid-name">Learn & Share</h3>
+                    <p class="tm-polaroid-text">Every Friday is exploration day. We experiment, teach each other, and push boundaries.</p>
                 </div>
             </div>
-            <div class="culture-panel">
-                <div class="culture-card">
-                    <div class="culture-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M32 8l6 12 14 2-10 10 2 14-12-6-12 6 2-14-10-10 14-2z"/>
-                        </svg>
+            <div class="tm-polaroid tm-polaroid--4" data-polaroid>
+                <div class="tm-polaroid-inner">
+                    <div class="tm-polaroid-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                    <h3 class="culture-name">Bold Ideas Win</h3>
-                    <p class="culture-text">No idea is too crazy. We reward curiosity, celebrate failures that teach us something, and ship work we're proud of.</p>
+                    <h3 class="tm-polaroid-name">Bold Ideas Win</h3>
+                    <p class="tm-polaroid-text">No idea is too crazy. We reward curiosity and celebrate failures that teach us something.</p>
                 </div>
             </div>
-            <div class="culture-panel">
-                <div class="culture-card">
-                    <div class="culture-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="20" cy="20" r="10"/>
-                            <circle cx="44" cy="20" r="10"/>
-                            <circle cx="32" cy="44" r="10"/>
-                        </svg>
+            <div class="tm-polaroid tm-polaroid--5" data-polaroid>
+                <div class="tm-polaroid-inner">
+                    <div class="tm-polaroid-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
-                    <h3 class="culture-name">One Team</h3>
-                    <p class="culture-text">No egos, no silos. We win together, challenge each other respectfully, and always have each other's backs.</p>
+                    <h3 class="tm-polaroid-name">One Team</h3>
+                    <p class="tm-polaroid-text">No egos, no silos. We win together, challenge each other, and always have each other's backs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TEAM STATS - BOLD NUMBERS -->
-    <section class="team-stats">
-        <div class="team-stats-inner">
-            <div class="team-stat-item reveal-text">
-                <div class="team-stat-number" data-count="5">0</div>
-                <div class="team-stat-label">Years Building</div>
+    <!-- STATS - TICKING COUNTERS (unique animated counters) -->
+    <section class="tm-stats">
+        <div class="tm-stats-inner">
+            <div class="tm-stat-item" data-stat>
+                <div class="tm-stat-number" data-count="5">0</div>
+                <span class="tm-stat-label">YEARS BUILDING</span>
             </div>
-            <div class="team-stat-divider"></div>
-            <div class="team-stat-item reveal-text">
-                <div class="team-stat-number" data-count="50">0</div>
-                <div class="team-stat-suffix">+</div>
-                <div class="team-stat-label">Projects Shipped</div>
+            <div class="tm-stat-divider"></div>
+            <div class="tm-stat-item" data-stat>
+                <div class="tm-stat-number" data-count="50">0</div>
+                <span class="tm-stat-suffix">+</span>
+                <span class="tm-stat-label">PROJECTS SHIPPED</span>
             </div>
-            <div class="team-stat-divider"></div>
-            <div class="team-stat-item reveal-text">
-                <div class="team-stat-number" data-count="30">0</div>
-                <div class="team-stat-suffix">+</div>
-                <div class="team-stat-label">Happy Clients</div>
+            <div class="tm-stat-divider"></div>
+            <div class="tm-stat-item" data-stat>
+                <div class="tm-stat-number" data-count="30">0</div>
+                <span class="tm-stat-suffix">+</span>
+                <span class="tm-stat-label">HAPPY CLIENTS</span>
             </div>
-            <div class="team-stat-divider"></div>
-            <div class="team-stat-item reveal-text">
-                <div class="team-stat-number" data-count="98">0</div>
-                <div class="team-stat-suffix">%</div>
-                <div class="team-stat-label">Retention Rate</div>
+            <div class="tm-stat-divider"></div>
+            <div class="tm-stat-item" data-stat>
+                <div class="tm-stat-number" data-count="98">0</div>
+                <span class="tm-stat-suffix">%</span>
+                <span class="tm-stat-label">RETENTION RATE</span>
             </div>
         </div>
     </section>
 
-    <!-- JOIN TEAM CTA -->
-    <section class="team-join">
-        <div class="team-join-inner">
-            <span class="join-eyebrow reveal-text">Want to join?</span>
-            <h2 class="join-title reveal-text">We're always looking for <em>exceptional</em> people.</h2>
-            <p class="join-text reveal-text">
-                If you're passionate about building great products and pushing creative boundaries, we want to hear from you.
-            </p>
-            <a href="contact.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                <span class="btn-text">Get in Touch</span>
-                <span class="btn-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
+    <!-- JOIN TEAM -->
+    <section class="tm-join">
+        <div class="tm-join-inner">
+            <span class="tm-join-tag"><span class="tm-tag-dot"></span> Want to join?</span>
+            <h2 class="tm-join-title">We're always looking for <em>exceptional</em> people.</h2>
+            <p class="tm-join-text">If you're passionate about building great products and pushing creative boundaries, we want to hear from you.</p>
+            <a href="contact.html" class="btn-magnetic btn-primary" data-magnetic>
+                <span class="btn-label">Get in Touch</span>
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </span>
             </a>
         </div>
-        <div class="team-join-deco">
-            <div class="join-blob join-blob--1"></div>
-            <div class="join-blob join-blob--2"></div>
+        <div class="tm-join-deco">
+            <div class="tm-join-blob tm-join-blob--1"></div>
+            <div class="tm-join-blob tm-join-blob--2"></div>
         </div>
     </section>
 
-    <!-- CTA SECTION -->
-    <section class="cta-section">
+    <!-- CTA -->
+    <section class="cta-section" data-section>
         <div class="cta-bg-text" aria-hidden="true">JOIN</div>
-        <div class="cta-content">
-            <h2 class="cta-title reveal-text">
+        <div class="cta-inner">
+            <h2 class="cta-headline">
                 Ready to build<br>
-                <span class="cta-title-accent">something great?</span>
+                <span class="cta-accent">something great?</span>
             </h2>
-            <p class="cta-description reveal-text">
-                Let's discuss your project and explore how we can help you achieve your goals.
-            </p>
-            <a href="contact.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                <span class="btn-text">Get in Touch</span>
-                <span class="btn-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
+            <p class="cta-subtext">Let's discuss your project and explore how we can help you achieve your goals.</p>
+            <a href="contact.html" class="btn-magnetic btn-cta-large" data-magnetic>
+                <span class="btn-label">Get in Touch</span>
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </span>
             </a>
         </div>
         <div class="cta-deco">
-            <div class="deco-circle deco-circle--large"></div>
+            <div class="deco-ring deco-ring--1"></div>
+            <div class="deco-ring deco-ring--2"></div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-blob"></div>
-        <div class="footer-cta">
-            <div class="footer-cta-inner">
-                <span class="footer-cta-eyebrow">Got a project in mind?</span>
-                <a href="contact.html" class="footer-cta-title">
-                    <span>Let's build</span>
-                    <span class="footer-cta-accent">something great</span>
-                </a>
-            </div>
-            <a href="contact.html" class="footer-cta-circle" aria-label="Start a project">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-            </a>
-        </div>
         <div class="footer-marquee" aria-hidden="true">
             <div class="footer-marquee-track">
                 <span>Web Development</span><span class="dot">✦</span>
@@ -405,24 +424,32 @@
                 <span>Cloud &amp; Hosting</span><span class="dot">✦</span>
             </div>
         </div>
-        <div class="footer-main">
+        <div class="footer-cta">
+            <div class="footer-cta-text">
+                <span class="footer-cta-label">Got a project in mind?</span>
+                <a href="contact.html" class="footer-cta-title">
+                    <span>Let's build</span>
+                    <span class="footer-cta-accent">something great</span>
+                </a>
+            </div>
+            <a href="contact.html" class="footer-cta-btn" aria-label="Start a project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+        </div>
+        <div class="footer-body">
             <div class="footer-col footer-brand">
-                <div class="footer-brand-inner">
-                    <a href="/" class="footer-logo-link">
-                        <img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo">
-                    </a>
-                    <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
-                </div>
+                <a href="/" class="footer-logo-link"><img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo"></a>
+                <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-title">Stay in the loop</label>
-                    <div class="footer-newsletter-form">
+                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <div class="footer-newsletter-row">
                         <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
-                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                     </div>
                 </form>
             </div>
             <div class="footer-col footer-links">
-                <h3 class="footer-heading">Explore</h3>
+                <h3 class="footer-col-title">Explore</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="work.html">Work</a></li>
@@ -434,7 +461,7 @@
                 </ul>
             </div>
             <div class="footer-col footer-services">
-                <h3 class="footer-heading">Services</h3>
+                <h3 class="footer-col-title">Services</h3>
                 <ul>
                     <li><a href="contact.html">Web Development</a></li>
                     <li><a href="contact.html">Software Development</a></li>
@@ -442,30 +469,27 @@
                     <li><a href="contact.html">DevOps &amp; Support</a></li>
                 </ul>
             </div>
-            <div class="footer-col footer-contact">
-                <h3 class="footer-heading">Connect</h3>
+            <div class="footer-col footer-connect">
+                <h3 class="footer-col-title">Connect</h3>
                 <ul class="footer-contact-list">
-                    <li><a href="tel:+0000000000000"><i class="fa-solid fa-phone"></i> <span>(+00) 000 00 0000 00</span></a></li>
-                    <li><a href="mailto:info@scidata-analyst.com"><i class="fa-solid fa-envelope"></i> <span>info@scidata-analyst.com</span></a></li>
-                    <li class="footer-address"><i class="fa-solid fa-location-dot"></i> <span>2001 Victoria Court, NY</span></li>
+                    <li><a href="tel:+0000000000000"><span class="contact-icon">📞</span><span>(+00) 000 00 0000 00</span></a></li>
+                    <li><a href="mailto:info@scidata-analyst.com"><span class="contact-icon">✉</span><span>info@scidata-analyst.com</span></a></li>
+                    <li class="footer-address"><span class="contact-icon">📍</span><span>2001 Victoria Court, NY</span></li>
                 </ul>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
-                    <a href="https://join.skype.com/invite/YYXzSmJkfjpD" target="_blank" aria-label="Skype"><i class="fa-brands fa-skype"></i></a>
-                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook">FB</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn">LI</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter">TW</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp">WA</a>
                 </div>
             </div>
         </div>
-        <div class="footer-divider"></div>
         <div class="footer-bottom">
-            <div class="footer-bottom-inner">
-                <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
-                <button class="footer-totop" type="button" aria-label="Back to top">
-                    <i class="fa-solid fa-arrow-up"></i> Back to top
-                </button>
-            </div>
+            <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
+            <button class="footer-totop" type="button" aria-label="Back to top">
+                <span>Back to top</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </button>
         </div>
     </footer>
 
