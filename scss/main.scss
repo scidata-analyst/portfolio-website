@@ -13729,6 +13729,15 @@ body.about-page,
 
                 .contact-icon {
                     font-size: 0.9rem;
+                    color: var(--accent);
+                    width: 32px;
+                    height: 32px;
+                    border: 1px solid rgba(11, 189, 41, 0.3);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
                 }
             }
         }
@@ -13746,9 +13755,8 @@ body.about-page,
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 0.65rem;
-                font-weight: 700;
-                color: rgba(255, 255, 255, 0.5);
+                font-size: 1rem;
+                color: rgba(255, 255, 255, 0.7);
                 text-decoration: none;
                 transition: all var(--transition-fast);
 
@@ -13756,6 +13764,7 @@ body.about-page,
                     background: var(--accent);
                     border-color: var(--accent);
                     color: var(--dark);
+                    transform: translateY(-3px);
                 }
             }
         }
