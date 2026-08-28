@@ -6968,6 +6968,14 @@ body.home-page,
             &--ai .service-card {
                 border-top: 3px solid $color-accent-glow;
             }
+
+            &--seo .service-card {
+                border-top: 3px solid #ff6b35;
+            }
+
+            &--chatbot .service-card {
+                border-top: 3px solid #a855f7;
+            }
         }
     }
 }
