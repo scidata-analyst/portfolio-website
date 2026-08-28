@@ -18,7 +18,7 @@ if (cursor && !('ontouchstart' in window)) {
     }
     animateCursor();
 
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .cn-step-card, .cn-form-card, .cn-faq-card');
+    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .cn2-service-card, .cn2-happens-node, .cn2-faq-item, .cn2-form-card');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
@@ -132,12 +132,13 @@ setTimeout(() => {
 function revealHero() {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.fromTo('.cn-chat-window', { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 1, ease: 'back.out(1.7)' })
-      .fromTo('.cn-message', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.15 }, '-=0.5')
-      .fromTo('.cn-hero-tag', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.cn-hero-headline', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.5')
-      .fromTo('.cn-hero-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.cn-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.cn2-hero-eyebrow', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
+      .fromTo('.cn2-hero-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
+      .fromTo('.cn2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
+      .fromTo('.cn2-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
+      .fromTo('.cn2-visual-frame', { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 1, ease: 'back.out(1.7)' }, '-=0.8')
+      .fromTo('.cn2-hero-stats', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
+      .fromTo('.cn2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
 }
 
 // ============================================
@@ -151,19 +152,19 @@ window.addEventListener('scroll', () => {
         scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
     }
 
-    // Chat scroll fill
-    const chatFill = document.querySelector('.cn-scroll-fill');
-    if (chatFill) {
+    // Scroll fill
+    const scrollFill = document.querySelector('.cn2-scroll-fill');
+    if (scrollFill) {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        chatFill.style.width = Math.min((scrollTop / docHeight) * 100, 100) + '%';
+        scrollFill.style.height = Math.min((scrollTop / docHeight) * 100, 100) + '%';
     }
 }, { passive: true });
 
 // ============================================
 // SCROLL REVEAL
 // ============================================
-const revealEls = document.querySelectorAll('.cn-services-tag, .cn-services-title, .cn-service-card, .cn-benefits-tag, .cn-benefits-title, .cn-journey-step, .cn-service-tag, .cn-service-title, .cn-service-pillar, .cn-form-tag, .cn-form-title, .cn-form-intro, .cn-form-card, .cn-faq-tag, .cn-faq-title, .cn-faq-item, .cta-headline, .cta-subtext');
+const revealEls = document.querySelectorAll('.cn2-services-tag, .cn2-services-title, .cn2-services-intro, .cn2-service-card, .cn2-benefits-tag, .cn2-benefits-title, .cn2-benefit-row, .cn2-happens-tag, .cn2-happens-title, .cn2-happens-node, .cn2-faq-tag, .cn2-faq-title, .cn2-faq-item, .cn2-form-tag, .cn2-form-title, .cn2-form-intro, .cn2-form-card, .cta-headline, .cta-subtext');
 
 revealEls.forEach(el => {
     gsap.from(el, {
@@ -185,12 +186,12 @@ revealEls.forEach(el => {
 // ============================================
 const faqItems = document.querySelectorAll('[data-faq]');
 faqItems.forEach(item => {
-    const card = item.querySelector('.cn-faq-card');
+    const card = item.querySelector('.cn2-faq-top');
     card.addEventListener('click', () => {
-        const isOpen = item.classList.contains('cn-faq-item--open');
-        faqItems.forEach(i => i.classList.remove('cn-faq-item--open'));
+        const isOpen = item.classList.contains('cn2-faq-item--open');
+        faqItems.forEach(i => i.classList.remove('cn2-faq-item--open'));
         if (!isOpen) {
-            item.classList.add('cn-faq-item--open');
+            item.classList.add('cn2-faq-item--open');
         }
     });
 });
@@ -198,13 +199,26 @@ faqItems.forEach(item => {
 // ============================================
 // FORM INPUT FOCUS
 // ============================================
-const formInputs = document.querySelectorAll('.cn-form-input, .cn-form-select, .cn-form-textarea');
+const formInputs = document.querySelectorAll('.cn2-form-input, .cn2-form-select, .cn2-form-textarea');
 formInputs.forEach(input => {
     input.addEventListener('focus', () => {
         gsap.to(input, { scale: 1.02, duration: 0.3, ease: 'power2.out' });
     });
     input.addEventListener('blur', () => {
         gsap.to(input, { scale: 1, duration: 0.3, ease: 'power2.out' });
+    });
+});
+
+// ============================================
+// SERVICE CARD HOVER
+// ============================================
+const serviceCards = document.querySelectorAll('.cn2-service-card');
+serviceCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, { y: -8, duration: 0.4, ease: 'power2.out' });
+    });
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, { y: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
     });
 });
 

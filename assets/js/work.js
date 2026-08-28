@@ -18,13 +18,13 @@ if (cursor && !('ontouchstart' in window)) {
     }
     animateCursor();
 
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .wk-bento-item, .wk-showcase-frame, .wk-process-node');
+    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .wk2-project-card, .wk2-timeline-node, .wk2-service-card');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
     });
 
-    const viewTargets = document.querySelectorAll('.wk-showcase-frame');
+    const viewTargets = document.querySelectorAll('.wk2-project-img-wrap');
     viewTargets.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursor.classList.add('cursor--view');
@@ -143,14 +143,11 @@ setTimeout(() => {
 function revealHero() {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.fromTo('.wk-bento-tag', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      .fromTo('.wk-bento-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
-      .fromTo('.wk-bento-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.wk-bento-item--img1', { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, '-=0.8')
-      .fromTo('.wk-bento-item--img2', { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, '-=0.6')
-      .fromTo('.wk-bento-item--img3', { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, '-=0.6')
-      .fromTo('.wk-bento-item--img4', { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, '-=0.6')
-      .fromTo('.wk-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.wk2-eyebrow-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
+      .fromTo('.wk2-hero-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
+      .fromTo('.wk2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
+      .fromTo('.wk2-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
+      .fromTo('.wk2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
 }
 
 // ============================================
@@ -163,12 +160,31 @@ window.addEventListener('scroll', () => {
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
     }
+
+    // Timeline fill
+    const timelineFill = document.querySelector('.wk2-timeline-fill');
+    if (timelineFill) {
+        const timelineSection = document.querySelector('.wk2-process');
+        if (timelineSection) {
+            const rect = timelineSection.getBoundingClientRect();
+            const progress = Math.min(Math.max((window.innerHeight - rect.top) / (rect.height + window.innerHeight) * 100, 0), 100);
+            timelineFill.style.height = progress + '%';
+        }
+    }
+
+    // Projects progress
+    const projectsViewport = document.querySelector('.wk2-projects-viewport');
+    const progressFill = document.querySelector('.wk2-progress-fill');
+    if (projectsViewport && progressFill) {
+        const maxScroll = projectsViewport.scrollWidth - projectsViewport.clientWidth;
+        progressFill.style.width = (maxScroll > 0 ? (projectsViewport.scrollLeft / maxScroll) * 100 : 0) + '%';
+    }
 }, { passive: true });
 
 // ============================================
 // SCROLL REVEAL
 // ============================================
-const revealEls = document.querySelectorAll('.wk-projects-tag, .wk-projects-title, .wk-showcase-item, .wk-process-tag, .wk-process-title, .wk-process-node, .cta-headline, .cta-subtext');
+const revealEls = document.querySelectorAll('.wk2-projects-tag, .wk2-projects-title, .wk2-project-card, .wk2-process-tag, .wk2-process-title, .wk2-timeline-node, .cta-headline, .cta-subtext');
 
 revealEls.forEach(el => {
     gsap.from(el, {
@@ -186,33 +202,18 @@ revealEls.forEach(el => {
 });
 
 // ============================================
-// BENTO ITEM PARALLAX
+// PROJECT CARD PARALLAX
 // ============================================
-gsap.to('.wk-bento-item--large', {
-    y: -30,
-    ease: 'none',
-    immediateRender: false,
-    scrollTrigger: {
-        trigger: '.wk-hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1
-    }
-});
-
-// ============================================
-// SHOWCASE IMAGE PARALLAX
-// ============================================
-const showcaseFrames = document.querySelectorAll('.wk-showcase-frame');
-showcaseFrames.forEach(frame => {
-    const img = frame.querySelector('img');
+const projectCards = document.querySelectorAll('.wk2-project-card');
+projectCards.forEach(card => {
+    const img = card.querySelector('img');
     if (img) {
-        gsap.fromTo(img, { y: -30 }, {
-            y: 30,
+        gsap.fromTo(img, { y: -20 }, {
+            y: 20,
             ease: 'none',
             immediateRender: false,
             scrollTrigger: {
-                trigger: frame,
+                trigger: card,
                 start: 'top bottom',
                 end: 'bottom top',
                 scrub: 1
@@ -222,28 +223,15 @@ showcaseFrames.forEach(frame => {
 });
 
 // ============================================
-// PROCESS NODE HOVER
+// TIMELINE NODE HOVER
 // ============================================
-const processNodes = document.querySelectorAll('.wk-process-node');
-processNodes.forEach(node => {
+const timelineNodes = document.querySelectorAll('.wk2-timeline-node');
+timelineNodes.forEach(node => {
     node.addEventListener('mouseenter', () => {
-        gsap.to(node, { scale: 1.08, duration: 0.3, ease: 'power2.out' });
+        gsap.to(node, { x: 6, duration: 0.3, ease: 'power2.out' });
     });
     node.addEventListener('mouseleave', () => {
-        gsap.to(node, { scale: 1, duration: 0.5, ease: 'elastic.out(1, 0.5)' });
-    });
-});
-
-// ============================================
-// MICRO-INTERACTIONS
-// ============================================
-const microEls = document.querySelectorAll('.wk-showcase-item');
-microEls.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        gsap.to(el, { x: 4, duration: 0.3, ease: 'power2.out' });
-    });
-    el.addEventListener('mouseleave', () => {
-        gsap.to(el, { x: 0, duration: 0.3, ease: 'power2.out' });
+        gsap.to(node, { x: 0, duration: 0.3, ease: 'power2.out' });
     });
 });
 
