@@ -10,14 +10,12 @@
         content="Explore a selection of projects delivered by Scidata Analyst, including e-commerce platforms, appointment booking systems, and full-stack business software." />
     <link rel="alternate" href="https://scidata-analyst.com" hreflang="en" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://scidata-analyst.com" />
     <meta property="og:title" content="Our Work - Scidata Analyst | Web, Software & AI Development Agency" />
     <meta property="og:description"
         content="Explore a selection of projects delivered by Scidata Analyst, including e-commerce platforms, appointment booking systems, and full-stack business software." />
     <meta property="og:image" content="https://scidata-analyst.com/assets/img/nav-logo.png" />
-    <!-- ./Open Graph / Facebook -->
 
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -27,27 +25,42 @@
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
-            <div class="loader-text">WORK</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
+            <div class="loader-brand">WORK</div>
+            <div class="loader-percentage"><span class="loader-num">0</span>%</div>
+            <div class="loader-track">
+                <div class="loader-fill"></div>
             </div>
+            <div class="loader-tagline">Loading Projects</div>
         </div>
     </div>
     <!-- LOADER END -->
 
     <!-- CUSTOM CURSOR -->
-    <div class="cursor" data-cursor></div>
-    <div class="cursor-follower" data-cursor-follower></div>
+    <div class="cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-label"></div>
+    </div>
     <!-- CUSTOM CURSOR END -->
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <!-- SCROLL PROGRESS END -->
 
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="nav-logo">
-            <a href="/"><img src="img/logo.png" alt="Scidata Analyst"></a>
+            <a href="/" class="nav-logo-link">
+                <span class="nav-logo-icon">S</span>
+                <span class="nav-logo-text">SCIDATA</span>
+            </a>
         </div>
         <div class="nav-menu-trigger" data-menu-trigger>
-            <span class="menu-text">Menu</span>
-            <div class="menu-icon">
+            <span class="menu-label">Menu</span>
+            <div class="menu-burger">
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -55,291 +68,299 @@
     </nav>
 
     <div class="nav-overlay" data-nav-overlay>
-        <div class="nav-overlay-inner">
+        <div class="nav-overlay-bg"></div>
+        <div class="nav-overlay-content">
             <div class="nav-overlay-links">
-                <a href="/" class="nav-link-magnetic" data-magnetic>Home</a>
-                <a href="work.html" class="nav-link-magnetic" data-magnetic>Work</a>
-                <a href="about.html" class="nav-link-magnetic" data-magnetic>About</a>
-                <a href="team.html" class="nav-link-magnetic" data-magnetic>Team</a>
-                <a href="consultation.html" class="nav-link-magnetic" data-magnetic>Consultation</a>
-                <a href="price_offer.html" class="nav-link-magnetic" data-magnetic>Pricing</a>
-                <a href="contact.html" class="nav-link-magnetic" data-magnetic>Contact</a>
+                <a href="/" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">01</span>
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="work.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">02</span>
+                    <span class="nav-link-text">Work</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="about.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">03</span>
+                    <span class="nav-link-text">About</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="team.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">04</span>
+                    <span class="nav-link-text">Team</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="consultation.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">05</span>
+                    <span class="nav-link-text">Consultation</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="price_offer.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">06</span>
+                    <span class="nav-link-text">Pricing</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="contact.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">07</span>
+                    <span class="nav-link-text">Contact</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
             </div>
-            <div class="nav-overlay-info">
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Email</span>
-                    <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+            <div class="nav-overlay-footer">
+                <div class="nav-overlay-info">
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Email</span>
+                        <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Phone</span>
+                        <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Address</span>
+                        <span>2001 Victoria Court, NY</span>
+                    </div>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Phone</span>
-                    <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                <div class="nav-overlay-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Address</span>
-                    <span>2001 Victoria Court, NY</span>
-                </div>
-            </div>
-            <div class="nav-overlay-social">
-                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
-                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
-                <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
-                <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
             </div>
         </div>
     </div>
     <!-- NAVIGATION END -->
 
-    <!-- HERO SECTION -->
-    <section class="work-hero">
-        <div class="hero-bg-text" aria-hidden="true">WORK</div>
-        <div class="hero-content">
-            <div class="hero-eyebrow reveal-text">Selected Projects</div>
-            <h1 class="hero-title">
-                <span class="hero-title-line reveal-text">Our</span>
-                <span class="hero-title-line hero-title-line--accent reveal-text">Best</span>
-                <span class="hero-title-line reveal-text">Work</span>
-            </h1>
-            <div class="hero-meta">
-                <p class="hero-description reveal-text">
-                    A curated selection of projects that showcase our expertise across web, software, and AI—built with precision, purpose, and a lot of coffee.
-                </p>
-                <div class="hero-actions reveal-text">
-                    <a href="#projects" class="btn-magnetic" data-magnetic>
-                        <span class="btn-text">View Projects</span>
-                        <span class="btn-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6"/>
-                            </svg>
-                        </span>
-                    </a>
-                    <a href="contact.html" class="btn-magnetic btn-magnetic--outline" data-magnetic>
-                        <span class="btn-text">Start a Project</span>
-                    </a>
+    <!-- WORK - BENTO HERO (unique grid hero) -->
+    <section class="wk-hero">
+        <div class="wk-hero-bento">
+            <div class="wk-bento-item wk-bento-item--large">
+                <div class="wk-bento-content">
+                    <span class="wk-bento-tag">Selected Projects</span>
+                    <h1 class="wk-bento-headline">Our<br><span class="wk-headline-accent">Best</span> Work</h1>
+                    <p class="wk-bento-text">A curated selection of projects that showcase our expertise across web, software, and AI.</p>
                 </div>
             </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <span class="scroll-text">Scroll</span>
-            <div class="scroll-line">
-                <div class="scroll-dot"></div>
+            <div class="wk-bento-item wk-bento-item--img1">
+                <img src="assets/img/web_design.png" alt="E-Commerce Storefront" loading="lazy">
+                <div class="wk-bento-overlay">
+                    <span class="wk-bento-num">01</span>
+                    <span class="wk-bento-name">E-Commerce</span>
+                </div>
+            </div>
+            <div class="wk-bento-item wk-bento-item--img2">
+                <img src="assets/img/appointment.png" alt="Doctor Appointment" loading="lazy">
+                <div class="wk-bento-overlay">
+                    <span class="wk-bento-num">02</span>
+                    <span class="wk-bento-name">Vue 3 Platform</span>
+                </div>
+            </div>
+            <div class="wk-bento-item wk-bento-item--img3">
+                <img src="assets/img/e-commerce.png" alt="T-Shirt E-Commerce" loading="lazy">
+                <div class="wk-bento-overlay">
+                    <span class="wk-bento-num">03</span>
+                    <span class="wk-bento-name">Full Stack</span>
+                </div>
+            </div>
+            <div class="wk-bento-item wk-bento-item--img4">
+                <img src="img/1.jpg" alt="POS Software" loading="lazy">
+                <div class="wk-bento-overlay">
+                    <span class="wk-bento-num">04</span>
+                    <span class="wk-bento-name">POS System</span>
+                </div>
+            </div>
+            <div class="wk-bento-item wk-bento-item--cta">
+                <a href="#projects" class="wk-bento-cta-link">
+                    <span>View All</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
             </div>
         </div>
-        <div class="hero-deco">
-            <div class="deco-circle deco-circle--1"></div>
-            <div class="deco-circle deco-circle--2"></div>
-            <div class="deco-circle deco-circle--3"></div>
+        <div class="wk-hero-scroll" aria-hidden="true">
+            <div class="wk-scroll-line"></div>
+            <span>SCROLL</span>
         </div>
     </section>
-    <!-- HERO SECTION END -->
 
-    <!-- PROJECTS HORIZONTAL SCROLL -->
-    <section class="projects-horizontal" id="projects">
-        <div class="projects-sticky">
-            <div class="section-header">
-                <span class="section-eyebrow reveal-text">Featured Work</span>
-                <h2 class="section-title reveal-text">Selected <em>&amp;</em> Projects</h2>
-            </div>
+    <!-- PROJECTS - STICKY SHOWCASE (unique sticky alternating layout) -->
+    <section class="wk-projects" id="projects">
+        <div class="wk-projects-header">
+            <span class="wk-projects-tag"><span class="wk-tag-dot"></span> Featured Work</span>
+            <h2 class="wk-projects-title">Selected <em>&amp;</em> Projects</h2>
         </div>
-        <div class="projects-track" data-horizontal-scroll>
-            <div class="project-panel">
-                <div class="project-card project-card--web">
-                    <div class="project-number">01</div>
-                    <div class="project-image">
+
+        <div class="wk-showcase">
+            <!-- Project 1 -->
+            <div class="wk-showcase-item" data-showcase>
+                <div class="wk-showcase-visual">
+                    <div class="wk-showcase-frame">
                         <img src="assets/img/web_design.png" alt="E-Commerce Storefront" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">E-Commerce</span>
-                        <h3 class="project-name reveal-text">E-Commerce Storefront</h3>
-                        <p class="project-text reveal-text">
-                            A fully responsive front-end built from scratch with modern design principles. Clean code, smooth animations, and pixel-perfect execution.
-                        </p>
-                        <div class="project-tags reveal-text">
-                            <span>HTML5</span>
-                            <span>SCSS</span>
-                            <span>jQuery</span>
-                            <span>GSAP</span>
-                        </div>
-                        <a href="#" target="_blank" class="project-link" data-magnetic>
-                            <span>View Project</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6"/>
-                            </svg>
-                        </a>
+                        <div class="wk-showcase-frame-num">01</div>
                     </div>
                 </div>
+                <div class="wk-showcase-info">
+                    <span class="wk-showcase-label">E-Commerce</span>
+                    <h3 class="wk-showcase-name">E-Commerce Storefront</h3>
+                    <p class="wk-showcase-desc">A fully responsive front-end built from scratch with modern design principles. Clean code, smooth animations, and pixel-perfect execution.</p>
+                    <div class="wk-showcase-tags">
+                        <span>HTML5</span><span>SCSS</span><span>jQuery</span><span>GSAP</span>
+                    </div>
+                    <a href="#" target="_blank" class="wk-showcase-link" data-magnetic>
+                        <span>View Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="project-panel">
-                <div class="project-card project-card--appointment">
-                    <div class="project-number">02</div>
-                    <div class="project-image">
+
+            <!-- Project 2 -->
+            <div class="wk-showcase-item wk-showcase-item--reverse" data-showcase>
+                <div class="wk-showcase-visual">
+                    <div class="wk-showcase-frame">
                         <img src="assets/img/appointment.png" alt="Doctor Appointment Platform" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Vue 3</span>
-                        <h3 class="project-name reveal-text">Doctor Appointment Platform</h3>
-                        <p class="project-text reveal-text">
-                            Simplify scheduling between patients and doctors with a clean, intuitive interface. Built with Vue 3 for seamless user experience.
-                        </p>
-                        <div class="project-tags reveal-text">
-                            <span>Vue 3</span>
-                            <span>HTML5</span>
-                            <span>SCSS</span>
-                            <span>jQuery</span>
-                        </div>
-                        <a href="https://doctorappointment2.onrender.com/" target="_blank" class="project-link" data-magnetic>
-                            <span>View Project</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6"/>
-                            </svg>
-                        </a>
+                        <div class="wk-showcase-frame-num">02</div>
                     </div>
                 </div>
+                <div class="wk-showcase-info">
+                    <span class="wk-showcase-label">Vue 3</span>
+                    <h3 class="wk-showcase-name">Doctor Appointment Platform</h3>
+                    <p class="wk-showcase-desc">Simplify scheduling between patients and doctors with a clean, intuitive interface. Built with Vue 3 for seamless user experience.</p>
+                    <div class="wk-showcase-tags">
+                        <span>Vue 3</span><span>HTML5</span><span>SCSS</span><span>jQuery</span>
+                    </div>
+                    <a href="https://doctorappointment2.onrender.com/" target="_blank" class="wk-showcase-link" data-magnetic>
+                        <span>View Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="project-panel">
-                <div class="project-card project-card--ecommerce">
-                    <div class="project-number">03</div>
-                    <div class="project-image">
+
+            <!-- Project 3 -->
+            <div class="wk-showcase-item" data-showcase>
+                <div class="wk-showcase-visual">
+                    <div class="wk-showcase-frame">
                         <img src="assets/img/e-commerce.png" alt="T-Shirt E-Commerce" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Full Stack</span>
-                        <h3 class="project-name reveal-text">T-Shirt E-Commerce</h3>
-                        <p class="project-text reveal-text">
-                            Complete single-vendor apparel business with catalog, cart, checkout, and order management. Built with PHP and MySQL.
-                        </p>
-                        <div class="project-tags reveal-text">
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>AJAX</span>
-                            <span>jQuery</span>
-                        </div>
-                        <a href="https://scidata-analyst.com/project/ecomerce_TShirt/" target="_blank" class="project-link" data-magnetic>
-                            <span>View Project</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6"/>
-                            </svg>
-                        </a>
+                        <div class="wk-showcase-frame-num">03</div>
                     </div>
                 </div>
+                <div class="wk-showcase-info">
+                    <span class="wk-showcase-label">Full Stack</span>
+                    <h3 class="wk-showcase-name">T-Shirt E-Commerce</h3>
+                    <p class="wk-showcase-desc">Complete single-vendor apparel business with catalog, cart, checkout, and order management. Built with PHP and MySQL.</p>
+                    <div class="wk-showcase-tags">
+                        <span>PHP</span><span>MySQL</span><span>AJAX</span><span>jQuery</span>
+                    </div>
+                    <a href="https://scidata-analyst.com/project/ecomerce_TShirt/" target="_blank" class="wk-showcase-link" data-magnetic>
+                        <span>View Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="project-panel">
-                <div class="project-card project-card--pos">
-                    <div class="project-number">04</div>
-                    <div class="project-image">
+
+            <!-- Project 4 -->
+            <div class="wk-showcase-item wk-showcase-item--reverse" data-showcase>
+                <div class="wk-showcase-visual">
+                    <div class="wk-showcase-frame">
                         <img src="img/1.jpg" alt="POS Software" loading="lazy">
+                        <div class="wk-showcase-frame-num">04</div>
                     </div>
-                    <div class="project-content">
-                        <span class="project-label">Laravel</span>
-                        <h3 class="project-name reveal-text">POS Software</h3>
-                        <p class="project-text reveal-text">
-                            A point-of-sale system built for retail businesses to manage sales, inventory, and reporting from a single dashboard.
-                        </p>
-                        <div class="project-tags reveal-text">
-                            <span>Laravel</span>
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>Blade</span>
-                        </div>
-                        <a href="#" target="_blank" class="project-link" data-magnetic>
-                            <span>View Project</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6"/>
-                            </svg>
-                        </a>
+                </div>
+                <div class="wk-showcase-info">
+                    <span class="wk-showcase-label">Laravel</span>
+                    <h3 class="wk-showcase-name">POS Software</h3>
+                    <p class="wk-showcase-desc">A point-of-sale system built for retail businesses to manage sales, inventory, and reporting from a single dashboard.</p>
+                    <div class="wk-showcase-tags">
+                        <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Blade</span>
                     </div>
+                    <a href="#" target="_blank" class="wk-showcase-link" data-magnetic>
+                        <span>View Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- PROJECTS HORIZONTAL SCROLL END -->
 
-    <!-- PROCESS SECTION -->
-    <section class="process">
-        <div class="section-header">
-            <span class="section-eyebrow reveal-text">How We Work</span>
-            <h2 class="section-title reveal-text">Our <em>Process</em></h2>
-        </div>
-        <div class="process-timeline">
-            <div class="process-step reveal-text">
-                <div class="process-marker">
-                    <span class="process-number">01</span>
+    <!-- PROCESS - RADIAL (unique circular process) -->
+    <section class="wk-process">
+        <div class="wk-process-inner">
+            <div class="wk-process-header">
+                <span class="wk-process-tag"><span class="wk-tag-dot"></span> How We Work</span>
+                <h2 class="wk-process-title">Our <em>Process</em></h2>
+            </div>
+            <div class="wk-process-radial">
+                <div class="wk-process-center">
+                    <span class="wk-process-center-text">PROCESS</span>
                 </div>
-                <div class="process-content">
-                    <h3 class="process-name">Discovery</h3>
-                    <ul class="process-list">
-                        <li>Understanding your goals</li>
-                        <li>Market & competitor research</li>
-                        <li>Defining project scope</li>
-                        <li>Timeline & budget planning</li>
-                        <li>Requirement documentation</li>
-                        <li>Stakeholder alignment</li>
+                <div class="wk-process-node wk-process-node--1">
+                    <div class="wk-process-node-num">01</div>
+                    <h3 class="wk-process-node-title">Discovery</h3>
+                    <ul class="wk-process-node-list">
+                        <li>Understanding goals</li>
+                        <li>Market research</li>
+                        <li>Defining scope</li>
+                        <li>Timeline planning</li>
                     </ul>
                 </div>
-            </div>
-            <div class="process-step reveal-text">
-                <div class="process-marker">
-                    <span class="process-number">02</span>
+                <div class="wk-process-node wk-process-node--2">
+                    <div class="wk-process-node-num">02</div>
+                    <h3 class="wk-process-node-title">Design</h3>
+                    <ul class="wk-process-node-list">
+                        <li>Prototyping</li>
+                        <li>UI/UX Design</li>
+                        <li>User Testing</li>
+                        <li>Iteration</li>
+                    </ul>
                 </div>
-                <div class="process-content">
-                    <h3 class="process-name">Delivery</h3>
-                    <ul class="process-list">
-                        <li>Design & prototyping</li>
-                        <li>Agile development sprints</li>
-                        <li>Regular progress updates</li>
-                        <li>Testing & quality checks</li>
-                        <li>Launch & deployment</li>
+                <div class="wk-process-node wk-process-node--3">
+                    <div class="wk-process-node-num">03</div>
+                    <h3 class="wk-process-node-title">Development</h3>
+                    <ul class="wk-process-node-list">
+                        <li>Agile sprints</li>
+                        <li>Clean code</li>
+                        <li>Code reviews</li>
+                        <li>Progress updates</li>
+                    </ul>
+                </div>
+                <div class="wk-process-node wk-process-node--4">
+                    <div class="wk-process-node-num">04</div>
+                    <h3 class="wk-process-node-title">Delivery</h3>
+                    <ul class="wk-process-node-list">
+                        <li>Testing & QA</li>
+                        <li>Launch</li>
+                        <li>Deployment</li>
+                        <li>Support</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <!-- PROCESS END -->
 
-    <!-- CTA SECTION -->
-    <section class="cta-section">
+    <!-- CTA -->
+    <section class="cta-section" data-section>
         <div class="cta-bg-text" aria-hidden="true">START</div>
-        <div class="cta-content">
-            <h2 class="cta-title reveal-text">
+        <div class="cta-inner">
+            <h2 class="cta-headline">
                 Ready to build<br>
-                <span class="cta-title-accent">something great?</span>
+                <span class="cta-accent">something great?</span>
             </h2>
-            <p class="cta-description reveal-text">
-                Let's discuss your project and explore how we can help you achieve your goals.
-            </p>
-            <a href="contact.html" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                <span class="btn-text">Get in Touch</span>
-                <span class="btn-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
+            <p class="cta-subtext">Let's discuss your project and explore how we can help you achieve your goals.</p>
+            <a href="contact.html" class="btn-magnetic btn-cta-large" data-magnetic>
+                <span class="btn-label">Get in Touch</span>
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </span>
             </a>
         </div>
         <div class="cta-deco">
-            <div class="deco-circle deco-circle--large"></div>
+            <div class="deco-ring deco-ring--1"></div>
+            <div class="deco-ring deco-ring--2"></div>
         </div>
     </section>
-    <!-- CTA SECTION END -->
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-blob"></div>
-
-        <div class="footer-cta">
-            <div class="footer-cta-inner">
-                <span class="footer-cta-eyebrow">Got a project in mind?</span>
-                <a href="contact.html" class="footer-cta-title">
-                    <span>Let's build</span>
-                    <span class="footer-cta-accent">something great</span>
-                </a>
-            </div>
-            <a href="contact.html" class="footer-cta-circle" aria-label="Start a project">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-            </a>
-        </div>
-
         <div class="footer-marquee" aria-hidden="true">
             <div class="footer-marquee-track">
                 <span>Web Development</span><span class="dot">✦</span>
@@ -358,26 +379,32 @@
                 <span>Cloud &amp; Hosting</span><span class="dot">✦</span>
             </div>
         </div>
-
-        <div class="footer-main">
+        <div class="footer-cta">
+            <div class="footer-cta-text">
+                <span class="footer-cta-label">Got a project in mind?</span>
+                <a href="contact.html" class="footer-cta-title">
+                    <span>Let's build</span>
+                    <span class="footer-cta-accent">something great</span>
+                </a>
+            </div>
+            <a href="contact.html" class="footer-cta-btn" aria-label="Start a project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+        </div>
+        <div class="footer-body">
             <div class="footer-col footer-brand">
-                <div class="footer-brand-inner">
-                    <a href="/" class="footer-logo-link">
-                        <img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo">
-                    </a>
-                    <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
-                </div>
+                <a href="/" class="footer-logo-link"><img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo"></a>
+                <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-title">Stay in the loop</label>
-                    <div class="footer-newsletter-form">
+                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <div class="footer-newsletter-row">
                         <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
-                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                     </div>
                 </form>
             </div>
-
             <div class="footer-col footer-links">
-                <h3 class="footer-heading">Explore</h3>
+                <h3 class="footer-col-title">Explore</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="work.html">Work</a></li>
@@ -388,9 +415,8 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
             <div class="footer-col footer-services">
-                <h3 class="footer-heading">Services</h3>
+                <h3 class="footer-col-title">Services</h3>
                 <ul>
                     <li><a href="contact.html">Web Development</a></li>
                     <li><a href="contact.html">Software Development</a></li>
@@ -398,36 +424,29 @@
                     <li><a href="contact.html">DevOps &amp; Support</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col footer-contact">
-                <h3 class="footer-heading">Connect</h3>
+            <div class="footer-col footer-connect">
+                <h3 class="footer-col-title">Connect</h3>
                 <ul class="footer-contact-list">
-                    <li><a href="tel:+0000000000000"><i class="fa-solid fa-phone"></i> <span>(+00) 000 00 0000 00</span></a></li>
-                    <li><a href="mailto:info@scidata-analyst.com"><i class="fa-solid fa-envelope"></i> <span>info@scidata-analyst.com</span></a></li>
-                    <li class="footer-address"><i class="fa-solid fa-location-dot"></i> <span>2001 Victoria Court, NY</span></li>
+                    <li><a href="tel:+0000000000000"><span class="contact-icon">📞</span><span>(+00) 000 00 0000 00</span></a></li>
+                    <li><a href="mailto:info@scidata-analyst.com"><span class="contact-icon">✉</span><span>info@scidata-analyst.com</span></a></li>
+                    <li class="footer-address"><span class="contact-icon">📍</span><span>2001 Victoria Court, NY</span></li>
                 </ul>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
-                    <a href="https://join.skype.com/invite/YYXzSmJkfjpD" target="_blank" aria-label="Skype"><i class="fa-brands fa-skype"></i></a>
-                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook">FB</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn">LI</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter">TW</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp">WA</a>
                 </div>
             </div>
         </div>
-
-        <div class="footer-divider"></div>
-
         <div class="footer-bottom">
-            <div class="footer-bottom-inner">
-                <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
-                <button class="footer-totop" type="button" aria-label="Back to top">
-                    <i class="fa-solid fa-arrow-up"></i> Back to top
-                </button>
-            </div>
+            <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
+            <button class="footer-tototop" type="button" aria-label="Back to top">
+                <span>Back to top</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </button>
         </div>
     </footer>
-    <!-- FOOTER END -->
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -435,13 +454,10 @@
     <script src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/work.js"></script>
-
     <script>
         document.querySelector('.footer-totop')?.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
-
 </body>
-
 </html>
