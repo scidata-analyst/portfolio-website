@@ -12285,6 +12285,8 @@ body.about-page,
         flex-direction: column;
         justify-content: space-between;
         padding: 90px 60px 60px;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .nav-overlay-links {
