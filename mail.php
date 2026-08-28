@@ -1,4 +1,4 @@
-<?php
+<✦php
     if(isset($_POST['name'])){
         $name = $_POST['name'];
         $c_name = $_POST['c_name'];
