@@ -19147,3 +19147,539 @@ body.about-page,
         gap: 8px;
     }
 }
+
+// =============================================================================
+// CONTACT PAGE - COMPLETELY UNIQUE (signal hero + burst manifesto + transmission console)
+// =============================================================================
+
+// ---------- SIGNAL HERO (radiating wave hero) ----------
+.ct-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--dark);
+    padding: 120px 60px 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ct-signal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        pointer-events: none;
+        z-index: 0;
+
+        .ct-signal-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px solid rgba(11, 189, 41, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: signalPulse 3s infinite;
+
+            &--1 {
+                width: 200px;
+                height: 200px;
+                animation-delay: 0s;
+            }
+
+            &--2 {
+                width: 300px;
+                height: 300px;
+                animation-delay: 0.5s;
+            }
+
+            &--3 {
+                width: 400px;
+                height: 400px;
+                animation-delay: 1s;
+            }
+
+            &--4 {
+                width: 500px;
+                height: 500px;
+                animation-delay: 1.5s;
+            }
+        }
+
+        .ct-signal-core {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px rgba(11, 189, 41, 0.5);
+        }
+    }
+
+    .ct-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .ct-hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 24px;
+
+        .ct-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+    }
+
+    .ct-hero-headline {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        line-height: 1;
+        margin: 0 0 20px;
+        letter-spacing: -0.02em;
+
+        .ct-headline-accent {
+            color: var(--accent);
+        }
+    }
+
+    .ct-hero-text {
+        font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0;
+        max-width: 400px;
+    }
+
+    .ct-hero-scroll {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        z-index: 5;
+
+        .ct-scroll-wave {
+            display: flex;
+            gap: 3px;
+
+            span {
+                width: 3px;
+                height: 16px;
+                background: var(--accent);
+                border-radius: 2px;
+                animation: wave 1.2s infinite;
+
+                &:nth-child(1) {
+                    animation-delay: 0s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: 0.2s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 0.4s;
+                }
+            }
+        }
+
+        span {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+@keyframes signalPulse {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.4);
+    }
+}
+
+// ---------- BURST MANIFESTO (burst ring layout) ----------
+.ct-manifesto {
+    padding: var(--section-padding) 60px;
+    background: var(--wheat);
+    position: relative;
+    overflow: hidden;
+}
+
+.ct-burst {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.ct-burst-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+
+    &--1 {
+        width: 300px;
+        height: 300px;
+        border: 2px solid rgba(11, 189, 41, 0.1);
+    }
+
+    &--2 {
+        width: 450px;
+        height: 450px;
+        border: 1px solid rgba(11, 189, 41, 0.06);
+    }
+}
+
+.ct-burst-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.ct-burst-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--dark);
+    line-height: 1.1;
+    margin: 0 0 24px;
+    letter-spacing: -0.02em;
+
+    .ct-burst-word {
+        display: inline-block;
+        margin: 0 0.1em;
+        transition: transform var(--transition-fast);
+
+        &--accent {
+            color: var(--accent);
+        }
+
+        &:hover {
+            transform: translateY(-8px) rotate(-3deg);
+        }
+    }
+}
+
+.ct-burst-text {
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+    line-height: 1.7;
+    color: rgba(10, 10, 10, 0.5);
+    margin: 0;
+    max-width: 500px;
+}
+
+// ---------- TRANSMISSION CONSOLE (console-style form) ----------
+.ct-form-section {
+    padding: var(--section-padding) 60px;
+    background: var(--dark);
+
+    .ct-form-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .ct-form-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 16px;
+
+        .ct-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    }
+
+    .ct-form-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        margin: 0;
+
+        em {
+            color: var(--accent);
+            font-style: normal;
+        }
+    }
+}
+
+.ct-console {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ct-console-screen {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.ct-console-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.ct-console-dots {
+    display: flex;
+    gap: 6px;
+
+    span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+
+        &:nth-child(1) {
+            background: #ff5f57;
+        }
+
+        &:nth-child(2) {
+            background: #ffbd2e;
+        }
+
+        &:nth-child(3) {
+            background: #28c840;
+        }
+    }
+}
+
+.ct-console-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    flex: 1;
+}
+
+.ct-console-status {
+    font-size: 0.65rem;
+    color: var(--accent);
+}
+
+.ct-console-form {
+    padding: 32px;
+}
+
+.ct-console-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.ct-console-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ct-console-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.ct-console-input,
+.ct-console-select,
+.ct-console-textarea {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: var(--light);
+    font-size: 0.9rem;
+    outline: none;
+    transition: all var(--transition-fast);
+    width: 100%;
+    font-family: inherit;
+
+    &:focus {
+        border-color: var(--accent);
+        background: rgba(11, 189, 41, 0.05);
+    }
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.ct-console-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.ct-console-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.ct-console-submit {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.ct-console-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ct-channel {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all var(--transition-smooth);
+    cursor: pointer;
+
+    &:hover {
+        border-color: rgba(11, 189, 41, 0.2);
+        transform: translateX(4px);
+    }
+}
+
+.ct-channel-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(11, 189, 41, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        color: var(--accent);
+    }
+}
+
+.ct-channel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .ct-channel-name {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    a,
+    span {
+        font-size: 0.85rem;
+        color: var(--light);
+        text-decoration: none;
+    }
+}
+
+// ---------- CONTACT RESPONSIVE ----------
+@media (max-width: 1024px) {
+    .ct-console {
+        grid-template-columns: 1fr;
+    }
+
+    .ct-console-side {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .ct-channel {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ct-hero {
+        padding: 100px 24px 60px;
+    }
+
+    .ct-manifesto,
+    .ct-form-section {
+        padding: 80px 24px;
+    }
+
+    .ct-console-row {
+        grid-template-columns: 1fr;
+    }
+
+    .ct-console-form {
+        padding: 24px;
+    }
+
+    .ct-burst-ring--2 {
+        width: 300px;
+        height: 300px;
+    }
+}

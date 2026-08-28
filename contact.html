@@ -10,14 +10,12 @@
         content="Get in touch with Scidata Analyst to discuss your website, software, or AI project. Tell us about your business and we'll get back to you." />
     <link rel="alternate" href="https://scidata-analyst.com" hreflang="en" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://scidata-analyst.com" />
     <meta property="og:title" content="Contact Us - Scidata Analyst | Web, Software & AI Development Agency" />
     <meta property="og:description"
         content="Get in touch with Scidata Analyst to discuss your website, software, or AI project. Tell us about your business and we'll get back to you." />
     <meta property="og:image" content="https://scidata-analyst.com/assets/img/nav-logo.png" />
-    <!-- ./Open Graph / Facebook -->
 
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -27,27 +25,42 @@
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
-            <div class="loader-text">CONTACT</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
+            <div class="loader-brand">SIGNAL</div>
+            <div class="loader-percentage"><span class="loader-num">0</span>%</div>
+            <div class="loader-track">
+                <div class="loader-fill"></div>
             </div>
+            <div class="loader-tagline">Establishing Connection</div>
         </div>
     </div>
     <!-- LOADER END -->
 
     <!-- CUSTOM CURSOR -->
-    <div class="cursor" data-cursor></div>
-    <div class="cursor-follower" data-cursor-follower></div>
+    <div class="cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-label"></div>
+    </div>
     <!-- CUSTOM CURSOR END -->
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <!-- SCROLL PROGRESS END -->
 
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="nav-logo">
-            <a href="/"><img src="img/logo.png" alt="Scidata Analyst"></a>
+            <a href="/" class="nav-logo-link">
+                <span class="nav-logo-icon">S</span>
+                <span class="nav-logo-text">SCIDATA</span>
+            </a>
         </div>
         <div class="nav-menu-trigger" data-menu-trigger>
-            <span class="menu-text">Menu</span>
-            <div class="menu-icon">
+            <span class="menu-label">Menu</span>
+            <div class="menu-burger">
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -55,227 +68,238 @@
     </nav>
 
     <div class="nav-overlay" data-nav-overlay>
-        <div class="nav-overlay-inner">
+        <div class="nav-overlay-bg"></div>
+        <div class="nav-overlay-content">
             <div class="nav-overlay-links">
-                <a href="/" class="nav-link-magnetic" data-magnetic>Home</a>
-                <a href="work.html" class="nav-link-magnetic" data-magnetic>Work</a>
-                <a href="about.html" class="nav-link-magnetic" data-magnetic>About</a>
-                <a href="team.html" class="nav-link-magnetic" data-magnetic>Team</a>
-                <a href="consultation.html" class="nav-link-magnetic" data-magnetic>Consultation</a>
-                <a href="price_offer.html" class="nav-link-magnetic" data-magnetic>Pricing</a>
-                <a href="contact.html" class="nav-link-magnetic" data-magnetic>Contact</a>
+                <a href="/" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">01</span>
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="work.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">02</span>
+                    <span class="nav-link-text">Work</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="about.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">03</span>
+                    <span class="nav-link-text">About</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="team.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">04</span>
+                    <span class="nav-link-text">Team</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="consultation.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">05</span>
+                    <span class="nav-link-text">Consultation</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="price_offer.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">06</span>
+                    <span class="nav-link-text">Pricing</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
+                <a href="contact.html" class="nav-overlay-link" data-magnetic>
+                    <span class="nav-link-num">07</span>
+                    <span class="nav-link-text">Contact</span>
+                    <span class="nav-link-arrow">→</span>
+                </a>
             </div>
-            <div class="nav-overlay-info">
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Email</span>
-                    <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+            <div class="nav-overlay-footer">
+                <div class="nav-overlay-info">
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Email</span>
+                        <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Phone</span>
+                        <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                    </div>
+                    <div class="nav-info-item">
+                        <span class="nav-info-label">Address</span>
+                        <span>2001 Victoria Court, NY</span>
+                    </div>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Phone</span>
-                    <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                <div class="nav-overlay-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
                 </div>
-                <div class="nav-info-block">
-                    <span class="nav-info-label">Address</span>
-                    <span>2001 Victoria Court, NY</span>
-                </div>
-            </div>
-            <div class="nav-overlay-social">
-                <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" data-magnetic>Facebook</a>
-                <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" data-magnetic>LinkedIn</a>
-                <a href="https://twitter.com/KanchonSheel" target="_blank" data-magnetic>Twitter</a>
-                <a href="https://wa.me/8801575033642" target="_blank" data-magnetic>WhatsApp</a>
             </div>
         </div>
     </div>
     <!-- NAVIGATION END -->
 
-    <!-- HERO SECTION -->
-    <section class="contact-hero">
-        <div class="hero-bg-text" aria-hidden="true">CONTACT</div>
-        <div class="hero-content">
-            <div class="hero-eyebrow reveal-text">Get in Touch</div>
-            <h1 class="hero-title">
-                <span class="hero-title-line reveal-text">Let's</span>
-                <span class="hero-title-line hero-title-line--accent reveal-text">Talk</span>
-                <span class="hero-title-line reveal-text">Business</span>
-            </h1>
-            <div class="hero-meta">
-                <p class="hero-description reveal-text">
-                    Have a project in mind? We'd love to hear about it. Drop us a message and we'll get back to you within 24 hours.
-                </p>
-            </div>
+    <!-- CONTACT - SIGNAL HERO (unique radiating wave hero) -->
+    <section class="ct-hero">
+        <div class="ct-signal" aria-hidden="true">
+            <div class="ct-signal-ring ct-signal-ring--1"></div>
+            <div class="ct-signal-ring ct-signal-ring--2"></div>
+            <div class="ct-signal-ring ct-signal-ring--3"></div>
+            <div class="ct-signal-ring ct-signal-ring--4"></div>
+            <div class="ct-signal-core"></div>
         </div>
-        <div class="hero-scroll-indicator">
-            <span class="scroll-text">Scroll</span>
-            <div class="scroll-line">
-                <div class="scroll-dot"></div>
+        <div class="ct-hero-content">
+            <span class="ct-hero-tag"><span class="ct-tag-dot"></span> Get in Touch</span>
+            <h1 class="ct-hero-headline">Let's Talk<br><span class="ct-headline-accent">Business.</span></h1>
+            <p class="ct-hero-text">Have a project in mind? We'd love to hear about it. Drop us a message and we'll get back to you within 24 hours.</p>
+        </div>
+        <div class="ct-hero-scroll" aria-hidden="true">
+            <div class="ct-scroll-wave">
+                <span></span><span></span><span></span>
             </div>
+            <span>TRANSMIT</span>
         </div>
     </section>
-    <!-- HERO SECTION END -->
 
-    <!-- MANIFESTO SECTION -->
-    <section class="manifesto">
-        <div class="manifesto-content">
-            <h2 class="manifesto-title reveal-text">
-                <span class="manifesto-word">YOUR</span>
-                <span class="manifesto-word">VISION,</span>
-                <span class="manifesto-word manifesto-word--accent">OUR</span>
-                <span class="manifesto-word">CODE.</span>
-            </h2>
-            <p class="manifesto-text reveal-text">
-                Every great product starts with a conversation. Tell us about your business, your goals, and your challenges. We'll figure out the rest.
-            </p>
-        </div>
-        <div class="manifesto-deco">
-            <div class="deco-circle deco-circle--large"></div>
-        </div>
-    </section>
-    <!-- MANIFESTO SECTION END -->
-
-    <!-- CONTACT FORM SECTION -->
-    <section class="contact-form-section">
-        <div class="section-header">
-            <span class="section-eyebrow reveal-text">Start a Conversation</span>
-            <h2 class="section-title reveal-text">Send Us a <em>Message</em></h2>
-        </div>
-        <div class="contact-form-wrapper">
-            <form class="contact-form reveal-text" id="contactForm" onsubmit="event.preventDefault();">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company" placeholder="Your Company">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone / WhatsApp</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="service">Service Interested In *</label>
-                    <select id="service" name="service" required>
-                        <option value="">Select a service</option>
-                        <option value="web">Web Development</option>
-                        <option value="software">Software Development</option>
-                        <option value="ai">AI & Automation</option>
-                        <option value="devops">DevOps & Support</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="budget">Budget Range</label>
-                    <select id="budget" name="budget">
-                        <option value="">Select budget range</option>
-                        <option value="100-250">$100 - $250</option>
-                        <option value="250-500">$250 - $500</option>
-                        <option value="500-1000">$500 - $1,000</option>
-                        <option value="1000-5000">$1,000 - $5,000</option>
-                        <option value="5000+">$5,000+</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Project Details *</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
-                </div>
-                <button type="submit" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                    <span class="btn-text">Send Message</span>
-                    <span class="btn-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M13 6l6 6-6 6"/>
-                        </svg>
-                    </span>
-                </button>
-            </form>
-            <div class="contact-info">
-                <div class="info-card reveal-text" data-tilt>
-                    <div class="info-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                    </div>
-                    <h3 class="info-label">Email</h3>
-                    <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
-                </div>
-                <div class="info-card reveal-text" data-tilt>
-                    <div class="info-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                    </div>
-                    <h3 class="info-label">Phone</h3>
-                    <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
-                </div>
-                <div class="info-card reveal-text" data-tilt>
-                    <div class="info-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                    </div>
-                    <h3 class="info-label">Address</h3>
-                    <span>2001 Victoria Court, NY</span>
-                </div>
+    <!-- MANIFESTO - SIGNAL BURST (unique burst layout) -->
+    <section class="ct-manifesto">
+        <div class="ct-burst">
+            <div class="ct-burst-ring ct-burst-ring--1"></div>
+            <div class="ct-burst-ring ct-burst-ring--2"></div>
+            <div class="ct-burst-content">
+                <h2 class="ct-burst-title">
+                    <span class="ct-burst-word">YOUR</span>
+                    <span class="ct-burst-word">VISION,</span>
+                    <span class="ct-burst-word ct-burst-word--accent">OUR</span>
+                    <span class="ct-burst-word">CODE.</span>
+                </h2>
+                <p class="ct-burst-text">Every great product starts with a conversation. Tell us about your business, your goals, and your challenges.</p>
             </div>
         </div>
     </section>
-    <!-- CONTACT FORM SECTION END -->
 
-    <!-- CTA SECTION -->
-    <section class="cta-section">
+    <!-- CONTACT FORM - TRANSMISSION CONSOLE (unique console-style form) -->
+    <section class="ct-form-section">
+        <div class="ct-form-header">
+            <span class="ct-form-tag"><span class="ct-tag-dot"></span> Start a Conversation</span>
+            <h2 class="ct-form-title">Send Us a <em>Message</em></h2>
+        </div>
+        <div class="ct-console">
+            <div class="ct-console-screen">
+                <div class="ct-console-header">
+                    <div class="ct-console-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="ct-console-title">Transmission Console</span>
+                    <span class="ct-console-status">● Ready</span>
+                </div>
+                <form class="ct-console-form" onsubmit="event.preventDefault();">
+                    <div class="ct-console-row">
+                        <div class="ct-console-group">
+                            <label class="ct-console-label">Full Name *</label>
+                            <input type="text" class="ct-console-input" placeholder="John Doe" required>
+                        </div>
+                        <div class="ct-console-group">
+                            <label class="ct-console-label">Email Address *</label>
+                            <input type="email" class="ct-console-input" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="ct-console-row">
+                        <div class="ct-console-group">
+                            <label class="ct-console-label">Company Name</label>
+                            <input type="text" class="ct-console-input" placeholder="Your Company">
+                        </div>
+                        <div class="ct-console-group">
+                            <label class="ct-console-label">Phone / WhatsApp</label>
+                            <input type="tel" class="ct-console-input" placeholder="+1 234 567 8900">
+                        </div>
+                    </div>
+                    <div class="ct-console-row">
+                        <div class="ct-console-group">
+                            <label class="ct-console-label">Service Interested In *</label>
+                            <select class="ct-console-select" required>
+                                <option value="">Select a service</option>
+                                <option>Web Development</option>
+                                <option>Software Development</option>
+                                <option>AI & Automation</option>
+                                <option>DevOps & Support</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="ct-console-group">
+                            <label class="ct-console-label">Budget Range</label>
+                            <select class="ct-console-select">
+                                <option value="">Select budget range</option>
+                                <option>$100 - $250</option>
+                                <option>$250 - $500</option>
+                                <option>$500 - $1,000</option>
+                                <option>$1,000 - $5,000</option>
+                                <option>$5,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ct-console-group">
+                        <label class="ct-console-label">Project Details *</label>
+                        <textarea class="ct-console-textarea" rows="4" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-magnetic btn-primary ct-console-submit" data-magnetic>
+                        <span class="btn-label">Send Message</span>
+                        <span class="btn-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </span>
+                    </button>
+                </form>
+            </div>
+            <div class="ct-console-side">
+                <div class="ct-channel" data-channel>
+                    <div class="ct-channel-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div class="ct-channel-info">
+                        <span class="ct-channel-name">Email</span>
+                        <a href="mailto:info@scidata-analyst.com">info@scidata-analyst.com</a>
+                    </div>
+                </div>
+                <div class="ct-channel" data-channel>
+                    <div class="ct-channel-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/></svg>
+                    </div>
+                    <div class="ct-channel-info">
+                        <span class="ct-channel-name">Phone</span>
+                        <a href="tel:+0000000000000">(+00) 000 00 0000 00</a>
+                    </div>
+                </div>
+                <div class="ct-channel" data-channel>
+                    <div class="ct-channel-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="ct-channel-info">
+                        <span class="ct-channel-name">Address</span>
+                        <span>2001 Victoria Court, NY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" data-section>
         <div class="cta-bg-text" aria-hidden="true">JOIN</div>
-        <div class="cta-content">
-            <h2 class="cta-title reveal-text">
+        <div class="cta-inner">
+            <h2 class="cta-headline">
                 Ready to build<br>
-                <span class="cta-title-accent">something great?</span>
+                <span class="cta-accent">something great?</span>
             </h2>
-            <p class="cta-description reveal-text">
-                Let's discuss your project and explore how we can help you achieve your goals.
-            </p>
-            <a href="mailto:info@scidata-analyst.com" class="btn-magnetic btn-magnetic--large" data-magnetic>
-                <span class="btn-text">Email Us Directly</span>
-                <span class="btn-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
+            <p class="cta-subtext">Let's discuss your project and explore how we can help you achieve your goals.</p>
+            <a href="mailto:info@scidata-analyst.com" class="btn-magnetic btn-cta-large" data-magnetic>
+                <span class="btn-label">Email Us Directly</span>
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </span>
             </a>
         </div>
         <div class="cta-deco">
-            <div class="deco-circle deco-circle--large"></div>
+            <div class="deco-ring deco-ring--1"></div>
+            <div class="deco-ring deco-ring--2"></div>
         </div>
     </section>
-    <!-- CTA SECTION END -->
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-blob"></div>
-
-        <div class="footer-cta">
-            <div class="footer-cta-inner">
-                <span class="footer-cta-eyebrow">Got a project in mind?</span>
-                <a href="mailto:info@scidata-analyst.com" class="footer-cta-title">
-                    <span>Let's build</span>
-                    <span class="footer-cta-accent">something great</span>
-                </a>
-            </div>
-            <a href="mailto:info@scidata-analyst.com" class="footer-cta-circle" aria-label="Start a project">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-            </a>
-        </div>
-
         <div class="footer-marquee" aria-hidden="true">
             <div class="footer-marquee-track">
                 <span>Web Development</span><span class="dot">✦</span>
@@ -294,26 +318,32 @@
                 <span>Cloud &amp; Hosting</span><span class="dot">✦</span>
             </div>
         </div>
-
-        <div class="footer-main">
+        <div class="footer-cta">
+            <div class="footer-cta-text">
+                <span class="footer-cta-label">Got a project in mind?</span>
+                <a href="mailto:info@scidata-analyst.com" class="footer-cta-title">
+                    <span>Let's build</span>
+                    <span class="footer-cta-accent">something great</span>
+                </a>
+            </div>
+            <a href="mailto:info@scidata-analyst.com" class="footer-cta-btn" aria-label="Start a project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+        </div>
+        <div class="footer-body">
             <div class="footer-col footer-brand">
-                <div class="footer-brand-inner">
-                    <a href="/" class="footer-logo-link">
-                        <img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo">
-                    </a>
-                    <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
-                </div>
+                <a href="/" class="footer-logo-link"><img src="img/logo.png" alt="Scidata Analyst Logo" class="footer-logo"></a>
+                <p class="footer-tagline">Building reliable digital products for growing businesses.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-title">Stay in the loop</label>
-                    <div class="footer-newsletter-form">
+                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <div class="footer-newsletter-row">
                         <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
-                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                     </div>
                 </form>
             </div>
-
             <div class="footer-col footer-links">
-                <h3 class="footer-heading">Explore</h3>
+                <h3 class="footer-col-title">Explore</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="work.html">Work</a></li>
@@ -324,9 +354,8 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
             <div class="footer-col footer-services">
-                <h3 class="footer-heading">Services</h3>
+                <h3 class="footer-col-title">Services</h3>
                 <ul>
                     <li><a href="contact.html">Web Development</a></li>
                     <li><a href="contact.html">Software Development</a></li>
@@ -334,36 +363,29 @@
                     <li><a href="contact.html">DevOps &amp; Support</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col footer-contact">
-                <h3 class="footer-heading">Connect</h3>
+            <div class="footer-col footer-connect">
+                <h3 class="footer-col-title">Connect</h3>
                 <ul class="footer-contact-list">
-                    <li><a href="tel:+0000000000000"><i class="fa-solid fa-phone"></i> <span>(+00) 000 00 0000 00</span></a></li>
-                    <li><a href="mailto:info@scidata-analyst.com"><i class="fa-solid fa-envelope"></i> <span>info@scidata-analyst.com</span></a></li>
-                    <li class="footer-address"><i class="fa-solid fa-location-dot"></i> <span>2001 Victoria Court, NY</span></li>
+                    <li><a href="tel:+0000000000000"><span class="contact-icon">📞</span><span>(+00) 000 00 0000 00</span></a></li>
+                    <li><a href="mailto:info@scidata-analyst.com"><span class="contact-icon">✉</span><span>info@scidata-analyst.com</span></a></li>
+                    <li class="footer-address"><span class="contact-icon">📍</span><span>2001 Victoria Court, NY</span></li>
                 </ul>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
-                    <a href="https://join.skype.com/invite/YYXzSmJkfjpD" target="_blank" aria-label="Skype"><i class="fa-brands fa-skype"></i></a>
-                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089262577787" target="_blank" aria-label="Facebook">FB</a>
+                    <a href="https://www.linkedin.com/in/kanchonweb-dev-03327b202/" target="_blank" aria-label="LinkedIn">LI</a>
+                    <a href="https://twitter.com/KanchonSheel" target="_blank" aria-label="Twitter">TW</a>
+                    <a href="https://wa.me/8801575033642" target="_blank" aria-label="WhatsApp">WA</a>
                 </div>
             </div>
         </div>
-
-        <div class="footer-divider"></div>
-
         <div class="footer-bottom">
-            <div class="footer-bottom-inner">
-                <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
-                <button class="footer-totop" type="button" aria-label="Back to top">
-                    <i class="fa-solid fa-arrow-up"></i> Back to top
-                </button>
-            </div>
+            <p class="footer-copyright">&copy; 2026 Scidata Analyst. All rights reserved.</p>
+            <button class="footer-totop" type="button" aria-label="Back to top">
+                <span>Back to top</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </button>
         </div>
     </footer>
-    <!-- FOOTER END -->
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -371,13 +393,10 @@
     <script src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/contact.js"></script>
-
     <script>
         document.querySelector('.footer-totop')?.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
-
 </body>
-
 </html>
