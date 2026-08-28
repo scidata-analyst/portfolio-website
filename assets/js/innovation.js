@@ -167,7 +167,7 @@ window.addEventListener('scroll', () => {
 // ============================================
 // SCROLL REVEAL
 // ============================================
-const revealEls = document.querySelectorAll('.in-solutions-tag, .in-solutions-title, .in-signal-card, .in-products-tag, .in-products-title, .in-honey-item, .in-stats-tag, .in-data-pillar, .cta-headline, .cta-subtext');
+const revealEls = document.querySelectorAll('.in-solutions-tag, .in-solutions-title, .in-signal-card, .in-products-tag, .in-products-title, .in-honey-item, .in-stats-tag, .in-data-pillar, .in-deepdive-block, .cta-headline, .cta-subtext');
 
 revealEls.forEach(el => {
     gsap.from(el, {
