@@ -131,7 +131,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -325,7 +325,7 @@ body {
 }
 
 .ps-card-badge {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -346,10 +346,11 @@ body {
 }
 
 .ps-card-desc {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.55);
   margin: 0;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .ps-card-tech {
@@ -359,7 +360,7 @@ body {
 }
 
 .ps-card-tech span {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -398,7 +399,7 @@ body {
 }
 
 .ps-metric-label {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -570,7 +571,7 @@ ul li {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -650,10 +651,11 @@ ul li {
 }
 
 .wwa-card p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .wwa-right {
@@ -729,7 +731,7 @@ ul li {
 }
 
 .wwa-core-sub {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 6px;
   color: rgba(255, 255, 255, 0.3);
@@ -775,7 +777,7 @@ ul li {
 }
 
 .wwa-stat-label {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -799,7 +801,7 @@ ul li {
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: rgba(255, 255, 255, 0.4);
 }
 
@@ -811,7 +813,7 @@ ul li {
 
 .wwa-loc-item i {
   color: var(--accent);
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 
 .wwa-loc-divider {
@@ -822,7 +824,7 @@ ul li {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--light);
   text-decoration: none;
@@ -2636,7 +2638,7 @@ a {
     padding: 5px;
   }
   .fix-nav-logo a {
-    font-size: 12px;
+    font-size: 14px;
   }
   .custom-service .grid .box {
     height: auto;
@@ -6221,7 +6223,7 @@ body.home-page,
 }
 .main-nav .nav-menu-trigger .menu-text {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ffffff;
@@ -6302,7 +6304,7 @@ body.home-page,
 }
 .nav-overlay .nav-overlay-info .nav-info-block .nav-info-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.5);
@@ -6325,7 +6327,7 @@ body.home-page,
 }
 .nav-overlay .nav-overlay-social a {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.7);
@@ -6375,7 +6377,7 @@ body.home-page,
 .hero .hero-eyebrow {
   display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #0bbd29;
@@ -6432,7 +6434,7 @@ body.home-page,
 }
 .hero .hero-scroll-indicator .scroll-text {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.5);
@@ -6512,7 +6514,7 @@ body.home-page,
   gap: 12px;
   padding: 18px 40px;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -6625,7 +6627,7 @@ body.home-page,
 }
 .who-we-are .who-stats .stat-item .stat-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.6);
@@ -6639,7 +6641,7 @@ body.home-page,
 .section-header .section-eyebrow {
   display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #0bbd29;
@@ -6730,7 +6732,7 @@ body.home-page,
 }
 .services-horizontal .services-track .services-panel .service-card .service-list li {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.8);
   padding-left: 20px;
   position: relative;
@@ -6832,7 +6834,7 @@ body.home-page,
 }
 .tech-stack .tech-card .tech-list li {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.7);
   padding-left: 20px;
   position: relative;
@@ -6842,7 +6844,7 @@ body.home-page,
   position: absolute;
   left: 0;
   color: #0bbd29;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 .tech-stack .tech-card .tech-list li:hover {
   color: #ffffff;
@@ -6920,7 +6922,7 @@ body.home-page,
 }
 .process .process-timeline .process-step .process-content .process-list li {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.7);
   padding-left: 20px;
   position: relative;
@@ -6994,7 +6996,7 @@ body.home-page,
 }
 .approach .approach-item .approach-body .approach-list li {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.7);
   padding-left: 20px;
   position: relative;
@@ -7011,7 +7013,7 @@ body.home-page,
   gap: 10px;
   margin-top: 25px;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -7183,7 +7185,7 @@ body.home-page,
     padding: 8px 15px;
   }
   .main-nav .nav-menu-trigger .menu-text {
-    font-size: 0.75rem;
+    font-size: 1.05rem;
   }
   .hero {
     padding: 80px 20px 40px;
@@ -7265,11 +7267,11 @@ body.home-page,
 }
 @media screen and (max-width: 480px) {
   .hero .hero-eyebrow {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 2px;
   }
   .section-header .section-eyebrow {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 2px;
   }
   .section-header .section-title {
@@ -7277,11 +7279,11 @@ body.home-page,
   }
   .btn-magnetic {
     padding: 14px 30px;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .btn-magnetic--large {
     padding: 18px 40px;
-    font-size: 0.85rem;
+    font-size: 1.0rem;
   }
 }
 /* ============================================
@@ -7332,7 +7334,7 @@ body.work-page,
 .work-hero .hero-eyebrow {
   display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #0bbd29;
@@ -7389,7 +7391,7 @@ body.work-page,
 }
 .work-hero .hero-scroll-indicator .scroll-text {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.5);
@@ -7512,7 +7514,7 @@ body.work-page,
 .projects-horizontal .projects-track .project-panel .project-card .project-content .project-label {
   display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #0bbd29;
@@ -7546,7 +7548,7 @@ body.work-page,
 }
 .projects-horizontal .projects-track .project-panel .project-card .project-content .project-tags span {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.7);
@@ -7560,7 +7562,7 @@ body.work-page,
   align-items: center;
   gap: 10px;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -7640,7 +7642,7 @@ body.contact-page,
 .contact-hero .hero-eyebrow {
   display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #0bbd29;
@@ -7692,7 +7694,7 @@ body.contact-page,
 }
 .contact-hero .hero-scroll-indicator .scroll-text {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.5);
@@ -7742,7 +7744,7 @@ body.contact-page,
 }
 .contact-form-section .contact-form .form-group label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.7);
@@ -7816,7 +7818,7 @@ body.contact-page,
 }
 .contact-form-section .contact-info .info-card .info-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.5);
@@ -7924,7 +7926,7 @@ body.innovation-page,
 .innovation-hero .hero-eyebrow {
   display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #0bbd29;
@@ -7981,7 +7983,7 @@ body.innovation-page,
 }
 .innovation-hero .hero-scroll-indicator .scroll-text {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.5);
@@ -8083,7 +8085,7 @@ body.innovation-page,
 }
 .solutions-horizontal .solutions-track .solution-panel .solution-card .solution-tags span {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.7);
@@ -8197,7 +8199,7 @@ body.innovation-page,
 }
 .innovation-stats .stat-item .stat-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.6);
@@ -8305,11 +8307,11 @@ body.innovation-page,
   .work-hero .hero-eyebrow,
   .contact-hero .hero-eyebrow,
   .innovation-hero .hero-eyebrow {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 2px;
   }
   .section-header .section-eyebrow {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 2px;
   }
   .section-header .section-title {
@@ -8317,11 +8319,11 @@ body.innovation-page,
   }
   .btn-magnetic {
     padding: 14px 30px;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .btn-magnetic--large {
     padding: 18px 40px;
-    font-size: 0.85rem;
+    font-size: 1.0rem;
   }
 }
 /* ============================================
@@ -8446,7 +8448,7 @@ body.about-page,
 }
 .main-nav .nav-menu-trigger .menu-text {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ffffff;
@@ -8527,7 +8529,7 @@ body.about-page,
 }
 .nav-overlay .nav-overlay-info .nav-info-block .nav-info-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.5);
@@ -8550,7 +8552,7 @@ body.about-page,
 }
 .nav-overlay .nav-overlay-social a {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.7);
@@ -8641,7 +8643,7 @@ body.about-page,
 .about-hero .hero-eyebrow {
   display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #0bbd29;
@@ -8698,7 +8700,7 @@ body.about-page,
 }
 .about-hero .hero-scroll-indicator .scroll-text {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.5);
@@ -8869,7 +8871,7 @@ body.about-page,
 .story-horizontal .story-track .story-panel .story-card .story-year {
   display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #0bbd29;
@@ -8921,7 +8923,7 @@ body.about-page,
 }
 .values .value-card .value-text {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 25px;
@@ -9006,7 +9008,7 @@ body.about-page,
 }
 .capabilities .capability-item .capability-body .capability-list li {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.7);
   padding-left: 20px;
   position: relative;
@@ -9087,7 +9089,7 @@ body.about-page,
 }
 .philosophy .philosophy-author .author-name {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #0bbd29;
@@ -9191,7 +9193,7 @@ body.about-page,
 }
 .about-stats .stat-item .stat-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.6);
@@ -9257,7 +9259,7 @@ body.about-page,
 }
 .testimonials .testimonials-track .testimonial-panel .testimonial-card .testimonial-author .author-role {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -9401,7 +9403,7 @@ body.about-page,
     padding: 8px 15px;
   }
   .main-nav .nav-menu-trigger .menu-text {
-    font-size: 0.75rem;
+    font-size: 1.05rem;
   }
   .about-hero {
     padding: 80px 20px 40px;
@@ -9459,14 +9461,14 @@ body.about-page,
 }
 @media screen and (max-width: 480px) {
   .about-hero .hero-eyebrow {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 2px;
   }
   .manifesto .manifesto-title {
     font-size: clamp(2rem, 8vw, 3.5rem);
   }
   .section-header .section-eyebrow {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 2px;
   }
   .section-header .section-title {
@@ -9474,11 +9476,11 @@ body.about-page,
   }
   .btn-magnetic {
     padding: 14px 30px;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .btn-magnetic--large {
     padding: 18px 40px;
-    font-size: 0.85rem;
+    font-size: 1.0rem;
   }
 }
 /* ============================================================
@@ -9504,7 +9506,7 @@ body.about-page,
 }
 .team-hero-eyebrow {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -9590,7 +9592,7 @@ body.about-page,
   line-height: 1;
 }
 .team-hero-stat .stat-label {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   opacity: 0.7;
   margin-top: 5px;
 }
@@ -9628,7 +9630,7 @@ body.about-page,
 }
 .team-roster .roster-eyebrow {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -9730,7 +9732,7 @@ body.about-page,
 }
 .roster-card .roster-role {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: #0bbd29;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -9738,7 +9740,7 @@ body.about-page,
   margin-bottom: 15px;
 }
 .roster-card .roster-bio {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   opacity: 0.75;
   margin-bottom: 20px;
@@ -9749,7 +9751,7 @@ body.about-page,
   gap: 8px;
 }
 .roster-card .roster-skills span {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   padding: 4px 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -9769,7 +9771,7 @@ body.about-page,
 }
 .team-culture .culture-eyebrow {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -9862,7 +9864,7 @@ body.about-page,
 }
 .team-stats .team-stat-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   opacity: 0.7;
@@ -9888,7 +9890,7 @@ body.about-page,
 }
 .team-join .join-eyebrow {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -9987,7 +9989,7 @@ body.about-page,
 }
 .consult-hero-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -10030,7 +10032,7 @@ body.about-page,
 }
 .consult-hero .hero-cta-note {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   letter-spacing: 1px;
   opacity: 0.6;
 }
@@ -10058,7 +10060,7 @@ body.about-page,
 }
 .consult-hero-scroll .scroll-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   opacity: 0.6;
@@ -10075,7 +10077,7 @@ body.about-page,
 
 .expect-eyebrow {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -10175,7 +10177,7 @@ body.about-page,
 
 .consult-form-left .form-eyebrow {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -10235,7 +10237,7 @@ body.about-page,
   font-size: 1rem;
 }
 .form-feature .feature-desc {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   opacity: 0.6;
 }
 
@@ -10259,7 +10261,7 @@ body.about-page,
 }
 .consult-form .form-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -10274,7 +10276,7 @@ body.about-page,
   padding: 14px 18px;
   color: #ffffff;
   font-family: "Sansation", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   outline: none;
 }
@@ -10327,7 +10329,7 @@ body.about-page,
 
 .faq-eyebrow {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -10430,7 +10432,7 @@ body.about-page,
 }
 .price-hero-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -10476,7 +10478,7 @@ body.about-page,
 }
 .price-hero-toggle .toggle-label {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   letter-spacing: 1px;
   opacity: 0.6;
   transition: all 0.3s;
@@ -10487,7 +10489,7 @@ body.about-page,
 }
 .price-hero-toggle .toggle-label--active em {
   font-style: italic;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
 }
 .price-hero-toggle .toggle-switch {
   width: 60px;
@@ -10553,7 +10555,7 @@ body.about-page,
   color: #0bbd29;
 }
 .price-hero .price-float .float-label {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   opacity: 0.6;
@@ -10601,7 +10603,7 @@ body.about-page,
   background: #0bbd29;
   color: #0a0a0a;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 5px 20px;
@@ -10613,7 +10615,7 @@ body.about-page,
 }
 .price-card .plan-badge {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
@@ -10633,7 +10635,7 @@ body.about-page,
   margin-bottom: 12px;
 }
 .price-card .plan-desc {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   opacity: 0.7;
 }
@@ -10661,7 +10663,7 @@ body.about-page,
   line-height: 1;
 }
 .price-card .plan-price .plan-period {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   opacity: 0.5;
   margin-left: 5px;
 }
@@ -10669,7 +10671,7 @@ body.about-page,
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   opacity: 0.7;
 }
 .price-card .plan-delivery i {
@@ -10685,12 +10687,12 @@ body.about-page,
   align-items: center;
   gap: 12px;
   padding: 10px 0;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   opacity: 0.85;
 }
 .price-card .plan-features li i {
   color: #0bbd29;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 
 .price-offer {
@@ -10715,7 +10717,7 @@ body.about-page,
 
 .offer-flash {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0a0a0a;
@@ -10786,7 +10788,7 @@ body.about-page,
 
 .compare-eyebrow {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -10833,7 +10835,7 @@ body.about-page,
   color: #0bbd29;
 }
 .compare-table td {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   opacity: 0.85;
 }
 .compare-table td:first-child {
@@ -10862,7 +10864,7 @@ body.about-page,
 
 .price-faq-eyebrow {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #0bbd29;
@@ -10908,7 +10910,7 @@ body.about-page,
 }
 
 .price-faq-a {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   opacity: 0.75;
 }
@@ -11103,7 +11105,7 @@ body.about-page,
 }
 .cursor .cursor-label {
   position: absolute;
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--light);
@@ -11189,7 +11191,7 @@ body.about-page,
   border-radius: 2px;
 }
 .loader .loader-tagline {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: rgba(255, 255, 255, 0.4);
@@ -11249,7 +11251,7 @@ body.about-page,
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
@@ -11260,7 +11262,7 @@ body.about-page,
   border-radius: 50px;
 }
 .main-nav .nav-contact-item i {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   color: var(--accent);
 }
 .main-nav .nav-contact-item:hover {
@@ -11284,7 +11286,7 @@ body.about-page,
   pointer-events: auto;
 }
 .main-nav .nav-menu-trigger .menu-label {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -11391,7 +11393,7 @@ body.about-page,
   position: relative;
 }
 .nav-overlay .nav-overlay-link .nav-link-num {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.3);
   width: 40px;
@@ -11442,14 +11444,14 @@ body.about-page,
   gap: 4px;
 }
 .nav-overlay .nav-info-item .nav-info-label {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.3);
 }
 .nav-overlay .nav-info-item a,
 .nav-overlay .nav-info-item span {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: var(--light);
   text-decoration: none;
 }
@@ -11458,7 +11460,7 @@ body.about-page,
   gap: 20px;
 }
 .nav-overlay .nav-overlay-socials a {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.5);
@@ -11557,7 +11559,7 @@ body.about-page,
   animation: pulse 2s infinite;
 }
 .hero .hero-eyebrow .eyebrow-text {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -11639,7 +11641,7 @@ body.about-page,
   animation: scrollLineMove 2s infinite;
 }
 .hero .hero-scroll .scroll-label {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -11649,7 +11651,7 @@ body.about-page,
   right: 60px;
   bottom: 40px;
   writing-mode: vertical-rl;
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.2);
@@ -11727,7 +11729,7 @@ body.about-page,
   outline: none;
 }
 .btn-magnetic .btn-label {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -11834,7 +11836,7 @@ body.about-page,
   border-radius: 50%;
 }
 .section-tag span {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -11898,7 +11900,7 @@ body.about-page,
   position: absolute;
 }
 .about-section .metric .metric-label {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(10, 10, 10, 0.5);
@@ -11992,7 +11994,7 @@ body.about-page,
   gap: 10px;
 }
 .services-section .panel-list li {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.5);
   padding-left: 16px;
   position: relative;
@@ -12116,7 +12118,7 @@ body.about-page,
   gap: 8px;
 }
 .tech-section .tech-block .tech-block-list li {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: rgba(255, 255, 255, 0.5);
   padding-left: 14px;
   position: relative;
@@ -12217,7 +12219,7 @@ body.about-page,
   gap: 8px;
 }
 .process-section .node-content .node-list li {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: rgba(255, 255, 255, 0.5);
   padding-left: 14px;
   position: relative;
@@ -12320,7 +12322,7 @@ body.about-page,
   margin-bottom: 24px;
 }
 .approach-section .approach-body .approach-text p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.6);
   margin: 0;
@@ -12330,7 +12332,7 @@ body.about-page,
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -12391,6 +12393,7 @@ body.about-page,
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.7;
   margin: 0 0 48px;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 .cta-section .cta-deco {
   position: absolute;
@@ -12450,7 +12453,7 @@ body.about-page,
   color: var(--dark);
 }
 .site-footer .footer-marquee .footer-marquee-track .dot {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   opacity: 0.5;
 }
 .site-footer .footer-cta {
@@ -12462,7 +12465,7 @@ body.about-page,
 }
 .site-footer .footer-cta .footer-cta-text .footer-cta-label {
   display: block;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -12520,14 +12523,15 @@ body.about-page,
   width: auto;
 }
 .site-footer .footer-col .footer-tagline {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.4);
   line-height: 1.6;
   margin: 0 0 30px;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 .site-footer .footer-col .footer-newsletter .footer-newsletter-label {
   display: block;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.3);
@@ -12544,7 +12548,7 @@ body.about-page,
   outline: none;
   padding: 12px 0;
   color: var(--light);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
 }
 .site-footer .footer-col .footer-newsletter .footer-newsletter-row input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.2);
@@ -12564,7 +12568,7 @@ body.about-page,
   height: 18px;
 }
 .site-footer .footer-col .footer-col-title {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -12580,7 +12584,7 @@ body.about-page,
   gap: 12px;
 }
 .site-footer .footer-col ul li a {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color var(--transition-fast);
@@ -12594,7 +12598,7 @@ body.about-page,
   gap: 10px;
 }
 .site-footer .footer-col .footer-contact-list li .contact-icon {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--accent);
   width: 32px;
   height: 32px;
@@ -12637,7 +12641,7 @@ body.about-page,
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 .site-footer .footer-bottom .footer-copyright {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.3);
   margin: 0;
 }
@@ -12653,7 +12657,7 @@ body.about-page,
   border: none;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.4);
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: color var(--transition-fast);
@@ -12874,7 +12878,7 @@ body.about-page,
   align-items: center;
   gap: 10px;
   margin-bottom: 32px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -12977,7 +12981,7 @@ body.about-page,
   z-index: 5;
 }
 .ab-intro .ab-intro-scroll span {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(10, 10, 10, 0.3);
@@ -13103,7 +13107,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -13176,7 +13180,7 @@ body.about-page,
   grid-column: 1;
 }
 .ab-timeline .ab-timeline-year {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -13192,7 +13196,7 @@ body.about-page,
   margin: 0 0 12px;
 }
 .ab-timeline .ab-timeline-card-text {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
   margin: 0;
@@ -13210,7 +13214,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -13282,7 +13286,7 @@ body.about-page,
   margin: 0 0 16px;
 }
 .ab-values .ab-value-text {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: rgba(255, 255, 255, 0.4);
   line-height: 1.7;
   margin: 0;
@@ -13313,7 +13317,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -13358,7 +13362,7 @@ body.about-page,
   color: var(--accent);
 }
 .ab-capabilities .ab-cap-panel-num {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: rgba(10, 10, 10, 0.25);
   width: 40px;
@@ -13401,7 +13405,7 @@ body.about-page,
   padding: 0 64px;
 }
 .ab-capabilities .ab-cap-panel-body p {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
   margin: 0 0 16px;
@@ -13422,7 +13426,7 @@ body.about-page,
   margin: 0;
 }
 .ab-capabilities .ab-cap-panel-tags li {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -13487,7 +13491,7 @@ body.about-page,
   max-width: 500px;
 }
 .ab-philosophy .ab-philosophy-sign {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.2);
@@ -13509,7 +13513,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -13566,7 +13570,7 @@ body.about-page,
   opacity: 0.5;
 }
 .ab-stats .ab-stat-label {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(10, 10, 10, 0.5);
@@ -13588,7 +13592,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -13643,12 +13647,12 @@ body.about-page,
   gap: 2px;
 }
 .ab-testimonials .ab-testimonial-name {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--dark);
 }
 .ab-testimonials .ab-testimonial-role {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(10, 10, 10, 0.4);
@@ -13792,7 +13796,7 @@ body.about-page,
 }
 .wk-hero .wk-bento-tag {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -13831,12 +13835,12 @@ body.about-page,
   z-index: 2;
 }
 .wk-hero .wk-bento-overlay .wk-bento-num {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: var(--accent);
 }
 .wk-hero .wk-bento-overlay .wk-bento-name {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--light);
   text-transform: uppercase;
@@ -13869,7 +13873,7 @@ body.about-page,
   animation: scrollLineMove 2s infinite;
 }
 .wk-hero .wk-hero-scroll span {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -13890,7 +13894,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -13981,7 +13985,7 @@ body.about-page,
 
 .wk-showcase-info .wk-showcase-label {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -14013,7 +14017,7 @@ body.about-page,
   margin-bottom: 28px;
 }
 .wk-showcase-info .wk-showcase-tags span {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -14028,7 +14032,7 @@ body.about-page,
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -14063,7 +14067,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -14175,7 +14179,7 @@ body.about-page,
   gap: 6px;
 }
 .wk-process .wk-process-node .wk-process-node-list li {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.4);
   padding-left: 12px;
   position: relative;
@@ -14448,7 +14452,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -14498,7 +14502,7 @@ body.about-page,
   animation: pulse 2s infinite;
 }
 .in-hero .in-hero-scroll span {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -14516,7 +14520,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -14594,7 +14598,7 @@ body.about-page,
   margin: 0 0 12px;
 }
 .in-signal-card .in-signal-desc {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
   margin: 0 0 16px;
@@ -14605,7 +14609,7 @@ body.about-page,
   gap: 6px;
 }
 .in-signal-card .in-signal-tags span {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -14627,7 +14631,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -14707,7 +14711,7 @@ body.about-page,
   transition: color var(--transition-fast);
 }
 .in-honey-item .in-honey-desc {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   color: rgba(255, 255, 255, 0.3);
   text-align: center;
   line-height: 1.5;
@@ -14730,7 +14734,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -14795,7 +14799,7 @@ body.about-page,
   opacity: 0.5;
 }
 .in-data-info .in-data-label {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(10, 10, 10, 0.5);
@@ -14901,7 +14905,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -14970,7 +14974,7 @@ body.about-page,
 }
 
 .in-deepdive-block-subtitle {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(10, 10, 10, 0.3);
@@ -15009,7 +15013,7 @@ body.about-page,
 }
 
 .in-deepdive-feature-info h4 {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--dark);
@@ -15017,7 +15021,7 @@ body.about-page,
   letter-spacing: 0.5px;
 }
 .in-deepdive-feature-info p {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: rgba(10, 10, 10, 0.45);
   margin: 0;
@@ -15100,14 +15104,14 @@ body.about-page,
 }
 
 .cn-chat-title {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
   flex: 1;
 }
 
 .cn-chat-status {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   color: var(--accent);
 }
 
@@ -15138,7 +15142,7 @@ body.about-page,
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   font-weight: 900;
   color: var(--dark);
   flex-shrink: 0;
@@ -15147,7 +15151,7 @@ body.about-page,
   max-width: 80%;
   padding: 12px 16px;
   border-radius: 16px;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.5;
 }
 .cn-message .cn-message-bubble p {
@@ -15174,7 +15178,7 @@ body.about-page,
 
 .cn-chat-placeholder {
   flex: 1;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.2);
 }
 
@@ -15205,7 +15209,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -15262,7 +15266,7 @@ body.about-page,
   border-radius: 2px;
 }
 .cn-hero-scroll span {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -15280,7 +15284,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -15394,7 +15398,7 @@ body.about-page,
   margin: 0 0 12px;
 }
 .cn-step-card .cn-step-text {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
   margin: 0 0 16px;
@@ -15404,7 +15408,7 @@ body.about-page,
   gap: 12px;
 }
 .cn-step-card .cn-step-time {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -15426,7 +15430,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -15486,7 +15490,7 @@ body.about-page,
 }
 
 .cn-form-card-num {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: var(--accent);
   background: rgba(11, 189, 41, 0.1);
@@ -15525,7 +15529,7 @@ body.about-page,
 }
 
 .cn-form-label {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -15540,7 +15544,7 @@ body.about-page,
   border-radius: 10px;
   padding: 14px 16px;
   color: var(--light);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   outline: none;
   transition: all var(--transition-fast);
   width: 100%;
@@ -15597,7 +15601,7 @@ body.about-page,
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   color: var(--accent);
   flex-shrink: 0;
 }
@@ -15609,13 +15613,13 @@ body.about-page,
 }
 
 .cn-form-benefit-name {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: var(--light);
 }
 
 .cn-form-benefit-desc {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -15636,7 +15640,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -15736,7 +15740,7 @@ body.about-page,
   transition: max-height 0.5s cubic-bezier(0.77, 0, 0.175, 1), margin 0.5s ease;
 }
 .cn-faq-a p {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
   margin: 16px 0 0;
@@ -15815,7 +15819,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -15889,7 +15893,7 @@ body.about-page,
 }
 
 .cn-service-pillar-text {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
   margin: 0;
@@ -15920,7 +15924,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -16016,7 +16020,7 @@ body.about-page,
 }
 
 .cn-service-card-desc {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.4);
   margin: 0 0 20px;
@@ -16031,7 +16035,7 @@ body.about-page,
   gap: 8px;
 }
 .cn-service-card-list li {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.35);
   padding-left: 16px;
   position: relative;
@@ -16124,14 +16128,14 @@ body.about-page,
   gap: 4px;
 }
 .tm-hero .tm-mosaic-num {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--accent);
   opacity: 0.5;
   transition: opacity var(--transition-fast);
 }
 .tm-hero .tm-mosaic-label {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -16147,7 +16151,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -16206,7 +16210,7 @@ body.about-page,
   transition: height 0.3s ease;
 }
 .tm-hero .tm-hero-scroll span {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -16224,7 +16228,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -16323,14 +16327,14 @@ body.about-page,
 }
 
 .tm-deck-role {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(10, 10, 10, 0.4);
 }
 
 .tm-deck-bio {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
   margin: 0 0 24px;
@@ -16343,7 +16347,7 @@ body.about-page,
   justify-content: center;
 }
 .tm-deck-skills span {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -16365,7 +16369,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -16448,7 +16452,7 @@ body.about-page,
   margin: 0 0 12px;
 }
 .tm-polaroid .tm-polaroid-text {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.4);
   margin: 0;
@@ -16486,7 +16490,7 @@ body.about-page,
   opacity: 0.5;
 }
 .tm-stats .tm-stat-label {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(10, 10, 10, 0.5);
@@ -16515,7 +16519,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -16635,7 +16639,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -16685,7 +16689,7 @@ body.about-page,
 }
 .pr-calc-display .pr-calc-label {
   display: block;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.3);
@@ -16701,7 +16705,7 @@ body.about-page,
   color: var(--accent);
 }
 .pr-calc-display .pr-calc-note {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.3);
@@ -16716,7 +16720,7 @@ body.about-page,
 
 .pr-calc-control-label {
   display: block;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -16736,7 +16740,7 @@ body.about-page,
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: transparent;
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -16780,7 +16784,7 @@ body.about-page,
   margin-top: 8px;
 }
 .pr-calc-slider-labels span {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.25);
@@ -16799,7 +16803,7 @@ body.about-page,
 }
 .pr-hero-floater .pr-floater {
   position: absolute;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -16833,7 +16837,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -16892,7 +16896,7 @@ body.about-page,
   position: absolute;
   top: -12px;
   left: 40px;
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -16920,7 +16924,7 @@ body.about-page,
 
 .pr-stack-badge {
   display: inline-block;
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -16940,7 +16944,7 @@ body.about-page,
 }
 
 .pr-stack-desc {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
   margin: 0 0 16px;
@@ -16955,7 +16959,7 @@ body.about-page,
   gap: 6px;
 }
 .pr-stack-features li {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   color: rgba(10, 10, 10, 0.45);
   background: rgba(10, 10, 10, 0.03);
   padding: 4px 10px;
@@ -16979,14 +16983,14 @@ body.about-page,
 }
 
 .pr-stack-period {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(10, 10, 10, 0.3);
 }
 
 .pr-stack-delivery {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -17025,7 +17029,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -17113,7 +17117,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -17156,7 +17160,7 @@ body.about-page,
 }
 
 .pr-compare-feature {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
@@ -17164,7 +17168,7 @@ body.about-page,
 }
 
 .pr-compare-plan {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -17176,7 +17180,7 @@ body.about-page,
 }
 
 .pr-compare-val {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
 }
@@ -17202,7 +17206,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -17300,7 +17304,7 @@ body.about-page,
   transition: max-height 0.5s cubic-bezier(0.77, 0, 0.175, 1), margin 0.5s ease;
 }
 .pr-faq-a p {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
   margin: 16px 0 0;
@@ -17423,7 +17427,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -17487,7 +17491,7 @@ body.about-page,
   animation-delay: 0.4s;
 }
 .ct-hero .ct-hero-scroll span {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -17591,7 +17595,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -17661,14 +17665,14 @@ body.about-page,
 }
 
 .ct-console-title {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
   flex: 1;
 }
 
 .ct-console-status {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   color: var(--accent);
 }
 
@@ -17690,7 +17694,7 @@ body.about-page,
 }
 
 .ct-console-label {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -17705,7 +17709,7 @@ body.about-page,
   border-radius: 10px;
   padding: 14px 16px;
   color: var(--light);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   outline: none;
   transition: all var(--transition-fast);
   width: 100%;
@@ -17791,7 +17795,7 @@ body.about-page,
   gap: 4px;
 }
 .ct-channel-info .ct-channel-name {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -17799,7 +17803,7 @@ body.about-page,
 }
 .ct-channel-info a,
 .ct-channel-info span {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: var(--light);
   text-decoration: none;
 }
@@ -17930,7 +17934,7 @@ body.about-page,
   border-radius: 50%;
 }
 .wk2-hero .wk2-hero-eyebrow .wk2-eyebrow-text {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -17993,7 +17997,7 @@ body.about-page,
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   transition: all var(--transition-fast);
   flex-shrink: 0;
 }
@@ -18016,7 +18020,7 @@ body.about-page,
   z-index: 2;
 }
 .wk2-hero .wk2-hero-side .wk2-side-text {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.2);
@@ -18051,7 +18055,7 @@ body.about-page,
   animation: wk2ScrollDot 2s ease-in-out infinite;
 }
 .wk2-hero .wk2-hero-scroll .wk2-scroll-label {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -18142,7 +18146,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -18281,7 +18285,7 @@ body.about-page,
   backdrop-filter: blur(4px);
 }
 .wk2-projects .wk2-project-overlay .wk2-overlay-label {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -18298,7 +18302,7 @@ body.about-page,
   z-index: 1;
 }
 .wk2-projects .wk2-project-label {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -18324,7 +18328,7 @@ body.about-page,
   letter-spacing: -0.02em;
 }
 .wk2-projects .wk2-project-desc {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.55);
   margin: 0;
@@ -18335,7 +18339,7 @@ body.about-page,
   gap: 8px;
 }
 .wk2-projects .wk2-project-tags span {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -18353,7 +18357,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -18379,7 +18383,7 @@ body.about-page,
   gap: 8px;
 }
 .wk2-projects .wk2-project-tags span {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -18392,7 +18396,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -18433,7 +18437,7 @@ body.about-page,
   transition: width 0.3s ease;
 }
 .wk2-projects .wk2-projects-progress .wk2-progress-label {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -18472,7 +18476,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -18580,7 +18584,7 @@ body.about-page,
   gap: 8px 24px;
 }
 .wk2-process .wk2-timeline-node .wk2-node-list li {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: rgba(10, 10, 10, 0.6);
   padding: 6px 0;
   border-bottom: 1px solid rgba(10, 10, 10, 0.08);
@@ -18591,7 +18595,7 @@ body.about-page,
 .wk2-process .wk2-timeline-node .wk2-node-list li::before {
   content: "→";
   color: var(--accent);
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
@@ -18704,7 +18708,7 @@ body.about-page,
   animation: cn2Pulse 2s ease-in-out infinite;
 }
 .cn2-hero .cn2-hero-eyebrow .cn2-eyebrow-text {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -18760,7 +18764,7 @@ body.about-page,
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   transition: all var(--transition-fast);
   width: -moz-fit-content;
   width: fit-content;
@@ -18823,7 +18827,7 @@ body.about-page,
   letter-spacing: 2px;
 }
 .cn2-hero .cn2-visual-content .cn2-visual-sublabel {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.4);
@@ -18857,7 +18861,7 @@ body.about-page,
   color: var(--accent);
 }
 .cn2-hero .cn2-hero-stats .cn2-stat .cn2-stat-label {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.4);
@@ -18889,7 +18893,7 @@ body.about-page,
   transition: height 0.3s ease;
 }
 .cn2-hero .cn2-hero-scroll .cn2-scroll-label {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -18925,7 +18929,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -19057,7 +19061,7 @@ body.about-page,
   transition: color var(--transition-fast);
 }
 .cn2-services .cn2-service-desc {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.6;
   color: rgba(10, 10, 10, 0.5);
   margin: 0;
@@ -19072,7 +19076,7 @@ body.about-page,
   gap: 6px;
 }
 .cn2-services .cn2-service-list li {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: rgba(10, 10, 10, 0.4);
   padding: 4px 0;
   border-bottom: 1px solid rgba(10, 10, 10, 0.06);
@@ -19082,7 +19086,7 @@ body.about-page,
   content: "→";
   margin-right: 8px;
   color: var(--accent);
-  font-size: 0.75rem;
+  font-size: 1.05rem;
 }
 .cn2-services .cn2-service-arrow {
   width: 24px;
@@ -19108,7 +19112,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -19212,7 +19216,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -19287,7 +19291,7 @@ body.about-page,
   transform: translateX(8px);
 }
 .cn2-happens .cn2-happens-time {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -19302,7 +19306,7 @@ body.about-page,
   margin: 0 0 10px;
 }
 .cn2-happens .cn2-happens-text {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
   margin: 0;
@@ -19320,7 +19324,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -19367,7 +19371,7 @@ body.about-page,
   padding: 16px 0;
 }
 .cn2-faq .cn2-faq-num {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -19415,7 +19419,7 @@ body.about-page,
   padding-left: 70px;
 }
 .cn2-faq .cn2-faq-a p {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.4);
   margin: 0;
@@ -19433,7 +19437,7 @@ body.about-page,
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -19492,7 +19496,7 @@ body.about-page,
   margin-bottom: 24px;
 }
 .cn2-form-section .cn2-form-label {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -19506,7 +19510,7 @@ body.about-page,
   border: 2px solid rgba(10, 10, 10, 0.08);
   border-radius: 12px;
   background: var(--wheat);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--dark);
   outline: none;
   transition: all var(--transition-fast);
@@ -19551,10 +19555,10 @@ body.about-page,
 .cn2-form-section .cn2-perk .cn2-perk-icon {
   color: var(--accent);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
 }
 .cn2-form-section .cn2-perk .cn2-perk-text {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -19739,7 +19743,7 @@ body.team-page {
   flex-shrink: 0;
 }
 .tm2-hero .tm2-hero-eyebrow .tm2-eyebrow-text {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -19843,7 +19847,7 @@ body.team-page {
   transition: height 0.3s ease;
 }
 .tm2-hero .tm2-hero-scroll .tm2-scroll-label {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -19879,7 +19883,7 @@ body.team-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -20037,7 +20041,7 @@ body.team-page {
   left: 16px;
 }
 .tm2-members .tm2-member-overlay .tm2-overlay-text {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -20056,7 +20060,7 @@ body.team-page {
   justify-content: space-between;
 }
 .tm2-members .tm2-member-num {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -20071,7 +20075,7 @@ body.team-page {
   line-height: 1.2;
 }
 .tm2-members .tm2-member-role {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -20079,7 +20083,7 @@ body.team-page {
   line-height: 1.3;
 }
 .tm2-members .tm2-member-bio {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.6;
   color: rgba(10, 10, 10, 0.55);
   margin: 6px 0 10px;
@@ -20092,7 +20096,7 @@ body.team-page {
   padding-top: 4px;
 }
 .tm2-members .tm2-member-skills span {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -20117,7 +20121,7 @@ body.team-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -20162,7 +20166,7 @@ body.team-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -20247,7 +20251,7 @@ body.team-page {
   transition: color var(--transition-fast);
 }
 .tm2-culture .tm2-culture-text {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.4);
   margin: 0;
@@ -20325,7 +20329,7 @@ body.team-page {
   display: inline-block;
 }
 .tm2-stats .tm2-stat-label {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -20360,7 +20364,7 @@ body.team-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -20405,7 +20409,7 @@ body.team-page {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   text-decoration: none;
   transition: all var(--transition-fast);
 }
@@ -20541,7 +20545,7 @@ body.team-page {
     gap: 8px;
   }
   .tm2-hero .tm2-hero-eyebrow .tm2-eyebrow-text {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 3px;
   }
   .tm2-hero .tm2-hero-headline {
@@ -20557,7 +20561,7 @@ body.team-page {
     -webkit-text-stroke: 1.5px var(--light);
   }
   .tm2-hero .tm2-hero-subtext {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     max-width: 100%;
   }
@@ -20568,7 +20572,7 @@ body.team-page {
     gap: 24px;
   }
   .tm2-hero .tm2-hero-marquee .tm2-marquee-track span {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     letter-spacing: 2.5px;
   }
   .tm2-hero .tm2-hero-scroll {
@@ -20751,7 +20755,7 @@ body.team-page {
     margin-bottom: 24px;
   }
   .tm2-members .tm2-members-header .tm2-members-tag {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 12px;
   }
@@ -20782,7 +20786,7 @@ body.team-page {
     left: 12px;
   }
   .tm2-members .tm2-member-overlay .tm2-overlay-text {
-    font-size: 0.6rem;
+    font-size: 1.05rem;
     padding: 4px 10px;
     letter-spacing: 2px;
   }
@@ -20791,7 +20795,7 @@ body.team-page {
     gap: 5px;
   }
   .tm2-members .tm2-member-num {
-    font-size: 0.6rem;
+    font-size: 1.05rem;
     letter-spacing: 1.5px;
   }
   .tm2-members .tm2-member-name {
@@ -20803,7 +20807,7 @@ body.team-page {
     letter-spacing: 1px;
   }
   .tm2-members .tm2-member-bio {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     margin: 3px 0 6px;
   }
@@ -20811,7 +20815,7 @@ body.team-page {
     gap: 4px;
   }
   .tm2-members .tm2-member-skills span {
-    font-size: 0.6rem;
+    font-size: 1.05rem;
     padding: 3px 8px;
     letter-spacing: 0.5px;
   }
@@ -20823,7 +20827,7 @@ body.team-page {
     margin-bottom: 24px;
   }
   .tm2-culture .tm2-culture-header .tm2-culture-tag {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 12px;
   }
@@ -20850,7 +20854,7 @@ body.team-page {
     font-size: 1.15rem;
   }
   .tm2-culture .tm2-culture-text {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     line-height: 1.5;
   }
   .tm2-culture .tm2-culture-progress {
@@ -20878,7 +20882,7 @@ body.team-page {
     padding: 45px 16px;
   }
   .tm2-join .tm2-join-tag {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 12px;
   }
@@ -20887,13 +20891,13 @@ body.team-page {
     margin-bottom: 12px;
   }
   .tm2-join .tm2-join-text {
-    font-size: 0.85rem;
+    font-size: 1.0rem;
     line-height: 1.5;
     margin-bottom: 20px;
   }
   .tm2-join .tm2-join-cta {
     padding: 14px 24px;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     width: 100%;
     max-width: 260px;
     justify-content: center;
@@ -21023,7 +21027,7 @@ body.price-page {
   flex-shrink: 0;
 }
 .pr2-hero .pr2-hero-eyebrow .pr2-eyebrow-text {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -21099,7 +21103,7 @@ body.price-page {
   transition: height 0.3s ease;
 }
 .pr2-hero .pr2-hero-scroll .pr2-scroll-label {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -21129,7 +21133,7 @@ body.price-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -21212,7 +21216,7 @@ body.price-page {
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -21228,7 +21232,7 @@ body.price-page {
   gap: 12px;
 }
 .pr2-plans .pr2-plan-num {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -21242,7 +21246,7 @@ body.price-page {
   margin: 0;
 }
 .pr2-plans .pr2-plan-badge {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -21277,11 +21281,11 @@ body.price-page {
   line-height: 1;
 }
 .pr2-plans .pr2-plan-price .pr2-plan-period {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   color: rgba(10, 10, 10, 0.4);
 }
 .pr2-plans .pr2-plan-desc {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   color: rgba(10, 10, 10, 0.5);
   margin: 0;
@@ -21295,7 +21299,7 @@ body.price-page {
   gap: 8px;
 }
 .pr2-plans .pr2-plan-features li {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: rgba(10, 10, 10, 0.6);
   padding: 6px 0;
   border-bottom: 1px solid rgba(10, 10, 10, 0.06);
@@ -21307,7 +21311,7 @@ body.price-page {
   content: "✓";
   color: var(--accent);
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 .pr2-plans .pr2-plan-bottom {
   display: flex;
@@ -21319,7 +21323,7 @@ body.price-page {
   gap: 12px;
 }
 .pr2-plans .pr2-plan-delivery {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -21393,7 +21397,7 @@ body.price-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -21444,7 +21448,7 @@ body.price-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -21496,14 +21500,14 @@ body.price-page {
   padding: 20px 24px;
 }
 .pr2-compare .pr2-compare-feature {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: rgba(10, 10, 10, 0.5);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 .pr2-compare .pr2-compare-plan {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -21514,7 +21518,7 @@ body.price-page {
   color: var(--accent);
 }
 .pr2-compare .pr2-compare-val {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: rgba(10, 10, 10, 0.6);
   text-align: center;
 }
@@ -21539,7 +21543,7 @@ body.price-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -21586,7 +21590,7 @@ body.price-page {
   padding: 12px 0;
 }
 .pr2-faq .pr2-faq-num {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -21635,7 +21639,7 @@ body.price-page {
   padding-left: 56px;
 }
 .pr2-faq .pr2-faq-a p {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.4);
   margin: 0;
@@ -21727,7 +21731,7 @@ body.price-page {
     gap: 8px;
   }
   .pr2-hero .pr2-hero-eyebrow .pr2-eyebrow-text {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 3px;
   }
   .pr2-hero .pr2-hero-headline {
@@ -21743,7 +21747,7 @@ body.price-page {
     -webkit-text-stroke: 1.5px var(--light);
   }
   .pr2-hero .pr2-hero-subtext {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     max-width: 100%;
   }
@@ -21874,7 +21878,7 @@ body.price-page {
     margin-bottom: 24px;
   }
   .pr2-plans .pr2-plans-header .pr2-plans-tag {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 12px;
   }
@@ -21904,13 +21908,13 @@ body.price-page {
     padding-top: 12px;
   }
   .pr2-plans .pr2-plan .pr2-plan-delivery {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
   }
   .pr2-offer {
     padding: 45px 16px;
   }
   .pr2-offer .pr2-offer-tag {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 10px;
   }
@@ -21921,12 +21925,12 @@ body.price-page {
     font-size: clamp(1.5rem, 6.5vw, 2.2rem);
   }
   .pr2-offer .pr2-offer-text {
-    font-size: 0.85rem;
+    font-size: 1.0rem;
     line-height: 1.5;
   }
   .pr2-offer .pr2-offer-cta {
     padding: 12px 24px;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .pr2-compare {
     padding: 50px 16px;
@@ -21935,7 +21939,7 @@ body.price-page {
     margin-bottom: 24px;
   }
   .pr2-compare .pr2-compare-header .pr2-compare-tag {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 12px;
   }
@@ -21947,13 +21951,13 @@ body.price-page {
     padding: 12px 14px;
   }
   .pr2-compare .pr2-compare-feature {
-    font-size: 0.75rem;
+    font-size: 1.05rem;
   }
   .pr2-compare .pr2-compare-plan {
     font-size: 0.68rem;
   }
   .pr2-compare .pr2-compare-val {
-    font-size: 0.75rem;
+    font-size: 1.05rem;
   }
   .pr2-faq {
     padding: 50px 16px;
@@ -21962,7 +21966,7 @@ body.price-page {
     margin-bottom: 24px;
   }
   .pr2-faq .pr2-faq-header .pr2-faq-tag {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 12px;
   }
@@ -21974,10 +21978,10 @@ body.price-page {
     gap: 8px;
   }
   .pr2-faq .pr2-faq-q {
-    font-size: 0.85rem;
+    font-size: 1.0rem;
   }
   .pr2-faq .pr2-faq-a p {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     line-height: 1.55;
   }
 }
@@ -22085,7 +22089,7 @@ body.contact-page {
   flex-shrink: 0;
 }
 .ct2-hero .ct2-hero-eyebrow .ct2-eyebrow-text {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -22161,7 +22165,7 @@ body.contact-page {
   transition: height 0.3s ease;
 }
 .ct2-hero .ct2-hero-scroll .ct2-scroll-label {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -22277,7 +22281,7 @@ body.contact-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -22348,7 +22352,7 @@ body.contact-page {
   background: #27c93f;
 }
 .ct2-form-section .ct2-form-card-header .ct2-form-card-title {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -22359,7 +22363,7 @@ body.contact-page {
 }
 .ct2-form-section .ct2-form-card-header .ct2-form-status {
   margin-left: auto;
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--accent);
   white-space: nowrap;
@@ -22385,7 +22389,7 @@ body.contact-page {
   margin-bottom: 20px;
 }
 .ct2-form-section .ct2-form-label {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -22399,7 +22403,7 @@ body.contact-page {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.03);
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: var(--light);
   outline: none;
   transition: all var(--transition-fast);
@@ -22467,7 +22471,7 @@ body.contact-page {
   overflow: hidden;
 }
 .ct2-form-section .ct2-channel-info .ct2-channel-name {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -22475,7 +22479,7 @@ body.contact-page {
 }
 .ct2-form-section .ct2-channel-info a,
 .ct2-form-section .ct2-channel-info span {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   color: var(--light);
   text-decoration: none;
   word-break: break-word;
@@ -22486,7 +22490,7 @@ body.contact-page {
   gap: 8px;
 }
 .ct2-form-section .ct2-channel-socials a {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: var(--accent);
   padding: 4px 8px;
@@ -22560,7 +22564,7 @@ body.contact-page {
     gap: 8px;
   }
   .ct2-hero .ct2-hero-eyebrow .ct2-eyebrow-text {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 3px;
   }
   .ct2-hero .ct2-hero-headline {
@@ -22576,7 +22580,7 @@ body.contact-page {
     -webkit-text-stroke: 1.5px var(--light);
   }
   .ct2-hero .ct2-hero-subtext {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     max-width: 100%;
   }
@@ -22693,7 +22697,7 @@ body.contact-page {
     margin-bottom: 14px;
   }
   .ct2-manifesto .ct2-manifesto-text {
-    font-size: 0.85rem;
+    font-size: 1.0rem;
     line-height: 1.55;
   }
   .ct2-form-section {
@@ -22703,7 +22707,7 @@ body.contact-page {
     margin-bottom: 24px;
   }
   .ct2-form-section .ct2-form-header .ct2-form-tag {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 12px;
   }
@@ -22747,7 +22751,7 @@ body.contact-page {
     padding: 11px 12px;
   }
   .ct2-form-section .ct2-form-label {
-    font-size: 0.6rem;
+    font-size: 1.05rem;
     letter-spacing: 1.5px;
   }
   .ct2-form-section .ct2-form-submit {
@@ -22766,7 +22770,7 @@ body.contact-page {
     height: 32px;
   }
   .ct2-channel .ct2-channel-info .ct2-channel-name {
-    font-size: 0.6rem;
+    font-size: 1.05rem;
   }
   .ct2-channel .ct2-channel-info a,
   .ct2-channel .ct2-channel-info span {
@@ -22821,7 +22825,7 @@ body.contact-page {
   }
   .ct2-channel-socials a {
     padding: 3px 6px;
-    font-size: 0.65rem;
+    font-size: 1.1rem;
   }
 }
 body.consultation-page {
@@ -22879,7 +22883,7 @@ body.consultation-page {
   flex-shrink: 0;
 }
 .cn2-hero .cn2-hero-eyebrow .cn2-eyebrow-text {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -22936,7 +22940,7 @@ body.consultation-page {
   color: var(--dark);
   border-radius: 60px;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -23005,7 +23009,7 @@ body.consultation-page {
   line-height: 1;
 }
 .cn2-hero .cn2-visual-content .cn2-visual-sublabel {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -23055,7 +23059,7 @@ body.consultation-page {
   line-height: 1;
 }
 .cn2-hero .cn2-stat .cn2-stat-label {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -23090,7 +23094,7 @@ body.consultation-page {
   transition: height 0.3s ease;
 }
 .cn2-hero .cn2-hero-scroll .cn2-scroll-label {
-  font-size: 0.6rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.3);
@@ -23129,7 +23133,7 @@ body.consultation-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -23257,7 +23261,7 @@ body.consultation-page {
   z-index: 1;
 }
 .cn2-services .cn2-service-card .cn2-service-desc {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.65;
   color: rgba(10, 10, 10, 0.55);
   position: relative;
@@ -23318,7 +23322,7 @@ body.consultation-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -23420,7 +23424,7 @@ body.consultation-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -23514,7 +23518,7 @@ body.consultation-page {
   box-shadow: 0 12px 30px rgba(11, 189, 41, 0.1);
 }
 .cn2-happens .cn2-happens-card .cn2-happens-time {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -23528,7 +23532,7 @@ body.consultation-page {
   letter-spacing: -0.01em;
 }
 .cn2-happens .cn2-happens-card .cn2-happens-text {
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   line-height: 1.65;
   color: rgba(10, 10, 10, 0.5);
 }
@@ -23546,7 +23550,7 @@ body.consultation-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -23603,7 +23607,7 @@ body.consultation-page {
   color: var(--accent);
 }
 .cn2-faq .cn2-faq-item .cn2-faq-top .cn2-faq-num {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.25);
@@ -23673,7 +23677,7 @@ body.consultation-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -23735,7 +23739,7 @@ body.consultation-page {
   margin-bottom: 20px;
 }
 .cn2-form-section .cn2-form-label {
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -23806,7 +23810,7 @@ body.consultation-page {
   line-height: 1;
 }
 .cn2-form-section .cn2-perk .cn2-perk-text {
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -23821,7 +23825,7 @@ body.consultation-page {
   color: var(--dark);
   border: none;
   border-radius: 60px;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -24018,7 +24022,7 @@ body.consultation-page {
     padding: 20px 0;
   }
   .cn2-faq .cn2-faq-top .cn2-faq-q {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
   }
   .cn2-faq .cn2-faq-a {
     padding-left: 42px;
@@ -24064,7 +24068,7 @@ body.consultation-page {
     font-size: clamp(2.2rem, 11vw, 3.5rem);
   }
   .cn2-hero .cn2-hero-eyebrow .cn2-eyebrow-text {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
   }
   .cn2-hero .cn2-hero-scroll {
@@ -24074,7 +24078,7 @@ body.consultation-page {
     padding: 50px 16px;
   }
   .cn2-services .cn2-services-header .cn2-services-tag {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
   }
   .cn2-services .cn2-service-card {
@@ -24110,7 +24114,7 @@ body.consultation-page {
     height: 52px;
   }
   .cn2-happens .cn2-happens-marker .cn2-happens-num {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
   .cn2-happens .cn2-happens-card {
     padding: 18px 16px;
@@ -24125,10 +24129,10 @@ body.consultation-page {
     padding: 18px 0;
   }
   .cn2-faq .cn2-faq-top .cn2-faq-num {
-    font-size: 0.6rem;
+    font-size: 1.05rem;
   }
   .cn2-faq .cn2-faq-top .cn2-faq-q {
-    font-size: 0.85rem;
+    font-size: 1.0rem;
     line-height: 1.4;
   }
   .cn2-faq .cn2-faq-a {
@@ -24164,7 +24168,7 @@ body.consultation-page {
     font-size: clamp(1.9rem, 12vw, 3rem);
   }
   .cn2-hero .cn2-hero-cta {
-    font-size: 0.75rem;
+    font-size: 1.05rem;
     padding: 14px 20px;
   }
   .cn2-services {
