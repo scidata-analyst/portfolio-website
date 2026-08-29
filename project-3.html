@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Car Platform — Scidata Analyst</title>
+    <meta name="description" content="Real-time bidding platform for vehicle auctions with live price updates, auto-bid agents, payment escrow, and buyer/seller verification.">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/project-3.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+</head>
+<body class="project-page project-3">
+
+    <div class="p3-cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"><span>BID</span></div>
+    </div>
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- PROJECT 3 — ASYMMETRICAL DIAGONAL PATTERN -->
+    <section class="p3-hero">
+        <div class="p3-hero-grid">
+            <div class="p3-hero-left">
+                <span class="p3-tag"><span class="tag-dot"></span> FinTech / Auto</span>
+                <h1 class="p3-headline">
+                    <span class="p3-word p3-word--1">Auction</span>
+                    <span class="p3-word p3-word--2">Car</span>
+                    <span class="p3-word p3-word--3">Platform</span>
+                </h1>
+                <p class="p3-subtext">Real-time bidding platform for vehicle auctions with live price updates, auto-bid agents, payment escrow, and buyer/seller verification.</p>
+                <div class="p3-stats">
+                    <div class="stat"><span class="stat-val">10K+</span><span class="stat-key">Listings</span></div>
+                    <div class="stat"><span class="stat-val">&lt;50ms</span><span class="stat-key">Bid Latency</span></div>
+                </div>
+            </div>
+            <div class="p3-hero-right">
+                <div class="p3-diag-visual">
+                    <div class="diag-card diag-card--1">
+                        <span class="diag-num">$42,500</span>
+                        <span class="diag-label">Current Bid</span>
+                        <span class="diag-live">● LIVE</span>
+                    </div>
+                    <div class="diag-card diag-card--2">
+                        <span class="diag-num">23</span>
+                        <span class="diag-label">Active Bidders</span>
+                    </div>
+                    <div class="diag-card diag-card--3">
+                        <span class="diag-num">2:45</span>
+                        <span class="diag-label">Time Left</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p3-diagonal-divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- DIAGONAL SECTIONS -->
+    <section class="p3-features">
+        <div class="p3-feature p3-feature--1">
+            <div class="feature-content">
+                <span class="feature-num">01</span>
+                <h2 class="feature-title">Real-Time Bidding</h2>
+                <p class="feature-desc">WebSocket-powered live bidding with sub-50ms latency. Every bid updates instantly across all connected clients.</p>
+            </div>
+            <div class="feature-visual">
+                <div class="bid-visual">
+                    <div class="bid-row"><span>User_2847</span><span class="bid-price">$42,500</span><span class="bid-time">2s ago</span></div>
+                    <div class="bid-row"><span>User_1923</span><span class="bid-price">$41,200</span><span class="bid-time">5s ago</span></div>
+                    <div class="bid-row"><span>User_4821</span><span class="bid-price">$40,000</span><span class="bid-time">8s ago</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p3-feature p3-feature--2">
+            <div class="feature-visual">
+                <div class="escrow-visual">
+                    <div class="escrow-step escrow-step--1">
+                        <span class="step-icon">🔒</span>
+                        <span class="step-label">Payment Held</span>
+                    </div>
+                    <div class="escrow-arrow">→</div>
+                    <div class="escrow-step escrow-step--2">
+                        <span class="step-icon">✓</span>
+                        <span class="step-label">Verified</span>
+                    </div>
+                    <div class="escrow-arrow">→</div>
+                    <div class="escrow-step escrow-step--3">
+                        <span class="step-icon">🚗</span>
+                        <span class="step-label">Delivered</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content feature-content--right">
+                <span class="feature-num">02</span>
+                <h2 class="feature-title">Payment Escrow</h2>
+                <p class="feature-desc">Secure payment holding until vehicle delivery confirmation. Both buyer and seller protected throughout the transaction.</p>
+            </div>
+        </div>
+
+        <div class="p3-feature p3-feature--3">
+            <div class="feature-content">
+                <span class="feature-num">03</span>
+                <h2 class="feature-title">Auto-Bid Agents</h2>
+                <p class="feature-desc">AI-powered bidding agents that automatically place bids based on user-defined strategies and maximum price limits.</p>
+            </div>
+            <div class="feature-visual">
+                <div class="agent-visual">
+                    <div class="agent-pulse"></div>
+                    <span class="agent-label">Agent Active</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="p3-tech">
+        <div class="p3-tech-inner">
+            <span class="section-tag">Built With</span>
+            <div class="tech-list">
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">Socket.io</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">Stripe</span>
+                <span class="tech-pill">Docker</span>
+                <span class="tech-pill">Redis</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="p3-cta">
+        <div class="p3-cta-content">
+            <h2 class="p3-cta-headline">Next Project</h2>
+            <a href="project-4.html" class="p3-cta-btn" data-cursor>
+                <span class="btn-text">Data Pipeline Engine</span>
+                <span class="btn-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        const cursor = document.querySelector('.p3-cursor');
+        const cursorDot = cursor?.querySelector('.cursor-dot');
+        const cursorRing = cursor?.querySelector('.cursor-ring');
+        if (cursor && window.matchMedia('(pointer: fine)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.15 });
+                gsap.to(cursorRing, { x: e.clientX, y: e.clientY, duration: 0.4, ease: 'power2.out' });
+            });
+            document.querySelectorAll('[data-cursor]').forEach(el => {
+                el.addEventListener('mouseenter', () => cursorRing?.classList.add('active'));
+                el.addEventListener('mouseleave', () => cursorRing?.classList.remove('active'));
+            });
+        }
+
+        gsap.from('.p3-word', { x: -100, opacity: 0, duration: 1, stagger: 0.15, ease: 'power4.out', delay: 0.3 });
+        gsap.from('.p3-subtext', { y: 30, opacity: 0, duration: 0.8, delay: 0.8 });
+        gsap.from('.stat', { scale: 0, opacity: 0, duration: 0.6, stagger: 0.15, delay: 1, ease: 'back.out(1.7)' });
+        gsap.from('.diag-card', { x: 80, opacity: 0, duration: 0.8, stagger: 0.2, delay: 0.5, ease: 'power3.out' });
+
+        gsap.utils.toArray('.p3-feature').forEach(feature => {
+            gsap.from(feature, {
+                scrollTrigger: { trigger: feature, start: 'top 75%' },
+                y: 60, opacity: 0, duration: 1, ease: 'power3.out'
+            });
+        });
+
+        gsap.from('.tech-pill', {
+            scrollTrigger: { trigger: '.p3-tech', start: 'top 75%' },
+            y: 30, opacity: 0, duration: 0.6, stagger: 0.08, ease: 'power3.out'
+        });
+
+        gsap.from('.p3-cta-headline, .p3-cta-btn', {
+            scrollTrigger: { trigger: '.p3-cta', start: 'top 70%' },
+            y: 40, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out'
+        });
+    </script>
+</body>
+</html>

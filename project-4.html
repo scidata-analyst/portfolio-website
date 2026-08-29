@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pipeline Engine — Scidata Analyst</title>
+    <meta name="description" content="Scalable ETL pipeline processing millions of records daily. Real-time data ingestion, transformation, and analytics.">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/project-4.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+</head>
+<body class="project-page project-4">
+
+    <div class="p4-cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"><span>DATA</span></div>
+    </div>
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- PROJECT 4 — DARK IMMERSIVE PARTICLE PATTERN -->
+    <section class="p4-hero">
+        <div class="p4-particles" id="particles" aria-hidden="true"></div>
+        <div class="p4-hero-content">
+            <span class="p4-tag"><span class="tag-dot"></span> Big Data / ETL</span>
+            <h1 class="p4-headline">
+                <span class="p4-line">Data Pipeline</span>
+                <span class="p4-line p4-line--accent">& Processing</span>
+                <span class="p4-line">Engine</span>
+            </h1>
+            <p class="p4-subtext">Scalable ETL pipeline processing millions of records daily. Real-time data ingestion, transformation, and analytics with automated quality checks.</p>
+            <div class="p4-counter">
+                <span class="counter-num" data-target="5000000">0</span>
+                <span class="counter-label">Records / Day</span>
+            </div>
+        </div>
+        <div class="p4-scroll-hint">
+            <span class="hint-dot"></span>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- DATA FLOW VISUALIZATION -->
+    <section class="p4-flow">
+        <div class="p4-flow-inner">
+            <div class="flow-header">
+                <span class="section-tag">Pipeline Architecture</span>
+                <h2 class="flow-title">How Data Flows</h2>
+            </div>
+            <div class="flow-visual">
+                <div class="flow-node flow-node--source">
+                    <span class="node-icon">📥</span>
+                    <span class="node-name">Sources</span>
+                    <span class="node-detail">APIs, DBs, Streams</span>
+                </div>
+                <div class="flow-arrow">
+                    <span class="arrow-line"></span>
+                    <span class="arrow-head">→</span>
+                </div>
+                <div class="flow-node flow-node--kafka">
+                    <span class="node-icon">⚡</span>
+                    <span class="node-name">Kafka</span>
+                    <span class="node-detail">Event Streaming</span>
+                </div>
+                <div class="flow-arrow">
+                    <span class="arrow-line"></span>
+                    <span class="arrow-head">→</span>
+                </div>
+                <div class="flow-node flow-node--spark">
+                    <span class="node-icon">🔥</span>
+                    <span class="node-name">Spark</span>
+                    <span class="node-detail">Processing</span>
+                </div>
+                <div class="flow-arrow">
+                    <span class="arrow-line"></span>
+                    <span class="arrow-head">→</span>
+                </div>
+                <div class="flow-node flow-node--warehouse">
+                    <span class="node-icon">🏛️</span>
+                    <span class="node-name">ClickHouse</span>
+                    <span class="node-detail">Analytics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES — VERTICAL TIMELINE -->
+    <section class="p4-features">
+        <div class="p4-timeline">
+            <div class="timeline-line" aria-hidden="true"></div>
+            <div class="p4-feature">
+                <div class="feature-marker">01</div>
+                <div class="feature-body">
+                    <h3>Real-Time Ingestion</h3>
+                    <p>Apache Kafka handles millions of events per second with exactly-once semantics and automatic partitioning.</p>
+                </div>
+            </div>
+            <div class="p4-feature">
+                <div class="feature-marker">02</div>
+                <div class="feature-body">
+                    <h3>Stream Processing</h3>
+                    <p>Apache Spark Structured Streaming transforms data in-flight with windowed aggregations and stateful operations.</p>
+                </div>
+            </div>
+            <div class="p4-feature">
+                <div class="feature-marker">03</div>
+                <div class="feature-body">
+                    <h3>Quality Checks</h3>
+                    <p>Automated data validation with schema evolution support and dead-letter queue for failed records.</p>
+                </div>
+            </div>
+            <div class="p4-feature">
+                <div class="feature-marker">04</div>
+                <div class="feature-body">
+                    <h3>Analytics Ready</h3>
+                    <p>ClickHouse columnar storage delivers sub-second analytical queries across billions of rows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH -->
+    <section class="p4-tech">
+        <div class="p4-tech-inner">
+            <span class="section-tag">Tech Stack</span>
+            <div class="tech-cards">
+                <div class="tech-card"><span class="tech-name">Kafka</span><span class="tech-role">Streaming</span></div>
+                <div class="tech-card"><span class="tech-name">Spark</span><span class="tech-role">Processing</span></div>
+                <div class="tech-card"><span class="tech-name">Airflow</span><span class="tech-role">Orchestration</span></div>
+                <div class="tech-card"><span class="tech-name">Python</span><span class="tech-role">Core</span></div>
+                <div class="tech-card"><span class="tech-name">ClickHouse</span><span class="tech-role">Storage</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="p4-cta">
+        <div class="p4-cta-content">
+            <h2 class="p4-cta-headline">Next Project</h2>
+            <a href="project-5.html" class="p4-cta-btn" data-cursor>
+                <span class="btn-text">AI Ad Platform</span>
+                <span class="btn-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        const cursor = document.querySelector('.p4-cursor');
+        const cursorDot = cursor?.querySelector('.cursor-dot');
+        const cursorRing = cursor?.querySelector('.cursor-ring');
+        if (cursor && window.matchMedia('(pointer: fine)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.15 });
+                gsap.to(cursorRing, { x: e.clientX, y: e.clientY, duration: 0.4, ease: 'power2.out' });
+            });
+            document.querySelectorAll('[data-cursor]').forEach(el => {
+                el.addEventListener('mouseenter', () => cursorRing?.classList.add('active'));
+                el.addEventListener('mouseleave', () => cursorRing?.classList.remove('active'));
+            });
+        }
+
+        // Particles
+        const particlesContainer = document.getElementById('particles');
+        if (particlesContainer) {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('span');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (3 + Math.random() * 4) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Counter animation
+        const counter = document.querySelector('.counter-num');
+        if (counter) {
+            const target = parseInt(counter.getAttribute('data-target'));
+            gsap.from(counter, {
+                scrollTrigger: { trigger: '.p4-counter', start: 'top 80%' },
+                textContent: 0, duration: 2, snap: { textContent: 1 },
+                onUpdate: function() { counter.textContent = Math.round(this.targets()[0].textContent).toLocaleString(); }
+            });
+        }
+
+        gsap.from('.p4-line', { y: 120, opacity: 0, duration: 1, stagger: 0.15, ease: 'power4.out', delay: 0.3 });
+        gsap.from('.p4-subtext', { y: 30, opacity: 0, duration: 0.8, delay: 0.8 });
+        gsap.from('.p4-counter', { scale: 0.5, opacity: 0, duration: 0.8, delay: 1, ease: 'back.out(1.7)' });
+
+        gsap.from('.flow-node', {
+            scrollTrigger: { trigger: '.p4-flow', start: 'top 70%' },
+            y: 40, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out'
+        });
+        gsap.from('.flow-arrow', {
+            scrollTrigger: { trigger: '.p4-flow', start: 'top 70%' },
+            scaleX: 0, opacity: 0, duration: 0.5, stagger: 0.15, delay: 0.5, ease: 'power3.out'
+        });
+
+        gsap.utils.toArray('.p4-feature').forEach(feature => {
+            gsap.from(feature, {
+                scrollTrigger: { trigger: feature, start: 'top 80%' },
+                x: -40, opacity: 0, duration: 0.8, ease: 'power3.out'
+            });
+        });
+
+        gsap.from('.tech-card', {
+            scrollTrigger: { trigger: '.p4-tech', start: 'top 75%' },
+            y: 30, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out'
+        });
+
+        gsap.from('.p4-cta-headline, .p4-cta-btn', {
+            scrollTrigger: { trigger: '.p4-cta', start: 'top 70%' },
+            y: 40, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out'
+        });
+    </script>
+</body>
+</html>
