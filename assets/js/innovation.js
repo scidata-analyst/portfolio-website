@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
+﻿gsap.registerPlugin(ScrollTrigger);
 
 // ============================================
 // CUSTOM CURSOR
@@ -13,22 +13,19 @@ if (cursor && !('ontouchstart' in window)) {
         gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.15, ease: 'power2.out' });
     });
 
-    function animateCursor() {
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .in-constellation-node, .in-signal-card, .in-honey-item');
+    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .in2-solution-card, .in2-product-card, .in2-stat');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
     });
 
-    const exploreTargets = document.querySelectorAll('.in-constellation-node, .in-honey-item');
-    exploreTargets.forEach(el => {
+    const viewTargets = document.querySelectorAll('.in2-product-card, .in2-solution-card');
+    viewTargets.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursor.classList.add('cursor--view');
-            cursor.querySelector('.cursor-label').textContent = 'EXPLORE';
+            if (cursor.querySelector('.cursor-label')) {
+                cursor.querySelector('.cursor-label').textContent = 'VIEW';
+            }
         });
         el.addEventListener('mouseleave', () => {
             cursor.classList.remove('cursor--view');
@@ -143,13 +140,14 @@ setTimeout(() => {
 function revealHero() {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.fromTo('.in-constellation-center', { scale: 0, opacity: 0, rotation: -20 }, { scale: 1, opacity: 1, rotation: 0, duration: 1.2, ease: 'back.out(1.7)' })
-      .fromTo('.in-constellation-node', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'back.out(1.7)' }, '-=0.6')
-      .fromTo('.in-constellation-lines line', { opacity: 0 }, { opacity: 1, duration: 0.8, stagger: 0.05 }, '-=0.8')
-      .fromTo('.in-hero-tag', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
-      .fromTo('.in-hero-headline', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.5')
-      .fromTo('.in-hero-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.in-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.in2-hero-tag', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
+      .fromTo('.in2-headline-word', { y: '100%' }, { y: '0%', duration: 0.8, stagger: 0.15, ease: 'power3.out' }, '-=0.4')
+      .fromTo('.in2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
+      .fromTo('.in2-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, '-=0.4')
+      .fromTo('.in2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.2');
+
+    // Mark words as revealed for CSS fallback
+    document.querySelectorAll('.in2-headline-word').forEach(el => el.classList.add('revealed'));
 }
 
 // ============================================
@@ -165,68 +163,80 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ============================================
-// SCROLL REVEAL
+// SOLUTIONS STICKY CARDS
 // ============================================
-const revealEls = document.querySelectorAll('.in-solutions-tag, .in-solutions-title, .in-signal-card, .in-products-tag, .in-products-title, .in-honey-item, .in-stats-tag, .in-data-pillar, .in-deepdive-block, .cta-headline, .cta-subtext');
+const solutionCards = document.querySelectorAll('.in2-solution-card');
+const solutionsSection = document.querySelector('.in2-solutions');
 
-revealEls.forEach(el => {
-    gsap.from(el, {
-        y: 50,
+// Initialize all cards as hidden
+gsap.set(solutionCards, { opacity: 0, y: 80, scale: 0.92 });
+
+// Create a single ScrollTrigger for the solutions section
+if (solutionsSection && solutionCards.length > 0) {
+    ScrollTrigger.create({
+        trigger: solutionsSection,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 0.5,
+        onUpdate: (self) => {
+            const progress = self.progress;
+            const cardCount = solutionCards.length;
+            const activeIndex = Math.min(Math.floor(progress * cardCount), cardCount - 1);
+
+            solutionCards.forEach((card, i) => {
+                if (i === activeIndex) {
+                    gsap.to(card, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'power3.out' });
+                } else {
+                    gsap.to(card, { opacity: 0, y: 80, scale: 0.92, duration: 0.4, ease: 'power2.in' });
+                }
+            });
+        }
+    });
+}
+
+// Activate first card on load
+if (solutionCards.length > 0) {
+    setTimeout(() => {
+        gsap.to(solutionCards[0], { opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out' });
+    }, 1500);
+}
+
+// ============================================
+// PRODUCT CARDS REVEAL
+// ============================================
+const productCards = document.querySelectorAll('.in2-product-card');
+productCards.forEach(card => {
+    gsap.from(card, {
+        y: 60,
         opacity: 0,
         duration: 0.9,
         ease: 'power3.out',
         immediateRender: false,
         scrollTrigger: {
-            trigger: el,
-            start: 'top 88%',
+            trigger: card,
+            start: 'top 85%',
             toggleActions: 'play none none reverse'
         }
     });
 });
 
 // ============================================
-// CONSTELLATION NODE FLOAT
+// PRODUCT CARD HOVER
 // ============================================
-const constellationNodes = document.querySelectorAll('.in-constellation-node');
-const constellationCenter = document.querySelector('.in-constellation-center');
-
-if (constellationCenter && window.innerWidth > 768) {
-    document.addEventListener('mousemove', (e) => {
-        const rect = constellationCenter.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - centerX) * 0.02;
-        const deltaY = (e.clientY - centerY) * 0.02;
-
-        gsap.to(constellationCenter, { x: deltaX, y: deltaY, duration: 0.5, ease: 'power2.out' });
-
-        constellationNodes.forEach((node, i) => {
-            const factor = (i + 1) * 0.3;
-            gsap.to(node, { x: deltaX * factor, y: deltaY * factor, duration: 0.5, ease: 'power2.out' });
-        });
+productCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, { y: -8, duration: 0.3, ease: 'power2.out' });
     });
-}
-
-// ============================================
-// DATA BAR ANIMATION
-// ============================================
-const dataBars = document.querySelectorAll('.in-data-fill');
-const dataCounters = document.querySelectorAll('[data-count]');
-
-dataBars.forEach(bar => {
-    const target = parseInt(bar.parentElement.getAttribute('data-bar'));
-    const height = Math.min(target, 100);
-
-    ScrollTrigger.create({
-        trigger: bar,
-        start: 'top 88%',
-        onEnter: () => {
-            gsap.to(bar, { height: height + '%', duration: 2, ease: 'power2.out' });
-        }
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, { y: 0, duration: 0.3, ease: 'power2.out' });
     });
 });
 
-dataCounters.forEach(counter => {
+// ============================================
+// STATS COUNTER
+// ============================================
+const statCounters = document.querySelectorAll('.in2-stat-num');
+statCounters.forEach(counter => {
     const target = parseInt(counter.getAttribute('data-count'));
     gsap.fromTo(counter, { innerText: 0 }, {
         innerText: target,
@@ -243,28 +253,21 @@ dataCounters.forEach(counter => {
 });
 
 // ============================================
-// SIGNAL CARD HOVER
+// DEEP DIVE REVEAL
 // ============================================
-const signalCards = document.querySelectorAll('.in-signal-card');
-signalCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        gsap.to(card, { y: -10, duration: 0.3, ease: 'power2.out' });
-    });
-    card.addEventListener('mouseleave', () => {
-        gsap.to(card, { y: 0, duration: 0.3, ease: 'power2.out' });
-    });
-});
-
-// ============================================
-// HONEYCOMB HOVER
-// ============================================
-const honeyItems = document.querySelectorAll('.in-honey-item');
-honeyItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        gsap.to(item.querySelector('.in-honey-inner'), { scale: 1.08, duration: 0.3, ease: 'power2.out' });
-    });
-    item.addEventListener('mouseleave', () => {
-        gsap.to(item.querySelector('.in-honey-inner'), { scale: 1, duration: 0.3, ease: 'power2.out' });
+const deepdiveBlocks = document.querySelectorAll('.in2-deepdive-block');
+deepdiveBlocks.forEach(block => {
+    gsap.from(block, {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: block,
+            start: 'top 88%',
+            toggleActions: 'play none none reverse'
+        }
     });
 });
 
