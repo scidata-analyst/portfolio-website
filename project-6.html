@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Power Saving System — Scidata Analyst</title>
+    <meta name="description"
+        content="Intelligent energy optimization platform using machine learning to predict consumption patterns and automatically adjust power distribution.">
+    <link rel="stylesheet" href="scss/project-6.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+</head>
+
+<body class="project-page project-6">
+    <div class="cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-label">ECO</div>
+    </div>
+
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-num" data-loader-num>0</div>
+            <div class="loader-track">
+                <div class="loader-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="p-nav">
+        <a href="work.html" class="p-nav-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span>Work</span>
+        </a>
+        <div class="p-nav-num">06 / 09</div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="p-hero">
+        <div class="p-hero-energy-bg" aria-hidden="true">
+            <div class="p-energy-wave"></div>
+            <div class="p-energy-wave"></div>
+            <div class="p-energy-wave"></div>
+        </div>
+        <div class="p-hero-content">
+            <div class="p-hero-tag">
+                <span class="p-tag-dot"></span> AI / Energy
+            </div>
+            <h1 class="p-hero-title">
+                <span class="p-title-line"><span class="p-title-word" data-reveal>AI-Powered</span></span>
+                <span class="p-title-line"><span class="p-title-word" data-reveal>Power</span> <span
+                        class="p-title-word" data-reveal>Saving</span></span>
+                <span class="p-title-line"><span class="p-title-word" data-reveal>System</span><span
+                        class="p-title-accent" data-reveal>.</span></span>
+            </h1>
+            <div class="p-hero-bottom">
+                <p class="p-hero-desc" data-reveal>Intelligent energy optimization platform using machine learning to
+                    predict consumption patterns and automatically adjust power distribution. Real-time monitoring with
+                    anomaly detection reduces energy waste by up to 35%.</p>
+                <div class="p-hero-metrics" data-reveal>
+                    <div class="p-metric"><span class="p-metric-val">35%</span><span class="p-metric-label">Energy
+                            Saved</span></div>
+                    <div class="p-metric"><span class="p-metric-val">Real-time</span><span
+                            class="p-metric-label">Optimization</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="p-hero-number" aria-hidden="true">06</div>
+        <div class="p-energy-counter" aria-hidden="true">
+            <span class="p-counter-value" data-counter>35</span>
+            <span class="p-counter-unit">%</span>
+            <span class="p-counter-label">SAVED</span>
+        </div>
+    </section>
+
+    <!-- ENERGY DASHBOARD -->
+    <section class="p-energy">
+        <div class="p-energy-header">
+            <span class="p-section-tag"><span class="p-tag-dot"></span> Monitoring</span>
+            <h2 class="p-energy-title">Real-time<br><em>optimization</em></h2>
+        </div>
+        <div class="p-energy-dashboard" data-visual>
+            <div class="p-energy-main">
+                <div class="p-energy-gauge">
+                    <svg viewBox="0 0 200 200" class="p-gauge-svg">
+                        <circle cx="100" cy="100" r="85" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8" />
+                        <circle cx="100" cy="100" r="85" fill="none" stroke="currentColor" stroke-width="8"
+                            stroke-dasharray="534" stroke-dashoffset="187" stroke-linecap="round"
+                            transform="rotate(-90 100 100)" class="p-gauge-fill" />
+                    </svg>
+                    <div class="p-gauge-center">
+                        <span class="p-gauge-value">65%</span>
+                        <span class="p-gauge-label">Efficiency</span>
+                    </div>
+                </div>
+                <div class="p-energy-zones">
+                    <div class="p-zone" data-zone>
+                        <div class="p-zone-header">
+                            <span class="p-zone-name">Zone A — Production</span>
+                            <span class="p-zone-status p-zone-status--optimal">OPTIMAL</span>
+                        </div>
+                        <div class="p-zone-bar">
+                            <div class="p-zone-fill" style="--fill: 72%"></div>
+                        </div>
+                        <span class="p-zone-val">72% utilization</span>
+                    </div>
+                    <div class="p-zone" data-zone>
+                        <div class="p-zone-header">
+                            <span class="p-zone-name">Zone B — Assembly</span>
+                            <span class="p-zone-status p-zone-status--warning">HIGH</span>
+                        </div>
+                        <div class="p-zone-bar">
+                            <div class="p-zone-fill" style="--fill: 91%"></div>
+                        </div>
+                        <span class="p-zone-val">91% utilization</span>
+                    </div>
+                    <div class="p-zone" data-zone>
+                        <div class="p-zone-header">
+                            <span class="p-zone-name">Zone C — Storage</span>
+                            <span class="p-zone-status p-zone-status--optimal">OPTIMAL</span>
+                        </div>
+                        <div class="p-zone-bar">
+                            <div class="p-zone-fill" style="--fill: 34%"></div>
+                        </div>
+                        <span class="p-zone-val">34% utilization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH -->
+    <section class="p-tech">
+        <div class="p-tech-inner">
+            <div class="p-tech-left">
+                <span class="p-section-tag"><span class="p-tag-dot"></span> Technology</span>
+                <h2 class="p-tech-title">IoT meets<br><em>intelligence</em></h2>
+            </div>
+            <div class="p-tech-right">
+                <div class="p-tech-list">
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">01</span>
+                        <span class="p-tech-name">TensorFlow Models</span>
+                    </div>
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">02</span>
+                        <span class="p-tech-name">IoT Sensors</span>
+                    </div>
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">03</span>
+                        <span class="p-tech-name">MQTT Protocol</span>
+                    </div>
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">04</span>
+                        <span class="p-tech-name">InfluxDB Time-Series</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="p-next">
+        <div class="p-next-inner">
+            <a href="project-7.html" class="p-next-link" data-magnetic>
+                <span class="p-next-label">Next Project</span>
+                <span class="p-next-title">Object Detection Platform</span>
+                <span class="p-next-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="p-next-bg" aria-hidden="true">07</div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/project-6.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection Platform — Scidata Analyst</title>
+    <meta name="description"
+        content="End-to-end computer vision platform with automated object detection, bounding box annotation, and collaborative labeling tools.">
+    <link rel="stylesheet" href="scss/project-7.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+</head>
+
+<body class="project-page project-7">
+    <div class="cursor" data-cursor>
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-label">DETECT</div>
+    </div>
+
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-num" data-loader-num>0</div>
+            <div class="loader-track">
+                <div class="loader-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="p-nav">
+        <a href="work.html" class="p-nav-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span>Work</span>
+        </a>
+        <div class="p-nav-num">07 / 09</div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="p-hero">
+        <div class="p-hero-scanline" aria-hidden="true"></div>
+        <div class="p-hero-content">
+            <div class="p-hero-tag">
+                <span class="p-tag-dot"></span> Computer Vision
+            </div>
+            <h1 class="p-hero-title">
+                <span class="p-title-line"><span class="p-title-word" data-reveal>Object</span> <span
+                        class="p-title-word" data-reveal>Detection</span></span>
+                <span class="p-title-line"><span class="p-title-word p-title-word--outline"
+                        data-reveal>Platform</span></span>
+                <span class="p-title-line"><span class="p-title-word p-title-word--outline" data-reveal>&amp;</span>
+                    <span class="p-title-word" data-reveal>Labeling</span></span>
+                <span class="p-title-line"><span class="p-title-word" data-reveal>System</span><span
+                        class="p-title-accent" data-reveal>.</span></span>
+            </h1>
+            <div class="p-hero-bottom">
+                <p class="p-hero-desc" data-reveal>End-to-end computer vision platform with automated object detection,
+                    bounding box annotation, and collaborative labeling tools. Active learning pipeline reduces labeling
+                    effort by 60%.</p>
+                <div class="p-hero-metrics" data-reveal>
+                    <div class="p-metric"><span class="p-metric-val">60%</span><span class="p-metric-label">Less
+                            Labeling</span></div>
+                    <div class="p-metric"><span class="p-metric-val">98%</span><span class="p-metric-label">mAP
+                            Score</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="p-hero-number" aria-hidden="true">07</div>
+    </section>
+
+    <!-- DETECTION VISUAL -->
+    <section class="p-detection">
+        <div class="p-detection-header">
+            <span class="p-section-tag"><span class="p-tag-dot"></span> Detection</span>
+            <h2 class="p-detection-title">See what<br><em>machines see</em></h2>
+        </div>
+        <div class="p-detection-visual" data-visual>
+            <div class="p-detection-frame">
+                <div class="p-bounding-box" style="--x: 15%; --y: 20%; --w: 25%; --h: 40%;">
+                    <span class="p-box-label">Person <span class="p-box-conf">98%</span></span>
+                </div>
+                <div class="p-bounding-box" style="--x: 50%; --y: 35%; --w: 30%; --h: 35%;">
+                    <span class="p-box-label">Car <span class="p-box-conf">95%</span></span>
+                </div>
+                <div class="p-bounding-box" style="--x: 10%; --y: 65%; --w: 15%; --h: 20%;">
+                    <span class="p-box-label">Dog <span class="p-box-conf">92%</span></span>
+                </div>
+                <div class="p-bounding-box" style="--x: 75%; --y: 10%; --w: 20%; --h: 25%;">
+                    <span class="p-box-label">Bicycle <span class="p-box-conf">89%</span></span>
+                </div>
+                <div class="p-scan-overlay"></div>
+                <div class="p-detection-grid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH -->
+    <section class="p-tech">
+        <div class="p-tech-inner">
+            <div class="p-tech-left">
+                <span class="p-section-tag"><span class="p-tag-dot"></span> Stack</span>
+                <h2 class="p-tech-title">Vision<br><em>models</em></h2>
+            </div>
+            <div class="p-tech-right">
+                <div class="p-tech-list">
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">01</span>
+                        <span class="p-tech-name">PyTorch</span>
+                    </div>
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">02</span>
+                        <span class="p-tech-name">YOLO v8</span>
+                    </div>
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">03</span>
+                        <span class="p-tech-name">OpenCV</span>
+                    </div>
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">04</span>
+                        <span class="p-tech-name">FastAPI + MinIO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="p-next">
+        <div class="p-next-inner">
+            <a href="project-8.html" class="p-next-link" data-magnetic>
+                <span class="p-next-label">Next Project</span>
+                <span class="p-next-title">Hate Speech Platform</span>
+                <span class="p-next-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="p-next-bg" aria-hidden="true">08</div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/project-7.js"></script>
+</body>
+
+</html>

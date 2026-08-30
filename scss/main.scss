@@ -208,6 +208,12 @@ body {
     margin: 0 auto;
 }
 
+.ps-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: contents;
+}
+
 .ps-card {
     display: grid;
     grid-template-columns: 1fr 1fr;

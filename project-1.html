@@ -1,172 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot NLP Engine — Scidata Analyst</title>
-    <meta name="description" content="An intelligent conversational AI powered by Natural Language Processing. Understands context, sentiment, and intent.">
-    <link rel="stylesheet" href="scss/main.css">
-    <link rel="stylesheet" href="css/project-1.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <meta name="description"
+        content="An intelligent conversational AI powered by Natural Language Processing. Understands context, sentiment, and intent.">
+    <link rel="stylesheet" href="scss/project-1.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
+
 <body class="project-page project-1">
-
     <!-- CUSTOM CURSOR -->
-    <div class="p1-cursor" data-cursor>
+    <div class="cursor" data-cursor>
         <div class="cursor-dot"></div>
-        <div class="cursor-ring"><span>VIEW</span></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-label">VIEW</div>
     </div>
 
-    <!-- GRAIN OVERLAY -->
-    <div class="grain-overlay" aria-hidden="true"></div>
-
-    <!-- SCROLL PROGRESS -->
-    <div class="p1-scroll-progress" aria-hidden="true">
-        <div class="p1-scroll-bar"></div>
-        <span class="scroll-percent">0%</span>
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-num" data-loader-num>0</div>
+            <div class="loader-track">
+                <div class="loader-fill"></div>
+            </div>
+        </div>
     </div>
 
-    <!-- PROJECT 1 — HORIZONTAL SCROLL PATTERN -->
-    <section class="p1-hero">
-        <div class="p1-hero-bg">
-            <div class="hero-blob hero-blob--1"></div>
-            <div class="hero-blob hero-blob--2"></div>
-            <div class="hero-grid-lines" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span>
-            </div>
+    <!-- NAV -->
+    <nav class="p-nav">
+        <a href="work.html" class="p-nav-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span>Work</span>
+        </a>
+        <div class="p-nav-num">01 / 09</div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="p-hero">
+        <div class="p-hero-bg" aria-hidden="true">
+            <div class="p-hero-particle"></div>
+            <div class="p-hero-particle"></div>
+            <div class="p-hero-particle"></div>
+            <div class="p-hero-particle"></div>
+            <div class="p-hero-particle"></div>
+            <div class="p-hero-particle"></div>
+            <div class="p-hero-particle"></div>
+            <div class="p-hero-particle"></div>
+            <div class="p-hero-particle"></div>
         </div>
-        <div class="p1-hero-content">
-            <div class="p1-hero-left">
-                <span class="p1-tag"><span class="tag-dot"></span> AI / NLP</span>
-                <h1 class="p1-headline">
-                    <span class="line"><span class="word">ChatBot</span></span>
-                    <span class="line"><span class="word">with</span></span>
-                    <span class="line line-outline"><span class="word">NLP</span></span>
-                    <span class="line"><span class="word">Engine</span></span>
-                </h1>
-                <p class="p1-subtext">An intelligent conversational AI powered by Natural Language Processing. Understands context, sentiment, and intent — delivering human-like responses across web, mobile, and messaging platforms.</p>
-                <div class="p1-metrics">
-                    <div class="metric">
-                        <span class="metric-val">95%</span>
-                        <span class="metric-label">Intent Accuracy</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-val">&lt;200ms</span>
-                        <span class="metric-label">Response Time</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-val">50+</span>
-                        <span class="metric-label">Languages</span>
-                    </div>
-                </div>
+        <div class="p-hero-content">
+            <div class="p-hero-tag">
+                <span class="p-tag-dot"></span> AI / NLP Engine
             </div>
-            <div class="p1-hero-right">
-                <div class="p1-visual-container">
-                    <div class="p1-visual p1-visual--1">
-                        <div class="visual-inner">
-                            <div class="chat-bubble chat-bubble--1">Hello! How can I help you today?</div>
-                            <div class="chat-bubble chat-bubble--2">I need help with my order status</div>
-                            <div class="chat-bubble chat-bubble--1">I found your order! It's being processed and will ship tomorrow.</div>
-                        </div>
+            <h1 class="p-hero-title">
+                <span class="p-title-line"><span class="p-title-word" data-reveal>ChatBot</span></span>
+                <span class="p-title-line"><span class="p-title-word p-title-word--outline" data-reveal>with</span>
+                    <span class="p-title-word" data-reveal>NLP</span></span>
+                <span class="p-title-line"><span class="p-title-word" data-reveal>Engine</span><span
+                        class="p-title-accent" data-reveal>.</span></span>
+            </h1>
+            <div class="p-hero-bottom">
+                <p class="p-hero-desc" data-reveal>An intelligent conversational AI powered by Natural Language
+                    Processing. Understands context, sentiment, and intent — delivering human-like responses across web,
+                    mobile, and messaging platforms.</p>
+                <div class="p-hero-metrics" data-reveal>
+                    <div class="p-metric">
+                        <span class="p-metric-val">95%</span>
+                        <span class="p-metric-label">Intent Accuracy</span>
                     </div>
-                    <div class="p1-visual p1-visual--2">
-                        <div class="neural-network" aria-hidden="true">
-                            <span class="node n1"></span>
-                            <span class="node n2"></span>
-                            <span class="node n3"></span>
-                            <span class="node n4"></span>
-                            <span class="node n5"></span>
-                            <span class="node n6"></span>
-                            <span class="connection c1"></span>
-                            <span class="connection c2"></span>
-                            <span class="connection c3"></span>
-                        </div>
+                    <div class="p-metric">
+                        <span class="p-metric-val">&lt;200ms</span>
+                        <span class="p-metric-label">Response Time</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="p1-scroll-hint">
-            <span class="hint-line"></span>
-            <span class="hint-text">SCROLL TO EXPLORE</span>
+        <div class="p-hero-scroll" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="p-scroll-line"></div>
         </div>
+        <div class="p-hero-number" aria-hidden="true">01</div>
     </section>
 
-    <!-- HORIZONTAL SCROLL SECTION -->
-    <section class="p1-horizontal">
-        <div class="p1-h-sticky">
-            <div class="p1-h-left">
-                <span class="section-num">01</span>
-                <h2 class="section-title">Discovery</h2>
-                <p class="section-desc">Understanding the core challenge: building a conversational AI that truly understands human language.</p>
-                <div class="section-progress">
-                    <span class="progress-dot active"></span>
-                    <span class="progress-dot"></span>
-                    <span class="progress-dot"></span>
-                    <span class="progress-dot"></span>
+    <!-- VISUAL SHOWCASE -->
+    <section class="p-showcase">
+        <div class="p-showcase-sticky">
+            <div class="p-visual-container">
+                <div class="p-visual p-visual--1" data-visual>
+                    <div class="p-visual-inner">
+                        <div class="p-visual-grid">
+                            <div class="p-chat-bubble p-chat--user">
+                                <span class="p-chat-label">USER</span>
+                                <span class="p-chat-text">I need help with my order status</span>
+                            </div>
+                            <div class="p-chat-bubble p-chat--bot">
+                                <span class="p-chat-label">AI</span>
+                                <span class="p-chat-text">I found your order #4521. It's currently being processed and
+                                    will ship within 24 hours. Would you like tracking updates?</span>
+                            </div>
+                            <div class="p-chat-bubble p-chat--user">
+                                <span class="p-chat-label">USER</span>
+                                <span class="p-chat-text">Yes please, also can I change the delivery address?</span>
+                            </div>
+                            <div class="p-chat-bubble p-chat--bot">
+                                <span class="p-chat-label">AI</span>
+                                <span class="p-chat-text">Of course! I've updated your delivery address. Your order will
+                                    arrive at the new location by Thursday.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="p1-h-scroll">
-            <div class="p1-h-track">
-                <div class="p1-h-item">
-                    <div class="h-item-visual">
-                        <div class="visual-card visual-card--1">
-                            <span class="card-icon">◈</span>
-                            <span class="card-label">Research</span>
+        <div class="p-showcase-trigger"></div>
+        <div class="p-showcase-trigger"></div>
+        <div class="p-showcase-trigger"></div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="p-tech">
+        <div class="p-tech-inner">
+            <div class="p-tech-left">
+                <span class="p-section-tag"><span class="p-tag-dot"></span> Tech Stack</span>
+                <h2 class="p-tech-title">Built for<br><em>intelligence</em></h2>
+            </div>
+            <div class="p-tech-right">
+                <div class="p-tech-list">
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">01</span>
+                        <span class="p-tech-name">Python</span>
+                        <div class="p-tech-bar">
+                            <div class="p-tech-fill"></div>
                         </div>
                     </div>
-                    <div class="h-item-content">
-                        <h3>Deep NLP Research</h3>
-                        <p>Extensive analysis of transformer architectures, intent classification models, and dialogue management systems to build the foundation.</p>
-                        <div class="tech-tags">
-                            <span>BERT</span><span>GPT</span><span>RASA</span><span>spaCy</span>
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">02</span>
+                        <span class="p-tech-name">NLP / TensorFlow</span>
+                        <div class="p-tech-bar">
+                            <div class="p-tech-fill"></div>
                         </div>
                     </div>
-                </div>
-                <div class="p1-h-item">
-                    <div class="h-item-visual">
-                        <div class="visual-card visual-card--2">
-                            <span class="card-icon">◈</span>
-                            <span class="card-label">Architecture</span>
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">03</span>
+                        <span class="p-tech-name">RASA Framework</span>
+                        <div class="p-tech-bar">
+                            <div class="p-tech-fill"></div>
                         </div>
                     </div>
-                    <div class="h-item-content">
-                        <h3>Custom Entity Extraction</h3>
-                        <p>Built a domain-specific entity recognition pipeline that extracts key information with 95% accuracy across multiple languages.</p>
-                        <div class="tech-tags">
-                            <span>TensorFlow</span><span>CRF</span><span>BiLSTM</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p1-h-item">
-                    <div class="h-item-visual">
-                        <div class="visual-card visual-card--3">
-                            <span class="card-icon">◈</span>
-                            <span class="card-label">Training</span>
-                        </div>
-                    </div>
-                    <div class="h-item-content">
-                        <h3>Multi-Turn Dialogue</h3>
-                        <p>Implemented context-aware dialogue management that maintains conversation state across complex multi-turn interactions.</p>
-                        <div class="tech-tags">
-                            <span>WebSocket</span><span>Redis</span><span>Python</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p1-h-item">
-                    <div class="h-item-visual">
-                        <div class="visual-card visual-card--4">
-                            <span class="card-icon">◈</span>
-                            <span class="card-label">Deploy</span>
-                        </div>
-                    </div>
-                    <div class="h-item-content">
-                        <h3>Production Scale</h3>
-                        <p>Deployed with auto-scaling infrastructure handling 10K+ concurrent conversations with sub-200ms response times.</p>
-                        <div class="tech-tags">
-                            <span>Docker</span><span>K8s</span><span>AWS</span>
+                    <div class="p-tech-item" data-reveal>
+                        <span class="p-tech-num">04</span>
+                        <span class="p-tech-name">WebSocket</span>
+                        <div class="p-tech-bar">
+                            <div class="p-tech-fill"></div>
                         </div>
                     </div>
                 </div>
@@ -174,138 +165,59 @@
         </div>
     </section>
 
-    <!-- TECH STACK SECTION -->
-    <section class="p1-tech">
-        <div class="p1-tech-inner">
-            <span class="section-tag">Tech Stack</span>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <span class="tech-icon">🐍</span>
-                    <span class="tech-name">Python</span>
-                    <span class="tech-role">Core Engine</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">🧠</span>
-                    <span class="tech-name">TensorFlow</span>
-                    <span class="tech-role">ML Framework</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">💬</span>
-                    <span class="tech-name">RASA</span>
-                    <span class="tech-role">Dialogue</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">⚡</span>
-                    <span class="tech-name">WebSocket</span>
-                    <span class="tech-role">Real-time</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">🔍</span>
-                    <span class="tech-name">spaCy</span>
-                    <span class="tech-role">NLP Pipeline</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">📊</span>
-                    <span class="tech-name">Elasticsearch</span>
-                    <span class="tech-role">Search</span>
-                </div>
+    <!-- FEATURES -->
+    <section class="p-features">
+        <div class="p-features-header">
+            <span class="p-section-tag"><span class="p-tag-dot"></span> Capabilities</span>
+            <h2 class="p-features-title">What it<br><em>does</em></h2>
+        </div>
+        <div class="p-features-grid">
+            <div class="p-feature" data-feature>
+                <span class="p-feature-num">01</span>
+                <h3 class="p-feature-title">Context Awareness</h3>
+                <p class="p-feature-desc">Multi-turn dialogue management that remembers previous interactions and
+                    maintains conversation flow naturally.</p>
+            </div>
+            <div class="p-feature" data-feature>
+                <span class="p-feature-num">02</span>
+                <h3 class="p-feature-title">Sentiment Analysis</h3>
+                <p class="p-feature-desc">Real-time emotion detection that adjusts responses based on user mood and
+                    frustration levels.</p>
+            </div>
+            <div class="p-feature" data-feature>
+                <span class="p-feature-num">03</span>
+                <h3 class="p-feature-title">Entity Extraction</h3>
+                <p class="p-feature-desc">Custom-trained models identify names, dates, products, and domain-specific
+                    terms accurately.</p>
+            </div>
+            <div class="p-feature" data-feature>
+                <span class="p-feature-num">04</span>
+                <h3 class="p-feature-title">Multi-Platform</h3>
+                <p class="p-feature-desc">Single AI brain powering conversations across web chat, WhatsApp, Messenger,
+                    and mobile apps.</p>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="p1-cta">
-        <div class="p1-cta-bg" aria-hidden="true">
-            <div class="cta-blob cta-blob--1"></div>
-            <div class="cta-blob cta-blob--2"></div>
-        </div>
-        <div class="p1-cta-content">
-            <h2 class="p1-cta-headline">Next Project</h2>
-            <a href="project-2.html" class="p1-cta-btn" data-cursor>
-                <span class="btn-text">Hotel Management Suite</span>
-                <span class="btn-arrow">→</span>
+    <!-- NAVIGATION BETWEEN PROJECTS -->
+    <section class="p-next">
+        <div class="p-next-inner">
+            <a href="project-2.html" class="p-next-link" data-magnetic>
+                <span class="p-next-label">Next Project</span>
+                <span class="p-next-title">Hotel Management</span>
+                <span class="p-next-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                </span>
             </a>
         </div>
+        <div class="p-next-bg" aria-hidden="true">02</div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
-        // Cursor
-        const cursor = document.querySelector('.p1-cursor');
-        const cursorDot = cursor?.querySelector('.cursor-dot');
-        const cursorRing = cursor?.querySelector('.cursor-ring');
-        if (cursor && window.matchMedia('(pointer: fine)').matches) {
-            document.addEventListener('mousemove', (e) => {
-                gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.15 });
-                gsap.to(cursorRing, { x: e.clientX, y: e.clientY, duration: 0.4, ease: 'power2.out' });
-            });
-            document.querySelectorAll('[data-cursor]').forEach(el => {
-                el.addEventListener('mouseenter', () => cursorRing?.classList.add('active'));
-                el.addEventListener('mouseleave', () => cursorRing?.classList.remove('active'));
-            });
-        }
-
-        // Scroll progress
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = scrollTop / docHeight;
-            document.querySelector('.p1-scroll-bar').style.transform = `scaleX(${progress})`;
-            document.querySelector('.scroll-percent').textContent = `${Math.round(progress * 100)}%`;
-        });
-
-        // Hero animations
-        gsap.from('.p1-headline .word', {
-            y: 120, opacity: 0, duration: 1, stagger: 0.12, ease: 'power4.out', delay: 0.3
-        });
-        gsap.from('.p1-subtext', { y: 40, opacity: 0, duration: 1, delay: 0.8, ease: 'power3.out' });
-        gsap.from('.p1-metrics .metric', { y: 30, opacity: 0, duration: 0.8, stagger: 0.1, delay: 1, ease: 'power3.out' });
-
-        // Chat bubble animation
-        gsap.from('.chat-bubble', {
-            scrollTrigger: { trigger: '.p1-visual-container', start: 'top 70%' },
-            y: 30, opacity: 0, duration: 0.6, stagger: 0.2, ease: 'power3.out'
-        });
-
-        // Horizontal scroll
-        const hScroll = document.querySelector('.p1-h-scroll');
-        const hTrack = document.querySelector('.p1-h-track');
-        if (hScroll && hTrack) {
-            hScroll.addEventListener('wheel', (e) => {
-                if (e.deltaY !== 0) {
-                    e.preventDefault();
-                    hScroll.scrollLeft += e.deltaY * 1.5;
-                }
-            }, { passive: false });
-
-            // Update progress dots
-            hScroll.addEventListener('scroll', () => {
-                const items = document.querySelectorAll('.p1-h-item');
-                const scrollLeft = hScroll.scrollLeft;
-                items.forEach((item, i) => {
-                    const itemLeft = item.offsetLeft;
-                    const itemWidth = item.offsetWidth;
-                    if (scrollLeft >= itemLeft - itemWidth / 2 && scrollLeft < itemLeft + itemWidth / 2) {
-                        document.querySelectorAll('.progress-dot').forEach(d => d.classList.remove('active'));
-                        document.querySelectorAll('.progress-dot')[i]?.classList.add('active');
-                    }
-                });
-            });
-        }
-
-        // Tech items reveal
-        gsap.from('.tech-item', {
-            scrollTrigger: { trigger: '.p1-tech', start: 'top 70%' },
-            y: 40, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out'
-        });
-
-        // CTA reveal
-        gsap.from('.p1-cta-headline, .p1-cta-btn', {
-            scrollTrigger: { trigger: '.p1-cta', start: 'top 70%' },
-            y: 50, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out'
-        });
-    </script>
+    <script src="assets/js/project-1.js"></script>
 </body>
+
 </html>
