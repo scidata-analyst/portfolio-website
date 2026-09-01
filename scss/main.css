@@ -1,22 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cagliostro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Candal&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Lekton:ital,wght@0,400;0,700;1,400&family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --accent: #0bbd29;
   --accent-dark: #0a9e22;
@@ -53,41 +36,9 @@
     display: none;
   }
 }
-@font-face {
-  font-family: "Bangbang";
-  src: url("../fonts/Bangbang/Bangbang-Bold.ttf") format("truetype");
-  font-style: normal;
-  font-display: swap;
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Bangbang";
-  src: url("../fonts/Bangbang/Bangbang-BoldItalic.ttf") format("truetype");
-  font-style: italic;
-  font-display: swap;
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Bangbang Outline";
-  src: url("../fonts/Bangbang/Bangbang-Outline.ttf") format("truetype");
-  font-style: normal;
-  font-display: swap;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Bangbang";
-  src: url("../fonts/Bangbang/Bangbang-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-}
 * {
   box-sizing: border-box;
-  font-family: "Cagliostro", serif;
-  font-family: "Marcellus", serif;
-  font-family: "Sansation", sans-serif;
-  font-family: "Bangbang", sans-serif;
-  font-family: "Bungee", sans-serif;
+  font-family: "Share", sans-serif;
 }
 
 h1,
@@ -960,7 +911,7 @@ body {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.4);
   max-width: 400px;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
 }
 .site-footer .footer-cta .footer-cta-circle {
   position: relative;
@@ -1048,7 +999,7 @@ body {
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.4);
   line-height: 1.7;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
   padding-left: 16px;
   border-left: 2px solid rgba(11, 189, 41, 0.5);
 }
@@ -1248,7 +1199,7 @@ body {
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.3);
   margin: 0;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
 }
 .site-footer .footer-bottom .footer-bottom-links {
   display: flex;
@@ -2333,7 +2284,7 @@ body.home-page,
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.7;
   margin: 0 0 48px;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
 }
 .cta-section .cta-deco {
   position: absolute;
@@ -2556,7 +2507,7 @@ body.home-page,
   font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
 }
 .who-we-are .wwa-right {
   display: flex;
@@ -2613,7 +2564,7 @@ body.home-page,
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 900;
   color: var(--accent);
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
 }
 .who-we-are .wwa-core-sub {
   font-size: clamp(0.8rem, 1.2vw, 1.1rem);
@@ -3114,6 +3065,7 @@ body.about-page,
   order: 3;
 }
 .ab-timeline .ab-timeline-marker {
+  left: 9px;
   width: 60px;
   height: 60px;
   border: 2px solid var(--accent);
@@ -3168,7 +3120,7 @@ body.about-page,
   font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(10, 10, 10, 0.5);
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
 }
 
 .ab-values {
@@ -3258,7 +3210,7 @@ body.about-page,
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.4);
   line-height: 1.7;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
 }
 .ab-values .ab-value-icon {
   position: absolute;
@@ -4739,7 +4691,7 @@ body.work-page,
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.55);
   margin: 0;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
 }
 
 .ps-card-tech {
@@ -4880,7 +4832,7 @@ body.work-page,
 }
 .approach-row .approach-row-body .approach-row-text p {
   margin: 0 0 14px;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
   font-size: clamp(0.95rem, 1.4vw, 1.15rem);
   line-height: 1.7;
   color: #0a0a0a;
@@ -4893,7 +4845,7 @@ body.work-page,
   flex-direction: column;
 }
 .approach-row .approach-row-body .approach-row-text .approach-row-list li {
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
   font-size: clamp(0.95rem, 1.4vw, 1.15rem);
   padding: calc(7px + 2 * (100vw - 320px) / 1600) 0;
   border-bottom: 1px solid rgba(10, 10, 10, 0.15);
@@ -4915,7 +4867,7 @@ body.work-page,
   align-items: center;
   gap: 10px;
   margin-top: 16px;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Share", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -10483,8 +10435,8 @@ body.consultation-page {
   }
 }
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p1-bg: #050505;
   --p1-fg: #ffffff;
   --p1-accent: #0066ff;
@@ -11167,8 +11119,8 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p2-bg: #fafafa;
   --p2-fg: #0a0a0a;
   --p2-accent: #00c853;
@@ -11943,8 +11895,8 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p3-bg: #080808;
   --p3-fg: #ffffff;
   --p3-accent: #ff3d00;
@@ -12663,8 +12615,8 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p4-bg: #0a0c0e;
   --p4-fg: #e8eaed;
   --p4-accent: #00e5ff;
@@ -13328,8 +13280,8 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p5-bg: #0a0014;
   --p5-fg: #f0e6ff;
   --p5-accent: #d500f9;
@@ -13951,8 +13903,8 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p6-bg: #020f08;
   --p6-fg: #e0f2e9;
   --p6-accent: #00e676;
@@ -14559,8 +14511,8 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p7-bg: #0c0c0c;
   --p7-fg: #f5f5f5;
   --p7-accent: #ffd600;
@@ -15086,8 +15038,8 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p8-bg: #0a0808;
   --p8-fg: #f5f0f0;
   --p8-accent: #ff6d6d;
@@ -15622,8 +15574,8 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p9-bg: #06080d;
   --p9-fg: #e8eef5;
   --p9-accent: #2979ff;

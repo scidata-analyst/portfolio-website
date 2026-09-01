@@ -1,11 +1,11 @@
 // PROJECT 9 - Custom NLP Model Training Platform
 // Neural/AI theme with electric blue accent
 
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap');
+@use "./utils/variables" as *;
 
 :root {
-    --font-heading: 'Bungee', sans-serif;
-    --font-body: 'Montserrat Alternates', sans-serif;
+    --font-heading: $font-family_4;
+    --font-body: $font-family_4;
     --p9-bg: #06080d;
     --p9-fg: #e8eef5;
     --p9-accent: #2979ff;

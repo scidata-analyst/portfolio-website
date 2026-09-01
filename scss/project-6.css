@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
 :root {
-  --font-heading: 'Bungee', sans-serif;
-  --font-body: 'Montserrat Alternates', sans-serif;
+  --font-heading: $font-family_4;
+  --font-body: $font-family_4;
   --p6-bg: #020f08;
   --p6-fg: #e0f2e9;
   --p6-accent: #00e676;

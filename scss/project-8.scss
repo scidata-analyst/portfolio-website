@@ -1,11 +1,11 @@
 // PROJECT 8 - Hate Speech & Sentiment Platform
 // Security theme with coral/red accent
 
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap');
+@use "./utils/variables" as *;
 
 :root {
-    --font-heading: 'Bungee', sans-serif;
-    --font-body: 'Montserrat Alternates', sans-serif;
+    --font-heading: $font-family_4;
+    --font-body: $font-family_4;
     --p8-bg: #0a0808;
     --p8-fg: #f5f0f0;
     --p8-accent: #ff6d6d;
