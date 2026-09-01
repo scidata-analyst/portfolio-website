@@ -192,6 +192,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="assets/js/project-5.js"></script>
+
+    <!-- FREELANCE PLATFORMS (FIXED LEFT BOTTOM) -->
+    <div class="freelance-float">
+        <span class="freelance-label">Hire Us</span>
+        <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link freelance-upwork" aria-label="Upwork">
+            <img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork">
+        </a>
+        <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link freelance-fiverr" aria-label="Fiverr">
+            <img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr">
+        </a>
+        <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link freelance-freelance" aria-label="Freelancer">
+            <img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer">
+        </a>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="footer-totop" type="button" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        // Back to top functionality
+        const totopBtn = document.querySelector('.footer-totop');
+        if (totopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    totopBtn.classList.add('visible');
+                } else {
+                    totopBtn.classList.remove('visible');
+                }
+            });
+            totopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -239,3 +239,17 @@ window.addEventListener('resize', () => {
         ScrollTrigger.refresh();
     }, 250);
 });
+
+// ============================================
+// BACK TO TOP BUTTON VISIBILITY
+// ============================================
+const totopBtn = document.querySelector('.footer-totop');
+if (totopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            totopBtn.classList.add('visible');
+        } else {
+            totopBtn.classList.remove('visible');
+        }
+    });
+}
