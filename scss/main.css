@@ -1194,12 +1194,6 @@ body {
   border-color: var(--accent);
   transform: scale(1.1) rotate(-8deg);
 }
-.site-footer .footer-contact-list li.footer-address:hover .contact-icon {
-  background: var(--accent);
-  color: var(--dark);
-  border-color: var(--accent);
-  transform: scale(1.1) rotate(-8deg);
-}
 .site-footer .footer-socials {
   display: flex;
   gap: 10px;
