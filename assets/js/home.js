@@ -4,19 +4,40 @@ gsap.registerPlugin(ScrollTrigger);
 // CUSTOM CURSOR (ENHANCED)
 // ============================================
 const cursor = document.querySelector('[data-cursor]');
+const cursorTrail = document.querySelector('.cursor-trail');
 let mouseX = 0, mouseY = 0;
 let cursorX = 0, cursorY = 0;
+let trailX = 0, trailY = 0;
 
 if (cursor && !('ontouchstart' in window)) {
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
         gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.15, ease: 'power2.out' });
+
+        // Show trail on mouse move
+        if (cursorTrail) {
+            gsap.to(cursorTrail, { opacity: 1, duration: 0.2 });
+        }
+    });
+
+    document.addEventListener('mouseleave', () => {
+        if (cursorTrail) {
+            gsap.to(cursorTrail, { opacity: 0, duration: 0.3 });
+        }
     });
 
     function animateCursor() {
         cursorX += (mouseX - cursorX) * 0.12;
         cursorY += (mouseY - cursorY) * 0.12;
+
+        // Trail follows with more lag
+        if (cursorTrail) {
+            trailX += (mouseX - trailX) * 0.08;
+            trailY += (mouseY - trailY) * 0.08;
+            gsap.set(cursorTrail, { x: trailX, y: trailY });
+        }
+
         requestAnimationFrame(animateCursor);
     }
     animateCursor();
@@ -520,6 +541,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ============================================
+// BACK TO TOP BUTTON VISIBILITY
+// ============================================
+const totopBtn = document.querySelector('.footer-totop');
+if (totopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            totopBtn.classList.add('visible');
+        } else {
+            totopBtn.classList.remove('visible');
+        }
+    });
+}
 
 // ============================================
 // RESPONSIVE CURSOR DISABLE
