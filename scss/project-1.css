@@ -108,7 +108,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p1-fg);
+  color: #0bbd29;
 }
 .loader .loader-track {
   width: 200px;

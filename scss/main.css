@@ -2298,6 +2298,375 @@ body.home-page,
     display: none;
   }
 }
+.who-we-are {
+  min-height: auto;
+  display: block;
+  padding: 100px 60px;
+  background: linear-gradient(180deg, #050505 0%, #0a0f0a 50%, #050505 100%);
+  overflow: hidden;
+  position: relative;
+}
+.who-we-are .wwa-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.who-we-are .wwa-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(11, 189, 41, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(11, 189, 41, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 20%, transparent 70%);
+}
+.who-we-are .wwa-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+}
+.who-we-are .wwa-glow--1 {
+  width: 600px;
+  height: 600px;
+  background: #0bbd29;
+  top: -200px;
+  left: -100px;
+}
+.who-we-are .wwa-glow--2 {
+  width: 400px;
+  height: 400px;
+  background: #0bbd29;
+  bottom: -100px;
+  right: -50px;
+}
+.who-we-are .wwa-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.who-we-are .wwa-header {
+  margin-bottom: 80px;
+}
+.who-we-are .wwa-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 24px;
+}
+.who-we-are .wwa-tag .tag-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+.who-we-are .wwa-title {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--light);
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 800px;
+}
+.who-we-are .wwa-accent {
+  -webkit-text-stroke: 1px var(--accent);
+  -webkit-text-fill-color: transparent;
+}
+.who-we-are .wwa-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+.who-we-are .wwa-left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.who-we-are .wwa-card {
+  padding: 36px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+.who-we-are .wwa-card:hover {
+  border-color: rgba(11, 189, 41, 0.3);
+  background: rgba(11, 189, 41, 0.03);
+  transform: translateY(-4px);
+}
+.who-we-are .wwa-card-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.who-we-are .wwa-card h3 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 700;
+  color: var(--light);
+  margin: 0 0 12px;
+}
+.who-we-are .wwa-card p {
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.who-we-are .wwa-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.who-we-are .wwa-visual {
+  position: relative;
+  width: clamp(180px, 25vw, 280px);
+  height: clamp(180px, 25vw, 280px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.who-we-are .wwa-visual-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(11, 189, 41, 0.2);
+  animation: rotate-ring 20s linear infinite;
+}
+.who-we-are .wwa-visual-ring--2 {
+  inset: 20px;
+  border-color: rgba(11, 189, 41, 0.15);
+  animation-direction: reverse;
+  animation-duration: 25s;
+}
+.who-we-are .wwa-visual-ring--3 {
+  inset: 40px;
+  border-color: rgba(11, 189, 41, 0.1);
+  animation-duration: 30s;
+}
+.who-we-are .wwa-visual-ring::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.who-we-are .wwa-visual-core {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.who-we-are .wwa-core-text {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 900;
+  color: var(--accent);
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.who-we-are .wwa-core-sub {
+  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+}
+.who-we-are .wwa-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 360px;
+}
+.who-we-are .wwa-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(16px, 3vw, 24px) clamp(12px, 2vw, 16px);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.who-we-are .wwa-stat:hover {
+  border-color: rgba(11, 189, 41, 0.3);
+  transform: translateY(-2px);
+}
+.who-we-are .wwa-stat-num {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: var(--light);
+  line-height: 1;
+}
+.who-we-are .wwa-stat-suffix {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.who-we-are .wwa-stat-label {
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 8px;
+  line-height: 1.3;
+}
+.who-we-are .wwa-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.who-we-are .wwa-locations {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  color: rgba(255, 255, 255, 0.4);
+}
+.who-we-are .wwa-loc-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.who-we-are .wwa-loc-item i {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+.who-we-are .wwa-loc-divider {
+  color: rgba(255, 255, 255, 0.15);
+}
+.who-we-are .wwa-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  font-weight: 700;
+  color: var(--light);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+.who-we-are .wwa-cta svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+.who-we-are .wwa-cta:hover {
+  color: var(--accent);
+}
+.who-we-are .wwa-cta:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .who-we-are {
+    padding: 80px 40px;
+  }
+  .who-we-are .wwa-content {
+    gap: 48px;
+  }
+  .who-we-are .wwa-stats {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .who-we-are {
+    padding: 60px 24px;
+  }
+  .who-we-are .wwa-header {
+    margin-bottom: 48px;
+  }
+  .who-we-are .wwa-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .who-we-are .wwa-right {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .who-we-are .wwa-stats {
+    max-width: 100%;
+    flex: 1;
+    min-width: 200px;
+  }
+  .who-we-are .wwa-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 48px;
+  }
+}
+@media (max-width: 600px) {
+  .who-we-are {
+    padding: 50px 20px;
+  }
+  .who-we-are .wwa-right {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .who-we-are .wwa-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 100%;
+  }
+  .who-we-are .wwa-locations {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .who-we-are .wwa-loc-divider {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .who-we-are {
+    padding: 40px 16px;
+  }
+  .who-we-are .wwa-card {
+    padding: 24px;
+  }
+  .who-we-are .wwa-right {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .who-we-are .wwa-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 100%;
+  }
+  .who-we-are .wwa-locations {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .who-we-are .wwa-loc-divider {
+    display: none;
+  }
+}
 body.about-page,
 .about-page {
   margin-left: 0 !important;
@@ -3979,354 +4348,6 @@ body.work-page,
     position: relative;
     left: 0;
     margin-bottom: 16px;
-  }
-}
-.who-we-are {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 120px 60px;
-  background: linear-gradient(180deg, #050505 0%, #0a0f0a 50%, #050505 100%);
-  overflow: hidden;
-}
-.who-we-are .wwa-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-.who-we-are .wwa-grid-lines {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgba(11, 189, 41, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(11, 189, 41, 0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 20%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 20%, transparent 70%);
-}
-.who-we-are .wwa-glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.15;
-}
-.who-we-are .wwa-glow--1 {
-  width: 600px;
-  height: 600px;
-  background: #0bbd29;
-  top: -200px;
-  left: -100px;
-}
-.who-we-are .wwa-glow--2 {
-  width: 400px;
-  height: 400px;
-  background: #0bbd29;
-  bottom: -100px;
-  right: -50px;
-}
-.who-we-are .wwa-container {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.who-we-are .wwa-header {
-  margin-bottom: 80px;
-}
-.who-we-are .wwa-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 24px;
-}
-.who-we-are .wwa-tag .tag-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-.who-we-are .wwa-title {
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
-  font-weight: 900;
-  line-height: 1.1;
-  color: var(--light);
-  text-transform: uppercase;
-  margin: 0;
-  max-width: 800px;
-}
-.who-we-are .wwa-accent {
-  -webkit-text-stroke: 1px var(--accent);
-  -webkit-text-fill-color: transparent;
-}
-.who-we-are .wwa-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-.who-we-are .wwa-left {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-.who-we-are .wwa-card {
-  padding: 36px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  transition: all 0.4s ease;
-}
-.who-we-are .wwa-card:hover {
-  border-color: rgba(11, 189, 41, 0.3);
-  background: rgba(11, 189, 41, 0.03);
-  transform: translateY(-4px);
-}
-.who-we-are .wwa-card-icon {
-  font-size: 2rem;
-  color: var(--accent);
-  margin-bottom: 16px;
-}
-.who-we-are .wwa-card h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--light);
-  margin: 0 0 12px;
-}
-.who-we-are .wwa-card p {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.6);
-  font-family: "Montserrat Alternates", sans-serif;
-}
-.who-we-are .wwa-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-}
-.who-we-are .wwa-visual {
-  position: relative;
-  width: 280px;
-  height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.who-we-are .wwa-visual-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 1px solid rgba(11, 189, 41, 0.2);
-  animation: rotate-ring 20s linear infinite;
-}
-.who-we-are .wwa-visual-ring--2 {
-  inset: 20px;
-  border-color: rgba(11, 189, 41, 0.15);
-  animation-direction: reverse;
-  animation-duration: 25s;
-}
-.who-we-are .wwa-visual-ring--3 {
-  inset: 40px;
-  border-color: rgba(11, 189, 41, 0.1);
-  animation-duration: 30s;
-}
-.who-we-are .wwa-visual-ring::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: var(--accent);
-  border-radius: 50%;
-  top: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.who-we-are .wwa-visual-core {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-.who-we-are .wwa-core-text {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--accent);
-  font-family: "Montserrat Alternates", sans-serif;
-}
-.who-we-are .wwa-core-sub {
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 6px;
-  color: rgba(255, 255, 255, 0.3);
-  text-transform: uppercase;
-}
-.who-we-are .wwa-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  width: 100%;
-  max-width: 360px;
-}
-.who-we-are .wwa-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 24px 16px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-.who-we-are .wwa-stat:hover {
-  border-color: rgba(11, 189, 41, 0.3);
-  transform: translateY(-2px);
-}
-.who-we-are .wwa-stat-num {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: var(--light);
-  line-height: 1;
-}
-.who-we-are .wwa-stat-suffix {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-.who-we-are .wwa-stat-label {
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.4);
-  margin-top: 8px;
-  line-height: 1.3;
-}
-.who-we-are .wwa-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 80px;
-  padding-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.who-we-are .wwa-locations {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.4);
-}
-.who-we-are .wwa-loc-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.who-we-are .wwa-loc-item i {
-  color: var(--accent);
-  font-size: 1.1rem;
-}
-.who-we-are .wwa-loc-divider {
-  color: rgba(255, 255, 255, 0.15);
-}
-.who-we-are .wwa-cta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--light);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-.who-we-are .wwa-cta svg {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease;
-}
-.who-we-are .wwa-cta:hover {
-  color: var(--accent);
-}
-.who-we-are .wwa-cta:hover svg {
-  transform: translateX(4px);
-}
-
-@media (max-width: 1024px) {
-  .who-we-are {
-    padding: 80px 40px;
-  }
-  .wwa-content {
-    gap: 60px;
-  }
-  .wwa-visual {
-    width: 220px;
-    height: 220px;
-  }
-}
-@media (max-width: 768px) {
-  .who-we-are {
-    padding: 60px 24px;
-    min-height: auto;
-  }
-  .wwa-header {
-    margin-bottom: 48px;
-  }
-  .wwa-content {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-  .wwa-right {
-    order: -1;
-  }
-  .wwa-visual {
-    width: 180px;
-    height: 180px;
-  }
-  .wwa-stats {
-    max-width: 100%;
-  }
-  .wwa-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 48px;
-  }
-}
-@media (max-width: 480px) {
-  .who-we-are {
-    padding: 40px 16px;
-  }
-  .wwa-card {
-    padding: 24px;
-  }
-  .wwa-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  .wwa-stat {
-    padding: 16px 12px;
-  }
-  .wwa-stat-num {
-    font-size: 2rem;
-  }
-  .wwa-locations {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .wwa-loc-divider {
-    display: none;
   }
 }
 .projects-showcase {
