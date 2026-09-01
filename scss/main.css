@@ -4,19 +4,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Candal&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
 :root {
   --accent: #0bbd29;
   --accent-dark: #0a9e22;
@@ -87,7 +87,7 @@
   font-family: "Marcellus", serif;
   font-family: "Sansation", sans-serif;
   font-family: "Bangbang", sans-serif;
-  font-family: "Belanosima", sans-serif;
+  font-family: "Bungee", sans-serif;
 }
 
 h1,
@@ -3005,7 +3005,7 @@ body.about-page,
   justify-content: center;
 }
 .ab-manifesto .ab-manifesto-word {
-  font-size: clamp(2.5rem, 8vw, 7rem);
+  font-size: clamp(2.5rem, 5vw, 7rem);
   font-weight: 900;
   text-transform: uppercase;
   color: var(--light);
@@ -10483,7 +10483,7 @@ body.consultation-page {
   }
 }
 :root {
-  --font-heading: 'Jockey One', sans-serif;
+  --font-heading: 'Bungee', sans-serif;
   --font-body: 'Montserrat Alternates', sans-serif;
   --p1-bg: #050505;
   --p1-fg: #ffffff;
@@ -11167,7 +11167,7 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Jockey One', sans-serif;
+  --font-heading: 'Bungee', sans-serif;
   --font-body: 'Montserrat Alternates', sans-serif;
   --p2-bg: #fafafa;
   --p2-fg: #0a0a0a;
@@ -11943,7 +11943,7 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Jockey One', sans-serif;
+  --font-heading: 'Bungee', sans-serif;
   --font-body: 'Montserrat Alternates', sans-serif;
   --p3-bg: #080808;
   --p3-fg: #ffffff;
@@ -12663,7 +12663,7 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Jockey One', sans-serif;
+  --font-heading: 'Bungee', sans-serif;
   --font-body: 'Montserrat Alternates', sans-serif;
   --p4-bg: #0a0c0e;
   --p4-fg: #e8eaed;
@@ -13328,7 +13328,7 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Jockey One', sans-serif;
+  --font-heading: 'Bungee', sans-serif;
   --font-body: 'Montserrat Alternates', sans-serif;
   --p5-bg: #0a0014;
   --p5-fg: #f0e6ff;
@@ -13951,7 +13951,7 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Jockey One', sans-serif;
+  --font-heading: 'Bungee', sans-serif;
   --font-body: 'Montserrat Alternates', sans-serif;
   --p6-bg: #020f08;
   --p6-fg: #e0f2e9;
@@ -14559,7 +14559,7 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Jockey One', sans-serif;
+  --font-heading: 'Bungee', sans-serif;
   --font-body: 'Montserrat Alternates', sans-serif;
   --p7-bg: #0c0c0c;
   --p7-fg: #f5f5f5;
@@ -15086,7 +15086,7 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Jockey One', sans-serif;
+  --font-heading: 'Bungee', sans-serif;
   --font-body: 'Montserrat Alternates', sans-serif;
   --p8-bg: #0a0808;
   --p8-fg: #f5f0f0;
@@ -15622,7 +15622,7 @@ h6,
   }
 }
 :root {
-  --font-heading: 'Jockey One', sans-serif;
+  --font-heading: 'Bungee', sans-serif;
   --font-body: 'Montserrat Alternates', sans-serif;
   --p9-bg: #06080d;
   --p9-fg: #e8eef5;
