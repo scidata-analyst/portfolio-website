@@ -1160,6 +1160,9 @@ body {
   flex-direction: column;
   gap: 12px;
 }
+.site-footer .footer-contact-list li {
+  transition: all 0.3s ease;
+}
 .site-footer .footer-contact-list li a, .site-footer .footer-contact-list li.footer-address {
   display: flex;
   align-items: center;
@@ -1167,6 +1170,7 @@ body {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1rem;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 .site-footer .footer-contact-list li a:hover, .site-footer .footer-contact-list li.footer-address:hover {
   color: var(--light);
@@ -1185,6 +1189,12 @@ body {
   transition: all 0.3s ease;
 }
 .site-footer .footer-contact-list li:hover .contact-icon {
+  background: var(--accent);
+  color: var(--dark);
+  border-color: var(--accent);
+  transform: scale(1.1) rotate(-8deg);
+}
+.site-footer .footer-contact-list li.footer-address:hover .contact-icon {
   background: var(--accent);
   color: var(--dark);
   border-color: var(--accent);
@@ -1282,7 +1292,7 @@ body {
 .freelance-float .freelance-link {
   width: 44px;
   height: 44px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 2px solid var(--accent);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -1296,42 +1306,54 @@ body {
 }
 .freelance-float .freelance-link:hover {
   transform: translateX(4px) scale(1.1);
-  border-color: var(--accent);
-  color: var(--accent);
-  box-shadow: 0 8px 24px rgba(11, 189, 41, 0.2);
+  box-shadow: 0 8px 24px rgba(11, 189, 41, 0.3);
 }
 .freelance-float .freelance-link img {
   width: 22px;
   height: 22px;
-  filter: brightness(0) invert(0.6);
   transition: filter 0.3s ease;
 }
-.freelance-float .freelance-link:hover img {
-  filter: brightness(1) invert(0);
+.freelance-float .freelance-link.freelance-upwork {
+  border-color: #14a800;
+}
+.freelance-float .freelance-link.freelance-upwork img {
+  filter: none;
 }
 .freelance-float .freelance-link.freelance-upwork:hover {
+  background: #14a800;
   border-color: #14a800;
-  color: #14a800;
-  box-shadow: 0 8px 24px rgba(20, 168, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(20, 168, 0, 0.4);
 }
 .freelance-float .freelance-link.freelance-upwork:hover img {
+  filter: brightness(0) invert(1);
+}
+.freelance-float .freelance-link.freelance-fiverr {
+  border-color: #1dbf73;
+}
+.freelance-float .freelance-link.freelance-fiverr img {
   filter: none;
 }
 .freelance-float .freelance-link.freelance-fiverr:hover {
+  background: #1dbf73;
   border-color: #1dbf73;
-  color: #1dbf73;
-  box-shadow: 0 8px 24px rgba(29, 191, 115, 0.3);
+  box-shadow: 0 8px 24px rgba(29, 191, 115, 0.4);
 }
 .freelance-float .freelance-link.freelance-fiverr:hover img {
+  filter: brightness(0) invert(1);
+}
+.freelance-float .freelance-link.freelance-freelance {
+  border-color: var(--accent);
+}
+.freelance-float .freelance-link.freelance-freelance img {
   filter: none;
 }
 .freelance-float .freelance-link.freelance-freelance:hover {
+  background: var(--accent);
   border-color: var(--accent);
-  color: var(--accent);
-  box-shadow: 0 8px 24px rgba(11, 189, 41, 0.3);
+  box-shadow: 0 8px 24px rgba(11, 189, 41, 0.4);
 }
 .freelance-float .freelance-link.freelance-freelance:hover img {
-  filter: none;
+  filter: brightness(0) invert(1);
 }
 
 .footer-totop {
@@ -1344,7 +1366,7 @@ body {
   width: 48px;
   height: 48px;
   background: rgba(10, 10, 10, 0.8);
-  border: 1px solid rgba(11, 189, 41, 0.3);
+  border: 2px solid var(--accent);
   border-radius: 50%;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.5);
