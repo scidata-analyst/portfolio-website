@@ -842,14 +842,6 @@ body {
   color: rgba(255, 255, 255, 0.4);
   transition: color 0.3s ease;
 }
-.site-footer .footer-marquee .footer-marquee-track .dot {
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  border-radius: 50%;
-  opacity: 0.6;
-  flex-shrink: 0;
-}
 .site-footer .footer-marquee:hover .footer-marquee-track {
   animation-play-state: paused;
 }

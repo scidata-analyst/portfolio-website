@@ -65,12 +65,12 @@
             }
 
             .dot {
-                width: 6px;
-                height: 6px;
-                background: var(--accent);
-                border-radius: 50%;
-                opacity: 0.6;
-                flex-shrink: 0;
+                // width: 6px;
+                // height: 6px;
+                // background: var(--accent);
+                // border-radius: 50%;
+                // opacity: 0.6;
+                // flex-shrink: 0;
             }
         }
 
@@ -377,6 +377,7 @@
             }
         }
     }
+
     // Contact column
     .footer-contact-list {
         list-style: none;
