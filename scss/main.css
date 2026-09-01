@@ -10433,7 +10433,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p1-fg);
+  color: #0bbd29;
 }
 .loader .loader-track {
   width: 200px;
@@ -11116,7 +11116,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p2-accent);
+  color: #0bbd29;
 }
 .loader .loader-track {
   width: 200px;
@@ -11892,7 +11892,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p3-accent);
+  color: #0bbd29;
 }
 .loader .loader-track {
   width: 200px;
@@ -12612,7 +12612,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p4-accent);
+  color: #0bbd29;
   font-variant-numeric: tabular-nums;
 }
 .loader .loader-track {
@@ -13278,7 +13278,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p5-accent);
+  color: #0bbd29;
 }
 .loader .loader-track {
   width: 200px;
@@ -13900,7 +13900,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p6-accent);
+  color: #0bbd29;
 }
 .loader .loader-track {
   width: 200px;
@@ -14508,7 +14508,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p7-accent);
+  color: #0bbd29;
 }
 .loader .loader-track {
   width: 200px;
@@ -15035,7 +15035,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p8-accent);
+  color: #0bbd29;
 }
 .loader .loader-track {
   width: 200px;
@@ -15571,7 +15571,7 @@ h6,
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
-  color: var(--p9-accent);
+  color: #0bbd29;
 }
 .loader .loader-track {
   width: 200px;
