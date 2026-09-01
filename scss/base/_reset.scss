@@ -1,0 +1,46 @@
+// =============================================================================
+// CSS RESET
+// =============================================================================
+
+@use "../utils/variables" as *;
+
+* {
+    box-sizing: border-box;
+    font-family: $font-family_1;
+    font-family: $font-family_2;
+    font-family: $font-family_3;
+    font-family: 'Bangbang', sans-serif;
+    font-family: "Jockey One", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+
+    li {
+        margin: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $color_1;
+}

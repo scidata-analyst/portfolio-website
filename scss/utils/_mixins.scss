@@ -1,0 +1,87 @@
+// =============================================================================
+// SCSS MIXINS
+// =============================================================================
+
+@use "variables" as *;
+
+// Responsive breakpoint mixins
+@mixin respond-to($breakpoint) {
+    @if $breakpoint =='desktop' {
+        @media screen and (max-width: 1023px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint =='tablet' {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint =='mobile' {
+        @media screen and (max-width: 480px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint =='small-mobile' {
+        @media screen and (max-width: 360px) {
+            @content;
+        }
+    }
+}
+
+// Section padding mixin
+@mixin section-padding {
+    padding: var(--section-padding) 60px;
+}
+
+// Flex center mixin
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Absolute fill mixin
+@mixin absolute-fill {
+    position: absolute;
+    inset: 0;
+}
+
+// Text stroke mixin
+@mixin text-stroke($color: $color-light, $width: 2px) {
+    -webkit-text-stroke: $width $color;
+    -webkit-text-fill-color: transparent;
+}
+
+// Accent text gradient mixin
+@mixin accent-gradient-text {
+    background: linear-gradient(45deg, $color-accent, $color-accent-glow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// Tag dot mixin
+@mixin tag-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+// List bullet mixin
+@mixin list-bullet-accent {
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 50%;
+    }
+}

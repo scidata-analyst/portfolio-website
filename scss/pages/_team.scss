@@ -1,0 +1,1493 @@
+// =============================================================================
+// TEAM PAGE
+// =============================================================================
+
+@use "../utils/variables" as *;
+
+body.team-page {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+// ---------- TEAM HERO (kinetic typography with floating elements) ----------
+.tm2-hero {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background: var(--dark);
+    padding: 90px 60px 140px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    .tm2-hero-noise {
+        position: absolute;
+        inset: 0;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+
+    .tm2-floating-elements {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+
+        .tm2-float {
+            position: absolute;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.04);
+            animation: tm2Float 6s ease-in-out infinite;
+            user-select: none;
+
+            &--1 {
+                top: 15%;
+                left: 10%;
+                animation-delay: 0s;
+            }
+
+            &--2 {
+                top: 25%;
+                right: 15%;
+                animation-delay: 1s;
+            }
+
+            &--3 {
+                bottom: 30%;
+                left: 20%;
+                animation-delay: 2s;
+            }
+
+            &--4 {
+                top: 50%;
+                right: 8%;
+                animation-delay: 0.5s;
+            }
+
+            &--5 {
+                bottom: 20%;
+                right: 25%;
+                animation-delay: 1.5s;
+            }
+
+            &--6 {
+                top: 40%;
+                left: 5%;
+                animation-delay: 2.5s;
+            }
+        }
+    }
+
+    .tm2-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .tm2-hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 32px;
+
+        .tm2-eyebrow-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .tm2-eyebrow-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1;
+        }
+    }
+
+    .tm2-hero-headline {
+        margin: 0 0 32px;
+
+        .tm2-headline-line {
+            display: block;
+            line-height: 1;
+            overflow: hidden;
+            padding: 2px 0;
+
+            &--1 .tm2-headline-word,
+            &--2 .tm2-headline-word,
+            &--3 .tm2-headline-word {
+                font-size: clamp(3rem, 9vw, 7rem);
+            }
+        }
+
+        .tm2-headline-word {
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--light);
+            letter-spacing: -0.03em;
+            display: inline-block;
+            margin-right: 0.15em;
+
+            &--outline {
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--light);
+            }
+
+            &--accent {
+                color: var(--accent);
+            }
+        }
+    }
+
+    .tm2-hero-subtext {
+        font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0;
+        max-width: 500px;
+    }
+
+    .tm2-hero-marquee {
+        position: absolute;
+        bottom: 75px;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: 2;
+        pointer-events: none;
+
+        .tm2-marquee-track {
+            display: flex;
+            gap: 40px;
+            animation: tm2Marquee 20s linear infinite;
+            white-space: nowrap;
+
+            span {
+                font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                color: rgba(255, 255, 255, 0.08);
+                white-space: nowrap;
+                color: white;
+            }
+
+            .tm2-marquee-sep {
+                color: var(--accent);
+                opacity: 0.3;
+            }
+        }
+    }
+
+    .tm2-hero-scroll {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        z-index: 2;
+        pointer-events: none;
+
+        .tm2-scroll-line {
+            width: 2px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+
+            .tm2-scroll-fill {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: var(--accent);
+                transition: height 0.3s ease;
+            }
+        }
+
+        .tm2-scroll-label {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.3);
+            white-space: nowrap;
+        }
+    }
+}
+
+@keyframes tm2Float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+@keyframes tm2Marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+// ---------- TEAM MEMBERS GRID (asymmetrical editorial) ----------
+.tm2-members {
+    background: var(--wheat);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+
+    .tm2-members-header {
+        max-width: 1200px;
+        margin: 0 auto 60px;
+
+        .tm2-members-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            margin-bottom: 20px;
+
+            .tm2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .tm2-members-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin: 0;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--dark);
+            }
+        }
+    }
+
+    .tm2-members-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .tm2-member {
+        background: var(--light);
+        border-radius: 20px;
+        overflow: hidden;
+        border: 2px solid rgba(10, 10, 10, 0.06);
+        transition: all var(--transition-smooth);
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+
+            .tm2-member-visual {
+                background: var(--dark);
+
+                .tm2-member-avatar {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        &--featured {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .tm2-member-visual {
+                min-height: 300px;
+                height: 100%;
+            }
+        }
+    }
+
+    .tm2-member-visual {
+        background: var(--gray);
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: all var(--transition-smooth);
+        overflow: hidden;
+    }
+
+    .tm2-member-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: var(--gray-light);
+        border: 3px solid var(--accent);
+        transition: transform var(--transition-smooth);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-family: inherit;
+
+        &--founder {
+            background: radial-gradient(circle at 30% 30%, #2a2a2a, #111111);
+            border-color: var(--accent);
+
+            &::after {
+                content: 'KS';
+                font-weight: 900;
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                color: var(--accent);
+            }
+        }
+
+        &--design {
+            background: radial-gradient(circle at 30% 30%, #ff5277, #7928ca);
+            border-color: #ff5277;
+
+            &::after {
+                content: 'SC';
+                font-weight: 900;
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                color: #ffffff;
+            }
+        }
+
+        &--backend {
+            background: radial-gradient(circle at 30% 30%, #0070f3, #00dfd8);
+            border-color: #00dfd8;
+
+            &::after {
+                content: 'MJ';
+                font-weight: 900;
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                color: #ffffff;
+            }
+        }
+
+        &--ai {
+            background: radial-gradient(circle at 30% 30%, #7928ca, #ff0080);
+            border-color: #ff0080;
+
+            &::after {
+                content: 'AP';
+                font-weight: 900;
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                color: #ffffff;
+            }
+        }
+
+        &--devops {
+            background: radial-gradient(circle at 30% 30%, #f5a623, #ff4e50);
+            border-color: #f5a623;
+
+            &::after {
+                content: 'LT';
+                font-weight: 900;
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                color: #ffffff;
+            }
+        }
+
+        &--strategy {
+            background: radial-gradient(circle at 30% 30%, #00b4d8, #0077b6);
+            border-color: #00b4d8;
+
+            &::after {
+                content: 'NK';
+                font-weight: 900;
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .tm2-member-overlay {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+
+        .tm2-overlay-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            background: var(--dark);
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+    }
+
+    .tm2-member-info {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    .tm2-member-num {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent);
+    }
+
+    .tm2-member-name {
+        font-size: clamp(1.2rem, 2vw, 1.6rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .tm2-member-role {
+        font-size: 1.05rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: rgba(10, 10, 10, 0.4);
+        line-height: 1.3;
+    }
+
+    .tm2-member-bio {
+        font-size: 1.0rem;
+        line-height: 1.6;
+        color: rgba(10, 10, 10, 0.55);
+        margin: 6px 0 10px;
+    }
+
+    .tm2-member-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: auto;
+        padding-top: 4px;
+
+        span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--dark);
+            padding: 4px 10px;
+            background: var(--wheat);
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+    }
+}
+
+// ---------- CULTURE HORIZONTAL SCROLL ----------
+.tm2-culture {
+    background: var(--dark);
+    padding: var(--section-padding) 0;
+    box-sizing: border-box;
+
+    .tm2-culture-header {
+        padding: 0 60px;
+        max-width: 1200px;
+        margin: 0 auto 40px;
+
+        .tm2-culture-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            margin-bottom: 20px;
+
+            .tm2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .tm2-culture-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--light);
+            margin: 0;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--accent);
+            }
+        }
+    }
+
+    .tm2-culture-viewport {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .tm2-culture-track {
+        display: flex;
+        gap: 24px;
+        padding: 0 60px 20px;
+        width: max-content;
+    }
+
+    .tm2-culture-card {
+        flex: 0 0 clamp(280px, 30vw, 380px);
+        scroll-snap-align: start;
+        background: var(--gray);
+        border-radius: 20px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        transition: all var(--transition-smooth);
+        box-sizing: border-box;
+
+        &:hover {
+            background: var(--accent);
+            transform: translateY(-8px);
+
+            .tm2-culture-icon {
+                color: var(--dark);
+            }
+
+            .tm2-culture-name {
+                color: var(--dark);
+            }
+
+            .tm2-culture-text {
+                color: rgba(10, 10, 10, 0.7);
+            }
+        }
+    }
+
+    .tm2-culture-icon {
+        width: 40px;
+        height: 40px;
+        color: var(--accent);
+        transition: color var(--transition-fast);
+        flex-shrink: 0;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .tm2-culture-name {
+        font-size: 1.3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        margin: 0;
+        line-height: 1.2;
+        transition: color var(--transition-fast);
+    }
+
+    .tm2-culture-text {
+        font-size: 1.0rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0;
+        transition: color var(--transition-fast);
+    }
+
+    .tm2-culture-progress {
+        padding: 0 60px;
+        margin-top: 20px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+
+        .tm2-culture-progress-track {
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .tm2-culture-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+    }
+}
+
+// ---------- STATS (bold counters) ----------
+.tm2-stats {
+    background: var(--accent);
+    padding: var(--section-padding) 60px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .tm2-stats-bg-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: clamp(5rem, 20vw, 18rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px rgba(10, 10, 10, 0.08);
+        pointer-events: none;
+        white-space: nowrap;
+        user-select: none;
+    }
+
+    .tm2-stats-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+    }
+
+    .tm2-stat {
+        text-align: center;
+    }
+
+    .tm2-stat-number {
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 900;
+        color: var(--dark);
+        line-height: 1;
+        display: inline-block;
+    }
+
+    .tm2-stat-suffix {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 900;
+        color: var(--dark);
+        display: inline-block;
+    }
+
+    .tm2-stat-label {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: rgba(10, 10, 10, 0.5);
+        margin-top: 8px;
+        display: block;
+        line-height: 1.3;
+    }
+
+    .tm2-stat-divider {
+        width: 2px;
+        height: 80px;
+        background: rgba(10, 10, 10, 0.15);
+        border-radius: 2px;
+        flex-shrink: 0;
+    }
+}
+
+// ---------- JOIN TEAM ----------
+.tm2-join {
+    background: var(--dark);
+    padding: var(--section-padding) 60px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .tm2-join-inner {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .tm2-join-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.0rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--accent);
+        margin-bottom: 20px;
+
+        .tm2-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+    }
+
+    .tm2-join-title {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--light);
+        margin: 0 0 20px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+
+        em {
+            font-style: normal;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 2px var(--accent);
+        }
+    }
+
+    .tm2-join-text {
+        font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0 0 32px;
+    }
+
+    .tm2-join-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 36px;
+        background: var(--accent);
+        border-radius: 60px;
+        color: var(--dark);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.0rem;
+        text-decoration: none;
+        transition: all var(--transition-fast);
+
+        .tm2-cta-arrow {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &:hover {
+            background: var(--light);
+            transform: scale(1.05);
+        }
+    }
+
+    .tm2-join-deco {
+        .tm2-join-blob {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+
+            &--1 {
+                width: 400px;
+                height: 400px;
+                background: rgba(11, 189, 41, 0.05);
+                top: -100px;
+                right: -100px;
+            }
+
+            &--2 {
+                width: 300px;
+                height: 300px;
+                background: rgba(11, 189, 41, 0.03);
+                bottom: -80px;
+                left: -80px;
+            }
+        }
+    }
+}
+
+// ---------- TEAM RESPONSIVE ----------
+@media (max-width: 1200px) {
+    .tm2-hero {
+        padding: 110px 40px 130px;
+    }
+
+    .tm2-members {
+        padding: 90px 40px;
+    }
+
+    .tm2-culture-header {
+        padding: 0 40px;
+    }
+
+    .tm2-culture-track {
+        padding: 0 40px 20px;
+    }
+
+    .tm2-culture-progress {
+        padding: 0 40px;
+    }
+
+    .tm2-stats {
+        padding: 80px 40px;
+    }
+
+    .tm2-join {
+        padding: 80px 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tm2-hero {
+        padding: 100px 32px 130px;
+
+        .tm2-hero-marquee {
+            bottom: 60px;
+        }
+
+        .tm2-hero-scroll {
+            bottom: 20px;
+        }
+    }
+
+    .tm2-members {
+        padding: 80px 32px;
+
+        .tm2-members-header {
+            margin-bottom: 44px;
+        }
+
+        .tm2-members-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .tm2-member--featured {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .tm2-culture {
+        padding: 80px 0;
+
+        .tm2-culture-header {
+            padding: 0 32px;
+            margin-bottom: 32px;
+        }
+
+        .tm2-culture-track {
+            padding: 0 32px 20px;
+            gap: 20px;
+        }
+
+        .tm2-culture-card {
+            flex: 0 0 clamp(280px, 40vw, 340px);
+            padding: 28px;
+        }
+
+        .tm2-culture-progress {
+            padding: 0 32px;
+        }
+    }
+
+    .tm2-stats {
+        padding: 70px 32px;
+
+        .tm2-stats-inner {
+            gap: 20px;
+        }
+
+        .tm2-stat-number {
+            font-size: clamp(2.6rem, 6vw, 4.5rem);
+        }
+
+        .tm2-stat-suffix {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+        }
+
+        .tm2-stat-divider {
+            height: 60px;
+        }
+    }
+
+    .tm2-join {
+        padding: 80px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tm2-hero {
+        padding: 90px 24px 125px;
+        min-height: 80vh;
+
+        .tm2-floating-elements {
+            opacity: 0.15;
+            transform: scale(0.8);
+        }
+
+        .tm2-hero-eyebrow {
+            margin-bottom: 24px;
+            gap: 8px;
+
+            .tm2-eyebrow-text {
+                font-size: 1.0rem;
+                letter-spacing: 3px;
+            }
+        }
+
+        .tm2-hero-headline {
+            margin-bottom: 24px;
+
+            .tm2-headline-line {
+                line-height: 1;
+
+                &--1 .tm2-headline-word,
+                &--2 .tm2-headline-word,
+                &--3 .tm2-headline-word {
+                    font-size: clamp(2.4rem, 8.5vw, 4.2rem);
+                }
+            }
+
+            .tm2-headline-word--outline {
+                -webkit-text-stroke: 1.5px var(--light);
+            }
+        }
+
+        .tm2-hero-subtext {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 100%;
+        }
+
+        .tm2-hero-marquee {
+            bottom: 52px;
+
+            .tm2-marquee-track {
+                gap: 24px;
+
+                span {
+                    font-size: 1.1rem;
+                    letter-spacing: 2.5px;
+                }
+            }
+        }
+
+        .tm2-hero-scroll {
+            bottom: 14px;
+            gap: 8px;
+
+            .tm2-scroll-line {
+                height: 32px;
+            }
+
+            .tm2-scroll-label {
+                font-size: 0.55rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    .tm2-members {
+        padding: 60px 24px;
+
+        .tm2-members-header {
+            margin-bottom: 32px;
+
+            .tm2-members-title {
+                font-size: clamp(2.2rem, 7.5vw, 3.5rem);
+            }
+        }
+
+        .tm2-members-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 540px;
+        }
+
+        .tm2-member--featured {
+            grid-column: span 1;
+            display: flex;
+            flex-direction: column;
+
+            .tm2-member-visual {
+                min-height: 220px;
+            }
+        }
+
+        .tm2-member-visual {
+            min-height: 190px;
+        }
+
+        .tm2-member-avatar {
+            width: 90px;
+            height: 90px;
+        }
+
+        .tm2-member-info {
+            padding: 20px;
+            gap: 6px;
+        }
+
+        .tm2-member-name {
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+
+        .tm2-member-role {
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+        }
+
+        .tm2-member-bio {
+            font-size: 0.84rem;
+            line-height: 1.55;
+            margin: 4px 0 8px;
+        }
+    }
+
+    .tm2-culture {
+        padding: 60px 0;
+
+        .tm2-culture-header {
+            padding: 0 24px;
+            margin-bottom: 28px;
+
+            .tm2-culture-title {
+                font-size: clamp(2.2rem, 7.5vw, 3.5rem);
+            }
+        }
+
+        .tm2-culture-track {
+            padding: 0 24px 16px;
+            gap: 16px;
+        }
+
+        .tm2-culture-card {
+            flex: 0 0 clamp(260px, 75vw, 320px);
+            padding: 24px;
+        }
+
+        .tm2-culture-progress {
+            padding: 0 24px;
+        }
+    }
+
+    .tm2-stats {
+        padding: 60px 24px;
+
+        .tm2-stats-inner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px 16px;
+            align-items: start;
+        }
+
+        .tm2-stat-divider {
+            display: none;
+        }
+
+        .tm2-stat {
+            width: 100%;
+            text-align: center;
+        }
+
+        .tm2-stat-number {
+            font-size: clamp(2.5rem, 8vw, 3.8rem);
+        }
+
+        .tm2-stat-suffix {
+            font-size: clamp(1.6rem, 5vw, 2.5rem);
+        }
+
+        .tm2-stat-label {
+            font-size: 0.62rem;
+            letter-spacing: 2px;
+            margin-top: 6px;
+        }
+    }
+
+    .tm2-join {
+        padding: 60px 24px;
+
+        .tm2-join-title {
+            font-size: clamp(1.8rem, 6vw, 2.8rem);
+            margin-bottom: 16px;
+        }
+
+        .tm2-join-text {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .tm2-join-cta {
+            padding: 16px 32px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .tm2-hero {
+        padding: 80px 16px 115px;
+
+        .tm2-floating-elements {
+            display: none;
+        }
+
+        .tm2-hero-eyebrow {
+            gap: 8px;
+            margin-bottom: 16px;
+
+            .tm2-eyebrow-text {
+                font-size: 0.68rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        .tm2-hero-headline {
+            margin-bottom: 18px;
+
+            .tm2-headline-line {
+
+                &--1 .tm2-headline-word,
+                &--2 .tm2-headline-word,
+                &--3 .tm2-headline-word {
+                    font-size: clamp(1.95rem, 9.8vw, 2.8rem);
+                }
+            }
+
+            .tm2-headline-word {
+                margin-right: 0.08em;
+            }
+
+            .tm2-headline-word--outline {
+                -webkit-text-stroke: 1.5px var(--light);
+            }
+        }
+
+        .tm2-hero-subtext {
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
+        .tm2-hero-marquee {
+            bottom: 44px;
+
+            .tm2-marquee-track {
+                gap: 16px;
+
+                span {
+                    font-size: 0.72rem;
+                    letter-spacing: 1.5px;
+                }
+            }
+        }
+
+        .tm2-hero-scroll {
+            bottom: 10px;
+            gap: 6px;
+
+            .tm2-scroll-line {
+                height: 24px;
+            }
+
+            .tm2-scroll-label {
+                font-size: 0.5rem;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+
+    .tm2-members {
+        padding: 50px 16px;
+
+        .tm2-members-header {
+            margin-bottom: 24px;
+
+            .tm2-members-tag {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+            }
+
+            .tm2-members-title {
+                font-size: clamp(1.8rem, 8vw, 2.6rem);
+            }
+        }
+
+        .tm2-members-grid {
+            gap: 16px;
+        }
+
+        .tm2-member {
+            border-radius: 16px;
+
+            &--featured .tm2-member-visual {
+                min-height: 170px;
+            }
+        }
+
+        .tm2-member-visual {
+            min-height: 170px;
+        }
+
+        .tm2-member-avatar {
+            width: 80px;
+            height: 80px;
+
+            &::after {
+                font-size: 1.2rem;
+            }
+        }
+
+        .tm2-member-overlay {
+            bottom: 12px;
+            left: 12px;
+
+            .tm2-overlay-text {
+                font-size: 1.05rem;
+                padding: 4px 10px;
+                letter-spacing: 2px;
+            }
+        }
+
+        .tm2-member-info {
+            padding: 16px 14px;
+            gap: 5px;
+        }
+
+        .tm2-member-num {
+            font-size: 1.05rem;
+            letter-spacing: 1.5px;
+        }
+
+        .tm2-member-name {
+            font-size: 1.25rem;
+            line-height: 1.2;
+        }
+
+        .tm2-member-role {
+            font-size: 0.68rem;
+            letter-spacing: 1px;
+        }
+
+        .tm2-member-bio {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin: 3px 0 6px;
+        }
+
+        .tm2-member-skills {
+            gap: 4px;
+
+            span {
+                font-size: 1.05rem;
+                padding: 3px 8px;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+
+    .tm2-culture {
+        padding: 50px 0;
+
+        .tm2-culture-header {
+            padding: 0 16px;
+            margin-bottom: 24px;
+
+            .tm2-culture-tag {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+            }
+
+            .tm2-culture-title {
+                font-size: clamp(1.8rem, 8vw, 2.6rem);
+            }
+        }
+
+        .tm2-culture-track {
+            padding: 0 16px 14px;
+            gap: 12px;
+        }
+
+        .tm2-culture-card {
+            flex: 0 0 calc(100vw - 44px);
+            max-width: 300px;
+            min-width: 230px;
+            padding: 20px 16px;
+            border-radius: 16px;
+            gap: 12px;
+        }
+
+        .tm2-culture-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .tm2-culture-name {
+            font-size: 1.15rem;
+        }
+
+        .tm2-culture-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .tm2-culture-progress {
+            padding: 0 16px;
+            margin-top: 14px;
+        }
+    }
+
+    .tm2-stats {
+        padding: 45px 16px;
+
+        .tm2-stats-inner {
+            gap: 24px 12px;
+        }
+
+        .tm2-stat-number {
+            font-size: clamp(2.2rem, 9vw, 3rem);
+        }
+
+        .tm2-stat-suffix {
+            font-size: clamp(1.4rem, 6vw, 2rem);
+        }
+
+        .tm2-stat-label {
+            font-size: 0.58rem;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+        }
+    }
+
+    .tm2-join {
+        padding: 45px 16px;
+
+        .tm2-join-tag {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .tm2-join-title {
+            font-size: clamp(1.5rem, 6.5vw, 2.2rem);
+            margin-bottom: 12px;
+        }
+
+        .tm2-join-text {
+            font-size: 1.0rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .tm2-join-cta {
+            padding: 14px 24px;
+            font-size: 1.1rem;
+            width: 100%;
+            max-width: 260px;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .tm2-hero {
+        padding: 70px 12px 105px;
+
+        .tm2-hero-headline .tm2-headline-line {
+
+            &--1 .tm2-headline-word,
+            &--2 .tm2-headline-word,
+            &--3 .tm2-headline-word {
+                font-size: clamp(1.75rem, 9vw, 2.2rem);
+            }
+        }
+    }
+
+    .tm2-members {
+        padding: 40px 12px;
+
+        .tm2-members-title {
+            font-size: 1.7rem;
+        }
+
+        .tm2-member-visual {
+            min-height: 150px;
+        }
+
+        .tm2-member-avatar {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .tm2-culture-card {
+        padding: 18px 14px;
+    }
+
+    .tm2-stats-inner {
+        gap: 20px 8px;
+    }
+
+    .tm2-stat-number {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,1667 @@
+// =============================================================================
+// CONSULTATION PAGE
+// =============================================================================
+
+@use "../utils/variables" as *;
+
+body.consultation-page {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+// ---------- CONSULTATION HERO ----------
+.cn2-hero {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background: var(--dark);
+    padding: 90px 60px 60px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    .cn2-hero-noise {
+        position: absolute;
+        inset: 0;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+
+    .cn2-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1300px;
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .cn2-hero-left {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .cn2-hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        .cn2-eyebrow-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: cn2Pulse 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+
+        .cn2-eyebrow-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1;
+        }
+    }
+
+    .cn2-hero-headline {
+        margin: 0;
+
+        .cn2-headline-line {
+            display: block;
+            line-height: 1;
+            overflow: hidden;
+            padding: 2px 0;
+
+            &--1 .cn2-headline-word {
+                font-size: clamp(3.5rem, 9vw, 8rem);
+            }
+
+            &--2 .cn2-headline-word {
+                font-size: clamp(3.5rem, 9vw, 8rem);
+            }
+
+            &--3 .cn2-headline-word {
+                font-size: clamp(3.5rem, 9vw, 8rem);
+            }
+        }
+
+        .cn2-headline-word {
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--light);
+            letter-spacing: -0.03em;
+            display: inline-block;
+            margin-right: 0.15em;
+
+            &--outline {
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--light);
+            }
+
+            &--accent {
+                color: var(--accent);
+                -webkit-text-fill-color: var(--accent);
+            }
+        }
+    }
+
+    .cn2-hero-subtext {
+        font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0;
+        max-width: 500px;
+    }
+
+    .cn2-hero-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        padding: 16px 32px;
+        background: var(--accent);
+        color: var(--dark);
+        border-radius: 60px;
+        text-decoration: none;
+        font-size: 1.0rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all var(--transition-fast);
+        align-self: flex-start;
+
+        &:hover {
+            background: var(--light);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(11, 189, 41, 0.3);
+        }
+
+        .cn2-cta-arrow {
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .cn2-hero-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cn2-hero-visual {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .cn2-visual-frame {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .cn2-visual-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+        z-index: 2;
+
+        .cn2-visual-icon {
+            width: 56px;
+            height: 56px;
+            color: var(--accent);
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .cn2-visual-label {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--light);
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+
+        .cn2-visual-sublabel {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.35);
+        }
+    }
+
+    .cn2-visual-ring {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 1px solid rgba(11, 189, 41, 0.2);
+        animation: cn2RotateRing 20s linear infinite;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--2 {
+            inset: 20px;
+            border-color: rgba(11, 189, 41, 0.12);
+            animation-direction: reverse;
+            animation-duration: 28s;
+        }
+    }
+
+    .cn2-hero-stats {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cn2-stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        text-align: center;
+
+        .cn2-stat-num {
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .cn2-stat-label {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    .cn2-hero-scroll {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        z-index: 2;
+        pointer-events: none;
+
+        .cn2-scroll-line {
+            width: 2px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+
+            .cn2-scroll-fill {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: var(--accent);
+                transition: height 0.3s ease;
+            }
+        }
+
+        .cn2-scroll-label {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.3);
+            white-space: nowrap;
+        }
+    }
+}
+
+@keyframes cn2RotateRing {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cn2Pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+// ---------- SERVICES SECTION ----------
+.cn2-services {
+    background: var(--wheat);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .cn2-services-header {
+        max-width: 1300px;
+        margin: 0 auto 60px;
+
+        .cn2-services-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(10, 10, 10, 0.45);
+            margin-bottom: 20px;
+
+            .cn2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .cn2-services-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin: 0 0 20px;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--accent);
+            }
+        }
+
+        .cn2-services-intro {
+            font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+            line-height: 1.7;
+            color: rgba(10, 10, 10, 0.5);
+            max-width: 600px;
+        }
+    }
+
+    .cn2-services-grid {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .cn2-service-card {
+        position: relative;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(10, 10, 10, 0.08);
+        border-radius: 20px;
+        padding: 32px 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        transition: all var(--transition-fast);
+        overflow: hidden;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 189, 41, 0.06) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        &:hover {
+            transform: translateY(-6px);
+            border-color: rgba(11, 189, 41, 0.4);
+            box-shadow: 0 20px 40px rgba(11, 189, 41, 0.1);
+
+            &::before {
+                opacity: 1;
+            }
+
+            .cn2-service-arrow {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        &--featured {
+            background: var(--dark);
+            border-color: rgba(11, 189, 41, 0.25);
+
+            .cn2-service-num {
+                color: rgba(11, 189, 41, 0.3);
+            }
+
+            .cn2-service-icon {
+                color: var(--accent);
+            }
+
+            .cn2-service-name {
+                color: var(--light);
+            }
+
+            .cn2-service-desc {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .cn2-service-list li {
+                color: rgba(255, 255, 255, 0.6);
+
+                &::before {
+                    background: var(--accent);
+                }
+            }
+        }
+
+        .cn2-service-num {
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(10, 10, 10, 0.06);
+            line-height: 1;
+            letter-spacing: -0.04em;
+            position: absolute;
+            top: 16px;
+            right: 20px;
+        }
+
+        .cn2-service-icon {
+            width: 44px;
+            height: 44px;
+            color: var(--dark);
+            position: relative;
+            z-index: 1;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .cn2-service-name {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark);
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cn2-service-desc {
+            font-size: 1.0rem;
+            line-height: 1.65;
+            color: rgba(10, 10, 10, 0.55);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cn2-service-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            position: relative;
+            z-index: 1;
+
+            li {
+                font-size: 0.78rem;
+                font-weight: 700;
+                color: rgba(10, 10, 10, 0.6);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                &::before {
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    background: var(--accent);
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        .cn2-service-arrow {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: all var(--transition-fast);
+            position: relative;
+            z-index: 1;
+            margin-top: auto;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// ---------- BENEFITS SECTION ----------
+.cn2-benefits {
+    background: var(--dark);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+
+    .cn2-benefits-header {
+        max-width: 1300px;
+        margin: 0 auto 60px;
+
+        .cn2-benefits-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            margin-bottom: 20px;
+
+            .cn2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .cn2-benefits-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--light);
+            margin: 0;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--accent);
+            }
+        }
+    }
+
+    .cn2-benefits-grid {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cn2-benefit-row {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 32px;
+        padding: 32px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        align-items: flex-start;
+        transition: all var(--transition-fast);
+
+        &:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        &:hover {
+            padding-left: 16px;
+
+            .cn2-benefit-index {
+                color: var(--accent);
+            }
+        }
+
+        &--reverse {
+            grid-template-columns: 1fr 80px;
+
+            .cn2-benefit-index {
+                order: 2;
+                text-align: right;
+            }
+
+            .cn2-benefit-body {
+                order: 1;
+            }
+        }
+
+        .cn2-benefit-index {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.12);
+            line-height: 1;
+            transition: color var(--transition-fast);
+            padding-top: 4px;
+        }
+
+        .cn2-benefit-body {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .cn2-benefit-name {
+                font-size: clamp(1.1rem, 2vw, 1.4rem);
+                font-weight: 900;
+                text-transform: uppercase;
+                color: var(--light);
+                letter-spacing: -0.01em;
+            }
+
+            .cn2-benefit-text {
+                font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+                line-height: 1.75;
+                color: rgba(255, 255, 255, 0.45);
+                max-width: 680px;
+            }
+        }
+    }
+}
+
+// ---------- WHAT HAPPENS (TIMELINE) SECTION ----------
+.cn2-happens {
+    background: var(--wheat);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+
+    .cn2-happens-header {
+        max-width: 1300px;
+        margin: 0 auto 60px;
+
+        .cn2-happens-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(10, 10, 10, 0.45);
+            margin-bottom: 20px;
+
+            .cn2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .cn2-happens-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin: 0;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--accent);
+            }
+        }
+    }
+
+    .cn2-happens-timeline {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: calc(100% / 6);
+            right: calc(100% / 6);
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(11, 189, 41, 0.3), transparent);
+            pointer-events: none;
+        }
+    }
+
+    .cn2-happens-node {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .cn2-happens-marker {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: var(--dark);
+        border: 2px solid rgba(11, 189, 41, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+        transition: all var(--transition-fast);
+
+        &:hover,
+        .cn2-happens-node:hover & {
+            border-color: var(--accent);
+            background: rgba(11, 189, 41, 0.1);
+        }
+
+        .cn2-happens-num {
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+    }
+
+    .cn2-happens-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(10, 10, 10, 0.08);
+        border-radius: 16px;
+        padding: 24px 20px;
+        width: 100%;
+        transition: all var(--transition-fast);
+
+        .cn2-happens-node:hover & {
+            border-color: rgba(11, 189, 41, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(11, 189, 41, 0.1);
+        }
+
+        .cn2-happens-time {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+        }
+
+        .cn2-happens-name {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark);
+            letter-spacing: -0.01em;
+        }
+
+        .cn2-happens-text {
+            font-size: 1.0rem;
+            line-height: 1.65;
+            color: rgba(10, 10, 10, 0.5);
+        }
+    }
+}
+
+// ---------- FAQ SECTION ----------
+.cn2-faq {
+    background: var(--dark);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+
+    .cn2-faq-header {
+        max-width: 1300px;
+        margin: 0 auto 50px;
+
+        .cn2-faq-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            margin-bottom: 20px;
+
+            .cn2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .cn2-faq-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--light);
+            margin: 0;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--accent);
+            }
+        }
+    }
+
+    .cn2-faq-list {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .cn2-faq-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+        &:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .cn2-faq-card {
+            padding: 0;
+        }
+
+        .cn2-faq-top {
+            display: grid;
+            grid-template-columns: 48px 1fr auto;
+            gap: 20px;
+            align-items: center;
+            padding: 24px 0;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+
+            &:hover {
+                .cn2-faq-q {
+                    color: var(--accent);
+                }
+            }
+
+            .cn2-faq-num {
+                font-size: 1.0rem;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: rgba(255, 255, 255, 0.25);
+                line-height: 1;
+            }
+
+            .cn2-faq-q {
+                font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+                font-weight: 700;
+                color: var(--light);
+                line-height: 1.3;
+                transition: color var(--transition-fast);
+            }
+
+            .cn2-faq-toggle {
+                width: 24px;
+                height: 24px;
+                position: relative;
+                flex-shrink: 0;
+
+                span {
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.5);
+                    border-radius: 2px;
+                    transition: all var(--transition-fast);
+
+                    &:nth-child(1) {
+                        width: 16px;
+                        height: 2px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    &:nth-child(2) {
+                        width: 2px;
+                        height: 16px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        &.is-open .cn2-faq-top .cn2-faq-toggle span:nth-child(2) {
+            transform: translate(-50%, -50%) rotate(90deg);
+            opacity: 0;
+        }
+
+        .cn2-faq-a {
+            display: none;
+            padding: 0 0 24px;
+            padding-left: 68px;
+
+            p {
+                font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+                line-height: 1.75;
+                color: rgba(255, 255, 255, 0.45);
+            }
+        }
+
+        &.is-open .cn2-faq-a {
+            display: block;
+        }
+    }
+}
+
+// ---------- BOOKING FORM SECTION ----------
+.cn2-form-section {
+    background: var(--wheat);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+
+    .cn2-form-header {
+        max-width: 1300px;
+        margin: 0 auto 50px;
+
+        .cn2-form-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(10, 10, 10, 0.45);
+            margin-bottom: 20px;
+
+            .cn2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .cn2-form-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin: 0 0 16px;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--accent);
+            }
+        }
+
+        .cn2-form-intro {
+            font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+            line-height: 1.7;
+            color: rgba(10, 10, 10, 0.5);
+            max-width: 600px;
+        }
+    }
+
+    .cn2-form-card {
+        max-width: 1300px;
+        margin: 0 auto;
+        background: var(--dark);
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        .cn2-form-card-inner {
+            padding: 48px;
+            box-sizing: border-box;
+        }
+    }
+
+    .cn2-form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .cn2-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 0;
+
+        &--full {
+            margin-bottom: 20px;
+        }
+    }
+
+    .cn2-form-label {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .cn2-form-input,
+    .cn2-form-select,
+    .cn2-form-textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 0.88rem;
+        color: var(--light);
+        outline: none;
+        transition: all var(--transition-fast);
+        font-family: inherit;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        appearance: none;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        &:focus {
+            border-color: var(--accent);
+            background: rgba(11, 189, 41, 0.05);
+        }
+
+        option {
+            background: var(--gray);
+            color: var(--light);
+        }
+    }
+
+    .cn2-form-textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .cn2-form-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+    }
+
+    .cn2-form-perks {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .cn2-perk {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .cn2-perk-icon {
+            font-size: 1rem;
+            line-height: 1;
+        }
+
+        .cn2-perk-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.45);
+        }
+    }
+
+    .cn2-form-submit {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 32px;
+        background: var(--accent);
+        color: var(--dark);
+        border: none;
+        border-radius: 60px;
+        font-size: 1.0rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+        font-family: inherit;
+        white-space: nowrap;
+
+        .btn-arrow {
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &:hover {
+            background: var(--light);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(11, 189, 41, 0.3);
+        }
+    }
+}
+
+// =============================================================================
+// CONSULTATION PAGE RESPONSIVE MEDIA QUERIES
+// =============================================================================
+
+// ----- 1200px -----
+@media (max-width: 1200px) {
+    .cn2-hero {
+        padding: 120px 40px 110px;
+    }
+
+    .cn2-services {
+        padding: 90px 40px;
+    }
+
+    .cn2-benefits {
+        padding: 90px 40px;
+    }
+
+    .cn2-happens {
+        padding: 90px 40px;
+    }
+
+    .cn2-faq {
+        padding: 90px 40px;
+    }
+
+    .cn2-form-section {
+        padding: 90px 40px;
+    }
+}
+
+// ----- 1024px -----
+@media (max-width: 1024px) {
+    .cn2-hero {
+        padding: 110px 32px 100px;
+        min-height: auto;
+
+        .cn2-hero-content {
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        .cn2-hero-right {
+            display: none;
+        }
+
+        .cn2-hero-subtext {
+            max-width: 100%;
+        }
+
+        .cn2-hero-scroll {
+            bottom: 20px;
+        }
+    }
+
+    .cn2-services {
+        padding: 80px 32px;
+
+        .cn2-services-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+    }
+
+    .cn2-benefits {
+        padding: 80px 32px;
+
+        .cn2-benefit-row {
+            &--reverse {
+                grid-template-columns: 1fr 60px;
+            }
+        }
+    }
+
+    .cn2-happens {
+        padding: 80px 32px;
+
+        .cn2-happens-timeline {
+            grid-template-columns: 1fr;
+            gap: 20px;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .cn2-happens-node {
+            flex-direction: row;
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        .cn2-happens-marker {
+            flex-shrink: 0;
+        }
+
+        .cn2-happens-card {
+            text-align: left;
+        }
+    }
+
+    .cn2-faq {
+        padding: 80px 32px;
+
+        .cn2-faq-top {
+            grid-template-columns: 36px 1fr auto;
+            gap: 12px;
+        }
+
+        .cn2-faq-a {
+            padding-left: 48px;
+        }
+    }
+
+    .cn2-form-section {
+        padding: 80px 32px;
+
+        .cn2-form-card .cn2-form-card-inner {
+            padding: 36px;
+        }
+
+        .cn2-form-bottom {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+    }
+}
+
+// ----- 768px -----
+@media (max-width: 768px) {
+    .cn2-hero {
+        padding: 100px 20px 90px;
+
+        .cn2-hero-headline {
+            .cn2-headline-line {
+
+                &--1 .cn2-headline-word,
+                &--2 .cn2-headline-word,
+                &--3 .cn2-headline-word {
+                    font-size: clamp(2.8rem, 10vw, 5rem);
+                }
+            }
+        }
+
+        .cn2-hero-cta {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .cn2-hero-left {
+            gap: 24px;
+        }
+    }
+
+    .cn2-services {
+        padding: 60px 20px;
+
+        .cn2-services-header {
+            margin-bottom: 36px;
+        }
+
+        .cn2-services-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .cn2-service-card {
+            padding: 24px 20px;
+        }
+    }
+
+    .cn2-benefits {
+        padding: 60px 20px;
+
+        .cn2-benefits-header {
+            margin-bottom: 36px;
+        }
+
+        .cn2-benefit-row {
+            grid-template-columns: 48px 1fr;
+            gap: 16px;
+            padding: 24px 0;
+
+            &--reverse {
+                grid-template-columns: 1fr 48px;
+            }
+
+            .cn2-benefit-index {
+                font-size: 1.8rem;
+            }
+
+            .cn2-benefit-body {
+                .cn2-benefit-name {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .cn2-happens {
+        padding: 60px 20px;
+
+        .cn2-happens-header {
+            margin-bottom: 36px;
+        }
+
+        .cn2-happens-node {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cn2-happens-marker {
+            width: 56px;
+            height: 56px;
+        }
+
+        .cn2-happens-card {
+            text-align: center;
+        }
+    }
+
+    .cn2-faq {
+        padding: 60px 20px;
+
+        .cn2-faq-header {
+            margin-bottom: 32px;
+        }
+
+        .cn2-faq-top {
+            grid-template-columns: 32px 1fr auto;
+            gap: 10px;
+            padding: 20px 0;
+
+            .cn2-faq-q {
+                font-size: 1.05rem;
+            }
+        }
+
+        .cn2-faq-a {
+            padding-left: 42px;
+        }
+    }
+
+    .cn2-form-section {
+        padding: 60px 20px;
+
+        .cn2-form-header {
+            margin-bottom: 32px;
+        }
+
+        .cn2-form-card .cn2-form-card-inner {
+            padding: 24px 20px;
+        }
+
+        .cn2-form-row {
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .cn2-form-group--full {
+            margin-bottom: 14px;
+        }
+
+        .cn2-form-input,
+        .cn2-form-select,
+        .cn2-form-textarea {
+            font-size: 16px; // prevents iOS auto-zoom
+            padding: 12px 14px;
+        }
+
+        .cn2-form-perks {
+            gap: 14px;
+        }
+
+        .cn2-form-submit {
+            width: 100%;
+            justify-content: center;
+            padding: 16px 24px;
+        }
+    }
+}
+
+// ----- 480px -----
+@media (max-width: 480px) {
+    .cn2-hero {
+        padding: 90px 16px 80px;
+        height: 70vh;
+
+        .cn2-hero-headline {
+            .cn2-headline-line {
+
+                &--1 .cn2-headline-word,
+                &--2 .cn2-headline-word,
+                &--3 .cn2-headline-word {
+                    font-size: clamp(2.2rem, 11vw, 3.5rem);
+                }
+            }
+        }
+
+        .cn2-hero-eyebrow .cn2-eyebrow-text {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .cn2-hero-scroll {
+            display: none;
+        }
+    }
+
+    .cn2-services {
+        padding: 50px 16px;
+
+        .cn2-services-header .cn2-services-tag {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .cn2-service-card {
+            padding: 20px 16px;
+            border-radius: 16px;
+
+            .cn2-service-num {
+                font-size: 2.2rem;
+            }
+
+            .cn2-service-icon {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+
+    .cn2-benefits {
+        padding: 50px 16px;
+
+        .cn2-benefit-row {
+            grid-template-columns: 40px 1fr;
+            gap: 12px;
+            padding: 20px 0;
+
+            &--reverse {
+                grid-template-columns: 1fr 40px;
+            }
+
+            &:hover {
+                padding-left: 8px;
+            }
+        }
+    }
+
+    .cn2-happens {
+        padding: 50px 16px;
+
+        .cn2-happens-marker {
+            width: 52px;
+            height: 52px;
+
+            .cn2-happens-num {
+                font-size: 1.1rem;
+            }
+        }
+
+        .cn2-happens-card {
+            padding: 18px 16px;
+            border-radius: 12px;
+        }
+    }
+
+    .cn2-faq {
+        padding: 50px 16px;
+
+        .cn2-faq-top {
+            grid-template-columns: 28px 1fr auto;
+            gap: 8px;
+            padding: 18px 0;
+
+            .cn2-faq-num {
+                font-size: 1.05rem;
+            }
+
+            .cn2-faq-q {
+                font-size: 1.0rem;
+                line-height: 1.4;
+            }
+        }
+
+        .cn2-faq-a {
+            padding-left: 36px;
+
+            p {
+                font-size: 0.82rem;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .cn2-form-section {
+        padding: 50px 16px;
+
+        .cn2-form-card .cn2-form-card-inner {
+            padding: 20px 16px;
+        }
+
+        .cn2-form-perks {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .cn2-perk-text {
+            font-size: 0.68rem;
+        }
+
+        .cn2-form-submit {
+            font-size: 0.78rem;
+            padding: 14px 20px;
+        }
+    }
+}
+
+// ----- 360px -----
+@media (max-width: 360px) {
+    .cn2-hero {
+        padding: 80px 12px 70px;
+
+        .cn2-hero-headline {
+            .cn2-headline-line {
+
+                &--1 .cn2-headline-word,
+                &--2 .cn2-headline-word,
+                &--3 .cn2-headline-word {
+                    font-size: clamp(1.9rem, 12vw, 3rem);
+                }
+            }
+        }
+
+        .cn2-hero-cta {
+            font-size: 1.05rem;
+            padding: 14px 20px;
+        }
+    }
+
+    .cn2-services {
+        padding: 40px 12px;
+    }
+
+    .cn2-benefits {
+        padding: 40px 12px;
+    }
+
+    .cn2-happens {
+        padding: 40px 12px;
+    }
+
+    .cn2-faq {
+        padding: 40px 12px;
+
+        .cn2-faq-top {
+            grid-template-columns: 24px 1fr auto;
+            gap: 6px;
+        }
+
+        .cn2-faq-a {
+            padding-left: 30px;
+        }
+    }
+
+    .cn2-form-section {
+        padding: 40px 12px;
+
+        .cn2-form-card .cn2-form-card-inner {
+            padding: 16px 12px;
+        }
+
+        .cn2-form-row {
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .cn2-form-group--full {
+            margin-bottom: 10px;
+        }
+    }
+}

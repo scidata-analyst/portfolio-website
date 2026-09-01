@@ -1,0 +1,1309 @@
+// =============================================================================
+// PRICING PAGE
+// =============================================================================
+
+@use "../utils/variables" as *;
+
+body.price-page {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+// ---------- PRICING HERO (oversized typography with floating tags) ----------
+.pr2-hero {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background: var(--dark);
+    padding: 90px 60px 140px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    .pr2-hero-noise {
+        position: absolute;
+        inset: 0;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+
+    .pr2-floating-tags {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+
+        .pr2-tag {
+            position: absolute;
+            font-size: clamp(0.7rem, 1vw, 0.9rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: rgba(11, 189, 41, 0.1);
+            border: 1px solid rgba(11, 189, 41, 0.2);
+            color: var(--accent);
+            animation: pr2TagFloat 5s ease-in-out infinite;
+            user-select: none;
+            white-space: nowrap;
+
+            &--1 {
+                top: 20%;
+                left: 8%;
+                animation-delay: 0s;
+            }
+
+            &--2 {
+                top: 30%;
+                right: 10%;
+                animation-delay: 1s;
+            }
+
+            &--3 {
+                bottom: 35%;
+                left: 15%;
+                animation-delay: 2s;
+            }
+
+            &--4 {
+                bottom: 25%;
+                right: 12%;
+                animation-delay: 0.5s;
+            }
+
+            &--5 {
+                top: 55%;
+                left: 5%;
+                animation-delay: 1.5s;
+            }
+        }
+    }
+
+    .pr2-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .pr2-hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 32px;
+
+        .pr2-eyebrow-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .pr2-eyebrow-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1;
+        }
+    }
+
+    .pr2-hero-headline {
+        margin: 0 0 32px;
+
+        .pr2-headline-line {
+            display: block;
+            line-height: 1;
+            overflow: hidden;
+            padding: 2px 0;
+
+            &--1 .pr2-headline-word {
+                font-size: clamp(3rem, 9vw, 7rem);
+            }
+
+            &--2 .pr2-headline-word {
+                font-size: clamp(2rem, 5vw, 4rem);
+            }
+
+            &--3 .pr2-headline-word {
+                font-size: clamp(3rem, 9vw, 7rem);
+            }
+        }
+
+        .pr2-headline-word {
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--light);
+            letter-spacing: -0.03em;
+            display: inline-block;
+            margin-right: 0.15em;
+
+            &--outline {
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--light);
+            }
+
+            &--accent {
+                color: var(--accent);
+            }
+        }
+    }
+
+    .pr2-hero-subtext {
+        font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0;
+        max-width: 500px;
+    }
+
+    .pr2-hero-scroll {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        z-index: 2;
+        pointer-events: none;
+
+        .pr2-scroll-line {
+            width: 2px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+
+            .pr2-scroll-fill {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: var(--accent);
+                transition: height 0.3s ease;
+            }
+        }
+
+        .pr2-scroll-label {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.3);
+            white-space: nowrap;
+        }
+    }
+}
+
+@keyframes pr2TagFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+// ---------- PRICING PLANS (bold editorial cards) ----------
+.pr2-plans {
+    background: var(--wheat);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+
+    .pr2-plans-header {
+        max-width: 1200px;
+        margin: 0 auto 60px;
+
+        .pr2-plans-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            margin-bottom: 20px;
+
+            .pr2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .pr2-plans-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin: 0;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--dark);
+            }
+        }
+    }
+
+    .pr2-plans-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1400px;
+        margin: 0 auto;
+        align-items: stretch;
+    }
+
+    .pr2-plan {
+        background: var(--light);
+        border-radius: 24px;
+        padding: 40px 32px;
+        border: 2px solid rgba(10, 10, 10, 0.06);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: all var(--transition-smooth);
+        position: relative;
+        box-sizing: border-box;
+
+        &:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+        }
+
+        &--featured {
+            background: var(--dark);
+            border-color: var(--accent);
+            transform: scale(1.03);
+
+            &:hover {
+                transform: scale(1.03) translateY(-8px);
+            }
+
+            .pr2-plan-name {
+                color: var(--light);
+            }
+
+            .pr2-plan-desc {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .pr2-plan-amount {
+                color: var(--accent);
+            }
+
+            .pr2-plan-period {
+                color: rgba(255, 255, 255, 0.3);
+            }
+
+            .pr2-plan-features li {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            .pr2-plan-delivery {
+                color: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    .pr2-plan-popular {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--dark);
+        background: var(--accent);
+        padding: 6px 20px;
+        border-radius: 20px;
+        white-space: nowrap;
+    }
+
+    .pr2-plan-top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .pr2-plan-num {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent);
+    }
+
+    .pr2-plan-name {
+        font-size: 1.4rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        margin: 0;
+    }
+
+    .pr2-plan-badge {
+        font-size: 1.05rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: rgba(10, 10, 10, 0.4);
+        padding: 4px 10px;
+        border: 1px solid rgba(10, 10, 10, 0.15);
+        border-radius: 20px;
+        margin-left: auto;
+
+        &--accent {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        &--dark {
+            color: var(--dark);
+            border-color: var(--dark);
+        }
+    }
+
+    .pr2-plan-price {
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+
+        .pr2-plan-currency {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--dark);
+        }
+
+        .pr2-plan-amount {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: var(--dark);
+            line-height: 1;
+        }
+
+        .pr2-plan-period {
+            font-size: 1.05rem;
+            color: rgba(10, 10, 10, 0.4);
+        }
+    }
+
+    .pr2-plan-desc {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: rgba(10, 10, 10, 0.5);
+        margin: 0;
+    }
+
+    .pr2-plan-features {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        li {
+            font-size: 1.0rem;
+            color: rgba(10, 10, 10, 0.6);
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &::before {
+                content: "?";
+                color: var(--accent);
+                font-weight: 700;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .pr2-plan-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+        padding-top: 16px;
+        border-top: 1px solid rgba(10, 10, 10, 0.06);
+        gap: 12px;
+    }
+
+    .pr2-plan-delivery {
+        font-size: 1.0rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: rgba(10, 10, 10, 0.4);
+    }
+
+    .pr2-plan-cta {
+        flex-shrink: 0;
+    }
+}
+
+// ---------- SPECIAL OFFER (bold banner) ----------
+.pr2-offer {
+    background: var(--accent);
+    padding: var(--section-padding) 60px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .pr2-offer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .pr2-offer-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pr2-offer-percent {
+        font-size: clamp(6rem, 15vw, 12rem);
+        font-weight: 900;
+        color: var(--dark);
+        line-height: 0.8;
+    }
+
+    .pr2-offer-off {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 900;
+        color: rgba(10, 10, 10, 0.2);
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+    }
+
+    .pr2-offer-ring {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid rgba(10, 10, 10, 0.1);
+        pointer-events: none;
+
+        &--1 {
+            width: 200px;
+            height: 200px;
+            top: -20px;
+            left: -20px;
+        }
+
+        &--2 {
+            width: 300px;
+            height: 300px;
+            bottom: -40px;
+            right: -40px;
+        }
+    }
+
+    .pr2-offer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .pr2-offer-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.0rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--dark);
+        opacity: 0.6;
+
+        .pr2-tag-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--dark);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+    }
+
+    .pr2-offer-title {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        margin: 0;
+        line-height: 0.95;
+
+        em {
+            font-style: normal;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 2px var(--dark);
+        }
+    }
+
+    .pr2-offer-text {
+        font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+        line-height: 1.7;
+        color: rgba(10, 10, 10, 0.6);
+        margin: 0;
+    }
+
+    .pr2-offer-cta {
+        width: fit-content;
+    }
+}
+
+// ---------- COMPARISON TABLE ----------
+.pr2-compare {
+    background: var(--wheat);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+
+    .pr2-compare-header {
+        max-width: 1200px;
+        margin: 0 auto 40px;
+
+        .pr2-compare-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            margin-bottom: 20px;
+
+            .pr2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .pr2-compare-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin: 0;
+            line-height: 0.95;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--dark);
+            }
+        }
+    }
+
+    .pr2-compare-table {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: var(--light);
+        border-radius: 20px;
+        overflow: hidden;
+        border: 2px solid rgba(10, 10, 10, 0.06);
+        box-sizing: border-box;
+    }
+
+    .pr2-compare-row {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        padding: 16px 24px;
+        border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+        align-items: center;
+        box-sizing: border-box;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &--header {
+            background: var(--dark);
+            padding: 20px 24px;
+        }
+    }
+
+    .pr2-compare-feature {
+        font-size: 1.0rem;
+        font-weight: 700;
+        color: rgba(10, 10, 10, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .pr2-compare-plan {
+        font-size: 1.05rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--light);
+        text-align: center;
+
+        &--active {
+            color: var(--accent);
+        }
+    }
+
+    .pr2-compare-val {
+        font-size: 1.0rem;
+        color: rgba(10, 10, 10, 0.6);
+        text-align: center;
+    }
+
+    .pr2-check {
+        color: var(--accent);
+        font-weight: 700;
+    }
+
+    .pr2-dash {
+        color: rgba(10, 10, 10, 0.2);
+    }
+}
+
+// ---------- PRICING FAQ ----------
+.pr2-faq {
+    background: var(--dark);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+
+    .pr2-faq-header {
+        max-width: 1200px;
+        margin: 0 auto 50px;
+
+        .pr2-faq-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            margin-bottom: 20px;
+
+            .pr2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .pr2-faq-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--light);
+            margin: 0;
+            line-height: 0.95;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--accent);
+            }
+        }
+    }
+
+    .pr2-faq-list {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .pr2-faq-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        padding-bottom: 12px;
+    }
+
+    .pr2-faq-top {
+        display: grid;
+        grid-template-columns: 40px 1fr auto;
+        gap: 16px;
+        align-items: center;
+        cursor: pointer;
+        padding: 12px 0;
+    }
+
+    .pr2-faq-num {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent);
+    }
+
+    .pr2-faq-q {
+        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+        font-weight: 700;
+        color: var(--light);
+        margin: 0;
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+
+    .pr2-faq-toggle {
+        width: 28px;
+        height: 28px;
+        position: relative;
+        flex-shrink: 0;
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 2px;
+            background: var(--light);
+            transform: translate(-50%, -50%);
+            transition: all var(--transition-fast);
+
+            &:last-child {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+
+    .pr2-faq-item--open {
+        .pr2-faq-toggle span:last-child {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        .pr2-faq-a {
+            max-height: 300px;
+            opacity: 1;
+            padding-top: 8px;
+        }
+    }
+
+    .pr2-faq-a {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all var(--transition-smooth);
+        padding-left: 56px;
+
+        p {
+            font-size: 1.0rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.4);
+            margin: 0;
+        }
+    }
+}
+
+// ---------- PRICING RESPONSIVE ----------
+@media (max-width: 1200px) {
+    .pr2-hero {
+        padding: 110px 40px 130px;
+    }
+
+    .pr2-plans {
+        padding: 90px 40px;
+    }
+
+    .pr2-offer {
+        padding: 90px 40px;
+    }
+
+    .pr2-compare {
+        padding: 90px 40px;
+    }
+
+    .pr2-faq {
+        padding: 90px 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pr2-hero {
+        padding: 100px 32px 130px;
+
+        .pr2-hero-scroll {
+            bottom: 20px;
+        }
+    }
+
+    .pr2-plans {
+        padding: 80px 32px;
+
+        .pr2-plans-header {
+            margin-bottom: 44px;
+        }
+
+        .pr2-plans-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+        }
+
+        .pr2-plan--featured {
+            grid-column: span 2;
+            transform: none;
+
+            &:hover {
+                transform: translateY(-8px);
+            }
+        }
+    }
+
+    .pr2-offer {
+        padding: 80px 32px;
+
+        .pr2-offer-inner {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .pr2-offer-content {
+            align-items: center;
+        }
+
+        .pr2-offer-tag {
+            justify-content: center;
+        }
+
+        .pr2-offer-cta {
+            margin-top: 8px;
+        }
+    }
+
+    .pr2-compare {
+        padding: 80px 32px;
+
+        .pr2-compare-header {
+            margin-bottom: 32px;
+        }
+    }
+
+    .pr2-faq {
+        padding: 80px 32px;
+
+        .pr2-faq-header {
+            margin-bottom: 36px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pr2-hero {
+        padding: 90px 24px 125px;
+        min-height: 70vh;
+
+        .pr2-floating-tags {
+            opacity: 0.4;
+            transform: scale(0.85);
+        }
+
+        .pr2-hero-eyebrow {
+            margin-bottom: 24px;
+            gap: 8px;
+
+            .pr2-eyebrow-text {
+                font-size: 1.0rem;
+                letter-spacing: 3px;
+            }
+        }
+
+        .pr2-hero-headline {
+            margin-bottom: 24px;
+
+            .pr2-headline-line {
+                line-height: 1;
+
+                &--1 .pr2-headline-word,
+                &--2 .pr2-headline-word,
+                &--3 .pr2-headline-word {
+                    font-size: clamp(2.4rem, 8.5vw, 4.2rem);
+                }
+            }
+
+            .pr2-headline-word--outline {
+                -webkit-text-stroke: 1.5px var(--light);
+            }
+        }
+
+        .pr2-hero-subtext {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 100%;
+        }
+
+        .pr2-hero-scroll {
+            bottom: 14px;
+            gap: 8px;
+
+            .pr2-scroll-line {
+                height: 32px;
+            }
+
+            .pr2-scroll-label {
+                font-size: 0.55rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    .pr2-plans {
+        padding: 60px 24px;
+
+        .pr2-plans-header {
+            margin-bottom: 32px;
+
+            .pr2-plans-title {
+                font-size: clamp(2.2rem, 7.5vw, 3.5rem);
+            }
+        }
+
+        .pr2-plans-grid {
+            grid-template-columns: 1fr;
+            max-width: 480px;
+            gap: 20px;
+        }
+
+        .pr2-plan--featured {
+            grid-column: span 1;
+            transform: none;
+
+            &:hover {
+                transform: translateY(-8px);
+            }
+        }
+
+        .pr2-plan {
+            padding: 32px 24px;
+        }
+    }
+
+    .pr2-offer {
+        padding: 60px 24px;
+
+        .pr2-offer-percent {
+            font-size: clamp(5rem, 16vw, 8rem);
+        }
+
+        .pr2-offer-title {
+            font-size: clamp(1.8rem, 6vw, 2.8rem);
+        }
+
+        .pr2-offer-text {
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+    }
+
+    .pr2-compare {
+        padding: 60px 24px;
+
+        .pr2-compare-table {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .pr2-compare-row {
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            min-width: 480px;
+            padding: 14px 18px;
+        }
+    }
+
+    .pr2-faq {
+        padding: 60px 24px;
+
+        .pr2-faq-header {
+            margin-bottom: 28px;
+
+            .pr2-faq-title {
+                font-size: clamp(2.2rem, 7.5vw, 3.5rem);
+            }
+        }
+
+        .pr2-faq-top {
+            grid-template-columns: 32px 1fr auto;
+            gap: 12px;
+            padding: 10px 0;
+        }
+
+        .pr2-faq-a {
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .pr2-hero {
+        padding: 80px 16px 115px;
+
+        .pr2-floating-tags {
+            display: none;
+        }
+
+        .pr2-hero-eyebrow {
+            gap: 8px;
+            margin-bottom: 16px;
+
+            .pr2-eyebrow-text {
+                font-size: 0.68rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        .pr2-hero-headline {
+            margin-bottom: 18px;
+
+            .pr2-headline-line {
+
+                &--1 .pr2-headline-word,
+                &--2 .pr2-headline-word,
+                &--3 .pr2-headline-word {
+                    font-size: clamp(1.95rem, 9.8vw, 2.8rem);
+                }
+            }
+
+            .pr2-headline-word {
+                margin-right: 0.08em;
+            }
+
+            .pr2-headline-word--outline {
+                -webkit-text-stroke: 1.5px var(--light);
+            }
+        }
+
+        .pr2-hero-subtext {
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
+        .pr2-hero-scroll {
+            bottom: 10px;
+            gap: 6px;
+
+            .pr2-scroll-line {
+                height: 24px;
+            }
+
+            .pr2-scroll-label {
+                font-size: 0.5rem;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+
+    .pr2-plans {
+        padding: 50px 16px;
+
+        .pr2-plans-header {
+            margin-bottom: 24px;
+
+            .pr2-plans-tag {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+            }
+
+            .pr2-plans-title {
+                font-size: clamp(1.8rem, 8vw, 2.6rem);
+            }
+        }
+
+        .pr2-plans-grid {
+            gap: 16px;
+        }
+
+        .pr2-plan {
+            padding: 24px 18px;
+            border-radius: 18px;
+            gap: 16px;
+
+            .pr2-plan-price .pr2-plan-amount {
+                font-size: clamp(2.4rem, 8vw, 3.2rem);
+            }
+
+            .pr2-plan-desc {
+                font-size: 0.82rem;
+                line-height: 1.5;
+            }
+
+            .pr2-plan-features li {
+                font-size: 0.78rem;
+                padding: 4px 0;
+            }
+
+            .pr2-plan-bottom {
+                padding-top: 12px;
+            }
+
+            .pr2-plan-delivery {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .pr2-offer {
+        padding: 45px 16px;
+
+        .pr2-offer-tag {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .pr2-offer-percent {
+            font-size: clamp(4.5rem, 18vw, 6.5rem);
+        }
+
+        .pr2-offer-title {
+            font-size: clamp(1.5rem, 6.5vw, 2.2rem);
+        }
+
+        .pr2-offer-text {
+            font-size: 1.0rem;
+            line-height: 1.5;
+        }
+
+        .pr2-offer-cta {
+            padding: 12px 24px;
+            font-size: 1.1rem;
+        }
+    }
+
+    .pr2-compare {
+        padding: 50px 16px;
+
+        .pr2-compare-header {
+            margin-bottom: 24px;
+
+            .pr2-compare-tag {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+            }
+
+            .pr2-compare-title {
+                font-size: clamp(1.8rem, 8vw, 2.6rem);
+            }
+        }
+
+        .pr2-compare-row {
+            min-width: 440px;
+            padding: 12px 14px;
+        }
+
+        .pr2-compare-feature {
+            font-size: 1.05rem;
+        }
+
+        .pr2-compare-plan {
+            font-size: 0.68rem;
+        }
+
+        .pr2-compare-val {
+            font-size: 1.05rem;
+        }
+    }
+
+    .pr2-faq {
+        padding: 50px 16px;
+
+        .pr2-faq-header {
+            margin-bottom: 24px;
+
+            .pr2-faq-tag {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+            }
+
+            .pr2-faq-title {
+                font-size: clamp(1.8rem, 8vw, 2.6rem);
+            }
+        }
+
+        .pr2-faq-top {
+            grid-template-columns: 28px 1fr auto;
+            gap: 8px;
+        }
+
+        .pr2-faq-q {
+            font-size: 1.0rem;
+        }
+
+        .pr2-faq-a p {
+            font-size: 1.1rem;
+            line-height: 1.55;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .pr2-hero {
+        padding: 70px 12px 105px;
+
+        .pr2-hero-headline .pr2-headline-line {
+
+            &--1 .pr2-headline-word,
+            &--2 .pr2-headline-word,
+            &--3 .pr2-headline-word {
+                font-size: clamp(1.75rem, 9vw, 2.2rem);
+            }
+        }
+    }
+
+    .pr2-plans {
+        padding: 40px 12px;
+
+        .pr2-plan {
+            padding: 20px 14px;
+        }
+    }
+
+    .pr2-offer {
+        padding: 40px 12px;
+    }
+
+    .pr2-compare {
+        padding: 40px 12px;
+    }
+
+    .pr2-faq {
+        padding: 40px 12px;
+    }
+}

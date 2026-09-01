@@ -1,0 +1,90 @@
+// =============================================================================
+// BUTTONS
+// =============================================================================
+
+@use "../utils/variables" as *;
+
+.btn-magnetic {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    .btn-label {
+        font-size: 1.0rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .btn-arrow {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform var(--transition-fast);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.btn-primary {
+        background: var(--accent);
+        color: var(--dark);
+        padding: 18px 36px;
+        border-radius: 60px;
+        box-shadow: 0 8px 30px rgba(11, 189, 41, 0.3);
+
+        &:hover {
+            background: var(--light);
+            box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+
+            .btn-arrow {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &.btn-ghost {
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        color: var(--light);
+        padding: 18px 36px;
+        border-radius: 60px;
+
+        &:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+    }
+
+    &.btn-cta-large {
+        background: var(--accent);
+        color: var(--dark);
+        padding: 24px 48px;
+        border-radius: 80px;
+        box-shadow: 0 10px 40px rgba(11, 189, 41, 0.4);
+
+        .btn-label {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            background: var(--light);
+            box-shadow: 0 15px 50px rgba(255, 255, 255, 0.3);
+            transform: translateY(-4px) scale(1.02);
+
+            .btn-arrow {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,215 @@
+// =============================================================================
+// GLOBAL STYLES & KEYFRAMES
+// =============================================================================
+
+@use "../utils/variables" as *;
+
+body {
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+    font-size: calc(16px + 5*(100vw - 320px)/1600);
+    width: 100%;
+    max-width: calc(320px + 1600*(100vw - 320px)/1600);
+    position: relative;
+    background: wheat;
+}
+
+// =============================================================================
+// KEYFRAMES
+// =============================================================================
+
+@keyframes slideup {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    25% {
+        transform: translateY(-25vh);
+    }
+
+    50% {
+        transform: translateY(-50vh);
+    }
+
+    75% {
+        transform: translateY(-75vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes slide_up {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        background-size: 100% 100%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+        background-size: 300% 150%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes circle_animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(11, 189, 41, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 12px rgba(11, 189, 41, 0);
+    }
+}
+
+@keyframes rotate-ring {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes footerBlob {
+    0% {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(30px) scale(1.15);
+    }
+}
+
+@keyframes footerMarquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes footerLogoSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes footerDot {
+    0% {
+        box-shadow: 0 0 0 0 rgba(11, 189, 41, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(11, 189, 41, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(11, 189, 41, 0);
+    }
+}
+
+@keyframes scrollDot {
+
+    0%,
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(200%);
+        opacity: 1;
+    }
+}
+
+@keyframes floatDeco {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes scrollLineMove {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes ctaRingSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,995 @@
+// =============================================================================
+// CONTACT PAGE
+// =============================================================================
+
+@use "../utils/variables" as *;
+
+body.contact-page {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+// ---------- CONTACT HERO (signal waves with oversized typography) ----------
+.ct2-hero {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    background: var(--dark);
+    padding: 90px 60px 140px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    .ct2-hero-noise {
+        position: absolute;
+        inset: 0;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+
+    .ct2-signal-waves {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 1;
+        max-width: 100%;
+        overflow: hidden;
+
+        .ct2-wave {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 1px solid rgba(11, 189, 41, 0.1);
+            animation: ct2WaveExpand 4s ease-out infinite;
+
+            &--1 {
+                animation-delay: 0s;
+            }
+
+            &--2 {
+                animation-delay: 0.5s;
+            }
+
+            &--3 {
+                animation-delay: 1s;
+            }
+
+            &--4 {
+                animation-delay: 1.5s;
+            }
+
+            &--5 {
+                animation-delay: 2s;
+            }
+        }
+    }
+
+    .ct2-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .ct2-hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 32px;
+
+        .ct2-eyebrow-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: ct2Pulse 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+
+        .ct2-eyebrow-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1;
+        }
+    }
+
+    .ct2-hero-headline {
+        margin: 0 0 32px;
+
+        .ct2-headline-line {
+            display: block;
+            line-height: 1;
+            overflow: hidden;
+            padding: 2px 0;
+
+            &--1 .ct2-headline-word,
+            &--2 .ct2-headline-word,
+            &--3 .ct2-headline-word {
+                font-size: clamp(3rem, 9vw, 7rem);
+            }
+        }
+
+        .ct2-headline-word {
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--light);
+            letter-spacing: -0.03em;
+            display: inline-block;
+            margin-right: 0.15em;
+
+            &--outline {
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--light);
+            }
+
+            &--accent {
+                color: var(--accent);
+            }
+        }
+    }
+
+    .ct2-hero-subtext {
+        font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0;
+        max-width: 500px;
+    }
+
+    .ct2-hero-scroll {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        z-index: 2;
+        pointer-events: none;
+
+        .ct2-scroll-line {
+            width: 2px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+
+            .ct2-scroll-fill {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: var(--accent);
+                transition: height 0.3s ease;
+            }
+        }
+
+        .ct2-scroll-label {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.3);
+            white-space: nowrap;
+        }
+    }
+}
+
+@keyframes ct2WaveExpand {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 80vmax;
+        height: 80vmax;
+        opacity: 0;
+    }
+}
+
+@keyframes ct2Pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+// ---------- MANIFESTO (oversized typography burst) ----------
+.ct2-manifesto {
+    background: var(--wheat);
+    padding: var(--section-padding) 60px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .ct2-manifesto-bg-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: clamp(5rem, 20vw, 18rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px rgba(10, 10, 10, 0.06);
+        pointer-events: none;
+        white-space: nowrap;
+        user-select: none;
+    }
+
+    .ct2-manifesto-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .ct2-manifesto-title {
+        font-size: clamp(2.5rem, 8vw, 7rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--dark);
+        margin: 0 0 24px;
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+
+        .ct2-manifesto-word {
+            display: inline-block;
+            margin: 0 0.1em;
+            transition: all var(--transition-fast);
+
+            &--accent {
+                color: var(--accent);
+            }
+        }
+    }
+
+    .ct2-manifesto-text {
+        font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+        line-height: 1.7;
+        color: rgba(10, 10, 10, 0.5);
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    .ct2-manifesto-deco {
+        .ct2-manifesto-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid rgba(11, 189, 41, 0.1);
+            pointer-events: none;
+
+            &--1 {
+                width: 300px;
+                height: 300px;
+                top: -100px;
+                right: -100px;
+            }
+
+            &--2 {
+                width: 200px;
+                height: 200px;
+                bottom: -50px;
+                left: -50px;
+            }
+        }
+    }
+}
+
+// ---------- CONTACT FORM (bold console) ----------
+.ct2-form-section {
+    background: var(--dark);
+    padding: var(--section-padding) 60px;
+    box-sizing: border-box;
+
+    .ct2-form-header {
+        max-width: 1200px;
+        margin: 0 auto 50px;
+
+        .ct2-form-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.0rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            margin-bottom: 20px;
+
+            .ct2-tag-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+        }
+
+        .ct2-form-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--light);
+            margin: 0;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+
+            em {
+                font-style: normal;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px var(--accent);
+            }
+        }
+    }
+
+    .ct2-form-layout {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 30px;
+        align-items: start;
+    }
+
+    .ct2-form-card {
+        background: var(--gray);
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .ct2-form-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        overflow: hidden;
+        min-width: 0;
+
+        .ct2-form-dots {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+
+            span {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+
+                &:nth-child(1) {
+                    background: #ff5f56;
+                }
+
+                &:nth-child(2) {
+                    background: #ffbd2e;
+                }
+
+                &:nth-child(3) {
+                    background: #27c93f;
+                }
+            }
+        }
+
+        .ct2-form-card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.4);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .ct2-form-status {
+            margin-left: auto;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+    }
+
+    .ct2-form {
+        padding: 32px;
+        box-sizing: border-box;
+    }
+
+    .ct2-form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ct2-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 0;
+
+        &--full {
+            margin-bottom: 20px;
+        }
+    }
+
+    .ct2-form-label {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .ct2-form-input,
+    .ct2-form-select,
+    .ct2-form-textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        font-size: 1.0rem;
+        color: var(--light);
+        outline: none;
+        transition: all var(--transition-fast);
+        font-family: inherit;
+        box-sizing: border-box;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        &:focus {
+            border-color: var(--accent);
+            background: rgba(11, 189, 41, 0.05);
+        }
+    }
+
+    .ct2-form-textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .ct2-form-submit {
+        margin-top: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ct2-channels {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .ct2-channel {
+        background: var(--gray);
+        border-radius: 16px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: all var(--transition-fast);
+        box-sizing: border-box;
+
+        &:hover {
+            border-color: var(--accent);
+            transform: translateX(4px);
+        }
+    }
+
+    .ct2-channel-icon {
+        width: 40px;
+        height: 40px;
+        color: var(--accent);
+        flex-shrink: 0;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .ct2-channel-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        overflow: hidden;
+
+        .ct2-channel-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        a,
+        span {
+            font-size: 1.0rem;
+            color: var(--light);
+            text-decoration: none;
+            word-break: break-word;
+        }
+    }
+
+    .ct2-channel-socials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        a {
+            font-size: 1.0rem;
+            font-weight: 700;
+            color: var(--accent);
+            padding: 4px 8px;
+            border: 1px solid rgba(11, 189, 41, 0.3);
+            border-radius: 8px;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+
+            &:hover {
+                background: var(--accent);
+                color: var(--dark);
+            }
+        }
+    }
+}
+
+// ---------- CONTACT RESPONSIVE ----------
+@media (max-width: 1200px) {
+    .ct2-hero {
+        padding: 110px 40px 130px;
+    }
+
+    .ct2-manifesto {
+        padding: 90px 40px;
+    }
+
+    .ct2-form-section {
+        padding: 90px 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ct2-hero {
+        padding: 100px 32px 130px;
+
+        .ct2-hero-scroll {
+            bottom: 20px;
+        }
+    }
+
+    .ct2-manifesto {
+        padding: 80px 32px;
+    }
+
+    .ct2-form-section {
+        padding: 80px 32px;
+
+        .ct2-form-header {
+            margin-bottom: 40px;
+        }
+    }
+
+    .ct2-form-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .ct2-channels {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .ct2-channel {
+        margin: 0;
+        min-width: 0;
+    }
+
+    .ct2-channel-info {
+
+        a,
+        span {
+            font-size: 0.82rem;
+            word-break: break-all;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .ct2-hero {
+        padding: 90px 24px 125px;
+        min-height: auto;
+
+        .ct2-signal-waves {
+            opacity: 0.5;
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+
+        .ct2-hero-eyebrow {
+            margin-bottom: 24px;
+            gap: 8px;
+
+            .ct2-eyebrow-text {
+                font-size: 1.0rem;
+                letter-spacing: 3px;
+            }
+        }
+
+        .ct2-hero-headline {
+            margin-bottom: 24px;
+
+            .ct2-headline-line {
+                line-height: 1;
+
+                &--1 .ct2-headline-word,
+                &--2 .ct2-headline-word,
+                &--3 .ct2-headline-word {
+                    font-size: clamp(2.4rem, 8.5vw, 4.2rem);
+                }
+            }
+
+            .ct2-headline-word--outline {
+                -webkit-text-stroke: 1.5px var(--light);
+            }
+        }
+
+        .ct2-hero-subtext {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 100%;
+        }
+
+        .ct2-hero-scroll {
+            bottom: 14px;
+            gap: 8px;
+
+            .ct2-scroll-line {
+                height: 32px;
+            }
+
+            .ct2-scroll-label {
+                font-size: 0.55rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    .ct2-manifesto {
+        padding: 60px 24px;
+
+        .ct2-manifesto-title {
+            font-size: clamp(2.2rem, 7.5vw, 4.5rem);
+            margin-bottom: 16px;
+        }
+
+        .ct2-manifesto-text {
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+    }
+
+    .ct2-form-section {
+        padding: 60px 24px;
+
+        .ct2-form-header {
+            margin-bottom: 28px;
+
+            .ct2-form-title {
+                font-size: clamp(2.2rem, 7.5vw, 3.5rem);
+            }
+        }
+
+        .ct2-form-layout {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .ct2-form {
+            padding: 24px 20px;
+        }
+
+        .ct2-form-row {
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .ct2-form-group--full {
+            margin-bottom: 14px;
+        }
+
+        .ct2-form-input,
+        .ct2-form-select,
+        .ct2-form-textarea {
+            font-size: 16px;
+            padding: 12px 14px;
+        }
+
+        .ct2-form-submit {
+            width: 100%;
+            justify-content: center;
+            padding: 14px 24px;
+        }
+    }
+
+    .ct2-channels {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ct2-hero {
+        padding: 80px 16px 115px;
+
+        .ct2-signal-waves {
+            display: none;
+        }
+
+        .ct2-hero-eyebrow {
+            gap: 8px;
+            margin-bottom: 16px;
+
+            .ct2-eyebrow-text {
+                font-size: 0.68rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        .ct2-hero-headline {
+            margin-bottom: 18px;
+
+            .ct2-headline-line {
+
+                &--1 .ct2-headline-word,
+                &--2 .ct2-headline-word,
+                &--3 .ct2-headline-word {
+                    font-size: clamp(1.95rem, 9.8vw, 2.8rem);
+                }
+            }
+
+            .ct2-headline-word {
+                margin-right: 0.08em;
+            }
+
+            .ct2-headline-word--outline {
+                -webkit-text-stroke: 1.5px var(--light);
+            }
+        }
+
+        .ct2-hero-subtext {
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
+        .ct2-hero-scroll {
+            bottom: 10px;
+            gap: 6px;
+
+            .ct2-scroll-line {
+                height: 24px;
+            }
+
+            .ct2-scroll-label {
+                font-size: 0.5rem;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+
+    .ct2-manifesto {
+        padding: 50px 16px;
+
+        .ct2-manifesto-title {
+            font-size: clamp(1.8rem, 8.5vw, 3rem);
+            margin-bottom: 14px;
+        }
+
+        .ct2-manifesto-text {
+            font-size: 1.0rem;
+            line-height: 1.55;
+        }
+    }
+
+    .ct2-form-section {
+        padding: 50px 16px;
+
+        .ct2-form-header {
+            margin-bottom: 24px;
+
+            .ct2-form-tag {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+            }
+
+            .ct2-form-title {
+                font-size: clamp(1.8rem, 8vw, 2.6rem);
+            }
+        }
+
+        .ct2-form-layout {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .ct2-form-card {
+            border-radius: 18px;
+        }
+
+        .ct2-form-card-header {
+            padding: 10px 14px;
+            gap: 8px;
+
+            .ct2-form-card-title {
+                font-size: 0.68rem;
+                letter-spacing: 1.5px;
+            }
+
+            .ct2-form-dots span {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        .ct2-form {
+            padding: 18px 14px;
+        }
+
+        .ct2-form-row {
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .ct2-form-group--full {
+            margin-bottom: 12px;
+        }
+
+        .ct2-form-input,
+        .ct2-form-select,
+        .ct2-form-textarea {
+            font-size: 16px;
+            padding: 11px 12px;
+        }
+
+        .ct2-form-label {
+            font-size: 1.05rem;
+            letter-spacing: 1.5px;
+        }
+
+        .ct2-form-submit {
+            width: 100%;
+            justify-content: center;
+            padding: 14px 20px;
+            font-size: 0.82rem;
+        }
+    }
+
+    .ct2-channel {
+        padding: 16px 14px;
+        border-radius: 14px;
+        gap: 12px;
+
+        .ct2-channel-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .ct2-channel-info {
+            .ct2-channel-name {
+                font-size: 1.05rem;
+            }
+
+            a,
+            span {
+                font-size: 0.78rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .ct2-hero {
+        padding: 70px 12px 105px;
+
+        .ct2-hero-headline .ct2-headline-line {
+
+            &--1 .ct2-headline-word,
+            &--2 .ct2-headline-word,
+            &--3 .ct2-headline-word {
+                font-size: clamp(1.75rem, 9vw, 2.2rem);
+            }
+        }
+    }
+
+    .ct2-manifesto {
+        padding: 40px 12px;
+    }
+
+    .ct2-form-section {
+        padding: 40px 12px;
+
+        .ct2-form-layout {
+            gap: 16px;
+        }
+
+        .ct2-form {
+            padding: 14px 10px;
+        }
+
+        .ct2-form-card-header {
+            padding: 10px 12px;
+
+            .ct2-form-card-title {
+                font-size: 0.62rem;
+                letter-spacing: 1px;
+            }
+
+            .ct2-form-status {
+                font-size: 0.58rem;
+            }
+        }
+
+        .ct2-form-row {
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ct2-form-group--full {
+            margin-bottom: 10px;
+        }
+
+        .ct2-form-textarea {
+            min-height: 90px;
+        }
+    }
+
+    .ct2-channel {
+        padding: 12px 10px;
+        gap: 10px;
+    }
+
+    .ct2-channel-socials {
+        gap: 6px;
+
+        a {
+            padding: 3px 6px;
+            font-size: 1.1rem;
+        }
+    }
+}
