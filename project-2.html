@@ -1,338 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Management Software — Scidata Analyst</title>
-    <meta name="description"
-        content="Full-scale hotel operations platform managing reservations, room inventory, guest billing, staff scheduling, and housekeeping in real-time.">
-    <link rel="stylesheet" href="scss/main.css">
-
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STAYOS — Hotel Management Software with AI | Case Study 02</title>
+  <meta name="description" content="Problem → Solution → Outcome. How we built an AI hotel OS handling bookings, rooms, billing & guest chat — +38% direct revenue, −71% front-desk load.">
+  <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
+  <link rel="stylesheet" href="scss/project-2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
-<body class="project-page project-2">
-    <div class="cursor" data-cursor>
-        <div class="cursor-dot"></div>
-        <div class="cursor-ring"></div>
-        <div class="cursor-label">VIEW</div>
+<body class="project-2">
+
+  <!-- NOISE + PROGRESS -->
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" data-cursor aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <span class="cursor-label">VIEW</span>
+  </div>
+
+  <!-- LOADER -->
+  <div class="loader" data-loader aria-hidden="true">
+    <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 02/09</span></div>
+    <div class="loader-center">
+      <div class="loader-word" data-loader-word>CHECKING IN…</div>
+      <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
+      <div class="loader-track"><div class="loader-fill" data-loader-fill></div></div>
+      <div class="loader-sub">SYNCING ROOMS · RATES · GUESTS · AI CONCIERGE</div>
     </div>
+    <div class="loader-bottom"><span>STAYOS · HOTEL OS</span><span>LARAVEL / MYSQL / REDIS / AI</span></div>
+  </div>
 
-    <div class="loader">
-        <div class="loader-inner">
-            <div class="loader-num" data-loader-num>0</div>
-            <div class="loader-track">
-                <div class="loader-fill"></div>
-            </div>
-        </div>
-    </div>
+  <!-- NAV -->
+  <header class="nav">
+    <a href="work.html" class="nav-back" data-magnetic>
+      <span class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+      <span>ALL WORK</span>
+    </a>
+    <div class="nav-mid">CASE STUDY <strong>— 02 / 09</strong></div>
+    <a href="contact.html" class="nav-cta" data-magnetic><span>BOOK LIVE DEMO</span><i>↗</i></a>
+  </header>
 
-    <nav class="p-nav">
-        <a href="work.html" class="p-nav-back">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            <span>Work</span>
-        </a>
-        <div class="p-nav-num">02 / 09</div>
-    </nav>
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="hero-glow hero-glow--gold" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--mint" aria-hidden="true"></div>
+      <div class="hero-giant" aria-hidden="true">02</div>
 
-    <!-- HERO -->
-    <section class="p-hero">
-        <div class="p-hero-split">
-            <div class="p-hero-left">
-                <div class="p-hero-tag">
-                    <span class="p-tag-dot"></span> Enterprise Solution
-                </div>
-                <h1 class="p-hero-title">
-                    <span class="p-title-line"><span class="p-title-word" data-reveal>Hotel</span></span>
-                    <span class="p-title-line"><span class="p-title-word" data-reveal>Management</span></span>
-                    <span class="p-title-line"><span class="p-title-word" data-reveal>Software</span><span
-                            class="p-title-accent" data-reveal>.</span></span>
-                </h1>
-                <p class="p-hero-desc" data-reveal>Full-scale hotel operations platform managing reservations, room
-                    inventory, guest billing, staff scheduling, and housekeeping in real-time. Multi-property support
-                    with channel manager integration.</p>
-            </div>
-            <div class="p-hero-right">
-                <div class="p-hero-visual" data-visual>
-                    <div class="p-hotel-dashboard">
-                        <div class="p-dash-header">
-                            <span class="p-dash-dot"></span><span class="p-dash-dot"></span><span
-                                class="p-dash-dot"></span>
-                        </div>
-                        <div class="p-dash-stats">
-                            <div class="p-dash-stat"><span class="p-stat-val">87%</span><span
-                                    class="p-stat-label">Occupancy</span></div>
-                            <div class="p-dash-stat"><span class="p-stat-val">23</span><span
-                                    class="p-stat-label">Check-ins</span></div>
-                            <div class="p-dash-stat"><span class="p-stat-val">$14K</span><span
-                                    class="p-stat-label">Revenue</span></div>
-                        </div>
-                        <div class="p-dash-chart">
-                            <div class="p-chart-bar"></div>
-                            <div class="p-chart-bar"></div>
-                            <div class="p-chart-bar"></div>
-                            <div class="p-chart-bar"></div>
-                            <div class="p-chart-bar"></div>
-                            <div class="p-chart-bar"></div>
-                            <div class="p-chart-bar"></div>
-                        </div>
-                        <div class="p-dash-rooms">
-                            <div class="p-room p-room--occupied"></div>
-                            <div class="p-room p-room--available"></div>
-                            <div class="p-room p-room--occupied"></div>
-                            <div class="p-room p-room--cleaning"></div>
-                            <div class="p-room p-room--available"></div>
-                            <div class="p-room p-room--occupied"></div>
-                            <div class="p-room p-room--occupied"></div>
-                            <div class="p-room p-room--available"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="hero-inner">
+        <div class="hero-eyebrow" data-reveal>
+          <span class="pill"><span class="dot"></span> AI HOTEL OS · LIVE IN 14 PROPERTIES</span>
+          <span class="hero-loc">500+ ROOMS · 99.99% SYNC · 2025</span>
         </div>
-        <div class="p-hero-metrics" data-reveal>
-            <div class="p-metric"><span class="p-metric-val">500+</span><span class="p-metric-label">Rooms
-                    Managed</span></div>
-            <div class="p-metric"><span class="p-metric-val">99.9%</span><span class="p-metric-label">Uptime</span>
-            </div>
-        </div>
-        <div class="p-hero-number" aria-hidden="true">02</div>
-    </section>
 
-    <!-- DASHBOARD SHOWCASE -->
-    <section class="p-dashboard">
-        <div class="p-dash-showcase" data-visual>
-            <div class="p-dash-mockup">
-                <div class="p-dash-sidebar">
-                    <div class="p-side-logo">H</div>
-                    <div class="p-side-items">
-                        <div class="p-side-item p-side-item--active"></div>
-                        <div class="p-side-item"></div>
-                        <div class="p-side-item"></div>
-                        <div class="p-side-item"></div>
-                        <div class="p-side-item"></div>
-                    </div>
-                </div>
-                <div class="p-dash-main">
-                    <div class="p-dash-topbar">
-                        <span class="p-dash-title">Dashboard Overview</span>
-                        <div class="p-dash-actions">
-                            <div class="p-dash-btn"></div>
-                            <div class="p-dash-avatar"></div>
-                        </div>
-                    </div>
-                    <div class="p-dash-cards">
-                        <div class="p-dash-card">
-                            <span class="p-card-label">Today's Revenue</span>
-                            <span class="p-card-value">$24,580</span>
-                            <span class="p-card-change">+12.5%</span>
-                        </div>
-                        <div class="p-dash-card">
-                            <span class="p-card-label">Pending Check-ins</span>
-                            <span class="p-card-value">34</span>
-                            <span class="p-card-change">+3 today</span>
-                        </div>
-                        <div class="p-dash-card">
-                            <span class="p-card-label">Housekeeping</span>
-                            <span class="p-card-value">12/15</span>
-                            <span class="p-card-change">2 pending</span>
-                        </div>
-                    </div>
-                    <div class="p-dash-timeline">
-                        <div class="p-timeline-row"><span>Room 204</span>
-                            <div class="p-timeline-bar p-timeline-bar--1"></div>
-                        </div>
-                        <div class="p-timeline-row"><span>Room 312</span>
-                            <div class="p-timeline-bar p-timeline-bar--2"></div>
-                        </div>
-                        <div class="p-timeline-row"><span>Room 108</span>
-                            <div class="p-timeline-bar p-timeline-bar--3"></div>
-                        </div>
-                        <div class="p-timeline-row"><span>Room 415</span>
-                            <div class="p-timeline-bar p-timeline-bar--4"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <h1 class="hero-title">
+          <span class="line"><span class="word" data-reveal>THE HOTEL</span></span>
+          <span class="line"><span class="word word--stroke" data-reveal>THAT RUNS</span> <span class="word word--gold" data-reveal>ITSELF<span class="period">.</span></span></span>
+          <span class="line line--small"><span class="word word--small" data-reveal>STAYOS — BOOKINGS · ROOMS · BILLING · STAFF · AI CONCIERGE IN ONE BRAIN.</span></span>
+        </h1>
 
-    <!-- TECH -->
-    <section class="p-tech">
-        <div class="p-tech-marquee" aria-hidden="true">
-            <div class="p-tech-track">
-                <span>LARAVEL</span><span class="p-tech-sep">✦</span>
-                <span>MYSQL</span><span class="p-tech-sep">✦</span>
-                <span>REDIS</span><span class="p-tech-sep">✦</span>
-                <span>API GATEWAY</span><span class="p-tech-sep">✦</span>
-                <span>AWS</span><span class="p-tech-sep">✦</span>
-                <span>LARAVEL</span><span class="p-tech-sep">✦</span>
-                <span>MYSQL</span><span class="p-tech-sep">✦</span>
-                <span>REDIS</span><span class="p-tech-sep">✦</span>
-            </div>
+        <div class="hero-split">
+          <p class="hero-desc" data-reveal>
+            Front desks were juggling <s>11 disconnected tools</s>. <strong>STAYOS unifies reservations, inventory,
+            billing, housekeeping + a GPT concierge</strong> that checks guests in at 2AM — in 3.2 seconds.
+          </p>
+          <div class="hero-ctas" data-reveal>
+            <a href="#demo" class="btn btn--gold" data-magnetic><span>TRY AI CONCIERGE</span><i>↓</i></a>
+            <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
+          </div>
         </div>
-        <div class="p-tech-inner">
-            <div class="p-tech-left">
-                <span class="p-section-tag"><span class="p-tag-dot"></span> Architecture</span>
-                <h2 class="p-tech-title">Enterprise<br><em>grade</em></h2>
-            </div>
-            <div class="p-tech-right">
-                <div class="p-tech-list">
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">01</span>
-                        <span class="p-tech-name">Laravel Backend</span>
-                    </div>
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">02</span>
-                        <span class="p-tech-name">MySQL Cluster</span>
-                    </div>
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">03</span>
-                        <span class="p-tech-name">Redis Cache Layer</span>
-                    </div>
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">04</span>
-                        <span class="p-tech-name">AWS Infrastructure</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- MODULES -->
-    <section class="p-modules">
-        <div class="p-modules-header">
-            <span class="p-section-tag"><span class="p-tag-dot"></span> Modules</span>
-            <h2 class="p-modules-title">Complete<br><em>control</em></h2>
-        </div>
-        <div class="p-modules-grid">
-            <div class="p-module" data-module>
-                <div class="p-module-icon">
-                    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="4" y="8" width="32" height="24" rx="2" />
-                        <path d="M4 16h32" />
-                    </svg>
-                </div>
-                <h3 class="p-module-title">Reservations</h3>
-                <p class="p-module-desc">Multi-channel booking engine with automated confirmation and payment
-                    processing.</p>
+        <div class="hero-board">
+          <!-- AI CONCIERGE TERMINAL -->
+          <div class="terminal" data-reveal>
+            <div class="terminal-bar">
+              <span class="t-dots"><i></i><i></i><i></i></span>
+              <span class="t-title">stayos — ai_concierge · live · Room 204</span>
+              <span class="t-live"><span class="blink"></span> 0.8s sync</span>
             </div>
-            <div class="p-module" data-module>
-                <div class="p-module-icon">
-                    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M20 4l4 8 9 1-6.5 6 1.5 9-8-4.5L12 28l1.5-9L7 13l9-1z" />
-                    </svg>
+            <div class="terminal-body">
+              <div class="roomstrip" aria-hidden="true">
+                <span class="room room--occ">204</span>
+                <span class="room room--ai">205</span>
+                <span class="room room--free">206</span>
+                <span class="room room--clean">207</span>
+                <span class="room room--occ">208</span>
+                <span class="room room--free">209</span>
+                <span class="room-status">OCCUPANCY <b data-occupancy>87%</b> · REV <b>$24.5K</b> TODAY</span>
+              </div>
+              <div class="chat" id="heroChat">
+                <div class="msg msg--user"><span class="who">GUEST 23:41 · BOOKING.COM</span><p>Landing late, around 2am. Can I still check in? 😟</p></div>
+                <div class="msg msg--bot">
+                  <span class="who">STAYOS AI · intent: <b>late_checkin</b> 0.98 · room 205 held</span>
+                  <p><span data-type>Absolutely, Sara. Door code generated, Room 205 upgraded free — tap to open. Taxi + bill already on your folio. 🗝️</span></p>
+                  <span class="tokens"><em style="--c:#2DFF9D">2am:ENTITY-time</em><em style="--c:#E8C15A">upgrade:ACTION</em><em style="--c:#fff">late:SENTIMENT-tired</em></span>
                 </div>
-                <h3 class="p-module-title">Room Inventory</h3>
-                <p class="p-module-desc">Real-time room status, dynamic pricing, and overbooking prevention.</p>
+                <div class="msg msg--user"><span class="who">GUEST 23:42</span><p>Whoa — and breakfast at 6?</p></div>
+                <div class="msg msg--bot typing"><span class="who">STAYOS AI IS TYPING</span><p><span class="dots"><i></i><i></i><i></i></span></p></div>
+              </div>
+              <div class="terminal-foot">
+                <span class="prompt">❯</span>
+                <span class="fake-input">Ask for upgrade, late checkout, bill split…<span class="caret"></span></span>
+                <span class="send">SEND ↵</span>
+              </div>
             </div>
-            <div class="p-module" data-module>
-                <div class="p-module-icon">
-                    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="6" y="10" width="28" height="20" rx="2" />
-                        <path d="M6 16h3M30 16h4M14 24h12" />
-                    </svg>
-                </div>
-                <h3 class="p-module-title">Billing & Payments</h3>
-                <p class="p-module-desc">Automated invoicing, multi-currency support, and integration with payment
-                    gateways.</p>
+            <div class="terminal-badges">
+              <span>3.2s CHECK-IN</span><span>0.8s OTA SYNC</span><span>24/7 AI DESK</span>
             </div>
-            <div class="p-module" data-module>
-                <div class="p-module-icon">
-                    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="20" cy="14" r="6" />
-                        <path d="M8 34c0-6.6 5.4-12 12-12s12 5.4 12 12" />
-                    </svg>
-                </div>
-                <h3 class="p-module-title">Staff Management</h3>
-                <p class="p-module-desc">Shift scheduling, task assignment, and performance tracking for all
-                    departments.</p>
-            </div>
-            <div class="p-module" data-module>
-                <div class="p-module-icon">
-                    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path
-                            d="M20 4v8M20 28v8M4 20h8M28 20h8M8 8l5.5 5.5M26.5 26.5L32 32M32 8l-5.5 5.5M13.5 26.5L8 32" />
-                    </svg>
-                </div>
-                <h3 class="p-module-title">Housekeeping</h3>
-                <p class="p-module-desc">Automated room assignment, cleaning schedules, and quality inspection
-                    workflows.</p>
-            </div>
-            <div class="p-module" data-module>
-                <div class="p-module-icon">
-                    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M4 20h32M20 4v32" />
-                        <circle cx="20" cy="20" r="14" />
-                    </svg>
-                </div>
-                <h3 class="p-module-title">Channel Manager</h3>
-                <p class="p-module-desc">Real-time synchronization with Booking.com, Expedia, and other OTA platforms.
-                </p>
-            </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- NEXT -->
-    <section class="p-next">
-        <div class="p-next-inner">
-            <a href="project-3.html" class="p-next-link" data-magnetic>
-                <span class="p-next-label">Next Project</span>
-                <span class="p-next-title">Auction Car Platform</span>
-                <span class="p-next-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                </span>
+          <!-- STAT RAIL -->
+          <div class="hero-rail" data-reveal>
+            <div class="rail-head">WHY IT MATTERS — TL;DR</div>
+            <a href="#problem" class="rail-card rail-card--problem">
+              <span class="rail-num">01</span>
+              <span class="rail-kicker">THE PROBLEM</span>
+              <strong>11 tools, double-bookings, 2AM chaos at reception.</strong>
+              <span class="rail-link">Read the pain →</span>
             </a>
+            <a href="#solve" class="rail-card rail-card--solve">
+              <span class="rail-num">02</span>
+              <span class="rail-kicker">HOW WE SOLVED</span>
+              <strong>One AI brain: bookings + rooms + billing + staff.</strong>
+              <span class="rail-link">See the system →</span>
+            </a>
+            <a href="#outcome" class="rail-card rail-card--outcome">
+              <span class="rail-num">03</span>
+              <span class="rail-kicker">THE OUTCOME</span>
+              <strong>+38% direct revenue · −71% desk load.</strong>
+              <span class="rail-link">See proof →</span>
+            </a>
+            <div class="rail-meta">
+              <div><span>CLIENT</span><strong>Hotel group · 14 sites</strong></div>
+              <div><span>TIMELINE</span><strong>10 weeks</strong></div>
+              <div><span>ROLE</span><strong>Design → Build → AI</strong></div>
+            </div>
+          </div>
         </div>
-        <div class="p-next-bg" aria-hidden="true">03</div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true"><span>SCROLL FOR STORY</span><div class="line-v"></div></div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="assets/js/project-2.js"></script>
-
-    <!-- FREELANCE PLATFORMS (FIXED LEFT BOTTOM) -->
-    <div class="freelance-float">
-        <span class="freelance-label">Hire Us</span>
-        <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link freelance-upwork" aria-label="Upwork">
-            <img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork">
-        </a>
-        <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link freelance-fiverr" aria-label="Fiverr">
-            <img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr">
-        </a>
-        <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link freelance-freelance" aria-label="Freelancer">
-            <img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer">
-        </a>
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>AI CHECK-IN <i>✦</i></span><span>ZERO OVERBOOKING <i>✦</i></span><span>SMART PRICING <i>✦</i></span><span> HOUSEKEEPING AUTOPILOT <i>✦</i></span><span>+38% DIRECT REVENUE <i>✦</i></span><span>0.8s OTA SYNC <i>✦</i></span>
+        <span>AI CHECK-IN <i>✦</i></span><span>ZERO OVERBOOKING <i>✦</i></span><span>SMART PRICING <i>✦</i></span><span> HOUSEKEEPING AUTOPILOT <i>✦</i></span><span>+38% DIRECT REVENUE <i>✦</i></span><span>0.8s OTA SYNC <i>✦</i></span>
+      </div>
     </div>
 
-    <!-- BACK TO TOP -->
-    <button class="footer-totop" type="button" aria-label="Back to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 19V5M5 12l7-7 7 7" />
-        </svg>
-    </button>
+    <!-- ============ 01 PROBLEM ============ -->
+    <section class="story problem" id="problem">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <span class="sec-index">01 / THE PROBLEM</span>
+          <span class="sec-tag">WHY HOTELS WERE BLEEDING</span>
+        </div>
+        <h2 class="mega" data-reveal>LOBBIES WERE <span class="stroke">DROWNING</span><br>IN <span class="gold">11 OPEN TABS.</span></h2>
+        <div class="story-grid">
+          <p class="lede" data-reveal>
+            One reservation lived in <em>five places at once</em> — Booking.com, a spreadsheet, WhatsApp, the front-desk
+            notebook, and someone's memory. One delay = <strong>double-booking, angry guest, 1-star review</strong> by morning.
+          </p>
+          <blockquote class="quote" data-reveal>
+            <p>"Full house on paper, empty rooms in reality. We paid 18% commission to OTAs and still did everything by hand."</p>
+            <cite>— General Manager, before STAYOS</cite>
+          </blockquote>
+        </div>
 
-    <script>
-        // Back to top functionality
-        const totopBtn = document.querySelector('.footer-totop');
-        if (totopBtn) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    totopBtn.classList.add('visible');
-                } else {
-                    totopBtn.classList.remove('visible');
-                }
-            });
-            totopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-    </script>
+        <div class="pain-grid">
+          <article class="pain" data-reveal>
+            <span class="pain-num">P.01</span>
+            <h3>FRONT-DESK OVERLOAD</h3>
+            <p>Check-in took <strong>9+ minutes</strong>. Night shifts = one exhausted receptionist vs. 200 WhatsApps, calls &amp; walk-ins.</p>
+            <div class="pain-stat"><strong>9m 40s</strong><span>avg. check-in time</span></div>
+          </article>
+          <article class="pain" data-reveal>
+            <span class="pain-num">P.02</span>
+            <h3>OTA CHAOS</h3>
+            <p>Rates synced <strong>manually, 4× a day</strong>. Booking.com sold rooms Expedia already sold. Overbookings every weekend.</p>
+            <div class="pain-stat"><strong>23%</strong><span>weekends hit by overbooking</span></div>
+          </article>
+          <article class="pain" data-reveal>
+            <span class="pain-num">P.03</span>
+            <h3>MONEY LEAKING</h3>
+            <p>No dynamic pricing. No upsells. Housekeeping ran on paper slips. <strong>18% OTA commission</strong> on every single booking.</p>
+            <div class="pain-stat"><strong>−18%</strong><span>margin lost to commissions</span></div>
+          </article>
+        </div>
+
+        <div class="before-after" data-reveal>
+          <div class="ba-row"><span>Manual check-in time</span><div class="bar"><i style="--w:88%;--c:#FF5A5A"></i></div><strong>9m 40s</strong></div>
+          <div class="ba-row"><span>Weekends overbooked</span><div class="bar"><i style="--w:64%;--c:#FF5A5A"></i></div><strong>23%</strong></div>
+          <div class="ba-row"><span>Direct bookings (no commission)</span><div class="bar"><i style="--w:19%;--c:#FF5A5A"></i></div><strong>19%</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 SOLVE ============ -->
+    <section class="story solve" id="solve">
+      <div class="wrap">
+        <div class="sec-head sec-head--light" data-reveal>
+          <span class="sec-index">02 / HOW WE SOLVED IT</span>
+          <span class="sec-tag">NOT ANOTHER PMS — AN AI FRONT DESK</span>
+        </div>
+        <h2 class="mega mega--light" data-reveal>ONE BRAIN FOR <span class="gold">EVERY ROOM,</span><br>GUEST <span class="stroke-light">&amp; RUPEE.</span></h2>
+        <p class="lede lede--light" data-reveal>Five systems. One Postgres truth, Redis speed layer, Laravel core — plus a GPT concierge that never sleeps. Here's exactly what we shipped:</p>
+
+        <div class="pipeline">
+          <article class="pipe" data-reveal>
+            <div class="pipe-num">01</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">BOOKING ENGINE · DIRECT</span>
+              <h3>KILL THE COMMISSION</h3>
+              <p>Blazing booking widget + AI upsell ("Sea-view for +$12?"). Abandoned carts get WhatsApp nudges. Direct share exploded.</p>
+              <code class="code">direct_book() → hold 10:00 → whatsapp_nudge(T+20m) → +38% conversion</code>
+              <div class="chips"><span>Laravel</span><span>Stripe / SSLCommerz</span><span>WhatsApp API</span></div>
+            </div>
+          </article>
+          <article class="pipe pipe--feature" data-reveal>
+            <div class="pipe-num">02</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">INVENTORY · 0.8s OTA SYNC</span>
+              <h3>ZERO OVERBOOKING</h3>
+              <p>Single room-truth table. Every allotment push to <strong>Booking.com, Expedia, Agoda</strong> in under a second — with auto overbooking guard.</p>
+              <div class="nlu-viz">
+                <span class="tok">Room 205 <em>sold · Expedia</em></span>
+                <span class="tok tok--hot">sync 0.8s ✓ <em>all channels locked</em></span>
+                <span class="tok">guard <em>no double-sell</em></span>
+              </div>
+              <code class="code">{ room: 205 · event: sold → fanout: [booking.com, expedia, agoda] · 0.8s ✓ }</code>
+              <div class="chips"><span>MySQL cluster</span><span>Redis locks</span><span>Channel API</span></div>
+            </div>
+          </article>
+          <article class="pipe pipe--feature" data-reveal>
+            <div class="pipe-num">03</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">AI CONCIERGE · GPT + RAG</span>
+              <h3>FRONT DESK THAT NEVER SLEEPS</h3>
+              <p>Knows your booking, room, bill &amp; policies. Checks guests in, generates door codes, sells breakfast, calms angry 2AM messages.</p>
+              <code class="code">if msg ~ "late" → hold_room() + door_code() + tone: "warm + fast"</code>
+              <div class="chips"><span>GPT-4o</span><span>RAG policies</span><span>Web + WhatsApp</span></div>
+            </div>
+          </article>
+          <article class="pipe" data-reveal>
+            <div class="pipe-num">04</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">OPS AUTOPILOT</span>
+              <h3>HOUSEKEEPING + STAFF</h3>
+              <p>Checkout triggers cleaning task, routes nearest staff, verifies with photo. Shifts auto-scheduled by occupancy forecast.</p>
+              <code class="code">checkout(204) → task → nearest_cleaner → photo_verify → room_live</code>
+              <div class="chips"><span>Live dashboard</span><span>Staff app</span><span>Forecast AI</span></div>
+            </div>
+          </article>
+          <article class="pipe pipe--loop" data-reveal>
+            <div class="pipe-num">05</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">MONEY BRAIN</span>
+              <h3>DYNAMIC PRICE + BILLING</h3>
+              <p>Rates breathe with demand, weekends &amp; events. Folios split, multi-currency, invoices in one click. Revenue per room climbed weekly.</p>
+              <div class="mini-bars"><i style="--h:34%"></i><i style="--h:52%"></i><i style="--h:68%"></i><i style="--h:84%"></i><i style="--h:98%"></i></div>
+              <div class="chips"><span>Revenue AI</span><span>Auto-invoice</span><span>AWS</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERACTIVE DEMO ============ -->
+    <section class="demo" id="demo">
+      <div class="wrap demo-wrap">
+        <div class="sec-head" data-reveal>
+          <span class="sec-index">LIVE DEMO</span>
+          <span class="sec-tag">CLICK — THE AI REALLY ANSWERS</span>
+        </div>
+        <h2 class="mega" data-reveal>INTERROGATE THE<br><span class="gold">AI FRONT DESK.</span></h2>
+
+        <div class="demo-grid">
+          <div class="demo-chat" data-reveal>
+            <div class="demo-chat-head"><span class="pulse"></span> STAYOS AI · ONLINE <span class="lat" data-lat>0.8s</span></div>
+            <div class="demo-messages" data-messages>
+              <div class="msg msg--bot"><p>Welcome to Seaside Grand 🌊 I'm your AI concierge. Ask for late checkout, upgrade, cleaning, or your bill. 👇</p><span class="intent">intent: greet · 0.99 · room 205 linked</span></div>
+            </div>
+            <div class="demo-chips" data-chips>
+              <button data-q="late">🌙 Landing at 2AM — check-in?</button>
+              <button data-q="upgrade">🗝️ Upgrade me to sea-view?</button>
+              <button data-q="clean">🧹 Room cleaning ASAP</button>
+              <button data-q="bill">🧾 Split my bill, please</button>
+            </div>
+          </div>
+          <div class="demo-side" data-reveal>
+            <h3>WHAT YOU'RE SEEING</h3>
+            <ul>
+              <li><strong>Intent badge</strong> = what the AI detected + live room action it triggered.</li>
+              <li><strong>Sync badge</strong> = room truth pushed to every OTA in 0.8s.</li>
+              <li><strong>Money move</strong> — try upgrade &amp; bill. It sells <em>and</em> invoices.</li>
+            </ul>
+            <div class="arch">
+              <span>GUEST</span><i>→</i><span>AI</span><i>→</i><span>ROOM</span><i>→</i><span>BILL</span>
+            </div>
+            <a href="contact.html" class="btn btn--gold" data-magnetic><span>I WANT STAYOS</span><i>↗</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 OUTCOME ============ -->
+    <section class="story outcome" id="outcome">
+      <div class="wrap">
+        <div class="sec-head sec-head--light" data-reveal>
+          <span class="sec-index">03 / THE OUTCOME</span>
+          <span class="sec-tag">NUMBERS, NOT ADJECTIVES</span>
+        </div>
+        <h2 class="mega mega--light" data-reveal>FROM CHAOTIC LOBBY<br>TO <span class="gold">AUTOPILOT HOTEL.</span></h2>
+
+        <div class="metrics">
+          <div class="metric" data-reveal data-count="38" data-prefix="+" data-suffix="%">
+            <span class="metric-val"><span data-num>+38%</span></span>
+            <span class="metric-label">DIRECT REVENUE</span>
+            <span class="metric-sub">was 19%, now 57% — zero commission</span>
+          </div>
+          <div class="metric metric--gold" data-reveal data-count="71" data-prefix="−" data-suffix="%">
+            <span class="metric-val"><span data-num>−71%</span></span>
+            <span class="metric-label">FRONT-DESK LOAD</span>
+            <span class="metric-sub">AI handles 7,200 chats / month</span>
+          </div>
+          <div class="metric" data-reveal data-count="3" data-prefix="" data-suffix="s" data-decimal="3.2">
+            <span class="metric-val"><span data-num>3.2s</span></span>
+            <span class="metric-label">AI CHECK-IN</span>
+            <span class="metric-sub">was 9m 40s with queues</span>
+          </div>
+          <div class="metric" data-reveal data-count="4" data-prefix="" data-suffix="★" data-decimal="4.9">
+            <span class="metric-val"><span data-num>4.9★</span></span>
+            <span class="metric-label">GUEST RATING</span>
+            <span class="metric-sub">was 3.8★ — now 4.9★ across OTAs</span>
+          </div>
+        </div>
+
+        <div class="outcome-grid">
+          <div class="after-card" data-reveal>
+            <h3>BEFORE → AFTER</h3>
+            <div class="ba-row"><span>Check-in wait</span><div class="bar"><i style="--w:88%;--c:#FF5A5A"></i></div><strong>9m 40s</strong></div>
+            <div class="ba-row ba-row--after"><span>Check-in wait</span><div class="bar"><i style="--w:5%;--c:#2DFF9D" data-grow></i></div><strong>3.2s</strong></div>
+            <div class="ba-row"><span>Overbooked weekends</span><div class="bar"><i style="--w:64%;--c:#FF5A5A"></i></div><strong>23%</strong></div>
+            <div class="ba-row ba-row--after"><span>Overbooked weekends</span><div class="bar"><i style="--w:1%;--c:#2DFF9D" data-grow></i></div><strong>0%</strong></div>
+          </div>
+          <blockquote class="quote quote--big" data-reveal>
+            <p>"It's like hiring 10 perfect receptionists who never sleep. Overbookings went to zero. Guests think we hired a whole new team."</p>
+            <cite>— Group Director, 14 properties ★★★★★</cite>
+          </blockquote>
+        </div>
+
+        <div class="stack">
+          <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
+          <div class="stack-grid">
+            <span data-reveal>Laravel</span><span data-reveal>MySQL Cluster</span><span data-reveal>Redis</span><span data-reveal>GPT-4o + RAG</span><span data-reveal>Channel APIs</span><span data-reveal>Stripe</span><span data-reveal>WhatsApp API</span><span data-reveal>Vue Dashboard</span><span data-reveal>AWS</span><span data-reveal>Night Audit AI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEXT ============ -->
+    <section class="next">
+      <a href="project-3.html" class="next-link" data-magnetic>
+        <span class="next-kicker">NEXT CASE — 03 / 09</span>
+        <span class="next-title">AUCTION <span class="stroke">CAR PLATFORM</span> →</span>
+        <span class="next-sub">Live bidding + escrow engine · Click anywhere to continue</span>
+      </a>
+      <div class="next-giant" aria-hidden="true">03</div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a href="work.html">← ALL WORK</a>
+    <span>SCIDATA ANALYST · HOTEL OS CASE 02</span>
+    <a href="contact.html">BUILD YOURS ↗</a>
+  </footer>
+
+  <!-- FLOATERS -->
+  <div class="freelance-float">
+    <span class="freelance-label">Hire Us</span>
+    <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link" aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
+    <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
+    <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link" aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
+  </div>
+  <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="assets/js/project-2.js"></script>
 </body>
-
 </html>
