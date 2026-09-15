@@ -2,10 +2,11 @@
 // PROJECT 01 — NEXABOT / NLP CHATBOT CASE STUDY
 // Bigger. Bolder. Unique. Problem → Solve → Outcome narrative.
 // Tokens: ink #F4F2EB, bg #070709, lime #D6FF2A, violet #7C5CFF
-// Type: Anton (display), Space Grotesk (body), JetBrains Mono (labels)
+// Type: Existing site font — Share ( $font-family_4 ) — unchanged per request
 // =============================================================================
 
 @use "./utils/variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Lekton:ital,wght@0,400;0,700;1,400&family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 // ---------- TOKENS ----------
 $p1-bg: #070709;
@@ -17,9 +18,9 @@ $p1-muted: #9a9aa3;
 $p1-card: #0e0e12;
 $p1-card-2: #131318;
 $p1-line: rgba(244, 242, 235, 0.13);
-$p1-display: "Anton", "Share", sans-serif;
-$p1-body: "Space Grotesk", "Share", sans-serif;
-$p1-mono: "JetBrains Mono", monospace;
+$p1-display: $font-family_4;
+$p1-body: $font-family_4;
+$p1-mono: $font-family_4;
 
 // ---------- RESET (scoped) ----------
 .project-1 {
