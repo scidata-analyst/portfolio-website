@@ -1,188 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Object Detection Platform — Scidata Analyst</title>
-    <meta name="description"
-        content="End-to-end computer vision platform with automated object detection, bounding box annotation, and collaborative labeling tools.">
-    <link rel="stylesheet" href="scss/main.css">
-
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RETINA — Object Detection & Labeling That Feeds Itself | Case Study 07</title>
+  <meta name="description" content="Problem → Solution → Outcome. How we built a vision platform that detects, labels, and retrains itself — 98.1% mAP, −60% labeling cost, 1.2M boxes shipped.">
+  <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
+  <link rel="stylesheet" href="scss/project-7.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
-<body class="project-page project-7">
-    <div class="cursor" data-cursor>
-        <div class="cursor-dot"></div>
-        <div class="cursor-ring"></div>
-        <div class="cursor-label">DETECT</div>
+<body class="project-7">
+
+  <!-- NOISE + PROGRESS -->
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" data-cursor aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <span class="cursor-label">BOX</span>
+  </div>
+
+  <!-- LOADER -->
+  <div class="loader" data-loader aria-hidden="true">
+    <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 07/09</span></div>
+    <div class="loader-center">
+      <div class="loader-word" data-loader-word>FOCUSING…</div>
+      <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
+      <div class="loader-track"><div class="loader-fill" data-loader-fill></div></div>
+      <div class="loader-sub">CALIBRATING LENSES · LOADING YOLO · QUEUING BOXES</div>
     </div>
+    <div class="loader-bottom"><span>RETINA · VISION STACK</span><span>PYTORCH / YOLOv8 / OPENCV / FASTAPI</span></div>
+  </div>
 
-    <div class="loader">
-        <div class="loader-inner">
-            <div class="loader-num" data-loader-num>0</div>
-            <div class="loader-track">
-                <div class="loader-fill"></div>
-            </div>
+  <!-- NAV -->
+  <header class="nav">
+    <a href="work.html" class="nav-back" data-magnetic>
+      <span class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+      <span>ALL WORK</span>
+    </a>
+    <div class="nav-mid">CASE STUDY <strong>— 07 / 09</strong></div>
+    <a href="contact.html" class="nav-cta" data-magnetic><span>SEE LIKE RETINA</span><i>↗</i></a>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="hero-glow hero-glow--yellow" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--blue" aria-hidden="true"></div>
+      <div class="hero-giant" aria-hidden="true">07</div>
+      <div class="reticle" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-eyebrow" data-reveal>
+          <span class="pill"><span class="dot"></span> LIVE RETINA · <b data-live-boxes>1.2M</b> BOXES LABELED</span>
+          <span class="hero-loc">98.1% mAP · 22ms INFER · −60% LABEL COST</span>
         </div>
-    </div>
 
-    <nav class="p-nav">
-        <a href="work.html" class="p-nav-back">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            <span>Work</span>
-        </a>
-        <div class="p-nav-num">07 / 09</div>
-    </nav>
+        <h1 class="hero-title">
+          <span class="line"><span class="word" data-reveal>VISION THAT</span></span>
+          <span class="line"><span class="word word--stroke" data-reveal>LABELS</span> <span class="word word--yellow" data-reveal>ITSELF<span class="period">.</span></span></span>
+          <span class="line line--small"><span class="word word--small" data-reveal>RETINA — DETECT · DRAW · DISAGREE · RETRAIN. THE MODEL LABELS THE NEXT 10,000 FOR YOU.</span></span>
+        </h1>
 
-    <!-- HERO -->
-    <section class="p-hero">
-        <div class="p-hero-scanline" aria-hidden="true"></div>
-        <div class="p-hero-content">
-            <div class="p-hero-tag">
-                <span class="p-tag-dot"></span> Computer Vision
-            </div>
-            <h1 class="p-hero-title">
-                <span class="p-title-line"><span class="p-title-word" data-reveal>Object</span> <span
-                        class="p-title-word" data-reveal>Detection</span></span>
-                <span class="p-title-line"><span class="p-title-word p-title-word--outline"
-                        data-reveal>Platform</span></span>
-                <span class="p-title-line"><span class="p-title-word p-title-word--outline" data-reveal>&amp;</span>
-                    <span class="p-title-word" data-reveal>Labeling</span></span>
-                <span class="p-title-line"><span class="p-title-word" data-reveal>System</span><span
-                        class="p-title-accent" data-reveal>.</span></span>
-            </h1>
-            <div class="p-hero-bottom">
-                <p class="p-hero-desc" data-reveal>End-to-end computer vision platform with automated object detection,
-                    bounding box annotation, and collaborative labeling tools. Active learning pipeline reduces labeling
-                    effort by 60%.</p>
-                <div class="p-hero-metrics" data-reveal>
-                    <div class="p-metric"><span class="p-metric-val">60%</span><span class="p-metric-label">Less
-                            Labeling</span></div>
-                    <div class="p-metric"><span class="p-metric-val">98%</span><span class="p-metric-label">mAP
-                            Score</span></div>
-                </div>
-            </div>
+        <div class="hero-split">
+          <p class="hero-desc" data-reveal>
+            Manual boxing took <s>9 minutes a frame</s>. <strong>RETINA detects in 22ms, proposes boxes,
+            learns from every "no, not a dog"</strong> — and the queue shrinks while you sleep.
+          </p>
+          <div class="hero-ctas" data-reveal>
+            <a href="#demo" class="btn btn--yellow" data-magnetic><span>OPEN LIVE VIEWFINDER ↓</span><i>◉</i></a>
+            <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
+          </div>
         </div>
-        <div class="p-hero-number" aria-hidden="true">07</div>
-    </section>
 
-    <!-- DETECTION VISUAL -->
-    <section class="p-detection">
-        <div class="p-detection-header">
-            <span class="p-section-tag"><span class="p-tag-dot"></span> Detection</span>
-            <h2 class="p-detection-title">See what<br><em>machines see</em></h2>
-        </div>
-        <div class="p-detection-visual" data-visual>
-            <div class="p-detection-frame">
-                <div class="p-bounding-box" style="--x: 15%; --y: 20%; --w: 25%; --h: 40%;">
-                    <span class="p-box-label">Person <span class="p-box-conf">98%</span></span>
-                </div>
-                <div class="p-bounding-box" style="--x: 50%; --y: 35%; --w: 30%; --h: 35%;">
-                    <span class="p-box-label">Car <span class="p-box-conf">95%</span></span>
-                </div>
-                <div class="p-bounding-box" style="--x: 10%; --y: 65%; --w: 15%; --h: 20%;">
-                    <span class="p-box-label">Dog <span class="p-box-conf">92%</span></span>
-                </div>
-                <div class="p-bounding-box" style="--x: 75%; --y: 10%; --w: 20%; --h: 25%;">
-                    <span class="p-box-label">Bicycle <span class="p-box-conf">89%</span></span>
-                </div>
-                <div class="p-scan-overlay"></div>
-                <div class="p-detection-grid"></div>
+        <div class="hero-board">
+          <!-- VIEWFINDER TERMINAL -->
+          <div class="terminal" data-reveal>
+            <div class="terminal-bar">
+              <span class="t-dots"><i></i><i></i><i></i></span>
+              <span class="t-title">retina — viewfinder · yolo v8 · 22ms · frame #44192</span>
+              <span class="t-live"><span class="blink"></span> LIVE</span>
             </div>
-        </div>
-    </section>
+            <div class="terminal-body">
+              <div class="viewfinder" aria-hidden="true">
+                <div class="vf-grid"></div>
+                <div class="vf-scan"></div>
+                <div class="box" style="--x:8%;--y:14%;--w:34%;--h:56%"><span class="box-label">person <em>98%</em></span></div>
+                <div class="box box--alt" style="--x:48%;--y:22%;--w:32%;--h:38%"><span class="box-label">car <em>95%</em></span></div>
+                <div class="box" style="--x:52%;--y:64%;--w:18%;--h:24%"><span class="box-label">dog <em>92%</em></span></div>
+                <div class="box box--low" style="--x:74%;--y:8%;--w:20%;--h:28%"><span class="box-label">bicycle <em>89%</em></span></div>
+                <div class="crosshair"></div>
+              </div>
+              <div class="infer-bar">
+                <span class="infer-label">INFER</span><span class="infer-val" data-hero-ms>22ms</span>
+                <span class="infer-sep">·</span><span class="infer-label">mAP</span><span class="infer-val infer-val--hi" data-hero-map>98.1%</span>
+                <span class="infer-sep">·</span><span class="infer-label">QUEUE</span><span class="infer-val" data-hero-queue>1,240</span><span class="infer-sub">needs human</span>
+              </div>
+              <div class="terminal-foot">
+                <span class="prompt">❯</span>
+                <span class="fake-input">Active learning picked <b>1,240</b> hardest frames — you label 40, model labels 10k<span class="caret"></span></span>
+                <span class="send">LABEL 40</span>
+              </div>
+            </div>
+            <div class="terminal-badges">
+              <span>YOLOv8 22ms</span><span>ACTIVE LEARN</span><span>ON-DEVICE</span>
+            </div>
+          </div>
 
-    <!-- TECH -->
-    <section class="p-tech">
-        <div class="p-tech-inner">
-            <div class="p-tech-left">
-                <span class="p-section-tag"><span class="p-tag-dot"></span> Stack</span>
-                <h2 class="p-tech-title">Vision<br><em>models</em></h2>
-            </div>
-            <div class="p-tech-right">
-                <div class="p-tech-list">
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">01</span>
-                        <span class="p-tech-name">PyTorch</span>
-                    </div>
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">02</span>
-                        <span class="p-tech-name">YOLO v8</span>
-                    </div>
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">03</span>
-                        <span class="p-tech-name">OpenCV</span>
-                    </div>
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">04</span>
-                        <span class="p-tech-name">FastAPI + MinIO</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEXT -->
-    <section class="p-next">
-        <div class="p-next-inner">
-            <a href="project-8.html" class="p-next-link" data-magnetic>
-                <span class="p-next-label">Next Project</span>
-                <span class="p-next-title">Hate Speech Platform</span>
-                <span class="p-next-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                </span>
+          <!-- STAT RAIL -->
+          <div class="hero-rail" data-reveal>
+            <div class="rail-head">WHY IT MATTERS — TL;DR</div>
+            <a href="#problem" class="rail-card rail-card--problem">
+              <span class="rail-num">01</span>
+              <span class="rail-kicker">THE PROBLEM</span>
+              <strong>9 min/frame, drift, no one agreed what a "truck" was.</strong>
+              <span class="rail-link">Read the pain →</span>
             </a>
+            <a href="#solve" class="rail-card rail-card--solve">
+              <span class="rail-num">02</span>
+              <span class="rail-kicker">HOW WE SOLVED</span>
+              <strong>Detect → propose → disagree → retrain in one loop.</strong>
+              <span class="rail-link">See the loop →</span>
+            </a>
+            <a href="#outcome" class="rail-card rail-card--outcome">
+              <span class="rail-num">03</span>
+              <span class="rail-kicker">THE OUTCOME</span>
+              <strong>98.1% mAP · −60% labeling · 1.2M boxes.</strong>
+              <span class="rail-link">See proof →</span>
+            </a>
+            <div class="rail-meta">
+              <div><span>CLIENT</span><strong>Industrial + retail</strong></div>
+              <div><span>TIMELINE</span><strong>6 weeks</strong></div>
+              <div><span>ROLE</span><strong>Vision → Tool → MLOps</strong></div>
+            </div>
+          </div>
         </div>
-        <div class="p-next-bg" aria-hidden="true">08</div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true"><span>SCROLL FOR STORY</span><div class="line-v"></div></div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="assets/js/project-7.js"></script>
-
-    <!-- FREELANCE PLATFORMS (FIXED LEFT BOTTOM) -->
-    <div class="freelance-float">
-        <span class="freelance-label">Hire Us</span>
-        <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link freelance-upwork" aria-label="Upwork">
-            <img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork">
-        </a>
-        <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link freelance-fiverr" aria-label="Fiverr">
-            <img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr">
-        </a>
-        <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link freelance-freelance" aria-label="Freelancer">
-            <img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer">
-        </a>
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>YOLOv8 <i>◆</i></span><span>PYTORCH <i>◆</i></span><span>OPENCV <i>◆</i></span><span>98.1% mAP <i>◆</i></span><span>22ms INFER <i>◆</i></span><span>1.2M BOXES <i>◆</i></span>
+        <span>YOLOv8 <i>◆</i></span><span>PYTORCH <i>◆</i></span><span>OPENCV <i>◆</i></span><span>98.1% mAP <i>◆</i></span><span>22ms INFER <i>◆</i></span><span>1.2M BOXES <i>◆</i></span>
+      </div>
     </div>
 
-    <!-- BACK TO TOP -->
-    <button class="footer-totop" type="button" aria-label="Back to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 19V5M5 12l7-7 7 7" />
-        </svg>
-    </button>
+    <!-- ============ 01 PROBLEM ============ -->
+    <section class="story problem" id="problem">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <span class="sec-index">01 / THE PROBLEM</span>
+          <span class="sec-tag">WHY VISION PROJECTS STARVED</span>
+        </div>
+        <h2 class="mega" data-reveal>EVERY BOX WAS <span class="stroke">HAND-DRAWN,</span><br>AND <span class="yellow">EVERY MODEL STARVED.</span></h2>
+        <div class="story-grid">
+          <p class="lede" data-reveal>
+            Annotators boxed <em>by hand</em> in a clunky tool, no QA, no consensus.
+            <strong>One "is this a van or truck?" argument cost a day</strong>, classes drifted, and the model learned yesterday's mistakes — on loop.
+          </p>
+          <blockquote class="quote" data-reveal>
+            <p>"We paid for 20,000 boxes and got 20,000 opinions. Model hit 71% and stopped learning — because the truth kept moving."</p>
+            <cite>— ML Lead, before RETINA</cite>
+          </blockquote>
+        </div>
 
-    <script>
-        // Back to top functionality
-        const totopBtn = document.querySelector('.footer-totop');
-        if (totopBtn) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    totopBtn.classList.add('visible');
-                } else {
-                    totopBtn.classList.remove('visible');
-                }
-            });
-            totopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-    </script>
+        <div class="pain-grid">
+          <article class="pain" data-reveal>
+            <span class="pain-num">P.01</span>
+            <h3>BOX BY HAND</h3>
+            <p>9 minutes a frame, wrist pain, no shortcuts. <strong>1,000 frames = 150 annotator-hours</strong> before a single training run.</p>
+            <div class="pain-stat"><strong>9m</strong><span>per frame · hand-drawn</span></div>
+          </article>
+          <article class="pain" data-reveal>
+            <span class="pain-num">P.02</span>
+            <h3>NO GROUND TRUTH</h3>
+            <p>No consensus flow, no gold set. <strong>Inter-annotator IoU 0.62</strong> — the model learned noise, not signal.</p>
+            <div class="pain-stat"><strong>0.62</strong><span>IoU agreement</span></div>
+          </article>
+          <article class="pain" data-reveal>
+            <span class="pain-num">P.03</span>
+            <h3>STATIC DATASET</h3>
+            <p>Labeled once, frozen. New camera angle = <strong>model blind</strong>. No active learning, no feedback, mAP stalled at 71%.</p>
+            <div class="pain-stat"><strong>71%</strong><span>mAP ceiling</span></div>
+          </article>
+        </div>
+
+        <div class="before-after" data-reveal>
+          <div class="ba-row"><span>Minutes per frame</span><div class="bar"><i style="--w:88%;--c:#FF3B30"></i></div><strong>9.0</strong></div>
+          <div class="ba-row"><span>Annotator agreement (IoU)</span><div class="bar"><i style="--w:62%;--c:#FF3B30"></i></div><strong>0.62</strong></div>
+          <div class="ba-row"><span>Frames to reach 95% mAP</span><div class="bar"><i style="--w:84%;--c:#FF3B30"></i></div><strong>~18k</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 SOLVE ============ -->
+    <section class="story solve" id="solve">
+      <div class="wrap">
+        <div class="sec-head sec-head--light" data-reveal>
+          <span class="sec-index">02 / HOW WE SOLVED IT</span>
+          <span class="sec-tag">NOT A LABELER — A FEEDBACK MACHINE</span>
+        </div>
+        <h2 class="mega mega--light" data-reveal>DETECT · <span class="yellow">DISAGREE</span><br><span class="stroke-light">· RETRAIN.</span></h2>
+        <p class="lede lede--light" data-reveal>Four pieces that feed each other. Every frame you correct makes the next 10,000 cheaper — and the model never stops watching:</p>
+
+        <div class="pipeline">
+          <article class="pipe pipe--feature" data-reveal>
+            <div class="pipe-num">01</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">DETECT · YOLOv8 22ms</span>
+              <h3>SEE IN REAL TIME</h3>
+              <p>YOLOv8 + OpenCV pipeline runs on GPU or edge, <strong>22ms a frame</strong>, NMS-tuned per class. Every box comes with confidence + class.</p>
+              <code class="code">frame #44192 → yolo → NMS 0.45 · person 0.98, car 0.95, dog 0.92 · 22ms</code>
+              <div class="chips"><span>YOLOv8</span><span>PyTorch</span><span>OpenCV</span><span>ONNX / TensorRT</span></div>
+            </div>
+          </article>
+          <article class="pipe" data-reveal>
+            <div class="pipe-num">02</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">LABEL STATION</span>
+              <h3>BOX AT THE SPEED OF THOUGHT</h3>
+              <p>Web canvas with <strong>box assist, hotkeys, consensus & gold review</strong>. Inter-annotator IoU tracked live; disagreements become training gold.</p>
+              <code class="code">proposed 4 boxes → human: fix 1 · confirm 3 · time 18s (was 540s)</code>
+              <div class="chips"><span>Canvas</span><span>Hotkeys</span><span>Consensus</span><span>MinIO</span></div>
+            </div>
+          </article>
+          <article class="pipe pipe--feature" data-reveal>
+            <div class="pipe-num">03</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">LEARN LOOP · ACTIVE LEARNING</span>
+              <h3>LABELS THAT SHRINK THE QUEUE</h3>
+              <p>Uncertainty sampling picks the <strong>1,240 frames the model is most confused by</strong>. Label 40, auto-label 10k, loop nightly.</p>
+              <div class="nlu-viz">
+                <span class="tok">1,240 queued <em>hardest</em></span>
+                <span class="tok tok--hot">label 40 <em>you</em></span>
+                <span class="tok">10k auto-labeled <em>model</em></span>
+              </div>
+              <code class="code">{ uncertainty top-k 1,240 → human 40 → auto 10k → retrain · mAP 71 → 98.1% }</code>
+              <div class="chips"><span>Active Learn</span><span>FastAPI</span><span>MinIO</span></div>
+            </div>
+          </article>
+          <article class="pipe pipe--loop" data-reveal>
+            <div class="pipe-num">04</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">SHIP · EDGE + API</span>
+              <h3>RUN ANYWHERE</h3>
+              <p>ONNX quantized models ship to <strong>edge cams or cloud API</strong> — same weights, same boxes, zero drift between label and live.</p>
+              <div class="mini-bars"><i style="--h:34%"></i><i style="--h:52%"></i><i style="--h:68%"></i><i style="--h:78%"></i><i style="--h:99%"></i></div>
+              <div class="chips"><span>ONNX</span><span>FastAPI</span><span>Docker</span><span>Edge</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERACTIVE DEMO ============ -->
+    <section class="demo" id="demo">
+      <div class="wrap demo-wrap">
+        <div class="sec-head" data-reveal>
+          <span class="sec-index">LIVE VIEWFINDER</span>
+          <span class="sec-tag">DRAG A BOX — DISAGREE — WATCH IT LEARN</span>
+        </div>
+        <h2 class="mega" data-reveal>CORRECT THE MACHINE.<br><span class="yellow">IT REMEMBERS.</span></h2>
+
+        <div class="demo-grid">
+          <div class="demo-board" data-reveal>
+            <div class="demo-head"><span class="pulse"></span> RETINA · VIEWFINDER <span class="lat" data-lat>22ms</span></div>
+            <div class="demo-vf" data-vf>
+              <div class="demo-vf-grid" aria-hidden="true"></div>
+              <div class="demo-vf-scan" aria-hidden="true"></div>
+              <div class="demo-box" style="--x:10%;--y:16%;--w:36%;--h:54%" data-demo-box="0"><span>person 98%</span></div>
+              <div class="demo-box demo-box--alt" style="--x:48%;--y:24%;--w:30%;--h:36%" data-demo-box="1"><span>car 95%</span></div>
+              <div class="demo-box" style="--x:56%;--y:66%;--w:16%;--h:22%" data-demo-box="2"><span>dog 92%</span></div>
+              <div class="demo-box demo-box--low" style="--x:74%;--y:10%;--w:20%;--h:26%" data-demo-box="3"><span>bicycle 67% ?</span></div>
+            </div>
+            <div class="demo-infer">
+              <span>mAP <b data-demo-map>98.1%</b></span><span>QUEUE <b data-demo-queue>1,240</b></span><span>AUTO-LABEL <b data-demo-auto>10k</b>/night</span><span class="demo-conf">tap a box to correct</span>
+            </div>
+            <div class="demo-feed" data-messages>
+              <div class="msg msg--ok"><p>Frame #44192 — 4 boxes proposed · 3 high confidence, 1 uncertain (<b>bicycle 67%</b>) queued for review</p><span class="intent">tap the 67% box — disagree and retrain</span></div>
+            </div>
+            <div class="demo-chips" data-chips>
+              <button data-act="confirm">Confirm all ✓</button>
+              <button data-act="fix">Fix: that's a motorbike 🏍️</button>
+              <button data-act="reject">Reject low box ✕</button>
+              <button data-act="retrain" class="ghost">Retrain night-loop ↻</button>
+            </div>
+          </div>
+          <div class="demo-side" data-reveal>
+            <h3>WHAT YOU'RE SEEING</h3>
+            <ul>
+              <li><strong>Yellow boxes</strong> = model proposal + confidence. Tap one.</li>
+              <li><strong>67% box</strong> = active learning's pick — the model is unsure.</li>
+              <li><strong>Fix / reject</strong> — you teach it once, it auto-labels 10k.</li>
+            </ul>
+            <div class="arch">
+              <span>FRAME</span><i>→</i><span>YOLO</span><i>→</i><span>YOU</span><i>→</i><span>RETRAIN</span>
+            </div>
+            <a href="contact.html" class="btn btn--yellow" data-magnetic><span>LABEL WITH RETINA</span><i>↗</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 OUTCOME ============ -->
+    <section class="story outcome" id="outcome">
+      <div class="wrap">
+        <div class="sec-head sec-head--light" data-reveal>
+          <span class="sec-index">03 / THE OUTCOME</span>
+          <span class="sec-tag">NUMBERS, NOT ADJECTIVES</span>
+        </div>
+        <h2 class="mega mega--light" data-reveal>FROM HAND-DRAWN<br>TO <span class="yellow">SELF-DRAWING.</span></h2>
+
+        <div class="metrics">
+          <div class="metric" data-reveal data-count="98" data-decimal="98.1" data-suffix="%">
+            <span class="metric-val"><span data-num>98.1%</span></span>
+            <span class="metric-label">mAP</span>
+            <span class="metric-sub">was 71% — now production</span>
+          </div>
+          <div class="metric metric--yellow" data-reveal data-count="60" data-prefix="−" data-suffix="%">
+            <span class="metric-val"><span data-num>−60%</span></span>
+            <span class="metric-label">LABEL COST</span>
+            <span class="metric-sub">9m → 18s per frame</span>
+          </div>
+          <div class="metric" data-reveal data-count="1" data-suffix="M+" data-decimal="1.2">
+            <span class="metric-val"><span data-num>1.2M</span></span>
+            <span class="metric-label">BOXES SHIPPED</span>
+            <span class="metric-sub">human + auto, consensus IoU 0.91</span>
+          </div>
+          <div class="metric" data-reveal data-count="22" data-suffix="ms">
+            <span class="metric-val"><span data-num>22ms</span></span>
+            <span class="metric-label">INFERENCE</span>
+            <span class="metric-sub">edge + cloud, same weights</span>
+          </div>
+        </div>
+
+        <div class="outcome-grid">
+          <div class="after-card" data-reveal>
+            <h3>BEFORE → AFTER</h3>
+            <div class="ba-row"><span>mAP</span><div class="bar"><i style="--w:71%;--c:#FF3B30"></i></div><strong>71%</strong></div>
+            <div class="ba-row ba-row--after"><span>mAP</span><div class="bar"><i style="--w:98%;--c:#FFD600" data-grow></i></div><strong>98.1%</strong></div>
+            <div class="ba-row"><span>Annotator IoU</span><div class="bar"><i style="--w:62%;--c:#FF3B30"></i></div><strong>0.62</strong></div>
+            <div class="ba-row ba-row--after"><span>Annotator IoU</span><div class="bar"><i style="--w:91%;--c:#FFD600" data-grow></i></div><strong>0.91</strong></div>
+          </div>
+          <blockquote class="quote quote--big" data-reveal>
+            <p>"We corrected 40 frames on a Friday. Monday morning the model had labeled 11,000 more — and fixed its own bicycle mistake."</p>
+            <cite>— Vision Lead, industrial inspection ★★★★★</cite>
+          </blockquote>
+        </div>
+
+        <div class="stack">
+          <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
+          <div class="stack-grid">
+            <span data-reveal>PyTorch</span><span data-reveal>YOLOv8</span><span data-reveal>OpenCV</span><span data-reveal>FastAPI</span><span data-reveal>MinIO</span><span data-reveal>Active Learn</span><span data-reveal>ONNX</span><span data-reveal>Docker</span><span data-reveal>Label Studio Ext.</span><span data-reveal>Edge Deploy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEXT ============ -->
+    <section class="next">
+      <a href="project-8.html" class="next-link" data-magnetic>
+        <span class="next-kicker">NEXT CASE — 08 / 09</span>
+        <span class="next-title">HATE <span class="stroke">SPEECH</span> →</span>
+        <span class="next-sub">Toxicity + sentiment shield · Click anywhere to continue</span>
+      </a>
+      <div class="next-giant" aria-hidden="true">08</div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a href="work.html">← ALL WORK</a>
+    <span>SCIDATA ANALYST · VISION CASE 07</span>
+    <a href="contact.html">BUILD YOURS ↗</a>
+  </footer>
+
+  <!-- FLOATERS -->
+  <div class="freelance-float">
+    <span class="freelance-label">Hire Us</span>
+    <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link" aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
+    <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
+    <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link" aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
+  </div>
+  <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="assets/js/project-7.js"></script>
 </body>
-
 </html>
