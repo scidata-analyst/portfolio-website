@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Lekton:ital,wght@0,400;0,700;1,400&family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Lekton:ital,wght@0,400;0,700;1,400&family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .project-1 {
   --bg: #070709;
   --ink: #f4f2eb;
@@ -495,7 +495,7 @@
 }
 .project-1 .hero .hero-board {
   display: grid;
-  grid-template-columns: 1.5fr 0.9fr;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.9fr);
   gap: 1.5rem;
   align-items: stretch;
 }
@@ -1593,15 +1593,29 @@
     transform: translateX(-50%);
   }
 }
+.project-1 .hero-board > *,
+.project-1 .demo-grid > *,
+.project-1 .pipe > * {
+  min-width: 0;
+}
+
 @media (max-width: 1024px) {
-  .project-1 .hero-split {
+  .project-1 .hero .hero-split {
     grid-template-columns: 1fr;
   }
-  .project-1 .hero-split .hero-ctas {
+  .project-1 .hero .hero-split .hero-ctas {
     justify-content: flex-start;
   }
-  .project-1 .hero-board {
-    grid-template-columns: 1fr;
+  .project-1 .hero .hero-board {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .project-1 .hero .hero-giant {
+    font-size: clamp(8rem, 24vw, 14rem);
+    opacity: 0.55;
+  }
+  .project-1 .hero .hero-glow {
+    width: 72vw;
+    height: 72vw;
   }
   .project-1 .story-grid {
     grid-template-columns: 1fr;
@@ -1615,11 +1629,77 @@
   .project-1 .outcome-grid {
     grid-template-columns: 1fr;
   }
-  .project-1 .demo-grid {
-    grid-template-columns: 1fr !important;
+  .project-1 .demo .demo-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
   .project-1 .pipe {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .project-1 .nav {
+    padding: 0.8rem 1rem;
+  }
+  .project-1 .nav .nav-cta {
+    padding: 0.6rem 1rem;
+    font-size: 0.72rem;
+  }
+  .project-1 .hero {
+    padding-top: clamp(6rem, 16vw, 8rem);
+  }
+  .project-1 .hero .hero-giant {
+    display: none;
+  }
+  .project-1 .hero .hero-glow {
+    display: none;
+  }
+  .project-1 .hero .hero-scroll {
+    display: none;
+  }
+  .project-1 .mega {
+    font-size: clamp(2.4rem, 10vw, 4.5rem);
+  }
+  .project-1 .pain .pain-stat strong {
+    font-size: 2.4rem;
+  }
+  .project-1 .story,
+  .project-1 .demo {
+    padding: clamp(3.5rem, 8vw, 5rem) 0;
+  }
+  .project-1 .demo .demo-chat {
+    min-height: 400px;
+  }
+  .project-1 .demo .demo-messages {
+    max-height: 340px;
+  }
+  .project-1 .quote {
+    box-shadow: 6px 6px 0 #7c5cff;
+  }
+  .project-1 .quote--big {
+    box-shadow: 6px 6px 0 #0c0c0c;
+  }
+  .project-1 .next .next-title {
+    font-size: clamp(2.4rem, 9vw, 4rem);
+  }
+  .project-1 .footer-totop {
+    width: 42px;
+    height: 42px;
+    right: 0.8rem;
+    bottom: 0.8rem;
+  }
+  .project-1 .freelance-float {
+    left: 0.8rem;
+    bottom: 0.8rem;
+    gap: 0.4rem;
+    padding: 0.5rem 0.7rem 0.5rem 0.9rem;
+  }
+  .project-1 .freelance-float .freelance-link {
+    width: 28px;
+    height: 28px;
+  }
+  .project-1 .freelance-float .freelance-link img {
+    width: 16px;
+    height: 16px;
   }
 }
 @media (max-width: 640px) {
@@ -1629,14 +1709,57 @@
   .project-1 .cursor {
     display: none;
   }
-  .project-1 .nav-mid {
+  .project-1 a,
+  .project-1 button,
+  .project-1 .btn {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+  .project-1 .nav .nav-mid {
     display: none;
   }
-  .project-1 .hero-title {
-    font-size: clamp(3rem, 16vw, 5rem);
+  .project-1 .nav .nav-back {
+    font-size: 0.72rem;
+  }
+  .project-1 .nav .nav-back .nav-arrow {
+    width: 30px;
+    height: 30px;
+  }
+  .project-1 .hero .hero-title {
+    font-size: clamp(2.6rem, 14vw, 4.2rem);
+  }
+  .project-1 .hero .hero-eyebrow {
+    font-size: 0.7rem;
+  }
+  .project-1 .hero .hero-eyebrow .hero-loc {
+    letter-spacing: 0.1em;
+  }
+  .project-1 .hero .hero-split .hero-desc {
+    font-size: 1rem;
+  }
+  .project-1 .hero .hero-rail .rail-meta {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+  .project-1 .hero .hero-rail .rail-card {
+    padding: 1rem;
+  }
+  .project-1 .hero .hero-rail .rail-card:hover {
+    transform: none;
+  }
+  .project-1 .lede {
+    font-size: 1rem;
+  }
+  .project-1 .sec-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
   .project-1 .metrics {
     grid-template-columns: 1fr;
+  }
+  .project-1 .metric .metric-val {
+    font-size: clamp(2.4rem, 10vw, 3.6rem);
   }
   .project-1 .ba-row {
     grid-template-columns: 1fr;
@@ -1645,11 +1768,162 @@
   .project-1 .after-card .ba-row {
     grid-template-columns: 1fr;
   }
+  .project-1 .pipe {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.4rem;
+  }
+  .project-1 .pipe .pipe-num {
+    font-size: 2.6rem;
+  }
+  .project-1 .pipe:hover {
+    transform: none;
+  }
+  .project-1 .pipe .code {
+    font-size: 0.72rem;
+    padding: 0.7rem 0.8rem;
+  }
+  .project-1 .pipe--feature {
+    box-shadow: 4px 4px 0 #d6ff2a;
+  }
+  .project-1 .pipe .mini-bars i {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 44px;
+  }
+  .project-1 .pain {
+    padding: 1.3rem;
+  }
+  .project-1 .pain h3 {
+    font-size: 1.7rem;
+  }
+  .project-1 .pain:hover {
+    transform: none;
+  }
+  .project-1 .terminal {
+    box-shadow: 4px 4px 0 #d6ff2a;
+    border-radius: 14px;
+  }
+  .project-1 .terminal .terminal-bar {
+    padding: 0.8rem 1rem;
+  }
+  .project-1 .terminal .terminal-bar .t-title {
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .project-1 .terminal .terminal-body {
+    padding: 1.1rem;
+  }
+  .project-1 .terminal .terminal-badges {
+    padding: 0 1.1rem 1.1rem;
+    font-size: 0.62rem;
+  }
+  .project-1 .hero-board .terminal {
+    box-shadow: none;
+  }
+  .project-1 .demo .demo-chat {
+    min-height: 340px;
+    border-radius: 16px;
+    box-shadow: 6px 6px 0 #0a0a0c;
+  }
+  .project-1 .demo .demo-chat-head {
+    padding: 0.8rem 1rem;
+    font-size: 0.7rem;
+  }
+  .project-1 .demo .demo-messages {
+    max-height: 320px;
+    padding: 1.1rem;
+  }
+  .project-1 .demo .demo-chips {
+    padding: 0.9rem 1rem;
+  }
+  .project-1 .demo .demo-chips button {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.72rem;
+    cursor: pointer;
+  }
+  .project-1 .demo .demo-side {
+    padding: 1.4rem;
+  }
+  .project-1 .demo .demo-side .arch span {
+    font-size: 0.62rem;
+    padding: 0.35rem 0.6rem;
+  }
+  .project-1 .stack .stack-grid span {
+    font-size: 1rem;
+    padding: 0.5rem 0.9rem;
+  }
+  .project-1 .stack .stack-grid span:hover {
+    transform: none;
+  }
+  .project-1 .btn {
+    padding: 0.85rem 1.2rem;
+    font-size: 0.78rem;
+  }
+  .project-1 .next .next-link {
+    padding: 3rem 1.2rem;
+  }
+  .project-1 .next .next-sub {
+    font-size: 0.75rem;
+  }
+  .project-1 .foot {
+    padding: 1rem;
+    font-size: 0.7rem;
+  }
+  .project-1 .foot span {
+    display: none;
+  }
+  .project-1 .loader .loader-top,
+  .project-1 .loader .loader-bottom {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .project-1 .loader .loader-word {
+    font-size: clamp(2rem, 12vw, 3.2rem);
+  }
+  .project-1 .loader .loader-num {
+    font-size: clamp(3rem, 18vw, 5rem);
+  }
   .project-1 .footer-totop {
     cursor: pointer;
   }
-  .project-1 .demo-chips button {
-    cursor: pointer;
+}
+@media (max-width: 480px) {
+  .project-1 .hero .hero-title {
+    font-size: clamp(2.1rem, 13vw, 3rem);
+  }
+  .project-1 .hero .hero-split .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .project-1 .hero .hero-split .hero-ctas .btn {
+    justify-content: center;
+  }
+  .project-1 .mega {
+    font-size: clamp(2rem, 11vw, 2.8rem);
+  }
+  .project-1 .terminal .terminal-foot .send {
+    display: none;
+  }
+  .project-1 .demo .demo-chat {
+    min-height: 300px;
+  }
+  .project-1 .demo .demo-messages {
+    max-height: 260px;
+  }
+  .project-1 .pipe .pipe-num {
+    font-size: 2.2rem;
+  }
+  .project-1 .metric .metric-val {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+  }
+  .project-1 .next .next-title {
+    font-size: clamp(1.9rem, 10vw, 2.6rem);
+  }
+  .project-1 .loader .loader-sub {
+    font-size: 0.65rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {
