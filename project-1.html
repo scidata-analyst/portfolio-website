@@ -1,264 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatBot NLP Engine — Scidata Analyst</title>
-    <meta name="description"
-        content="An intelligent conversational AI powered by Natural Language Processing. Understands context, sentiment, and intent.">
-    <link rel="stylesheet" href="scss/main.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXABOT — NLP Chatbot That Actually Listens | Case Study 01</title>
+  <meta name="description" content="Problem → Solution → Outcome. How we built an NLP chatbot with 95% intent accuracy, sub-200ms replies, cutting support cost by 62%.">
+  <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
+  <link rel="stylesheet" href="scss/project-1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="project-page project-1">
-    <!-- CUSTOM CURSOR -->
-    <div class="cursor" data-cursor>
-        <div class="cursor-dot"></div>
-        <div class="cursor-ring"></div>
-        <div class="cursor-label">VIEW</div>
+<body class="project-1">
+
+  <!-- NOISE + PROGRESS -->
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" data-cursor aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <span class="cursor-label">VIEW</span>
+  </div>
+
+  <!-- LOADER -->
+  <div class="loader" data-loader aria-hidden="true">
+    <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 01/09</span></div>
+    <div class="loader-center">
+      <div class="loader-word" data-loader-word>LISTENING…</div>
+      <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
+      <div class="loader-track"><div class="loader-fill" data-loader-fill></div></div>
+      <div class="loader-sub">PARSING INTENTS · ENTITIES · SENTIMENT</div>
     </div>
+    <div class="loader-bottom"><span>NLP ENGINE</span><span>PYTHON / RASA / TRANSFORMERS</span></div>
+  </div>
 
-    <!-- LOADER -->
-    <div class="loader">
-        <div class="loader-inner">
-            <div class="loader-num" data-loader-num>0</div>
-            <div class="loader-track">
-                <div class="loader-fill"></div>
-            </div>
+  <!-- NAV -->
+  <header class="nav">
+    <a href="work.html" class="nav-back" data-magnetic>
+      <span class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+      <span>ALL WORK</span>
+    </a>
+    <div class="nav-mid">CASE STUDY <strong>— 01 / 09</strong></div>
+    <a href="contact.html" class="nav-cta" data-magnetic><span>START A PROJECT</span><i>↗</i></a>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="hero-glow hero-glow--lime" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--violet" aria-hidden="true"></div>
+      <div class="hero-giant" aria-hidden="true">01</div>
+
+      <div class="hero-inner">
+        <div class="hero-eyebrow" data-reveal>
+          <span class="pill"><span class="dot"></span> AI / NLP · LIVE IN PRODUCTION</span>
+          <span class="hero-loc">DHAKA → WORLDWIDE · 2025</span>
         </div>
-    </div>
 
-    <!-- NAV -->
-    <nav class="p-nav">
-        <a href="work.html" class="p-nav-back">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            <span>Work</span>
-        </a>
-        <div class="p-nav-num">01 / 09</div>
-    </nav>
+        <h1 class="hero-title">
+          <span class="line"><span class="word" data-reveal>MACHINES</span></span>
+          <span class="line"><span class="word word--stroke" data-reveal>THAT</span> <span class="word word--lime" data-reveal>LISTEN<span class="period">.</span></span></span>
+          <span class="line line--small"><span class="word word--small" data-reveal>NLP CHATBOT — NOT A SCRIPT, AN UNDERSTANDING.</span></span>
+        </h1>
 
-    <!-- HERO -->
-    <section class="p-hero">
-        <div class="p-hero-bg" aria-hidden="true">
-            <div class="p-hero-particle"></div>
-            <div class="p-hero-particle"></div>
-            <div class="p-hero-particle"></div>
-            <div class="p-hero-particle"></div>
-            <div class="p-hero-particle"></div>
-            <div class="p-hero-particle"></div>
-            <div class="p-hero-particle"></div>
-            <div class="p-hero-particle"></div>
-            <div class="p-hero-particle"></div>
+        <div class="hero-split">
+          <p class="hero-desc" data-reveal>
+            Rule-based bots <s>guess keywords</s>. <strong>NEXABOT reads intent, entities &amp; mood</strong>
+            in &lt;200ms — then holds a real multi-turn conversation across web, WhatsApp &amp; app.
+          </p>
+          <div class="hero-ctas" data-reveal>
+            <a href="#demo" class="btn btn--lime" data-magnetic><span>TRY LIVE DEMO</span><i>↓</i></a>
+            <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
+          </div>
         </div>
-        <div class="p-hero-content">
-            <div class="p-hero-tag">
-                <span class="p-tag-dot"></span> AI / NLP Engine
+
+        <div class="hero-board">
+          <!-- CHAT TERMINAL -->
+          <div class="terminal" data-reveal>
+            <div class="terminal-bar">
+              <span class="t-dots"><i></i><i></i><i></i></span>
+              <span class="t-title">nexabot — nlu_console · live</span>
+              <span class="t-live"><span class="blink"></span> 182ms</span>
             </div>
-            <h1 class="p-hero-title">
-                <span class="p-title-line"><span class="p-title-word" data-reveal>ChatBot</span></span>
-                <span class="p-title-line"><span class="p-title-word p-title-word--outline" data-reveal>with</span>
-                    <span class="p-title-word" data-reveal>NLP</span></span>
-                <span class="p-title-line"><span class="p-title-word" data-reveal>Engine</span><span
-                        class="p-title-accent" data-reveal>.</span></span>
-            </h1>
-            <div class="p-hero-bottom">
-                <p class="p-hero-desc" data-reveal>An intelligent conversational AI powered by Natural Language
-                    Processing. Understands context, sentiment, and intent — delivering human-like responses across web,
-                    mobile, and messaging platforms.</p>
-                <div class="p-hero-metrics" data-reveal>
-                    <div class="p-metric">
-                        <span class="p-metric-val">95%</span>
-                        <span class="p-metric-label">Intent Accuracy</span>
-                    </div>
-                    <div class="p-metric">
-                        <span class="p-metric-val">&lt;200ms</span>
-                        <span class="p-metric-label">Response Time</span>
-                    </div>
+            <div class="terminal-body">
+              <div class="chat" id="heroChat">
+                <div class="msg msg--user"><span class="who">YOU 20:41</span><p>I need help with my order, it's late 😟</p></div>
+                <div class="msg msg--bot">
+                  <span class="who">NEXABOT · intent: <b>track_order</b> 0.97</span>
+                  <p><span data-type>Found order #4521 — stuck at depot. I've re-routed it, arriving Thursday. Want live tracking?</span></p>
+                  <span class="tokens"><em style="--c:#D6FF2A">order#4521:ENTITY</em><em style="--c:#7C5CFF">late:SENTIMENT-neg</em><em style="--c:#fff">help:INTENT</em></span>
                 </div>
+                <div class="msg msg--user"><span class="who">YOU 20:42</span><p>Yes + change address to Banani 11</p></div>
+                <div class="msg msg--bot typing"><span class="who">NEXABOT IS TYPING</span><p><span class="dots"><i></i><i></i><i></i></span></p></div>
+              </div>
+              <div class="terminal-foot">
+                <span class="prompt">❯</span>
+                <span class="fake-input">Ask about refunds, tracking, addresses…<span class="caret"></span></span>
+                <span class="send">SEND ↵</span>
+              </div>
             </div>
-        </div>
-        <div class="p-hero-scroll" aria-hidden="true">
-            <span>Scroll</span>
-            <div class="p-scroll-line"></div>
-        </div>
-        <div class="p-hero-number" aria-hidden="true">01</div>
-    </section>
+            <div class="terminal-badges">
+              <span>95% INTENT ACCURACY</span><span>38 LANGUAGES</span><span>24/7</span>
+            </div>
+          </div>
 
-    <!-- VISUAL SHOWCASE -->
-    <section class="p-showcase">
-        <div class="p-showcase-sticky">
-            <div class="p-visual-container">
-                <div class="p-visual p-visual--1" data-visual>
-                    <div class="p-visual-inner">
-                        <div class="p-visual-grid">
-                            <div class="p-chat-bubble p-chat--user">
-                                <span class="p-chat-label">USER</span>
-                                <span class="p-chat-text">I need help with my order status</span>
-                            </div>
-                            <div class="p-chat-bubble p-chat--bot">
-                                <span class="p-chat-label">AI</span>
-                                <span class="p-chat-text">I found your order #4521. It's currently being processed and
-                                    will ship within 24 hours. Would you like tracking updates✦</span>
-                            </div>
-                            <div class="p-chat-bubble p-chat--user">
-                                <span class="p-chat-label">USER</span>
-                                <span class="p-chat-text">Yes please, also can I change the delivery address✦</span>
-                            </div>
-                            <div class="p-chat-bubble p-chat--bot">
-                                <span class="p-chat-label">AI</span>
-                                <span class="p-chat-text">Of course! I've updated your delivery address. Your order will
-                                    arrive at the new location by Thursday.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="p-showcase-trigger"></div>
-        <div class="p-showcase-trigger"></div>
-        <div class="p-showcase-trigger"></div>
-    </section>
-
-    <!-- TECH STACK -->
-    <section class="p-tech">
-        <div class="p-tech-inner">
-            <div class="p-tech-left">
-                <span class="p-section-tag"><span class="p-tag-dot"></span> Tech Stack</span>
-                <h2 class="p-tech-title">Built for<br><em>intelligence</em></h2>
-            </div>
-            <div class="p-tech-right">
-                <div class="p-tech-list">
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">01</span>
-                        <span class="p-tech-name">Python</span>
-                        <div class="p-tech-bar">
-                            <div class="p-tech-fill"></div>
-                        </div>
-                    </div>
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">02</span>
-                        <span class="p-tech-name">NLP / TensorFlow</span>
-                        <div class="p-tech-bar">
-                            <div class="p-tech-fill"></div>
-                        </div>
-                    </div>
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">03</span>
-                        <span class="p-tech-name">RASA Framework</span>
-                        <div class="p-tech-bar">
-                            <div class="p-tech-fill"></div>
-                        </div>
-                    </div>
-                    <div class="p-tech-item" data-reveal>
-                        <span class="p-tech-num">04</span>
-                        <span class="p-tech-name">WebSocket</span>
-                        <div class="p-tech-bar">
-                            <div class="p-tech-fill"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="p-features">
-        <div class="p-features-header">
-            <span class="p-section-tag"><span class="p-tag-dot"></span> Capabilities</span>
-            <h2 class="p-features-title">What it<br><em>does</em></h2>
-        </div>
-        <div class="p-features-grid">
-            <div class="p-feature" data-feature>
-                <span class="p-feature-num">01</span>
-                <h3 class="p-feature-title">Context Awareness</h3>
-                <p class="p-feature-desc">Multi-turn dialogue management that remembers previous interactions and
-                    maintains conversation flow naturally.</p>
-            </div>
-            <div class="p-feature" data-feature>
-                <span class="p-feature-num">02</span>
-                <h3 class="p-feature-title">Sentiment Analysis</h3>
-                <p class="p-feature-desc">Real-time emotion detection that adjusts responses based on user mood and
-                    frustration levels.</p>
-            </div>
-            <div class="p-feature" data-feature>
-                <span class="p-feature-num">03</span>
-                <h3 class="p-feature-title">Entity Extraction</h3>
-                <p class="p-feature-desc">Custom-trained models identify names, dates, products, and domain-specific
-                    terms accurately.</p>
-            </div>
-            <div class="p-feature" data-feature>
-                <span class="p-feature-num">04</span>
-                <h3 class="p-feature-title">Multi-Platform</h3>
-                <p class="p-feature-desc">Single AI brain powering conversations across web chat, WhatsApp, Messenger,
-                    and mobile apps.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- NAVIGATION BETWEEN PROJECTS -->
-    <section class="p-next">
-        <div class="p-next-inner">
-            <a href="project-2.html" class="p-next-link" data-magnetic>
-                <span class="p-next-label">Next Project</span>
-                <span class="p-next-title">Hotel Management</span>
-                <span class="p-next-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                </span>
+          <!-- STAT RAIL -->
+          <div class="hero-rail" data-reveal>
+            <div class="rail-head">WHY IT MATTERS — TL;DR</div>
+            <a href="#problem" class="rail-card rail-card--problem">
+              <span class="rail-num">01</span>
+              <span class="rail-kicker">THE PROBLEM</span>
+              <strong>72% of tickets were copy-paste repetition.</strong>
+              <span class="rail-link">Read the pain →</span>
             </a>
+            <a href="#solve" class="rail-card rail-card--solve">
+              <span class="rail-num">02</span>
+              <span class="rail-kicker">HOW WE SOLVED</span>
+              <strong>Transformer NLU + dialogue brain + memory.</strong>
+              <span class="rail-link">See the pipeline →</span>
+            </a>
+            <a href="#outcome" class="rail-card rail-card--outcome">
+              <span class="rail-num">03</span>
+              <span class="rail-kicker">THE OUTCOME</span>
+              <strong>−62% cost · +41% CSAT · &lt;200ms.</strong>
+              <span class="rail-link">See proof →</span>
+            </a>
+            <div class="rail-meta">
+              <div><span>CLIENT</span><strong>Retail + SaaS</strong></div>
+              <div><span>TIMELINE</span><strong>6 weeks</strong></div>
+              <div><span>ROLE</span><strong>Design → NLU → Deploy</strong></div>
+            </div>
+          </div>
         </div>
-        <div class="p-next-bg" aria-hidden="true">02</div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true"><span>SCROLL FOR STORY</span><div class="line-v"></div></div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="assets/js/project-1.js"></script>
-
-    <!-- FREELANCE PLATFORMS (FIXED LEFT BOTTOM) -->
-    <div class="freelance-float">
-        <span class="freelance-label">Hire Us</span>
-        <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank"
-            class="freelance-link freelance-upwork" aria-label="Upwork">
-            <img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork">
-        </a>
-        <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link freelance-fiverr"
-            aria-label="Fiverr">
-            <img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr">
-        </a>
-        <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link freelance-freelance"
-            aria-label="Freelancer">
-            <img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer">
-        </a>
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>INTENT DETECTION <i>✦</i></span><span>ENTITY EXTRACTION <i>✦</i></span><span>SENTIMENT ANALYSIS <i>✦</i></span><span> MULTI-TURN MEMORY <i>✦</i></span><span>95% ACCURACY <i>✦</i></span><span>&lt;200MS <i>✦</i></span>
+        <span>INTENT DETECTION <i>✦</i></span><span>ENTITY EXTRACTION <i>✦</i></span><span>SENTIMENT ANALYSIS <i>✦</i></span><span> MULTI-TURN MEMORY <i>✦</i></span><span>95% ACCURACY <i>✦</i></span><span>&lt;200MS <i>✦</i></span>
+      </div>
     </div>
 
-    <!-- BACK TO TOP -->
-    <button class="footer-totop" type="button" aria-label="Back to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 19V5M5 12l7-7 7 7" />
-        </svg>
-    </button>
+    <!-- ============ 01 PROBLEM ============ -->
+    <section class="story problem" id="problem">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <span class="sec-index">01 / THE PROBLEM</span>
+          <span class="sec-tag">WHY THE OLD BOT FAILED</span>
+        </div>
+        <h2 class="mega" data-reveal>SUPPORT WAS <span class="stroke">DROWNING</span><br>IN <span class="lime">REPETITION.</span></h2>
+        <div class="story-grid">
+          <p class="lede" data-reveal>
+            The client had a keyword bot. If you didn't type the <em>exact phrase</em>, it died.
+            Humans cleaned up the mess — same 5 questions, 400× a day. Wait times exploded. Customers left angry.
+          </p>
+          <blockquote class="quote" data-reveal>
+            <p>“Our bot answered 11% of chats. The rest became tickets. We were paying for automation that created work.”</p>
+            <cite>— Head of Support, before NEXABOT</cite>
+          </blockquote>
+        </div>
 
-    <script>
-        // Back to top functionality
-        const totopBtn = document.querySelector('.footer-totop');
-        if (totopBtn) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    totopBtn.classList.add('visible');
-                } else {
-                    totopBtn.classList.remove('visible');
-                }
-            });
-            totopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-    </script>
+        <div class="pain-grid">
+          <article class="pain" data-reveal>
+            <span class="pain-num">P.01</span>
+            <h3>TICKET FLOOD</h3>
+            <p>“Where is my order?” “Refund?” “Change address?” — <strong>72% of all tickets</strong> were the same 6 intents on loop.</p>
+            <div class="pain-stat"><strong>4m 12s</strong><span>avg. first response</span></div>
+          </article>
+          <article class="pain" data-reveal>
+            <span class="pain-num">P.02</span>
+            <h3>ZERO CONTEXT</h3>
+            <p>Old bot forgot everything every message. “Yes, change it” → <strong>“Sorry, I don't understand.”</strong> Rage-quits everywhere.</p>
+            <div class="pain-stat"><strong>11%</strong><span>self-resolved chats</span></div>
+          </article>
+          <article class="pain" data-reveal>
+            <span class="pain-num">P.03</span>
+            <h3>ROBOTIC &amp; DEAF</h3>
+            <p>No sentiment. No Bangla / Banglish. Angry customer? Same chirpy template. <strong>CSAT at 31%.</strong></p>
+            <div class="pain-stat"><strong>31%</strong><span>CSAT score</span></div>
+          </article>
+        </div>
+
+        <div class="before-after" data-reveal>
+          <div class="ba-row"><span>Bot resolution</span><div class="bar"><i style="--w:11%;--c:#ff4d5e"></i></div><strong>11%</strong></div>
+          <div class="ba-row"><span>Repetitive tickets</span><div class="bar"><i style="--w:72%;--c:#ff4d5e"></i></div><strong>72%</strong></div>
+          <div class="ba-row"><span>Customers waiting &gt;3 min</span><div class="bar"><i style="--w:64%;--c:#ff4d5e"></i></div><strong>64%</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 SOLVE ============ -->
+    <section class="story solve" id="solve">
+      <div class="wrap">
+        <div class="sec-head sec-head--light" data-reveal>
+          <span class="sec-index">02 / HOW WE SOLVED IT</span>
+          <span class="sec-tag">NOT A SCRIPT — A BRAIN</span>
+        </div>
+        <h2 class="mega mega--light" data-reveal>WE TAUGHT IT TO <span class="lime">LISTEN,</span><br>NOT JUST <span class="stroke-light">REPLY.</span></h2>
+        <p class="lede lede--light" data-reveal>Five stages. Every message runs this gauntlet in under 200 milliseconds. Here's the exact pipeline we shipped:</p>
+
+        <div class="pipeline">
+          <article class="pipe" data-reveal>
+            <div class="pipe-num">01</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">INGEST · CLEAN</span>
+              <h3>HEAR EVERYTHING</h3>
+              <p>Normalizes typos, Bangla + Banglish + English, emojis. “ordr koi?? 😡” → clean structured text.</p>
+              <code class="code">normalize("ordr koi?? 😡") → "order kothay" [lang: bn-en]</code>
+              <div class="chips"><span>Regex + FastText LID</span><span>Emoji map</span><span>Spell fix</span></div>
+            </div>
+          </article>
+          <article class="pipe pipe--feature" data-reveal>
+            <div class="pipe-num">02</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">NLU · TRANSFORMER CORE</span>
+              <h3>UNDERSTAND INTENT</h3>
+              <p>Fine-tuned DistilBERT classifies <strong>48 intents</strong>, extracts entities, scores sentiment — in one pass.</p>
+              <div class="nlu-viz">
+                <span class="tok">where <em>0.02</em></span>
+                <span class="tok tok--hot">is my order <em>0.97 ✓</em></span>
+                <span class="tok">?? <em>0.01</em></span>
+              </div>
+              <code class="code">{ intent: track_order 0.97 · entities: [order_id] · sentiment: frustrated 0.82 }</code>
+              <div class="chips"><span>Python</span><span>HuggingFace</span><span>spaCy</span><span>Rasa NLU</span></div>
+            </div>
+          </article>
+          <article class="pipe" data-reveal>
+            <div class="pipe-num">03</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">DIALOGUE MANAGER</span>
+              <h3>REMEMBER CONTEXT</h3>
+              <p>State machine + TED policy tracks slots across turns. “Yes, change it” knows <em>what “it” is</em>.</p>
+              <code class="code">slots: { order_id: 4521, action: change_address } → policy: ask_confirm</code>
+              <div class="chips"><span>Rasa Core</span><span>Redis memory</span></div>
+            </div>
+          </article>
+          <article class="pipe" data-reveal>
+            <div class="pipe-num">04</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">GENERATION + TONE</span>
+              <h3>REPLY LIKE HUMAN</h3>
+              <p>Template + LLM rephrase. Frustrated? Softer, shorter, solution-first. Happy? Warm + upsell.</p>
+              <code class="code">if sentiment < -0.5 → tone: "calm + apologetic + action"</code>
+              <div class="chips"><span>FastAPI</span><span>WebSocket</span><span>WhatsApp API</span></div>
+            </div>
+          </article>
+          <article class="pipe pipe--loop" data-reveal>
+            <div class="pipe-num">05</div>
+            <div class="pipe-body">
+              <span class="pipe-kicker">LEARN LOOP</span>
+              <h3>GET SMARTER DAILY</h3>
+              <p>Every fallback is logged, labeled, retrained nightly. Accuracy climbed <strong>81% → 95%</strong> in 5 weeks.</p>
+              <div class="mini-bars"><i style="--h:34%"></i><i style="--h:52%"></i><i style="--h:68%"></i><i style="--h:84%"></i><i style="--h:95%"></i></div>
+              <div class="chips"><span>Label Studio</span><span>MLflow</span><span>Docker</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERACTIVE DEMO ============ -->
+    <section class="demo" id="demo">
+      <div class="wrap demo-wrap">
+        <div class="sec-head" data-reveal>
+          <span class="sec-index">LIVE DEMO</span>
+          <span class="sec-tag">CLICK — IT REALLY RESPONDS</span>
+        </div>
+        <h2 class="mega" data-reveal>DON'T BELIEVE US?<br><span class="lime">INTERROGATE IT.</span></h2>
+
+        <div class="demo-grid">
+          <div class="demo-chat" data-reveal>
+            <div class="demo-chat-head"><span class="pulse"></span> NEXABOT · ONLINE <span class="lat" data-lat>182ms</span></div>
+            <div class="demo-messages" data-messages>
+              <div class="msg msg--bot"><p>Hey, I'm Nexabot. Ask me about tracking, refunds, or changing delivery. 👇</p><span class="intent">intent: greet · 0.99</span></div>
+            </div>
+            <div class="demo-chips" data-chips>
+              <button data-q="track">📦 Where is my order #4521?</button>
+              <button data-q="refund">💸 I want a refund, this is ridiculous</button>
+              <button data-q="address">📍 Change address to Banani 11</button>
+              <button data-q="human">🧍 I want a human</button>
+            </div>
+          </div>
+          <div class="demo-side" data-reveal>
+            <h3>WHAT YOU'RE SEEING</h3>
+            <ul>
+              <li><strong>Intent badge</strong> under every reply = what the NLU actually detected + confidence.</li>
+              <li><strong>Latency badge</strong> = full NLU → dialogue → response round-trip.</li>
+              <li><strong>Sentiment adaption</strong> — try the angry refund message. Tone changes.</li>
+            </ul>
+            <div class="arch">
+              <span>YOU</span><i>→</i><span>NLU</span><i>→</i><span>BRAIN</span><i>→</i><span>REPLY</span>
+            </div>
+            <a href="contact.html" class="btn btn--lime" data-magnetic><span>I WANT THIS BOT</span><i>↗</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 OUTCOME ============ -->
+    <section class="story outcome" id="outcome">
+      <div class="wrap">
+        <div class="sec-head sec-head--light" data-reveal>
+          <span class="sec-index">03 / THE OUTCOME</span>
+          <span class="sec-tag">NUMBERS, NOT ADJECTIVES</span>
+        </div>
+        <h2 class="mega mega--light" data-reveal>FROM COST CENTER<br>TO <span class="lime">GROWTH ENGINE.</span></h2>
+
+        <div class="metrics">
+          <div class="metric" data-reveal data-count="95" data-suffix="%">
+            <span class="metric-val"><span data-num>0</span>%</span>
+            <span class="metric-label">INTENT ACCURACY</span>
+            <span class="metric-sub">was 41% with keywords</span>
+          </div>
+          <div class="metric metric--lime" data-reveal data-count="182" data-suffix="ms">
+            <span class="metric-val">‹<span data-num>0</span>ms</span>
+            <span class="metric-label">MEDIAN RESPONSE</span>
+            <span class="metric-sub">NLU → reply, p95 340ms</span>
+          </div>
+          <div class="metric" data-reveal data-count="62" data-prefix="−" data-suffix="%">
+            <span class="metric-val">−<span data-num>0</span>%</span>
+            <span class="metric-label">SUPPORT COST</span>
+            <span class="metric-sub">3 agents redeployed to sales</span>
+          </div>
+          <div class="metric" data-reveal data-count="41" data-prefix="+" data-suffix="%">
+            <span class="metric-val">+<span data-num>0</span>%</span>
+            <span class="metric-label">CSAT LIFT</span>
+            <span class="metric-sub">31% → 72% in 60 days</span>
+          </div>
+        </div>
+
+        <div class="outcome-grid">
+          <div class="after-card" data-reveal>
+            <h3>BEFORE → AFTER</h3>
+            <div class="ba-row"><span>Self-resolved</span><div class="bar"><i style="--w:11%;--c:#ff4d5e"></i></div><strong>11%</strong></div>
+            <div class="ba-row ba-row--after"><span>Self-resolved</span><div class="bar"><i style="--w:78%;--c:#D6FF2A" data-grow></i></div><strong>78%</strong></div>
+            <div class="ba-row"><span>Avg. wait</span><div class="bar"><i style="--w:80%;--c:#ff4d5e"></i></div><strong>4m12s</strong></div>
+            <div class="ba-row ba-row--after"><span>Avg. wait</span><div class="bar"><i style="--w:6%;--c:#D6FF2A" data-grow></i></div><strong>9s</strong></div>
+          </div>
+          <blockquote class="quote quote--big" data-reveal>
+            <p>“It doesn't feel like a bot. It remembers, it calms people down, it closes tickets. Best hire we never made.”</p>
+            <cite>— CEO, after 60 days in production ★★★★★</cite>
+          </blockquote>
+        </div>
+
+        <div class="stack">
+          <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
+          <div class="stack-grid">
+            <span data-reveal>Python</span><span data-reveal>Transformers</span><span data-reveal>Rasa</span><span data-reveal>spaCy</span><span data-reveal>FastAPI</span><span data-reveal>WebSocket</span><span data-reveal>Redis</span><span data-reveal>Docker</span><span data-reveal>WhatsApp API</span><span data-reveal>MLflow</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEXT ============ -->
+    <section class="next">
+      <a href="project-2.html" class="next-link" data-magnetic>
+        <span class="next-kicker">NEXT CASE — 02 / 09</span>
+        <span class="next-title">HOTEL <span class="stroke">MANAGEMENT</span> →</span>
+        <span class="next-sub">Booking engine + occupancy AI · Click anywhere to continue</span>
+      </a>
+      <div class="next-giant" aria-hidden="true">02</div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a href="work.html">← ALL WORK</a>
+    <span>SCIDATA ANALYST · NLP CASE 01</span>
+    <a href="contact.html">BUILD YOURS ↗</a>
+  </footer>
+
+  <!-- FLOATERS -->
+  <div class="freelance-float">
+    <span class="freelance-label">Hire Us</span>
+    <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link" aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
+    <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
+    <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link" aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
+  </div>
+  <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="assets/js/project-1.js"></script>
 </body>
-
 </html>
