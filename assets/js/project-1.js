@@ -191,8 +191,5 @@
     gsap.registerPlugin(ScrollTrigger);
     gsap.to('.hero-giant', { yPercent: 18, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     gsap.to('.next-giant', { xPercent: -8, ease: 'none', scrollTrigger: { trigger: '.next', start: 'top bottom', end: 'bottom bottom', scrub: true } });
-    gsap.utils.toArray('.pipe').forEach(function (p) {
-      gsap.from(p, { y: 34, opacity: 0.4, ease: 'none', scrollTrigger: { trigger: p, start: 'top 92%', end: 'top 55%', scrub: true } });
-    });
   }
 })();
