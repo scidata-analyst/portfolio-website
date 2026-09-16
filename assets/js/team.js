@@ -4,25 +4,19 @@ gsap.registerPlugin(ScrollTrigger);
 // CUSTOM CURSOR
 // ============================================
 const cursor = document.querySelector('[data-cursor]');
-let mouseX = 0, mouseY = 0;
 
 if (cursor && !('ontouchstart' in window)) {
     document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.15, ease: 'power2.out' });
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.15, ease: 'power2.out' });
     });
 
-    function animateCursor() {
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .tm2-member, .tm2-culture-card');
+    const hoverTargets = document.querySelectorAll('a, button, [data-magnetic], .tm-card, .tm-rule');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
     });
+} else if (cursor) {
+    cursor.style.display = 'none';
 }
 
 // ============================================
@@ -91,19 +85,17 @@ function runLoader() {
       .from('.loader-tagline', { opacity: 0, duration: 0.4 }, '-=0.2');
 
     if (loaderNum) {
-        gsap.to(loaderNum, {
-            innerText: 100,
-            duration: 2.5,
+        const counter = { v: 0 };
+        gsap.to(counter, {
+            v: 100,
+            duration: 2.2,
             ease: 'power2.inOut',
-            snap: { innerText: 1 },
-            onUpdate: function() {
-                loaderNum.textContent = Math.round(this.targets()[0].innerText);
-            }
+            onUpdate: () => { loaderNum.textContent = Math.round(counter.v); }
         });
     }
 
     if (loaderFill) {
-        gsap.to(loaderFill, { width: '100%', duration: 2.5, ease: 'power2.inOut' });
+        gsap.to(loaderFill, { width: '100%', duration: 2.2, ease: 'power2.inOut' });
     }
 
     tl.to('.loader', { yPercent: -100, duration: 0.8, ease: 'power3.inOut', delay: 0.5, onComplete: () => {
@@ -118,24 +110,33 @@ if (document.readyState === 'complete') {
     window.addEventListener('load', runLoader);
 }
 
-document.documentElement.classList.add('js-ready');
-
+// Safety: never trap user behind loader
 setTimeout(() => {
-    document.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-active'));
     const loader = document.querySelector('.loader');
-    if (loader) loader.style.display = 'none';
-}, 4000);
+    if (loader && getComputedStyle(loader).display !== 'none') {
+        loader.style.display = 'none';
+        revealHero();
+    }
+}, 4500);
 
 // ============================================
-// HERO REVEAL
+// HERO REVEAL — chunky staggered entrance
 // ============================================
+let heroRevealed = false;
 function revealHero() {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    if (heroRevealed) return;
+    heroRevealed = true;
+    const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
-    tl.fromTo('.tm2-hero-eyebrow', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      .fromTo('.tm2-hero-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
-      .fromTo('.tm2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.tm2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.tm-hero-top', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 })
+      .fromTo('.tm-title .tm-line--1', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.35')
+      .fromTo('.tm-title .tm-line--2', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.75')
+      .fromTo('.tm-hero-giant', { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 1.2 }, '-=0.9')
+      .fromTo('.tm-glyph', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, stagger: 0.08, ease: 'back.out(1.7)' }, '-=0.9')
+      .fromTo('.tm-lead', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.7')
+      .fromTo('.tm-hero-actions .tm-btn', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, '-=0.6')
+      .fromTo('.tm-spin', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.6)' }, '-=0.5')
+      .fromTo('.tm-stat', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.08 }, '-=0.5');
 }
 
 // ============================================
@@ -146,136 +147,118 @@ window.addEventListener('scroll', () => {
     if (scrollBar) {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
-    }
-
-    // Culture scroll progress (manual fallback)
-    const cultureViewport = document.querySelector('.tm2-culture-viewport');
-    const cultureProgress = document.querySelector('.tm2-culture-progress-fill');
-    if (cultureViewport && cultureProgress) {
-        const maxScroll = cultureViewport.scrollWidth - cultureViewport.clientWidth;
-        cultureProgress.style.width = (maxScroll > 0 ? (cultureViewport.scrollLeft / maxScroll) * 100 : 0) + '%';
+        scrollBar.style.width = ((scrollTop / Math.max(docHeight, 1)) * 100) + '%';
     }
 }, { passive: true });
 
 // ============================================
-// CULTURE HORIZONTAL SCROLL
+// SQUAD FILTER — All / Build / Design / AI / Ops
 // ============================================
-const cultureSection = document.querySelector('.tm2-culture');
-const cultureTrack = document.querySelector('.tm2-culture-track');
-if (cultureSection && cultureTrack) {
-    function initCultureScroll() {
-        ScrollTrigger.getAll().forEach(t => {
-            if (t.trigger === '.tm2-culture') t.kill();
-        });
+const filterBtns = document.querySelectorAll('.tm-filter');
+const memberCards = document.querySelectorAll('[data-card]');
+const rosterEmpty = document.querySelector('.tm-roster-empty');
 
-        const trackWidth = cultureTrack.scrollWidth;
-        const viewportWidth = cultureSection.clientWidth;
-        const scrollDistance = trackWidth - viewportWidth + 60;
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const f = btn.getAttribute('data-filter');
+        let visible = 0;
 
-        if (scrollDistance <= 0) return;
-
-        gsap.to(cultureTrack, {
-            x: () => -scrollDistance,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.tm2-culture',
-                start: 'top top',
-                end: () => '+=' + scrollDistance,
-                pin: true,
-                scrub: 1,
-                invalidateOnRefresh: true,
-                onUpdate: (self) => {
-                    const cultureProgress = document.querySelector('.tm2-culture-progress-fill');
-                    if (cultureProgress) {
-                        cultureProgress.style.width = (self.progress * 100) + '%';
-                    }
-                }
+        memberCards.forEach(card => {
+            const squads = (card.getAttribute('data-squad') || '').split(/\s+/);
+            const show = (f === 'all' || squads.includes(f));
+            card.classList.remove('is-pop');
+            if (show) {
+                card.classList.remove('is-hidden');
+                void card.offsetWidth;
+                card.classList.add('is-pop');
+                visible++;
+            } else {
+                card.classList.add('is-hidden');
             }
         });
-    }
 
-    if (document.readyState === 'complete') {
-        setTimeout(initCultureScroll, 200);
-    } else {
-        window.addEventListener('load', () => {
-            setTimeout(initCultureScroll, 200);
-        });
-    }
-}
+        if (rosterEmpty) rosterEmpty.hidden = visible !== 0;
+        ScrollTrigger.refresh();
+    });
+});
 
 // ============================================
-// SCROLL REVEAL
+// SCROLL REVEALS (play once — never hide content again)
 // ============================================
-const revealEls = document.querySelectorAll('.tm2-members-tag, .tm2-members-title, .tm2-member, .tm2-culture-tag, .tm2-culture-title, .tm2-culture-card, .tm2-stat, .tm2-join-tag, .tm2-join-title, .tm2-join-text, .cta-headline, .cta-subtext');
+const revealEls = document.querySelectorAll('.tm-lineup-head, .tm-card, .tm-culture-head, .tm-rule, .tm-num-card, .tm-cta-title, .tm-cta-sub, .tm-cta-row');
 
 revealEls.forEach(el => {
     gsap.from(el, {
-        y: 50,
+        y: 56,
         opacity: 0,
         duration: 0.9,
         ease: 'power3.out',
         immediateRender: false,
         scrollTrigger: {
             trigger: el,
-            start: 'top 88%',
-            toggleActions: 'play none none reverse'
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+            once: true
         }
     });
 });
 
+// Captain avatar drift on mouse
+document.querySelectorAll('.tm-card--captain').forEach(card => {
+    const avatar = card.querySelector('.tm-avatar span');
+    if (!avatar) return;
+    card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        gsap.to(avatar, { x: px * 22, duration: 0.4, ease: 'power2.out' });
+    });
+    card.addEventListener('mouseleave', () => {
+        gsap.to(avatar, { x: 0, duration: 0.5, ease: 'power2.out' });
+    });
+});
+
+// Hero giant drifts on scroll
+gsap.to('.tm-hero-giant', {
+    yPercent: 24,
+    ease: 'none',
+    scrollTrigger: { trigger: '.tm-hero', start: 'top top', end: 'bottom top', scrub: true }
+});
+
 // ============================================
-// COUNTER ANIMATION
+// NUMBER COUNTERS
 // ============================================
-const counters = document.querySelectorAll('[data-count]');
-counters.forEach(counter => {
-    const target = parseInt(counter.getAttribute('data-count'));
-    gsap.fromTo(counter, { innerText: 0 }, {
-        innerText: target,
-        duration: 2.5,
+document.querySelectorAll('[data-count]').forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-count'), 10) || 0;
+    const obj = { v: 0 };
+    gsap.to(obj, {
+        v: target,
+        duration: 2,
         ease: 'power2.out',
-        snap: { innerText: 1 },
         immediateRender: false,
         scrollTrigger: {
             trigger: counter,
             start: 'top 88%',
-            toggleActions: 'play none none reverse'
-        }
+            toggleActions: 'play none none none',
+            once: true
+        },
+        onUpdate: () => { counter.textContent = Math.round(obj.v); }
     });
 });
 
 // ============================================
-// MEMBER CARD HOVER
-// ============================================
-const memberCards = document.querySelectorAll('.tm2-member');
-memberCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        gsap.to(card, { y: -8, duration: 0.4, ease: 'power2.out' });
-    });
-    card.addEventListener('mouseleave', () => {
-        gsap.to(card, { y: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
-    });
-});
-
-// ============================================
-// SMOOTH SCROLL
+// SMOOTH ANCHOR SCROLL (native — no extra plugin)
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            gsap.to(window, { scrollTo: { y: target, offsetY: 80 }, duration: 1, ease: 'power3.inOut' });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
-
-// ============================================
-// RESPONSIVE CURSOR
-// ============================================
-if ('ontouchstart' in window) {
-    if (cursor) cursor.style.display = 'none';
-}
 
 // ============================================
 // RESIZE
