@@ -4,36 +4,19 @@ gsap.registerPlugin(ScrollTrigger);
 // CUSTOM CURSOR
 // ============================================
 const cursor = document.querySelector('[data-cursor]');
-let mouseX = 0, mouseY = 0;
 
 if (cursor && !('ontouchstart' in window)) {
     document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.15, ease: 'power2.out' });
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.15, ease: 'power2.out' });
     });
 
-    function animateCursor() {
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .ab-value-card, .ab-cap-panel, .ab-testimonial');
+    const hoverTargets = document.querySelectorAll('a, button, [data-magnetic], .ax-year, .ax-law, .ax-panel-head, .ax-quote');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
     });
-
-    const viewTargets = document.querySelectorAll('.ab-value-card, .ab-testimonial');
-    viewTargets.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.classList.add('cursor--view');
-            cursor.querySelector('.cursor-label').textContent = 'VIEW';
-        });
-        el.addEventListener('mouseleave', () => {
-            cursor.classList.remove('cursor--view');
-        });
-    });
+} else if (cursor) {
+    cursor.style.display = 'none';
 }
 
 // ============================================
@@ -102,19 +85,17 @@ function runLoader() {
       .from('.loader-tagline', { opacity: 0, duration: 0.4 }, '-=0.2');
 
     if (loaderNum) {
-        gsap.to(loaderNum, {
-            innerText: 100,
-            duration: 2.5,
+        const counter = { v: 0 };
+        gsap.to(counter, {
+            v: 100,
+            duration: 2.2,
             ease: 'power2.inOut',
-            snap: { innerText: 1 },
-            onUpdate: function() {
-                loaderNum.textContent = Math.round(this.targets()[0].innerText);
-            }
+            onUpdate: () => { loaderNum.textContent = Math.round(counter.v); }
         });
     }
 
     if (loaderFill) {
-        gsap.to(loaderFill, { width: '100%', duration: 2.5, ease: 'power2.inOut' });
+        gsap.to(loaderFill, { width: '100%', duration: 2.2, ease: 'power2.inOut' });
     }
 
     tl.to('.loader', { yPercent: -100, duration: 0.8, ease: 'power3.inOut', delay: 0.5, onComplete: () => {
@@ -129,25 +110,34 @@ if (document.readyState === 'complete') {
     window.addEventListener('load', runLoader);
 }
 
-document.documentElement.classList.add('js-ready');
-
+// Safety: never trap user behind loader
 setTimeout(() => {
-    document.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-active'));
     const loader = document.querySelector('.loader');
-    if (loader) loader.style.display = 'none';
-}, 4000);
+    if (loader && getComputedStyle(loader).display !== 'none') {
+        loader.style.display = 'none';
+        revealHero();
+    }
+}, 4500);
 
 // ============================================
-// HERO REVEAL
+// HERO REVEAL — chunky staggered entrance
 // ============================================
+let heroRevealed = false;
 function revealHero() {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    if (heroRevealed) return;
+    heroRevealed = true;
+    const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
-    tl.fromTo('.ab-intro-tag', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      .fromTo('.ab-intro-headline', { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
-      .fromTo('.ab-intro-text', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.ab-visual-frame', { scale: 0.8, opacity: 0, rotate: -10 }, { scale: 1, opacity: 1, rotate: 0, duration: 1, ease: 'back.out(1.7)' }, '-=0.8')
-      .fromTo('.ab-intro-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.ax-hero-top', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 })
+      .fromTo('.ax-title .ax-line--1', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.35')
+      .fromTo('.ax-title .ax-line--2', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.75')
+      .fromTo('.ax-title .ax-line--3', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.75')
+      .fromTo('.ax-hero-giant', { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 1.2 }, '-=0.9')
+      .fromTo('.ax-hero-stamp', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.6)' }, '-=0.8')
+      .fromTo('.ax-lead', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.7')
+      .fromTo('.ax-hero-actions .ax-btn', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, '-=0.6')
+      .fromTo('.ax-spin', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.6)' }, '-=0.5')
+      .fromTo('.ax-stat', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.08 }, '-=0.5');
 }
 
 // ============================================
@@ -158,166 +148,98 @@ window.addEventListener('scroll', () => {
     if (scrollBar) {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+        scrollBar.style.width = ((scrollTop / Math.max(docHeight, 1)) * 100) + '%';
     }
 }, { passive: true });
 
 // ============================================
-// SCROLL REVEAL
+// CAPABILITIES ACCORDION (accessible, animated)
 // ============================================
-const revealEls = document.querySelectorAll('.ab-intro-tag, .ab-intro-headline, .ab-intro-text, .ab-manifesto-word, .ab-timeline-item, .ab-value-card, .ab-cap-panel, .ab-philosophy-title, .ab-philosophy-text, .ab-stat-item, .ab-testimonial, .cta-headline, .cta-subtext');
+const panels = document.querySelectorAll('[data-panel]');
+
+panels.forEach(panel => {
+    const head = panel.querySelector('.ax-panel-head');
+    if (!head) return;
+
+    head.addEventListener('click', () => {
+        const isOpen = panel.classList.contains('is-open');
+
+        // single-open behaviour
+        panels.forEach(p => {
+            p.classList.remove('is-open');
+            const h = p.querySelector('.ax-panel-head');
+            if (h) h.setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+            panel.classList.add('is-open');
+            head.setAttribute('aria-expanded', 'true');
+            if (window.ScrollTrigger) ScrollTrigger.refresh();
+        }
+    });
+});
+
+// ============================================
+// SCROLL REVEALS (play once — never hide content again)
+// ============================================
+const revealEls = document.querySelectorAll('.ax-mono-title, .ax-mono-sub, .ax-story-head, .ax-year, .ax-values-head, .ax-law, .ax-caps-head, .ax-panel, .ax-philo-quote, .ax-philo-title, .ax-num-card, .ax-voices-head, .ax-quote, .ax-cta-title, .ax-cta-sub, .ax-cta-row');
 
 revealEls.forEach(el => {
     gsap.from(el, {
-        y: 50,
+        y: 56,
         opacity: 0,
         duration: 0.9,
         ease: 'power3.out',
         immediateRender: false,
         scrollTrigger: {
             trigger: el,
-            start: 'top 88%',
-            toggleActions: 'play none none reverse'
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+            once: true
         }
     });
 });
 
-// ============================================
-// MANIFESTO WORD HOVER
-// ============================================
-const manifestoWords = document.querySelectorAll('.ab-manifesto-word');
-manifestoWords.forEach(word => {
-    word.addEventListener('mouseenter', () => {
-        gsap.to(word, { y: -12, rotation: -3, scale: 1.05, duration: 0.3, ease: 'power2.out' });
-    });
-    word.addEventListener('mouseleave', () => {
-        gsap.to(word, { y: 0, rotation: 0, scale: 1, duration: 0.5, ease: 'elastic.out(1, 0.5)' });
-    });
+// Hero giant drifts on scroll
+gsap.to('.ax-hero-giant', {
+    yPercent: 24,
+    ease: 'none',
+    scrollTrigger: { trigger: '.ax-hero', start: 'top top', end: 'bottom top', scrub: true }
 });
 
 // ============================================
-// CAPABILITIES ACCORDION
+// NUMBER COUNTERS
 // ============================================
-const capPanels = document.querySelectorAll('[data-panel]');
-capPanels.forEach(panel => {
-    const head = panel.querySelector('.ab-cap-panel-head');
-    head.addEventListener('click', () => {
-        const isOpen = panel.classList.contains('ab-cap-panel--open');
-        capPanels.forEach(p => p.classList.remove('ab-cap-panel--open'));
-        if (!isOpen) {
-            panel.classList.add('ab-cap-panel--open');
-        }
-    });
-});
-
-// ============================================
-// TILT EFFECT
-// ============================================
-const tiltCards = document.querySelectorAll('[data-tilt]');
-tiltCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
-        gsap.to(card, { rotateX, rotateY, duration: 0.4, ease: 'power2.out', transformPerspective: 1000 });
-    });
-    card.addEventListener('mouseleave', () => {
-        gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
-    });
-});
-
-// ============================================
-// COUNTER + RING ANIMATION
-// ============================================
-const statRings = document.querySelectorAll('.ab-stat-ring-fill');
-const counters = document.querySelectorAll('[data-count]');
-
-counters.forEach(counter => {
-    const target = parseInt(counter.getAttribute('data-count'));
-    gsap.fromTo(counter, { innerText: 0 }, {
-        innerText: target,
-        duration: 2.5,
+document.querySelectorAll('[data-count]').forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-count'), 10) || 0;
+    const obj = { v: 0 };
+    gsap.to(obj, {
+        v: target,
+        duration: 2,
         ease: 'power2.out',
-        snap: { innerText: 1 },
         immediateRender: false,
         scrollTrigger: {
             trigger: counter,
             start: 'top 88%',
-            toggleActions: 'play none none reverse'
-        }
-    });
-});
-
-statRings.forEach(ring => {
-    const target = parseInt(ring.getAttribute('data-ring'));
-    const circumference = 2 * Math.PI * 45;
-    const offset = circumference - (target / 100) * circumference;
-
-    ScrollTrigger.create({
-        trigger: ring,
-        start: 'top 88%',
-        onEnter: () => {
-            gsap.to(ring, { strokeDashoffset: offset, duration: 2, ease: 'power2.out' });
-        }
+            toggleActions: 'play none none none',
+            once: true
+        },
+        onUpdate: () => { counter.textContent = Math.round(obj.v); }
     });
 });
 
 // ============================================
-// TIMELINE PROGRESS
-// ============================================
-const timelineSection = document.querySelector('.ab-timeline');
-const timelineProgress = document.querySelector('.ab-timeline-progress');
-
-if (timelineSection && timelineProgress) {
-    gsap.to(timelineProgress, {
-        height: '100%',
-        ease: 'none',
-        immediateRender: false,
-        scrollTrigger: {
-            trigger: timelineSection,
-            start: 'top 60%',
-            end: 'bottom 40%',
-            scrub: 1
-        }
-    });
-}
-
-// ============================================
-// MICRO-INTERACTIONS
-// ============================================
-const microEls = document.querySelectorAll('.ab-cap-panel, .ab-testimonial');
-microEls.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        gsap.to(el, { x: 6, duration: 0.3, ease: 'power2.out' });
-    });
-    el.addEventListener('mouseleave', () => {
-        gsap.to(el, { x: 0, duration: 0.3, ease: 'power2.out' });
-    });
-});
-
-// ============================================
-// SMOOTH SCROLL
+// SMOOTH ANCHOR SCROLL (native — no extra plugin)
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            gsap.to(window, { scrollTo: { y: target, offsetY: 80 }, duration: 1, ease: 'power3.inOut' });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
-
-// ============================================
-// RESPONSIVE CURSOR
-// ============================================
-if ('ontouchstart' in window) {
-    if (cursor) cursor.style.display = 'none';
-}
 
 // ============================================
 // RESIZE

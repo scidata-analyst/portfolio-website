@@ -4,25 +4,19 @@ gsap.registerPlugin(ScrollTrigger);
 // CUSTOM CURSOR
 // ============================================
 const cursor = document.querySelector('[data-cursor]');
-let mouseX = 0, mouseY = 0;
 
 if (cursor && !('ontouchstart' in window)) {
     document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.15, ease: 'power2.out' });
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.15, ease: 'power2.out' });
     });
 
-    function animateCursor() {
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .cn2-service-card, .cn2-happens-node, .cn2-faq-item, .cn2-form-card');
+    const hoverTargets = document.querySelectorAll('a, button, [data-magnetic], .ct-topic, .ct-pay, .ct-move, input, select, textarea');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
     });
+} else if (cursor) {
+    cursor.style.display = 'none';
 }
 
 // ============================================
@@ -91,19 +85,17 @@ function runLoader() {
       .from('.loader-tagline', { opacity: 0, duration: 0.4 }, '-=0.2');
 
     if (loaderNum) {
-        gsap.to(loaderNum, {
-            innerText: 100,
-            duration: 2.5,
+        const counter = { v: 0 };
+        gsap.to(counter, {
+            v: 100,
+            duration: 2.2,
             ease: 'power2.inOut',
-            snap: { innerText: 1 },
-            onUpdate: function() {
-                loaderNum.textContent = Math.round(this.targets()[0].innerText);
-            }
+            onUpdate: () => { loaderNum.textContent = Math.round(counter.v); }
         });
     }
 
     if (loaderFill) {
-        gsap.to(loaderFill, { width: '100%', duration: 2.5, ease: 'power2.inOut' });
+        gsap.to(loaderFill, { width: '100%', duration: 2.2, ease: 'power2.inOut' });
     }
 
     tl.to('.loader', { yPercent: -100, duration: 0.8, ease: 'power3.inOut', delay: 0.5, onComplete: () => {
@@ -118,27 +110,32 @@ if (document.readyState === 'complete') {
     window.addEventListener('load', runLoader);
 }
 
-document.documentElement.classList.add('js-ready');
-
+// Safety: never trap user behind loader
 setTimeout(() => {
-    document.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-active'));
     const loader = document.querySelector('.loader');
-    if (loader) loader.style.display = 'none';
-}, 4000);
+    if (loader && getComputedStyle(loader).display !== 'none') {
+        loader.style.display = 'none';
+        revealHero();
+    }
+}, 4500);
 
 // ============================================
-// HERO REVEAL
+// HERO REVEAL — chunky staggered entrance
 // ============================================
+let heroRevealed = false;
 function revealHero() {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    if (heroRevealed) return;
+    heroRevealed = true;
+    const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
-    tl.fromTo('.cn2-hero-eyebrow', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      .fromTo('.cn2-hero-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
-      .fromTo('.cn2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.cn2-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
-      .fromTo('.cn2-visual-frame', { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 1, ease: 'back.out(1.7)' }, '-=0.8')
-      .fromTo('.cn2-hero-stats', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
-      .fromTo('.cn2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.ct-hero-top', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 })
+      .fromTo('.ct-title .ct-line--1', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.35')
+      .fromTo('.ct-title .ct-line--2', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.75')
+      .fromTo('.ct-hero-giant', { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 1.2 }, '-=0.9')
+      .fromTo('.ct-lead', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.7')
+      .fromTo('.ct-hero-actions .ct-btn', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, '-=0.6')
+      .fromTo('.ct-ticket', { scale: 0, opacity: 0, rotate: 20 }, { scale: 1, opacity: 1, rotate: 4, duration: 0.7, ease: 'back.out(1.6)' }, '-=0.5')
+      .fromTo('.ct-stat', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.08 }, '-=0.5');
 }
 
 // ============================================
@@ -149,98 +146,182 @@ window.addEventListener('scroll', () => {
     if (scrollBar) {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
-    }
-
-    // Scroll fill
-    const scrollFill = document.querySelector('.cn2-scroll-fill');
-    if (scrollFill) {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollFill.style.height = Math.min((scrollTop / docHeight) * 100, 100) + '%';
+        scrollBar.style.width = ((scrollTop / Math.max(docHeight, 1)) * 100) + '%';
     }
 }, { passive: true });
 
 // ============================================
-// SCROLL REVEAL
+// TOPIC PICKER → pre-fills booking form + scrolls
 // ============================================
-const revealEls = document.querySelectorAll('.cn2-services-tag, .cn2-services-title, .cn2-services-intro, .cn2-service-card, .cn2-benefits-tag, .cn2-benefits-title, .cn2-benefit-row, .cn2-happens-tag, .cn2-happens-title, .cn2-happens-node, .cn2-faq-tag, .cn2-faq-title, .cn2-faq-item, .cn2-form-tag, .cn2-form-title, .cn2-form-intro, .cn2-form-card, .cta-headline, .cta-subtext');
+const serviceSelect = document.getElementById('ctService');
+const topicBtns = document.querySelectorAll('[data-topic]');
+
+function pickTopic(value, btn) {
+    if (serviceSelect) {
+        const match = Array.from(serviceSelect.options).find(o => o.text.trim() === value.trim());
+        if (match) {
+            serviceSelect.value = match.value || match.text;
+            // options without explicit value use text
+            serviceSelect.selectedIndex = match.index;
+        }
+        const field = serviceSelect.closest('.ct-field');
+        if (field) {
+            field.classList.remove('is-bad');
+            field.classList.remove('is-flash');
+            void field.offsetWidth;
+            field.classList.add('is-flash');
+        }
+    }
+    topicBtns.forEach(b => b.classList.remove('ct-topic-picked'));
+    if (btn) btn.classList.add('ct-topic-picked');
+
+    const target = document.getElementById('book');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+topicBtns.forEach(btn => {
+    btn.addEventListener('click', () => pickTopic(btn.getAttribute('data-topic') || '', btn));
+});
+
+// ============================================
+// FAQ ACCORDION (accessible, single-open)
+// ============================================
+const qas = document.querySelectorAll('[data-qa]');
+
+qas.forEach(qa => {
+    const head = qa.querySelector('.ct-qa-head');
+    if (!head) return;
+
+    head.addEventListener('click', () => {
+        const isOpen = qa.classList.contains('is-open');
+
+        qas.forEach(q => {
+            q.classList.remove('is-open');
+            const h = q.querySelector('.ct-qa-head');
+            if (h) h.setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+            qa.classList.add('is-open');
+            head.setAttribute('aria-expanded', 'true');
+            if (window.ScrollTrigger) ScrollTrigger.refresh();
+        }
+    });
+});
+
+// ============================================
+// BOOKING FORM — validation, counter, success
+// ============================================
+const bookForm = document.getElementById('bookForm');
+const msgInput = document.getElementById('ctMsg');
+const msgCount = document.getElementById('ctCount');
+const successBox = document.getElementById('bookSuccess');
+
+if (msgInput && msgCount) {
+    msgInput.addEventListener('input', () => {
+        msgCount.textContent = msgInput.value.length;
+    });
+}
+
+function setBad(input, bad) {
+    const field = input.closest('.ct-field');
+    if (!field) return;
+    field.classList.toggle('is-bad', bad);
+    if (bad) {
+        input.addEventListener('input', () => field.classList.remove('is-bad'), { once: true });
+        input.addEventListener('change', () => field.classList.remove('is-bad'), { once: true });
+    }
+}
+
+if (bookForm) {
+    bookForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('ctName');
+        const email = document.getElementById('ctEmail');
+        const service = document.getElementById('ctService');
+        const msg = document.getElementById('ctMsg');
+
+        let ok = true;
+        let firstBad = null;
+
+        const check = (input, valid) => {
+            setBad(input, !valid);
+            if (!valid) {
+                ok = false;
+                if (!firstBad) firstBad = input;
+            }
+        };
+
+        check(name, name.value.trim().length >= 2);
+        check(email, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim()));
+        check(service, service.value !== '');
+        check(msg, msg.value.trim().length >= 10);
+
+        if (!ok) {
+            if (firstBad) firstBad.focus({ preventScroll: false });
+            gsap.fromTo(bookForm, { x: -8 }, { x: 0, duration: 0.4, ease: 'elastic.out(1, 0.35)' });
+            return;
+        }
+
+        const btn = bookForm.querySelector('[type="submit"]');
+        const label = btn ? btn.querySelector('.ct-submit-label') : null;
+        if (btn) btn.disabled = true;
+        if (label) label.textContent = 'Sending…';
+
+        // Front-end acknowledgement (wire to backend/WhatsApp as needed)
+        setTimeout(() => {
+            if (successBox) {
+                successBox.hidden = false;
+                gsap.from(successBox, { y: 24, opacity: 0, duration: 0.7, ease: 'back.out(1.5)' });
+                successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            if (label) label.textContent = 'Request received ✓';
+            bookForm.querySelectorAll('input, select, textarea').forEach(el => { el.disabled = true; });
+        }, 900);
+    });
+}
+
+// ============================================
+// SCROLL REVEALS (play once — never hide content again)
+// ============================================
+const revealEls = document.querySelectorAll('.ct-topics-head, .ct-topic, .ct-payoff-head, .ct-pay, .ct-session-head, .ct-move, .ct-faq-head, .ct-qa, .ct-book-head, .ct-form, .ct-cta-title, .ct-cta-sub, .ct-cta-row');
 
 revealEls.forEach(el => {
     gsap.from(el, {
-        y: 50,
+        y: 56,
         opacity: 0,
         duration: 0.9,
         ease: 'power3.out',
         immediateRender: false,
         scrollTrigger: {
             trigger: el,
-            start: 'top 88%',
-            toggleActions: 'play none none reverse'
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+            once: true
         }
     });
 });
 
-// ============================================
-// FAQ ACCORDION
-// ============================================
-const faqItems = document.querySelectorAll('[data-faq]');
-faqItems.forEach(item => {
-    const card = item.querySelector('.cn2-faq-top');
-    card.addEventListener('click', () => {
-        const isOpen = item.classList.contains('cn2-faq-item--open');
-        faqItems.forEach(i => i.classList.remove('cn2-faq-item--open'));
-        if (!isOpen) {
-            item.classList.add('cn2-faq-item--open');
-        }
-    });
+// Hero giant drifts on scroll
+gsap.to('.ct-hero-giant', {
+    yPercent: 24,
+    ease: 'none',
+    scrollTrigger: { trigger: '.ct-hero', start: 'top top', end: 'bottom top', scrub: true }
 });
 
 // ============================================
-// FORM INPUT FOCUS
-// ============================================
-const formInputs = document.querySelectorAll('.cn2-form-input, .cn2-form-select, .cn2-form-textarea');
-formInputs.forEach(input => {
-    input.addEventListener('focus', () => {
-        gsap.to(input, { scale: 1.02, duration: 0.3, ease: 'power2.out' });
-    });
-    input.addEventListener('blur', () => {
-        gsap.to(input, { scale: 1, duration: 0.3, ease: 'power2.out' });
-    });
-});
-
-// ============================================
-// SERVICE CARD HOVER
-// ============================================
-const serviceCards = document.querySelectorAll('.cn2-service-card');
-serviceCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        gsap.to(card, { y: -8, duration: 0.4, ease: 'power2.out' });
-    });
-    card.addEventListener('mouseleave', () => {
-        gsap.to(card, { y: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
-    });
-});
-
-// ============================================
-// SMOOTH SCROLL
+// SMOOTH ANCHOR SCROLL (native — no extra plugin)
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            gsap.to(window, { scrollTo: { y: target, offsetY: 80 }, duration: 1, ease: 'power3.inOut' });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
-
-// ============================================
-// RESPONSIVE CURSOR
-// ============================================
-if ('ontouchstart' in window) {
-    if (cursor) cursor.style.display = 'none';
-}
 
 // ============================================
 // RESIZE

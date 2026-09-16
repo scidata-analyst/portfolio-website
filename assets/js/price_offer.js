@@ -4,25 +4,19 @@ gsap.registerPlugin(ScrollTrigger);
 // CUSTOM CURSOR
 // ============================================
 const cursor = document.querySelector('[data-cursor]');
-let mouseX = 0, mouseY = 0;
 
 if (cursor && !('ontouchstart' in window)) {
     document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.15, ease: 'power2.out' });
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.15, ease: 'power2.out' });
     });
 
-    function animateCursor() {
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .pr2-plan, .pr2-faq-item');
+    const hoverTargets = document.querySelectorAll('a, button, [data-magnetic], .pc-card, .pc-side, .pc-safe-card');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
     });
+} else if (cursor) {
+    cursor.style.display = 'none';
 }
 
 // ============================================
@@ -91,19 +85,17 @@ function runLoader() {
       .from('.loader-tagline', { opacity: 0, duration: 0.4 }, '-=0.2');
 
     if (loaderNum) {
-        gsap.to(loaderNum, {
-            innerText: 100,
-            duration: 2.5,
+        const counter = { v: 0 };
+        gsap.to(counter, {
+            v: 100,
+            duration: 2.2,
             ease: 'power2.inOut',
-            snap: { innerText: 1 },
-            onUpdate: function() {
-                loaderNum.textContent = Math.round(this.targets()[0].innerText);
-            }
+            onUpdate: () => { loaderNum.textContent = Math.round(counter.v); }
         });
     }
 
     if (loaderFill) {
-        gsap.to(loaderFill, { width: '100%', duration: 2.5, ease: 'power2.inOut' });
+        gsap.to(loaderFill, { width: '100%', duration: 2.2, ease: 'power2.inOut' });
     }
 
     tl.to('.loader', { yPercent: -100, duration: 0.8, ease: 'power3.inOut', delay: 0.5, onComplete: () => {
@@ -118,25 +110,63 @@ if (document.readyState === 'complete') {
     window.addEventListener('load', runLoader);
 }
 
-document.documentElement.classList.add('js-ready');
-
+// Safety: never trap user behind loader
 setTimeout(() => {
-    document.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-active'));
     const loader = document.querySelector('.loader');
-    if (loader) loader.style.display = 'none';
-}, 4000);
+    if (loader && getComputedStyle(loader).display !== 'none') {
+        loader.style.display = 'none';
+        revealHero();
+    }
+}, 4500);
 
 // ============================================
-// HERO REVEAL
+// HERO REVEAL — chunky staggered entrance
 // ============================================
+let heroRevealed = false;
 function revealHero() {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    if (heroRevealed) return;
+    heroRevealed = true;
+    const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
-    tl.fromTo('.pr2-hero-eyebrow', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      .fromTo('.pr2-hero-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
-      .fromTo('.pr2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.pr2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.pc-hero-top', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 })
+      .fromTo('.pc-title .pc-line--1', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.35')
+      .fromTo('.pc-title .pc-line--2', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.75')
+      .fromTo('.pc-hero-giant', { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 1.2 }, '-=0.9')
+      .fromTo('.pc-tag', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, stagger: 0.08, ease: 'back.out(1.7)' }, '-=0.9')
+      .fromTo('.pc-lead', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.7')
+      .fromTo('.pc-hero-actions .pc-btn', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, '-=0.6')
+      .fromTo('.pc-count', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, '-=0.5')
+      .fromTo('.pc-stat', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.08 }, '-=0.5');
 }
+
+// ============================================
+// DEAL COUNTDOWN — ends last millisecond of month
+// ============================================
+function dealDeadline() {
+    const now = new Date();
+    return new Date(now.getFullYear(), now.getMonth() + 1, 1, 0, 0, 0, -1).getTime();
+}
+
+const deadline = dealDeadline();
+const pad = (n) => String(n).padStart(2, '0');
+
+function tickCountdown() {
+    const diff = Math.max(0, deadline - Date.now());
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+
+    [['pcDD', 'pcDD2', d], ['pcHH', 'pcHH2', h], ['pcMM', 'pcMM2', m], ['pcSS', 'pcSS2', s]].forEach(([a, b, v]) => {
+        const ea = document.getElementById(a);
+        const eb = document.getElementById(b);
+        if (ea) ea.textContent = pad(v);
+        if (eb) eb.textContent = pad(v);
+    });
+}
+
+tickCountdown();
+setInterval(tickCountdown, 1000);
 
 // ============================================
 // SCROLL PROGRESS
@@ -146,77 +176,76 @@ window.addEventListener('scroll', () => {
     if (scrollBar) {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+        scrollBar.style.width = ((scrollTop / Math.max(docHeight, 1)) * 100) + '%';
     }
 }, { passive: true });
 
 // ============================================
-// SCROLL REVEAL
+// FAQ ACCORDION (accessible, single-open)
 // ============================================
-const revealEls = document.querySelectorAll('.pr2-plans-tag, .pr2-plans-title, .pr2-plan, .pr2-offer-title, .pr2-offer-text, .pr2-compare-tag, .pr2-compare-title, .pr2-compare-row, .pr2-faq-tag, .pr2-faq-title, .pr2-faq-item, .cta-headline, .cta-subtext');
+const qas = document.querySelectorAll('[data-qa]');
+
+qas.forEach(qa => {
+    const head = qa.querySelector('.pc-qa-head');
+    if (!head) return;
+
+    head.addEventListener('click', () => {
+        const isOpen = qa.classList.contains('is-open');
+
+        qas.forEach(q => {
+            q.classList.remove('is-open');
+            const h = q.querySelector('.pc-qa-head');
+            if (h) h.setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+            qa.classList.add('is-open');
+            head.setAttribute('aria-expanded', 'true');
+            if (window.ScrollTrigger) ScrollTrigger.refresh();
+        }
+    });
+});
+
+// ============================================
+// SCROLL REVEALS (play once — never hide content again)
+// ============================================
+const revealEls = document.querySelectorAll('.pc-plans-head, .pc-card, .pc-fineprint, .pc-deal-card, .pc-sides-head, .pc-side, .pc-compare-head, .pc-table-wrap, .pc-faq-head, .pc-qa, .pc-safe-card, .pc-cta-title, .pc-cta-sub, .pc-cta-row');
 
 revealEls.forEach(el => {
     gsap.from(el, {
-        y: 50,
+        y: 56,
         opacity: 0,
         duration: 0.9,
         ease: 'power3.out',
         immediateRender: false,
         scrollTrigger: {
             trigger: el,
-            start: 'top 88%',
-            toggleActions: 'play none none reverse'
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+            once: true
         }
     });
 });
 
-// ============================================
-// FAQ ACCORDION
-// ============================================
-const faqItems = document.querySelectorAll('[data-faq]');
-faqItems.forEach(item => {
-    const card = item.querySelector('.pr2-faq-top');
-    card.addEventListener('click', () => {
-        const isOpen = item.classList.contains('pr2-faq-item--open');
-        faqItems.forEach(i => i.classList.remove('pr2-faq-item--open'));
-        if (!isOpen) {
-            item.classList.add('pr2-faq-item--open');
-        }
-    });
+// Hero giant drifts on scroll
+gsap.to('.pc-hero-giant', {
+    yPercent: 24,
+    ease: 'none',
+    scrollTrigger: { trigger: '.pc-hero', start: 'top top', end: 'bottom top', scrub: true }
 });
 
 // ============================================
-// PLAN CARD HOVER
-// ============================================
-const planCards = document.querySelectorAll('.pr2-plan');
-planCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        gsap.to(card, { y: -8, duration: 0.4, ease: 'power2.out' });
-    });
-    card.addEventListener('mouseleave', () => {
-        gsap.to(card, { y: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
-    });
-});
-
-// ============================================
-// SMOOTH SCROLL
+// SMOOTH ANCHOR SCROLL (native — no extra plugin)
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            gsap.to(window, { scrollTo: { y: target, offsetY: 80 }, duration: 1, ease: 'power3.inOut' });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
-
-// ============================================
-// RESPONSIVE CURSOR
-// ============================================
-if ('ontouchstart' in window) {
-    if (cursor) cursor.style.display = 'none';
-}
 
 // ============================================
 // RESIZE

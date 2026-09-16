@@ -4,33 +4,19 @@ gsap.registerPlugin(ScrollTrigger);
 // CUSTOM CURSOR
 // ============================================
 const cursor = document.querySelector('[data-cursor]');
-let mouseX = 0, mouseY = 0;
 
 if (cursor && !('ontouchstart' in window)) {
     document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.15, ease: 'power2.out' });
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.15, ease: 'power2.out' });
     });
 
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .in2-solution-card, .in2-product-card, .in2-stat');
+    const hoverTargets = document.querySelectorAll('a, button, [data-magnetic], .nv-file, .nv-pillar, .nv-beast, .nv-teaser');
     hoverTargets.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
     });
-
-    const viewTargets = document.querySelectorAll('.in2-product-card, .in2-solution-card');
-    viewTargets.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.classList.add('cursor--view');
-            if (cursor.querySelector('.cursor-label')) {
-                cursor.querySelector('.cursor-label').textContent = 'VIEW';
-            }
-        });
-        el.addEventListener('mouseleave', () => {
-            cursor.classList.remove('cursor--view');
-        });
-    });
+} else if (cursor) {
+    cursor.style.display = 'none';
 }
 
 // ============================================
@@ -99,19 +85,17 @@ function runLoader() {
       .from('.loader-tagline', { opacity: 0, duration: 0.4 }, '-=0.2');
 
     if (loaderNum) {
-        gsap.to(loaderNum, {
-            innerText: 100,
-            duration: 2.5,
+        const counter = { v: 0 };
+        gsap.to(counter, {
+            v: 100,
+            duration: 2.2,
             ease: 'power2.inOut',
-            snap: { innerText: 1 },
-            onUpdate: function() {
-                loaderNum.textContent = Math.round(this.targets()[0].innerText);
-            }
+            onUpdate: () => { loaderNum.textContent = Math.round(counter.v); }
         });
     }
 
     if (loaderFill) {
-        gsap.to(loaderFill, { width: '100%', duration: 2.5, ease: 'power2.inOut' });
+        gsap.to(loaderFill, { width: '100%', duration: 2.2, ease: 'power2.inOut' });
     }
 
     tl.to('.loader', { yPercent: -100, duration: 0.8, ease: 'power3.inOut', delay: 0.5, onComplete: () => {
@@ -126,28 +110,33 @@ if (document.readyState === 'complete') {
     window.addEventListener('load', runLoader);
 }
 
-document.documentElement.classList.add('js-ready');
-
+// Safety: never trap user behind loader
 setTimeout(() => {
-    document.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-active'));
     const loader = document.querySelector('.loader');
-    if (loader) loader.style.display = 'none';
-}, 4000);
+    if (loader && getComputedStyle(loader).display !== 'none') {
+        loader.style.display = 'none';
+        revealHero();
+    }
+}, 4500);
 
 // ============================================
-// HERO REVEAL
+// HERO REVEAL — chunky staggered entrance
 // ============================================
+let heroRevealed = false;
 function revealHero() {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    if (heroRevealed) return;
+    heroRevealed = true;
+    const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
-    tl.fromTo('.in2-hero-tag', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      .fromTo('.in2-headline-word', { y: '100%' }, { y: '0%', duration: 0.8, stagger: 0.15, ease: 'power3.out' }, '-=0.4')
-      .fromTo('.in2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
-      .fromTo('.in2-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, '-=0.4')
-      .fromTo('.in2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.2');
-
-    // Mark words as revealed for CSS fallback
-    document.querySelectorAll('.in2-headline-word').forEach(el => el.classList.add('revealed'));
+    tl.fromTo('.nv-hero-top', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 })
+      .fromTo('.nv-title .nv-line--1', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.35')
+      .fromTo('.nv-title .nv-line--2', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.75')
+      .fromTo('.nv-title .nv-line--3', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.75')
+      .fromTo('.nv-hero-giant', { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 1.2 }, '-=0.9')
+      .fromTo('.nv-lead', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.7')
+      .fromTo('.nv-hero-actions .nv-btn', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, '-=0.6')
+      .fromTo('.nv-spin', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.6)' }, '-=0.5')
+      .fromTo('.nv-stat', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.08 }, '-=0.5');
 }
 
 // ============================================
@@ -158,138 +147,103 @@ window.addEventListener('scroll', () => {
     if (scrollBar) {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+        scrollBar.style.width = ((scrollTop / Math.max(docHeight, 1)) * 100) + '%';
     }
 }, { passive: true });
 
 // ============================================
-// SOLUTIONS STICKY CARDS
+// SCROLL REVEALS (play once — never hide content again)
 // ============================================
-const solutionCards = document.querySelectorAll('.in2-solution-card');
-const solutionsSection = document.querySelector('.in2-solutions');
+const revealEls = document.querySelectorAll('.nv-lab-head, .nv-file, .nv-pillar, .nv-versus-head, .nv-beast, .nv-vs-badge, .nv-impact-card, .nv-teaser, .nv-next-head, .nv-arsenal-head, .nv-cta-title, .nv-cta-sub, .nv-cta-row');
 
-// Initialize all cards as hidden
-gsap.set(solutionCards, { opacity: 0, y: 80, scale: 0.92 });
-
-// Create a single ScrollTrigger for the solutions section
-if (solutionsSection && solutionCards.length > 0) {
-    ScrollTrigger.create({
-        trigger: solutionsSection,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 0.5,
-        onUpdate: (self) => {
-            const progress = self.progress;
-            const cardCount = solutionCards.length;
-            const activeIndex = Math.min(Math.floor(progress * cardCount), cardCount - 1);
-
-            solutionCards.forEach((card, i) => {
-                if (i === activeIndex) {
-                    gsap.to(card, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'power3.out' });
-                } else {
-                    gsap.to(card, { opacity: 0, y: 80, scale: 0.92, duration: 0.4, ease: 'power2.in' });
-                }
-            });
-        }
-    });
-}
-
-// Activate first card on load
-if (solutionCards.length > 0) {
-    setTimeout(() => {
-        gsap.to(solutionCards[0], { opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out' });
-    }, 1500);
-}
-
-// ============================================
-// PRODUCT CARDS REVEAL
-// ============================================
-const productCards = document.querySelectorAll('.in2-product-card');
-productCards.forEach(card => {
-    gsap.from(card, {
-        y: 60,
+revealEls.forEach(el => {
+    gsap.from(el, {
+        y: 56,
         opacity: 0,
         duration: 0.9,
         ease: 'power3.out',
         immediateRender: false,
         scrollTrigger: {
-            trigger: card,
-            start: 'top 85%',
-            toggleActions: 'play none none reverse'
+            trigger: el,
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+            once: true
         }
     });
 });
 
-// ============================================
-// PRODUCT CARD HOVER
-// ============================================
-productCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        gsap.to(card, { y: -8, duration: 0.3, ease: 'power2.out' });
+// Dossier side-letter drift on mouse
+document.querySelectorAll('.nv-file').forEach(file => {
+    const letter = file.querySelector('.nv-v-letter');
+    if (!letter) return;
+    file.addEventListener('mousemove', (e) => {
+        const r = file.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        gsap.to(letter, { x: px * 18, duration: 0.4, ease: 'power2.out' });
     });
-    card.addEventListener('mouseleave', () => {
-        gsap.to(card, { y: 0, duration: 0.3, ease: 'power2.out' });
+    file.addEventListener('mouseleave', () => {
+        gsap.to(letter, { x: 0, duration: 0.5, ease: 'power2.out' });
     });
 });
 
+// Hero giant drifts on scroll
+gsap.to('.nv-hero-giant', {
+    yPercent: 24,
+    ease: 'none',
+    scrollTrigger: { trigger: '.nv-hero', start: 'top top', end: 'bottom top', scrub: true }
+});
+
 // ============================================
-// STATS COUNTER
+// IMPACT COUNTERS
 // ============================================
-const statCounters = document.querySelectorAll('.in2-stat-num');
-statCounters.forEach(counter => {
-    const target = parseInt(counter.getAttribute('data-count'));
-    gsap.fromTo(counter, { innerText: 0 }, {
-        innerText: target,
-        duration: 2.5,
+document.querySelectorAll('[data-count]').forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-count'), 10) || 0;
+    const obj = { v: 0 };
+    gsap.to(obj, {
+        v: target,
+        duration: 2,
         ease: 'power2.out',
-        snap: { innerText: 1 },
         immediateRender: false,
         scrollTrigger: {
             trigger: counter,
             start: 'top 88%',
-            toggleActions: 'play none none reverse'
+            toggleActions: 'play none none none',
+            once: true
+        },
+        onUpdate: () => { counter.textContent = Math.round(obj.v); }
+    });
+});
+
+// ============================================
+// TEASER BREW BARS
+// ============================================
+document.querySelectorAll('.nv-teaser').forEach(teaser => {
+    const bar = teaser.querySelector('.nv-teaser-bar i');
+    if (!bar) return;
+    const target = bar.style.width || '50%';
+    bar.style.width = '0';
+    ScrollTrigger.create({
+        trigger: teaser,
+        start: 'top 88%',
+        once: true,
+        onEnter: () => {
+            requestAnimationFrame(() => requestAnimationFrame(() => { bar.style.width = target; }));
         }
     });
 });
 
 // ============================================
-// DEEP DIVE REVEAL
-// ============================================
-const deepdiveBlocks = document.querySelectorAll('.in2-deepdive-block');
-deepdiveBlocks.forEach(block => {
-    gsap.from(block, {
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power3.out',
-        immediateRender: false,
-        scrollTrigger: {
-            trigger: block,
-            start: 'top 88%',
-            toggleActions: 'play none none reverse'
-        }
-    });
-});
-
-// ============================================
-// SMOOTH SCROLL
+// SMOOTH ANCHOR SCROLL (native — no extra plugin)
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            gsap.to(window, { scrollTo: { y: target, offsetY: 80 }, duration: 1, ease: 'power3.inOut' });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
-
-// ============================================
-// RESPONSIVE CURSOR
-// ============================================
-if ('ontouchstart' in window) {
-    if (cursor) cursor.style.display = 'none';
-}
 
 // ============================================
 // RESIZE

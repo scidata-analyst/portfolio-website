@@ -1,40 +1,47 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // ============================================
-// CUSTOM CURSOR
+// CUSTOM CURSOR + FLOATING PREVIEW TAG
 // ============================================
 const cursor = document.querySelector('[data-cursor]');
-let mouseX = 0, mouseY = 0;
+const wxFloat = document.querySelector('.wx-float');
+let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
 
-if (cursor && !('ontouchstart' in window)) {
+if (!('ontouchstart' in window)) {
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
-        gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.15, ease: 'power2.out' });
+        if (cursor) gsap.to(cursor, { x: mouseX, y: mouseY, duration: 0.15, ease: 'power2.out' });
+        if (wxFloat) gsap.to(wxFloat, { x: mouseX, y: mouseY, duration: 0.35, ease: 'power3.out' });
     });
 
-    function animateCursor() {
-        requestAnimationFrame(animateCursor);
+    if (cursor) {
+        const hoverTargets = document.querySelectorAll('a, button, [data-magnetic], .wx-filter, .wx-stack-cloud span');
+        hoverTargets.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
+        });
     }
-    animateCursor();
-
-    const hoverTargets = document.querySelectorAll('a, button, .btn-magnetic, [data-magnetic], .ps-card, .wk2-timeline-node, .wk2-service-card');
-    hoverTargets.forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
-    });
-
-    const viewTargets = document.querySelectorAll('.wk2-project-img-wrap');
-    viewTargets.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.classList.add('cursor--view');
-            cursor.querySelector('.cursor-label').textContent = 'VIEW';
-        });
-        el.addEventListener('mouseleave', () => {
-            cursor.classList.remove('cursor--view');
-        });
-    });
+} else {
+    if (cursor) cursor.style.display = 'none';
 }
+
+// Row hover -> floating "VIEW CASE" tag with per-row label
+const rows = document.querySelectorAll('.wx-row');
+rows.forEach(row => {
+    row.addEventListener('mouseenter', () => {
+        if (!wxFloat || ('ontouchstart' in window)) return;
+        const label = row.getAttribute('data-cursor-text') || 'VIEW CASE ✦';
+        wxFloat.querySelector('.wx-float-word').textContent = label.replace('OPEN', 'VIEW');
+        wxFloat.classList.add('is-on');
+        if (cursor) cursor.classList.add('cursor--view');
+    });
+    row.addEventListener('mouseleave', () => {
+        if (!wxFloat) return;
+        wxFloat.classList.remove('is-on');
+        if (cursor) cursor.classList.remove('cursor--view');
+    });
+});
 
 // ============================================
 // MAGNETIC BUTTONS
@@ -102,19 +109,17 @@ function runLoader() {
       .from('.loader-tagline', { opacity: 0, duration: 0.4 }, '-=0.2');
 
     if (loaderNum) {
-        gsap.to(loaderNum, {
-            innerText: 100,
-            duration: 2.5,
+        const counter = { v: 0 };
+        gsap.to(counter, {
+            v: 100,
+            duration: 2.2,
             ease: 'power2.inOut',
-            snap: { innerText: 1 },
-            onUpdate: function() {
-                loaderNum.textContent = Math.round(this.targets()[0].innerText);
-            }
+            onUpdate: () => { loaderNum.textContent = Math.round(counter.v); }
         });
     }
 
     if (loaderFill) {
-        gsap.to(loaderFill, { width: '100%', duration: 2.5, ease: 'power2.inOut' });
+        gsap.to(loaderFill, { width: '100%', duration: 2.2, ease: 'power2.inOut' });
     }
 
     tl.to('.loader', { yPercent: -100, duration: 0.8, ease: 'power3.inOut', delay: 0.5, onComplete: () => {
@@ -129,25 +134,32 @@ if (document.readyState === 'complete') {
     window.addEventListener('load', runLoader);
 }
 
-document.documentElement.classList.add('js-ready');
-
+// Safety: never trap user behind loader
 setTimeout(() => {
-    document.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-active'));
     const loader = document.querySelector('.loader');
-    if (loader) loader.style.display = 'none';
-}, 4000);
+    if (loader && getComputedStyle(loader).display !== 'none') {
+        loader.style.display = 'none';
+        revealHero();
+    }
+}, 4500);
 
 // ============================================
-// HERO REVEAL
+// HERO REVEAL — chunky staggered entrance
 // ============================================
+let heroRevealed = false;
 function revealHero() {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    if (heroRevealed) return;
+    heroRevealed = true;
+    const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
-    tl.fromTo('.wk2-eyebrow-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      .fromTo('.wk2-hero-headline', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.4')
-      .fromTo('.wk2-hero-subtext', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.6')
-      .fromTo('.wk2-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.4')
-      .fromTo('.wk2-hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.3');
+    tl.fromTo('.wx-hero-top', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 })
+      .fromTo('.wx-title .wx-line--1', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.35')
+      .fromTo('.wx-title .wx-line--2', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.75')
+      .fromTo('.wx-hero-giant', { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 1.2 }, '-=0.9')
+      .fromTo('.wx-lead', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.7')
+      .fromTo('.wx-hero-actions .wx-btn', { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, '-=0.6')
+      .fromTo('.wx-spin', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.6)' }, '-=0.5')
+      .fromTo('.wx-stat', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.08 }, '-=0.5');
 }
 
 // ============================================
@@ -158,88 +170,104 @@ window.addEventListener('scroll', () => {
     if (scrollBar) {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+        scrollBar.style.width = ((scrollTop / Math.max(docHeight, 1)) * 100) + '%';
     }
-
-    // Timeline fill
-    const timelineFill = document.querySelector('.wk2-timeline-fill');
-    if (timelineFill) {
-        const timelineSection = document.querySelector('.wk2-process');
-        if (timelineSection) {
-            const rect = timelineSection.getBoundingClientRect();
-            const progress = Math.min(Math.max((window.innerHeight - rect.top) / (rect.height + window.innerHeight) * 100, 0), 100);
-            timelineFill.style.height = progress + '%';
-        }
-    }
-
 }, { passive: true });
 
 // ============================================
-// SCROLL REVEAL
+// FILTER — All / AI / Platforms / Data
 // ============================================
-const revealEls = document.querySelectorAll('.ps-tag, .ps-title, .ps-subtitle, .ps-card, .wk2-process-tag, .wk2-process-title, .wk2-timeline-node, .cta-headline, .cta-subtext');
+const filterBtns = document.querySelectorAll('.wx-filter');
+const wallEmpty = document.querySelector('.wx-wall-empty');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const f = btn.getAttribute('data-filter');
+        let visible = 0;
+
+        rows.forEach(row => {
+            const cat = row.getAttribute('data-cat');
+            const show = (f === 'all' || cat === f);
+            row.classList.remove('is-pop');
+            if (show) {
+                row.classList.remove('is-hidden');
+                // re-trigger pop
+                void row.offsetWidth;
+                row.classList.add('is-pop');
+                visible++;
+            } else {
+                row.classList.add('is-hidden');
+            }
+        });
+
+        if (wallEmpty) wallEmpty.hidden = visible !== 0;
+        ScrollTrigger.refresh();
+    });
+});
+
+// ============================================
+// SCROLL REVEALS (play once — never hide content again)
+// ============================================
+const revealEls = document.querySelectorAll('.wx-index-head, .wx-row, .wx-proof-card, .wx-step, .wx-stack-cloud span, .wx-cta-title, .wx-cta-sub, .wx-cta-row');
 
 revealEls.forEach(el => {
     gsap.from(el, {
-        y: 60,
+        y: 56,
         opacity: 0,
-        duration: 1,
+        duration: 0.9,
         ease: 'power3.out',
         immediateRender: false,
         scrollTrigger: {
             trigger: el,
-            start: 'top 88%',
-            toggleActions: 'play none none reverse'
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+            once: true
         }
     });
 });
 
-// ============================================
-// PROJECT CARD MOUSE GLOW
-// ============================================
-const projectCards = document.querySelectorAll('.ps-card');
-projectCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        card.style.setProperty('--mouse-x', x + '%');
-        card.style.setProperty('--mouse-y', y + '%');
+// Row visual parallax tilt on mouse
+rows.forEach(row => {
+    const visual = row.querySelector('.wx-row-visual');
+    if (!visual) return;
+    row.addEventListener('mousemove', (e) => {
+        const r = row.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        gsap.to(visual, { x: px * 14, duration: 0.4, ease: 'power2.out' });
+    });
+    row.addEventListener('mouseleave', () => {
+        gsap.to(visual, { x: 0, duration: 0.5, ease: 'power2.out' });
     });
 });
 
-// ============================================
-// TIMELINE NODE HOVER
-// ============================================
-const timelineNodes = document.querySelectorAll('.wk2-timeline-node');
-timelineNodes.forEach(node => {
-    node.addEventListener('mouseenter', () => {
-        gsap.to(node, { x: 6, duration: 0.3, ease: 'power2.out' });
-    });
-    node.addEventListener('mouseleave', () => {
-        gsap.to(node, { x: 0, duration: 0.3, ease: 'power2.out' });
-    });
+// Hero giant number drifts on scroll
+gsap.to('.wx-hero-giant', {
+    yPercent: 24,
+    ease: 'none',
+    scrollTrigger: { trigger: '.wx-hero', start: 'top top', end: 'bottom top', scrub: true }
+});
+
+// Process bg text drifts
+gsap.to('.wx-process-bg', {
+    xPercent: -8,
+    ease: 'none',
+    scrollTrigger: { trigger: '.wx-process', start: 'top bottom', end: 'bottom top', scrub: true }
 });
 
 // ============================================
-// SMOOTH SCROLL
+// SMOOTH ANCHOR SCROLL
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            gsap.to(window, { scrollTo: { y: target, offsetY: 80 }, duration: 1, ease: 'power3.inOut' });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
-
-// ============================================
-// RESPONSIVE CURSOR
-// ============================================
-if ('ontouchstart' in window) {
-    if (cursor) cursor.style.display = 'none';
-}
 
 // ============================================
 // RESIZE
