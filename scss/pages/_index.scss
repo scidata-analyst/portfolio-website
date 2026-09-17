@@ -2238,6 +2238,61 @@ body.home-page,
     }
     .trust-strip .trust-strip-inner{ padding: 0 16px; gap:16px; .trust-meta{ display:none;} }
     .snap-section, .services-bento, .work-preview, .edge-section, .process-v2, .testi-section, .pricing-teaser, .faq-teaser, .mega-cta { padding: 64px 16px; }
+
+    // --- SNAP HEADER MOBILE FIX ---
+    .snap-section {
+        .snap-header {
+            grid-template-columns: 1fr;
+            gap: 18px;
+            align-items: start;
+            margin-bottom: 32px;
+        }
+        .snap-pill {
+            width: auto;
+            max-width: 100%;
+            white-space: normal;
+            text-wrap: wrap;
+            overflow-wrap: anywhere;
+            line-height: 1.45;
+            padding: 10px 14px;
+            font-size: 0.66rem;
+            letter-spacing: 0.11em;
+            text-align: left;
+        }
+        .snap-title {
+            font-size: clamp(1.9rem, 9vw, 2.6rem);
+            line-height: 0.92;
+            letter-spacing: -0.03em;
+            word-break: break-word;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+            margin: 2px 0 0;
+            br { display: none; }
+        }
+        .snap-title .snap-stroke {
+            display: inline;
+        }
+        .snap-lead {
+            max-width: 100%;
+            font-size: 0.94rem;
+            line-height: 1.65;
+        }
+        .snap-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+        .snap-card {
+            min-height: auto;
+            padding: 22px 18px;
+            .snap-num { font-size: 2rem; }
+        }
+        .snap-foot {
+            gap: 12px;
+            font-size: 0.74rem;
+            .snap-foot-line { display: none; }
+        }
+    }
+
     .services-bento .bento-grid{ grid-template-columns: 1fr; .b-card--xl, .b-card--wide, .b-card--tall{ grid-column: span 1; } }
     .work-preview .wp-grid{ grid-template-columns: 1fr; }
     .edge-section .edge-grid-cards{ grid-template-columns: 1fr; }
@@ -2247,6 +2302,13 @@ body.home-page,
     .hero-v2{
         .hv-trust-mini{ flex-direction:column; align-items:flex-start; }
         .hv-ctas{ flex-direction:column; width:100%; .hv-btn{ width:100%; justify-content:center; } }
+    }
+    .snap-section {
+        padding: 48px 14px;
+        .snap-pill { font-size: 0.62rem; letter-spacing: 0.09em; padding: 9px 12px; }
+        .snap-title { font-size: clamp(1.75rem, 8.5vw, 2.2rem); }
+        .snap-lead { font-size: 0.88rem; }
+        .snap-card { padding: 20px 16px; }
     }
 }
 
