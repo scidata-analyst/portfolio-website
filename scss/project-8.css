@@ -1647,8 +1647,9 @@
 
 .project-8 .freelance-float {
   position: fixed;
-  left: 1rem;
-  bottom: 1rem;
+  left: auto;
+  right: 1rem;
+  bottom: 4.5rem;
   z-index: 1200;
   display: flex;
   align-items: center;
