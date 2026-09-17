@@ -173,20 +173,39 @@ setTimeout(() => {
 }, 4000);
 
 // ============================================
-// HERO REVEAL (after loader)
+// HERO REVEAL (after loader) — SUPPORTS BOTH LEGACY AND V2
 // ============================================
 function revealHero() {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.fromTo('.hero-eyebrow', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
-      .fromTo('.headline-line--1 .headline-word', { y: '100%', opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.1 }, '-=0.4')
-      .fromTo('.headline-line--2 .headline-word', { y: '100%', opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.1 }, '-=0.7')
-      .fromTo('.headline-line--3 .headline-word', { y: '100%', opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.1 }, '-=0.7')
-      .fromTo('.hero-subtext', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.5')
-      .fromTo('.hero-cta-group', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.5')
-      .fromTo('.hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.3')
-      .fromTo('.hero-side-text', { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.3')
-      .fromTo('.float-text', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 1.2, stagger: 0.2, ease: 'power2.out' }, '-=1');
+    // Legacy hero
+    if (document.querySelector('.hero-eyebrow')) {
+        tl.fromTo('.hero-eyebrow', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 })
+          .fromTo('.headline-line--1 .headline-word', { y: '100%', opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.1 }, '-=0.4')
+          .fromTo('.headline-line--2 .headline-word', { y: '100%', opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.1 }, '-=0.7')
+          .fromTo('.headline-line--3 .headline-word', { y: '100%', opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.1 }, '-=0.7')
+          .fromTo('.hero-subtext', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.5')
+          .fromTo('.hero-cta-group', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, '-=0.5')
+          .fromTo('.hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.3')
+          .fromTo('.hero-side-text', { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.3')
+          .fromTo('.float-text', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 1.2, stagger: 0.2, ease: 'power2.out' }, '-=1');
+    }
+
+    // HERO V2 — bolder first impression
+    if (document.querySelector('.hero-v2')) {
+        const hv = gsap.timeline({ defaults: { ease: 'power3.out' } });
+        hv.fromTo('.hv-top', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.2)
+          .fromTo('.hv-line', { y: 110, opacity: 0 }, { y: 0, opacity: 1, duration: 1.05, stagger: 0.12, ease: 'power4.out' }, 0.35)
+          .fromTo('.hv-lead', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.95)
+          .fromTo('.hv-trust-mini', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 1.05)
+          .fromTo('.hv-ctas', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 1.15)
+          .fromTo('.hv-micro', { opacity: 0 }, { opacity: 1, duration: 0.5 }, 1.3)
+          .fromTo('.hv-stats .hv-stat', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.08 }, 1.35)
+          .fromTo('.hv-browser', { y: 40, opacity: 0, rotate: -1 }, { y: 0, opacity: 1, rotate: -0.6, duration: 1, ease: 'power3.out' }, 0.8)
+          .fromTo('.hv-float', { y: 20, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.1, ease: 'back.out(1.4)' }, 1.2)
+          .fromTo('.hv-bottom', { opacity: 0 }, { opacity: 1, duration: 0.6 }, 1.5)
+          .fromTo('.hv-bigtype', { opacity: 0, scale: 0.98 }, { opacity: 1, scale: 1, duration: 1.2, ease: 'power2.out' }, 0.3);
+    }
 }
 
 // ============================================
@@ -553,6 +572,60 @@ if (totopBtn) {
         } else {
             totopBtn.classList.remove('visible');
         }
+    });
+}
+
+// ============================================
+// HERO V2 PARALLAX & BENTO REVEALS
+// ============================================
+if (document.querySelector('.hero-v2')) {
+    // Parallax on hero visual
+    gsap.to('.hv-browser', {
+        y: -30,
+        ease: 'none',
+        scrollTrigger: { trigger: '.hero-v2', start: 'top top', end: 'bottom top', scrub: 1 }
+    });
+    gsap.to('.hv-bigtype', {
+        y: -80,
+        ease: 'none',
+        scrollTrigger: { trigger: '.hero-v2', start: 'top top', end: 'bottom top', scrub: 1.2 }
+    });
+    gsap.to('.hv-float--a', {
+        y: -24,
+        ease: 'none',
+        scrollTrigger: { trigger: '.hero-v2', start: 'top top', end: 'bottom top', scrub: 1 }
+    });
+
+    // Reveal bento, work, edge, etc
+    const bentoCards = document.querySelectorAll('.b-card, .snap-card, .wp-card, .edge-card, .pv-step, .testi-card, .pt-card');
+    bentoCards.forEach((card, i) => {
+        gsap.from(card, {
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            delay: (i % 3) * 0.04,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 92%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+
+    // Snap header
+    gsap.from('.snap-title', {
+        y: 40,
+        opacity: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.snap-section', start: 'top 80%' }
+    });
+
+    // Mega CTA parallax
+    gsap.to('.mega-big', {
+        y: -60,
+        scrollTrigger: { trigger: '.mega-cta', start: 'top bottom', end: 'bottom top', scrub: 1 }
     });
 }
 
