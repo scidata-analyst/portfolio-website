@@ -45,23 +45,86 @@
 
     <!-- Page fix: pin lead-card ID rail to column 1, all text to column 2 (no overlap) -->
     <style>
-        .tm-card--captain > .tm-card-id { grid-column: 1; grid-row: 1 / -1; flex-direction: column; align-items: flex-start; align-self: start; width: 100%; }
-        .tm-card--captain > :not(.tm-card-id):not(.tm-card-flag) { grid-column: 2; min-width: 0; }
+        .tm-card--captain>.tm-card-id {
+            grid-column: 1;
+            grid-row: 1 / -1;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: start;
+            width: 100%;
+        }
+
+        .tm-card--captain> :not(.tm-card-id):not(.tm-card-flag) {
+            grid-column: 2;
+            min-width: 0;
+        }
+
         @media (max-width: 860px) {
-            .tm-card--captain > .tm-card-id { grid-column: 1; grid-row: auto; flex-direction: row; align-items: center; }
-            .tm-card--captain > :not(.tm-card-id):not(.tm-card-flag) { grid-column: 1; }
-            .tm-card--captain .tm-avatar { width: 92px; height: 92px; min-height: 0; flex-shrink: 0; }
+            .tm-card--captain>.tm-card-id {
+                grid-column: 1;
+                grid-row: auto;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .tm-card--captain> :not(.tm-card-id):not(.tm-card-flag) {
+                grid-column: 1;
+            }
+
+            .tm-card--captain .tm-avatar {
+                width: 92px;
+                height: 92px;
+                min-height: 0;
+                flex-shrink: 0;
+            }
         }
     </style>
 
     <!-- Page-specific: field-ops creds band (reuses tm-num-card look + animations) -->
     <style>
-        .tm-ops{background:#0a0a0a;color:#fff;padding:0 0 clamp(60px,6vw,100px);overflow:hidden}
-        .tm-ops-head{max-width:1500px;margin:0 auto 36px;padding:0 48px}
-        .tm-ops-grid{max-width:1500px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-        @media(max-width:1024px){.tm-ops-head,.tm-ops-grid{padding-left:28px;padding-right:28px}}
-        @media(max-width:860px){.tm-ops-grid{grid-template-columns:1fr}}
-        @media(max-width:640px){.tm-ops-head,.tm-ops-grid{padding-left:20px;padding-right:20px}}
+        .tm-ops {
+            background: #0a0a0a;
+            color: #fff;
+            padding: 0 0 clamp(60px, 6vw, 100px);
+            overflow: hidden
+        }
+
+        .tm-ops-head {
+            margin: 0 auto 36px;
+            padding: 0 48px
+        }
+
+        .tm-ops-grid {
+            margin: 0 auto;
+            padding: 0 48px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        @media(max-width:1024px) {
+
+            .tm-ops-head,
+            .tm-ops-grid {
+                padding-left: 28px;
+                padding-right: 28px
+            }
+        }
+
+        @media(max-width:860px) {
+            .tm-ops-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(max-width:640px) {
+
+            .tm-ops-head,
+            .tm-ops-grid {
+                padding-left: 20px;
+                padding-right: 20px
+            }
+        }
     </style>
 
     <!-- Structured Data (JSON-LD) -->
@@ -254,7 +317,8 @@
             </span>
             <span class="tm-line tm-line--2">
                 <span class="tm-word tm-word--accent">THAT SHIPS</span><span class="tm-word tm-word--dot">.</span>
-                <span class="tm-inline-note">— data engineers, firmware hands, ML minds. The people behind CONDUIT &amp; VOLT.</span>
+                <span class="tm-inline-note">— data engineers, firmware hands, ML minds. The people behind CONDUIT &amp;
+                    VOLT.</span>
             </span>
         </h1>
 
@@ -275,26 +339,38 @@
             </div>
             <div class="tm-spin" aria-hidden="true">
                 <svg viewBox="0 0 120 120">
-                    <defs><path id="tmCircle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" /></defs>
-                    <text><textPath href="#tmCircle">HUMANS SHIP • HUMANS SHIP • HUMANS SHIP • </textPath></text>
+                    <defs>
+                        <path id="tmCircle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />
+                    </defs>
+                    <text>
+                        <textPath href="#tmCircle">HUMANS SHIP • HUMANS SHIP • HUMANS SHIP • </textPath>
+                    </text>
                 </svg>
                 <span class="tm-spin-center">✦</span>
             </div>
         </div>
 
         <div class="tm-stats">
-            <div class="tm-stat"><span class="tm-stat-num">06</span><span class="tm-stat-label">Minds shipping</span></div>
-            <div class="tm-stat"><span class="tm-stat-num">02</span><span class="tm-stat-label">Primary squads live</span></div>
-            <div class="tm-stat"><span class="tm-stat-num">50+</span><span class="tm-stat-label">Shipped together</span></div>
-            <div class="tm-stat"><span class="tm-stat-num">5M+</span><span class="tm-stat-label">Rows/day piped</span></div>
+            <div class="tm-stat"><span class="tm-stat-num">06</span><span class="tm-stat-label">Minds shipping</span>
+            </div>
+            <div class="tm-stat"><span class="tm-stat-num">02</span><span class="tm-stat-label">Primary squads
+                    live</span></div>
+            <div class="tm-stat"><span class="tm-stat-num">50+</span><span class="tm-stat-label">Shipped together</span>
+            </div>
+            <div class="tm-stat"><span class="tm-stat-num">5M+</span><span class="tm-stat-label">Rows/day piped</span>
+            </div>
         </div>
     </header>
 
     <!-- ============ CRAFT TICKER ============ -->
     <div class="tm-ticker tm-ticker--lime" aria-hidden="true">
         <div class="tm-ticker-track">
-            <span>Data Pipelines</span><i>✦</i><span>IoT &amp; Edge</span><i>✦</i><span>AI on Data</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Cloud &amp; OTA</span><i>✦</i><span>Delivery</span><i>✦</i>
-            <span>Data Pipelines</span><i>✦</i><span>IoT &amp; Edge</span><i>✦</i><span>AI on Data</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Cloud &amp; OTA</span><i>✦</i><span>Delivery</span><i>✦</i>
+            <span>Data Pipelines</span><i>✦</i><span>IoT &amp; Edge</span><i>✦</i><span>AI on
+                Data</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Cloud &amp;
+                OTA</span><i>✦</i><span>Delivery</span><i>✦</i>
+            <span>Data Pipelines</span><i>✦</i><span>IoT &amp; Edge</span><i>✦</i><span>AI on
+                Data</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Cloud &amp;
+                OTA</span><i>✦</i><span>Delivery</span><i>✦</i>
         </div>
     </div>
 
@@ -323,73 +399,98 @@
                 <span class="tm-card-flag">★ LEAD ARCHITECT</span>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--1"><span>K</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 01 — LEAD</span><span class="tm-id-squad">DATA ✦ IoT ✦ AI</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 01 — LEAD</span><span class="tm-id-squad">DATA ✦
+                            IoT ✦ AI</span></div>
                 </div>
                 <h3 class="tm-card-name">MR. KANCHON</h3>
                 <span class="tm-card-role">Lead Software Architect</span>
-                <p class="tm-card-bio">Leads data &amp; IoT architecture — CONDUIT at 5M+ rows/day, VOLT from sensor to Grafana. Shipped Meta/WhatsApp AI chatbots for tier-1 telcos and operates 1,000+ DOOH screens.</p>
-                <div class="tm-skills"><span>Architecture</span><span>Kafka · MQTT</span><span>Telco AI · DOOH</span></div>
-                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span><p>Turns telco-scale chaos into boring, reliable infra.</p></div>
+                <p class="tm-card-bio">Leads data &amp; IoT architecture — CONDUIT at 5M+ rows/day, VOLT from sensor to
+                    Grafana. Shipped Meta/WhatsApp AI chatbots for tier-1 telcos and operates 1,000+ DOOH screens.</p>
+                <div class="tm-skills"><span>Architecture</span><span>Kafka · MQTT</span><span>Telco AI · DOOH</span>
+                </div>
+                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span>
+                    <p>Turns telco-scale chaos into boring, reliable infra.</p>
+                </div>
             </article>
 
             <article class="tm-card" data-squad="data platform" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--3"><span>M</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 02</span><span class="tm-id-squad">DATA PIPELINES</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 02</span><span class="tm-id-squad">DATA
+                            PIPELINES</span></div>
                 </div>
                 <h3 class="tm-card-name">MARCUS JOHNSON</h3>
                 <span class="tm-card-role">Data Platform Engineer</span>
-                <p class="tm-card-bio">Builds streaming pipelines that survive reality — schema drift, dead letters, back-pressure. Calm warehouses, calmer on-calls.</p>
+                <p class="tm-card-bio">Builds streaming pipelines that survive reality — schema drift, dead letters,
+                    back-pressure. Calm warehouses, calmer on-calls.</p>
                 <div class="tm-skills"><span>Kafka · Spark</span><span>ClickHouse</span><span>Python</span></div>
-                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span><p>Finds the clogged partition before it finds you.</p></div>
+                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span>
+                    <p>Finds the clogged partition before it finds you.</p>
+                </div>
             </article>
 
             <article class="tm-card" data-squad="iot data" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--5"><span>L</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 03</span><span class="tm-id-squad">IoT &amp; EDGE</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 03</span><span class="tm-id-squad">IoT &amp;
+                            EDGE</span></div>
                 </div>
                 <h3 class="tm-card-name">LEO TORRES</h3>
                 <span class="tm-card-role">IoT &amp; Edge Lead</span>
-                <p class="tm-card-bio">Firmware, MQTT/LoRa fleets and OTA that just works. Keeps devices online in the field and pipelines green at 3am.</p>
+                <p class="tm-card-bio">Firmware, MQTT/LoRa fleets and OTA that just works. Keeps devices online in the
+                    field and pipelines green at 3am.</p>
                 <div class="tm-skills"><span>MQTT · LoRa</span><span>Firmware</span><span>OTA · K8s</span></div>
-                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span><p>99.9% uptime from sensor to Grafana, zero drama.</p></div>
+                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span>
+                    <p>99.9% uptime from sensor to Grafana, zero drama.</p>
+                </div>
             </article>
 
             <article class="tm-card" data-squad="ai data" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--4"><span>A</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 04</span><span class="tm-id-squad">AI ON DATA</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 04</span><span class="tm-id-squad">AI ON
+                            DATA</span></div>
                 </div>
                 <h3 class="tm-card-name">DR. AISHA PATEL</h3>
                 <span class="tm-card-role">ML Engineer, AI on Data</span>
-                <p class="tm-card-bio">Anomaly detection on sensor streams, YOLO vision, RAG over warehouses — AI that pays for itself on top of solid data.</p>
+                <p class="tm-card-bio">Anomaly detection on sensor streams, YOLO vision, RAG over warehouses — AI that
+                    pays for itself on top of solid data.</p>
                 <div class="tm-skills"><span>PyTorch</span><span>YOLO · RAG</span><span>Timescale</span></div>
-                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span><p>Explains transformers to your grandma. Accurately.</p></div>
+                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span>
+                    <p>Explains transformers to your grandma. Accurately.</p>
+                </div>
             </article>
 
             <article class="tm-card" data-squad="platform iot" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--2"><span>S</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 05</span><span class="tm-id-squad">PLATFORM &amp; UX</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 05</span><span class="tm-id-squad">PLATFORM &amp;
+                            UX</span></div>
                 </div>
                 <h3 class="tm-card-name">SARAH CHEN</h3>
                 <span class="tm-card-role">Dashboards &amp; UX Lead</span>
-                <p class="tm-card-bio">Grafana dashboards operators actually love — live KPIs, drill-downs, alerts. Portals only when your data needs a frontend.</p>
+                <p class="tm-card-bio">Grafana dashboards operators actually love — live KPIs, drill-downs, alerts.
+                    Portals only when your data needs a frontend.</p>
                 <div class="tm-skills"><span>Grafana</span><span>UX</span><span>Portals</span></div>
-                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span><p>KPIs you can read at 3am, half asleep.</p></div>
+                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span>
+                    <p>KPIs you can read at 3am, half asleep.</p>
+                </div>
             </article>
 
             <article class="tm-card" data-squad="platform" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--6"><span>N</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 06</span><span class="tm-id-squad">PLATFORM &amp; UX</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 06</span><span class="tm-id-squad">PLATFORM &amp;
+                            UX</span></div>
                 </div>
                 <h3 class="tm-card-name">NINA KOWALSKI</h3>
                 <span class="tm-card-role">Delivery &amp; Client Lead</span>
-                <p class="tm-card-bio">Milestones, weekly demos, docs and training. Turns fixed quotes into shipped MVPs — and keeps every promise visible.</p>
+                <p class="tm-card-bio">Milestones, weekly demos, docs and training. Turns fixed quotes into shipped MVPs
+                    — and keeps every promise visible.</p>
                 <div class="tm-skills"><span>Scoping</span><span>Demos</span><span>Docs</span></div>
-                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span><p>Smells a slipping milestone from three rooms away.</p></div>
+                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span>
+                    <p>Smells a slipping milestone from three rooms away.</p>
+                </div>
             </article>
         </div>
         <p class="tm-roster-empty" hidden>Nobody in this squad — yet. <a href="contact.html">Talk to us →</a></p>
@@ -399,7 +500,8 @@
     <section class="tm-ops">
         <div class="tm-nums-marquee" aria-hidden="true">
             <div class="tm-nums-track">
-                <span>TELCO-GRADE OPS</span><i>✦</i><span>1000+ SCREENS</span><i>✦</i><span>TELCO-GRADE OPS</span><i>✦</i><span>1000+ SCREENS</span><i>✦</i>
+                <span>TELCO-GRADE OPS</span><i>✦</i><span>1000+ SCREENS</span><i>✦</i><span>TELCO-GRADE
+                    OPS</span><i>✦</i><span>1000+ SCREENS</span><i>✦</i>
             </div>
         </div>
         <div class="tm-ops-head">
@@ -409,11 +511,13 @@
         <div class="tm-ops-grid">
             <div class="tm-num-card tm-num-card--lime" data-counter>
                 <span class="tm-num-val"><span data-count="1000">0</span>+</span>
-                <span class="tm-num-label">DOOH screens operated &amp; monitored — fleet uptime, content ops, remote care.</span>
+                <span class="tm-num-label">DOOH screens operated &amp; monitored — fleet uptime, content ops, remote
+                    care.</span>
             </div>
             <div class="tm-num-card" data-counter>
                 <span class="tm-num-val">24/7</span>
-                <span class="tm-num-label">Meta / WhatsApp AI chatbot ops for big telcos — Robi · Airtel live in production.</span>
+                <span class="tm-num-label">Meta / WhatsApp AI chatbot ops for big telcos — Robi · Airtel live in
+                    production.</span>
             </div>
         </div>
     </section>
@@ -433,7 +537,8 @@
             <article class="tm-rule" data-rule>
                 <span class="tm-rule-glyph">≋</span>
                 <h3>DATA FIRST, AI SECOND</h3>
-                <p>Fix the pipeline before the model. AI on clean, flowing data prints money — on mess, it prints excuses.</p>
+                <p>Fix the pipeline before the model. AI on clean, flowing data prints money — on mess, it prints
+                    excuses.</p>
             </article>
             <article class="tm-rule" data-rule>
                 <span class="tm-rule-glyph">⚡</span>
@@ -457,7 +562,8 @@
     <section class="tm-nums">
         <div class="tm-nums-marquee" aria-hidden="true">
             <div class="tm-nums-track">
-                <span>SMALL CREW</span><i>✦</i><span>BIG OUTPUT</span><i>✦</i><span>SMALL CREW</span><i>✦</i><span>BIG OUTPUT</span><i>✦</i>
+                <span>SMALL CREW</span><i>✦</i><span>BIG OUTPUT</span><i>✦</i><span>SMALL CREW</span><i>✦</i><span>BIG
+                    OUTPUT</span><i>✦</i>
             </div>
         </div>
         <div class="tm-nums-grid">
@@ -488,10 +594,13 @@
             <span>DATA THAT DECIDES.</span>
             <span class="tm-cta-stroke">IoT THAT SHIPS.</span>
         </h2>
-        <p class="tm-cta-sub">Have sensors or messy data? Meet the crew who ships pipeline + IoT MVP in 6 weeks — MQTT → Timescale → Grafana.</p>
+        <p class="tm-cta-sub">Have sensors or messy data? Meet the crew who ships pipeline + IoT MVP in 6 weeks — MQTT →
+            Timescale → Grafana.</p>
         <div class="tm-cta-row">
-            <a href="contact.html" class="tm-btn tm-btn--lime tm-btn--huge" data-magnetic><span>Get Data/IoT quote</span><span class="tm-btn-arrow">→</span></a>
-            <a href="consultation.html" class="tm-btn tm-btn--ghost tm-btn--huge" data-magnetic><span>Book free data audit</span></a>
+            <a href="contact.html" class="tm-btn tm-btn--lime tm-btn--huge" data-magnetic><span>Get Data/IoT
+                    quote</span><span class="tm-btn-arrow">→</span></a>
+            <a href="consultation.html" class="tm-btn tm-btn--ghost tm-btn--huge" data-magnetic><span>Book free data
+                    audit</span></a>
         </div>
         <div class="tm-cta-meta">
             <span>✦ Dhaka + remote</span><span>✦ Since 2021</span><span>✦ WhatsApp: +8801797636430</span>
@@ -506,7 +615,8 @@
                 Prefer email?<br>
                 <span class="cta-accent">hello@scidata-analyst.com</span>
             </h2>
-            <p class="cta-subtext">Send your data source or sensor spec — we'll reply with pipeline/IoT plan &amp; fixed price within 24 hours.</p>
+            <p class="cta-subtext">Send your data source or sensor spec — we'll reply with pipeline/IoT plan &amp; fixed
+                price within 24 hours.</p>
             <a href="mailto:hello@scidata-analyst.com" class="btn-magnetic btn-cta-large" data-magnetic>
                 <span class="btn-label">Email us</span>
                 <span class="btn-arrow">
@@ -555,7 +665,8 @@
                         <span>Get Data/IoT quote</span>
                         <span class="footer-cta-btn-arrow">→</span>
                     </a>
-                    <a href="https://wa.me/8801797636430" target="_blank" class="footer-cta-btn footer-cta-btn--ghost" data-magnetic>
+                    <a href="https://wa.me/8801797636430" target="_blank" class="footer-cta-btn footer-cta-btn--ghost"
+                        data-magnetic>
                         <span>WhatsApp us</span>
                     </a>
                 </div>
@@ -641,7 +752,8 @@
                         </a>
                     </li>
                 </ul>
-                <span class="footer-signal-badge"><span class="footer-signal-dot"></span>Reply &lt; 24h · NDA friendly</span>
+                <span class="footer-signal-badge"><span class="footer-signal-dot"></span>Reply &lt; 24h · NDA
+                    friendly</span>
             </div>
         </div>
 
