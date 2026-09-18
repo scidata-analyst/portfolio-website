@@ -4,13 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORGE — Custom NLP Training That Ships Itself | Case Study 09</title>
+    <title>FORGE - Custom NLP Training That Ships</title>
     <meta name="description"
-        content="Problem → Solution → Outcome. How we built an MLOps forge that takes NLP from notebook to production in one click — 10× faster training, 94.2 F1, −68% GPU bill.">
+        content="FORGE case study: custom NLP MLOps pipeline with 94.2 F1, 10x faster training, 68% lower GPU cost and 1-click deploy.">
     <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
     <link rel="stylesheet" href="scss/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="https://scidata-analyst.com/project-9.html">
+    <link rel="alternate" hreflang="x-default" href="https://scidata-analyst.com/project-9.html">
+    <link rel="alternate" hreflang="en" href="https://scidata-analyst.com/project-9.html">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="Scidata Analyst">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://scidata-analyst.com/project-9.html">
+    <meta property="og:title" content="FORGE - Custom NLP Training That Ships">
+    <meta property="og:description" content="FORGE case study: custom NLP MLOps pipeline with 94.2 F1, 10x faster training, 68% lower GPU cost and 1-click deploy.">
+    <meta property="og:image" content="https://scidata-analyst.com/assets/img/og-cover-forge-1200x630.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FORGE MLOps case study cover - custom NLP training pipeline">
+    <meta property="og:site_name" content="Scidata Analyst">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FORGE - Custom NLP Training That Ships">
+    <meta name="twitter:description" content="FORGE case study: custom NLP MLOps pipeline with 94.2 F1, 10x faster training, 68% lower GPU cost and 1-click deploy.">
+    <meta name="twitter:image" content="https://scidata-analyst.com/assets/img/og-cover-forge-1200x630.png">
+    <meta name="twitter:image:alt" content="FORGE MLOps case study cover - custom NLP training pipeline">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script defer src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@graph": [{"@type": "TechArticle", "headline": "FORGE - Custom NLP Training That Ships", "description": "FORGE case study: custom NLP MLOps pipeline with 94.2 F1, 10x faster training, 68% lower GPU cost and 1-click deploy.", "author": {"@type": "Organization", "name": "Scidata Analyst", "url": "https://scidata-analyst.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://scidata-analyst.com/project-9.html"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://scidata-analyst.com/"}, {"@type": "ListItem", "position": 2, "name": "Work", "item": "https://scidata-analyst.com/work.html"}, {"@type": "ListItem", "position": 3, "name": "FORGE MLOps Case Study"}]}]}
+    </script>
 </head>
 
 <body class="project-9">
@@ -28,16 +58,16 @@
 
     <!-- LOADER -->
     <div class="loader" data-loader aria-hidden="true">
-        <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 09/09</span></div>
+        <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE - 09/09</span></div>
         <div class="loader-center">
-            <div class="loader-word" data-loader-word>HEATING FORGE…</div>
+            <div class="loader-word" data-loader-word>HEATING FORGE...</div>
             <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
             <div class="loader-track">
                 <div class="loader-fill" data-loader-fill></div>
             </div>
-            <div class="loader-sub">SPINNING GPUs · LOADING CHECKPOINTS · QUEUING EPOCHS</div>
+            <div class="loader-sub">SPINNING GPUs | LOADING CHECKPOINTS | QUEUING EPOCHS</div>
         </div>
-        <div class="loader-bottom"><span>FORGE · MLOPS CORE</span><span>PYTORCH / HF / MLFLOW / K8s</span></div>
+        <div class="loader-bottom"><span>FORGE | MLOPS CORE</span><span>PYTORCH / HF / MLFLOW / K8s</span></div>
     </div>
 
     <!-- NAV -->
@@ -48,8 +78,8 @@
                 </svg></span>
             <span>ALL WORK</span>
         </a>
-        <div class="nav-mid">CASE STUDY <strong>— 09 / 09</strong></div>
-        <a href="contact.html" class="nav-cta" data-magnetic><span>FORGE MY MODEL</span><i>↗</i></a>
+        <div class="nav-mid">CASE STUDY <strong>- 09 / 09</strong></div>
+        <a href="contact.html" class="nav-cta" data-magnetic><span>FORGE MY MODEL</span><i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
     </header>
 
     <main>
@@ -63,17 +93,17 @@
 
             <div class="hero-inner">
                 <div class="hero-eyebrow" data-reveal>
-                    <span class="pill"><span class="dot"></span> LIVE FORGE · <b data-live-runs>312</b> RUNS THIS
+                    <span class="pill"><span class="dot"></span> LIVE FORGE | <b data-live-runs>312</b> RUNS THIS
                         MONTH</span>
-                    <span class="hero-loc">10× FASTER · 94.2 F1 · 1-CLICK DEPLOY</span>
+                    <span class="hero-loc">10x FASTER | 94.2 F1 | 1-CLICK DEPLOY</span>
                 </div>
 
-                <h1 class="hero-title">
+                <h1 class="hero-title" aria-label="FORGE custom NLP training and MLOps deployment platform">
                     <span class="line"><span class="word" data-reveal>NOTEBOOKS</span></span>
                     <span class="line"><span class="word word--stroke" data-reveal>DON'T SHIP.</span></span>
                     <span class="line"><span class="word word--indigo" data-reveal>FORGE DOES<span
                                 class="period">.</span></span></span>
-                    <span class="line line--small"><span class="word word--small" data-reveal>FORGE — CUSTOM NLP FROM
+                    <span class="line line--small"><span class="word word--small" data-reveal>FORGE - CUSTOM NLP FROM
                             DATASET TO PRODUCTION ENDPOINT. TRACKED, TESTED, DEPLOYED, MONITORED.</span></span>
                 </h1>
 
@@ -81,13 +111,13 @@
                     <p class="hero-desc" data-reveal>
                         Great models died in <s>Jupyter tabs and "final_v7_REAL.ipynb"</s>. <strong>FORGE turns any
                             dataset into a
-                            tracked, tuned, A/B-tested endpoint</strong> — while the GPU bill shrinks instead of
+                            tracked, tuned, A/B-tested endpoint</strong> - while the GPU bill shrinks instead of
                         explodes.
                     </p>
                     <div class="hero-ctas" data-reveal>
                         <a href="#demo" class="btn btn--indigo" data-magnetic><span>RUN LIVE TRAINING
-                                ↓</span><i>⚙</i></a>
-                        <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
+                                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span><i class="fa-solid fa-gear" aria-hidden="true"></i></a>
+                        <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -96,13 +126,13 @@
                     <div class="terminal" data-reveal>
                         <div class="terminal-bar">
                             <span class="t-dots"><i></i><i></i><i></i></span>
-                            <span class="t-title">forge — run #4471 · bn-sentiment-v3 · 4×A100</span>
+                            <span class="t-title">forge - run #4471 | bn-sentiment-v3 | 4xA100</span>
                             <span class="t-live"><span class="blink"></span> EPOCH 7/12</span>
                         </div>
                         <div class="terminal-body">
                             <div class="rungrid">
                                 <div class="lossbox">
-                                    <span class="loss-label">TRAIN LOSS → <b data-hero-loss>0.41</b> · F1 <b
+                                    <span class="loss-label">TRAIN LOSS > <b data-hero-loss>0.41</b> | F1 <b
                                             data-hero-f1>94.2</b></span>
                                     <svg viewBox="0 0 300 90" preserveAspectRatio="none" class="loss-svg"
                                         aria-hidden="true">
@@ -114,27 +144,27 @@
                                             class="loss-area" />
                                         <circle cx="296" cy="12" r="5" class="loss-dot" />
                                     </svg>
-                                    <span class="loss-sub">early-stop armed · best ckpt: epoch 7 · val 94.2</span>
+                                    <span class="loss-sub">early-stop armed | best ckpt: epoch 7 | val 94.2</span>
                                 </div>
                                 <div class="runstats">
-                                    <div class="rs"><span>GPU</span><b data-hero-gpu>4×A100 · 91%</b></div>
+                                    <div class="rs"><span>GPU</span><b data-hero-gpu>4xA100 | 91%</b></div>
                                     <div class="rs"><span>COST</span><b data-hero-cost>$18.40</b></div>
-                                    <div class="rs rs--ok"><span>STATUS</span><b>CHAMPION ✓</b></div>
+                                    <div class="rs rs--ok"><span>STATUS</span><b>CHAMPION <i class="fa-solid fa-check" aria-hidden="true"></i></b></div>
                                 </div>
                             </div>
                             <div class="runlog" data-hero-log>
-                                <div class="rl-row"><span>ep7</span><span>loss 0.41 → F1 94.2</span><em>best ✓</em>
+                                <div class="rl-row"><span>ep7</span><span>loss 0.41 > F1 94.2</span><em>best <i class="fa-solid fa-check" aria-hidden="true"></i></em>
                                 </div>
-                                <div class="rl-row"><span>ep6</span><span>loss 0.48 → F1 93.1</span><em>ckpt saved</em>
+                                <div class="rl-row"><span>ep6</span><span>loss 0.48 > F1 93.1</span><em>ckpt saved</em>
                                 </div>
-                                <div class="rl-row"><span>ep5</span><span>loss 0.55 → F1 91.8</span><em>lr ×0.5</em>
+                                <div class="rl-row"><span>ep5</span><span>loss 0.55 > F1 91.8</span><em>lr x0.5</em>
                                 </div>
                             </div>
                             <div class="terminal-foot">
-                                <span class="prompt">❯</span>
-                                <span class="fake-input">Champion beats baseline <b>+6.4 F1</b> — promoting to canary
+                                <span class="prompt"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></span>
+                                <span class="fake-input">Champion beats baseline <b>+6.4 F1</b> - promoting to canary
                                     10%<span class="caret"></span></span>
-                                <span class="send">DEPLOY ✓</span>
+                                <span class="send">DEPLOY <i class="fa-solid fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
                         <div class="terminal-badges">
@@ -144,29 +174,29 @@
 
                     <!-- STAT RAIL -->
                     <div class="hero-rail" data-reveal>
-                        <div class="rail-head">WHY IT MATTERS — TL;DR</div>
+                        <div class="rail-head">WHY IT MATTERS - TL;DR</div>
                         <a href="#problem" class="rail-card rail-card--problem">
                             <span class="rail-num">01</span>
                             <span class="rail-kicker">THE PROBLEM</span>
                             <strong>Models stuck in notebooks, GPU bills with nothing shipped.</strong>
-                            <span class="rail-link">Read the pain →</span>
+                            <span class="rail-link">Read the pain <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
                         </a>
                         <a href="#solve" class="rail-card rail-card--solve">
                             <span class="rail-num">02</span>
                             <span class="rail-kicker">HOW WE SOLVED</span>
-                            <strong>Dataset → tuned run → canary deploy, one pipeline.</strong>
-                            <span class="rail-link">See the forge →</span>
+                            <strong>Dataset > tuned run > canary deploy, one pipeline.</strong>
+                            <span class="rail-link">See the forge <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
                         </a>
                         <a href="#outcome" class="rail-card rail-card--outcome">
                             <span class="rail-num">03</span>
                             <span class="rail-kicker">THE OUTCOME</span>
-                            <strong>10× faster · 94.2 F1 · −68% GPU cost.</strong>
-                            <span class="rail-link">See proof →</span>
+                            <strong>10x faster | 94.2 F1 | -68% GPU cost.</strong>
+                            <span class="rail-link">See proof <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
                         </a>
                         <div class="rail-meta">
                             <div><span>CLIENT</span><strong>SaaS + support teams</strong></div>
                             <div><span>TIMELINE</span><strong>8 weeks</strong></div>
-                            <div><span>ROLE</span><strong>MLOps → Train → Ship</strong></div>
+                            <div><span>ROLE</span><strong>MLOps > Train > Ship</strong></div>
                         </div>
                     </div>
                 </div>
@@ -180,10 +210,10 @@
         <!-- TICKER -->
         <div class="ticker" aria-hidden="true">
             <div class="ticker-track">
-                <span>PYTORCH <i>◆</i></span><span>HF TRANSFORMERS <i>◆</i></span><span>MLFLOW <i>◆</i></span><span>K8s
-                    GPU <i>◆</i></span><span>10× FASTER <i>◆</i></span><span>1-CLICK DEPLOY <i>◆</i></span>
-                <span>PYTORCH <i>◆</i></span><span>HF TRANSFORMERS <i>◆</i></span><span>MLFLOW <i>◆</i></span><span>K8s
-                    GPU <i>◆</i></span><span>10× FASTER <i>◆</i></span><span>1-CLICK DEPLOY <i>◆</i></span>
+                <span>PYTORCH <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>HF TRANSFORMERS <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>MLFLOW <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>K8s
+                    GPU <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>10x FASTER <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>1-CLICK DEPLOY <i class="fa-solid fa-diamond" aria-hidden="true"></i></span>
+                <span>PYTORCH <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>HF TRANSFORMERS <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>MLFLOW <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>K8s
+                    GPU <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>10x FASTER <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>1-CLICK DEPLOY <i class="fa-solid fa-diamond" aria-hidden="true"></i></span>
             </div>
         </div>
 
@@ -205,8 +235,8 @@
                     </p>
                     <blockquote class="quote" data-reveal>
                         <p>"We spent $9,000 on GPUs and shipped a CSV of predictions. The notebook worked on exactly one
-                            laptop — mine."</p>
-                        <cite>— ML Engineer, before FORGE</cite>
+                            laptop - mine."</p>
+                        <cite>- ML Engineer, before FORGE</cite>
                     </blockquote>
                 </div>
 
@@ -215,7 +245,7 @@
                         <span class="pain-num">P.01</span>
                         <h3>NOTEBOOK GRAVEYARD</h3>
                         <p>No tracking, no seeds, no splits. <strong>1 in 3 runs</strong> couldn't be reproduced a week
-                            later — by the same author.</p>
+                            later - by the same author.</p>
                         <div class="pain-stat"><strong>1 in 3</strong><span>runs unreproducible</span></div>
                     </article>
                     <article class="pain" data-reveal>
@@ -228,9 +258,9 @@
                     <article class="pain" data-reveal>
                         <span class="pain-num">P.03</span>
                         <h3>DEPLOY CLIFF</h3>
-                        <p>Prototype → production meant a rewrite. No canary, no rollback. <strong>6 weeks</strong>
+                        <p>Prototype > production meant a rewrite. No canary, no rollback. <strong>6 weeks</strong>
                             median notebook-to-endpoint.</p>
-                        <div class="pain-stat"><strong>6 wks</strong><span>notebook → endpoint</span></div>
+                        <div class="pain-stat"><strong>6 wks</strong><span>notebook > endpoint</span></div>
                     </article>
                 </div>
 
@@ -241,7 +271,7 @@
                     <div class="ba-row"><span>GPU $ per shipped point of F1</span>
                         <div class="bar"><i style="--w:88%;--c:#FF3B30"></i></div><strong>$410</strong>
                     </div>
-                    <div class="ba-row"><span>Notebook → production</span>
+                    <div class="ba-row"><span>Notebook > production</span>
                         <div class="bar"><i style="--w:84%;--c:#FF3B30"></i></div><strong>6 weeks</strong>
                     </div>
                 </div>
@@ -253,23 +283,23 @@
             <div class="wrap">
                 <div class="sec-head sec-head--light" data-reveal>
                     <span class="sec-index">02 / HOW WE SOLVED IT</span>
-                    <span class="sec-tag">NOT A NOTEBOOK — A FURNACE WITH PIPES</span>
+                    <span class="sec-tag">NOT A NOTEBOOK - A FURNACE WITH PIPES</span>
                 </div>
                 <h2 class="mega mega--light" data-reveal>FEED IT DATA.<br>GET BACK AN <span
                         class="ember">ENDPOINT.</span></h2>
                 <p class="lede lede--light" data-reveal>Four stages, one tracked lineage. Every dataset becomes a tuned,
-                    tested, canaried endpoint — and every dollar of GPU is accounted for:</p>
+                    tested, canaried endpoint - and every dollar of GPU is accounted for:</p>
 
                 <div class="pipeline">
                     <article class="pipe" data-reveal>
                         <div class="pipe-num">01</div>
                         <div class="pipe-body">
-                            <span class="pipe-kicker">INTAKE · DATASETS IN, CHAOS OUT</span>
+                            <span class="pipe-kicker">INTAKE | DATASETS IN, CHAOS OUT</span>
                             <h3>DATA WITH A BIRTH CERTIFICATE</h3>
-                            <p>Upload CSV/JSONL/parquet — <strong>auto-tokenized, deduped, split +
+                            <p>Upload CSV/JSONL/parquet - <strong>auto-tokenized, deduped, split +
                                     fingerprinted</strong>. Every row traces to the run it trained.</p>
                             <code
-                                class="code">upload support_bn.csv → 48,210 rows · dedupe −3.1% · split 80/10/10 · hash a3f9…</code>
+                                class="code">upload support_bn.csv > 48,210 rows | dedupe -3.1% | split 80/10/10 | hash a3f9...</code>
                             <div class="chips"><span>Datasets</span><span>Auto-tokenize</span><span>DVC lineage</span>
                             </div>
                         </div>
@@ -277,29 +307,29 @@
                     <article class="pipe pipe--feature" data-reveal>
                         <div class="pipe-num">02</div>
                         <div class="pipe-body">
-                            <span class="pipe-kicker">FURNACE · DISTRIBUTED TUNING</span>
-                            <h3>TRAIN 10×, PAY ⅓×</h3>
+                            <span class="pipe-kicker">FURNACE | DISTRIBUTED TUNING</span>
+                            <h3>TRAIN 10x, PAY 1/3x</h3>
                             <p>LoRA + mixed precision + early stop on <strong>spot A100s</strong>. Hyperparameter sweep
                                 runs 16 trials in the time one full fine-tune took.</p>
                             <div class="nlu-viz">
                                 <span class="tok">16 trials <em>parallel</em></span>
-                                <span class="tok tok--hot">best: lr 2e-5 · F1 94.2 <em>epoch 7 ✓</em></span>
-                                <span class="tok">stopped 9 duds <em>early −$310</em></span>
+                                <span class="tok tok--hot">best: lr 2e-5 | F1 94.2 <em>epoch 7 <i class="fa-solid fa-check" aria-hidden="true"></i></em></span>
+                                <span class="tok">stopped 9 duds <em>early -$310</em></span>
                             </div>
                             <code
-                                class="code">{ sweep 16 · best F1 94.2 @ep7 · early-stop 9 · cost $18.40 vs $210 }</code>
+                                class="code">{ sweep 16 | best F1 94.2 @ep7 | early-stop 9 | cost $18.40 vs $210 }</code>
                             <div class="chips"><span>PyTorch</span><span>HF + LoRA</span><span>Spot GPUs</span></div>
                         </div>
                     </article>
                     <article class="pipe" data-reveal>
                         <div class="pipe-num">03</div>
                         <div class="pipe-body">
-                            <span class="pipe-kicker">PROVING GROUND · EVAL + A/B</span>
+                            <span class="pipe-kicker">PROVING GROUND | EVAL + A/B</span>
                             <h3>PROVE IT BEFORE IT SHIPS</h3>
                             <p>Champion vs baseline on <strong>held-out + slice tests</strong> (Bangla, sarcasm,
                                 long-tail). Only promotes on statistically significant wins.</p>
                             <code
-                                class="code">champion +6.4 F1 · slices all green · p&lt;0.01 → promote to canary 10%</code>
+                                class="code">champion +6.4 F1 | slices all green | p&lt;0.01 > promote to canary 10%</code>
                             <div class="chips"><span>Eval harness</span><span>Slice tests</span><span>MLflow</span>
                             </div>
                         </div>
@@ -307,9 +337,9 @@
                     <article class="pipe pipe--loop" data-reveal>
                         <div class="pipe-num">04</div>
                         <div class="pipe-body">
-                            <span class="pipe-kicker">DEPLOY · 1-CLICK + WATCH</span>
+                            <span class="pipe-kicker">DEPLOY | 1-CLICK + WATCH</span>
                             <h3>SHIP IT, THEN BABYSIT IT</h3>
-                            <p>One click → <strong>autoscaling endpoint + drift monitor</strong>. p95 latency, F1 proxy,
+                            <p>One click > <strong>autoscaling endpoint + drift monitor</strong>. p95 latency, F1 proxy,
                                 data drift on one dashboard; auto-rollback on red.</p>
                             <div class="mini-bars"><i style="--h:34%"></i><i style="--h:52%"></i><i
                                     style="--h:68%"></i><i style="--h:84%"></i><i style="--h:99%"></i></div>
@@ -326,33 +356,33 @@
             <div class="wrap demo-wrap">
                 <div class="sec-head" data-reveal>
                     <span class="sec-index">LIVE FORGE</span>
-                    <span class="sec-tag">YOU ARE THE MLOps ENGINEER — SHIP IT</span>
+                    <span class="sec-tag">YOU ARE THE MLOps ENGINEER - SHIP IT</span>
                 </div>
                 <h2 class="mega" data-reveal>TRAIN IT.<br><span class="indigo">BREAK IT. SHIP IT.</span></h2>
 
                 <div class="demo-grid">
                     <div class="demo-board" data-reveal>
-                        <div class="demo-head"><span class="pulse"></span> FORGE · RUN SIM <span class="lat" data-lat>ep
+                        <div class="demo-head"><span class="pulse"></span> FORGE | RUN SIM <span class="lat" data-lat>ep
                                 0/12</span></div>
                         <div class="demo-stats">
                             <div class="ds"><span>LOSS</span><strong data-demo-loss>2.31</strong></div>
                             <div class="ds"><span>F1</span><strong data-demo-f1>61.4</strong><em>%</em></div>
                             <div class="ds"><span>COST</span><strong data-demo-cost>$0.00</strong></div>
-                            <div class="ds ds--gpu"><span>GPUs</span><strong data-demo-gpu>1×A100</strong></div>
+                            <div class="ds ds--gpu"><span>GPUs</span><strong data-demo-gpu>1xA100</strong></div>
                         </div>
                         <div class="demo-lossbars" data-lossbars aria-hidden="true"></div>
                         <div class="demo-feed" data-messages>
                             <div class="msg msg--ok">
-                                <p>Run queued — <b>bn-sentiment-v3</b> · 48k rows · LoRA r16 · 1×A100 spot. Press
-                                    <b>START RUN</b>.</p><span class="intent">seed 42 · split 80/10/10 · est.
+                                <p>Run queued - <b>bn-sentiment-v3</b> | 48k rows | LoRA r16 | 1xA100 spot. Press
+                                    <b>START RUN</b>.</p><span class="intent">seed 42 | split 80/10/10 | est.
                                     $18.40</span>
                             </div>
                         </div>
                         <div class="demo-chips" data-chips>
-                            <button data-act="start">Start run ▶</button>
-                            <button data-act="noise">Inject noisy labels 🗑️</button>
-                            <button data-act="scale">Add GPUs ×4 ⚡</button>
-                            <button data-act="deploy" class="ghost">Deploy champion ✓</button>
+                            <button data-act="start">Start run <i class="fa-solid fa-play" aria-hidden="true"></i></button>
+                            <button data-act="noise">Inject noisy labels <i class="fa-solid fa-trash" aria-hidden="true"></i></button>
+                            <button data-act="scale">Add GPUs x4 <i class="fa-solid fa-bolt" aria-hidden="true"></i></button>
+                            <button data-act="deploy" class="ghost">Deploy champion <i class="fa-solid fa-check" aria-hidden="true"></i></button>
                         </div>
                     </div>
                     <div class="demo-side" data-reveal>
@@ -360,14 +390,14 @@
                         <ul>
                             <li><strong>Loss bars</strong> = per-epoch loss. Should fall, fast.</li>
                             <li><strong>Noise</strong> = 8% label corruption. Watch F1 wobble, then recover.</li>
-                            <li><strong>Deploy</strong> works only past <strong>90 F1</strong> — like the real gate.
+                            <li><strong>Deploy</strong> works only past <strong>90 F1</strong> - like the real gate.
                             </li>
                         </ul>
                         <div class="arch">
-                            <span>DATA</span><i>→</i><span>TRAIN</span><i>→</i><span>EVAL</span><i>→</i><span>SHIP</span>
+                            <span>DATA</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>TRAIN</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>EVAL</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>SHIP</span>
                         </div>
                         <a href="contact.html" class="btn btn--indigo" data-magnetic><span>FORGE MY
-                                MODEL</span><i>↗</i></a>
+                                MODEL</span><i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -384,8 +414,8 @@
                         DAY.</span></h2>
 
                 <div class="metrics">
-                    <div class="metric" data-reveal data-count="10" data-suffix="×">
-                        <span class="metric-val"><span data-num>10×</span></span>
+                    <div class="metric" data-reveal data-count="10" data-suffix="x">
+                        <span class="metric-val"><span data-num>10x</span></span>
                         <span class="metric-label">FASTER TRAINING</span>
                         <span class="metric-sub">LoRA + spot + early stop</span>
                     </div>
@@ -394,10 +424,10 @@
                         <span class="metric-label">CHAMPION F1</span>
                         <span class="metric-sub">was 87.8 baseline</span>
                     </div>
-                    <div class="metric" data-reveal data-count="68" data-prefix="−" data-suffix="%">
-                        <span class="metric-val"><span data-num>−68%</span></span>
+                    <div class="metric" data-reveal data-count="68" data-prefix="-" data-suffix="%">
+                        <span class="metric-val"><span data-num>-68%</span></span>
                         <span class="metric-label">GPU COST</span>
-                        <span class="metric-sub">$9k/mo → $2.9k/mo</span>
+                        <span class="metric-sub">$9k/mo > $2.9k/mo</span>
                     </div>
                     <div class="metric" data-reveal data-count="1" data-suffix="-click">
                         <span class="metric-val"><span data-num>1-click</span></span>
@@ -408,7 +438,7 @@
 
                 <div class="outcome-grid">
                     <div class="after-card" data-reveal>
-                        <h3>BEFORE → AFTER</h3>
+                        <h3>BEFORE > AFTER</h3>
                         <div class="ba-row"><span>Reproducible runs</span>
                             <div class="bar"><i style="--w:67%;--c:#FF3B30"></i></div><strong>67%</strong>
                         </div>
@@ -424,13 +454,13 @@
                     </div>
                     <blockquote class="quote quote--big" data-reveal>
                         <p>"Friday: dataset. Monday: endpoint. The canary caught a slice regression we'd never have
-                            tested — and rolled itself back."</p>
-                        <cite>— Head of Engineering, SaaS ★★★★★</cite>
+                            tested - and rolled itself back."</p>
+                        <cite>- Head of Engineering, SaaS <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></cite>
                     </blockquote>
                 </div>
 
                 <div class="stack">
-                    <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
+                    <h3 data-reveal>FULL STACK - SHIPPED &amp; DOCUMENTED</h3>
                     <div class="stack-grid">
                         <span data-reveal>PyTorch</span><span data-reveal>HF Transformers</span><span data-reveal>LoRA /
                             PEFT</span><span data-reveal>MLflow</span><span data-reveal>DVC</span><span
@@ -445,38 +475,38 @@
         <!-- ============ NEXT ============ -->
         <section class="next">
             <a href="work.html" class="next-link" data-magnetic>
-                <span class="next-kicker">09 / 09 — END OF SERIES</span>
-                <span class="next-title">BACK TO <span class="stroke">WORK</span> →</span>
-                <span class="next-sub">All 9 case studies · Click anywhere to browse the full shelf</span>
+                <span class="next-kicker">09 / 09 - END OF SERIES</span>
+                <span class="next-title">BACK TO <span class="stroke">WORK</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                <span class="next-sub">All 9 case studies | Click anywhere to browse the full shelf</span>
             </a>
-            <div class="next-giant" aria-hidden="true">✦</div>
+            <div class="next-giant" aria-hidden="true"><i class="fa-solid fa-star" aria-hidden="true"></i></div>
         </section>
     </main>
 
     <footer class="foot">
-        <a href="work.html">← ALL WORK</a>
-        <span>SCIDATA ANALYST · FORGE CASE 09</span>
-        <a href="contact.html">BUILD YOURS ↗</a>
+        <a href="work.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ALL WORK</a>
+        <span>SCIDATA ANALYST | FORGE CASE 09</span>
+        <a href="contact.html">BUILD YOURS <i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
     </footer>
 
     <!-- FLOATERS -->
     <div class="freelance-float">
         <span class="freelance-label">Hire Us</span>
-        <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link"
-            aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
-        <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img
-                src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
-        <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link"
-            aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
+        <a href="https://www.upwork.com/freelancers/~0144f43fb2d2d50244?mp_source=share" target="_blank" rel="noopener" class="freelance-link"
+            aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Hire Scidata Analyst on Upwork" width="24" height="24" loading="lazy"></a>
+        <a href="https://www.fiverr.com/s/YLvz1dz" target="_blank" rel="noopener" class="freelance-link" aria-label="Fiverr"><img
+                src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Hire Scidata Analyst on Fiverr" width="24" height="24" loading="lazy"></a>
+        <a href="https://www.freelancer.com/u/kanchon49?sb=t" target="_blank" rel="noopener" class="freelance-link"
+            aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Hire Scidata Analyst on Freelancer" width="24" height="24" loading="lazy"></a>
     </div>
     <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2">
             <path d="M12 19V5M5 12l7-7 7 7" />
         </svg></button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="assets/js/project-9.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="assets/js/project-9.js"></script>
 </body>
 
 </html>

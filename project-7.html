@@ -4,13 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RETINA — Object Detection & Labeling That Feeds Itself | Case Study 07</title>
+    <title>RETINA - Object Detection That Labels Itself</title>
     <meta name="description"
-        content="Problem → Solution → Outcome. How we built a vision platform that detects, labels, and retrains itself — 98.1% mAP, −60% labeling cost, 1.2M boxes shipped.">
+        content="RETINA case study: object detection platform with 98.1% mAP, 22ms inference, 60% lower labeling cost and 1.2M boxes shipped.">
     <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
     <link rel="stylesheet" href="scss/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="https://scidata-analyst.com/project-7.html">
+    <link rel="alternate" hreflang="x-default" href="https://scidata-analyst.com/project-7.html">
+    <link rel="alternate" hreflang="en" href="https://scidata-analyst.com/project-7.html">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="Scidata Analyst">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://scidata-analyst.com/project-7.html">
+    <meta property="og:title" content="RETINA - Object Detection That Labels Itself">
+    <meta property="og:description" content="RETINA case study: object detection platform with 98.1% mAP, 22ms inference, 60% lower labeling cost and 1.2M boxes shipped.">
+    <meta property="og:image" content="https://scidata-analyst.com/assets/img/og-cover-retina-1200x630.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="RETINA vision platform case study cover - 98.1% mAP object detection">
+    <meta property="og:site_name" content="Scidata Analyst">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RETINA - Object Detection That Labels Itself">
+    <meta name="twitter:description" content="RETINA case study: object detection platform with 98.1% mAP, 22ms inference, 60% lower labeling cost and 1.2M boxes shipped.">
+    <meta name="twitter:image" content="https://scidata-analyst.com/assets/img/og-cover-retina-1200x630.png">
+    <meta name="twitter:image:alt" content="RETINA vision platform case study cover - 98.1% mAP object detection">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script defer src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@graph": [{"@type": "TechArticle", "headline": "RETINA - Object Detection That Labels Itself", "description": "RETINA case study: object detection platform with 98.1% mAP, 22ms inference, 60% lower labeling cost and 1.2M boxes shipped.", "author": {"@type": "Organization", "name": "Scidata Analyst", "url": "https://scidata-analyst.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://scidata-analyst.com/project-7.html"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://scidata-analyst.com/"}, {"@type": "ListItem", "position": 2, "name": "Work", "item": "https://scidata-analyst.com/work.html"}, {"@type": "ListItem", "position": 3, "name": "RETINA Vision Case Study"}]}]}
+    </script>
 </head>
 
 <body class="project-7">
@@ -28,16 +58,16 @@
 
     <!-- LOADER -->
     <div class="loader" data-loader aria-hidden="true">
-        <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 07/09</span></div>
+        <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE - 07/09</span></div>
         <div class="loader-center">
-            <div class="loader-word" data-loader-word>FOCUSING…</div>
+            <div class="loader-word" data-loader-word>FOCUSING...</div>
             <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
             <div class="loader-track">
                 <div class="loader-fill" data-loader-fill></div>
             </div>
-            <div class="loader-sub">CALIBRATING LENSES · LOADING YOLO · QUEUING BOXES</div>
+            <div class="loader-sub">CALIBRATING LENSES | LOADING YOLO | QUEUING BOXES</div>
         </div>
-        <div class="loader-bottom"><span>RETINA · VISION STACK</span><span>PYTORCH / YOLOv8 / OPENCV / FASTAPI</span>
+        <div class="loader-bottom"><span>RETINA | VISION STACK</span><span>PYTORCH / YOLOv8 / OPENCV / FASTAPI</span>
         </div>
     </div>
 
@@ -49,8 +79,8 @@
                 </svg></span>
             <span>ALL WORK</span>
         </a>
-        <div class="nav-mid">CASE STUDY <strong>— 07 / 09</strong></div>
-        <a href="contact.html" class="nav-cta" data-magnetic><span>SEE LIKE RETINA</span><i>↗</i></a>
+        <div class="nav-mid">CASE STUDY <strong>- 07 / 09</strong></div>
+        <a href="contact.html" class="nav-cta" data-magnetic><span>SEE LIKE RETINA</span><i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
     </header>
 
     <main>
@@ -64,28 +94,28 @@
 
             <div class="hero-inner">
                 <div class="hero-eyebrow" data-reveal>
-                    <span class="pill"><span class="dot"></span> LIVE RETINA · <b data-live-boxes>1.2M</b> BOXES
+                    <span class="pill"><span class="dot"></span> LIVE RETINA | <b data-live-boxes>1.2M</b> BOXES
                         LABELED</span>
-                    <span class="hero-loc">98.1% mAP · 22ms INFER · −60% LABEL COST</span>
+                    <span class="hero-loc">98.1% mAP | 22ms INFER | -60% LABEL COST</span>
                 </div>
 
-                <h1 class="hero-title">
+                <h1 class="hero-title" aria-label="RETINA object detection and auto-labeling vision platform">
                     <span class="line"><span class="word" data-reveal>VISION THAT</span></span>
                     <span class="line"><span class="word word--stroke" data-reveal>LABELS</span> <span
                             class="word word--yellow" data-reveal>ITSELF<span class="period">.</span></span></span>
-                    <span class="line line--small"><span class="word word--small" data-reveal>RETINA — DETECT · DRAW ·
-                            DISAGREE · RETRAIN. THE MODEL LABELS THE NEXT 10,000 FOR YOU.</span></span>
+                    <span class="line line--small"><span class="word word--small" data-reveal>RETINA - DETECT | DRAW |
+                            DISAGREE | RETRAIN. THE MODEL LABELS THE NEXT 10,000 FOR YOU.</span></span>
                 </h1>
 
                 <div class="hero-split">
                     <p class="hero-desc" data-reveal>
                         Manual boxing took <s>9 minutes a frame</s>. <strong>RETINA detects in 22ms, proposes boxes,
-                            learns from every "no, not a dog"</strong> — and the queue shrinks while you sleep.
+                            learns from every "no, not a dog"</strong> - and the queue shrinks while you sleep.
                     </p>
                     <div class="hero-ctas" data-reveal>
                         <a href="#demo" class="btn btn--yellow" data-magnetic><span>OPEN LIVE VIEWFINDER
-                                ↓</span><i>◉</i></a>
-                        <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
+                                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span><i class="fa-solid fa-circle" aria-hidden="true"></i></a>
+                        <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -94,7 +124,7 @@
                     <div class="terminal" data-reveal>
                         <div class="terminal-bar">
                             <span class="t-dots"><i></i><i></i><i></i></span>
-                            <span class="t-title">retina — viewfinder · yolo v8 · 22ms · frame #44192</span>
+                            <span class="t-title">retina - viewfinder | yolo v8 | 22ms | frame #44192</span>
                             <span class="t-live"><span class="blink"></span> LIVE</span>
                         </div>
                         <div class="terminal-body">
@@ -113,15 +143,15 @@
                             </div>
                             <div class="infer-bar">
                                 <span class="infer-label">INFER</span><span class="infer-val" data-hero-ms>22ms</span>
-                                <span class="infer-sep">·</span><span class="infer-label">mAP</span><span
+                                <span class="infer-sep">|</span><span class="infer-label">mAP</span><span
                                     class="infer-val infer-val--hi" data-hero-map>98.1%</span>
-                                <span class="infer-sep">·</span><span class="infer-label">QUEUE</span><span
+                                <span class="infer-sep">|</span><span class="infer-label">QUEUE</span><span
                                     class="infer-val" data-hero-queue>1,240</span><span class="infer-sub">needs
                                     human</span>
                             </div>
                             <div class="terminal-foot">
-                                <span class="prompt">❯</span>
-                                <span class="fake-input">Active learning picked <b>1,240</b> hardest frames — you label
+                                <span class="prompt"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></span>
+                                <span class="fake-input">Active learning picked <b>1,240</b> hardest frames - you label
                                     40, model labels 10k<span class="caret"></span></span>
                                 <span class="send">LABEL 40</span>
                             </div>
@@ -133,29 +163,29 @@
 
                     <!-- STAT RAIL -->
                     <div class="hero-rail" data-reveal>
-                        <div class="rail-head">WHY IT MATTERS — TL;DR</div>
+                        <div class="rail-head">WHY IT MATTERS - TL;DR</div>
                         <a href="#problem" class="rail-card rail-card--problem">
                             <span class="rail-num">01</span>
                             <span class="rail-kicker">THE PROBLEM</span>
                             <strong>9 min/frame, drift, no one agreed what a "truck" was.</strong>
-                            <span class="rail-link">Read the pain →</span>
+                            <span class="rail-link">Read the pain <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
                         </a>
                         <a href="#solve" class="rail-card rail-card--solve">
                             <span class="rail-num">02</span>
                             <span class="rail-kicker">HOW WE SOLVED</span>
-                            <strong>Detect → propose → disagree → retrain in one loop.</strong>
-                            <span class="rail-link">See the loop →</span>
+                            <strong>Detect > propose > disagree > retrain in one loop.</strong>
+                            <span class="rail-link">See the loop <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
                         </a>
                         <a href="#outcome" class="rail-card rail-card--outcome">
                             <span class="rail-num">03</span>
                             <span class="rail-kicker">THE OUTCOME</span>
-                            <strong>98.1% mAP · −60% labeling · 1.2M boxes.</strong>
-                            <span class="rail-link">See proof →</span>
+                            <strong>98.1% mAP | -60% labeling | 1.2M boxes.</strong>
+                            <span class="rail-link">See proof <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
                         </a>
                         <div class="rail-meta">
                             <div><span>CLIENT</span><strong>Industrial + retail</strong></div>
                             <div><span>TIMELINE</span><strong>6 weeks</strong></div>
-                            <div><span>ROLE</span><strong>Vision → Tool → MLOps</strong></div>
+                            <div><span>ROLE</span><strong>Vision > Tool > MLOps</strong></div>
                         </div>
                     </div>
                 </div>
@@ -169,10 +199,10 @@
         <!-- TICKER -->
         <div class="ticker" aria-hidden="true">
             <div class="ticker-track">
-                <span>YOLOv8 <i>◆</i></span><span>PYTORCH <i>◆</i></span><span>OPENCV <i>◆</i></span><span>98.1% mAP
-                    <i>◆</i></span><span>22ms INFER <i>◆</i></span><span>1.2M BOXES <i>◆</i></span>
-                <span>YOLOv8 <i>◆</i></span><span>PYTORCH <i>◆</i></span><span>OPENCV <i>◆</i></span><span>98.1% mAP
-                    <i>◆</i></span><span>22ms INFER <i>◆</i></span><span>1.2M BOXES <i>◆</i></span>
+                <span>YOLOv8 <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>PYTORCH <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>OPENCV <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>98.1% mAP
+                    <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>22ms INFER <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>1.2M BOXES <i class="fa-solid fa-diamond" aria-hidden="true"></i></span>
+                <span>YOLOv8 <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>PYTORCH <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>OPENCV <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>98.1% mAP
+                    <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>22ms INFER <i class="fa-solid fa-diamond" aria-hidden="true"></i></span><span>1.2M BOXES <i class="fa-solid fa-diamond" aria-hidden="true"></i></span>
             </div>
         </div>
 
@@ -189,12 +219,12 @@
                     <p class="lede" data-reveal>
                         Annotators boxed <em>by hand</em> in a clunky tool, no QA, no consensus.
                         <strong>One "is this a van or truck?" argument cost a day</strong>, classes drifted, and the
-                        model learned yesterday's mistakes — on loop.
+                        model learned yesterday's mistakes - on loop.
                     </p>
                     <blockquote class="quote" data-reveal>
-                        <p>"We paid for 20,000 boxes and got 20,000 opinions. Model hit 71% and stopped learning —
+                        <p>"We paid for 20,000 boxes and got 20,000 opinions. Model hit 71% and stopped learning -
                             because the truth kept moving."</p>
-                        <cite>— ML Lead, before RETINA</cite>
+                        <cite>- ML Lead, before RETINA</cite>
                     </blockquote>
                 </div>
 
@@ -204,12 +234,12 @@
                         <h3>BOX BY HAND</h3>
                         <p>9 minutes a frame, wrist pain, no shortcuts. <strong>1,000 frames = 150
                                 annotator-hours</strong> before a single training run.</p>
-                        <div class="pain-stat"><strong>9m</strong><span>per frame · hand-drawn</span></div>
+                        <div class="pain-stat"><strong>9m</strong><span>per frame | hand-drawn</span></div>
                     </article>
                     <article class="pain" data-reveal>
                         <span class="pain-num">P.02</span>
                         <h3>NO GROUND TRUTH</h3>
-                        <p>No consensus flow, no gold set. <strong>Inter-annotator IoU 0.62</strong> — the model learned
+                        <p>No consensus flow, no gold set. <strong>Inter-annotator IoU 0.62</strong> - the model learned
                             noise, not signal.</p>
                         <div class="pain-stat"><strong>0.62</strong><span>IoU agreement</span></div>
                     </article>
@@ -241,23 +271,23 @@
             <div class="wrap">
                 <div class="sec-head sec-head--light" data-reveal>
                     <span class="sec-index">02 / HOW WE SOLVED IT</span>
-                    <span class="sec-tag">NOT A LABELER — A FEEDBACK MACHINE</span>
+                    <span class="sec-tag">NOT A LABELER - A FEEDBACK MACHINE</span>
                 </div>
-                <h2 class="mega mega--light" data-reveal>DETECT · <span class="yellow">DISAGREE</span><br><span
-                        class="stroke-light">· RETRAIN.</span></h2>
+                <h2 class="mega mega--light" data-reveal>DETECT | <span class="yellow">DISAGREE</span><br><span
+                        class="stroke-light">| RETRAIN.</span></h2>
                 <p class="lede lede--light" data-reveal>Four pieces that feed each other. Every frame you correct makes
-                    the next 10,000 cheaper — and the model never stops watching:</p>
+                    the next 10,000 cheaper - and the model never stops watching:</p>
 
                 <div class="pipeline">
                     <article class="pipe pipe--feature" data-reveal>
                         <div class="pipe-num">01</div>
                         <div class="pipe-body">
-                            <span class="pipe-kicker">DETECT · YOLOv8 22ms</span>
+                            <span class="pipe-kicker">DETECT | YOLOv8 22ms</span>
                             <h3>SEE IN REAL TIME</h3>
                             <p>YOLOv8 + OpenCV pipeline runs on GPU or edge, <strong>22ms a frame</strong>, NMS-tuned
                                 per class. Every box comes with confidence + class.</p>
                             <code
-                                class="code">frame #44192 → yolo → NMS 0.45 · person 0.98, car 0.95, dog 0.92 · 22ms</code>
+                                class="code">frame #44192 > yolo > NMS 0.45 | person 0.98, car 0.95, dog 0.92 | 22ms</code>
                             <div class="chips"><span>YOLOv8</span><span>PyTorch</span><span>OpenCV</span><span>ONNX /
                                     TensorRT</span></div>
                         </div>
@@ -269,7 +299,7 @@
                             <h3>BOX AT THE SPEED OF THOUGHT</h3>
                             <p>Web canvas with <strong>box assist, hotkeys, consensus & gold review</strong>.
                                 Inter-annotator IoU tracked live; disagreements become training gold.</p>
-                            <code class="code">proposed 4 boxes → human: fix 1 · confirm 3 · time 18s (was 540s)</code>
+                            <code class="code">proposed 4 boxes > human: fix 1 | confirm 3 | time 18s (was 540s)</code>
                             <div class="chips">
                                 <span>Canvas</span><span>Hotkeys</span><span>Consensus</span><span>MinIO</span></div>
                         </div>
@@ -277,7 +307,7 @@
                     <article class="pipe pipe--feature" data-reveal>
                         <div class="pipe-num">03</div>
                         <div class="pipe-body">
-                            <span class="pipe-kicker">LEARN LOOP · ACTIVE LEARNING</span>
+                            <span class="pipe-kicker">LEARN LOOP | ACTIVE LEARNING</span>
                             <h3>LABELS THAT SHRINK THE QUEUE</h3>
                             <p>Uncertainty sampling picks the <strong>1,240 frames the model is most confused
                                     by</strong>. Label 40, auto-label 10k, loop nightly.</p>
@@ -287,16 +317,16 @@
                                 <span class="tok">10k auto-labeled <em>model</em></span>
                             </div>
                             <code
-                                class="code">{ uncertainty top-k 1,240 → human 40 → auto 10k → retrain · mAP 71 → 98.1% }</code>
+                                class="code">{ uncertainty top-k 1,240 > human 40 > auto 10k > retrain | mAP 71 > 98.1% }</code>
                             <div class="chips"><span>Active Learn</span><span>FastAPI</span><span>MinIO</span></div>
                         </div>
                     </article>
                     <article class="pipe pipe--loop" data-reveal>
                         <div class="pipe-num">04</div>
                         <div class="pipe-body">
-                            <span class="pipe-kicker">SHIP · EDGE + API</span>
+                            <span class="pipe-kicker">SHIP | EDGE + API</span>
                             <h3>RUN ANYWHERE</h3>
-                            <p>ONNX quantized models ship to <strong>edge cams or cloud API</strong> — same weights,
+                            <p>ONNX quantized models ship to <strong>edge cams or cloud API</strong> - same weights,
                                 same boxes, zero drift between label and live.</p>
                             <div class="mini-bars"><i style="--h:34%"></i><i style="--h:52%"></i><i
                                     style="--h:68%"></i><i style="--h:78%"></i><i style="--h:99%"></i></div>
@@ -313,13 +343,13 @@
             <div class="wrap demo-wrap">
                 <div class="sec-head" data-reveal>
                     <span class="sec-index">LIVE VIEWFINDER</span>
-                    <span class="sec-tag">DRAG A BOX — DISAGREE — WATCH IT LEARN</span>
+                    <span class="sec-tag">DRAG A BOX - DISAGREE - WATCH IT LEARN</span>
                 </div>
                 <h2 class="mega" data-reveal>CORRECT THE MACHINE.<br><span class="yellow">IT REMEMBERS.</span></h2>
 
                 <div class="demo-grid">
                     <div class="demo-board" data-reveal>
-                        <div class="demo-head"><span class="pulse"></span> RETINA · VIEWFINDER <span class="lat"
+                        <div class="demo-head"><span class="pulse"></span> RETINA | VIEWFINDER <span class="lat"
                                 data-lat>22ms</span></div>
                         <div class="demo-vf" data-vf>
                             <div class="demo-vf-grid" aria-hidden="true"></div>
@@ -341,30 +371,30 @@
                         </div>
                         <div class="demo-feed" data-messages>
                             <div class="msg msg--ok">
-                                <p>Frame #44192 — 4 boxes proposed · 3 high confidence, 1 uncertain (<b>bicycle 67%</b>)
-                                    queued for review</p><span class="intent">tap the 67% box — disagree and
+                                <p>Frame #44192 - 4 boxes proposed | 3 high confidence, 1 uncertain (<b>bicycle 67%</b>)
+                                    queued for review</p><span class="intent">tap the 67% box - disagree and
                                     retrain</span>
                             </div>
                         </div>
                         <div class="demo-chips" data-chips>
-                            <button data-act="confirm">Confirm all ✓</button>
-                            <button data-act="fix">Fix: that's a motorbike 🏍️</button>
-                            <button data-act="reject">Reject low box ✕</button>
-                            <button data-act="retrain" class="ghost">Retrain night-loop ↻</button>
+                            <button data-act="confirm">Confirm all <i class="fa-solid fa-check" aria-hidden="true"></i></button>
+                            <button data-act="fix">Fix: that's a motorbike <i class="fa-solid fa-motorcycle" aria-hidden="true"></i></button>
+                            <button data-act="reject">Reject low box <i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+                            <button data-act="retrain" class="ghost">Retrain night-loop <i class="fa-solid fa-rotate-right" aria-hidden="true"></i></button>
                         </div>
                     </div>
                     <div class="demo-side" data-reveal>
                         <h3>WHAT YOU'RE SEEING</h3>
                         <ul>
                             <li><strong>Yellow boxes</strong> = model proposal + confidence. Tap one.</li>
-                            <li><strong>67% box</strong> = active learning's pick — the model is unsure.</li>
-                            <li><strong>Fix / reject</strong> — you teach it once, it auto-labels 10k.</li>
+                            <li><strong>67% box</strong> = active learning's pick - the model is unsure.</li>
+                            <li><strong>Fix / reject</strong> - you teach it once, it auto-labels 10k.</li>
                         </ul>
                         <div class="arch">
-                            <span>FRAME</span><i>→</i><span>YOLO</span><i>→</i><span>YOU</span><i>→</i><span>RETRAIN</span>
+                            <span>FRAME</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>YOLO</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>YOU</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>RETRAIN</span>
                         </div>
                         <a href="contact.html" class="btn btn--yellow" data-magnetic><span>LABEL WITH
-                                RETINA</span><i>↗</i></a>
+                                RETINA</span><i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -384,12 +414,12 @@
                     <div class="metric" data-reveal data-count="98" data-decimal="98.1" data-suffix="%">
                         <span class="metric-val"><span data-num>98.1%</span></span>
                         <span class="metric-label">mAP</span>
-                        <span class="metric-sub">was 71% — now production</span>
+                        <span class="metric-sub">was 71% - now production</span>
                     </div>
-                    <div class="metric metric--yellow" data-reveal data-count="60" data-prefix="−" data-suffix="%">
-                        <span class="metric-val"><span data-num>−60%</span></span>
+                    <div class="metric metric--yellow" data-reveal data-count="60" data-prefix="-" data-suffix="%">
+                        <span class="metric-val"><span data-num>-60%</span></span>
                         <span class="metric-label">LABEL COST</span>
-                        <span class="metric-sub">9m → 18s per frame</span>
+                        <span class="metric-sub">9m > 18s per frame</span>
                     </div>
                     <div class="metric" data-reveal data-count="1" data-suffix="M+" data-decimal="1.2">
                         <span class="metric-val"><span data-num>1.2M</span></span>
@@ -405,7 +435,7 @@
 
                 <div class="outcome-grid">
                     <div class="after-card" data-reveal>
-                        <h3>BEFORE → AFTER</h3>
+                        <h3>BEFORE > AFTER</h3>
                         <div class="ba-row"><span>mAP</span>
                             <div class="bar"><i style="--w:71%;--c:#FF3B30"></i></div><strong>71%</strong>
                         </div>
@@ -420,14 +450,14 @@
                         </div>
                     </div>
                     <blockquote class="quote quote--big" data-reveal>
-                        <p>"We corrected 40 frames on a Friday. Monday morning the model had labeled 11,000 more — and
+                        <p>"We corrected 40 frames on a Friday. Monday morning the model had labeled 11,000 more - and
                             fixed its own bicycle mistake."</p>
-                        <cite>— Vision Lead, industrial inspection ★★★★★</cite>
+                        <cite>- Vision Lead, industrial inspection <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></cite>
                     </blockquote>
                 </div>
 
                 <div class="stack">
-                    <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
+                    <h3 data-reveal>FULL STACK - SHIPPED &amp; DOCUMENTED</h3>
                     <div class="stack-grid">
                         <span data-reveal>PyTorch</span><span data-reveal>YOLOv8</span><span
                             data-reveal>OpenCV</span><span data-reveal>FastAPI</span><span data-reveal>MinIO</span><span
@@ -442,38 +472,38 @@
         <!-- ============ NEXT ============ -->
         <section class="next">
             <a href="project-8.html" class="next-link" data-magnetic>
-                <span class="next-kicker">NEXT CASE — 08 / 09</span>
-                <span class="next-title">HATE <span class="stroke">SPEECH</span> →</span>
-                <span class="next-sub">Toxicity + sentiment shield · Click anywhere to continue</span>
+                <span class="next-kicker">NEXT CASE - 08 / 09</span>
+                <span class="next-title">HATE <span class="stroke">SPEECH</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                <span class="next-sub">Toxicity + sentiment shield | Click anywhere to continue</span>
             </a>
             <div class="next-giant" aria-hidden="true">08</div>
         </section>
     </main>
 
     <footer class="foot">
-        <a href="work.html">← ALL WORK</a>
-        <span>SCIDATA ANALYST · VISION CASE 07</span>
-        <a href="contact.html">BUILD YOURS ↗</a>
+        <a href="work.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ALL WORK</a>
+        <span>SCIDATA ANALYST | VISION CASE 07</span>
+        <a href="contact.html">BUILD YOURS <i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
     </footer>
 
     <!-- FLOATERS -->
     <div class="freelance-float">
         <span class="freelance-label">Hire Us</span>
-        <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link"
-            aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
-        <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img
-                src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
-        <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link"
-            aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
+        <a href="https://www.upwork.com/freelancers/~0144f43fb2d2d50244?mp_source=share" target="_blank" rel="noopener" class="freelance-link"
+            aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Hire Scidata Analyst on Upwork" width="24" height="24" loading="lazy"></a>
+        <a href="https://www.fiverr.com/s/YLvz1dz" target="_blank" rel="noopener" class="freelance-link" aria-label="Fiverr"><img
+                src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Hire Scidata Analyst on Fiverr" width="24" height="24" loading="lazy"></a>
+        <a href="https://www.freelancer.com/u/kanchon49?sb=t" target="_blank" rel="noopener" class="freelance-link"
+            aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Hire Scidata Analyst on Freelancer" width="24" height="24" loading="lazy"></a>
     </div>
     <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2">
             <path d="M12 19V5M5 12l7-7 7 7" />
         </svg></button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="assets/js/project-7.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="assets/js/project-7.js"></script>
 </body>
 
 </html>
