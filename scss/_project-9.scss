@@ -79,7 +79,7 @@ $p9-mono: "Share", sans-serif;
 // ---------- UTILITIES ----------
 .project-9 {
     .wrap {
-        max-width: 1320px;
+
         margin: 0 auto;
         padding: 0 clamp(1.25rem, 4vw, 3rem);
     }
@@ -464,6 +464,7 @@ $p9-mono: "Share", sans-serif;
         padding: clamp(7rem, 12vw, 10rem) 0 3rem;
         overflow: hidden;
         border-bottom: 3px solid $p9-ink;
+        height: auto;
 
         .hero-gridlines {
             position: absolute;
@@ -529,7 +530,7 @@ $p9-mono: "Share", sans-serif;
 
         .hero-inner {
             position: relative;
-            max-width: 1320px;
+
             margin: 0 auto;
             padding: 0 clamp(1.25rem, 4vw, 3rem);
         }
@@ -1049,7 +1050,7 @@ $p9-mono: "Share", sans-serif;
             display: flex;
             align-items: center;
             gap: 1rem;
-            max-width: 1320px;
+
             margin: 2.5rem auto 0;
             padding: 0 clamp(1.25rem, 4vw, 3rem);
             font-family: $p9-mono;
@@ -1934,7 +1935,7 @@ $p9-mono: "Share", sans-serif;
             display: block;
             text-decoration: none;
             padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-            max-width: 1320px;
+
             margin: 0 auto;
             color: $p9-ink;
         }

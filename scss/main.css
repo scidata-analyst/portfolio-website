@@ -14721,7 +14721,6 @@ body.innovation-page,
 }
 
 .project-1 .wrap {
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -15025,6 +15024,7 @@ body.innovation-page,
   padding: clamp(7rem, 12vw, 10rem) 0 3rem;
   overflow: hidden;
   border-bottom: 2px solid #f4f2eb;
+  height: auto;
 }
 .project-1 .hero .hero-gridlines {
   position: absolute;
@@ -15075,7 +15075,6 @@ body.innovation-page,
 .project-1 .hero .hero-inner {
   position: relative;
   z-index: 2;
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -16122,7 +16121,6 @@ body.innovation-page,
   display: block;
   text-decoration: none;
   padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-  max-width: 1320px;
   margin: 0 auto;
 }
 .project-1 .next .next-kicker {
@@ -16661,7 +16659,6 @@ body.innovation-page,
 }
 
 .project-2 .wrap {
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -16972,6 +16969,7 @@ body.innovation-page,
   padding: clamp(7rem, 12vw, 10rem) 0 3rem;
   overflow: hidden;
   border-bottom: 2px solid #fff7e6;
+  height: auto;
 }
 .project-2 .hero .hero-gridlines {
   position: absolute;
@@ -17021,7 +17019,6 @@ body.innovation-page,
 }
 .project-2 .hero .hero-inner {
   position: relative;
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -17447,7 +17444,6 @@ body.innovation-page,
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 1320px;
   margin: 2.5rem auto 0;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   font-family: "Share", sans-serif;
@@ -18086,7 +18082,6 @@ body.innovation-page,
   display: block;
   text-decoration: none;
   padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-  max-width: 1320px;
   margin: 0 auto;
 }
 .project-2 .next .next-kicker {
@@ -18379,7 +18374,6 @@ body.innovation-page,
 }
 
 .project-3 .wrap {
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -18690,6 +18684,7 @@ body.innovation-page,
   padding: clamp(7rem, 12vw, 10rem) 0 3rem;
   overflow: hidden;
   border-bottom: 2px solid #faf6ec;
+  height: auto;
 }
 .project-3 .hero .hero-gridlines {
   position: absolute;
@@ -18748,7 +18743,6 @@ body.innovation-page,
 }
 .project-3 .hero .hero-inner {
   position: relative;
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -19226,7 +19220,6 @@ body.innovation-page,
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 1320px;
   margin: 2.5rem auto 0;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   font-family: "Share", sans-serif;
@@ -20004,7 +19997,6 @@ body.innovation-page,
   display: block;
   text-decoration: none;
   padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-  max-width: 1320px;
   margin: 0 auto;
 }
 .project-3 .next .next-kicker {
@@ -20297,7 +20289,6 @@ body.innovation-page,
 }
 
 .project-4 .wrap {
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -20608,6 +20599,7 @@ body.innovation-page,
   padding: clamp(7rem, 12vw, 10rem) 0 3rem;
   overflow: hidden;
   border-bottom: 2px solid #e6eaf0;
+  height: auto;
 }
 .project-4 .hero .hero-gridlines {
   position: absolute;
@@ -20665,7 +20657,6 @@ body.innovation-page,
 }
 .project-4 .hero .hero-inner {
   position: relative;
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -21113,7 +21104,6 @@ body.innovation-page,
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 1320px;
   margin: 2.5rem auto 0;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   font-family: "Share", sans-serif;
@@ -21850,7 +21840,6 @@ body.innovation-page,
   display: block;
   text-decoration: none;
   padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-  max-width: 1320px;
   margin: 0 auto;
 }
 .project-4 .next .next-kicker {
@@ -22175,7 +22164,6 @@ body.innovation-page,
 }
 
 .project-5 .wrap {
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -22486,6 +22474,7 @@ body.innovation-page,
   padding: clamp(7rem, 12vw, 10rem) 0 3rem;
   overflow: hidden;
   border-bottom: 2px solid #fff6e8;
+  height: auto;
 }
 .project-5 .hero .hero-gridlines {
   position: absolute;
@@ -22546,7 +22535,6 @@ body.innovation-page,
 }
 .project-5 .hero .hero-inner {
   position: relative;
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -23053,7 +23041,6 @@ body.innovation-page,
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 1320px;
   margin: 2.5rem auto 0;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   font-family: "Share", sans-serif;
@@ -23777,7 +23764,6 @@ body.innovation-page,
   display: block;
   text-decoration: none;
   padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-  max-width: 1320px;
   margin: 0 auto;
 }
 .project-5 .next .next-kicker {
@@ -24088,7 +24074,6 @@ body.innovation-page,
 }
 
 .project-6 .wrap {
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -24399,6 +24384,7 @@ body.innovation-page,
   padding: clamp(7rem, 12vw, 10rem) 0 3rem;
   overflow: hidden;
   border-bottom: 2px solid #f2fff0;
+  height: auto;
 }
 .project-6 .hero .hero-gridlines {
   position: absolute;
@@ -24458,7 +24444,6 @@ body.innovation-page,
 }
 .project-6 .hero .hero-inner {
   position: relative;
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -24935,7 +24920,6 @@ body.innovation-page,
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 1320px;
   margin: 2.5rem auto 0;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   font-family: "Share", sans-serif;
@@ -25681,7 +25665,6 @@ body.innovation-page,
   display: block;
   text-decoration: none;
   padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-  max-width: 1320px;
   margin: 0 auto;
 }
 .project-6 .next .next-kicker {
@@ -25970,7 +25953,6 @@ body.innovation-page,
 }
 
 .project-7 .wrap {
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -26281,6 +26263,7 @@ body.innovation-page,
   padding: clamp(7rem, 12vw, 10rem) 0 3rem;
   overflow: hidden;
   border-bottom: 2px solid #fffbf0;
+  height: auto;
 }
 .project-7 .hero .hero-gridlines {
   position: absolute;
@@ -26338,7 +26321,6 @@ body.innovation-page,
 }
 .project-7 .hero .hero-inner {
   position: relative;
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -26790,7 +26772,6 @@ body.innovation-page,
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 1320px;
   margin: 2.5rem auto 0;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   font-family: "Share", sans-serif;
@@ -27537,7 +27518,6 @@ body.innovation-page,
   display: block;
   text-decoration: none;
   padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-  max-width: 1320px;
   margin: 0 auto;
 }
 .project-7 .next .next-kicker {
@@ -27840,7 +27820,6 @@ body.innovation-page,
 }
 
 .project-8 .wrap {
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -28152,6 +28131,7 @@ body.innovation-page,
   padding: clamp(7rem, 12vw, 10rem) 0 3rem;
   overflow: hidden;
   border-bottom: 2px solid #fff8ec;
+  height: auto;
 }
 .project-8 .hero .hero-gridlines {
   position: absolute;
@@ -28208,7 +28188,6 @@ body.innovation-page,
 }
 .project-8 .hero .hero-inner {
   position: relative;
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -28669,7 +28648,6 @@ body.innovation-page,
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 1320px;
   margin: 2.5rem auto 0;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   font-family: "Share", sans-serif;
@@ -29381,7 +29359,6 @@ body.innovation-page,
   display: block;
   text-decoration: none;
   padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-  max-width: 1320px;
   margin: 0 auto;
 }
 .project-8 .next .next-kicker {
@@ -29675,7 +29652,6 @@ body.innovation-page,
 }
 
 .project-9 .wrap {
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -30002,6 +29978,7 @@ body.innovation-page,
   padding: clamp(7rem, 12vw, 10rem) 0 3rem;
   overflow: hidden;
   border-bottom: 3px solid #0e0e12;
+  height: auto;
 }
 .project-9 .hero .hero-gridlines {
   position: absolute;
@@ -30059,7 +30036,6 @@ body.innovation-page,
 }
 .project-9 .hero .hero-inner {
   position: relative;
-  max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
@@ -30502,7 +30478,6 @@ body.innovation-page,
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 1320px;
   margin: 2.5rem auto 0;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   font-family: "Share", sans-serif;
@@ -31252,7 +31227,6 @@ body.innovation-page,
   display: block;
   text-decoration: none;
   padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-  max-width: 1320px;
   margin: 0 auto;
   color: #0e0e12;
 }

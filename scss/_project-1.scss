@@ -70,7 +70,7 @@ $p1-mono: $font-family_4;
 // ---------- UTILITIES ----------
 .project-1 {
     .wrap {
-        max-width: 1320px;
+
         margin: 0 auto;
         padding: 0 clamp(1.25rem, 4vw, 3rem);
     }
@@ -428,6 +428,7 @@ $p1-mono: $font-family_4;
         padding: clamp(7rem, 12vw, 10rem) 0 3rem;
         overflow: hidden;
         border-bottom: 2px solid $p1-ink;
+        height: auto;
 
         .hero-gridlines {
             position: absolute;
@@ -483,7 +484,7 @@ $p1-mono: $font-family_4;
         .hero-inner {
             position: relative;
             z-index: 2;
-            max-width: 1320px;
+
             margin: 0 auto;
             padding: 0 clamp(1.25rem, 4vw, 3rem);
         }
@@ -1720,7 +1721,7 @@ $p1-mono: $font-family_4;
             display: block;
             text-decoration: none;
             padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 4vw, 3rem);
-            max-width: 1320px;
+
             margin: 0 auto;
         }
 
