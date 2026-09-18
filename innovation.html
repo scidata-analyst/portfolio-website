@@ -29,6 +29,7 @@
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@scidataanalyst">
     <meta name="twitter:title" content="The Lab: 6 AI Experiments Shipped - Video, NLP, DOOH" />
     <meta name="twitter:description"
         content="06 shipped experiments: video AI, docs, encrypted drive, whiteboards, NLP and programmatic DOOH." />
@@ -39,7 +40,6 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
-    <link rel="preload" href="scss/main.css" as="style">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -62,6 +62,34 @@
                 "about": ["Artificial Intelligence", "Realtime Collaboration", "Programmatic Media"]
             },
             {
+                "@type": "Organization",
+                "@id": "https://scidata-analyst.com/#organization",
+                "name": "Scidata Analyst",
+                "url": "https://scidata-analyst.com/",
+                "logo": "https://scidata-analyst.com/assets/img/nav-logo.png",
+                "email": "hello@scidata-analyst.com",
+                "foundingDate": "2021",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Uttara",
+                    "addressRegion": "Dhaka",
+                    "addressCountry": "BD"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "sales",
+                    "telephone": "+8801797636430"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://scidata-analyst.com/#website",
+                "url": "https://scidata-analyst.com/",
+                "name": "Scidata Analyst",
+                "publisher": { "@id": "https://scidata-analyst.com/#organization" },
+                "inLanguage": "en"
+            },
+            {
                 "@type": "BreadcrumbList",
                 "@id": "https://scidata-analyst.com/innovation.html#breadcrumb",
                 "itemListElement": [
@@ -75,6 +103,7 @@
 </head>
 
 <body class="innovation-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
@@ -111,7 +140,7 @@
                 <span class="nav-logo-text">SCIDATA</span>
             </a>
         </div>
-        <div class="nav-menu-trigger" data-menu-trigger>
+        <div class="nav-menu-trigger" data-menu-trigger role="button" tabindex="0" aria-expanded="false" aria-label="Open menu">
             <div class="nav-contact">
                 <a href="mailto:hello@scidata-analyst.com" class="nav-contact-item">
                     <i class="fa-solid fa-envelope"></i>
@@ -204,7 +233,7 @@
     <!-- NAVIGATION END -->
 
     <!-- ============ HERO : THE LAB ============ -->
-    <header class="nv-hero">
+    <header class="nv-hero" id="main-content">
         <div class="nv-hero-grain" aria-hidden="true"></div>
         <div class="nv-hero-glow nv-hero-glow--a" aria-hidden="true"></div>
         <div class="nv-hero-glow nv-hero-glow--b" aria-hidden="true"></div>
@@ -218,7 +247,7 @@
         </div>
 
         <nav aria-label="Breadcrumb" class="nv-crumb"><a href="/">Home</a> <span aria-hidden="true">&gt;</span> <span aria-current="page">Innovation Lab</span></nav>
-        <h1 class="nv-title" aria-label="Innovation Lab - 6 AI experiments shipped and live in production">
+        <h1 class="nv-title">
             <span class="nv-line nv-line--1">
                 <span class="nv-word">WE BUILD</span>
                 <span class="nv-badge">HOT<sup><i class="fa-solid fa-star" aria-hidden="true"></i></sup></span>
@@ -647,9 +676,9 @@
                 </a>
                 <p class="footer-tagline">Data &amp; IoT MVP agency - pipelines, edge, dashboards, AI.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <label class="footer-newsletter-label" for="newsletter-email">Stay in the loop</label>
                     <div class="footer-newsletter-row">
-                        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                        <input type="email" id="newsletter-email" name="email" required placeholder="Your email address" aria-label="Email for newsletter">
                         <button type="submit" aria-label="Subscribe">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -761,6 +790,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+    <script defer src="assets/js/site.js"></script>
 </body>
 
 </html>

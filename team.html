@@ -30,6 +30,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@scidataanalyst">
     <meta name="twitter:title" content="Meet the Data & IoT Team | Pipelines, Edge & AI" />
     <meta name="twitter:description"
         content="06 minds, 0 passengers. The crew behind 50+ shipped products, 5M+ rows/day live." />
@@ -41,7 +42,6 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
-    <link rel="preload" href="scss/main.css" as="style">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -66,6 +66,34 @@
                 "mainEntity": { "@id": "https://scidata-analyst.com/#organization" }
             },
             {
+                "@type": "Organization",
+                "@id": "https://scidata-analyst.com/#organization",
+                "name": "Scidata Analyst",
+                "url": "https://scidata-analyst.com/",
+                "logo": "https://scidata-analyst.com/assets/img/nav-logo.png",
+                "email": "hello@scidata-analyst.com",
+                "foundingDate": "2021",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Uttara",
+                    "addressRegion": "Dhaka",
+                    "addressCountry": "BD"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "sales",
+                    "telephone": "+8801797636430"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://scidata-analyst.com/#website",
+                "url": "https://scidata-analyst.com/",
+                "name": "Scidata Analyst",
+                "publisher": { "@id": "https://scidata-analyst.com/#organization" },
+                "inLanguage": "en"
+            },
+            {
                 "@type": "BreadcrumbList",
                 "@id": "https://scidata-analyst.com/team.html#breadcrumb",
                 "itemListElement": [
@@ -79,6 +107,7 @@
 </head>
 
 <body class="team-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
@@ -115,7 +144,7 @@
                 <span class="nav-logo-text">SCIDATA</span>
             </a>
         </div>
-        <div class="nav-menu-trigger" data-menu-trigger>
+        <div class="nav-menu-trigger" data-menu-trigger role="button" tabindex="0" aria-expanded="false" aria-label="Open menu">
             <div class="nav-contact">
                 <a href="mailto:hello@scidata-analyst.com" class="nav-contact-item">
                     <i class="fa-solid fa-envelope"></i>
@@ -208,7 +237,7 @@
     <!-- NAVIGATION END -->
 
     <!-- ============ HERO : THE CREW ============ -->
-    <header class="tm-hero">
+    <header class="tm-hero" id="main-content">
         <div class="tm-hero-grain" aria-hidden="true"></div>
         <div class="tm-hero-glow tm-hero-glow--a" aria-hidden="true"></div>
         <div class="tm-hero-glow tm-hero-glow--b" aria-hidden="true"></div>
@@ -228,7 +257,7 @@
         </div>
 
         <nav aria-label="Breadcrumb" class="tm-crumb"><a href="/">Home</a> <span aria-hidden="true">&gt;</span> <span aria-current="page">The Crew</span></nav>
-        <h1 class="tm-title" aria-label="Meet the Data and IoT MVP crew that ships - 6 specialists">
+        <h1 class="tm-title">
             <span class="tm-line tm-line--1">
                 <span class="tm-word">DATA & IoT</span>
                 <span class="tm-word tm-word--stroke">CREW</span>
@@ -301,7 +330,7 @@
             </div>
             <div class="tm-lineup-right">
                 <p>Hardware-aware, data-obsessed. Filter by craft - or just scroll the whole bench.</p>
-                <div class="tm-filters" role="tablist" aria-label="Filter members">
+                <div class="tm-filters" role="group" aria-label="Filter members">
                     <button class="tm-filter is-active" data-filter="all" data-magnetic>All / 06</button>
                     <button class="tm-filter" data-filter="data" data-magnetic>Data Pipelines</button>
                     <button class="tm-filter" data-filter="iot" data-magnetic>IoT &amp; Edge</button>
@@ -603,9 +632,9 @@
                 </a>
                 <p class="footer-tagline">Data &amp; IoT MVP agency - pipelines, edge, dashboards, AI.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <label class="footer-newsletter-label" for="newsletter-email">Stay in the loop</label>
                     <div class="footer-newsletter-row">
-                        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                        <input type="email" id="newsletter-email" name="email" required placeholder="Your email address" aria-label="Email for newsletter">
                         <button type="submit" aria-label="Subscribe">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -718,6 +747,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+    <script defer src="assets/js/site.js"></script>
 </body>
 
 </html>

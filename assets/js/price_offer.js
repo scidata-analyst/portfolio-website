@@ -140,14 +140,9 @@ function revealHero() {
 }
 
 // ============================================
-// DEAL COUNTDOWN — ends last millisecond of month
+// DEAL COUNTDOWN - fixed deadline
 // ============================================
-function dealDeadline() {
-    const now = new Date();
-    return new Date(now.getFullYear(), now.getMonth() + 1, 1, 0, 0, 0, -1).getTime();
-}
-
-const deadline = dealDeadline();
+const deadline = new Date('2026-12-31T23:59:59+06:00').getTime();
 const pad = (n) => String(n).padStart(2, '0');
 
 function tickCountdown() {

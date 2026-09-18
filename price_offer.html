@@ -30,6 +30,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@scidataanalyst" />
     <meta name="twitter:title" content="Data & IoT MVP Pricing: Audit $800, IoT MVP $4.5k" />
     <meta name="twitter:description"
         content="Data Audit 48h, IoT MVP in 6 weeks, Scale Platform custom. Weekly demos, fixed quotes, no hidden fees." />
@@ -41,7 +42,6 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
-    <link rel="preload" href="scss/main.css" as="style">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -71,12 +71,12 @@
                     {
                         "@type": "Question",
                         "name": "How fast for a Data or IoT MVP?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Data pipeline PoC in 48h. IoT sensor to cloud to Grafana demo in 2 weeks, full MVP in 6 weeks. Weekly demos, fixed milestones." }
+                        "acceptedAnswer": { "@type": "Answer", "text": "Data pipeline PoC in 48h. IoT sensor to cloud to Grafana demo in 2 weeks, full MVP in 6 weeks. Weekly demos, fixed milestones - same promise as our homepage." }
                     },
                     {
                         "@type": "Question",
-                        "name": "Do we need to buy hardware first?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "No - we advise on sensors/gateways, or start with simulated data. Hardware-aware, not hardware-locked. Hardware itself is always billed at cost." }
+                        "name": "Is hardware included in the MVP price?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "No - hardware is billed at cost on top of the fixed MVP price, and we advise on sensors/gateways or start with simulated data. We're hardware-aware, not hardware-locked. Hardware itself is always billed at cost." }
                     },
                     {
                         "@type": "Question",
@@ -86,12 +86,12 @@
                     {
                         "@type": "Question",
                         "name": "What about web/software then?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Supporting only. If your data/IoT needs a portal, API or customer app, we build it senior-grade and quote it fixed - but we do not push it if you do not need it." }
+                        "acceptedAnswer": { "@type": "Answer", "text": "Supporting only. If your data/IoT needs a portal, API or customer app, we build it senior-grade and quote it fixed - but we don't push it if you don't need it." }
                     },
                     {
                         "@type": "Question",
                         "name": "Do you hand over everything?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "100% - pipelines, firmware, infra-as-code, Grafana dashboards, docs and training. OTA and monitoring stay optional." }
+                        "acceptedAnswer": { "@type": "Answer", "text": "100% - pipelines, firmware, infra-as-code, Grafana dashboards, docs & training. OTA and monitoring stay optional under Care & OTA." }
                     },
                     {
                         "@type": "Question",
@@ -114,6 +114,7 @@
 </head>
 
 <body class="price-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
@@ -150,7 +151,7 @@
                 <span class="nav-logo-text">SCIDATA</span>
             </a>
         </div>
-        <div class="nav-menu-trigger" data-menu-trigger>
+        <div class="nav-menu-trigger" data-menu-trigger role="button" tabindex="0" aria-expanded="false" aria-label="Open menu">
             <div class="nav-contact">
                 <a href="mailto:hello@scidata-analyst.com" class="nav-contact-item">
                     <i class="fa-solid fa-envelope"></i>
@@ -243,7 +244,7 @@
     <!-- NAVIGATION END -->
 
     <!-- ============ HERO : PRICED FLAT (matches home hero-v2 positioning) ============ -->
-    <header class="pc-hero">
+    <header class="pc-hero" id="main-content">
         <div class="pc-hero-grain" aria-hidden="true"></div>
         <div class="pc-hero-glow pc-hero-glow--a" aria-hidden="true"></div>
         <div class="pc-hero-glow pc-hero-glow--b" aria-hidden="true"></div>
@@ -263,7 +264,7 @@
         </div>
 
         <nav aria-label="Breadcrumb" class="pc-crumb"><a href="/">Home</a> <span aria-hidden="true">&gt;</span> <span aria-current="page">Data & IoT Pricing</span></nav>
-        <h1 class="pc-title" aria-label="Data and IoT MVP pricing - flat fixed quotes, audit $800, IoT MVP $4.5k">
+        <h1 class="pc-title">
             <span class="pc-line pc-line--1">
                 <span class="pc-word">PRICED</span>
             </span>
@@ -475,10 +476,10 @@
             <div class="pc-qa" data-qa>
                 <button class="pc-qa-head" aria-expanded="false">
                     <span class="pc-qa-num">02</span>
-                    <span class="pc-qa-q">Do we need to buy hardware first?</span>
+                    <span class="pc-qa-q">Is hardware included in the MVP price?</span>
                     <span class="pc-qa-toggle"><i></i><i></i></span>
                 </button>
-                <div class="pc-qa-body"><p>No - we advise on sensors/gateways, or start with simulated data. We're hardware-aware, not hardware-locked. Hardware itself is always billed at cost.</p></div>
+                <div class="pc-qa-body"><p>No - hardware is billed at cost on top of the fixed MVP price, and we advise on sensors/gateways or start with simulated data. We're hardware-aware, not hardware-locked. Hardware itself is always billed at cost.</p></div>
             </div>
             <div class="pc-qa" data-qa>
                 <button class="pc-qa-head" aria-expanded="false">
@@ -619,10 +620,10 @@
                     <img src="img/logo.png" alt="Scidata Analyst - Data Engineering and IoT MVP Agency logo" class="footer-logo" width="400" height="267" loading="lazy" decoding="async">
                 </a>
                 <p class="footer-tagline">Data &amp; IoT MVP agency - pipelines, edge, dashboards, AI.</p>
-                <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-label">Stay in the loop</label>
+                <form class="footer-newsletter">
+                    <label class="footer-newsletter-label" for="newsletter-email">Stay in the loop</label>
                     <div class="footer-newsletter-row">
-                        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                        <input id="newsletter-email" name="email" type="email" placeholder="Your email address" aria-label="Email for newsletter" required>
                         <button type="submit" aria-label="Subscribe">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -729,6 +730,7 @@
     <script defer src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer src="assets/js/price_offer.js"></script>
+    <script defer src="assets/js/site.js"></script>
     <script>
         document.querySelector('.footer-totop')?.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });

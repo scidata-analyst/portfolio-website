@@ -30,6 +30,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@scidataanalyst">
     <meta name="twitter:title" content="About Our Data & IoT MVP Crew | Pipelines, Edge & AI" />
     <meta name="twitter:description"
         content="Hardware-aware. Data-obsessed. MVP in weeks, not quarters - 50+ projects live, 30+ clients." />
@@ -41,7 +42,6 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
-    <link rel="preload" href="scss/main.css" as="style">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -66,6 +66,34 @@
                 "mainEntity": { "@id": "https://scidata-analyst.com/#organization" }
             },
             {
+                "@type": "Organization",
+                "@id": "https://scidata-analyst.com/#organization",
+                "name": "Scidata Analyst",
+                "url": "https://scidata-analyst.com/",
+                "logo": "https://scidata-analyst.com/assets/img/nav-logo.png",
+                "email": "hello@scidata-analyst.com",
+                "foundingDate": "2021",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Uttara",
+                    "addressRegion": "Dhaka",
+                    "addressCountry": "BD"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "sales",
+                    "telephone": "+8801797636430"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://scidata-analyst.com/#website",
+                "url": "https://scidata-analyst.com/",
+                "name": "Scidata Analyst",
+                "publisher": { "@id": "https://scidata-analyst.com/#organization" },
+                "inLanguage": "en"
+            },
+            {
                 "@type": "BreadcrumbList",
                 "@id": "https://scidata-analyst.com/about.html#breadcrumb",
                 "itemListElement": [
@@ -79,6 +107,7 @@
 </head>
 
 <body class="about-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
@@ -115,7 +144,7 @@
                 <span class="nav-logo-text">SCIDATA</span>
             </a>
         </div>
-        <div class="nav-menu-trigger" data-menu-trigger>
+        <div class="nav-menu-trigger" data-menu-trigger role="button" tabindex="0" aria-expanded="false" aria-label="Open menu">
             <div class="nav-contact">
                 <a href="mailto:hello@scidata-analyst.com" class="nav-contact-item">
                     <i class="fa-solid fa-envelope"></i>
@@ -208,7 +237,7 @@
     <!-- NAVIGATION END -->
 
     <!-- ============ HERO : DATA & IoT CREW ============ -->
-    <header class="ax-hero">
+    <header class="ax-hero" id="main-content">
         <div class="ax-hero-grain" aria-hidden="true"></div>
         <div class="ax-hero-giant" aria-hidden="true">CREW</div>
         <div class="ax-hero-stamp" aria-hidden="true">EST.<br>2021</div>
@@ -220,7 +249,7 @@
         </div>
 
         <nav aria-label="Breadcrumb" class="ax-crumb"><a href="/">Home</a> <span aria-hidden="true">&gt;</span> <span aria-current="page">About the Crew</span></nav>
-        <h1 class="ax-title" aria-label="About our Data Engineering and IoT MVP crew that ships in 6 weeks">
+        <h1 class="ax-title">
             <span class="ax-line ax-line--1">
                 <span class="ax-word">DATA & IoT MVP</span>
             </span>
@@ -323,7 +352,7 @@
                 </div>
             </article>
             <article class="ax-year ax-year--dark" data-year>
-                <span class="ax-year-big">25<i class="fa-solid fa-star" aria-hidden="true"></i></span>
+                <span class="ax-year-big">25-26<i class="fa-solid fa-star" aria-hidden="true"></i></span>
                 <div class="ax-year-body">
                     <span class="ax-year-tag">Chapter 04 - Now</span>
                     <h3>DATA &amp; IoT MVP AGENCY</h3>
@@ -379,50 +408,50 @@
     <section class="ax-caps">
         <div class="ax-caps-head">
             <span class="ax-pill ax-pill--dark"><span class="ax-dot ax-dot--dark"></span> Primary focus | Data &amp; IoT MVP</span>
-            <h2 class="ax-h2">DATA & IoT CAPA&shy;BILITIES <sup>(04)</sup></h2>
+            <h2 class="ax-h2">DATA & IoT CAPABILITIES <sup>(04)</sup></h2>
             <p>Tap a panel. Data &amp; IoT first - web/software only when needed.</p>
         </div>
         <div class="ax-panels">
             <div class="ax-panel is-open" data-panel>
-                <button class="ax-panel-head" aria-expanded="true">
+                <button class="ax-panel-head" aria-expanded="true" aria-controls="panel-about-1">
                     <span class="ax-panel-num">01</span>
                     <span class="ax-panel-title">DATA PIPELINES &amp; ANALYTICS <i class="fa-solid fa-star" aria-hidden="true"></i> PRIMARY</span>
                     <span class="ax-panel-toggle"><i></i><i></i></span>
                 </button>
-                <div class="ax-panel-body">
+                <div class="ax-panel-body" id="panel-about-1" role="region">
                     <p>Pipelines that handle 5M+ rows/day - ingest > validate > warehouse > BI. Your single source of truth, not a CSV graveyard.</p>
                     <div class="ax-panel-tags"><span>Kafka | Spark | Airflow</span><span>ClickHouse | Timescale</span><span>Grafana Dashboards</span><span>Quality Checks</span></div>
                 </div>
             </div>
             <div class="ax-panel" data-panel>
-                <button class="ax-panel-head" aria-expanded="false">
+                <button class="ax-panel-head" aria-expanded="false" aria-controls="panel-about-2">
                     <span class="ax-panel-num">02</span>
                     <span class="ax-panel-title">IoT MVP IN 6 WEEKS <i class="fa-solid fa-star" aria-hidden="true"></i> PRIMARY</span>
                     <span class="ax-panel-toggle"><i></i><i></i></span>
                 </button>
-                <div class="ax-panel-body">
+                <div class="ax-panel-body" id="panel-about-2" role="region">
                     <p>Sensor > edge > cloud > dashboard. MQTT/LoRa/BLE, firmware, OTA, Timescale + Grafana live. Hardware-aware, cloud-ready.</p>
                     <div class="ax-panel-tags"><span>MQTT | LoRa | BLE</span><span>Edge Firmware</span><span>OTA Updates</span><span>Grafana Live</span></div>
                 </div>
             </div>
             <div class="ax-panel" data-panel>
-                <button class="ax-panel-head" aria-expanded="false">
+                <button class="ax-panel-head" aria-expanded="false" aria-controls="panel-about-3">
                     <span class="ax-panel-num">03</span>
                     <span class="ax-panel-title">AI &amp; EDGE INTELLIGENCE</span>
                     <span class="ax-panel-toggle"><i></i><i></i></span>
                 </button>
-                <div class="ax-panel-body">
+                <div class="ax-panel-body" id="panel-about-3" role="region">
                     <p>Anomaly detection on sensor streams, vision &amp; RAG on your data lake - AI that pays for itself on top of solid pipelines.</p>
                     <div class="ax-panel-tags"><span>Anomaly Detection</span><span>YOLO | OpenCV</span><span>RAG | LLM</span><span>Forecasting</span></div>
                 </div>
             </div>
             <div class="ax-panel" data-panel>
-                <button class="ax-panel-head" aria-expanded="false">
+                <button class="ax-panel-head" aria-expanded="false" aria-controls="panel-about-4">
                     <span class="ax-panel-num">04</span>
                     <span class="ax-panel-title">CLOUD &amp; DEVOPS (+ WEB WHEN NEEDED)</span>
                     <span class="ax-panel-toggle"><i></i><i></i></span>
                 </button>
-                <div class="ax-panel-body">
+                <div class="ax-panel-body" id="panel-about-4" role="region">
                     <p>Autoscaling K8s for data/IoT scale - monitored, secured, backed up. And if your pipeline needs a portal, we build it senior-grade.</p>
                     <div class="ax-panel-tags"><span>AWS | GCP</span><span>Docker | K8s</span><span>CI/CD | Monitoring</span><span>Portals (supporting)</span></div>
                 </div>
@@ -598,9 +627,9 @@
                 </a>
                 <p class="footer-tagline">Data &amp; IoT MVP agency - pipelines, edge, dashboards, AI.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <label class="footer-newsletter-label" for="newsletter-email">Stay in the loop</label>
                     <div class="footer-newsletter-row">
-                        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                        <input type="email" id="newsletter-email" name="email" required placeholder="Your email address" aria-label="Email for newsletter">
                         <button type="submit" aria-label="Subscribe">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -712,6 +741,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+    <script defer src="assets/js/site.js"></script>
 </body>
 
 </html>

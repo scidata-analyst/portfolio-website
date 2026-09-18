@@ -30,6 +30,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@scidataanalyst">
     <meta name="twitter:title" content="Data & IoT Case Studies (09) | Pipelines 5M+/day, IoT MVPs" />
     <meta name="twitter:description"
         content="Data pipelines (5M+/day) & IoT MVPs in 6 weeks - MQTT, Kafka, Timescale, Grafana. CONDUIT & VOLT live, AI on top." />
@@ -41,7 +42,6 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
-    <link rel="preload" href="scss/main.css" as="style">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -96,6 +96,7 @@
 </head>
 
 <body class="work-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
@@ -137,7 +138,7 @@
                 <span class="nav-logo-text">SCIDATA</span>
             </a>
         </div>
-        <div class="nav-menu-trigger" data-menu-trigger>
+        <div class="nav-menu-trigger" data-menu-trigger role="button" tabindex="0" aria-expanded="false" aria-label="Open menu">
             <div class="nav-contact">
                 <a href="mailto:hello@scidata-analyst.com" class="nav-contact-item">
                     <i class="fa-solid fa-envelope"></i>
@@ -230,7 +231,7 @@
     <!-- NAVIGATION END -->
 
     <!-- ============ HERO : DATA & IoT FIRST ============ -->
-    <header class="wx-hero">
+    <header class="wx-hero" id="main-content">
         <div class="wx-hero-grain" aria-hidden="true"></div>
         <div class="wx-hero-glow wx-hero-glow--a" aria-hidden="true"></div>
         <div class="wx-hero-glow wx-hero-glow--b" aria-hidden="true"></div>
@@ -246,7 +247,7 @@
         </div>
 
         <nav aria-label="Breadcrumb" class="wx-crumb"><a href="/">Home</a> <span aria-hidden="true">&gt;</span> <span aria-current="page">Data & IoT Work</span></nav>
-        <h1 class="wx-title" aria-label="Data and IoT MVP portfolio - Work that ships, 9 case studies live">
+        <h1 class="wx-title">
             <span class="wx-line wx-line--1">
                 <span class="wx-word">WORK</span>
                 <span class="wx-badge">09<sup><i class="fa-solid fa-star" aria-hidden="true"></i></sup></span>
@@ -308,7 +309,7 @@
             </div>
             <div class="wx-index-right">
                 <p><strong>Primary: Data &amp; IoT MVPs live.</strong> AI on data next. Supporting web/software last. Hover a row - it screams back. Click - full case study with stack, metrics &amp; build notes.</p>
-                <div class="wx-filters" role="tablist" aria-label="Filter projects">
+                <div class="wx-filters" role="group" aria-label="Filter projects">
                     <button class="wx-filter is-active" data-filter="all" data-magnetic>All / 09</button>
                     <button class="wx-filter" data-filter="primary" data-magnetic>Primary: Data &amp; IoT</button>
                     <button class="wx-filter" data-filter="ai-data" data-magnetic>AI on Data</button>
@@ -704,9 +705,9 @@
                 </a>
                 <p class="footer-tagline">Data &amp; IoT MVP agency - pipelines, edge, dashboards, AI.</p>
                 <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-label">Stay in the loop</label>
+                    <label class="footer-newsletter-label" for="newsletter-email">Stay in the loop</label>
                     <div class="footer-newsletter-row">
-                        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                        <input type="email" id="newsletter-email" name="email" placeholder="Your email address" aria-label="Email for newsletter" required>
                         <button type="submit" aria-label="Subscribe">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -813,6 +814,7 @@
     <script defer src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer src="assets/js/work.js"></script>
+    <script defer src="assets/js/site.js"></script>
     <script>
         document.querySelector('.footer-totop')?.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });

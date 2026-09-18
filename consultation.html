@@ -30,6 +30,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@scidataanalyst" />
     <meta name="twitter:title" content="Free Data & IoT Strategy Call | Audit, MVP Quote" />
     <meta name="twitter:description"
         content="No pitches. No jargon. Just pipeline/IoT direction + fixed quote - 30 minutes, free." />
@@ -41,7 +42,6 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
-    <link rel="preload" href="scss/main.css" as="style">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -117,6 +117,7 @@
 </head>
 
 <body class="consultation-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
@@ -153,7 +154,7 @@
                 <span class="nav-logo-text">SCIDATA</span>
             </a>
         </div>
-        <div class="nav-menu-trigger" data-menu-trigger>
+        <div class="nav-menu-trigger" data-menu-trigger role="button" tabindex="0" aria-expanded="false" aria-label="Open menu">
             <div class="nav-contact">
                 <a href="mailto:hello@scidata-analyst.com" class="nav-contact-item">
                     <i class="fa-solid fa-envelope"></i>
@@ -246,7 +247,7 @@
     <!-- NAVIGATION END -->
 
     <!-- ============ HERO : SCOPE YOUR DATA ============ -->
-    <header class="ct-hero">
+    <header class="ct-hero" id="main-content">
         <div class="ct-hero-grain" aria-hidden="true"></div>
         <div class="ct-hero-glow ct-hero-glow--a" aria-hidden="true"></div>
         <div class="ct-hero-glow ct-hero-glow--b" aria-hidden="true"></div>
@@ -259,7 +260,7 @@
         </div>
 
         <nav aria-label="Breadcrumb" class="ct-crumb"><a href="/">Home</a> <span aria-hidden="true">&gt;</span> <span aria-current="page">Free Strategy Call</span></nav>
-        <h1 class="ct-title" aria-label="Free Data and IoT strategy call - let's scope your data in 30 minutes">
+        <h1 class="ct-title">
             <span class="ct-line ct-line--1">
                 <span class="ct-word">LET'S SCOPE</span>
                 <span class="ct-badge">FREE<sup><i class="fa-solid fa-star" aria-hidden="true"></i></sup></span>
@@ -478,7 +479,7 @@
             <h2 class="ct-h2">TELL US<br><span class="ct-stroke-dark">EVERYTHING</span></h2>
             <p>Fill this in - we reply within 24 hours to lock your free slot.</p>
         </div>
-        <form class="ct-form" id="bookForm" novalidate>
+        <form class="ct-form" id="bookForm" data-lead="booking" novalidate>
             <div class="ct-form-grid">
                 <div class="ct-field">
                     <label for="ctName">Your Name *</label>
@@ -500,7 +501,7 @@
                 </div>
                 <div class="ct-field">
                     <label for="ctService">What do you need? *</label>
-                    <select id="ctService" name="service" required>
+                    <select id="ctService" name="topic" required>
                         <option value="" disabled selected>Select a topic</option>
                         <option>Data Audit &amp; Pipelines</option>
                         <option>IoT MVP in 6 Weeks</option>
@@ -642,10 +643,10 @@
                     <img src="img/logo.png" alt="Scidata Analyst - Data Engineering and IoT MVP Agency logo" class="footer-logo" width="400" height="267" loading="lazy" decoding="async">
                 </a>
                 <p class="footer-tagline">Data &amp; IoT MVP agency - pipelines, edge, dashboards, AI.</p>
-                <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-label">Stay in the loop</label>
+                <form class="footer-newsletter">
+                    <label class="footer-newsletter-label" for="newsletter-email">Stay in the loop</label>
                     <div class="footer-newsletter-row">
-                        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                        <input id="newsletter-email" name="email" type="email" placeholder="Your email address" aria-label="Email for newsletter" required>
                         <button type="submit" aria-label="Subscribe">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -752,6 +753,7 @@
     <script defer src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer src="assets/js/consultation.js"></script>
+    <script defer src="assets/js/site.js"></script>
     <script>
         document.querySelector('.footer-totop')?.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });

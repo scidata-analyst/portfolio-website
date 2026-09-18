@@ -30,6 +30,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@scidataanalyst" />
     <meta name="twitter:title" content="Contact - Start Your Data & IoT MVP | Scidata" />
     <meta name="twitter:description"
         content="Sensor to edge to cloud to dashboard in 6 weeks. Message us - reply in 24h, fixed quote." />
@@ -41,7 +42,6 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
-    <link rel="preload" href="scss/main.css" as="style">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
@@ -78,6 +78,7 @@
 </head>
 
 <body class="contact-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
@@ -114,7 +115,7 @@
                 <span class="nav-logo-text">SCIDATA</span>
             </a>
         </div>
-        <div class="nav-menu-trigger" data-menu-trigger>
+        <div class="nav-menu-trigger" data-menu-trigger role="button" tabindex="0" aria-expanded="false" aria-label="Open menu">
             <div class="nav-contact">
                 <a href="mailto:hello@scidata-analyst.com" class="nav-contact-item">
                     <i class="fa-solid fa-envelope"></i>
@@ -207,7 +208,7 @@
     <!-- NAVIGATION END -->
 
     <!-- CONTACT - SIGNAL HERO (radiating waves with oversized typography) -->
-    <section class="ct2-hero">
+    <section class="ct2-hero" id="main-content">
         <div class="ct2-hero-noise"></div>
         <div class="ct2-signal-waves" aria-hidden="true">
             <div class="ct2-wave ct2-wave--1"></div>
@@ -222,7 +223,7 @@
                 <span class="ct2-eyebrow-text">Start your Data / IoT MVP</span>
             </div>
             <nav aria-label="Breadcrumb" class="ct2-crumb"><a href="/">Home</a> <span aria-hidden="true">&gt;</span> <span aria-current="page">Contact</span></nav>
-            <h1 class="ct2-hero-headline" aria-label="Start your Data and IoT MVP - let's talk data live">
+            <h1 class="ct2-hero-headline">
                 <span class="ct2-headline-line ct2-headline-line--1">
                     <span class="ct2-headline-word">Let's talk</span>
                 </span>
@@ -280,31 +281,31 @@
                     <span class="ct2-form-card-title">MVP Brief Console</span>
                     <span class="ct2-form-status"><i class="fa-solid fa-asterisk" aria-hidden="true"></i> Ready</span>
                 </div>
-                <form class="ct2-form" onsubmit="event.preventDefault();">
+                <form class="ct2-form" id="ct2-form" data-lead="contact">
                     <div class="ct2-form-row">
                         <div class="ct2-form-group">
-                            <label class="ct2-form-label">Full Name *</label>
-                            <input type="text" class="ct2-form-input" placeholder="John Doe" required>
+                            <label class="ct2-form-label" for="ct2-fullname">Full Name *</label>
+                            <input id="ct2-fullname" name="fullname" type="text" class="ct2-form-input" placeholder="John Doe" required>
                         </div>
                         <div class="ct2-form-group">
-                            <label class="ct2-form-label">Email Address *</label>
-                            <input type="email" class="ct2-form-input" placeholder="john@example.com" required>
+                            <label class="ct2-form-label" for="ct2-email">Email Address *</label>
+                            <input id="ct2-email" name="email" type="email" class="ct2-form-input" placeholder="john@example.com" required>
                         </div>
                     </div>
                     <div class="ct2-form-row">
                         <div class="ct2-form-group">
-                            <label class="ct2-form-label">Company Name</label>
-                            <input type="text" class="ct2-form-input" placeholder="Your Company">
+                            <label class="ct2-form-label" for="ct2-company">Company Name</label>
+                            <input id="ct2-company" name="company" type="text" class="ct2-form-input" placeholder="Your Company">
                         </div>
                         <div class="ct2-form-group">
-                            <label class="ct2-form-label">Phone / WhatsApp</label>
-                            <input type="tel" class="ct2-form-input" placeholder="+880 1XXX XXXXXX">
+                            <label class="ct2-form-label" for="ct2-phone">Phone / WhatsApp</label>
+                            <input id="ct2-phone" name="phone" type="tel" class="ct2-form-input" placeholder="+880 1XXX XXXXXX">
                         </div>
                     </div>
                     <div class="ct2-form-row">
                         <div class="ct2-form-group">
-                            <label class="ct2-form-label">What do you need? *</label>
-                            <select class="ct2-form-select" required>
+                            <label class="ct2-form-label" for="ct2-topic">What do you need? *</label>
+                            <select id="ct2-topic" name="topic" class="ct2-form-select" required>
                                 <option value="">Select a topic</option>
                                 <option>Data Audit &amp; Pipelines</option>
                                 <option>IoT MVP in 6 Weeks</option>
@@ -315,8 +316,8 @@
                             </select>
                         </div>
                         <div class="ct2-form-group">
-                            <label class="ct2-form-label">Budget Range</label>
-                            <select class="ct2-form-select">
+                            <label class="ct2-form-label" for="ct2-budget">Budget Range</label>
+                            <select id="ct2-budget" name="budget" class="ct2-form-select">
                                 <option value="">Select budget range</option>
                                 <option>Under $1,000 (audit)</option>
                                 <option>$1,000 - $5,000 (MVP start)</option>
@@ -327,8 +328,8 @@
                         </div>
                     </div>
                     <div class="ct2-form-group ct2-form-group--full">
-                        <label class="ct2-form-label">Project Details *</label>
-                        <textarea class="ct2-form-textarea" rows="4"
+                        <label class="ct2-form-label" for="ct2-message">Project Details *</label>
+                        <textarea id="ct2-message" name="message" class="ct2-form-textarea" rows="4"
                             placeholder="Data sources, sensors, timelines, links - dump it all here..." required></textarea>
                     </div>
                     <button type="submit" class="btn-magnetic btn-primary ct2-form-submit" data-magnetic>
@@ -477,10 +478,10 @@
                     <img src="img/logo.png" alt="Scidata Analyst - Data Engineering and IoT MVP Agency logo" class="footer-logo" width="400" height="267" loading="lazy" decoding="async">
                 </a>
                 <p class="footer-tagline">Data &amp; IoT MVP agency - pipelines, edge, dashboards, AI.</p>
-                <form class="footer-newsletter" onsubmit="event.preventDefault();">
-                    <label class="footer-newsletter-label">Stay in the loop</label>
+                <form class="footer-newsletter">
+                    <label class="footer-newsletter-label" for="newsletter-email">Stay in the loop</label>
                     <div class="footer-newsletter-row">
-                        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                        <input id="newsletter-email" name="email" type="email" placeholder="Your email address" aria-label="Email for newsletter" required>
                         <button type="submit" aria-label="Subscribe">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -587,6 +588,7 @@
     <script defer src="https://kit.fontawesome.com/5356aed19a.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer src="assets/js/contact.js"></script>
+    <script defer src="assets/js/site.js"></script>
     <script>
         document.querySelector('.footer-totop')?.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });

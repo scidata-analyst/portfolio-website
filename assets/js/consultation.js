@@ -210,75 +210,15 @@ qas.forEach(qa => {
 });
 
 // ============================================
-// BOOKING FORM — validation, counter, success
+// BOOKING FORM - counter only (submit owned by site.js via data-lead)
 // ============================================
 const bookForm = document.getElementById('bookForm');
 const msgInput = document.getElementById('ctMsg');
 const msgCount = document.getElementById('ctCount');
-const successBox = document.getElementById('bookSuccess');
 
 if (msgInput && msgCount) {
     msgInput.addEventListener('input', () => {
         msgCount.textContent = msgInput.value.length;
-    });
-}
-
-function setBad(input, bad) {
-    const field = input.closest('.ct-field');
-    if (!field) return;
-    field.classList.toggle('is-bad', bad);
-    if (bad) {
-        input.addEventListener('input', () => field.classList.remove('is-bad'), { once: true });
-        input.addEventListener('change', () => field.classList.remove('is-bad'), { once: true });
-    }
-}
-
-if (bookForm) {
-    bookForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('ctName');
-        const email = document.getElementById('ctEmail');
-        const service = document.getElementById('ctService');
-        const msg = document.getElementById('ctMsg');
-
-        let ok = true;
-        let firstBad = null;
-
-        const check = (input, valid) => {
-            setBad(input, !valid);
-            if (!valid) {
-                ok = false;
-                if (!firstBad) firstBad = input;
-            }
-        };
-
-        check(name, name.value.trim().length >= 2);
-        check(email, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim()));
-        check(service, service.value !== '');
-        check(msg, msg.value.trim().length >= 10);
-
-        if (!ok) {
-            if (firstBad) firstBad.focus({ preventScroll: false });
-            gsap.fromTo(bookForm, { x: -8 }, { x: 0, duration: 0.4, ease: 'elastic.out(1, 0.35)' });
-            return;
-        }
-
-        const btn = bookForm.querySelector('[type="submit"]');
-        const label = btn ? btn.querySelector('.ct-submit-label') : null;
-        if (btn) btn.disabled = true;
-        if (label) label.textContent = 'Sending…';
-
-        // Front-end acknowledgement (wire to backend/WhatsApp as needed)
-        setTimeout(() => {
-            if (successBox) {
-                successBox.hidden = false;
-                gsap.from(successBox, { y: 24, opacity: 0, duration: 0.7, ease: 'back.out(1.5)' });
-                successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-            if (label) label.textContent = 'Request received ✓';
-            bookForm.querySelectorAll('input, select, textarea').forEach(el => { el.disabled = true; });
-        }, 900);
     });
 }
 
