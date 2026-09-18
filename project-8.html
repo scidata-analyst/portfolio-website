@@ -1,409 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHIELD — Hate Speech & Sentiment That Guards Itself | Case Study 08</title>
-  <meta name="description" content="Problem → Solution → Outcome. How we built a 50-language hate + sentiment shield that scans in 42ms, cuts false positives 40%, and protects 12M posts/day.">
-  <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
-  <link rel="stylesheet" href="scss/project-8.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIELD — Hate Speech & Sentiment That Guards Itself | Case Study 08</title>
+    <meta name="description"
+        content="Problem → Solution → Outcome. How we built a 50-language hate + sentiment shield that scans in 42ms, cuts false positives 40%, and protects 12M posts/day.">
+    <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body class="project-8">
 
-  <!-- NOISE + PROGRESS -->
-  <div class="noise" aria-hidden="true"></div>
-  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+    <!-- NOISE + PROGRESS -->
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scroll-progress" data-progress aria-hidden="true"></div>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor" data-cursor aria-hidden="true">
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-    <span class="cursor-label">SCAN</span>
-  </div>
-
-  <!-- LOADER -->
-  <div class="loader" data-loader aria-hidden="true">
-    <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 08/09</span></div>
-    <div class="loader-center">
-      <div class="loader-word" data-loader-word>SCANNING…</div>
-      <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
-      <div class="loader-track"><div class="loader-fill" data-loader-fill></div></div>
-      <div class="loader-sub">LOADING 50 LANGUAGES · ARMING FILTERS · CALIBRATING TONE</div>
-    </div>
-    <div class="loader-bottom"><span>SHIELD · GUARD CORE</span><span>BERT / FASTAPI / REDIS / ELASTICSEARCH</span></div>
-  </div>
-
-  <!-- NAV -->
-  <header class="nav">
-    <a href="work.html" class="nav-back" data-magnetic>
-      <span class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
-      <span>ALL WORK</span>
-    </a>
-    <div class="nav-mid">CASE STUDY <strong>— 08 / 09</strong></div>
-    <a href="contact.html" class="nav-cta" data-magnetic><span>GUARD MY PLATFORM</span><i>↗</i></a>
-  </header>
-
-  <main>
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero-gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-      <div class="hero-glow hero-glow--red" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow--green" aria-hidden="true"></div>
-      <div class="hero-giant" aria-hidden="true">08</div>
-      <div class="censor" aria-hidden="true"></div>
-
-      <div class="hero-inner">
-        <div class="hero-eyebrow" data-reveal>
-          <span class="pill"><span class="dot"></span> LIVE SHIELD · <b data-live-scans>12M</b> POSTS/DAY</span>
-          <span class="hero-loc">50 LANGUAGES · 42ms SCAN · −40% FALSE POSITIVES</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="line"><span class="word" data-reveal>HATE DIES</span></span>
-          <span class="line"><span class="word word--stroke" data-reveal>BEFORE IT</span> <span class="word word--red" data-reveal>POSTS<span class="period">.</span></span></span>
-          <span class="line line--small"><span class="word word--small" data-reveal>SHIELD — 50 LANGUAGES, CONTEXT-AWARE, REAL TIME. SAFE / FLAGGED / BLOCKED BEFORE THE FEED LOADS.</span></span>
-        </h1>
-
-        <div class="hero-split">
-          <p class="hero-desc" data-reveal>
-            Keywords flagged <s>"kill the lights" the same as a threat</s>. <strong>SHIELD reads intent, not just words —
-            in Bangla, Arabizi, emoji, misspelling</strong> — and decides in 42ms whether to publish, warn, or vanish.
-          </p>
-          <div class="hero-ctas" data-reveal>
-            <a href="#demo" class="btn btn--red" data-magnetic><span>OPEN LIVE SHIELD ↓</span><i>◉</i></a>
-            <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
-          </div>
-        </div>
-
-        <div class="hero-board">
-          <!-- SHIELD TERMINAL -->
-          <div class="terminal" data-reveal>
-            <div class="terminal-bar">
-              <span class="t-dots"><i></i><i></i><i></i></span>
-              <span class="t-title">shield — guard_core · 50 LANGS · LIVE</span>
-              <span class="t-live"><span class="blink"></span> 42ms</span>
-            </div>
-            <div class="terminal-body">
-              <div class="shield-feed" data-hero-feed>
-                <div class="s-item s-item--safe">
-                  <span class="s-ava">U1</span>
-                  <div class="s-bubble">
-                    <span class="s-user">@user_awesome · EN</span>
-                    <p>Great product! Really happy with quality and fast delivery.</p>
-                    <span class="s-toks"><em class="tok tok--pos">happy:joy 0.92</em><em class="tok">quality:neutral</em></span>
-                  </div>
-                  <span class="s-badge s-badge--safe">SAFE · 42ms</span>
-                </div>
-                <div class="s-item s-item--blocked">
-                  <span class="s-ava">U2</span>
-                  <div class="s-bubble">
-                    <span class="s-user">@toxic_user42 · BN-EN</span>
-                    <p>█h███ ██e ██e ███ed — [auto-blocked: hate · target: protected · 0.97]</p>
-                    <span class="s-toks"><em class="tok tok--hate">hate 0.97</em><em class="tok tok--block">BLOCKED</em><em class="tok">BN-EN</em></span>
-                  </div>
-                  <span class="s-badge s-badge--blocked">BLOCKED</span>
-                </div>
-                <div class="s-item s-item--flagged">
-                  <span class="s-ava">U3</span>
-                  <div class="s-bubble">
-                    <span class="s-user">@debate_king · AR</span>
-                    <p>This is terrible policy, worst decision ever… (heated, not hate)</p>
-                    <span class="s-toks"><em class="tok tok--flag">flag 0.71</em><em class="tok">sentiment:neg 0.84</em><em class="tok">→ human review</em></span>
-                  </div>
-                  <span class="s-badge s-badge--flagged">FLAGGED</span>
-                </div>
-              </div>
-              <div class="lang-row" aria-hidden="true">
-                <span>EN</span><span>BN</span><span>AR</span><span>HI</span><span>ES</span><span>FR</span><span class="more">+44 more</span><span class="live">CONTEXT ON ✓</span>
-              </div>
-              <div class="terminal-foot">
-                <span class="prompt">❯</span>
-                <span class="fake-input">Context saved — "kill the lights" = safe · false positives −40%<span class="caret"></span></span>
-                <span class="send">BLOCK 0.97</span>
-              </div>
-            </div>
-            <div class="terminal-badges">
-              <span>50 LANGUAGES</span><span>CONTEXT-AWARE</span><span>42ms P95</span>
-            </div>
-          </div>
-
-          <!-- STAT RAIL -->
-          <div class="hero-rail" data-reveal>
-            <div class="rail-head">WHY IT MATTERS — TL;DR</div>
-            <a href="#problem" class="rail-card rail-card--problem">
-              <span class="rail-num">01</span>
-              <span class="rail-kicker">THE PROBLEM</span>
-              <strong>Keyword filters banned "kill the lights" and missed real hate.</strong>
-              <span class="rail-link">Read the pain →</span>
-            </a>
-            <a href="#solve" class="rail-card rail-card--solve">
-              <span class="rail-num">02</span>
-              <span class="rail-kicker">HOW WE SOLVED</span>
-              <strong>BERT that reads tone, target, and language — not just words.</strong>
-              <span class="rail-link">See the shield →</span>
-            </a>
-            <a href="#outcome" class="rail-card rail-card--outcome">
-              <span class="rail-num">03</span>
-              <span class="rail-kicker">THE OUTCOME</span>
-              <strong>97% hate caught, 40% fewer false bans, 12M/day.</strong>
-              <span class="rail-link">See proof →</span>
-            </a>
-            <div class="rail-meta">
-              <div><span>CLIENT</span><strong>Social + marketplace</strong></div>
-              <div><span>TIMELINE</span><strong>7 weeks</strong></div>
-              <div><span>ROLE</span><strong>NLP → Filter → Tooling</strong></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-scroll" aria-hidden="true"><span>SCROLL FOR STORY</span><div class="line-v"></div></div>
-    </section>
-
-    <!-- TICKER -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>BERT <i>◆</i></span><span>50 LANGUAGES <i>◆</i></span><span>42ms SCAN <i>◆</i></span><span>97% HATE CAUGHT <i>◆</i></span><span>−40% FALSE POSITIVES <i>◆</i></span><span>12M / DAY <i>◆</i></span>
-        <span>BERT <i>◆</i></span><span>50 LANGUAGES <i>◆</i></span><span>42ms SCAN <i>◆</i></span><span>97% HATE CAUGHT <i>◆</i></span><span>−40% FALSE POSITIVES <i>◆</i></span><span>12M / DAY <i>◆</i></span>
-      </div>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" data-cursor aria-hidden="true">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <span class="cursor-label">SCAN</span>
     </div>
 
-    <!-- ============ 01 PROBLEM ============ -->
-    <section class="story problem" id="problem">
-      <div class="wrap">
-        <div class="sec-head" data-reveal>
-          <span class="sec-index">01 / THE PROBLEM</span>
-          <span class="sec-tag">WHY MODERATION BROKE TRUST</span>
-        </div>
-        <h2 class="mega" data-reveal>KEYWORDS <span class="stroke">BANNED POETRY</span><br>AND <span class="red">MISSED POISON.</span></h2>
-        <div class="story-grid">
-          <p class="lede" data-reveal>
-            A regex blocked <em>"kill the lights"</em> while <em>coded slurs in Banglish</em> sailed through.
-            Appeals piled up, <strong>good users got banned, bad actors stayed</strong>, and moderators drowned in a queue that never learned.
-          </p>
-          <blockquote class="quote" data-reveal>
-            <p>"We blocked 1,200 posts a day. 400 were wrong. And the worst threads stayed up for 9 hours."</p>
-            <cite>— Trust & Safety Lead, before SHIELD</cite>
-          </blockquote>
-        </div>
-
-        <div class="pain-grid">
-          <article class="pain" data-reveal>
-            <span class="pain-num">P.01</span>
-            <h3>WORD TRAPS</h3>
-            <p>Keyword lists flagged context-free. <strong>"Kill the lights" = block</strong>, coded hate = safe. Both wrong.</p>
-            <div class="pain-stat"><strong>33%</strong><span>blocks were false positives</span></div>
-          </article>
-          <article class="pain" data-reveal>
-            <span class="pain-num">P.02</span>
-            <h3>MONOLINGUAL BLIND</h3>
-            <p>Filters knew English, not <strong>Banglish, Arabizi, Hindi-English, emoji-hate</strong>. 50+ languages, one list.</p>
-            <div class="pain-stat"><strong>50+</strong><span>languages, 1 filter</span></div>
-          </article>
-          <article class="pain" data-reveal>
-            <span class="pain-num">P.03</span>
-            <h3>HUMAN BOTTLENECK</h3>
-            <p>Every edge case went to humans. <strong>9-hour median</strong> to remove true hate, 2,000 appeals/week, burnout.</p>
-            <div class="pain-stat"><strong>9h</strong><span>to remove real hate</span></div>
-          </article>
-        </div>
-
-        <div class="before-after" data-reveal>
-          <div class="ba-row"><span>False blocks</span><div class="bar"><i style="--w:66%;--c:#FF3B30"></i></div><strong>33%</strong></div>
-          <div class="ba-row"><span>Real hate missed (FN)</span><div class="bar"><i style="--w:38%;--c:#FF3B30"></i></div><strong>19%</strong></div>
-          <div class="ba-row"><span>Medians to remove hate</span><div class="bar"><i style="--w:78%;--c:#FF3B30"></i></div><strong>9h</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 02 SOLVE ============ -->
-    <section class="story solve" id="solve">
-      <div class="wrap">
-        <div class="sec-head sec-head--light" data-reveal>
-          <span class="sec-index">02 / HOW WE SOLVED IT</span>
-          <span class="sec-tag">NOT A BLOCKLIST — A BRAIN THAT READS TONE</span>
-        </div>
-        <h2 class="mega mega--light" data-reveal>READ THE <span class="red">INTENT,</span><br>NOT JUST <span class="stroke-light">THE WORD.</span></h2>
-        <p class="lede lede--light" data-reveal>Four layers. Every post runs this gauntlet in 42 milliseconds — language, toxicity, target, sentiment — with a human in the loop only where the model is unsure:</p>
-
-        <div class="pipeline">
-          <article class="pipe pipe--feature" data-reveal>
-            <div class="pipe-num">01</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">POLYGLOT · 50+ LANGUAGES</span>
-              <h3>HEAR EVERY LANGUAGE, INCLUDING SLANG</h3>
-              <p>FastText LID + script-normalized BERT handles <strong>Bangla, Arabizi, Hinglish, emoji, leet, misspelling</strong> — no transliteration needed.</p>
-              <code class="code">lid("tui ekta ***") → bn-en 0.98 · normalize → "tumi ekta …" → bert</code>
-              <div class="chips"><span>BERT multilingual</span><span>FastText LID</span><span>Emoji + leet map</span></div>
+    <!-- LOADER -->
+    <div class="loader" data-loader aria-hidden="true">
+        <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 08/09</span></div>
+        <div class="loader-center">
+            <div class="loader-word" data-loader-word>SCANNING…</div>
+            <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
+            <div class="loader-track">
+                <div class="loader-fill" data-loader-fill></div>
             </div>
-          </article>
-          <article class="pipe pipe--feature" data-reveal>
-            <div class="pipe-num">02</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">TOXICITY · MULTI-LABEL</span>
-              <h3>SCORE HATE, NOT KEYWORDS</h3>
-              <p>Multi-label head scores <strong>hate, harassment, self-harm, sexual, spam + target (protected?)</strong> separately. Context flips the verdict.</p>
-              <div class="nlu-viz">
-                <span class="tok">"kill the lights" <em>hate 0.02 safe ✓</em></span>
-                <span class="tok tok--hot">"k*** them all" <em>hate 0.97 BLOCK ✕</em></span>
-                <span class="tok">"terrible policy" <em>neg 0.84 flag → review</em></span>
-              </div>
-              <code class="code">{ hate:0.97 · harass:0.88 · target:protected 0.94 → BLOCK 42ms }</code>
-              <div class="chips"><span>Transformers</span><span>Multi-label</span><span>Policy gate</span></div>
-            </div>
-          </article>
-          <article class="pipe" data-reveal>
-            <div class="pipe-num">03</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">TONE · SENTIMENT + STANCE</span>
-              <h3>HEATED ≠ HATEFUL</h3>
-              <p>Sentiment + stance model separates <strong>angry-but-legit debate from harassment</strong>. Flagged, not censored — with explainable spans.</p>
-              <code class="code">"worst decision ever" → sentiment:neg 0.84 · stance:oppose · hate:0.08 → FLAG, not block</code>
-              <div class="chips"><span>Sentiment BERT</span><span>Explain spans</span><span>50 langs</span></div>
-            </div>
-          </article>
-          <article class="pipe pipe--loop" data-reveal>
-            <div class="pipe-num">04</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">LOOP · HUMAN-IN-THE-LOOP</span>
-              <h3>HUMANS TEACH, MACHINE LEARNS OVERNIGHT</h3>
-              <p>Uncertain band (0.55–0.78) goes to moderators with <strong>one-click label + rationale</strong>. Nightly retrain, 40% fewer false positives in 3 weeks.</p>
-              <div class="mini-bars"><i style="--h:34%"></i><i style="--h:52%"></i><i style="--h:68%"></i><i style="--h:84%"></i><i style="--h:40%"></i></div>
-              <div class="chips"><span>Label queue</span><span>FastAPI + Redis</span><span>Elasticsearch</span></div>
-            </div>
-          </article>
+            <div class="loader-sub">LOADING 50 LANGUAGES · ARMING FILTERS · CALIBRATING TONE</div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ INTERACTIVE DEMO ============ -->
-    <section class="demo" id="demo">
-      <div class="wrap demo-wrap">
-        <div class="sec-head" data-reveal>
-          <span class="sec-index">LIVE SHIELD</span>
-          <span class="sec-tag">TYPE ANYTHING — IT JUDGES IN 42ms</span>
+        <div class="loader-bottom"><span>SHIELD · GUARD CORE</span><span>BERT / FASTAPI / REDIS / ELASTICSEARCH</span>
         </div>
-        <h2 class="mega" data-reveal>TRY TO <span class="red">FOOL IT.</span></h2>
+    </div>
 
-        <div class="demo-grid">
-          <div class="demo-board" data-reveal>
-            <div class="demo-head"><span class="pulse"></span> SHIELD · LIVE SCAN <span class="lat" data-lat>42ms</span></div>
-            <div class="demo-feed" data-messages>
-              <div class="msg msg--safe"><p>Great product! Really happy with quality.</p><span class="intent">SAFE · sentiment:pos 0.92 · hate 0.02 · EN</span></div>
+    <!-- NAV -->
+    <header class="nav">
+        <a href="work.html" class="nav-back" data-magnetic>
+            <span class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg></span>
+            <span>ALL WORK</span>
+        </a>
+        <div class="nav-mid">CASE STUDY <strong>— 08 / 09</strong></div>
+        <a href="contact.html" class="nav-cta" data-magnetic><span>GUARD MY PLATFORM</span><i>↗</i></a>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="hero-gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div class="hero-glow hero-glow--red" aria-hidden="true"></div>
+            <div class="hero-glow hero-glow--green" aria-hidden="true"></div>
+            <div class="hero-giant" aria-hidden="true">08</div>
+            <div class="censor" aria-hidden="true"></div>
+
+            <div class="hero-inner">
+                <div class="hero-eyebrow" data-reveal>
+                    <span class="pill"><span class="dot"></span> LIVE SHIELD · <b data-live-scans>12M</b>
+                        POSTS/DAY</span>
+                    <span class="hero-loc">50 LANGUAGES · 42ms SCAN · −40% FALSE POSITIVES</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="line"><span class="word" data-reveal>HATE DIES</span></span>
+                    <span class="line"><span class="word word--stroke" data-reveal>BEFORE IT</span> <span
+                            class="word word--red" data-reveal>POSTS<span class="period">.</span></span></span>
+                    <span class="line line--small"><span class="word word--small" data-reveal>SHIELD — 50 LANGUAGES,
+                            CONTEXT-AWARE, REAL TIME. SAFE / FLAGGED / BLOCKED BEFORE THE FEED LOADS.</span></span>
+                </h1>
+
+                <div class="hero-split">
+                    <p class="hero-desc" data-reveal>
+                        Keywords flagged <s>"kill the lights" the same as a threat</s>. <strong>SHIELD reads intent, not
+                            just words —
+                            in Bangla, Arabizi, emoji, misspelling</strong> — and decides in 42ms whether to publish,
+                        warn, or vanish.
+                    </p>
+                    <div class="hero-ctas" data-reveal>
+                        <a href="#demo" class="btn btn--red" data-magnetic><span>OPEN LIVE SHIELD ↓</span><i>◉</i></a>
+                        <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
+                    </div>
+                </div>
+
+                <div class="hero-board">
+                    <!-- SHIELD TERMINAL -->
+                    <div class="terminal" data-reveal>
+                        <div class="terminal-bar">
+                            <span class="t-dots"><i></i><i></i><i></i></span>
+                            <span class="t-title">shield — guard_core · 50 LANGS · LIVE</span>
+                            <span class="t-live"><span class="blink"></span> 42ms</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="shield-feed" data-hero-feed>
+                                <div class="s-item s-item--safe">
+                                    <span class="s-ava">U1</span>
+                                    <div class="s-bubble">
+                                        <span class="s-user">@user_awesome · EN</span>
+                                        <p>Great product! Really happy with quality and fast delivery.</p>
+                                        <span class="s-toks"><em class="tok tok--pos">happy:joy 0.92</em><em
+                                                class="tok">quality:neutral</em></span>
+                                    </div>
+                                    <span class="s-badge s-badge--safe">SAFE · 42ms</span>
+                                </div>
+                                <div class="s-item s-item--blocked">
+                                    <span class="s-ava">U2</span>
+                                    <div class="s-bubble">
+                                        <span class="s-user">@toxic_user42 · BN-EN</span>
+                                        <p>█h███ ██e ██e ███ed — [auto-blocked: hate · target: protected · 0.97]</p>
+                                        <span class="s-toks"><em class="tok tok--hate">hate 0.97</em><em
+                                                class="tok tok--block">BLOCKED</em><em class="tok">BN-EN</em></span>
+                                    </div>
+                                    <span class="s-badge s-badge--blocked">BLOCKED</span>
+                                </div>
+                                <div class="s-item s-item--flagged">
+                                    <span class="s-ava">U3</span>
+                                    <div class="s-bubble">
+                                        <span class="s-user">@debate_king · AR</span>
+                                        <p>This is terrible policy, worst decision ever… (heated, not hate)</p>
+                                        <span class="s-toks"><em class="tok tok--flag">flag 0.71</em><em
+                                                class="tok">sentiment:neg 0.84</em><em class="tok">→ human
+                                                review</em></span>
+                                    </div>
+                                    <span class="s-badge s-badge--flagged">FLAGGED</span>
+                                </div>
+                            </div>
+                            <div class="lang-row" aria-hidden="true">
+                                <span>EN</span><span>BN</span><span>AR</span><span>HI</span><span>ES</span><span>FR</span><span
+                                    class="more">+44 more</span><span class="live">CONTEXT ON ✓</span>
+                            </div>
+                            <div class="terminal-foot">
+                                <span class="prompt">❯</span>
+                                <span class="fake-input">Context saved — "kill the lights" = safe · false positives
+                                    −40%<span class="caret"></span></span>
+                                <span class="send">BLOCK 0.97</span>
+                            </div>
+                        </div>
+                        <div class="terminal-badges">
+                            <span>50 LANGUAGES</span><span>CONTEXT-AWARE</span><span>42ms P95</span>
+                        </div>
+                    </div>
+
+                    <!-- STAT RAIL -->
+                    <div class="hero-rail" data-reveal>
+                        <div class="rail-head">WHY IT MATTERS — TL;DR</div>
+                        <a href="#problem" class="rail-card rail-card--problem">
+                            <span class="rail-num">01</span>
+                            <span class="rail-kicker">THE PROBLEM</span>
+                            <strong>Keyword filters banned "kill the lights" and missed real hate.</strong>
+                            <span class="rail-link">Read the pain →</span>
+                        </a>
+                        <a href="#solve" class="rail-card rail-card--solve">
+                            <span class="rail-num">02</span>
+                            <span class="rail-kicker">HOW WE SOLVED</span>
+                            <strong>BERT that reads tone, target, and language — not just words.</strong>
+                            <span class="rail-link">See the shield →</span>
+                        </a>
+                        <a href="#outcome" class="rail-card rail-card--outcome">
+                            <span class="rail-num">03</span>
+                            <span class="rail-kicker">THE OUTCOME</span>
+                            <strong>97% hate caught, 40% fewer false bans, 12M/day.</strong>
+                            <span class="rail-link">See proof →</span>
+                        </a>
+                        <div class="rail-meta">
+                            <div><span>CLIENT</span><strong>Social + marketplace</strong></div>
+                            <div><span>TIMELINE</span><strong>7 weeks</strong></div>
+                            <div><span>ROLE</span><strong>NLP → Filter → Tooling</strong></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="demo-chips" data-chips>
-              <button data-inject="safe">Great product! 😊</button>
-              <button data-inject="heated">This policy is terrible, worst ever</button>
-              <button data-inject="coded">tui ekta *** (BN-EN slur)</button>
-              <button data-inject="hate">k*** them all [hate]</button>
+
+            <div class="hero-scroll" aria-hidden="true"><span>SCROLL FOR STORY</span>
+                <div class="line-v"></div>
             </div>
-            <div class="demo-input">
-              <input type="text" placeholder="Type anything — Bangla, English, Arabizi, emoji…" data-input aria-label="Test the shield">
-              <button data-send>SCAN 42ms →</button>
+        </section>
+
+        <!-- TICKER -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>BERT <i>◆</i></span><span>50 LANGUAGES <i>◆</i></span><span>42ms SCAN <i>◆</i></span><span>97%
+                    HATE CAUGHT <i>◆</i></span><span>−40% FALSE POSITIVES <i>◆</i></span><span>12M / DAY <i>◆</i></span>
+                <span>BERT <i>◆</i></span><span>50 LANGUAGES <i>◆</i></span><span>42ms SCAN <i>◆</i></span><span>97%
+                    HATE CAUGHT <i>◆</i></span><span>−40% FALSE POSITIVES <i>◆</i></span><span>12M / DAY <i>◆</i></span>
             </div>
-          </div>
-          <div class="demo-side" data-reveal>
-            <h3>WHAT YOU'RE SEEING</h3>
-            <ul>
-              <li><strong>Red</strong> = blocked hate · <strong>Yellow</strong> = flagged for human · <strong>Green</strong> = safe.</li>
-              <li><strong>Context wins</strong> — try "kill the lights" vs real hate. Different verdicts.</li>
-              <li><strong>50 languages</strong> — try Banglish or Arabizi. It still catches it.</li>
-            </ul>
-            <div class="arch">
-              <span>POST</span><i>→</i><span>BERT</span><i>→</i><span>VERDICT</span><i>→</i><span>FEED</span>
+        </div>
+
+        <!-- ============ 01 PROBLEM ============ -->
+        <section class="story problem" id="problem">
+            <div class="wrap">
+                <div class="sec-head" data-reveal>
+                    <span class="sec-index">01 / THE PROBLEM</span>
+                    <span class="sec-tag">WHY MODERATION BROKE TRUST</span>
+                </div>
+                <h2 class="mega" data-reveal>KEYWORDS <span class="stroke">BANNED POETRY</span><br>AND <span
+                        class="red">MISSED POISON.</span></h2>
+                <div class="story-grid">
+                    <p class="lede" data-reveal>
+                        A regex blocked <em>"kill the lights"</em> while <em>coded slurs in Banglish</em> sailed
+                        through.
+                        Appeals piled up, <strong>good users got banned, bad actors stayed</strong>, and moderators
+                        drowned in a queue that never learned.
+                    </p>
+                    <blockquote class="quote" data-reveal>
+                        <p>"We blocked 1,200 posts a day. 400 were wrong. And the worst threads stayed up for 9 hours."
+                        </p>
+                        <cite>— Trust & Safety Lead, before SHIELD</cite>
+                    </blockquote>
+                </div>
+
+                <div class="pain-grid">
+                    <article class="pain" data-reveal>
+                        <span class="pain-num">P.01</span>
+                        <h3>WORD TRAPS</h3>
+                        <p>Keyword lists flagged context-free. <strong>"Kill the lights" = block</strong>, coded hate =
+                            safe. Both wrong.</p>
+                        <div class="pain-stat"><strong>33%</strong><span>blocks were false positives</span></div>
+                    </article>
+                    <article class="pain" data-reveal>
+                        <span class="pain-num">P.02</span>
+                        <h3>MONOLINGUAL BLIND</h3>
+                        <p>Filters knew English, not <strong>Banglish, Arabizi, Hindi-English, emoji-hate</strong>. 50+
+                            languages, one list.</p>
+                        <div class="pain-stat"><strong>50+</strong><span>languages, 1 filter</span></div>
+                    </article>
+                    <article class="pain" data-reveal>
+                        <span class="pain-num">P.03</span>
+                        <h3>HUMAN BOTTLENECK</h3>
+                        <p>Every edge case went to humans. <strong>9-hour median</strong> to remove true hate, 2,000
+                            appeals/week, burnout.</p>
+                        <div class="pain-stat"><strong>9h</strong><span>to remove real hate</span></div>
+                    </article>
+                </div>
+
+                <div class="before-after" data-reveal>
+                    <div class="ba-row"><span>False blocks</span>
+                        <div class="bar"><i style="--w:66%;--c:#FF3B30"></i></div><strong>33%</strong>
+                    </div>
+                    <div class="ba-row"><span>Real hate missed (FN)</span>
+                        <div class="bar"><i style="--w:38%;--c:#FF3B30"></i></div><strong>19%</strong>
+                    </div>
+                    <div class="ba-row"><span>Medians to remove hate</span>
+                        <div class="bar"><i style="--w:78%;--c:#FF3B30"></i></div><strong>9h</strong>
+                    </div>
+                </div>
             </div>
-            <a href="contact.html" class="btn btn--red" data-magnetic><span>SHIELD MY FEED</span><i>↗</i></a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ============ 03 OUTCOME ============ -->
-    <section class="story outcome" id="outcome">
-      <div class="wrap">
-        <div class="sec-head sec-head--light" data-reveal>
-          <span class="sec-index">03 / THE OUTCOME</span>
-          <span class="sec-tag">NUMBERS, NOT ADJECTIVES</span>
-        </div>
-        <h2 class="mega mega--light" data-reveal>FROM KEYWORD<br>TO <span class="red">CONTEXT.</span></h2>
+        <!-- ============ 02 SOLVE ============ -->
+        <section class="story solve" id="solve">
+            <div class="wrap">
+                <div class="sec-head sec-head--light" data-reveal>
+                    <span class="sec-index">02 / HOW WE SOLVED IT</span>
+                    <span class="sec-tag">NOT A BLOCKLIST — A BRAIN THAT READS TONE</span>
+                </div>
+                <h2 class="mega mega--light" data-reveal>READ THE <span class="red">INTENT,</span><br>NOT JUST <span
+                        class="stroke-light">THE WORD.</span></h2>
+                <p class="lede lede--light" data-reveal>Four layers. Every post runs this gauntlet in 42 milliseconds —
+                    language, toxicity, target, sentiment — with a human in the loop only where the model is unsure:</p>
 
-        <div class="metrics">
-          <div class="metric" data-reveal data-count="97" data-suffix="%">
-            <span class="metric-val"><span data-num>97%</span></span>
-            <span class="metric-label">HATE CAUGHT</span>
-            <span class="metric-sub">was 81% with keywords</span>
-          </div>
-          <div class="metric metric--red" data-reveal data-count="40" data-prefix="−" data-suffix="%">
-            <span class="metric-val"><span data-num>−40%</span></span>
-            <span class="metric-label">FALSE POSITIVES</span>
-            <span class="metric-sub">"kill the lights" now safe</span>
-          </div>
-          <div class="metric" data-reveal data-count="42" data-suffix="ms" data-decimal="42">
-            <span class="metric-val"><span data-num>42ms</span></span>
-            <span class="metric-label">SCAN TIME</span>
-            <span class="metric-sub">p95 68ms, 50 langs</span>
-          </div>
-          <div class="metric" data-reveal data-count="12" data-suffix="M+">
-            <span class="metric-val"><span data-num>12M+</span></span>
-            <span class="metric-label">POSTS / DAY</span>
-            <span class="metric-sub">3 platforms, one shield</span>
-          </div>
-        </div>
+                <div class="pipeline">
+                    <article class="pipe pipe--feature" data-reveal>
+                        <div class="pipe-num">01</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">POLYGLOT · 50+ LANGUAGES</span>
+                            <h3>HEAR EVERY LANGUAGE, INCLUDING SLANG</h3>
+                            <p>FastText LID + script-normalized BERT handles <strong>Bangla, Arabizi, Hinglish, emoji,
+                                    leet, misspelling</strong> — no transliteration needed.</p>
+                            <code
+                                class="code">lid("tui ekta ***") → bn-en 0.98 · normalize → "tumi ekta …" → bert</code>
+                            <div class="chips"><span>BERT multilingual</span><span>FastText LID</span><span>Emoji + leet
+                                    map</span></div>
+                        </div>
+                    </article>
+                    <article class="pipe pipe--feature" data-reveal>
+                        <div class="pipe-num">02</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">TOXICITY · MULTI-LABEL</span>
+                            <h3>SCORE HATE, NOT KEYWORDS</h3>
+                            <p>Multi-label head scores <strong>hate, harassment, self-harm, sexual, spam + target
+                                    (protected?)</strong> separately. Context flips the verdict.</p>
+                            <div class="nlu-viz">
+                                <span class="tok">"kill the lights" <em>hate 0.02 safe ✓</em></span>
+                                <span class="tok tok--hot">"k*** them all" <em>hate 0.97 BLOCK ✕</em></span>
+                                <span class="tok">"terrible policy" <em>neg 0.84 flag → review</em></span>
+                            </div>
+                            <code class="code">{ hate:0.97 · harass:0.88 · target:protected 0.94 → BLOCK 42ms }</code>
+                            <div class="chips"><span>Transformers</span><span>Multi-label</span><span>Policy gate</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pipe" data-reveal>
+                        <div class="pipe-num">03</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">TONE · SENTIMENT + STANCE</span>
+                            <h3>HEATED ≠ HATEFUL</h3>
+                            <p>Sentiment + stance model separates <strong>angry-but-legit debate from
+                                    harassment</strong>. Flagged, not censored — with explainable spans.</p>
+                            <code
+                                class="code">"worst decision ever" → sentiment:neg 0.84 · stance:oppose · hate:0.08 → FLAG, not block</code>
+                            <div class="chips"><span>Sentiment BERT</span><span>Explain spans</span><span>50
+                                    langs</span></div>
+                        </div>
+                    </article>
+                    <article class="pipe pipe--loop" data-reveal>
+                        <div class="pipe-num">04</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">LOOP · HUMAN-IN-THE-LOOP</span>
+                            <h3>HUMANS TEACH, MACHINE LEARNS OVERNIGHT</h3>
+                            <p>Uncertain band (0.55–0.78) goes to moderators with <strong>one-click label +
+                                    rationale</strong>. Nightly retrain, 40% fewer false positives in 3 weeks.</p>
+                            <div class="mini-bars"><i style="--h:34%"></i><i style="--h:52%"></i><i
+                                    style="--h:68%"></i><i style="--h:84%"></i><i style="--h:40%"></i></div>
+                            <div class="chips"><span>Label queue</span><span>FastAPI +
+                                    Redis</span><span>Elasticsearch</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="outcome-grid">
-          <div class="after-card" data-reveal>
-            <h3>BEFORE → AFTER</h3>
-            <div class="ba-row"><span>False blocks</span><div class="bar"><i style="--w:66%;--c:#FF3B30"></i></div><strong>33%</strong></div>
-            <div class="ba-row ba-row--after"><span>False blocks</span><div class="bar"><i style="--w:39%;--c:#1BFF7A" data-grow></i></div><strong>20%</strong></div>
-            <div class="ba-row"><span>Remove hate (median)</span><div class="bar"><i style="--w:86%;--c:#FF3B30"></i></div><strong>9h</strong></div>
-            <div class="ba-row ba-row--after"><span>Remove hate (median)</span><div class="bar"><i style="--w:3%;--c:#1BFF7A" data-grow></i></div><strong>42ms</strong></div>
-          </div>
-          <blockquote class="quote quote--big" data-reveal>
-            <p>"Appeals dropped 62% the first month. People finally felt the filter was fair — because it reads tone, not just words."</p>
-            <cite>— Head of Trust & Safety ★★★★★</cite>
-          </blockquote>
-        </div>
+        <!-- ============ INTERACTIVE DEMO ============ -->
+        <section class="demo" id="demo">
+            <div class="wrap demo-wrap">
+                <div class="sec-head" data-reveal>
+                    <span class="sec-index">LIVE SHIELD</span>
+                    <span class="sec-tag">TYPE ANYTHING — IT JUDGES IN 42ms</span>
+                </div>
+                <h2 class="mega" data-reveal>TRY TO <span class="red">FOOL IT.</span></h2>
 
-        <div class="stack">
-          <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
-          <div class="stack-grid">
-            <span data-reveal>BERT</span><span data-reveal>Transformers</span><span data-reveal>FastAPI</span><span data-reveal>Redis</span><span data-reveal>Elasticsearch</span><span data-reveal>50 langs</span><span data-reveal>Policy Gate</span><span data-reveal>Moderator Queue</span><span data-reveal>Nightly Retrain</span><span data-reveal>Docker + GCP</span>
-          </div>
-        </div>
-      </div>
-    </section>
+                <div class="demo-grid">
+                    <div class="demo-board" data-reveal>
+                        <div class="demo-head"><span class="pulse"></span> SHIELD · LIVE SCAN <span class="lat"
+                                data-lat>42ms</span></div>
+                        <div class="demo-feed" data-messages>
+                            <div class="msg msg--safe">
+                                <p>Great product! Really happy with quality.</p><span class="intent">SAFE ·
+                                    sentiment:pos 0.92 · hate 0.02 · EN</span>
+                            </div>
+                        </div>
+                        <div class="demo-chips" data-chips>
+                            <button data-inject="safe">Great product! 😊</button>
+                            <button data-inject="heated">This policy is terrible, worst ever</button>
+                            <button data-inject="coded">tui ekta *** (BN-EN slur)</button>
+                            <button data-inject="hate">k*** them all [hate]</button>
+                        </div>
+                        <div class="demo-input">
+                            <input type="text" placeholder="Type anything — Bangla, English, Arabizi, emoji…" data-input
+                                aria-label="Test the shield">
+                            <button data-send>SCAN 42ms →</button>
+                        </div>
+                    </div>
+                    <div class="demo-side" data-reveal>
+                        <h3>WHAT YOU'RE SEEING</h3>
+                        <ul>
+                            <li><strong>Red</strong> = blocked hate · <strong>Yellow</strong> = flagged for human ·
+                                <strong>Green</strong> = safe.</li>
+                            <li><strong>Context wins</strong> — try "kill the lights" vs real hate. Different verdicts.
+                            </li>
+                            <li><strong>50 languages</strong> — try Banglish or Arabizi. It still catches it.</li>
+                        </ul>
+                        <div class="arch">
+                            <span>POST</span><i>→</i><span>BERT</span><i>→</i><span>VERDICT</span><i>→</i><span>FEED</span>
+                        </div>
+                        <a href="contact.html" class="btn btn--red" data-magnetic><span>SHIELD MY
+                                FEED</span><i>↗</i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- ============ NEXT ============ -->
-    <section class="next">
-      <a href="project-9.html" class="next-link" data-magnetic>
-        <span class="next-kicker">NEXT CASE — 09 / 09</span>
-        <span class="next-title">CUSTOM <span class="stroke">NLP</span> →</span>
-        <span class="next-sub">Domain-tuned language models · Click anywhere to continue</span>
-      </a>
-      <div class="next-giant" aria-hidden="true">09</div>
-    </section>
-  </main>
+        <!-- ============ 03 OUTCOME ============ -->
+        <section class="story outcome" id="outcome">
+            <div class="wrap">
+                <div class="sec-head sec-head--light" data-reveal>
+                    <span class="sec-index">03 / THE OUTCOME</span>
+                    <span class="sec-tag">NUMBERS, NOT ADJECTIVES</span>
+                </div>
+                <h2 class="mega mega--light" data-reveal>FROM KEYWORD<br>TO <span class="red">CONTEXT.</span></h2>
 
-  <footer class="foot">
-    <a href="work.html">← ALL WORK</a>
-    <span>SCIDATA ANALYST · SHIELD CASE 08</span>
-    <a href="contact.html">BUILD YOURS ↗</a>
-  </footer>
+                <div class="metrics">
+                    <div class="metric" data-reveal data-count="97" data-suffix="%">
+                        <span class="metric-val"><span data-num>97%</span></span>
+                        <span class="metric-label">HATE CAUGHT</span>
+                        <span class="metric-sub">was 81% with keywords</span>
+                    </div>
+                    <div class="metric metric--red" data-reveal data-count="40" data-prefix="−" data-suffix="%">
+                        <span class="metric-val"><span data-num>−40%</span></span>
+                        <span class="metric-label">FALSE POSITIVES</span>
+                        <span class="metric-sub">"kill the lights" now safe</span>
+                    </div>
+                    <div class="metric" data-reveal data-count="42" data-suffix="ms" data-decimal="42">
+                        <span class="metric-val"><span data-num>42ms</span></span>
+                        <span class="metric-label">SCAN TIME</span>
+                        <span class="metric-sub">p95 68ms, 50 langs</span>
+                    </div>
+                    <div class="metric" data-reveal data-count="12" data-suffix="M+">
+                        <span class="metric-val"><span data-num>12M+</span></span>
+                        <span class="metric-label">POSTS / DAY</span>
+                        <span class="metric-sub">3 platforms, one shield</span>
+                    </div>
+                </div>
 
-  <!-- FLOATERS -->
-  <div class="freelance-float">
-    <span class="freelance-label">Hire Us</span>
-    <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link" aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
-    <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
-    <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link" aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
-  </div>
-  <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+                <div class="outcome-grid">
+                    <div class="after-card" data-reveal>
+                        <h3>BEFORE → AFTER</h3>
+                        <div class="ba-row"><span>False blocks</span>
+                            <div class="bar"><i style="--w:66%;--c:#FF3B30"></i></div><strong>33%</strong>
+                        </div>
+                        <div class="ba-row ba-row--after"><span>False blocks</span>
+                            <div class="bar"><i style="--w:39%;--c:#1BFF7A" data-grow></i></div><strong>20%</strong>
+                        </div>
+                        <div class="ba-row"><span>Remove hate (median)</span>
+                            <div class="bar"><i style="--w:86%;--c:#FF3B30"></i></div><strong>9h</strong>
+                        </div>
+                        <div class="ba-row ba-row--after"><span>Remove hate (median)</span>
+                            <div class="bar"><i style="--w:3%;--c:#1BFF7A" data-grow></i></div><strong>42ms</strong>
+                        </div>
+                    </div>
+                    <blockquote class="quote quote--big" data-reveal>
+                        <p>"Appeals dropped 62% the first month. People finally felt the filter was fair — because it
+                            reads tone, not just words."</p>
+                        <cite>— Head of Trust & Safety ★★★★★</cite>
+                    </blockquote>
+                </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="assets/js/project-8.js"></script>
+                <div class="stack">
+                    <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
+                    <div class="stack-grid">
+                        <span data-reveal>BERT</span><span data-reveal>Transformers</span><span
+                            data-reveal>FastAPI</span><span data-reveal>Redis</span><span
+                            data-reveal>Elasticsearch</span><span data-reveal>50 langs</span><span data-reveal>Policy
+                            Gate</span><span data-reveal>Moderator Queue</span><span data-reveal>Nightly
+                            Retrain</span><span data-reveal>Docker + GCP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ NEXT ============ -->
+        <section class="next">
+            <a href="project-9.html" class="next-link" data-magnetic>
+                <span class="next-kicker">NEXT CASE — 09 / 09</span>
+                <span class="next-title">CUSTOM <span class="stroke">NLP</span> →</span>
+                <span class="next-sub">Domain-tuned language models · Click anywhere to continue</span>
+            </a>
+            <div class="next-giant" aria-hidden="true">09</div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <a href="work.html">← ALL WORK</a>
+        <span>SCIDATA ANALYST · SHIELD CASE 08</span>
+        <a href="contact.html">BUILD YOURS ↗</a>
+    </footer>
+
+    <!-- FLOATERS -->
+    <div class="freelance-float">
+        <span class="freelance-label">Hire Us</span>
+        <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link"
+            aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
+        <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img
+                src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
+        <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link"
+            aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
+    </div>
+    <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/project-8.js"></script>
 </body>
+
 </html>

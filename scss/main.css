@@ -6182,10 +6182,6 @@ body.about-page,
 .ax-year--lime {
   background: var(--accent);
 }
-.ax-year--lime .ax-year-tag {
-  background: #0a0a0a;
-  color: var(--accent);
-}
 .ax-year--dark {
   background: #0a0a0a;
   color: wheat;
@@ -6194,14 +6190,22 @@ body.about-page,
   color: transparent;
   -webkit-text-stroke: 2px var(--accent);
 }
-.ax-year--dark .ax-year-tag {
+
+.ax-year.ax-year--lime .ax-year-tag {
+  background: #0a0a0a;
+  color: var(--accent);
+}
+
+.ax-year.ax-year--dark .ax-year-tag {
   background: var(--accent);
   color: #0a0a0a;
 }
-.ax-year--dark h3 {
+
+.ax-year.ax-year--dark h3 {
   color: wheat;
 }
-.ax-year--dark p {
+
+.ax-year.ax-year--dark p {
   color: rgba(245, 222, 179, 0.7);
 }
 
@@ -9995,14 +9999,17 @@ body.team-page,
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 280px 1fr;
-  gap: 36px;
+  -moz-column-gap: 36px;
+       column-gap: 36px;
+  row-gap: 14px;
+  align-content: start;
   background: #0a0a0a;
   color: wheat;
   align-items: center;
 }
 .tm-card--captain > .tm-card-id {
   grid-column: 1;
-  grid-row: 1/-1;
+  grid-row: 1/6;
   flex-direction: column;
   align-items: flex-start;
   align-self: start;
@@ -10011,6 +10018,9 @@ body.team-page,
 .tm-card--captain > :not(.tm-card-id):not(.tm-card-flag) {
   grid-column: 2;
   min-width: 0;
+}
+.tm-card--captain .tm-power {
+  margin-top: 0;
 }
 .tm-card--captain .tm-card-name {
   font-size: clamp(2.6rem, 5.5vw, 5rem);
@@ -10512,6 +10522,47 @@ body.team-page,
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+.tm-ops {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 0 0 clamp(60px, 6vw, 100px);
+  overflow: hidden;
+}
+
+.tm-ops-head {
+  max-width: 1500px;
+  margin: 0 auto 36px;
+  padding: 0 48px;
+}
+
+.tm-ops-grid {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 1024px) {
+  .tm-ops-head,
+  .tm-ops-grid {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+@media (max-width: 860px) {
+  .tm-ops-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .tm-ops-head,
+  .tm-ops-grid {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (max-width: 1200px) {

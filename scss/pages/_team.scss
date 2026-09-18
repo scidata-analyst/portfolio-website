@@ -584,11 +584,6 @@ body.team-page,
             margin-top: 0;
         }
 
-        > :not(.tm-card-id):not(.tm-card-flag) {
-            grid-column: 2;
-            min-width: 0;
-        }
-
         .tm-card-name {
             font-size: clamp(2.6rem, 5.5vw, 5rem);
         }
@@ -1155,6 +1150,55 @@ body.team-page,
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+}
+
+// =============================================================================
+// FIELD OPS CREDS BAND (telco + DOOH proof, reuses tm-num-card look)
+// =============================================================================
+.tm-ops {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 0 0 clamp(60px, 6vw, 100px);
+    overflow: hidden;
+}
+
+.tm-ops-head {
+    max-width: 1500px;
+    margin: 0 auto 36px;
+    padding: 0 48px;
+}
+
+.tm-ops-grid {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+@media (max-width: 1024px) {
+
+    .tm-ops-head,
+    .tm-ops-grid {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}
+
+@media (max-width: 860px) {
+    .tm-ops-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .tm-ops-head,
+    .tm-ops-grid {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

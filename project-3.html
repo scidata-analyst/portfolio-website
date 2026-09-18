@@ -1,409 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HAMMER — Auction Car Platform, Bid. Win. Drive. | Case Study 03</title>
-  <meta name="description" content="Problem → Solution → Outcome. How we built a real-time car auction with <50ms bids, anti-snipe agents, verified listings & escrow — 10K+ cars, 98% sell-through.">
-  <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
-  <link rel="stylesheet" href="scss/project-3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMMER — Auction Car Platform, Bid. Win. Drive. | Case Study 03</title>
+    <meta name="description"
+        content="Problem → Solution → Outcome. How we built a real-time car auction with <50ms bids, anti-snipe agents, verified listings & escrow — 10K+ cars, 98% sell-through.">
+    <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body class="project-3">
 
-  <!-- NOISE + PROGRESS -->
-  <div class="noise" aria-hidden="true"></div>
-  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+    <!-- NOISE + PROGRESS -->
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scroll-progress" data-progress aria-hidden="true"></div>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor" data-cursor aria-hidden="true">
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-    <span class="cursor-label">BID</span>
-  </div>
-
-  <!-- LOADER -->
-  <div class="loader" data-loader aria-hidden="true">
-    <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 03/09</span></div>
-    <div class="loader-center">
-      <div class="loader-word" data-loader-word>RAISING THE GAVEL…</div>
-      <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
-      <div class="loader-track"><div class="loader-fill" data-loader-fill></div></div>
-      <div class="loader-sub">WARMING PADDLES · SYNCING BIDS · VERIFYING CARS</div>
-    </div>
-    <div class="loader-bottom"><span>HAMMER · AUCTION ENGINE</span><span>NODE / SOCKET.IO / POSTGRES / STRIPE</span></div>
-  </div>
-
-  <!-- NAV -->
-  <header class="nav">
-    <a href="work.html" class="nav-back" data-magnetic>
-      <span class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
-      <span>ALL WORK</span>
-    </a>
-    <div class="nav-mid">CASE STUDY <strong>— 03 / 09</strong></div>
-    <a href="contact.html" class="nav-cta" data-magnetic><span>START AN AUCTION</span><i>↗</i></a>
-  </header>
-
-  <main>
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero-gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-      <div class="hero-glow hero-glow--hazard" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow--red" aria-hidden="true"></div>
-      <div class="hero-giant" aria-hidden="true">03</div>
-      <div class="hazard" aria-hidden="true"></div>
-
-      <div class="hero-inner">
-        <div class="hero-eyebrow" data-reveal>
-          <span class="pill"><span class="dot"></span> LIVE BIDDING · <b data-live-count>2,314</b> WATCHING NOW</span>
-          <span class="hero-loc">10K+ CARS SOLD · &lt;50MS BIDS · 2025</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="line"><span class="word" data-reveal>BID.</span> <span class="word word--stroke" data-reveal>WIN.</span></span>
-          <span class="line"><span class="word word--hazard" data-reveal>DRIVE<span class="period">.</span></span></span>
-          <span class="line line--small"><span class="word word--small" data-reveal>HAMMER — REAL-TIME CAR AUCTIONS WITH ZERO-RIGGING, VERIFIED CARS &amp; ESCROWED MONEY.</span></span>
-        </h1>
-
-        <div class="hero-split">
-          <p class="hero-desc" data-reveal>
-            Used-car deals ran on <s>shady DMs &amp; handshake promises</s>. <strong>HAMMER puts every car on a live
-            block — 200-point inspection, anti-snipe clock, autobid agents</strong> — and money moves only on handshake × 2.
-          </p>
-          <div class="hero-ctas" data-reveal>
-            <a href="#demo" class="btn btn--hazard" data-magnetic><span>PLACE A BID ↓</span><i>🔨</i></a>
-            <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
-          </div>
-        </div>
-
-        <div class="hero-board">
-          <!-- LIVE LOT TERMINAL -->
-          <div class="terminal" data-reveal>
-            <div class="terminal-bar">
-              <span class="t-dots"><i></i><i></i><i></i></span>
-              <span class="t-title">hammer — LOT #0847 · BMW M3 COMPETITION · 2024</span>
-              <span class="t-live"><span class="blink"></span> LIVE</span>
-            </div>
-            <div class="terminal-body">
-              <div class="lot">
-                <div class="lot-car" aria-hidden="true">
-                  <span class="lot-year">2024 · 12,000 MI</span>
-                  <span class="lot-name">BMW M3 <em>COMPETITION</em></span>
-                  <span class="lot-spec">INSPECTED ✓ 196/200 · NO ACCIDENTS · DHAKA</span>
-                </div>
-                <div class="lot-clock">
-                  <span class="clock-label">HAMMER FALLS IN</span>
-                  <span class="clock-time" data-hero-timer>00:47</span>
-                  <span class="clock-bids"><b data-hero-bids>132</b> BIDS · <b>2,314</b> WATCHING</span>
-                </div>
-              </div>
-              <div class="bidrow">
-                <div class="bidnow">
-                  <span class="bidnow-label">CURRENT BID</span>
-                  <span class="bidnow-amount" data-hero-bid>$42,500</span>
-                  <span class="bidnow-lead">LEADER: <b>AutoKing 👑</b></span>
-                </div>
-                <div class="feed" data-hero-feed>
-                  <div class="feed-row"><span>AutoKing</span><span>$42,500</span><em>now</em></div>
-                  <div class="feed-row"><span>Bidder_284</span><span>$42,000</span><em>12s</em></div>
-                  <div class="feed-row"><span>CarHunter99</span><span>$41,500</span><em>31s</em></div>
-                </div>
-              </div>
-              <div class="terminal-foot">
-                <span class="prompt">❯</span>
-                <span class="fake-input">Your max: $43,000 — autobid armed<span class="caret"></span></span>
-                <span class="send">BID $43,000 🔨</span>
-              </div>
-            </div>
-            <div class="terminal-badges">
-              <span>&lt;50MS BID SYNC</span><span>ANTI-SNIPE CLOCK</span><span>ESCROW LOCKED</span>
-            </div>
-          </div>
-
-          <!-- STAT RAIL -->
-          <div class="hero-rail" data-reveal>
-            <div class="rail-head">WHY IT MATTERS — TL;DR</div>
-            <a href="#problem" class="rail-card rail-card--problem">
-              <span class="rail-num">01</span>
-              <span class="rail-kicker">THE PROBLEM</span>
-              <strong>Rigged bids, fake listings, cash deals gone wrong.</strong>
-              <span class="rail-link">Read the pain →</span>
-            </a>
-            <a href="#solve" class="rail-card rail-card--solve">
-              <span class="rail-num">02</span>
-              <span class="rail-kicker">HOW WE SOLVED</span>
-              <strong>Live engine + autobid agents + verified escrow.</strong>
-              <span class="rail-link">See the engine →</span>
-            </a>
-            <a href="#outcome" class="rail-card rail-card--outcome">
-              <span class="rail-num">03</span>
-              <span class="rail-kicker">THE OUTCOME</span>
-              <strong>98% sell-through · $4.2M moved safely.</strong>
-              <span class="rail-link">See proof →</span>
-            </a>
-            <div class="rail-meta">
-              <div><span>CLIENT</span><strong>Auto marketplace</strong></div>
-              <div><span>TIMELINE</span><strong>8 weeks</strong></div>
-              <div><span>ROLE</span><strong>Design → Realtime → Pay</strong></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-scroll" aria-hidden="true"><span>SCROLL FOR STORY</span><div class="line-v"></div></div>
-    </section>
-
-    <!-- TICKER -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track" data-ticker>
-        <span>🔨 M3 — $42,500 <i>✦</i></span><span>PORSCHE 911 — $89,200 <i>✦</i></span><span>TESLA MODEL S — $38,100 <i>✦</i></span><span>AMG GT — $67,800 <i>✦</i></span><span>SUPRA MK4 — $51,400 <i>✦</i></span><span>RANGE ROVER — $74,900 <i>✦</i></span>
-        <span>🔨 M3 — $42,500 <i>✦</i></span><span>PORSCHE 911 — $89,200 <i>✦</i></span><span>TESLA MODEL S — $38,100 <i>✦</i></span><span>AMG GT — $67,800 <i>✦</i></span><span>SUPRA MK4 — $51,400 <i>✦</i></span><span>RANGE ROVER — $74,900 <i>✦</i></span>
-      </div>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" data-cursor aria-hidden="true">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <span class="cursor-label">BID</span>
     </div>
 
-    <!-- ============ 01 PROBLEM ============ -->
-    <section class="story problem" id="problem">
-      <div class="wrap">
-        <div class="sec-head" data-reveal>
-          <span class="sec-index">01 / THE PROBLEM</span>
-          <span class="sec-tag">WHY CAR DEALS FELT LIKE GAMBLING</span>
-        </div>
-        <h2 class="mega" data-reveal>EVERY DEAL WAS <span class="stroke">A DARK</span><br><span class="hazard-t">BACK-ALLEY BET.</span></h2>
-        <div class="story-grid">
-          <p class="lede" data-reveal>
-            No clock. No rules. No proof. Sellers <em>shill-bid their own cars</em>, buyers <em>sniped in the last second</em>,
-            and lakhs changed hands on <strong>a test drive and a promise</strong>. Everyone assumed everyone was lying — because usually, someone was.
-          </p>
-          <blockquote class="quote" data-reveal>
-            <p>"I paid a token advance for a 'single-owner' Civic. It had three owners and a welded chassis. Money gone, seller gone."</p>
-            <cite>— Buyer interview, before HAMMER</cite>
-          </blockquote>
-        </div>
-
-        <div class="pain-grid">
-          <article class="pain" data-reveal>
-            <span class="pain-num">P.01</span>
-            <h3>RIGGED &amp; SNIPED</h3>
-            <p>Fake accounts pumped prices, real bids landed <strong>1 second before close</strong> with zero time to respond. Winners felt cheated.</p>
-            <div class="pain-stat"><strong>41%</strong><span>bidders suspected fake bids</span></div>
-          </article>
-          <article class="pain" data-reveal>
-            <span class="pain-num">P.02</span>
-            <h3>FAKE STEEL</h3>
-            <p>Odometers rolled back, accident history hidden, <strong>1 in 4 listings</strong> misrepresented mileage or ownership on inspection.</p>
-            <div class="pain-stat"><strong>1 in 4</strong><span>listings misrepresented</span></div>
-          </article>
-          <article class="pain" data-reveal>
-            <span class="pain-num">P.03</span>
-            <h3>CASH-AND-PRAY</h3>
-            <p>Token money over bKash, no receipts, no recourse. <strong>12% of agreed deals</strong> collapsed before handover — or ended in disputes.</p>
-            <div class="pain-stat"><strong>12%</strong><span>deals collapsed pre-handover</span></div>
-          </article>
-        </div>
-
-        <div class="before-after" data-reveal>
-          <div class="ba-row"><span>Bidders doubting fairness</span><div class="bar"><i style="--w:82%;--c:#FF3B30"></i></div><strong>41%</strong></div>
-          <div class="ba-row"><span>Listings misrepresented</span><div class="bar"><i style="--w:50%;--c:#FF3B30"></i></div><strong>1 in 4</strong></div>
-          <div class="ba-row"><span>Avg. days to close a deal</span><div class="bar"><i style="--w:76%;--c:#FF3B30"></i></div><strong>6 days</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 02 SOLVE ============ -->
-    <section class="story solve" id="solve">
-      <div class="wrap">
-        <div class="sec-head sec-head--light" data-reveal>
-          <span class="sec-index">02 / HOW WE SOLVED IT</span>
-          <span class="sec-tag">NOT A LISTING SITE — A FIGHT RING WITH RULES</span>
-        </div>
-        <h2 class="mega mega--light" data-reveal>WE GAVE EVERY CAR <span class="hazard-t">A CLOCK,</span><br>A REFEREE <span class="stroke-light">&amp; A VAULT.</span></h2>
-        <p class="lede lede--light" data-reveal>Four systems. Bids land in under 50ms, snipers get punished by the clock, every car is inspected before it touches the block, and money sleeps in escrow until both sides shake hands:</p>
-
-        <div class="pipeline">
-          <article class="pipe pipe--feature" data-reveal>
-            <div class="pipe-num">01</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">LIVE BID ENGINE · &lt;50MS</span>
-              <h3>EVERY BID LANDS INSTANTLY</h3>
-              <p>Socket.io rooms per lot, Redis pub/sub fan-out, Postgres serializable writes. <strong>2,000+ watchers</strong> see your bid before your finger leaves the button.</p>
-              <div class="nlu-viz">
-                <span class="tok">you bid $43,000 <em>sent</em></span>
-                <span class="tok tok--hot">2,314 screens update <em>38ms ✓</em></span>
-                <span class="tok">ledger sealed <em>tx #99120</em></span>
-              </div>
-              <code class="code">bid(lot:0847, $43,000) → validate → broadcast(38ms) → ledger_lock ✓</code>
-              <div class="chips"><span>Node.js</span><span>Socket.io</span><span>Redis pub/sub</span><span>PostgreSQL</span></div>
+    <!-- LOADER -->
+    <div class="loader" data-loader aria-hidden="true">
+        <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 03/09</span></div>
+        <div class="loader-center">
+            <div class="loader-word" data-loader-word>RAISING THE GAVEL…</div>
+            <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
+            <div class="loader-track">
+                <div class="loader-fill" data-loader-fill></div>
             </div>
-          </article>
-          <article class="pipe" data-reveal>
-            <div class="pipe-num">02</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">ANTI-SNIPE + AUTOBID AGENTS</span>
-              <h3>SNIPERS GET PUNISHED</h3>
-              <p>Any bid in the last 60 seconds <strong>extends the clock +60s</strong>. Set your max once — your agent duels incrementally so you never overpay in a panic.</p>
-              <code class="code">bid @ T-12s → clock += 60s → agent(max:$45k) counters $43,500</code>
-              <div class="chips"><span>Soft-close clock</span><span>Proxy agents</span><span>Shill detection</span></div>
-            </div>
-          </article>
-          <article class="pipe" data-reveal>
-            <div class="pipe-num">03</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">TRUST · VERIFY BEFORE BLOCK</span>
-              <h3>NO PROOF, NO AUCTION</h3>
-              <p>KYC for humans, <strong>200-point inspection + OBD + history check</strong> for machines. Fakes die in review — only 63% of submitted cars reach the block.</p>
-              <code class="code">submit → kyc ✓ → inspect 196/200 → history clean → LIVE</code>
-              <div class="chips"><span>KYC</span><span>200-pt inspection</span><span>Ownership ledger</span></div>
-            </div>
-          </article>
-          <article class="pipe pipe--loop" data-reveal>
-            <div class="pipe-num">04</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">MONEY VAULT · ESCROW</span>
-              <h3>CASH CAN'T RUN AWAY</h3>
-              <p>Winning bid locks into escrow instantly. Released only on <strong>double handshake</strong> — buyer confirms car, seller confirms payment. Disputes go to mediated review with full bid ledger.</p>
-              <div class="mini-bars"><i style="--h:30%"></i><i style="--h:48%"></i><i style="--h:66%"></i><i style="--h:84%"></i><i style="--h:99%"></i></div>
-              <div class="chips"><span>Stripe escrow</span><span>Dual-confirm release</span><span>Dispute ledger</span></div>
-            </div>
-          </article>
+            <div class="loader-sub">WARMING PADDLES · SYNCING BIDS · VERIFYING CARS</div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ INTERACTIVE DEMO ============ -->
-    <section class="demo" id="demo">
-      <div class="wrap demo-wrap">
-        <div class="sec-head" data-reveal>
-          <span class="sec-index">LIVE DEMO</span>
-          <span class="sec-tag">CLICK BID — RIVALS REALLY FIGHT BACK</span>
+        <div class="loader-bottom"><span>HAMMER · AUCTION ENGINE</span><span>NODE / SOCKET.IO / POSTGRES / STRIPE</span>
         </div>
-        <h2 class="mega" data-reveal>TAKE THE PADDLE.<br><span class="hazard-t">OUTBID THE BOTS.</span></h2>
+    </div>
 
-        <div class="demo-grid">
-          <div class="demo-chat" data-reveal>
-            <div class="demo-chat-head"><span class="pulse"></span> LOT #0847 · M3 COMPETITION <span class="lat" data-lat>38ms</span></div>
-            <div class="demo-top">
-              <div class="demo-price">
-                <span class="demo-price-label">CURRENT BID</span>
-                <strong data-demo-bid>$42,500</strong>
-                <span class="demo-leader" data-demo-leader>LEADER: AutoKing 👑</span>
-              </div>
-              <div class="demo-timer">
-                <span class="demo-price-label">HAMMER IN</span>
-                <strong data-demo-timer>01:00</strong>
-                <button class="autobid" data-autobid aria-pressed="false"><i></i> AUTOBID: OFF</button>
-              </div>
+    <!-- NAV -->
+    <header class="nav">
+        <a href="work.html" class="nav-back" data-magnetic>
+            <span class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg></span>
+            <span>ALL WORK</span>
+        </a>
+        <div class="nav-mid">CASE STUDY <strong>— 03 / 09</strong></div>
+        <a href="contact.html" class="nav-cta" data-magnetic><span>START AN AUCTION</span><i>↗</i></a>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="hero-gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div class="hero-glow hero-glow--hazard" aria-hidden="true"></div>
+            <div class="hero-glow hero-glow--red" aria-hidden="true"></div>
+            <div class="hero-giant" aria-hidden="true">03</div>
+            <div class="hazard" aria-hidden="true"></div>
+
+            <div class="hero-inner">
+                <div class="hero-eyebrow" data-reveal>
+                    <span class="pill"><span class="dot"></span> LIVE BIDDING · <b data-live-count>2,314</b> WATCHING
+                        NOW</span>
+                    <span class="hero-loc">10K+ CARS SOLD · &lt;50MS BIDS · 2025</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="line"><span class="word" data-reveal>BID.</span> <span class="word word--stroke"
+                            data-reveal>WIN.</span></span>
+                    <span class="line"><span class="word word--hazard" data-reveal>DRIVE<span
+                                class="period">.</span></span></span>
+                    <span class="line line--small"><span class="word word--small" data-reveal>HAMMER — REAL-TIME CAR
+                            AUCTIONS WITH ZERO-RIGGING, VERIFIED CARS &amp; ESCROWED MONEY.</span></span>
+                </h1>
+
+                <div class="hero-split">
+                    <p class="hero-desc" data-reveal>
+                        Used-car deals ran on <s>shady DMs &amp; handshake promises</s>. <strong>HAMMER puts every car
+                            on a live
+                            block — 200-point inspection, anti-snipe clock, autobid agents</strong> — and money moves
+                        only on handshake × 2.
+                    </p>
+                    <div class="hero-ctas" data-reveal>
+                        <a href="#demo" class="btn btn--hazard" data-magnetic><span>PLACE A BID ↓</span><i>🔨</i></a>
+                        <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
+                    </div>
+                </div>
+
+                <div class="hero-board">
+                    <!-- LIVE LOT TERMINAL -->
+                    <div class="terminal" data-reveal>
+                        <div class="terminal-bar">
+                            <span class="t-dots"><i></i><i></i><i></i></span>
+                            <span class="t-title">hammer — LOT #0847 · BMW M3 COMPETITION · 2024</span>
+                            <span class="t-live"><span class="blink"></span> LIVE</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="lot">
+                                <div class="lot-car" aria-hidden="true">
+                                    <span class="lot-year">2024 · 12,000 MI</span>
+                                    <span class="lot-name">BMW M3 <em>COMPETITION</em></span>
+                                    <span class="lot-spec">INSPECTED ✓ 196/200 · NO ACCIDENTS · DHAKA</span>
+                                </div>
+                                <div class="lot-clock">
+                                    <span class="clock-label">HAMMER FALLS IN</span>
+                                    <span class="clock-time" data-hero-timer>00:47</span>
+                                    <span class="clock-bids"><b data-hero-bids>132</b> BIDS · <b>2,314</b>
+                                        WATCHING</span>
+                                </div>
+                            </div>
+                            <div class="bidrow">
+                                <div class="bidnow">
+                                    <span class="bidnow-label">CURRENT BID</span>
+                                    <span class="bidnow-amount" data-hero-bid>$42,500</span>
+                                    <span class="bidnow-lead">LEADER: <b>AutoKing 👑</b></span>
+                                </div>
+                                <div class="feed" data-hero-feed>
+                                    <div class="feed-row"><span>AutoKing</span><span>$42,500</span><em>now</em></div>
+                                    <div class="feed-row"><span>Bidder_284</span><span>$42,000</span><em>12s</em></div>
+                                    <div class="feed-row"><span>CarHunter99</span><span>$41,500</span><em>31s</em></div>
+                                </div>
+                            </div>
+                            <div class="terminal-foot">
+                                <span class="prompt">❯</span>
+                                <span class="fake-input">Your max: $43,000 — autobid armed<span
+                                        class="caret"></span></span>
+                                <span class="send">BID $43,000 🔨</span>
+                            </div>
+                        </div>
+                        <div class="terminal-badges">
+                            <span>&lt;50MS BID SYNC</span><span>ANTI-SNIPE CLOCK</span><span>ESCROW LOCKED</span>
+                        </div>
+                    </div>
+
+                    <!-- STAT RAIL -->
+                    <div class="hero-rail" data-reveal>
+                        <div class="rail-head">WHY IT MATTERS — TL;DR</div>
+                        <a href="#problem" class="rail-card rail-card--problem">
+                            <span class="rail-num">01</span>
+                            <span class="rail-kicker">THE PROBLEM</span>
+                            <strong>Rigged bids, fake listings, cash deals gone wrong.</strong>
+                            <span class="rail-link">Read the pain →</span>
+                        </a>
+                        <a href="#solve" class="rail-card rail-card--solve">
+                            <span class="rail-num">02</span>
+                            <span class="rail-kicker">HOW WE SOLVED</span>
+                            <strong>Live engine + autobid agents + verified escrow.</strong>
+                            <span class="rail-link">See the engine →</span>
+                        </a>
+                        <a href="#outcome" class="rail-card rail-card--outcome">
+                            <span class="rail-num">03</span>
+                            <span class="rail-kicker">THE OUTCOME</span>
+                            <strong>98% sell-through · $4.2M moved safely.</strong>
+                            <span class="rail-link">See proof →</span>
+                        </a>
+                        <div class="rail-meta">
+                            <div><span>CLIENT</span><strong>Auto marketplace</strong></div>
+                            <div><span>TIMELINE</span><strong>8 weeks</strong></div>
+                            <div><span>ROLE</span><strong>Design → Realtime → Pay</strong></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="demo-messages" data-messages>
-              <div class="msg msg--sys"><p>Auction open — soft-close armed. Bids in the last 60s extend the clock. Good luck. 🔨</p></div>
-              <div class="msg msg--bot"><p><b>AutoKing</b> bids <b>$42,500</b> — "This one's mine."</p><span class="intent">38ms · tx #99119 · outbid: Bidder_284</span></div>
+
+            <div class="hero-scroll" aria-hidden="true"><span>SCROLL FOR STORY</span>
+                <div class="line-v"></div>
             </div>
-            <div class="demo-chips" data-chips>
-              <button data-bid="500">BID +$500</button>
-              <button data-bid="1000">BID +$1,000 🔥</button>
-              <button data-bid="2500">SLAM +$2,500 ⚡</button>
+        </section>
+
+        <!-- TICKER -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track" data-ticker>
+                <span>🔨 M3 — $42,500 <i>✦</i></span><span>PORSCHE 911 — $89,200 <i>✦</i></span><span>TESLA MODEL S —
+                    $38,100 <i>✦</i></span><span>AMG GT — $67,800 <i>✦</i></span><span>SUPRA MK4 — $51,400
+                    <i>✦</i></span><span>RANGE ROVER — $74,900 <i>✦</i></span>
+                <span>🔨 M3 — $42,500 <i>✦</i></span><span>PORSCHE 911 — $89,200 <i>✦</i></span><span>TESLA MODEL S —
+                    $38,100 <i>✦</i></span><span>AMG GT — $67,800 <i>✦</i></span><span>SUPRA MK4 — $51,400
+                    <i>✦</i></span><span>RANGE ROVER — $74,900 <i>✦</i></span>
             </div>
-          </div>
-          <div class="demo-side" data-reveal>
-            <h3>WHAT YOU'RE SEEING</h3>
-            <ul>
-              <li><strong>Rival bots</strong> counter-bid like a real floor — they want this M3.</li>
-              <li><strong>Anti-snipe clock</strong> — bid late and the hammer backs off +60s. Try it.</li>
-              <li><strong>Autobid</strong> — arm it with a $48,000 max and watch it duel for you.</li>
-            </ul>
-            <div class="arch">
-              <span>YOU</span><i>→</i><span>FLOOR</span><i>→</i><span>VAULT</span><i>→</i><span>KEYS</span>
+        </div>
+
+        <!-- ============ 01 PROBLEM ============ -->
+        <section class="story problem" id="problem">
+            <div class="wrap">
+                <div class="sec-head" data-reveal>
+                    <span class="sec-index">01 / THE PROBLEM</span>
+                    <span class="sec-tag">WHY CAR DEALS FELT LIKE GAMBLING</span>
+                </div>
+                <h2 class="mega" data-reveal>EVERY DEAL WAS <span class="stroke">A DARK</span><br><span
+                        class="hazard-t">BACK-ALLEY BET.</span></h2>
+                <div class="story-grid">
+                    <p class="lede" data-reveal>
+                        No clock. No rules. No proof. Sellers <em>shill-bid their own cars</em>, buyers <em>sniped in
+                            the last second</em>,
+                        and lakhs changed hands on <strong>a test drive and a promise</strong>. Everyone assumed
+                        everyone was lying — because usually, someone was.
+                    </p>
+                    <blockquote class="quote" data-reveal>
+                        <p>"I paid a token advance for a 'single-owner' Civic. It had three owners and a welded chassis.
+                            Money gone, seller gone."</p>
+                        <cite>— Buyer interview, before HAMMER</cite>
+                    </blockquote>
+                </div>
+
+                <div class="pain-grid">
+                    <article class="pain" data-reveal>
+                        <span class="pain-num">P.01</span>
+                        <h3>RIGGED &amp; SNIPED</h3>
+                        <p>Fake accounts pumped prices, real bids landed <strong>1 second before close</strong> with
+                            zero time to respond. Winners felt cheated.</p>
+                        <div class="pain-stat"><strong>41%</strong><span>bidders suspected fake bids</span></div>
+                    </article>
+                    <article class="pain" data-reveal>
+                        <span class="pain-num">P.02</span>
+                        <h3>FAKE STEEL</h3>
+                        <p>Odometers rolled back, accident history hidden, <strong>1 in 4 listings</strong>
+                            misrepresented mileage or ownership on inspection.</p>
+                        <div class="pain-stat"><strong>1 in 4</strong><span>listings misrepresented</span></div>
+                    </article>
+                    <article class="pain" data-reveal>
+                        <span class="pain-num">P.03</span>
+                        <h3>CASH-AND-PRAY</h3>
+                        <p>Token money over bKash, no receipts, no recourse. <strong>12% of agreed deals</strong>
+                            collapsed before handover — or ended in disputes.</p>
+                        <div class="pain-stat"><strong>12%</strong><span>deals collapsed pre-handover</span></div>
+                    </article>
+                </div>
+
+                <div class="before-after" data-reveal>
+                    <div class="ba-row"><span>Bidders doubting fairness</span>
+                        <div class="bar"><i style="--w:82%;--c:#FF3B30"></i></div><strong>41%</strong>
+                    </div>
+                    <div class="ba-row"><span>Listings misrepresented</span>
+                        <div class="bar"><i style="--w:50%;--c:#FF3B30"></i></div><strong>1 in 4</strong>
+                    </div>
+                    <div class="ba-row"><span>Avg. days to close a deal</span>
+                        <div class="bar"><i style="--w:76%;--c:#FF3B30"></i></div><strong>6 days</strong>
+                    </div>
+                </div>
             </div>
-            <a href="contact.html" class="btn btn--hazard" data-magnetic><span>AUCTION MY CAR</span><i>↗</i></a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ============ 03 OUTCOME ============ -->
-    <section class="story outcome" id="outcome">
-      <div class="wrap">
-        <div class="sec-head sec-head--light" data-reveal>
-          <span class="sec-index">03 / THE OUTCOME</span>
-          <span class="sec-tag">NUMBERS, NOT ADJECTIVES</span>
-        </div>
-        <h2 class="mega mega--light" data-reveal>FROM SHADY DMS<br>TO <span class="hazard-t">SOLD IN 11 MINUTES.</span></h2>
+        <!-- ============ 02 SOLVE ============ -->
+        <section class="story solve" id="solve">
+            <div class="wrap">
+                <div class="sec-head sec-head--light" data-reveal>
+                    <span class="sec-index">02 / HOW WE SOLVED IT</span>
+                    <span class="sec-tag">NOT A LISTING SITE — A FIGHT RING WITH RULES</span>
+                </div>
+                <h2 class="mega mega--light" data-reveal>WE GAVE EVERY CAR <span class="hazard-t">A CLOCK,</span><br>A
+                    REFEREE <span class="stroke-light">&amp; A VAULT.</span></h2>
+                <p class="lede lede--light" data-reveal>Four systems. Bids land in under 50ms, snipers get punished by
+                    the clock, every car is inspected before it touches the block, and money sleeps in escrow until both
+                    sides shake hands:</p>
 
-        <div class="metrics">
-          <div class="metric" data-reveal data-count="10" data-suffix="K+">
-            <span class="metric-val"><span data-num>10K+</span></span>
-            <span class="metric-label">CARS AUCTIONED</span>
-            <span class="metric-sub">was 0 — launched from pit-lane</span>
-          </div>
-          <div class="metric metric--hazard" data-reveal data-count="50" data-prefix="‹" data-suffix="ms">
-            <span class="metric-val"><span data-num>‹50ms</span></span>
-            <span class="metric-label">MEDIAN BID SYNC</span>
-            <span class="metric-sub">2,000+ watchers, zero lag fights</span>
-          </div>
-          <div class="metric" data-reveal data-count="98" data-suffix="%">
-            <span class="metric-val"><span data-num>98%</span></span>
-            <span class="metric-label">SELL-THROUGH RATE</span>
-            <span class="metric-sub">lots meet reserve &amp; close paid</span>
-          </div>
-          <div class="metric" data-reveal data-count="4" data-suffix="★" data-decimal="4.8">
-            <span class="metric-val"><span data-num>4.8★</span></span>
-            <span class="metric-label">TRUST RATING</span>
-            <span class="metric-sub">was "is this a scam?" — now 4.8★</span>
-          </div>
-        </div>
+                <div class="pipeline">
+                    <article class="pipe pipe--feature" data-reveal>
+                        <div class="pipe-num">01</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">LIVE BID ENGINE · &lt;50MS</span>
+                            <h3>EVERY BID LANDS INSTANTLY</h3>
+                            <p>Socket.io rooms per lot, Redis pub/sub fan-out, Postgres serializable writes.
+                                <strong>2,000+ watchers</strong> see your bid before your finger leaves the button.</p>
+                            <div class="nlu-viz">
+                                <span class="tok">you bid $43,000 <em>sent</em></span>
+                                <span class="tok tok--hot">2,314 screens update <em>38ms ✓</em></span>
+                                <span class="tok">ledger sealed <em>tx #99120</em></span>
+                            </div>
+                            <code
+                                class="code">bid(lot:0847, $43,000) → validate → broadcast(38ms) → ledger_lock ✓</code>
+                            <div class="chips"><span>Node.js</span><span>Socket.io</span><span>Redis
+                                    pub/sub</span><span>PostgreSQL</span></div>
+                        </div>
+                    </article>
+                    <article class="pipe" data-reveal>
+                        <div class="pipe-num">02</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">ANTI-SNIPE + AUTOBID AGENTS</span>
+                            <h3>SNIPERS GET PUNISHED</h3>
+                            <p>Any bid in the last 60 seconds <strong>extends the clock +60s</strong>. Set your max once
+                                — your agent duels incrementally so you never overpay in a panic.</p>
+                            <code class="code">bid @ T-12s → clock += 60s → agent(max:$45k) counters $43,500</code>
+                            <div class="chips"><span>Soft-close clock</span><span>Proxy agents</span><span>Shill
+                                    detection</span></div>
+                        </div>
+                    </article>
+                    <article class="pipe" data-reveal>
+                        <div class="pipe-num">03</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">TRUST · VERIFY BEFORE BLOCK</span>
+                            <h3>NO PROOF, NO AUCTION</h3>
+                            <p>KYC for humans, <strong>200-point inspection + OBD + history check</strong> for machines.
+                                Fakes die in review — only 63% of submitted cars reach the block.</p>
+                            <code class="code">submit → kyc ✓ → inspect 196/200 → history clean → LIVE</code>
+                            <div class="chips"><span>KYC</span><span>200-pt inspection</span><span>Ownership
+                                    ledger</span></div>
+                        </div>
+                    </article>
+                    <article class="pipe pipe--loop" data-reveal>
+                        <div class="pipe-num">04</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">MONEY VAULT · ESCROW</span>
+                            <h3>CASH CAN'T RUN AWAY</h3>
+                            <p>Winning bid locks into escrow instantly. Released only on <strong>double
+                                    handshake</strong> — buyer confirms car, seller confirms payment. Disputes go to
+                                mediated review with full bid ledger.</p>
+                            <div class="mini-bars"><i style="--h:30%"></i><i style="--h:48%"></i><i
+                                    style="--h:66%"></i><i style="--h:84%"></i><i style="--h:99%"></i></div>
+                            <div class="chips"><span>Stripe escrow</span><span>Dual-confirm release</span><span>Dispute
+                                    ledger</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="outcome-grid">
-          <div class="after-card" data-reveal>
-            <h3>BEFORE → AFTER</h3>
-            <div class="ba-row"><span>Days to close</span><div class="bar"><i style="--w:86%;--c:#FF3B30"></i></div><strong>6 days</strong></div>
-            <div class="ba-row ba-row--after"><span>Days to close</span><div class="bar"><i style="--w:6%;--c:#FFD21F" data-grow></i></div><strong>11 min</strong></div>
-            <div class="ba-row"><span>Deals collapsing</span><div class="bar"><i style="--w:48%;--c:#FF3B30"></i></div><strong>12%</strong></div>
-            <div class="ba-row ba-row--after"><span>Deals collapsing</span><div class="bar"><i style="--w:4%;--c:#FFD21F" data-grow></i></div><strong>0.8%</strong></div>
-          </div>
-          <blockquote class="quote quote--big" data-reveal>
-            <p>"My Supra got 84 bids in 20 minutes and money was in escrow before the stream ended. I've never sold a car without sweating — until HAMMER."</p>
-            <cite>— Seller, 1994 Supra MK4 ★★★★★</cite>
-          </blockquote>
-        </div>
+        <!-- ============ INTERACTIVE DEMO ============ -->
+        <section class="demo" id="demo">
+            <div class="wrap demo-wrap">
+                <div class="sec-head" data-reveal>
+                    <span class="sec-index">LIVE DEMO</span>
+                    <span class="sec-tag">CLICK BID — RIVALS REALLY FIGHT BACK</span>
+                </div>
+                <h2 class="mega" data-reveal>TAKE THE PADDLE.<br><span class="hazard-t">OUTBID THE BOTS.</span></h2>
 
-        <div class="stack">
-          <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
-          <div class="stack-grid">
-            <span data-reveal>Node.js</span><span data-reveal>Socket.io</span><span data-reveal>PostgreSQL</span><span data-reveal>Redis</span><span data-reveal>Stripe Escrow</span><span data-reveal>KYC + Inspection</span><span data-reveal>Anti-snipe Clock</span><span data-reveal>Autobid Agents</span><span data-reveal>AWS</span><span data-reveal>Admin War-room</span>
-          </div>
-        </div>
-      </div>
-    </section>
+                <div class="demo-grid">
+                    <div class="demo-chat" data-reveal>
+                        <div class="demo-chat-head"><span class="pulse"></span> LOT #0847 · M3 COMPETITION <span
+                                class="lat" data-lat>38ms</span></div>
+                        <div class="demo-top">
+                            <div class="demo-price">
+                                <span class="demo-price-label">CURRENT BID</span>
+                                <strong data-demo-bid>$42,500</strong>
+                                <span class="demo-leader" data-demo-leader>LEADER: AutoKing 👑</span>
+                            </div>
+                            <div class="demo-timer">
+                                <span class="demo-price-label">HAMMER IN</span>
+                                <strong data-demo-timer>01:00</strong>
+                                <button class="autobid" data-autobid aria-pressed="false"><i></i> AUTOBID: OFF</button>
+                            </div>
+                        </div>
+                        <div class="demo-messages" data-messages>
+                            <div class="msg msg--sys">
+                                <p>Auction open — soft-close armed. Bids in the last 60s extend the clock. Good luck. 🔨
+                                </p>
+                            </div>
+                            <div class="msg msg--bot">
+                                <p><b>AutoKing</b> bids <b>$42,500</b> — "This one's mine."</p><span class="intent">38ms
+                                    · tx #99119 · outbid: Bidder_284</span>
+                            </div>
+                        </div>
+                        <div class="demo-chips" data-chips>
+                            <button data-bid="500">BID +$500</button>
+                            <button data-bid="1000">BID +$1,000 🔥</button>
+                            <button data-bid="2500">SLAM +$2,500 ⚡</button>
+                        </div>
+                    </div>
+                    <div class="demo-side" data-reveal>
+                        <h3>WHAT YOU'RE SEEING</h3>
+                        <ul>
+                            <li><strong>Rival bots</strong> counter-bid like a real floor — they want this M3.</li>
+                            <li><strong>Anti-snipe clock</strong> — bid late and the hammer backs off +60s. Try it.</li>
+                            <li><strong>Autobid</strong> — arm it with a $48,000 max and watch it duel for you.</li>
+                        </ul>
+                        <div class="arch">
+                            <span>YOU</span><i>→</i><span>FLOOR</span><i>→</i><span>VAULT</span><i>→</i><span>KEYS</span>
+                        </div>
+                        <a href="contact.html" class="btn btn--hazard" data-magnetic><span>AUCTION MY
+                                CAR</span><i>↗</i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- ============ NEXT ============ -->
-    <section class="next">
-      <a href="project-4.html" class="next-link" data-magnetic>
-        <span class="next-kicker">NEXT CASE — 04 / 09</span>
-        <span class="next-title">DATA <span class="stroke">PIPELINE</span> →</span>
-        <span class="next-sub">Streaming ETL + warehouse engine · Click anywhere to continue</span>
-      </a>
-      <div class="next-giant" aria-hidden="true">04</div>
-    </section>
-  </main>
+        <!-- ============ 03 OUTCOME ============ -->
+        <section class="story outcome" id="outcome">
+            <div class="wrap">
+                <div class="sec-head sec-head--light" data-reveal>
+                    <span class="sec-index">03 / THE OUTCOME</span>
+                    <span class="sec-tag">NUMBERS, NOT ADJECTIVES</span>
+                </div>
+                <h2 class="mega mega--light" data-reveal>FROM SHADY DMS<br>TO <span class="hazard-t">SOLD IN 11
+                        MINUTES.</span></h2>
 
-  <footer class="foot">
-    <a href="work.html">← ALL WORK</a>
-    <span>SCIDATA ANALYST · AUCTION CASE 03</span>
-    <a href="contact.html">BUILD YOURS ↗</a>
-  </footer>
+                <div class="metrics">
+                    <div class="metric" data-reveal data-count="10" data-suffix="K+">
+                        <span class="metric-val"><span data-num>10K+</span></span>
+                        <span class="metric-label">CARS AUCTIONED</span>
+                        <span class="metric-sub">was 0 — launched from pit-lane</span>
+                    </div>
+                    <div class="metric metric--hazard" data-reveal data-count="50" data-prefix="‹" data-suffix="ms">
+                        <span class="metric-val"><span data-num>‹50ms</span></span>
+                        <span class="metric-label">MEDIAN BID SYNC</span>
+                        <span class="metric-sub">2,000+ watchers, zero lag fights</span>
+                    </div>
+                    <div class="metric" data-reveal data-count="98" data-suffix="%">
+                        <span class="metric-val"><span data-num>98%</span></span>
+                        <span class="metric-label">SELL-THROUGH RATE</span>
+                        <span class="metric-sub">lots meet reserve &amp; close paid</span>
+                    </div>
+                    <div class="metric" data-reveal data-count="4" data-suffix="★" data-decimal="4.8">
+                        <span class="metric-val"><span data-num>4.8★</span></span>
+                        <span class="metric-label">TRUST RATING</span>
+                        <span class="metric-sub">was "is this a scam?" — now 4.8★</span>
+                    </div>
+                </div>
 
-  <!-- FLOATERS -->
-  <div class="freelance-float">
-    <span class="freelance-label">Hire Us</span>
-    <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link" aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
-    <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
-    <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link" aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
-  </div>
-  <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+                <div class="outcome-grid">
+                    <div class="after-card" data-reveal>
+                        <h3>BEFORE → AFTER</h3>
+                        <div class="ba-row"><span>Days to close</span>
+                            <div class="bar"><i style="--w:86%;--c:#FF3B30"></i></div><strong>6 days</strong>
+                        </div>
+                        <div class="ba-row ba-row--after"><span>Days to close</span>
+                            <div class="bar"><i style="--w:6%;--c:#FFD21F" data-grow></i></div><strong>11 min</strong>
+                        </div>
+                        <div class="ba-row"><span>Deals collapsing</span>
+                            <div class="bar"><i style="--w:48%;--c:#FF3B30"></i></div><strong>12%</strong>
+                        </div>
+                        <div class="ba-row ba-row--after"><span>Deals collapsing</span>
+                            <div class="bar"><i style="--w:4%;--c:#FFD21F" data-grow></i></div><strong>0.8%</strong>
+                        </div>
+                    </div>
+                    <blockquote class="quote quote--big" data-reveal>
+                        <p>"My Supra got 84 bids in 20 minutes and money was in escrow before the stream ended. I've
+                            never sold a car without sweating — until HAMMER."</p>
+                        <cite>— Seller, 1994 Supra MK4 ★★★★★</cite>
+                    </blockquote>
+                </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="assets/js/project-3.js"></script>
+                <div class="stack">
+                    <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
+                    <div class="stack-grid">
+                        <span data-reveal>Node.js</span><span data-reveal>Socket.io</span><span
+                            data-reveal>PostgreSQL</span><span data-reveal>Redis</span><span data-reveal>Stripe
+                            Escrow</span><span data-reveal>KYC + Inspection</span><span data-reveal>Anti-snipe
+                            Clock</span><span data-reveal>Autobid Agents</span><span data-reveal>AWS</span><span
+                            data-reveal>Admin War-room</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ NEXT ============ -->
+        <section class="next">
+            <a href="project-4.html" class="next-link" data-magnetic>
+                <span class="next-kicker">NEXT CASE — 04 / 09</span>
+                <span class="next-title">DATA <span class="stroke">PIPELINE</span> →</span>
+                <span class="next-sub">Streaming ETL + warehouse engine · Click anywhere to continue</span>
+            </a>
+            <div class="next-giant" aria-hidden="true">04</div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <a href="work.html">← ALL WORK</a>
+        <span>SCIDATA ANALYST · AUCTION CASE 03</span>
+        <a href="contact.html">BUILD YOURS ↗</a>
+    </footer>
+
+    <!-- FLOATERS -->
+    <div class="freelance-float">
+        <span class="freelance-label">Hire Us</span>
+        <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link"
+            aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
+        <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img
+                src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
+        <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link"
+            aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
+    </div>
+    <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/project-3.js"></script>
 </body>
+
 </html>

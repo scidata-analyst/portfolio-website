@@ -1,418 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PULSE — AI Ad Buy & Audience That Prints ROAS | Case Study 05</title>
-  <meta name="description" content="Problem → Solution → Outcome. How we built an AI ad-buy engine that bids 1B+ events/day, finds buyers before they search, and lifts ROAS 3.1× — 42% less waste.">
-  <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
-  <link rel="stylesheet" href="scss/project-5.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULSE — AI Ad Buy & Audience That Prints ROAS | Case Study 05</title>
+    <meta name="description"
+        content="Problem → Solution → Outcome. How we built an AI ad-buy engine that bids 1B+ events/day, finds buyers before they search, and lifts ROAS 3.1× — 42% less waste.">
+    <!-- ISOLATED BOLD DESIGN SYSTEM FOR THIS CASE STUDY -->
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body class="project-5">
 
-  <!-- NOISE + PROGRESS -->
-  <div class="noise" aria-hidden="true"></div>
-  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+    <!-- NOISE + PROGRESS -->
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scroll-progress" data-progress aria-hidden="true"></div>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor" data-cursor aria-hidden="true">
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-    <span class="cursor-label">ROAS</span>
-  </div>
-
-  <!-- LOADER -->
-  <div class="loader" data-loader aria-hidden="true">
-    <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 05/09</span></div>
-    <div class="loader-center">
-      <div class="loader-word" data-loader-word>CALIBRATING ROAS…</div>
-      <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
-      <div class="loader-track"><div class="loader-fill" data-loader-fill></div></div>
-      <div class="loader-sub">SCANNING AUDIENCES · ARMING BIDS · KILLING WASTE</div>
-    </div>
-    <div class="loader-bottom"><span>PULSE · AD ENGINE</span><span>PYTHON / KAFKA / REDIS / GCP</span></div>
-  </div>
-
-  <!-- NAV -->
-  <header class="nav">
-    <a href="work.html" class="nav-back" data-magnetic>
-      <span class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
-      <span>ALL WORK</span>
-    </a>
-    <div class="nav-mid">CASE STUDY <strong>— 05 / 09</strong></div>
-    <a href="contact.html" class="nav-cta" data-magnetic><span>PRINT MY ROAS</span><i>↗</i></a>
-  </header>
-
-  <main>
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero-gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-      <div class="hero-glow hero-glow--pink" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow--orange" aria-hidden="true"></div>
-      <div class="hero-giant" aria-hidden="true">05</div>
-      <div class="scanline" aria-hidden="true"></div>
-
-      <div class="hero-inner">
-        <div class="hero-eyebrow" data-reveal>
-          <span class="pill"><span class="dot"></span> LIVE BIDDING · <b data-live-bids>1.2B</b> EVENTS TODAY</span>
-          <span class="hero-loc">3.1× ROAS · 42% WASTE KILLED · 1,247 SEGMENTS LIVE</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="line"><span class="word" data-reveal>ADS THAT</span></span>
-          <span class="line"><span class="word word--stroke" data-reveal>FIND</span> <span class="word word--pink" data-reveal>BUYERS<span class="period">.</span></span></span>
-          <span class="line line--small"><span class="word word--small" data-reveal>PULSE — AI BIDS 1B+ EVENTS/DAY, BUILDS THE AUDIENCE BEFORE THE SEARCH, KILLS WASTE IN REAL TIME.</span></span>
-        </h1>
-
-        <div class="hero-split">
-          <p class="hero-desc" data-reveal>
-            Ad budgets were <s>spread by gut + spreadsheet</s>. <strong>PULSE watches every impression, scores who will actually buy,
-            and shifts the bid</strong> in 18ms — before the next app scrolls.
-          </p>
-          <div class="hero-ctas" data-reveal>
-            <a href="#demo" class="btn btn--pink" data-magnetic><span>OPEN LIVE EXCHANGE ↓</span><i>⚡</i></a>
-            <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
-          </div>
-        </div>
-
-        <div class="hero-board">
-          <!-- EXCHANGE TERMINAL -->
-          <div class="terminal" data-reveal>
-            <div class="terminal-bar">
-              <span class="t-dots"><i></i><i></i><i></i></span>
-              <span class="t-title">pulse — exchange · campaign: diablo_sneakers_q2 · LIVE</span>
-              <span class="t-live"><span class="blink"></span> 18ms bid</span>
-            </div>
-            <div class="terminal-body">
-              <div class="exchange">
-                <div class="ex-bid">
-                  <span class="ex-label">WINNING BID</span>
-                  <span class="ex-amount" data-hero-bid>$1.84</span>
-                  <span class="ex-meta">eCPM $2.34 · WIN RATE <b>67%</b></span>
-                  <span class="ex-roas">ROAS <b data-hero-roas>3.1×</b> <em>▲ +42%</em></span>
-                </div>
-                <div class="ex-radar" aria-hidden="true">
-                  <span class="radar-ring"></span><span class="radar-ring"></span><span class="radar-ring"></span>
-                  <span class="radar-sweep"></span>
-                  <span class="radar-dot" style="--x:38%;--y:32%"></span>
-                  <span class="radar-dot" style="--x:62%;--y:44%"></span>
-                  <span class="radar-dot" style="--x:54%;--y:68%"></span>
-                  <span class="radar-center">1.2M <em>high-intent</em></span>
-                </div>
-              </div>
-              <div class="ticker-mini" aria-hidden="true">
-                <span>LOOKALIKE 4.8% CTR <i>◆</i></span><span>RE-TARGET 1,247 live <i>◆</i></span><span>WASTE KILL -42% <i>◆</i></span><span>P95 18ms <i>◆</i></span>
-              </div>
-              <div class="auction-feed" data-hero-feed>
-                <div class="af-row af-row--win"><span>Impr. #881204</span><span>BID $1.84 ✓</span><span>WON · $0.42 saved</span></div>
-                <div class="af-row"><span>Impr. #881203</span><span>BID $0.92 ✕</span><span>LOST · waste avoided</span></div>
-                <div class="af-row af-row--win"><span>Impr. #881202</span><span>BID $2.10 ✓</span><span>WON · ROAS 4.2×</span></div>
-              </div>
-              <div class="terminal-foot">
-                <span class="prompt">❯</span>
-                <span class="fake-input">Audience <b>skate_lookalike_7</b> jumped to ROAS 4.1× — budget shifted +18%<span class="caret"></span></span>
-                <span class="send">SHIFT BUDGET</span>
-              </div>
-            </div>
-            <div class="terminal-badges">
-              <span>18MS BIDDING</span><span>1,247 SEGMENTS</span><span>FRAUD FILTERED</span>
-            </div>
-          </div>
-
-          <!-- STAT RAIL -->
-          <div class="hero-rail" data-reveal>
-            <div class="rail-head">WHY IT MATTERS — TL;DR</div>
-            <a href="#problem" class="rail-card rail-card--problem">
-              <span class="rail-num">01</span>
-              <span class="rail-kicker">THE PROBLEM</span>
-              <strong>Budget burnt on the wrong eyes, ROAS guessed after the fact.</strong>
-              <span class="rail-link">Read the pain →</span>
-            </a>
-            <a href="#solve" class="rail-card rail-card--solve">
-              <span class="rail-num">02</span>
-              <span class="rail-kicker">HOW WE SOLVED</span>
-              <strong>Real-time bidder + audience brain + attribution.</strong>
-              <span class="rail-link">See the engine →</span>
-            </a>
-            <a href="#outcome" class="rail-card rail-card--outcome">
-              <span class="rail-num">03</span>
-              <span class="rail-kicker">THE OUTCOME</span>
-              <strong>3.1× ROAS · −42% waste · 1B events/day.</strong>
-              <span class="rail-link">See proof →</span>
-            </a>
-            <div class="rail-meta">
-              <div><span>CLIENT</span><strong>D2C + marketplace</strong></div>
-              <div><span>TIMELINE</span><strong>9 weeks</strong></div>
-              <div><span>ROLE</span><strong>ML → Exchange → Dash</strong></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-scroll" aria-hidden="true"><span>SCROLL FOR STORY</span><div class="line-v"></div></div>
-    </section>
-
-    <!-- TICKER -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>RTB <i>◆</i></span><span>1B EVENTS/DAY <i>◆</i></span><span>18MS BID <i>◆</i></span><span>ROAS 3.1× <i>◆</i></span><span>−42% WASTE <i>◆</i></span><span>1,247 SEGMENTS <i>◆</i></span>
-        <span>RTB <i>◆</i></span><span>1B EVENTS/DAY <i>◆</i></span><span>18MS BID <i>◆</i></span><span>ROAS 3.1× <i>◆</i></span><span>−42% WASTE <i>◆</i></span><span>1,247 SEGMENTS <i>◆</i></span>
-      </div>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" data-cursor aria-hidden="true">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <span class="cursor-label">ROAS</span>
     </div>
 
-    <!-- ============ 01 PROBLEM ============ -->
-    <section class="story problem" id="problem">
-      <div class="wrap">
-        <div class="sec-head" data-reveal>
-          <span class="sec-index">01 / THE PROBLEM</span>
-          <span class="sec-tag">WHY AD MONEY EVAPORATED</span>
-        </div>
-        <h2 class="mega" data-reveal>EVERY DOLLAR WAS <span class="stroke">A GUESS</span><br>AND <span class="pink">HALF WERE LIES.</span></h2>
-        <div class="story-grid">
-          <p class="lede" data-reveal>
-            Campaigns were launched, then <em>prayed over</em>. Reports came <strong>two days late</strong>, audiences were
-            static CSVs, fraud ate clicks, and the "lookalike" was <strong>just age 18-34</strong>. By the time ROAS was known, the budget was gone.
-          </p>
-          <blockquote class="quote" data-reveal>
-            <p>"We spent $40K in a week. Analytics said 2.1× ROAS. Finance said 0.9×. Both were wrong — attribution was broken."</p>
-            <cite>— CMO, before PULSE</cite>
-          </blockquote>
-        </div>
-
-        <div class="pain-grid">
-          <article class="pain" data-reveal>
-            <span class="pain-num">P.01</span>
-            <h3>BURN BEFORE LEARN</h3>
-            <p>Manual bids, nightly rules. Money spent <strong>12 hours before</strong> the optimizer woke up. Winners starved, losers feasted.</p>
-            <div class="pain-stat"><strong>42%</strong><span>spend on zero-converting segments</span></div>
-          </article>
-          <article class="pain" data-reveal>
-            <span class="pain-num">P.02</span>
-            <h3>GHOST AUDIENCE</h3>
-            <p>Segments built once, never refreshed. Fraud + bots counted as humans. <strong>1 in 5 clicks</strong> never saw a real eye.</p>
-            <div class="pain-stat"><strong>1 in 5</strong><span>clicks were fraud / bot</span></div>
-          </article>
-          <article class="pain" data-reveal>
-            <span class="pain-num">P.03</span>
-            <h3>BLIND ATTRIBUTION</h3>
-            <p>Last-click lied. TikTok stole credit from Google, Google from email. <strong>No one knew what actually drove the sale</strong>.</p>
-            <div class="pain-stat"><strong>2 days</strong><span>to know true ROAS</span></div>
-          </article>
-        </div>
-
-        <div class="before-after" data-reveal>
-          <div class="ba-row"><span>Wasted spend</span><div class="bar"><i style="--w:84%;--c:#FF3B30"></i></div><strong>42%</strong></div>
-          <div class="ba-row"><span>Fraud clicks paid for</span><div class="bar"><i style="--w:40%;--c:#FF3B30"></i></div><strong>1 in 5</strong></div>
-          <div class="ba-row"><span>Time to re-allocate budget</span><div class="bar"><i style="--w:86%;--c:#FF3B30"></i></div><strong>2 days</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 02 SOLVE ============ -->
-    <section class="story solve" id="solve">
-      <div class="wrap">
-        <div class="sec-head sec-head--light" data-reveal>
-          <span class="sec-index">02 / HOW WE SOLVED IT</span>
-          <span class="sec-tag">NOT A DASHBOARD — A BIDDING BRAIN</span>
-        </div>
-        <h2 class="mega mega--light" data-reveal>WE PUT A BRAIN <span class="pink">INSIDE</span><br>EVERY <span class="stroke-light">IMPRESSION.</span></h2>
-        <p class="lede lede--light" data-reveal>Five layers. Every ad opportunity runs this gauntlet in 18 milliseconds — score, price, segment, bid, learn — while fraud is killed on sight:</p>
-
-        <div class="pipeline">
-          <article class="pipe pipe--feature" data-reveal>
-            <div class="pipe-num">01</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">STREAM · 1B EVENTS/DAY</span>
-              <h3>SEE EVERYTHING IN REAL TIME</h3>
-              <p>Kafka ingests impressions, clicks, conversions, app events — <strong>enriched + deduped in Redis</strong> before the bid even arrives.</p>
-              <code class="code">imp #881204 → enrich (geo, device, recency) → dedupe → bidder queue · 4ms</code>
-              <div class="chips"><span>Kafka Streams</span><span>Redis</span><span>GCP Pub/Sub</span></div>
+    <!-- LOADER -->
+    <div class="loader" data-loader aria-hidden="true">
+        <div class="loader-top"><span>SCIDATA ANALYST</span><span>CASE — 05/09</span></div>
+        <div class="loader-center">
+            <div class="loader-word" data-loader-word>CALIBRATING ROAS…</div>
+            <div class="loader-num"><span data-loader-num>0</span><em>%</em></div>
+            <div class="loader-track">
+                <div class="loader-fill" data-loader-fill></div>
             </div>
-          </article>
-          <article class="pipe pipe--feature" data-reveal>
-            <div class="pipe-num">02</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">BRAIN · PVALUE + BID MODEL</span>
-              <h3>SCORE WHO WILL BUY</h3>
-              <p>LGBM pCVR scores <strong>probability to convert</strong> per user × creative. Second model prices the bid: pay just enough to win, never more.</p>
-              <div class="nlu-viz">
-                <span class="tok">user_8821 <em>pCVR 0.08</em></span>
-                <span class="tok tok--hot">bid $1.84 <em>win 67% · ROAS 3.4× ✓</em></span>
-                <span class="tok">save $0.42 <em>vs naive</em></span>
-              </div>
-              <code class="code">{ pCVR: 0.08 · bid: $1.84 · win_prob: 0.67 · expected_ROAS: 3.4× }</code>
-              <div class="chips"><span>Python</span><span>LightGBM</span><span>Feature Store</span></div>
-            </div>
-          </article>
-          <article class="pipe" data-reveal>
-            <div class="pipe-num">03</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">AUDIENCE RADAR</span>
-              <h3>BUILD BUYERS BEFORE THEY SEARCH</h3>
-              <p>Embedding + clustering builds <strong>1,247 live micro-segments</strong> — lookalikes, lapsed, high-LTV. Auto-refreshed hourly, not quarterly.</p>
-              <code class="code">seed: purchasers → embedding → kNN → skate_lookalike_7 (4.8% CTR · 3.9× ROAS)</code>
-              <div class="chips"><span>Embeddings</span><span>Clustering</span><span>1,247 segments</span></div>
-            </div>
-          </article>
-          <article class="pipe" data-reveal>
-            <div class="pipe-num">04</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">GUARD · FRAUD & BRAND</span>
-              <h3>KILL WASTE ON SIGHT</h3>
-              <p>Bot score, IVT filter, viewability gate. <strong>If the eye isn't real, the bid never leaves</strong>. Brand-safety blocklist applied pre-bid.</p>
-              <code class="code">bot_score 0.92 → KILL · viewability 12% → KILL · brand_risk high → KILL</code>
-              <div class="chips"><span>IVT Filter</span><span>Viewability AI</span><span>Blocklist</span></div>
-            </div>
-          </article>
-          <article class="pipe pipe--loop" data-reveal>
-            <div class="pipe-num">05</div>
-            <div class="pipe-body">
-              <span class="pipe-kicker">LOOP · MULTI-TOUCH ATTRIBUTION</span>
-              <h3>KNOW WHAT PRINTED MONEY</h3>
-              <p>Shapley + time-decay attribution stitches cross-channel journeys. <strong>Budget auto-shifts hourly</strong> to the segments that actually drive sales.</p>
-              <div class="mini-bars"><i style="--h:28%"></i><i style="--h:46%"></i><i style="--h:62%"></i><i style="--h:78%"></i><i style="--h:99%"></i></div>
-              <div class="chips"><span>Attribution</span><span>Auto-budget</span><span>Dash + Alerts</span></div>
-            </div>
-          </article>
+            <div class="loader-sub">SCANNING AUDIENCES · ARMING BIDS · KILLING WASTE</div>
         </div>
-      </div>
-    </section>
+        <div class="loader-bottom"><span>PULSE · AD ENGINE</span><span>PYTHON / KAFKA / REDIS / GCP</span></div>
+    </div>
 
-    <!-- ============ INTERACTIVE DEMO ============ -->
-    <section class="demo" id="demo">
-      <div class="wrap demo-wrap">
-        <div class="sec-head" data-reveal>
-          <span class="sec-index">LIVE EXCHANGE</span>
-          <span class="sec-tag">FEED REAL TRAFFIC — WATCH IT BID</span>
-        </div>
-        <h2 class="mega" data-reveal>FEED IT TRAFFIC.<br><span class="pink">WATCH IT PRINT.</span></h2>
+    <!-- NAV -->
+    <header class="nav">
+        <a href="work.html" class="nav-back" data-magnetic>
+            <span class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg></span>
+            <span>ALL WORK</span>
+        </a>
+        <div class="nav-mid">CASE STUDY <strong>— 05 / 09</strong></div>
+        <a href="contact.html" class="nav-cta" data-magnetic><span>PRINT MY ROAS</span><i>↗</i></a>
+    </header>
 
-        <div class="demo-grid">
-          <div class="demo-board" data-reveal>
-            <div class="demo-head"><span class="pulse"></span> PULSE · EXCHANGE SIM <span class="lat" data-lat>18ms</span></div>
-            <div class="demo-stats">
-              <div class="ds"><span>BID</span><strong data-demo-bid>$1.84</strong><em> eCPM</em></div>
-              <div class="ds"><span>ROAS</span><strong data-demo-roas>3.1×</strong><em id="demoRoasDelta"> ▲ +42%</em></div>
-              <div class="ds"><span>WIN RATE</span><strong data-demo-win>67%</strong></div>
-              <div class="ds ds--waste"><span>WASTE KILLED</span><strong data-demo-waste>42%</strong></div>
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="hero-gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div class="hero-glow hero-glow--pink" aria-hidden="true"></div>
+            <div class="hero-glow hero-glow--orange" aria-hidden="true"></div>
+            <div class="hero-giant" aria-hidden="true">05</div>
+            <div class="scanline" aria-hidden="true"></div>
+
+            <div class="hero-inner">
+                <div class="hero-eyebrow" data-reveal>
+                    <span class="pill"><span class="dot"></span> LIVE BIDDING · <b data-live-bids>1.2B</b> EVENTS
+                        TODAY</span>
+                    <span class="hero-loc">3.1× ROAS · 42% WASTE KILLED · 1,247 SEGMENTS LIVE</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="line"><span class="word" data-reveal>ADS THAT</span></span>
+                    <span class="line"><span class="word word--stroke" data-reveal>FIND</span> <span
+                            class="word word--pink" data-reveal>BUYERS<span class="period">.</span></span></span>
+                    <span class="line line--small"><span class="word word--small" data-reveal>PULSE — AI BIDS 1B+
+                            EVENTS/DAY, BUILDS THE AUDIENCE BEFORE THE SEARCH, KILLS WASTE IN REAL TIME.</span></span>
+                </h1>
+
+                <div class="hero-split">
+                    <p class="hero-desc" data-reveal>
+                        Ad budgets were <s>spread by gut + spreadsheet</s>. <strong>PULSE watches every impression,
+                            scores who will actually buy,
+                            and shifts the bid</strong> in 18ms — before the next app scrolls.
+                    </p>
+                    <div class="hero-ctas" data-reveal>
+                        <a href="#demo" class="btn btn--pink" data-magnetic><span>OPEN LIVE EXCHANGE
+                                ↓</span><i>⚡</i></a>
+                        <a href="#outcome" class="btn btn--ghost" data-magnetic><span>SEE OUTCOME</span><i>→</i></a>
+                    </div>
+                </div>
+
+                <div class="hero-board">
+                    <!-- EXCHANGE TERMINAL -->
+                    <div class="terminal" data-reveal>
+                        <div class="terminal-bar">
+                            <span class="t-dots"><i></i><i></i><i></i></span>
+                            <span class="t-title">pulse — exchange · campaign: diablo_sneakers_q2 · LIVE</span>
+                            <span class="t-live"><span class="blink"></span> 18ms bid</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="exchange">
+                                <div class="ex-bid">
+                                    <span class="ex-label">WINNING BID</span>
+                                    <span class="ex-amount" data-hero-bid>$1.84</span>
+                                    <span class="ex-meta">eCPM $2.34 · WIN RATE <b>67%</b></span>
+                                    <span class="ex-roas">ROAS <b data-hero-roas>3.1×</b> <em>▲ +42%</em></span>
+                                </div>
+                                <div class="ex-radar" aria-hidden="true">
+                                    <span class="radar-ring"></span><span class="radar-ring"></span><span
+                                        class="radar-ring"></span>
+                                    <span class="radar-sweep"></span>
+                                    <span class="radar-dot" style="--x:38%;--y:32%"></span>
+                                    <span class="radar-dot" style="--x:62%;--y:44%"></span>
+                                    <span class="radar-dot" style="--x:54%;--y:68%"></span>
+                                    <span class="radar-center">1.2M <em>high-intent</em></span>
+                                </div>
+                            </div>
+                            <div class="ticker-mini" aria-hidden="true">
+                                <span>LOOKALIKE 4.8% CTR <i>◆</i></span><span>RE-TARGET 1,247 live
+                                    <i>◆</i></span><span>WASTE KILL -42% <i>◆</i></span><span>P95 18ms <i>◆</i></span>
+                            </div>
+                            <div class="auction-feed" data-hero-feed>
+                                <div class="af-row af-row--win"><span>Impr. #881204</span><span>BID $1.84
+                                        ✓</span><span>WON · $0.42 saved</span></div>
+                                <div class="af-row"><span>Impr. #881203</span><span>BID $0.92 ✕</span><span>LOST · waste
+                                        avoided</span></div>
+                                <div class="af-row af-row--win"><span>Impr. #881202</span><span>BID $2.10
+                                        ✓</span><span>WON · ROAS 4.2×</span></div>
+                            </div>
+                            <div class="terminal-foot">
+                                <span class="prompt">❯</span>
+                                <span class="fake-input">Audience <b>skate_lookalike_7</b> jumped to ROAS 4.1× — budget
+                                    shifted +18%<span class="caret"></span></span>
+                                <span class="send">SHIFT BUDGET</span>
+                            </div>
+                        </div>
+                        <div class="terminal-badges">
+                            <span>18MS BIDDING</span><span>1,247 SEGMENTS</span><span>FRAUD FILTERED</span>
+                        </div>
+                    </div>
+
+                    <!-- STAT RAIL -->
+                    <div class="hero-rail" data-reveal>
+                        <div class="rail-head">WHY IT MATTERS — TL;DR</div>
+                        <a href="#problem" class="rail-card rail-card--problem">
+                            <span class="rail-num">01</span>
+                            <span class="rail-kicker">THE PROBLEM</span>
+                            <strong>Budget burnt on the wrong eyes, ROAS guessed after the fact.</strong>
+                            <span class="rail-link">Read the pain →</span>
+                        </a>
+                        <a href="#solve" class="rail-card rail-card--solve">
+                            <span class="rail-num">02</span>
+                            <span class="rail-kicker">HOW WE SOLVED</span>
+                            <strong>Real-time bidder + audience brain + attribution.</strong>
+                            <span class="rail-link">See the engine →</span>
+                        </a>
+                        <a href="#outcome" class="rail-card rail-card--outcome">
+                            <span class="rail-num">03</span>
+                            <span class="rail-kicker">THE OUTCOME</span>
+                            <strong>3.1× ROAS · −42% waste · 1B events/day.</strong>
+                            <span class="rail-link">See proof →</span>
+                        </a>
+                        <div class="rail-meta">
+                            <div><span>CLIENT</span><strong>D2C + marketplace</strong></div>
+                            <div><span>TIMELINE</span><strong>9 weeks</strong></div>
+                            <div><span>ROLE</span><strong>ML → Exchange → Dash</strong></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="demo-bars" aria-hidden="true">
-              <div class="db"><span>LOOKALIKE</span><div class="bar"><i data-bar="lookalike" style="--w:74%"></i></div><b>4.8% CTR</b></div>
-              <div class="db"><span>RE-TARGET</span><div class="bar"><i data-bar="retarget" style="--w:62%"></i></div><b>3.9× ROAS</b></div>
-              <div class="db"><span>PROSPECT</span><div class="bar"><i data-bar="prospect" style="--w:38%"></i></div><b>1.2× ROAS</b></div>
+
+            <div class="hero-scroll" aria-hidden="true"><span>SCROLL FOR STORY</span>
+                <div class="line-v"></div>
             </div>
-            <div class="demo-feed" data-messages>
-              <div class="msg msg--win"><p>Impr. #881204 — <b>BID $1.84 ✓ WON</b> · saved $0.42 · pCVR 0.08 · fraud clean</p><span class="intent">segment: skate_lookalike_7 · ROAS 4.1× · 18ms</span></div>
+        </section>
+
+        <!-- TICKER -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>RTB <i>◆</i></span><span>1B EVENTS/DAY <i>◆</i></span><span>18MS BID <i>◆</i></span><span>ROAS
+                    3.1× <i>◆</i></span><span>−42% WASTE <i>◆</i></span><span>1,247 SEGMENTS <i>◆</i></span>
+                <span>RTB <i>◆</i></span><span>1B EVENTS/DAY <i>◆</i></span><span>18MS BID <i>◆</i></span><span>ROAS
+                    3.1× <i>◆</i></span><span>−42% WASTE <i>◆</i></span><span>1,247 SEGMENTS <i>◆</i></span>
             </div>
-            <div class="demo-chips" data-chips>
-              <button data-inject="good">Send high-intent traffic 🎯</button>
-              <button data-inject="fraud">Send fraud / bot wave 🤖</button>
-              <button data-inject="drift">Shift audience taste 🌊</button>
-              <button data-inject="shift" class="ghost">Auto-shift budget ↻</button>
+        </div>
+
+        <!-- ============ 01 PROBLEM ============ -->
+        <section class="story problem" id="problem">
+            <div class="wrap">
+                <div class="sec-head" data-reveal>
+                    <span class="sec-index">01 / THE PROBLEM</span>
+                    <span class="sec-tag">WHY AD MONEY EVAPORATED</span>
+                </div>
+                <h2 class="mega" data-reveal>EVERY DOLLAR WAS <span class="stroke">A GUESS</span><br>AND <span
+                        class="pink">HALF WERE LIES.</span></h2>
+                <div class="story-grid">
+                    <p class="lede" data-reveal>
+                        Campaigns were launched, then <em>prayed over</em>. Reports came <strong>two days late</strong>,
+                        audiences were
+                        static CSVs, fraud ate clicks, and the "lookalike" was <strong>just age 18-34</strong>. By the
+                        time ROAS was known, the budget was gone.
+                    </p>
+                    <blockquote class="quote" data-reveal>
+                        <p>"We spent $40K in a week. Analytics said 2.1× ROAS. Finance said 0.9×. Both were wrong —
+                            attribution was broken."</p>
+                        <cite>— CMO, before PULSE</cite>
+                    </blockquote>
+                </div>
+
+                <div class="pain-grid">
+                    <article class="pain" data-reveal>
+                        <span class="pain-num">P.01</span>
+                        <h3>BURN BEFORE LEARN</h3>
+                        <p>Manual bids, nightly rules. Money spent <strong>12 hours before</strong> the optimizer woke
+                            up. Winners starved, losers feasted.</p>
+                        <div class="pain-stat"><strong>42%</strong><span>spend on zero-converting segments</span></div>
+                    </article>
+                    <article class="pain" data-reveal>
+                        <span class="pain-num">P.02</span>
+                        <h3>GHOST AUDIENCE</h3>
+                        <p>Segments built once, never refreshed. Fraud + bots counted as humans. <strong>1 in 5
+                                clicks</strong> never saw a real eye.</p>
+                        <div class="pain-stat"><strong>1 in 5</strong><span>clicks were fraud / bot</span></div>
+                    </article>
+                    <article class="pain" data-reveal>
+                        <span class="pain-num">P.03</span>
+                        <h3>BLIND ATTRIBUTION</h3>
+                        <p>Last-click lied. TikTok stole credit from Google, Google from email. <strong>No one knew what
+                                actually drove the sale</strong>.</p>
+                        <div class="pain-stat"><strong>2 days</strong><span>to know true ROAS</span></div>
+                    </article>
+                </div>
+
+                <div class="before-after" data-reveal>
+                    <div class="ba-row"><span>Wasted spend</span>
+                        <div class="bar"><i style="--w:84%;--c:#FF3B30"></i></div><strong>42%</strong>
+                    </div>
+                    <div class="ba-row"><span>Fraud clicks paid for</span>
+                        <div class="bar"><i style="--w:40%;--c:#FF3B30"></i></div><strong>1 in 5</strong>
+                    </div>
+                    <div class="ba-row"><span>Time to re-allocate budget</span>
+                        <div class="bar"><i style="--w:86%;--c:#FF3B30"></i></div><strong>2 days</strong>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="demo-side" data-reveal>
-            <h3>WHAT YOU'RE SEEING</h3>
-            <ul>
-              <li><strong>Green</strong> = bidder won and saved money vs naive price.</li>
-              <li><strong>Gray</strong> = bidder passed — waste avoided on purpose.</li>
-              <li><strong>Inject</strong> — throw good, fraud, or drift. Watch ROAS move.</li>
-            </ul>
-            <div class="arch">
-              <span>IMPRESSION</span><i>→</i><span>BRAIN</span><i>→</i><span>BID</span><i>→</i><span>ROAS</span>
+        </section>
+
+        <!-- ============ 02 SOLVE ============ -->
+        <section class="story solve" id="solve">
+            <div class="wrap">
+                <div class="sec-head sec-head--light" data-reveal>
+                    <span class="sec-index">02 / HOW WE SOLVED IT</span>
+                    <span class="sec-tag">NOT A DASHBOARD — A BIDDING BRAIN</span>
+                </div>
+                <h2 class="mega mega--light" data-reveal>WE PUT A BRAIN <span class="pink">INSIDE</span><br>EVERY <span
+                        class="stroke-light">IMPRESSION.</span></h2>
+                <p class="lede lede--light" data-reveal>Five layers. Every ad opportunity runs this gauntlet in 18
+                    milliseconds — score, price, segment, bid, learn — while fraud is killed on sight:</p>
+
+                <div class="pipeline">
+                    <article class="pipe pipe--feature" data-reveal>
+                        <div class="pipe-num">01</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">STREAM · 1B EVENTS/DAY</span>
+                            <h3>SEE EVERYTHING IN REAL TIME</h3>
+                            <p>Kafka ingests impressions, clicks, conversions, app events — <strong>enriched + deduped
+                                    in Redis</strong> before the bid even arrives.</p>
+                            <code
+                                class="code">imp #881204 → enrich (geo, device, recency) → dedupe → bidder queue · 4ms</code>
+                            <div class="chips"><span>Kafka Streams</span><span>Redis</span><span>GCP Pub/Sub</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pipe pipe--feature" data-reveal>
+                        <div class="pipe-num">02</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">BRAIN · PVALUE + BID MODEL</span>
+                            <h3>SCORE WHO WILL BUY</h3>
+                            <p>LGBM pCVR scores <strong>probability to convert</strong> per user × creative. Second
+                                model prices the bid: pay just enough to win, never more.</p>
+                            <div class="nlu-viz">
+                                <span class="tok">user_8821 <em>pCVR 0.08</em></span>
+                                <span class="tok tok--hot">bid $1.84 <em>win 67% · ROAS 3.4× ✓</em></span>
+                                <span class="tok">save $0.42 <em>vs naive</em></span>
+                            </div>
+                            <code class="code">{ pCVR: 0.08 · bid: $1.84 · win_prob: 0.67 · expected_ROAS: 3.4× }</code>
+                            <div class="chips"><span>Python</span><span>LightGBM</span><span>Feature Store</span></div>
+                        </div>
+                    </article>
+                    <article class="pipe" data-reveal>
+                        <div class="pipe-num">03</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">AUDIENCE RADAR</span>
+                            <h3>BUILD BUYERS BEFORE THEY SEARCH</h3>
+                            <p>Embedding + clustering builds <strong>1,247 live micro-segments</strong> — lookalikes,
+                                lapsed, high-LTV. Auto-refreshed hourly, not quarterly.</p>
+                            <code
+                                class="code">seed: purchasers → embedding → kNN → skate_lookalike_7 (4.8% CTR · 3.9× ROAS)</code>
+                            <div class="chips"><span>Embeddings</span><span>Clustering</span><span>1,247 segments</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pipe" data-reveal>
+                        <div class="pipe-num">04</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">GUARD · FRAUD & BRAND</span>
+                            <h3>KILL WASTE ON SIGHT</h3>
+                            <p>Bot score, IVT filter, viewability gate. <strong>If the eye isn't real, the bid never
+                                    leaves</strong>. Brand-safety blocklist applied pre-bid.</p>
+                            <code
+                                class="code">bot_score 0.92 → KILL · viewability 12% → KILL · brand_risk high → KILL</code>
+                            <div class="chips"><span>IVT Filter</span><span>Viewability AI</span><span>Blocklist</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pipe pipe--loop" data-reveal>
+                        <div class="pipe-num">05</div>
+                        <div class="pipe-body">
+                            <span class="pipe-kicker">LOOP · MULTI-TOUCH ATTRIBUTION</span>
+                            <h3>KNOW WHAT PRINTED MONEY</h3>
+                            <p>Shapley + time-decay attribution stitches cross-channel journeys. <strong>Budget
+                                    auto-shifts hourly</strong> to the segments that actually drive sales.</p>
+                            <div class="mini-bars"><i style="--h:28%"></i><i style="--h:46%"></i><i
+                                    style="--h:62%"></i><i style="--h:78%"></i><i style="--h:99%"></i></div>
+                            <div class="chips"><span>Attribution</span><span>Auto-budget</span><span>Dash +
+                                    Alerts</span></div>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <a href="contact.html" class="btn btn--pink" data-magnetic><span>BUY WITH PULSE</span><i>↗</i></a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ============ 03 OUTCOME ============ -->
-    <section class="story outcome" id="outcome">
-      <div class="wrap">
-        <div class="sec-head sec-head--light" data-reveal>
-          <span class="sec-index">03 / THE OUTCOME</span>
-          <span class="sec-tag">NUMBERS, NOT ADJECTIVES</span>
-        </div>
-        <h2 class="mega mega--light" data-reveal>FROM GUESSWORK<br>TO <span class="pink">MONEY PRINTER.</span></h2>
+        <!-- ============ INTERACTIVE DEMO ============ -->
+        <section class="demo" id="demo">
+            <div class="wrap demo-wrap">
+                <div class="sec-head" data-reveal>
+                    <span class="sec-index">LIVE EXCHANGE</span>
+                    <span class="sec-tag">FEED REAL TRAFFIC — WATCH IT BID</span>
+                </div>
+                <h2 class="mega" data-reveal>FEED IT TRAFFIC.<br><span class="pink">WATCH IT PRINT.</span></h2>
 
-        <div class="metrics">
-          <div class="metric" data-reveal data-count="3" data-decimal="3.1" data-suffix="×">
-            <span class="metric-val"><span data-num>3.1×</span></span>
-            <span class="metric-label">ROAS</span>
-            <span class="metric-sub">was 1.4× — now 3.1× blended</span>
-          </div>
-          <div class="metric metric--pink" data-reveal data-count="42" data-prefix="−" data-suffix="%">
-            <span class="metric-val"><span data-num>−42%</span></span>
-            <span class="metric-label">WASTED SPEND</span>
-            <span class="metric-sub">fraud + low-intent killed pre-bid</span>
-          </div>
-          <div class="metric" data-reveal data-count="1" data-suffix="B+" data-decimal="1">
-            <span class="metric-val"><span data-num>1B+</span></span>
-            <span class="metric-label">EVENTS / DAY</span>
-            <span class="metric-sub">p95 bid 18ms, 99.9% uptime</span>
-          </div>
-          <div class="metric" data-reveal data-count="67" data-suffix="%">
-            <span class="metric-val"><span data-num>67%</span></span>
-            <span class="metric-label">WIN RATE</span>
-            <span class="metric-sub">paying just enough to win</span>
-          </div>
-        </div>
+                <div class="demo-grid">
+                    <div class="demo-board" data-reveal>
+                        <div class="demo-head"><span class="pulse"></span> PULSE · EXCHANGE SIM <span class="lat"
+                                data-lat>18ms</span></div>
+                        <div class="demo-stats">
+                            <div class="ds"><span>BID</span><strong data-demo-bid>$1.84</strong><em> eCPM</em></div>
+                            <div class="ds"><span>ROAS</span><strong data-demo-roas>3.1×</strong><em id="demoRoasDelta">
+                                    ▲ +42%</em></div>
+                            <div class="ds"><span>WIN RATE</span><strong data-demo-win>67%</strong></div>
+                            <div class="ds ds--waste"><span>WASTE KILLED</span><strong data-demo-waste>42%</strong>
+                            </div>
+                        </div>
+                        <div class="demo-bars" aria-hidden="true">
+                            <div class="db"><span>LOOKALIKE</span>
+                                <div class="bar"><i data-bar="lookalike" style="--w:74%"></i></div><b>4.8% CTR</b>
+                            </div>
+                            <div class="db"><span>RE-TARGET</span>
+                                <div class="bar"><i data-bar="retarget" style="--w:62%"></i></div><b>3.9× ROAS</b>
+                            </div>
+                            <div class="db"><span>PROSPECT</span>
+                                <div class="bar"><i data-bar="prospect" style="--w:38%"></i></div><b>1.2× ROAS</b>
+                            </div>
+                        </div>
+                        <div class="demo-feed" data-messages>
+                            <div class="msg msg--win">
+                                <p>Impr. #881204 — <b>BID $1.84 ✓ WON</b> · saved $0.42 · pCVR 0.08 · fraud clean</p>
+                                <span class="intent">segment: skate_lookalike_7 · ROAS 4.1× · 18ms</span>
+                            </div>
+                        </div>
+                        <div class="demo-chips" data-chips>
+                            <button data-inject="good">Send high-intent traffic 🎯</button>
+                            <button data-inject="fraud">Send fraud / bot wave 🤖</button>
+                            <button data-inject="drift">Shift audience taste 🌊</button>
+                            <button data-inject="shift" class="ghost">Auto-shift budget ↻</button>
+                        </div>
+                    </div>
+                    <div class="demo-side" data-reveal>
+                        <h3>WHAT YOU'RE SEEING</h3>
+                        <ul>
+                            <li><strong>Green</strong> = bidder won and saved money vs naive price.</li>
+                            <li><strong>Gray</strong> = bidder passed — waste avoided on purpose.</li>
+                            <li><strong>Inject</strong> — throw good, fraud, or drift. Watch ROAS move.</li>
+                        </ul>
+                        <div class="arch">
+                            <span>IMPRESSION</span><i>→</i><span>BRAIN</span><i>→</i><span>BID</span><i>→</i><span>ROAS</span>
+                        </div>
+                        <a href="contact.html" class="btn btn--pink" data-magnetic><span>BUY WITH
+                                PULSE</span><i>↗</i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="outcome-grid">
-          <div class="after-card" data-reveal>
-            <h3>BEFORE → AFTER</h3>
-            <div class="ba-row"><span>ROAS</span><div class="bar"><i style="--w:45%;--c:#FF3B30"></i></div><strong>1.4×</strong></div>
-            <div class="ba-row ba-row--after"><span>ROAS</span><div class="bar"><i style="--w:99%;--c:#B6FF00" data-grow></i></div><strong>3.1×</strong></div>
-            <div class="ba-row"><span>Budget re-allocated</span><div class="bar"><i style="--w:86%;--c:#FF3B30"></i></div><strong>2 days</strong></div>
-            <div class="ba-row ba-row--after"><span>Budget re-allocated</span><div class="bar"><i style="--w:5%;--c:#B6FF00" data-grow></i></div><strong>18 min</strong></div>
-          </div>
-          <blockquote class="quote quote--big" data-reveal>
-            <p>"We stopped briefing 'audiences' and started briefing money. PULSE found buyers we didn't know existed — ROAS doubled before lunch."</p>
-            <cite>— Growth Lead, D2C sneaker brand ★★★★★</cite>
-          </blockquote>
-        </div>
+        <!-- ============ 03 OUTCOME ============ -->
+        <section class="story outcome" id="outcome">
+            <div class="wrap">
+                <div class="sec-head sec-head--light" data-reveal>
+                    <span class="sec-index">03 / THE OUTCOME</span>
+                    <span class="sec-tag">NUMBERS, NOT ADJECTIVES</span>
+                </div>
+                <h2 class="mega mega--light" data-reveal>FROM GUESSWORK<br>TO <span class="pink">MONEY PRINTER.</span>
+                </h2>
 
-        <div class="stack">
-          <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
-          <div class="stack-grid">
-            <span data-reveal>Python</span><span data-reveal>LightGBM</span><span data-reveal>Kafka</span><span data-reveal>Redis</span><span data-reveal>Feature Store</span><span data-reveal>RTB Bidder</span><span data-reveal>GCP</span><span data-reveal>Attribution</span><span data-reveal>Fraud Filter</span><span data-reveal>Dash + Alerts</span>
-          </div>
-        </div>
-      </div>
-    </section>
+                <div class="metrics">
+                    <div class="metric" data-reveal data-count="3" data-decimal="3.1" data-suffix="×">
+                        <span class="metric-val"><span data-num>3.1×</span></span>
+                        <span class="metric-label">ROAS</span>
+                        <span class="metric-sub">was 1.4× — now 3.1× blended</span>
+                    </div>
+                    <div class="metric metric--pink" data-reveal data-count="42" data-prefix="−" data-suffix="%">
+                        <span class="metric-val"><span data-num>−42%</span></span>
+                        <span class="metric-label">WASTED SPEND</span>
+                        <span class="metric-sub">fraud + low-intent killed pre-bid</span>
+                    </div>
+                    <div class="metric" data-reveal data-count="1" data-suffix="B+" data-decimal="1">
+                        <span class="metric-val"><span data-num>1B+</span></span>
+                        <span class="metric-label">EVENTS / DAY</span>
+                        <span class="metric-sub">p95 bid 18ms, 99.9% uptime</span>
+                    </div>
+                    <div class="metric" data-reveal data-count="67" data-suffix="%">
+                        <span class="metric-val"><span data-num>67%</span></span>
+                        <span class="metric-label">WIN RATE</span>
+                        <span class="metric-sub">paying just enough to win</span>
+                    </div>
+                </div>
 
-    <!-- ============ NEXT ============ -->
-    <section class="next">
-      <a href="project-6.html" class="next-link" data-magnetic>
-        <span class="next-kicker">NEXT CASE — 06 / 09</span>
-        <span class="next-title">AI POWER <span class="stroke">SAVING</span> →</span>
-        <span class="next-sub">Energy AI + anomaly shutdown · Click anywhere to continue</span>
-      </a>
-      <div class="next-giant" aria-hidden="true">06</div>
-    </section>
-  </main>
+                <div class="outcome-grid">
+                    <div class="after-card" data-reveal>
+                        <h3>BEFORE → AFTER</h3>
+                        <div class="ba-row"><span>ROAS</span>
+                            <div class="bar"><i style="--w:45%;--c:#FF3B30"></i></div><strong>1.4×</strong>
+                        </div>
+                        <div class="ba-row ba-row--after"><span>ROAS</span>
+                            <div class="bar"><i style="--w:99%;--c:#B6FF00" data-grow></i></div><strong>3.1×</strong>
+                        </div>
+                        <div class="ba-row"><span>Budget re-allocated</span>
+                            <div class="bar"><i style="--w:86%;--c:#FF3B30"></i></div><strong>2 days</strong>
+                        </div>
+                        <div class="ba-row ba-row--after"><span>Budget re-allocated</span>
+                            <div class="bar"><i style="--w:5%;--c:#B6FF00" data-grow></i></div><strong>18 min</strong>
+                        </div>
+                    </div>
+                    <blockquote class="quote quote--big" data-reveal>
+                        <p>"We stopped briefing 'audiences' and started briefing money. PULSE found buyers we didn't
+                            know existed — ROAS doubled before lunch."</p>
+                        <cite>— Growth Lead, D2C sneaker brand ★★★★★</cite>
+                    </blockquote>
+                </div>
 
-  <footer class="foot">
-    <a href="work.html">← ALL WORK</a>
-    <span>SCIDATA ANALYST · AD CASE 05</span>
-    <a href="contact.html">BUILD YOURS ↗</a>
-  </footer>
+                <div class="stack">
+                    <h3 data-reveal>FULL STACK — SHIPPED &amp; DOCUMENTED</h3>
+                    <div class="stack-grid">
+                        <span data-reveal>Python</span><span data-reveal>LightGBM</span><span
+                            data-reveal>Kafka</span><span data-reveal>Redis</span><span data-reveal>Feature
+                            Store</span><span data-reveal>RTB Bidder</span><span data-reveal>GCP</span><span
+                            data-reveal>Attribution</span><span data-reveal>Fraud Filter</span><span data-reveal>Dash +
+                            Alerts</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- FLOATERS -->
-  <div class="freelance-float">
-    <span class="freelance-label">Hire Us</span>
-    <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link" aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
-    <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
-    <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link" aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
-  </div>
-  <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+        <!-- ============ NEXT ============ -->
+        <section class="next">
+            <a href="project-6.html" class="next-link" data-magnetic>
+                <span class="next-kicker">NEXT CASE — 06 / 09</span>
+                <span class="next-title">AI POWER <span class="stroke">SAVING</span> →</span>
+                <span class="next-sub">Energy AI + anomaly shutdown · Click anywhere to continue</span>
+            </a>
+            <div class="next-giant" aria-hidden="true">06</div>
+        </section>
+    </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="assets/js/project-5.js"></script>
+    <footer class="foot">
+        <a href="work.html">← ALL WORK</a>
+        <span>SCIDATA ANALYST · AD CASE 05</span>
+        <a href="contact.html">BUILD YOURS ↗</a>
+    </footer>
+
+    <!-- FLOATERS -->
+    <div class="freelance-float">
+        <span class="freelance-label">Hire Us</span>
+        <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" class="freelance-link"
+            aria-label="Upwork"><img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork"></a>
+        <a href="https://www.fiverr.com/your-profile" target="_blank" class="freelance-link" aria-label="Fiverr"><img
+                src="https://cdn.simpleicons.org/fiverr/1dbf73" alt="Fiverr"></a>
+        <a href="https://www.freelancer.com/u/your-profile" target="_blank" class="freelance-link"
+            aria-label="Freelancer"><img src="https://cdn.simpleicons.org/freelancer/29b2fe" alt="Freelancer"></a>
+    </div>
+    <button class="footer-totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/project-5.js"></script>
 </body>
+
 </html>
