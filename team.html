@@ -29,7 +29,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Data & IoT Crew — Pipelines, Edge & AI" />
     <meta name="twitter:description"
-        content="05 minds, 0 passengers. The crew behind 50+ shipped products, 5M+ rows/day live." />
+        content="06 minds, 0 passengers. The crew behind 50+ shipped products, 5M+ rows/day live." />
     <meta name="twitter:image" content="https://scidata-analyst.com/assets/img/nav-logo.png" />
 
     <!-- Performance: Preconnect & DNS Prefetch -->
@@ -42,6 +42,17 @@
 
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
+
+    <!-- Page fix: pin lead-card ID rail to column 1, all text to column 2 (no overlap) -->
+    <style>
+        .tm-card--captain > .tm-card-id { grid-column: 1; grid-row: 1 / -1; flex-direction: column; align-items: flex-start; align-self: start; width: 100%; }
+        .tm-card--captain > :not(.tm-card-id):not(.tm-card-flag) { grid-column: 2; min-width: 0; }
+        @media (max-width: 860px) {
+            .tm-card--captain > .tm-card-id { grid-column: 1; grid-row: auto; flex-direction: row; align-items: center; }
+            .tm-card--captain > :not(.tm-card-id):not(.tm-card-flag) { grid-column: 1; }
+            .tm-card--captain .tm-avatar { width: 92px; height: 92px; min-height: 0; flex-shrink: 0; }
+        }
+    </style>
 
     <!-- Page-specific: field-ops creds band (reuses tm-num-card look + animations) -->
     <style>
@@ -75,6 +86,7 @@
                 "addressCountry": "Bangladesh"
             },
             "member": [
+                {"@type": "Person", "name": "Kanchon Sheel", "jobTitle": "Lead Software Architect"},
                 {"@type": "Person", "name": "Sarah Chen", "jobTitle": "Dashboards & UX Lead"},
                 {"@type": "Person", "name": "Marcus Johnson", "jobTitle": "Data Platform Engineer"},
                 {"@type": "Person", "name": "Dr. Aisha Patel", "jobTitle": "ML Engineer, AI on Data"},
@@ -90,7 +102,7 @@
     <!-- LOADER -->
     <div class="loader">
         <div class="loader-inner">
-            <div class="loader-brand">CREW✦05</div>
+            <div class="loader-brand">CREW✦06</div>
             <div class="loader-percentage"><span class="loader-num">0</span>%</div>
             <div class="loader-track">
                 <div class="loader-fill"></div>
@@ -227,7 +239,7 @@
             <span class="tm-glyph tm-glyph--4">◎</span>
             <span class="tm-glyph tm-glyph--5">✦</span>
         </div>
-        <div class="tm-hero-giant" aria-hidden="true">05</div>
+        <div class="tm-hero-giant" aria-hidden="true">06</div>
 
         <div class="tm-hero-top">
             <span class="tm-pill"><span class="tm-dot"></span> Primary focus: Data &amp; IoT — the crew</span>
@@ -253,7 +265,7 @@
             </p>
             <div class="tm-hero-actions">
                 <a href="#lineup" class="tm-btn tm-btn--lime" data-magnetic>
-                    <span>Meet the five</span>
+                    <span>Meet the six</span>
                     <span class="tm-btn-arrow">↓</span>
                 </a>
                 <a href="#culture" class="tm-btn tm-btn--ghost" data-magnetic>
@@ -271,7 +283,7 @@
         </div>
 
         <div class="tm-stats">
-            <div class="tm-stat"><span class="tm-stat-num">05</span><span class="tm-stat-label">Minds shipping</span></div>
+            <div class="tm-stat"><span class="tm-stat-num">06</span><span class="tm-stat-label">Minds shipping</span></div>
             <div class="tm-stat"><span class="tm-stat-num">02</span><span class="tm-stat-label">Primary squads live</span></div>
             <div class="tm-stat"><span class="tm-stat-num">50+</span><span class="tm-stat-label">Shipped together</span></div>
             <div class="tm-stat"><span class="tm-stat-num">5M+</span><span class="tm-stat-label">Rows/day piped</span></div>
@@ -291,12 +303,12 @@
         <div class="tm-lineup-head">
             <div class="tm-lineup-left">
                 <span class="tm-pill tm-pill--dark"><span class="tm-dot"></span> The crew — Data &amp; IoT</span>
-                <h2 class="tm-h2">MEET<br><span class="tm-stroke-dark">THE FIVE</span> <sup>(05)</sup></h2>
+                <h2 class="tm-h2">MEET<br><span class="tm-stroke-dark">THE SIX</span> <sup>(06)</sup></h2>
             </div>
             <div class="tm-lineup-right">
                 <p>Hardware-aware, data-obsessed. Filter by craft — or just scroll the whole bench.</p>
                 <div class="tm-filters" role="tablist" aria-label="Filter members">
-                    <button class="tm-filter is-active" data-filter="all" data-magnetic>All / 05</button>
+                    <button class="tm-filter is-active" data-filter="all" data-magnetic>All / 06</button>
                     <button class="tm-filter" data-filter="data" data-magnetic>Data Pipelines</button>
                     <button class="tm-filter" data-filter="iot" data-magnetic>IoT &amp; Edge</button>
                     <button class="tm-filter" data-filter="ai" data-magnetic>AI on Data</button>
@@ -306,10 +318,24 @@
         </div>
 
         <div class="tm-roster">
+            <!-- LEAD — FEATURED -->
+            <article class="tm-card tm-card--captain" data-squad="data iot ai" data-card>
+                <span class="tm-card-flag">★ LEAD ARCHITECT</span>
+                <div class="tm-card-id">
+                    <div class="tm-avatar tm-a--1"><span>K</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 01 — LEAD</span><span class="tm-id-squad">DATA ✦ IoT ✦ AI</span></div>
+                </div>
+                <h3 class="tm-card-name">MR. KANCHON</h3>
+                <span class="tm-card-role">Lead Software Architect</span>
+                <p class="tm-card-bio">Leads data &amp; IoT architecture — CONDUIT at 5M+ rows/day, VOLT from sensor to Grafana. Shipped Meta/WhatsApp AI chatbots for tier-1 telcos and operates 1,000+ DOOH screens.</p>
+                <div class="tm-skills"><span>Architecture</span><span>Kafka · MQTT</span><span>Telco AI · DOOH</span></div>
+                <div class="tm-power"><span class="tm-power-tag">SUPERPOWER ✦</span><p>Turns telco-scale chaos into boring, reliable infra.</p></div>
+            </article>
+
             <article class="tm-card" data-squad="data platform" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--3"><span>M</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 01</span><span class="tm-id-squad">DATA PIPELINES</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 02</span><span class="tm-id-squad">DATA PIPELINES</span></div>
                 </div>
                 <h3 class="tm-card-name">MARCUS JOHNSON</h3>
                 <span class="tm-card-role">Data Platform Engineer</span>
@@ -321,7 +347,7 @@
             <article class="tm-card" data-squad="iot data" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--5"><span>L</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 02</span><span class="tm-id-squad">IoT &amp; EDGE</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 03</span><span class="tm-id-squad">IoT &amp; EDGE</span></div>
                 </div>
                 <h3 class="tm-card-name">LEO TORRES</h3>
                 <span class="tm-card-role">IoT &amp; Edge Lead</span>
@@ -333,7 +359,7 @@
             <article class="tm-card" data-squad="ai data" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--4"><span>A</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 03</span><span class="tm-id-squad">AI ON DATA</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 04</span><span class="tm-id-squad">AI ON DATA</span></div>
                 </div>
                 <h3 class="tm-card-name">DR. AISHA PATEL</h3>
                 <span class="tm-card-role">ML Engineer, AI on Data</span>
@@ -345,7 +371,7 @@
             <article class="tm-card" data-squad="platform iot" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--2"><span>S</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 04</span><span class="tm-id-squad">PLATFORM &amp; UX</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 05</span><span class="tm-id-squad">PLATFORM &amp; UX</span></div>
                 </div>
                 <h3 class="tm-card-name">SARAH CHEN</h3>
                 <span class="tm-card-role">Dashboards &amp; UX Lead</span>
@@ -357,7 +383,7 @@
             <article class="tm-card" data-squad="platform" data-card>
                 <div class="tm-card-id">
                     <div class="tm-avatar tm-a--6"><span>N</span></div>
-                    <div class="tm-id-meta"><span class="tm-id-num">Nº 05</span><span class="tm-id-squad">PLATFORM &amp; UX</span></div>
+                    <div class="tm-id-meta"><span class="tm-id-num">Nº 06</span><span class="tm-id-squad">PLATFORM &amp; UX</span></div>
                 </div>
                 <h3 class="tm-card-name">NINA KOWALSKI</h3>
                 <span class="tm-card-role">Delivery &amp; Client Lead</span>

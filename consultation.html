@@ -43,6 +43,14 @@
     <link rel="stylesheet" href="scss/main.css">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/apple-touch-icon.png">
 
+    <!-- Page fix: QUOTE & PLAN dark-card text wins over later base rules -->
+    <style>
+        .ct-move.ct-move--dark .ct-move-time { background: var(--accent); color: #0a0a0a; }
+        .ct-move.ct-move--dark .ct-move-roman { color: transparent; -webkit-text-stroke: 2px var(--accent); }
+        .ct-move.ct-move--dark h3 { color: wheat; }
+        .ct-move.ct-move--dark p { color: rgba(245, 222, 179, 0.7); }
+    </style>
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {

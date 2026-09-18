@@ -269,7 +269,7 @@ body.innovation-page,
     justify-content: space-between;
     gap: 16px;
     flex-wrap: wrap;
-    max-width: 1500px;
+
     margin: 0 auto 34px;
 }
 
@@ -283,7 +283,7 @@ body.innovation-page,
 .nv-title {
     position: relative;
     z-index: 2;
-    max-width: 1500px;
+
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 900;
@@ -352,7 +352,7 @@ body.innovation-page,
 .nv-hero-foot {
     position: relative;
     z-index: 2;
-    max-width: 1500px;
+
     margin: 44px auto 0;
     display: grid;
     grid-template-columns: 1.1fr 1fr auto;
@@ -416,7 +416,7 @@ body.innovation-page,
 .nv-stats {
     position: relative;
     z-index: 2;
-    max-width: 1500px;
+
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -501,7 +501,7 @@ body.innovation-page,
 }
 
 .nv-lab-head {
-    max-width: 1500px;
+
     margin: 0 auto 54px;
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -549,7 +549,7 @@ body.innovation-page,
 }
 
 .nv-dossiers {
-    max-width: 1500px;
+
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -834,7 +834,7 @@ body.innovation-page,
 }
 
 .nv-arsenal-head {
-    max-width: 1500px;
+
     margin: 0 auto 50px;
 }
 
@@ -847,7 +847,7 @@ body.innovation-page,
 }
 
 .nv-pillars {
-    max-width: 1500px;
+
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -943,7 +943,7 @@ body.innovation-page,
 }
 
 .nv-versus-head {
-    max-width: 1500px;
+
     margin: 0 auto 44px;
 
     .nv-h2 {
@@ -952,7 +952,7 @@ body.innovation-page,
 }
 
 .nv-versus-grid {
-    max-width: 1500px;
+
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -1160,7 +1160,7 @@ body.innovation-page,
 }
 
 .nv-impact-grid {
-    max-width: 1500px;
+
     margin: 0 auto;
     padding: 0 48px;
     display: grid;
@@ -1239,7 +1239,7 @@ body.innovation-page,
 }
 
 .nv-next-head {
-    max-width: 1500px;
+
     margin: 0 auto 36px;
 
     .nv-h2 {
@@ -1248,7 +1248,7 @@ body.innovation-page,
 }
 
 .nv-next-grid {
-    max-width: 1500px;
+
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
