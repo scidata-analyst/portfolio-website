@@ -3611,12 +3611,21 @@ body.home-page,
   background: var(--dark);
   border-radius: 50%;
 }
+.trust-strip .trust-logos-viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
 .trust-strip .trust-logos {
-  display: flex;
+  display: inline-flex;
   gap: 22px;
   align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  padding-right: 22px;
   animation: marqueeScroll 22s linear infinite;
-  flex-shrink: 0;
 }
 .trust-strip .trust-logos span {
   font-weight: 900;
@@ -3638,6 +3647,9 @@ body.home-page,
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.45);
   flex-shrink: 0;
+}
+.trust-strip:hover .trust-logos {
+  animation-play-state: paused;
 }
 
 .snap-section {
@@ -5073,22 +5085,30 @@ body.home-page,
   border-color: var(--dark);
   transform: scale(1.03);
 }
-.pricing-teaser .pt-card--popular .pt-tag, .pricing-teaser .pt-card--popular .pt-price, .pricing-teaser .pt-card--popular p, .pricing-teaser .pt-card--popular li, .pricing-teaser .pt-card--popular .pt-link {
+.pricing-teaser .pt-card.pt-card--popular .pt-tag, .pricing-teaser .pt-card.pt-card--popular .pt-price, .pricing-teaser .pt-card.pt-card--popular p, .pricing-teaser .pt-card.pt-card--popular li, .pricing-teaser .pt-card.pt-card--popular .pt-link {
   color: var(--light);
 }
-.pricing-teaser .pt-card--popular .pt-tag {
+.pricing-teaser .pt-card.pt-card--popular .pt-tag {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.08);
 }
-.pricing-teaser .pt-card--popular p {
+.pricing-teaser .pt-card.pt-card--popular p {
   color: rgba(255, 255, 255, 0.55);
 }
-.pricing-teaser .pt-card--popular li {
+.pricing-teaser .pt-card.pt-card--popular li {
   color: rgba(255, 255, 255, 0.6);
 }
-.pricing-teaser .pt-card--popular .pt-link {
+.pricing-teaser .pt-card.pt-card--popular .pt-price span {
+  color: rgba(255, 255, 255, 0.55);
+}
+.pricing-teaser .pt-card.pt-card--popular .pt-link {
   border-color: rgba(255, 255, 255, 0.14);
   color: var(--light);
+}
+.pricing-teaser .pt-card.pt-card--popular .pt-link:hover {
+  background: var(--light);
+  color: var(--dark);
+  border-color: var(--light);
 }
 .pricing-teaser .pt-card--popular .pt-link--lime {
   background: var(--accent);
