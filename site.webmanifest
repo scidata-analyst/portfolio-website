@@ -1,0 +1,22 @@
+{
+  "name": "Scidata Analyst — Data & IoT MVP Agency",
+  "short_name": "Scidata",
+  "description": "Data pipelines 5M+ rows/day, IoT MVPs in 6 weeks — MQTT, Kafka, Timescale, Grafana.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/nav-logo.png",
+      "sizes": "400x267",
+      "type": "image/png"
+    }
+  ]
+}
