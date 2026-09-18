@@ -5,17 +5,18 @@
 @use "../utils/variables" as *;
 
 // Fluid root type scale — lifts ALL rem-based detail text site-wide.
-// 17px on phones → 20px on desktop (+25% vs the old fixed 16px root).
-// vw-driven display headlines are unaffected; rem clamp floors grow proportionally.
+// 18px on phones → 22px on desktop (+37% vs the old fixed 16px root).
+// Spacing uses the same rem rhythm, so blocks grow proportionally —
+// vw-driven display headlines are unaffected.
 html {
-    font-size: clamp(17px, 0.3vw + 16px, 20px);
+    font-size: clamp(18px, 0.6vw + 16px, 22px);
 }
 
 body {
     padding: 0px;
     margin: 0px;
     scroll-behavior: smooth;
-    font-size: calc(17px + 5*(100vw - 320px)/1600);
+    font-size: calc(18px + 5*(100vw - 320px)/1600);
     width: 100%;
     max-width: calc(320px + 1600*(100vw - 320px)/1600);
     position: relative;

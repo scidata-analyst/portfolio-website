@@ -82,14 +82,14 @@ a {
 }
 
 html {
-  font-size: clamp(17px, 0.3vw + 16px, 20px);
+  font-size: clamp(18px, 0.6vw + 16px, 22px);
 }
 
 body {
   padding: 0px;
   margin: 0px;
   scroll-behavior: smooth;
-  font-size: calc(17px + 5 * (100vw - 320px) / 1600);
+  font-size: calc(18px + 5 * (100vw - 320px) / 1600);
   width: 100%;
   max-width: calc(320px + 1600 * (100vw - 320px) / 1600);
   position: relative;
