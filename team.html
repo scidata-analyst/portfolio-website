@@ -47,7 +47,7 @@
     <style>
         .tm-card--captain>.tm-card-id {
             grid-column: 1;
-            grid-row: 1 / -1;
+            grid-row: 1 / 6;
             flex-direction: column;
             align-items: flex-start;
             align-self: start;
@@ -57,6 +57,17 @@
         .tm-card--captain> :not(.tm-card-id):not(.tm-card-flag) {
             grid-column: 2;
             min-width: 0;
+        }
+
+        /* Tighten featured-card tracks: kill the huge stretched gaps */
+        .tm-card--captain {
+            row-gap: 14px;
+            column-gap: 36px;
+            align-content: start;
+        }
+
+        .tm-card--captain .tm-power {
+            margin-top: 0;
         }
 
         @media (max-width: 860px) {

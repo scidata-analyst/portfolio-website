@@ -556,7 +556,9 @@ body.team-page,
         grid-column: 1 / -1;
         display: grid;
         grid-template-columns: 280px 1fr;
-        gap: 36px;
+        column-gap: 36px;
+        row-gap: 14px;
+        align-content: start;
         background: #0a0a0a;
         color: wheat;
         align-items: center;
@@ -566,11 +568,20 @@ body.team-page,
         // and the Nº/meta row collides with the giant name.
         >.tm-card-id {
             grid-column: 1;
-            grid-row: 1 / -1;
+            grid-row: 1 / 6;
             flex-direction: column;
             align-items: flex-start;
             align-self: start;
             width: 100%;
+        }
+
+        > :not(.tm-card-id):not(.tm-card-flag) {
+            grid-column: 2;
+            min-width: 0;
+        }
+
+        .tm-power {
+            margin-top: 0;
         }
 
         > :not(.tm-card-id):not(.tm-card-flag) {
