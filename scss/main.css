@@ -3459,7 +3459,7 @@ body.home-page,
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 .hero-v2 .hv-float--a {
-  top: -14px;
+  top: -65px;
   right: -12px;
   transform: rotate(1.2deg);
 }
@@ -3484,8 +3484,8 @@ body.home-page,
   flex-direction: column;
 }
 .hero-v2 .hv-float--b {
-  bottom: 62px;
-  left: -16px;
+  bottom: -120px;
+  left: 0px;
   background: #0a0a0a;
   border-color: rgba(255, 255, 255, 0.08);
   color: var(--light);
@@ -3509,7 +3509,7 @@ body.home-page,
   line-height: 1.4;
 }
 .hero-v2 .hv-float--c {
-  bottom: -14px;
+  bottom: -85px;
   right: 18px;
   background: wheat;
   transform: rotate(0.8deg);
