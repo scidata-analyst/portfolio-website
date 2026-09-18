@@ -1,7 +1,7 @@
 {
-  "name": "Scidata Analyst — Data & IoT MVP Agency",
+  "name": "Scidata Analyst - Data & IoT MVP Agency",
   "short_name": "Scidata",
-  "description": "Data pipelines 5M+ rows/day, IoT MVPs in 6 weeks — MQTT, Kafka, Timescale, Grafana.",
+  "description": "Data pipelines 5M+ rows/day, IoT MVPs in 6 weeks - MQTT, Kafka, Timescale, Grafana.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
