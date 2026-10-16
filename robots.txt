@@ -3,6 +3,5 @@ Allow: /
 
 # Block backup archives - do not crawl/download source zips
 Disallow: /*.zip$
-Disallow: /index.zip
 
 Sitemap: https://scidata-analyst.com/sitemap.xml
