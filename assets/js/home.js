@@ -197,12 +197,9 @@ function revealHero() {
         hv.fromTo('.hv-top', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.2)
           .fromTo('.hv-line', { y: 110, opacity: 0 }, { y: 0, opacity: 1, duration: 1.05, stagger: 0.12, ease: 'power4.out' }, 0.35)
           .fromTo('.hv-lead', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.95)
-          .fromTo('.hv-trust-mini', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 1.05)
-          .fromTo('.hv-ctas', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 1.15)
-          .fromTo('.hv-micro', { opacity: 0 }, { opacity: 1, duration: 0.5 }, 1.3)
-          .fromTo('.hv-stats .hv-stat', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.08 }, 1.35)
-          .fromTo('.hv-browser', { y: 40, opacity: 0, rotate: -1 }, { y: 0, opacity: 1, rotate: -0.6, duration: 1, ease: 'power3.out' }, 0.8)
-          .fromTo('.hv-float', { y: 20, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.1, ease: 'back.out(1.4)' }, 1.2)
+          .fromTo('.hv-ctas', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 1.1)
+          .fromTo('.hv-stats .hv-stat', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.08 }, 1.25)
+          .fromTo('.hv-showcase', { y: 40, opacity: 0, rotate: -1 }, { y: 0, opacity: 1, rotate: -0.6, duration: 1, ease: 'power3.out' }, 0.8)
           .fromTo('.hv-bottom', { opacity: 0 }, { opacity: 1, duration: 0.6 }, 1.5)
           .fromTo('.hv-bigtype', { opacity: 0, scale: 0.98 }, { opacity: 1, scale: 1, duration: 1.2, ease: 'power2.out' }, 0.3);
     }
@@ -580,7 +577,7 @@ if (totopBtn) {
 // ============================================
 if (document.querySelector('.hero-v2')) {
     // Parallax on hero visual
-    gsap.to('.hv-browser', {
+    gsap.to('.hv-showcase', {
         y: -30,
         ease: 'none',
         scrollTrigger: { trigger: '.hero-v2', start: 'top top', end: 'bottom top', scrub: 1 }
@@ -589,11 +586,6 @@ if (document.querySelector('.hero-v2')) {
         y: -80,
         ease: 'none',
         scrollTrigger: { trigger: '.hero-v2', start: 'top top', end: 'bottom top', scrub: 1.2 }
-    });
-    gsap.to('.hv-float--a', {
-        y: -24,
-        ease: 'none',
-        scrollTrigger: { trigger: '.hero-v2', start: 'top top', end: 'bottom top', scrub: 1 }
     });
 
     // Reveal bento, work, edge, etc
