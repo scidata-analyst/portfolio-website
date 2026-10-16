@@ -2783,6 +2783,18 @@ body.home-page,
                 }
             }
         }
+
+        .bento-all {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 14px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
     }
 
     .bento-grid {
