@@ -345,6 +345,36 @@ body.contact-page {
                 -webkit-text-stroke: 2px var(--accent);
             }
         }
+
+        // Dated client proof above the brief form.
+        .ct2-form-proof {
+            display: grid;
+            gap: 12px;
+            margin-top: 22px;
+
+            blockquote {
+                border-left: 3px solid var(--accent);
+                padding-left: 14px;
+                margin: 0;
+
+                p {
+                    margin: 0 0 6px;
+                    font-size: 1rem;
+                    color: rgba(255, 255, 255, 0.85);
+                }
+            }
+
+            cite {
+                font-size: 0.85rem;
+                font-style: normal;
+                color: rgba(255, 255, 255, 0.6);
+
+                a {
+                    color: var(--accent);
+                    font-weight: 700;
+                }
+            }
+        }
     }
 
     .ct2-form-layout {
@@ -483,6 +513,38 @@ body.contact-page {
         display: inline-flex;
         align-items: center;
         gap: 10px;
+    }
+
+    // GDPR consent row + spam honeypot (never visible to humans).
+    .ct2-consent {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-top: 14px;
+        cursor: pointer;
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            accent-color: var(--accent);
+        }
+
+        a {
+            font-weight: 700;
+        }
+    }
+
+    .ct2-honeypot {
+        position: absolute !important;
+        left: -9999px !important;
+        top: auto !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
     }
 
     .ct2-channels {

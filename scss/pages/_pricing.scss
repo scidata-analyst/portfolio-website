@@ -1103,6 +1103,28 @@ body.price-page,
     }
 }
 
+// Table caption + screen-reader text for icon-only cells (a11y).
+.pc-table-caption {
+    text-align: left;
+    padding: 16px 22px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.pc-sr {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 // =============================================================================
 // FAQ (wheat accordion)
 // =============================================================================

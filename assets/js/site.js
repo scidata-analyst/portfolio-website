@@ -74,6 +74,18 @@
                 }
                 lines = ["NEWSLETTER SIGNUP", "Email: " + email];
             } else {
+                /* Spam honeypot: silently accept, never send. */
+                if (data.company2) {
+                    showMsg(form, "Thanks - your brief is with our Data & IoT crew. Expect a scheduling email within 24 hours. Talk soon.", true);
+                    form.reset();
+                    return;
+                }
+                delete data.company2;
+                /* Privacy consent required where present (booking form). */
+                if (form.querySelector("[name=consent]") && !form.querySelector("[name=consent]:checked")) {
+                    showMsg(form, "Please accept the Privacy Policy so we can contact you.", false);
+                    return;
+                }
                 lines = ["NEW " + String(kind).toUpperCase() + " BRIEF"];
                 Object.keys(data).forEach(function (k) { lines.push(k + ": " + data[k]); });
                 if (lines.length < 2) {

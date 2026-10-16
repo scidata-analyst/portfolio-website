@@ -9127,6 +9127,30 @@ body.contact-page {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px var(--accent);
 }
+.ct2-form-section .ct2-form-header .ct2-form-proof {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+.ct2-form-section .ct2-form-header .ct2-form-proof blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 14px;
+  margin: 0;
+}
+.ct2-form-section .ct2-form-header .ct2-form-proof blockquote p {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.ct2-form-section .ct2-form-header .ct2-form-proof cite {
+  font-size: 0.85rem;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+.ct2-form-section .ct2-form-header .ct2-form-proof cite a {
+  color: var(--accent);
+  font-weight: 700;
+}
 .ct2-form-section .ct2-form-layout {
   max-width: 1200px;
   margin: 0 auto;
@@ -9251,6 +9275,33 @@ body.contact-page {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+}
+.ct2-form-section .ct2-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 14px;
+  cursor: pointer;
+}
+.ct2-form-section .ct2-consent input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  accent-color: var(--accent);
+}
+.ct2-form-section .ct2-consent a {
+  font-weight: 700;
+}
+.ct2-form-section .ct2-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
 }
 .ct2-form-section .ct2-channels {
   display: flex;
@@ -11784,6 +11835,27 @@ body.price-page,
   color: rgba(255, 255, 255, 0.25);
 }
 
+.pc-table-caption {
+  text-align: left;
+  padding: 16px 22px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pc-sr {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .pc-faq {
   background: wheat;
   color: #0a0a0a;
@@ -13129,6 +13201,61 @@ body.consultation-page,
 }
 .ct-form-note a {
   color: var(--accent);
+  font-weight: 700;
+}
+
+.ct-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(245, 222, 179, 0.75);
+  margin: 12px 0;
+  cursor: pointer;
+}
+.ct-consent input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  accent-color: var(--accent);
+}
+.ct-consent a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.ct-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.ct-book-proof {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+.ct-book-proof blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+  margin: 0;
+}
+.ct-book-proof blockquote p {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: rgba(10, 10, 10, 0.85);
+}
+.ct-book-proof cite {
+  font-size: 0.85rem;
+  font-style: normal;
+  opacity: 0.7;
+}
+.ct-book-proof cite a {
   font-weight: 700;
 }
 
