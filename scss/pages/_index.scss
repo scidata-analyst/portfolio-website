@@ -4776,3 +4776,189 @@ body.home-page,
         }
     }
 }
+
+// =============================================================================
+// HOME QA FIXES — audit follow-ups (a11y + index.html markup fixes)
+// Styles for the accessible nav <button>, rating-pill link, testimonial links,
+// newsletter note, accent headline word and mobile fixed-dock separation.
+// Mirrored into scss/main.css (no sass compiler in this workspace).
+// =============================================================================
+
+// ---------- HERO: accent word (replaces former inline style) ----------
+.hero-v2 .hv-title .hv-w--accent {
+    color: var(--accent);
+}
+
+// ---------- HERO: rating pill is now a link — keep pill look ----------
+.hero-v2 .hv-top a.hv-pill--rating {
+    text-decoration: none;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+    }
+}
+
+// ---------- NAV: outer trigger is a plain wrapper, the <button> does the work ----------
+// Base nav lives in components/_navbar.scss — these overrides adapt it to the
+// accessible markup (real button + contact links outside it) without touching it.
+.main-nav .nav-menu-trigger {
+    cursor: default;
+
+    &:hover {
+        background: transparent;
+    }
+}
+
+.main-nav .nav-menu-btn {
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+    }
+
+    .menu-label {
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--light);
+    }
+
+    .menu-burger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 28px;
+
+        span {
+            display: block;
+            height: 2px;
+            background: var(--light);
+            border-radius: 2px;
+            transition: all var(--transition-fast);
+
+            &:nth-child(1) {
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                width: 60%;
+            }
+
+            &:nth-child(3) {
+                width: 80%;
+            }
+        }
+    }
+
+    &:hover .menu-burger span {
+        &:nth-child(1) {
+            width: 60%;
+        }
+
+        &:nth-child(2) {
+            width: 100%;
+        }
+
+        &:nth-child(3) {
+            width: 60%;
+        }
+    }
+
+    &.nav-menu-trigger--active .menu-burger span {
+        &:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+            width: 100%;
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        &:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+            width: 100%;
+        }
+    }
+}
+
+// ---------- TRUST STRIP: meta is a direct child of the inner row (see index.html) ----------
+// No extra rules needed — .trust-meta keeps working via margin-left: auto.
+// Documented here so the markup contract stays visible next to the styles.
+
+// ---------- TESTIMONIALS: case-study links added for credibility ----------
+.testi-section .testi-card .testi-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--accent);
+
+    i {
+        font-size: 0.85em;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+    }
+}
+
+.testi-section .testi-card--lime .testi-link {
+    color: var(--dark);
+}
+
+// ---------- FOOTER: newsletter note (WhatsApp confirm hint) ----------
+// Footer base lives in components/_footer.scss — note style kept here with the
+// home-page markup that introduced it.
+.site-footer .footer-newsletter-note {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 8px;
+}
+
+// ---------- FIXED DOCKS: keep hire-dock and back-to-top apart on small screens ----------
+@media (max-width: 640px) {
+    .freelance-float {
+        right: auto;
+        left: 12px;
+        bottom: 88px;
+    }
+
+    .footer-totop {
+        right: 12px;
+        bottom: 24px;
+    }
+}
