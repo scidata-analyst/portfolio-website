@@ -29,6 +29,13 @@
     }
 }
 
+// Supporting-build pill (project-1..3) - marks non-core case studies
+// so Data & IoT topical purity is preserved on-page.
+.pill--support {
+    opacity: 0.65;
+    border-style: dashed;
+}
+
 // Reduced motion support
 @media (prefers-reduced-motion: reduce) {
 

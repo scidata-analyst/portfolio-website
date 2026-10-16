@@ -2,11 +2,11 @@
 // PROJECT 01 — NEXABOT / NLP CHATBOT CASE STUDY
 // Bigger. Bolder. Unique. Problem → Solve → Outcome narrative.
 // Tokens: ink #F4F2EB, bg #070709, lime #D6FF2A, violet #7C5CFF
-// Type: Existing site font — Share ( $font-family_4 ) — unchanged per request
+// Type: Site font - Alegreya Sans SC ( $font-family_4 ) - unified across all case studies
 // =============================================================================
 
 @use "./utils/variables" as *;
-@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Lekton:ital,wght@0,400;0,700;1,400&family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 
 // ---------- TOKENS ----------
 $p1-bg: #070709;
@@ -1790,6 +1790,11 @@ $p1-mono: $font-family_4;
             &:hover {
                 color: $p1-lime;
             }
+        }
+
+        .foot-nap {
+            flex-basis: 100%;
+            text-align: center;
         }
     }
 
