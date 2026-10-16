@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Anaheim:wght@400..800&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Maven+Pro:wght@400..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Anaheim:wght@400..800&family=Cutive+Mono&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Maven+Pro:wght@400..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Lekton:ital,wght@0,400;0,700;1,400&family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap");
@@ -47,7 +47,7 @@
 }
 * {
   box-sizing: border-box;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
 }
 
 h1,
@@ -933,7 +933,7 @@ body {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.4);
   max-width: 400px;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
 }
 .site-footer .footer-cta .footer-cta-circle {
   position: relative;
@@ -1021,7 +1021,7 @@ body {
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.55);
   line-height: 1.7;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   padding-left: 16px;
   border-left: 3px solid var(--accent);
 }
@@ -1222,7 +1222,7 @@ body {
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.45);
   margin: 0;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -2407,6 +2407,7 @@ body.home-page,
   position: relative;
   overflow: hidden;
   text-align: center;
+  padding-top: 0px;
 }
 .cta-section .cta-bg-text {
   position: absolute;
@@ -2424,7 +2425,6 @@ body.home-page,
 .cta-section .cta-inner {
   position: relative;
   z-index: 2;
-  max-width: 800px;
   margin: 0 auto;
 }
 .cta-section .cta-headline {
@@ -2443,7 +2443,7 @@ body.home-page,
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.7;
   margin: 0 0 48px;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
 }
 .cta-section .cta-deco {
   position: absolute;
@@ -2666,7 +2666,7 @@ body.home-page,
   font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
 }
 .who-we-are .wwa-right {
   display: flex;
@@ -2723,7 +2723,7 @@ body.home-page,
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 900;
   color: var(--accent);
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
 }
 .who-we-are .wwa-core-sub {
   font-size: clamp(0.8rem, 1.2vw, 1.1rem);
@@ -3070,7 +3070,6 @@ body.home-page,
   -webkit-text-stroke: 0;
 }
 .hero-v2 .hv-lead {
-  max-width: 560px;
   font-size: clamp(0.95rem, 1.35vw, 1.08rem);
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.55);
@@ -3659,7 +3658,6 @@ body.home-page,
 .snap-section .snap-header {
   margin: 0 auto 48px;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
   gap: 32px;
   align-items: end;
 }
@@ -8613,7 +8611,7 @@ body.work-page,
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.55);
   margin: 0;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
 }
 
 .ps-card-tech {
@@ -8754,7 +8752,7 @@ body.work-page,
 }
 .approach-row .approach-row-body .approach-row-text p {
   margin: 0 0 14px;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(0.95rem, 1.4vw, 1.15rem);
   line-height: 1.7;
   color: #0a0a0a;
@@ -8767,7 +8765,7 @@ body.work-page,
   flex-direction: column;
 }
 .approach-row .approach-row-body .approach-row-text .approach-row-list li {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(0.95rem, 1.4vw, 1.15rem);
   padding: calc(7px + 2 * (100vw - 320px) / 1600) 0;
   border-bottom: 1px solid rgba(10, 10, 10, 0.15);
@@ -8789,7 +8787,7 @@ body.work-page,
   align-items: center;
   gap: 10px;
   margin-top: 16px;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -14828,7 +14826,7 @@ body.innovation-page,
   margin: 0;
   background: #070709;
   color: #f4f2eb;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   overflow-x: hidden;
   cursor: none;
   -webkit-font-smoothing: antialiased;
@@ -14878,7 +14876,7 @@ body.innovation-page,
   -webkit-text-stroke: 2px rgba(244, 242, 235, 0.85);
 }
 .project-1 .mega {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(2.9rem, 8.5vw, 7.5rem);
   line-height: 0.92;
   letter-spacing: -0.01em;
@@ -14911,7 +14909,7 @@ body.innovation-page,
   border-top: 2px solid #f4f2eb;
   border-bottom: 1px solid rgba(244, 242, 235, 0.13);
   padding: 1rem 0;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -14935,7 +14933,7 @@ body.innovation-page,
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.1em;
@@ -15022,7 +15020,7 @@ body.innovation-page,
 .project-1 .cursor .cursor-label {
   position: fixed;
   transform: translate(-50%, -50%);
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -15052,7 +15050,7 @@ body.innovation-page,
 .project-1 .loader .loader-bottom {
   display: flex;
   justify-content: space-between;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   color: #9a9aa3;
@@ -15061,14 +15059,14 @@ body.innovation-page,
   text-align: left;
 }
 .project-1 .loader .loader-word {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(2.5rem, 9vw, 7rem);
   line-height: 0.9;
   text-transform: uppercase;
   color: #d6ff2a;
 }
 .project-1 .loader .loader-num {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(4rem, 14vw, 11rem);
   line-height: 0.9;
 }
@@ -15090,7 +15088,7 @@ body.innovation-page,
   background: linear-gradient(90deg, #d6ff2a, #7c5cff);
 }
 .project-1 .loader .loader-sub {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   color: #9a9aa3;
@@ -15110,7 +15108,7 @@ body.innovation-page,
   background: rgba(7, 7, 9, 0.72);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(244, 242, 235, 0.13);
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.12em;
 }
@@ -15201,7 +15199,7 @@ body.innovation-page,
   position: absolute;
   right: -1rem;
   top: 4rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(12rem, 32vw, 30rem);
   line-height: 1;
   color: transparent;
@@ -15223,7 +15221,7 @@ body.innovation-page,
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   margin-bottom: 1.5rem;
@@ -15249,7 +15247,7 @@ body.innovation-page,
   color: #9a9aa3;
 }
 .project-1 .hero .hero-title {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   text-transform: uppercase;
   line-height: 0.86;
   letter-spacing: -0.015em;
@@ -15278,7 +15276,7 @@ body.innovation-page,
   margin-top: 1.2rem;
 }
 .project-1 .hero .hero-title .word--small {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(0.8rem, 1.8vw, 1.05rem);
   letter-spacing: 0.18em;
   color: #f4f2eb;
@@ -15320,7 +15318,7 @@ body.innovation-page,
   align-items: center;
   gap: 1rem;
   margin-top: 2.5rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   color: #9a9aa3;
@@ -15344,7 +15342,7 @@ body.innovation-page,
   padding: 0.9rem 1.2rem;
   background: #15151b;
   border-bottom: 1px solid rgba(244, 242, 235, 0.13);
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.75rem;
 }
 .project-1 .terminal .terminal-bar .t-dots {
@@ -15402,7 +15400,7 @@ body.innovation-page,
 }
 .project-1 .terminal .msg .who {
   display: block;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   opacity: 0.75;
@@ -15431,7 +15429,7 @@ body.innovation-page,
 }
 .project-1 .terminal .msg .tokens em {
   font-style: normal;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.65rem;
   border: 1px solid var(--c);
   color: var(--c);
@@ -15464,7 +15462,7 @@ body.innovation-page,
   border: 1px dashed rgba(214, 255, 42, 0.4);
   border-radius: 12px;
   padding: 0.9rem 1rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.85rem;
 }
 .project-1 .terminal .terminal-foot .prompt {
@@ -15497,7 +15495,7 @@ body.innovation-page,
   gap: 0.6rem;
   flex-wrap: wrap;
   padding: 0 1.4rem 1.4rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0.12em;
 }
@@ -15519,7 +15517,7 @@ body.innovation-page,
   gap: 0.9rem;
 }
 .project-1 .hero-rail .rail-head {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   color: #9a9aa3;
@@ -15535,13 +15533,13 @@ body.innovation-page,
   transition: transform 0.25s, border-color 0.25s;
 }
 .project-1 .hero-rail .rail-card .rail-num {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 1.6rem;
   color: #9a9aa3;
   line-height: 1;
 }
 .project-1 .hero-rail .rail-card .rail-kicker {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   color: #d6ff2a;
@@ -15551,7 +15549,7 @@ body.innovation-page,
   line-height: 1.3;
 }
 .project-1 .hero-rail .rail-card .rail-link {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.75rem;
   color: #9a9aa3;
 }
@@ -15591,7 +15589,7 @@ body.innovation-page,
 }
 .project-1 .hero-rail .rail-meta div span {
   display: block;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.16em;
   color: #9a9aa3;
@@ -15607,7 +15605,7 @@ body.innovation-page,
   border-bottom: 2px solid #0a0a0a;
   overflow: hidden;
   padding: 0.9rem 0;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(1.1rem, 2.5vw, 1.6rem);
   text-transform: uppercase;
 }
@@ -15678,7 +15676,7 @@ body.innovation-page,
   margin-bottom: 0.8rem;
 }
 .project-1 .quote cite {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-style: normal;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
@@ -15690,7 +15688,7 @@ body.innovation-page,
   box-shadow: 8px 8px 0 #f4f2eb;
 }
 .project-1 .quote--big p {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   line-height: 1;
   text-transform: uppercase;
@@ -15731,13 +15729,13 @@ body.innovation-page,
   color: #4a7a00;
 }
 .project-1 .pain .pain-num {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   opacity: 0.7;
 }
 .project-1 .pain h3 {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 2rem;
   margin: 0.6rem 0;
   text-transform: uppercase;
@@ -15759,13 +15757,13 @@ body.innovation-page,
 }
 .project-1 .pain .pain-stat strong {
   display: block;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 2.8rem;
   line-height: 1;
   color: #d6ff2a;
 }
 .project-1 .pain .pain-stat span {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.7rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -15784,7 +15782,7 @@ body.innovation-page,
   grid-template-columns: 220px 1fr 90px;
   gap: 1rem;
   align-items: center;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
 }
@@ -15826,21 +15824,21 @@ body.innovation-page,
   transform: translateX(6px);
 }
 .project-1 .pipe .pipe-num {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(3.5rem, 6vw, 5.5rem);
   line-height: 0.9;
   color: transparent;
   -webkit-text-stroke: 2px #9a9aa3;
 }
 .project-1 .pipe .pipe-kicker {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   color: #d6ff2a;
   font-weight: 700;
 }
 .project-1 .pipe h3 {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   text-transform: uppercase;
   line-height: 0.95;
@@ -15854,7 +15852,7 @@ body.innovation-page,
 .project-1 .pipe .code {
   display: block;
   margin: 1rem 0;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.8rem;
   background: #060609;
   border: 1px solid rgba(214, 255, 42, 0.3);
@@ -15870,7 +15868,7 @@ body.innovation-page,
   gap: 0.5rem;
 }
 .project-1 .pipe .chips span {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.7rem;
   border: 1px solid rgba(244, 242, 235, 0.13);
   color: #9a9aa3;
@@ -15895,7 +15893,7 @@ body.innovation-page,
   margin: 1rem 0 0.2rem;
 }
 .project-1 .pipe .nlu-viz .tok {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.8rem;
   background: #1e1e27;
   border: 1px solid rgba(244, 242, 235, 0.13);
@@ -15976,7 +15974,7 @@ body.innovation-page,
   gap: 0.7rem;
   background: #15151b;
   padding: 1rem 1.3rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   font-weight: 700;
@@ -16025,7 +16023,7 @@ body.innovation-page,
 .project-1 .demo .demo-messages .msg .intent {
   display: inline-block;
   margin-top: 0.5rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.08em;
   color: #d6ff2a;
@@ -16059,7 +16057,7 @@ body.innovation-page,
   background: #0e0e13;
 }
 .project-1 .demo .demo-chips button {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.78rem;
   font-weight: 500;
   background: transparent;
@@ -16083,7 +16081,7 @@ body.innovation-page,
   border: 3px solid #0a0a0c;
 }
 .project-1 .demo .demo-side h3 {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 1.6rem;
   text-transform: uppercase;
   color: #d6ff2a;
@@ -16111,7 +16109,7 @@ body.innovation-page,
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.72rem;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
@@ -16157,13 +16155,13 @@ body.innovation-page,
 }
 .project-1 .metric .metric-val {
   display: block;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(3rem, 5.5vw, 4.8rem);
   line-height: 0.9;
   margin-bottom: 0.6rem;
 }
 .project-1 .metric .metric-label {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   color: #d6ff2a;
@@ -16202,7 +16200,7 @@ body.innovation-page,
   padding: 1.8rem;
 }
 .project-1 .after-card h3 {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 1.8rem;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
@@ -16221,7 +16219,7 @@ body.innovation-page,
   padding-top: 2rem;
 }
 .project-1 .stack h3 {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.78rem;
   letter-spacing: 0.2em;
   color: #9a9aa3;
@@ -16233,7 +16231,7 @@ body.innovation-page,
   gap: 0.7rem;
 }
 .project-1 .stack .stack-grid span {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(1.1rem, 2.2vw, 1.6rem);
   text-transform: uppercase;
   border: 2px solid rgba(244, 242, 235, 0.13);
@@ -16263,7 +16261,7 @@ body.innovation-page,
   margin: 0 auto;
 }
 .project-1 .next .next-kicker {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   font-weight: 700;
@@ -16276,7 +16274,7 @@ body.innovation-page,
 }
 .project-1 .next .next-title {
   display: block;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(3rem, 10vw, 8.5rem);
   line-height: 0.9;
   text-transform: uppercase;
@@ -16287,7 +16285,7 @@ body.innovation-page,
 .project-1 .next .next-sub {
   display: block;
   margin-top: 1rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
 }
@@ -16295,7 +16293,7 @@ body.innovation-page,
   position: absolute;
   right: -1rem;
   bottom: -4rem;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: clamp(14rem, 30vw, 26rem);
   line-height: 1;
   color: transparent;
@@ -16310,7 +16308,7 @@ body.innovation-page,
   flex-wrap: wrap;
   padding: 1.2rem clamp(1.25rem, 4vw, 2.5rem);
   background: #060607;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   border-top: 1px solid rgba(244, 242, 235, 0.13);
@@ -16337,7 +16335,7 @@ body.innovation-page,
   padding: 0.5rem 0.9rem 0.5rem 1rem;
 }
 .project-1 .freelance-float .freelance-label {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0.16em;
   color: #9a9aa3;
